@@ -17,6 +17,18 @@ from stem.control import Controller
 from stem.connection import MissingPassword, AuthenticationFailure
 from getpass import getpass
 from stem.util import term
+
+
+#  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
+#  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
+#     ██║   ██║   ██║██████╔╝   ██║   ███████║  ███╔╝ ██║   ██║
+#     ██║   ██║   ██║██╔══██╗   ██║   ██╔══██║ ███╔╝  ██║   ██║
+#     ██║   ╚██████╔╝██║  ██║   ██║   ██║  ██║███████╗╚██████╔╝
+#     ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ 
+#                                                              
+
+
+
 #
 #	Attack exit nodes of the TOR Network.
 #	Author: Adastra.
