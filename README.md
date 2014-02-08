@@ -35,14 +35,14 @@ On other hand, is much, much faster to use the local descriptors than to connect
 - If you want to use Shodan, you'll need a valid developer key. That value should be writen into a file in a single line and use the options "--use-shodan" and "--shodan-key"
 - The bruteforce mode needs a dictionary to perform the attack against the open ports
 
-* **Show the available Options
+*Show the available Options*
 ```
 python Tortazo.py -h
 ```
 
-* **Connect to the Directory Authorities using the mirrors servers (-d)
+*Connect to the Directory Authorities using the mirrors servers (-d)
     Enable the "verbose" mode (-v)
-    Scan ExitNodes which operative system is Windows (-m windows)
+    Scan ExitNodes which operative system is Windows (-m windows)*
 ```
 Short opts:
 python Tortazo.py -d -v -m windows
@@ -51,9 +51,9 @@ Long opts:
 python Tortazo.py --use-mirrors --verbose --mode windows
 ```
 
-* **Connect to the Directory Authorities directly
+*Connect to the Directory Authorities directly
     Enable the "verbose" mode (-v)
-    Scan ExitNodes which operative system is Linux (-m linux)
+    Scan ExitNodes which operative system is Linux (-m linux)*
 ```
 Short opts:
 python Tortazo.py -d -v -m linux
@@ -62,9 +62,9 @@ Long opts:
 python Tortazo.py --use-mirrors --verbose --mode linux
 ```
 
-* **Connect to the Directory Authorities directly
+*Connect to the Directory Authorities directly
     Enable the "verbose" mode (-v)
-    Scan ExitNodes which operative system is Linux (-m linux)
+    Scan ExitNodes which operative system is Linux (-m linux)*
 ```
 Short opts:
 python Tortazo.py -v -m linux
@@ -73,10 +73,10 @@ Long opts:
 python Tortazo.py --verbose --mode windows
 ```
 
-* **Connect to the Directory Authorities directly
+*Connect to the Directory Authorities directly
     Enable the "verbose" mode (-v)
     Scan ExitNodes which operative system is Linux (-m linux)
-    Just recover the first 30 nodes from the list of exit nodes found (this value by default is very short: 10)
+    Just recover the first 30 nodes from the list of exit nodes found (this value by default is very short: 10)*
 ```
 Short opts:
 python Tortazo.py -n 30 -v -m linux
@@ -85,11 +85,11 @@ Long opts:
 python Tortazo.py --servers-to-attack 30 --verbose --mode linux
 ```
 
-* **Connect to the Directory Authorities directly
+*Connect to the Directory Authorities directly
     Enable the "verbose" mode (-v)
     Scan ExitNodes which operative system is Linux (-m linux)
     Just recover the first 30 nodes from the list of exit nodes found (this value by default is very short: 10)
-    Create 10 threads to process the list of exit nodes which match with the criteria specified
+    Create 10 threads to process the list of exit nodes which match with the criteria specified*
 ```
 Short opts:
 python Tortazo.py -t 10 -n 30 -v -m linux
@@ -98,12 +98,12 @@ Long opts:
 python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux
 ```
 
-* **Connect to the Directory Authorities directly
+*Connect to the Directory Authorities directly
     Enable the "verbose" mode (-v)
     Scan ExitNodes which operative system is Linux (-m linux)
     Just recover the first 30 nodes from the list of exit nodes found (this value by default is very short: 10)
     Create 10 threads to process the list of exit nodes which match with the criteria specified
-    Perform the Nmap scan with the specified options "-sSV -A -n"
+    Perform the Nmap scan with the specified options "-sSV -A -n"*
 ```
 Short opts:
 python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n"
@@ -113,9 +113,9 @@ python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --s
 ```
 
 
-* **Connect to the Local instance of TOR and use the ExitNodes stored in the local descriptors.
+*Connect to the Local instance of TOR and use the ExitNodes stored in the local descriptors.
     Enable the "verbose" mode (-v)
-    Scan ExitNodes which operative system is Linux (-m linux)
+    Scan ExitNodes which operative system is Linux (-m linux)*
 
 ```
 Short opts:
@@ -125,4 +125,17 @@ Long opts:
 python Tortazo.py --verbose --mode linux --use-circuit-nodes
 ```
 
-33D560407DB8E77C25E3D0A44432C68CC3CC0F7A
+*Connect to the Directory Authorities directly
+    Enable the "verbose" mode (-v)
+    Scan ExitNodes which operative system is Linux (-m linux)
+    Just recover the first 30 nodes from the list of exit nodes found (this value by default is very short: 10)
+    Create 10 threads to process the list of exit nodes which match with the criteria specified
+    Perform the Nmap scan with the specified options "-sSV -A -n"
+    Filter by FingerPrint*
+```
+Short opts:
+python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FergieRossendorf3
+
+Long opts:
+python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FergieRossendorf3
+```
