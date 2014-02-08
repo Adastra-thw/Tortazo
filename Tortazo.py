@@ -30,6 +30,8 @@ import Queue
 #	- Use combinators if the passfile is not issued, check itertools module.
 #	- Check the Fabric library for Botnet C&C
 #	- Testing and Doc.
+#   - NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
+#   - When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
 #
 
 class Cli(cli.Application):
@@ -50,7 +52,6 @@ class Cli(cli.Application):
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
     scanPorts = "21,22,23,53,69,80,88,110,139,143,161,162,389,443,445,1079,1080,1433,3306,5432,8080,9050,9051,5800" #Default ports used to scan with nmap.
-    scanProtocol = 'tcp' #Using TCP protocol to perform the nmap scan.
     scanArguments = None #Scan Arguments passed to nmap.
     exitNodeFingerprint = None #Fingerprint of the exit-node to attack.
     queue = Queue.Queue() #Queue with the host/open-port found in the scanning.
@@ -98,13 +99,6 @@ class Cli(cli.Application):
         List of ports used to perform the nmap scan.
         '''
         self.scanPorts = scanPorts
-
-    @cli.switch(["-p", "--scan-protocol"], cli.Set("tcp", "udp", case_sensitive=True), help="Protocol used to scan the target.")
-    def scan_protocol(self, scanProtocol):
-        '''
-        Protocol used to perform the nmap scan.
-        '''
-        self.scanProtocol = scanProtocol
 
     @cli.switch(["-a", "--scan-arguments"], str, help='Arguments to Nmap. Use "" to specify the arguments. For example: "-sSV -A -Pn"')
     def scan_arguments(self, scanArguments):

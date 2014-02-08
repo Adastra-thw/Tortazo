@@ -1,0 +1,9 @@
+------- NMAP SCAN REPORT START FOR 141.212.108.13 NICKNAME: EecsUmichExit1------- 
+[+] Host: 141.212.108.13 
+[+][+]State: up 
+[+][+]Reason: echo-reply 
+Protocol: tcp, Port: 389 ,  State: filtered , Reason: no-response , Name: ldap , Port: 139 ,  State: filtered , Reason: no-response , Name: netbios-ssn , Port: 143 ,  State: filtered , Reason: no-response , Name: imap , Port: 8080 ,  State: closed , Reason: reset , Name: http-proxy , Port: 21 ,  State: filtered , Reason: no-response , Name: ftp , Port: 22 ,  State: filtered , Reason: no-response , Name: ssh , Port: 23 ,  State: filtered , Reason: no-response , Name: telnet , Port: 1433 ,  State: filtered , Reason: no-response , Name: ms-sql-s , Port: 161 ,  State: filtered , Reason: no-response , Name: snmp , Port: 162 ,  State: filtered , Reason: no-response , Name: snmptrap , Port: 5800 ,  State: filtered , Reason: no-response , Name: vnc-http , Port: 53 ,  State: filtered , Reason: no-response , Name: domain , Port: 1079 ,  State: filtered , Reason: no-response , Name: asprovatalk , Port: 5432 ,  State: filtered , Reason: no-response , Name: postgresql , Port: 443 ,  State: open , Reason: syn-ack , Name: http , Port: 445 ,  State: filtered , Reason: no-response , Name: microsoft-ds , Port: 69 ,  State: filtered , Reason: no-response , Name: tftp , Port: 80 ,  State: open , Reason: syn-ack , Name: http , Port: 1080 ,  State: filtered , Reason: no-response , Name: socks , Port: 88 ,  State: filtered , Reason: no-response , Name: kerberos-sec , Port: 9050 ,  State: filtered , Reason: no-response , Name: tor-socks , Port: 9051 ,  State: filtered , Reason: no-response , Name: tor-control , Port: 3306 ,  State: filtered , Reason: no-response , Name: mysql , Port: 110 ,  State: filtered , Reason: no-response , Name: pop3 , 
+
+------- NMAP SCAN REPORT END ------- 
+
+
