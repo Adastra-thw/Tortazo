@@ -46,27 +46,32 @@ import logging as log
 #
 #	TODO IN V1.0:
 #
-#	- Use combinators if the passfile is not issued, check itertools module.
-#   - Check the "open-shell" feature. Try with invalid values, a long list of bots, etc.
+#   {- In bruteforce mode, if there's no dictfile, then use FuzzDB to perform the bruteforce attack.}
+#   {-} Check the "open-shell" feature. Try with invalid values, a long list of bots, etc.
 #	{-} Check the Fabric library for Botnet C&C
-#	- Testing and Doc.
+#	- Testing
+#   {- Docs.}
 #   - NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
 #   {-} When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
-#   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
 #
 #   TODO IN V1.1:
 #   - PyNessus integration in the Discovery Module.
 #   - Gather information about SNMP Devices.
 #   - Format reports for Nmap, Shodan, Nessus and SNMP. (Not just an .txt file, create an HTML, XML and probably JSON files)
 #   - Upload and execute files to the compromised machines using SFTP and FTP.
+#   - Check subterfuge: http://code.google.com/p/subterfuge/
+#   - Allow 'windows', 'linux', 'bsd', and other filters. (Also, allow any type of OS.)
+#   - Check what do bannergrab:  http://sourceforge.net/projects/bannergrab/
+#   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
 
 class Cli(cli.Application):
     '''
-	Command-Line options received.
-	'''
+    Command-Line options received.
+    '''
     PROGNAME = "TORTAZO"
     AUTHOR = "Adastra"
     VERSION = "1.0"
+    SEPARATOR = ':' #Separator for the dictionary (bruteforce attacks) for each line in the file, the user and password must be separated by colon. For Instance -> user:password
     verbose = cli.Flag(["-v", '--verbose'], help="Verbose Mode.")
     brute = cli.Flag(["-b", '--brute'], help="Brute Force Mode. (Specify -f/--passwords-file option to select the passwords file. Every line should contain the the username and password to test separated with a colon <USER>:<PASSWORD>)")
     useMirror = cli.Flag(["-d", '--use-mirrors'], help="Use the mirror directories of TOR. This will help to not overwhelm the official directories")
@@ -111,7 +116,7 @@ class Cli(cli.Application):
         '''
         self.mode = mode
 
-    @cli.switch(["-f", "--passwords-file"], help="Passwords File in the Bruteforce mode.", requires=["--brute"])
+    @cli.switch(["-f", "--passwords-file"], str, help="Passwords File in the Bruteforce mode.", requires=["--brute"])
     def passwords_file(self, dictFile):
         '''
         User's file. Used to perform bruteforce attacks.
@@ -152,8 +157,8 @@ class Cli(cli.Application):
         Controller's Port. Default=9151
         '''
         self.controllerPort = controllerPort
-	
-    @cli.switch(["-z", "--zombie-mode"], str, excludes=["--mode"], help="This option reads the tortazo_botnet.bot file generated from previous successful attacks. Allows to send commands parallely over all the compromised hosts.")
+
+    @cli.switch(["-z", "--zombie-mode"], str, help="This option reads the tortazo_botnet.bot file generated from previous successful attacks. With this option you can select the Nicknames that will be excluded. (Nicknames included in the tortazo_botnet.bot). For instance, '-z Nickname1,Nickname2' or '-z all' to include all nicknames.")
     def zombie_mode(self, zombieMode):
         '''
         Zombie mode to execute commands across the compromised hosts.
@@ -181,6 +186,17 @@ class Cli(cli.Application):
             self.logger.basicConfig(format="%(levelname)s: %(message)s")
         self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
         '''
+        Simple Tests for V1.0
+
+        exitNode = [('127.0.0.1', 'descriptor'), [22,33,44,55,66]]
+        self.queue.put(exitNode)
+        worker = WorkerThread(self.queue, 0, self)
+        worker.setDaemon(True)
+        worker.start()
+        self.queue.join()
+        '''
+
+        '''
             List and Scan the exit nodes. The function will return an dictionary with the exitnodes found and the open ports.
             THIS PROCESS IS VERY SLOW AND SOMETIMES THE CONNECTION WITH THE DIRECTORY AUTHORITIES IS NOT AVAILABLE.
         '''
@@ -194,6 +210,7 @@ class Cli(cli.Application):
             botnet = BotNet(self)
             botnet.start()
 
+
         elif self.mode is not None:
             discovery = Discovery(self)
             exitNodes = []
@@ -203,8 +220,8 @@ class Cli(cli.Application):
                 exitNodes = discovery.listAuthorityExitNodes() #Returns a tuple with IP Addresses and open-ports.
 
             if exitNodes is not None and len(exitNodes) > 0:
-                for exitNode in exitNodes.items():
-                    self.queue.put(exitNode)
+                for host_descriptor, ports in exitNodes.iteritems():
+                    self.queue.put([host_descriptor, ports])
                 #Block until the queue is empty.
 
                 for thread in range(self.threads): #Creating the number of threads specified by command-line.
@@ -214,8 +231,8 @@ class Cli(cli.Application):
                 self.queue.join()
         else:
             self.logger.info(term.format("[-] The option -m/mode is mandatory (values: windows | linux)", term.Color.RED))
-
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
+
 if __name__ == "__main__":
     '''
     Start the main program.

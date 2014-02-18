@@ -160,15 +160,18 @@ class Discovery:
                 for protocol in ["tcp", "udp", "icmp"]:
                     if scan[host].has_key(protocol):
                         ports = scan[host][protocol].keys()
+                        info = []
                         for port in ports:
                             entry += 'Port: %s , ' % port
                             entry += ' State: %s , ' % (scan[host][protocol][port]['state'])
                             if 'open' in (scan[host][protocol][port]['state']):
-                                self.exitNodes[host] = (port, descriptor)
+                                info.append(port)
                             if scan[host][protocol][port].has_key('reason'):
                                 entry += 'Reason: %s , ' % (scan[host][protocol][port]['reason'])
                             if scan[host][protocol][port].has_key('name'):
-                                entry += 'Name: %s , ' % (scan[host][protocol][port]['name'])
+                                entry += 'Name: %s ' % (scan[host][protocol][port]['name'])
+                            entry += '\n'
+                        self.exitNodes[(host, descriptor)] = info
             else:
                 self.cli.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))
             entry += '\n------- NMAP SCAN REPORT END ------- \n'
