@@ -245,6 +245,19 @@ Long opts:
 python Tortazo.py --verbose --threads 10 --zombie-mode all --run-command "id; uname -a; uptime; w"
 ```
 
+If you want to open a new shell, just use the -o/--open-shell option
+
+Short opts:
+```
+python Tortazo.py -v -t 10 -z all -o
+```
+
+Long opts:
+```
+python Tortazo.py --verbose --threads 10 --zombie-mode all --open-shell
+```
+
+NOTE: Obviously, the credentials in the tortazo_botnet.bot file should be valid for every host. If the credentials are not valid, Fabric will resolve the authentication method (password or public key) and will require that you enter the password or passphase depending on the authentication method.
 
 ##Legal Warning!!
 I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool.
