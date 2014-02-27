@@ -62,7 +62,7 @@ class CommandAndControl():
         except:
             results = "Unexpected error:", sys.exc_info()[0]		
             self.cli.logger.error(term.format("[-] Exception executing command:  "+command, term.Color.RED))
-            self.cli.logger.error(term.format("[-] Trace of the exception: "+sys.exc_info()[0], term.Color.RED))
+            self.cli.logger.error(term.format("[-] Trace of the exception: "+str(results), term.Color.RED))
         return results
 
 

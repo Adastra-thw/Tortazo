@@ -69,7 +69,7 @@ class BotNet:
                         for command in bot.results.keys():
                             self.cli.logger.info(term.format("[+] Host: "+bot.host, term.Color.YELLOW))
                             self.cli.logger.info(term.format("[+] Command: "+command, term.Color.YELLOW))
-                            self.cli.logger.info(term.format("[+] Output: "+bot.results[command], term.Color.YELLOW))
+                            self.cli.logger.info(term.format("[+] Output: "+str(bot.results[command]), term.Color.YELLOW))
                 elif self.cli.openShell is True:
                     print(term.format("\n\n[+] Listing the Bots available...", term.Color.BLUE))
                     print(term.format("[+] Select a Host Id to open a new shell... ", term.Color.BLUE))
