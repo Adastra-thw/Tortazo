@@ -45,16 +45,18 @@ import logging as log
 #	http://thehackerway.com
 #
 #	TODO IN V1.0:
+#   "{" and "}"  means Done :P
 #
-#   {- In bruteforce mode, if there's no dictfile, then use FuzzDB to perform the bruteforce attack.}
+#   {-} In bruteforce mode, if there's no dictfile, then use FuzzDB to perform the bruteforce attack.
 #   {-} Check the "open-shell" feature. Try with invalid values, a long list of bots, etc.
 #	{-} Check the Fabric library for Botnet C&C
 #	- Testing
-#   {- Docs.}
-#   - NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
+#   {-} Docs.
+#   {-} NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
 #   {-} When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
 #
 #   TODO IN V1.1:
+#   - Upgrade the Shodan Library and use the new features.
 #   - PyNessus integration in the Discovery Module.
 #   - Gather information about SNMP Devices.
 #   - Format reports for Nmap, Shodan, Nessus and SNMP. (Not just an .txt file, create an HTML, XML and probably JSON files)
@@ -63,6 +65,12 @@ import logging as log
 #   - Allow 'windows', 'linux', 'bsd', and other filters. (Also, allow any type of OS.)
 #   - Check what do bannergrab:  http://sourceforge.net/projects/bannergrab/
 #   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
+#
+#   TODO IN V1.2:
+#   - Integration with W3AF
+#   - Try to integrate with FOCA.
+#   - Implement a basic system of Plugins.
+
 
 class Cli(cli.Application):
     '''
