@@ -259,6 +259,14 @@ python Tortazo.py --verbose --threads 10 --zombie-mode all --open-shell
 
 NOTE: Obviously, the credentials in the tortazo_botnet.bot file should be valid for every host. If the credentials are not valid, Fabric will resolve the authentication method (password or public key) and will require that you enter the password or passphase depending on the authentication method.
 
+##Some Screenshots!!
+
+![Searching in the Mirrors](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/simpleMirrors.png "Searching in the Mirrors")
+![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+![Selecting a shell from tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNetOpenShell1.png "Selecting a shell from tortazo_botnet.bot")
+![Opening a shell on the selected host](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNetOpenShell2.png "Opening a shell on the selected host")
+
 ##Legal Warning!!
 I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool.
 If you found vulnerabilities or any kind of flaw in any Exit Node of TOR Network, please, send the report to the admin, in this way you can contribute to build solid and secure TOR circuits for all of us.
@@ -266,5 +274,6 @@ If you found vulnerabilities or any kind of flaw in any Exit Node of TOR Network
 ##Contact
 If you find any bug, please write me to debiadastra@gmail.com
 If you want to contribute to develop this little tool, I'll be glad to hear of you.
+
 
 Thanks for reading.
