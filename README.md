@@ -261,11 +261,11 @@ NOTE: Obviously, the credentials in the tortazo_botnet.bot file should be valid 
 
 ##Some Screenshots!!
 
-![Searching in the Mirrors](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/simpleMirrors.png "Searching in the Mirrors")
-![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
-![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
-![Selecting a shell from tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNetOpenShell1.png "Selecting a shell from tortazo_botnet.bot")
-![Opening a shell on the selected host](https://github.com/Adastra-thw/Tortazo/blob/master/screenshots/botNetOpenShell2.png "Opening a shell on the selected host")
+![Searching in the Mirrors](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/simpleMirrors.png "Searching in the Mirrors")
+![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+![Selecting a shell from tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNetOpenShell1.png "Selecting a shell from tortazo_botnet.bot")
+![Opening a shell on the selected host](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNetOpenShell2.png "Opening a shell on the selected host")
 
 ##Legal Warning!!
 I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool.
