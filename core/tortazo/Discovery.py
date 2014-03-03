@@ -92,7 +92,7 @@ class Discovery:
                     exit_fingerprint, exit_nickname = circuit.path[-1]
                     '''As of Tor version 0.2.3.25 relays no longer get server descriptors by default. It's advised that you use microdescriptors instead, but if you really need server descriptors then you can get them by setting UseMicrodescriptors 0.	'''
                     exitNode = controller.get_server_descriptor(exit_fingerprint, None)
-                    self.cli.logger.debug(term.format("[+] Filtering by Fingerprint: "+self.cli.exitNodeFingerprint, term.Color.GREEN))
+                    self.cli.logger.debug(term.format("[+] Filtering by Fingerprint: "+str(self.cli.exitNodeFingerprint), term.Color.GREEN))
                     if exitNode:
                         if self.cli.exitNodeFingerprint is None:
                             listDescriptors.append(exitNode)
@@ -131,7 +131,7 @@ class Discovery:
                 #Relay's Operative System equals to the Operative System (option mode) specified in command-line AND
                 #The Relay is a Exit Node.
                 if descriptor.address not in nodesAlreadyScanned:
-                    self.cli.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s" % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system), term.Color.YELLOW))
+                    self.cli.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s - Fingerprint: %s" % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system, descriptor.fingerprint), term.Color.YELLOW))
                     self.cli.logger.debug(term.format("[+] Starting the NMap Scan with the following options: ", term.Color.GREEN))
                     self.cli.logger.debug(term.format("[+][+] Scan Address: %s " % (descriptor.address), term.Color.GREEN))
                     self.cli.logger.debug(term.format("[+][+] Scan Arguments: %s " % (self.cli.scanArguments), term.Color.GREEN))

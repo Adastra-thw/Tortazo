@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import threading
 from stem.util import term
-from shodan.api import WebAPIError
-from shodan import WebAPI
+#from shodan.client import APIError
+import shodan
 import Queue
 import paramiko
 import os
@@ -30,8 +30,8 @@ import sys
 
 class WorkerThread(threading.Thread):
     '''
-	Worker Thread to information gathering and attack the exit nodes found.
-	'''
+    Worker Thread to information gathering and attack the exit nodes found.
+    '''
     def __init__(self, queue, tid, cli) :
         threading.Thread.__init__(self)
         self.queue = queue
@@ -49,7 +49,7 @@ class WorkerThread(threading.Thread):
             else:
                 #Read the shodan key and create the WebAPI object.
                 shodanKey = open(self.cli.shodanKey).readline().rstrip('\n')
-                self.shodanApi = WebAPI(shodanKey)
+                self.shodanApi = shodan.Shodan(shodanKey)
                 self.cli.logger.debug(term.format("[+] Connected to Shodan using Thread: %s " %(self.tid), term.Color.GREEN))
 
     def run(self) :
@@ -67,7 +67,7 @@ class WorkerThread(threading.Thread):
                     try:
                         shodanResults = self.shodanApi.host(self.ip)
                         self.recordShodanResults(self, self.ip, shodanResults)
-                    except WebAPIError:
+                    except APIError:
                         self.cli.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(self.ip), term.Color.RED))
                         pass
                 if self.cli.brute is True:

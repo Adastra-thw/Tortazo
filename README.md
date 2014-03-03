@@ -10,13 +10,13 @@ Tortazo is an open source Python Script to gather information about ExitNodes in
 ## Dependencies
 To use the script, you'll need the following dependencies:
 
-* Paramiko
-* Python-Nmap
-* Python-shodan
-* Stem
-* Plumbum
-* zlib
-* Fabric
+* Paramiko:         https://github.com/paramiko/paramiko
+* Python-Nmap       http://xael.org/norman/python/python-nmap/
+* Python-shodan:    https://github.com/achillean/shodan-python
+* Stem:             https://stem.torproject.org/
+* Plumbum:          https://pypi.python.org/pypi/plumbum
+* Fabric:           http://docs.fabfile.org/en/1.8/
+* Requests:         https://pypi.python.org/pypi/requests
 
    
 
@@ -158,12 +158,12 @@ python Tortazo.py --verbose --mode linux --use-circuit-nodes
 
 Short opts:
 ```
-python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FergieRossendorf3
+python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
 ```
 
 Long opts:
 ```
-python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FergieRossendorf3
+python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
 ```
 
 Tortazo v1.0 Supports Shodan and Nmap for Information Gathering and profiling the targets. However, in Tortazo v1.1, support for Nessus, Metasploit and other tools will be integrated.
@@ -187,12 +187,12 @@ Tortazo v1.0 just supports bruteforcing on SSH services running in the ExitNodes
 
 Short opts:
 ```
-python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FergieRossendorf3 -b /home/user/dictFile.txt
+python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FFAC0F4C85052F696EBB9517DD6E2E8B830835DD -b /home/user/dictFile.txt
 ```
 
 Long opts:
 ```
-python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FergieRossendorf3
+python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
 ```
 
 where "/home/user/dictFile.txt" could have the following contents:
@@ -217,7 +217,7 @@ root:admin123
 
 Short opts:
 ```
-python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FergieRossendorf3 -b
+python Tortazo.py -t 10 -n 30 -v -m linux -a "-sSV -A -n" -e FFAC0F4C85052F696EBB9517DD6E2E8B830835DD -b
 ```
 
 Long opts:

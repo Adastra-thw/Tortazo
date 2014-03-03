@@ -49,8 +49,8 @@ import logging as log
 #
 #   {-} In bruteforce mode, if there's no dictfile, then use FuzzDB to perform the bruteforce attack.
 #   {-} Check the "open-shell" feature. Try with invalid values, a long list of bots, etc.
-#	{-} Check the Fabric library for Botnet C&C
-#	- Testing
+#   {-} Check the Fabric library for Botnet C&C
+#   {-} Testing
 #   {-} Docs.
 #   {-} NMAP Scripting output! Include this in the final report and include the nickname of the scanned exitnode, not just the IP Address.
 #   {-} When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
@@ -65,7 +65,9 @@ import logging as log
 #   - Allow 'windows', 'linux', 'bsd', and other filters. (Also, allow any type of OS.)
 #   - Check what do bannergrab:  http://sourceforge.net/projects/bannergrab/
 #   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
-#
+#   - Use PyInstaller to generate an executable for Linux and Windows.
+#   - Report any issue to the administrator of the exitnode.
+
 #   TODO IN V1.2:
 #   - Integration with W3AF
 #   - Try to integrate with FOCA.
