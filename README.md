@@ -261,10 +261,19 @@ NOTE: Obviously, the credentials in the tortazo_botnet.bot file should be valid 
 
 ##Some Screenshots!!
 
+*Searching in the Mirrors
 ![Searching in the Mirrors](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/simpleMirrors.png "Searching in the Mirrors")
+
+*Simple Command Execution using the tortazo_botnet.bot file
 ![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+
+*Simple Command Execution using the tortazo_botnet.bot file
 ![Simple Command Execution using the tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNet.png "Simple Command Execution using the tortazo_botnet.bot")
+
+*Selecting a shell from tortazo_botnet.bot
 ![Selecting a shell from tortazo_botnet.bot](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNetOpenShell1.png "Selecting a shell from tortazo_botnet.bot")
+
+*Opening a shell on the selected host
 ![Opening a shell on the selected host](https://github.com/Adastra-thw/Tortazo/raw/master/screenshots/botNetOpenShell2.png "Opening a shell on the selected host")
 
 ##Legal Warning!!
