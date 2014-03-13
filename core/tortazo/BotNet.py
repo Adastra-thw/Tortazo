@@ -1,7 +1,10 @@
 # coding=utf-8
 '''
-Created on 22/01/2013
-@author: Adastra
+Created on 22/01/2014
+
+#Author: Adastra.
+#twitter: @jdaanial
+
 BotNet.py
 
 BotNet is free software; you can redistribute it and/or modify
@@ -18,11 +21,14 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from stem.util import term
 import os
 import sys
-from core.tortazo.BotMachine import BotMachine
+
+from stem.util import term
+
 from core.tortazo.CommandAndControl import CommandAndControl
+from core.tortazo.data import BotMachine
+
 
 class BotNet:
     '''

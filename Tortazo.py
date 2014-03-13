@@ -1,7 +1,10 @@
 # coding=utf-8
 '''
-Created on 22/01/2013
-@author: Adastra
+Created on 22/01/2014
+
+#Author: Adastra.
+#twitter: @jdaanial
+
 Tortazo.py
 
 Tortazo is free software; you can redistribute it and/or modify
@@ -25,9 +28,12 @@ import ftplib
 from core.tortazo.Discovery import Discovery
 from core.tortazo.WorkerThread import WorkerThread
 from core.tortazo.BotNet import BotNet
+from core.tortazo.Reporting import Reporting
 import Queue
 from stem.util import term
 import logging as log
+import config
+
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -37,14 +43,12 @@ import logging as log
 #     ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝ ╚═════╝ 
 #                                                              
 
-
-
 #
 #	Attack exit nodes of the TOR Network.
 #	Author: Adastra.
 #	http://thehackerway.com
 #
-#	TODO IN V1.0:
+#	DONE IN V1.0:
 #   "{" and "}"  means Done :P
 #
 #   {-} In bruteforce mode, if there's no dictfile, then use FuzzDB to perform the bruteforce attack.
@@ -56,22 +60,24 @@ import logging as log
 #   {-} When filter by fingerprint and use the local descriptors, the filter is not working as expected. Check it!
 #
 #   TODO IN V1.1:
-#   - Upgrade the Shodan Library and use the new features.
-#   - PyNessus integration in the Discovery Module.
-#   - Gather information about SNMP Devices.
+#   {-} Upgrade the Shodan Library and use the new features. Move Shodan from "WorkerThread to Discovery" (validate the shodankey file, what happen if the file don't exists?)
+#   - Testing Shodan Features and generate a report with jinja2.
+#   - Plugins system: Just an directory with *.py files. The name of the "py" should define a class with a constructor which receives the "TorNodeData" structure, in this way, the developer can use the internal data representation of Exit Nodes of tor.
 #   - Format reports for Nmap, Shodan, Nessus and SNMP. (Not just an .txt file, create an HTML, XML and probably JSON files)
+#   - Report any issue to the administrator of the exitnode.
+#   - PyNessus integration (develop as Plugin).
+#   - Gather information about SNMP Devices.
 #   - Upload and execute files to the compromised machines using SFTP and FTP.
 #   - Check subterfuge: http://code.google.com/p/subterfuge/
 #   - Allow 'windows', 'linux', 'bsd', and other filters. (Also, allow any type of OS.)
 #   - Check what do bannergrab:  http://sourceforge.net/projects/bannergrab/
 #   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
 #   - Use PyInstaller to generate an executable for Linux and Windows.
-#   - Report any issue to the administrator of the exitnode.
+#   - Create setup.py for Tortazo.
 
 #   TODO IN V1.2:
 #   - Integration with W3AF
 #   - Try to integrate with FOCA.
-#   - Implement a basic system of Plugins.
 
 
 class Cli(cli.Application):
@@ -87,6 +93,7 @@ class Cli(cli.Application):
     useMirror = cli.Flag(["-d", '--use-mirrors'], help="Use the mirror directories of TOR. This will help to not overwhelm the official directories")
     useShodan = cli.Flag(["-s", '--use-shodan'], help="Use ShodanHQ Service. (Specify -k/--shodan-key to set up the file where's stored your shodan key.)")
     useCircuitExitNodes = cli.Flag(["-c", "--use-circuit-nodes"], help="Use the exit nodes selected for a local instance of TOR.")
+    openShell = cli.Flag(["-o", "--open-shell"], excludes=["--mode"], requires=["--zombie-mode"],  help="Open a shell on the specified host. example: '--open-shell 1' will spawn a new shell on the host defined in line 1 of the 'tortazo_botnet.bot' file")
 
     threads = 1 #Execution Threads.
     # mode = None #Mode: Windows/Linux
@@ -101,7 +108,7 @@ class Cli(cli.Application):
     zombieMode = None
     mode = None
     runCommand = None
-    openShell = cli.Flag(["-o", "--open-shell"], excludes=["--mode"], requires=["--zombie-mode"],  help="Open a shell on the specified host. example: '--open-shell 1' will spawn a new shell on the host defined in line 1 of the 'tortazo_botnet.bot' file")
+    pluginManagement = None
 
 
 
@@ -184,10 +191,18 @@ class Cli(cli.Application):
         '''
         self.runCommand = runCommand
 
+    @cli.switch(["-P", "--use-plugins"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" Check the documentation for more detailed information')
+    def plugin_management(self, pluginManagement):
+        '''
+        Plugin Management.
+        '''
+        self.pluginManagement = pluginManagement
+
     def main(self):
         '''
         Initialization of logger system.
         '''
+
         self.logger = log
         if self.verbose:
             self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
@@ -195,6 +210,8 @@ class Cli(cli.Application):
         else:
             self.logger.basicConfig(format="%(levelname)s: %(message)s")
         self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+
+        #self.loadAndExecute(self,"simplePlugin:simplePrinter")
         '''
         Simple Tests for V1.0
 
@@ -227,21 +244,81 @@ class Cli(cli.Application):
             if self.useCircuitExitNodes:
                 exitNodes = discovery.listCircuitExitNodes()
             else:
-                exitNodes = discovery.listAuthorityExitNodes() #Returns a tuple with IP Addresses and open-ports.
+                exitNodes = discovery.listAuthorityExitNodes() #Returns a list of TorNodeData objects
 
             if exitNodes is not None and len(exitNodes) > 0:
-                for host_descriptor, ports in exitNodes.iteritems():
-                    self.queue.put([host_descriptor, ports])
-                #Block until the queue is empty.
+                reporter = Reporting(self)
+                reporter.generateNmapReport(exitNodes, config.NmapOutputFile)
+                for torNode in exitNodes:
+                    if self.brute:
+                        self.queue.put(torNode)
+                    #If shodan is activated, let's try to gather some information for every node found.
+                    if self.useShodan == True:
+                        #Using Shodan to search information about this machine in shodan database.
+                        self.logger.info(term.format("[+] Shodan Activated. About to read the Development Key. ", term.Color.YELLOW))
+                        if self.shodanKey == None:
+                            #If the key is None, we can't use shodan.
+                            self.logger.warn(term.format("[-] Shodan Key's File has not been specified. We can't use shodan without a valid key", term.Color.RED))
+                        else:
+                            #Read the shodan key and create the Shodan object.
+                            try:
+                                shodanKeyString = open(self.shodanKey).readline().rstrip('\n')
+                                shodanHost = discovery.shodanSearchByHost(shodanKeyString, torNode.host)
+                                reporter.generateShodanReport(shodanHost, config.ShodanOutputFile)
+                            except IOError, ioerr:
+                                self.logger.warn(term.format("[-] Shodan's key File: %s not Found." %(self.shodanKey), term.Color.RED))
 
-                for thread in range(self.threads): #Creating the number of threads specified by command-line.
-                    worker = WorkerThread(self.queue, thread, self)
-                    worker.setDaemon(True)
-                    worker.start()
-                self.queue.join()
+                #Check if there's any plugin to execute!
+                if self.pluginManagement != None:
+                    self.loadAndExecute(self.pluginManagement, exitNodes)
+
+                #Block until the queue is empty.
+                if self.brute:
+                    for thread in range(self.threads): #Creating the number of threads specified by command-line.
+                        worker = WorkerThread(self.queue, thread, self)
+                        worker.setDaemon(True)
+                        worker.start()
+                    self.queue.join()
         else:
             self.logger.info(term.format("[-] The option -m/mode is mandatory (values: windows | linux)", term.Color.RED))
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
+
+    def loadAndExecute(self, listPlugins, torNodesFound):
+        '''
+        Load and execute external rutines (plugins)
+        '''
+        #simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN
+        if listPlugins is None:
+            self.logger.warn((term.format("[-] You should specify a list of plugins with the option -P/--use-plugins", term.Color.YELLOW)))
+            return
+        plugins = listPlugins.split(";")
+        for plugin in plugins:
+            pluginModule, pluginClass = plugin.split(":")
+            if pluginModule is None or pluginClass is None:
+                self.logger.info((term.format("[-] Format "+ listPlugins +" invalid. Check the documentation to use plugins in Tortazo", term.Color.YELLOW)))
+                return
+            try:
+                module = __import__("plugins."+pluginModule)
+                pluginArguments = pluginClass.split(',')
+                pluginClassName = pluginArguments[0]
+                pluginArguments.remove(0)
+                components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
+                self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
+                for comp in components[1:]:
+                    module = getattr(module, comp)
+                reference = module()
+                reference.setNodes(torNodesFound)
+                self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
+                self.logger.debug((term.format("[+] Parsing the arguments for the plugin...", term.Color.GREEN)))
+                pluginArguments = {}
+                for argument in pluginArguments:
+                    argumentName, argumentValue = argument.split('=')
+                    pluginArguments[argumentName] = argumentValue
+                reference.setPluginArguments(pluginArguments)
+                reference.runPlugin()
+            except ImportError, importErr:
+                self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
+
 
 if __name__ == "__main__":
     '''

@@ -1,7 +1,10 @@
 # coding=utf-8
 '''
-Created on 22/01/2013
-@author: Adastra
+Created on 22/01/2014
+
+#Author: Adastra.
+#twitter: @jdaanial
+
 Discovery.py
 
 Discovery is free software; you can redistribute it and/or modify
@@ -24,9 +27,13 @@ from stem.control import Controller
 from stem.connection import MissingPassword, AuthenticationFailure
 from getpass import getpass
 from stem.util import term
+from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
+from core.tortazo.data.ShodanHost import ShodanHost
+from Reporting import Reporting
 from time import gmtime, strftime
 import zlib
 import nmap
+import shodan
 
 
 class Discovery:
@@ -42,6 +49,7 @@ class Discovery:
         Constructor.
         '''
         self.cli = cli
+        self.exitNodes = []
 
     def listAuthorityExitNodes(self):
         '''
@@ -114,9 +122,9 @@ class Discovery:
                 self.cli.logger.warn(term.format("[-] The password specified is invalid.", term.Color.RED))
         else:
             self.cli.logger.warn(term.format("[-] The control port specified is invalid.", term.Color.RED))
-	
+
     def filterNodes(self, listDescriptors):
-		
+
         '''
         List the Exit Nodes using the filters specified by command-line.
         '''
@@ -147,34 +155,77 @@ class Discovery:
             self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
         return self.exitNodes
 
+    def shodanSearchByHost(self, shodanKey, ip):
+        '''
+        Search in Shodan by host. This function needs the shodanKey and the IP address of the host.
+        '''
+        self.cli.logger.debug(term.format("[+] Using Shodan against %s " %(ip), term.Color.GREEN))
+        try:
+            self.shodanApi = shodan.Shodan(shodanKey)
+            self.results = self.shodanApi.host(ip)
+            return self.recordShodanResults(ip, self.shodanApi.info(), self.results)
+        except shodan.APIError:
+            self.cli.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(ip), term.Color.RED))
+            pass
+
     def recordNmapScan(self, scan, descriptor):
-        '''Performs the NMap scan using python-nmap library. Returns the exitnodes with the open ports found in the scanning process.'''
-        entryFile = 'nmapScan.txt'
-        nmapFileResults = open(entryFile, 'a')
+        #Performs the NMap scan using python-nmap library. Returns the exitnodes with the open ports found in the scanning process.
         for host in scan.all_hosts():
-            entry = '------- NMAP SCAN REPORT START FOR %s NICKNAME: %s ------- \n' %(host, descriptor.nickname)
-            entry += '[+] Host: %s \n' % (host)
+            torNode = TorNodeData()
+            torNode.host = host
+            torNode.nickname = descriptor.nickname
             if scan[host].has_key('status'):
-                entry += '[+][+]State: %s \n' % (scan[host]['status']['state'])
-                entry += '[+][+]Reason: %s \n' % (scan[host]['status']['reason'])
+                torNode.state = scan[host]['status']['state']
+                torNode.reason = scan[host]['status']['reason']
                 for protocol in ["tcp", "udp", "icmp"]:
                     if scan[host].has_key(protocol):
                         ports = scan[host][protocol].keys()
-                        info = []
                         for port in ports:
-                            entry += 'Port: %s , ' % port
-                            entry += ' State: %s , ' % (scan[host][protocol][port]['state'])
-                            if 'open' in (scan[host][protocol][port]['state']):
-                                info.append(port)
+                            torNodePort = TorNodePort()
+                            torNodePort.port = port
+                            torNodePort.state = scan[host][protocol][port]['state']
                             if scan[host][protocol][port].has_key('reason'):
-                                entry += 'Reason: %s , ' % (scan[host][protocol][port]['reason'])
+                                torNodePort.reason = scan[host][protocol][port]['reason']
                             if scan[host][protocol][port].has_key('name'):
-                                entry += 'Name: %s ' % (scan[host][protocol][port]['name'])
-                            entry += '\n'
-                        self.exitNodes[(host, descriptor)] = info
+                                torNodePort.name = scan[host][protocol][port]['name']
+
+                            if 'open' in (scan[host][protocol][port]['state']):
+                                torNode.openPorts.append(torNodePort)
+                            else:
+                                torNode.closedFilteredPorts.append(torNode)
+                        self.exitNodes.append(torNode)
             else:
                 self.cli.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))
-            entry += '\n------- NMAP SCAN REPORT END ------- \n'
-            entry += '\n\n'
-            nmapFileResults.write(entry)
-            nmapFileResults.close()
+
+    def recordShodanResults(self, host, keyInfo, results):
+        '''
+        Generate a report with the results of shodan.
+        '''
+        shodanHost = ShodanHost()
+        shodanHost.keyInfo = keyInfo
+        shodanHost.results = results
+        shodanHost.host = host
+
+        return shodanHost
+        '''entryFile = 'shodanScan-%s.txt' %(host)
+        shodanFileResults = open(entryFile, 'a')
+        entry = '------- SHODAN REPORT START FOR %s ------- \n' %(host)
+        self.recursiveInfo(entry, results)
+        entry += '------- SHODAN REPORT END FOR %s ------- \n' %(host)
+        shodanFileResults.write(entry)
+        shodanFileResults.close()
+        self.cli.logger.debug("[+] Shodan File Created.")
+        '''
+
+    '''def recursiveInfo(self, entry, data):
+        if type(data) == dict:
+            for key in self.results.keys():
+                if type(key) == dict:
+                    entry += self.recursiveInfo(entry, key)
+                elif type(key) == list:
+                    for element in key:
+                        if type(key) == dict:
+                            entry += self.recursiveInfo(entry, key)
+                else:
+                    entry += '[+]%s : %s \n' %(key, self.results[key])
+    '''

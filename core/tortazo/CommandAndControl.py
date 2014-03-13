@@ -1,7 +1,10 @@
 # coding=utf-8
 '''
-Created on 22/01/2013
-@author: Adastra
+Created on 22/01/2014
+
+#Author: Adastra.
+#twitter: @jdaanial
+
 CommandAndControl.py
 
 CommandAndControl is free software; you can redistribute it and/or modify
@@ -18,10 +21,11 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from fabric.api import env, run, run, execute, hide, sudo, open_shell
-from core.tortazo.BotMachine import BotMachine
-from stem.util import term
 import sys
+
+from fabric.api import env, run, execute, hide, sudo, open_shell
+from stem.util import term
+
 
 class CommandAndControl():
     '''
