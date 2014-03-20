@@ -5,7 +5,7 @@ Created on 22/01/2014
 #Author: Adastra.
 #twitter: @jdaanial
 
-WorkerThread.py
+BasePlugin.py
 
 WorkerThread is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,6 +21,9 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
+import logging as log
+from stem.util import term
+
 class BasePlugin():
     '''
     Every plugin in Tortazo should inher
@@ -30,8 +33,20 @@ class BasePlugin():
         '''
         Constructor for the Base plugin class.
         '''
+        self.logger = log
         self.torNodes = []
         self.pluginArguments = {}
+        self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
+
+    def info(self, message):
+         self.logger.info(term.format(message, term.Color.YELLOW))
+
+    def error(self, message):
+        self.logger.warn(term.format(message, term.Color.RED))
+
+    def debug(self, message):
+        self.logger.debug(term.format(message, term.Color.GREEN))
+
 
     def setNodes(self, torNodes):
         '''
@@ -44,3 +59,9 @@ class BasePlugin():
         Arguments passed from command-line to the plugin.
         '''
         self.pluginArguments = pluginArguments
+
+    def runPlugin(self):
+        pass
+
+    def help(self):
+        self.info("[*] Help for the plugin... You should overwrite this method in your own plugin class")

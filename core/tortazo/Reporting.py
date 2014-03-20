@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from jinja2 import Environment, FileSystemLoader
 import os
-#from stem.util import term
+from stem.util import term
 
 #from data.TorNodeData import TorNodeData, TorNodePort
 
@@ -68,7 +68,6 @@ class Reporting:
         apiInfo = shodanHost.keyInfo
         templateVars = { "title" : "Shodan Report generated with Tortazo",
                          "shodanHost" : results,
-                         "Headers" : mapHeaders,
                          "APIInfo" : apiInfo,
                          "shodanHostName" : shodanHost.host}
         fd = open(absolutePathFile, 'w')

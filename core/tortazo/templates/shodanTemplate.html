@@ -10,42 +10,50 @@
 {% block content %}
     <center>
     <h1><p class="important"> ==== Shodan Results ==== </p></h1>
-    <div class="col-lg-8">
-        <div class="panel-heading">
-        <i class="fa fa-mobile fa-fw"></i><b>Host: </b> {{ shodanHostName }}
-        </div>
-    {% if shodanHost['data'] %}
-        <div class="row">
-                <div class="panel-heading">
-                    <i class="fa fa-mobile fa-fw"></i><b>Headers:</b>
-                </div>
-                <div class="form-group">
-                    <p class="control-label">{{ shodanHost['data'] }} </p>
-                </div>
-        </div>
-    {%endif%}
-    <div class="panel panel-default">
-        <table class="table">
-    {% for key in shodanHost.keys(): %}
-        {% if key != 'data' %}
-            {% if key != 'html' %}
-						<tr>
-							<td>
-                                <b>{{key}}</b>
-							</td>
-							<td>
-                                <b>{{shodanHost[key]}}</b>
-							</td>
-						</tr>
-            {% endif %}
+    <h2><p class="important"> ==== API Details ==== </p></h2>
+    <table class="table">
+    {% for apiDetail in APIInfo.keys():%}
+        <tr>
+            <td>
+                <b>{{apiDetail}}</b>
+			</td>
+			<td>
+                <b>{{APIInfo[apiDetail]}}</b>
+			</td>
+		</tr>
+    {% endfor %}
+    </table>
+    <br />
+    </center>
+
+    <h2><p class="important"> ==== Hosts ==== </p></h2>
+    <center>
+            <i class="fa fa-mobile fa-fw"></i><b>Host: </b> {{ shodanHostName }}
+            <br />
+            <br />
+        {% if shodanHost['data'] %}
+            <i class="fa fa-mobile fa-fw"></i><b>Headers:</b>{{ shodanHost['data'] }}
+            <br />
+            <br />
+            <br />
         {%endif%}
-	{% endfor %}
-        </table>
-    </div>
-    </div>
-    {{Headers}}
-    {{APIInfo}}
-
-
+    </center>
+    <center>
+         <table class="table">
+            {% for key in shodanHost.keys(): %}
+                {% if key != 'data' %}
+                    {% if key != 'html' %}
+                                <tr>
+                                    <td>
+                                        <b>{{key}}</b>
+                                    </td>
+                                    <td>
+                                        <b>{{shodanHost[key]}}</b>
+                                    </td>
+                                </tr>
+                    {% endif %}
+                {%endif%}
+            {% endfor %}
+         </table>
     </center>
 {% endblock %}

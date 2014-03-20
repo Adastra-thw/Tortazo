@@ -36,5 +36,5 @@ def shodanTest():
 
 if __name__ == "__main__":
     #loadAndExecute("simplePlugin:simplePrinter", [])
-    shodanTest()
-    #moreTest()
+    #shodanTest()
+    moreTest()

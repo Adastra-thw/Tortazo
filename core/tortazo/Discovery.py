@@ -29,12 +29,10 @@ from getpass import getpass
 from stem.util import term
 from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
 from core.tortazo.data.ShodanHost import ShodanHost
-from Reporting import Reporting
-from time import gmtime, strftime
 import zlib
 import nmap
 import shodan
-
+from core.tortazo.databaseManagement import TortazoDatabase
 
 class Discovery:
     '''
@@ -124,7 +122,6 @@ class Discovery:
             self.cli.logger.warn(term.format("[-] The control port specified is invalid.", term.Color.RED))
 
     def filterNodes(self, listDescriptors):
-
         '''
         List the Exit Nodes using the filters specified by command-line.
         '''
@@ -153,6 +150,12 @@ class Discovery:
                     nodesAlreadyScanned.append(descriptor.address)
         if len(self.exitNodes) == 0:
             self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
+        else:
+            database = TortazoDatabase.TortazoDatabase()
+            database.initDatabase()
+            database.cleanDatabaseState()
+            database.insertExitNode(self.exitNodes)
+
         return self.exitNodes
 
     def shodanSearchByHost(self, shodanKey, ip):
@@ -173,7 +176,7 @@ class Discovery:
         for host in scan.all_hosts():
             torNode = TorNodeData()
             torNode.host = host
-            torNode.nickname = descriptor.nickname
+            torNode.nickName = descriptor.nickname
             if scan[host].has_key('status'):
                 torNode.state = scan[host]['status']['state']
                 torNode.reason = scan[host]['status']['reason']
@@ -188,11 +191,12 @@ class Discovery:
                                 torNodePort.reason = scan[host][protocol][port]['reason']
                             if scan[host][protocol][port].has_key('name'):
                                 torNodePort.name = scan[host][protocol][port]['name']
-
+                            if scan[host][protocol][port].has_key('version'):
+                                torNodePort.version = scan[host][protocol][port]['version']
                             if 'open' in (scan[host][protocol][port]['state']):
                                 torNode.openPorts.append(torNodePort)
                             else:
-                                torNode.closedFilteredPorts.append(torNode)
+                                torNode.closedFilteredPorts.append(torNodePort)
                         self.exitNodes.append(torNode)
             else:
                 self.cli.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))

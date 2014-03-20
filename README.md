@@ -166,8 +166,23 @@ Long opts:
 python Tortazo.py --threads 10 --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
 ```
 
-Tortazo v1.0 Supports Shodan and Nmap for Information Gathering and profiling the targets. However, in Tortazo v1.1, support for Nessus, Metasploit and other tools will be integrated.
+Tortazo Supports Shodan and Nmap for Information Gathering and profiling the targets.
 
+##Database Usage.
+The results found by Tortazo are stored in a sqlite database located in <TORTAZO_DIR>/tortazo.db
+This database saves the last scan performed from Tortazo with hosts, ports and scan information.
+If you execute a new scan, the last scan will be stored in different database tables (for history porpuses) and in the main tables will save the results found in this new scan.
+If you want to use the results from the last scan instead to perform a new scan against TOR, you can do it using the option --use-database. If you use this option, Tortazo will not execute any kind of scan, just will get the last scan stored in database and will use the registers retrieved to execute plugins, bruteforce attacks or whatever you want to do with that information.
+
+##Plugins
+Tortazo is extensible via Plugins. The idea is simple, you can create a class which extends from BasePlugin class of Tortazo and you should create a function called "runPlugin" (without argument) with your own code.
+The plugin system is feeded with a list of "TorNodeData" objects, which have the information about the TOR nodes found in the scan process (or from the last scan iif you use --use-database option)
+
+python Tortazo.py -v --use-database -P "simplePlugin:simplePrinter,argName=1,argNam2=2"
+
+```
+python Tortazo.py --verbose --use-database --plugin
+```
 
 ##Brute Force Attacks.
 In addition to gathering information on potential targets, Tortazo, allows you to specify a dictionary of usernames and passwords for bruteforce attacks. However, in case that it is not specified, the tool uses some of the users and passwords files contained in FuzzDB project. (obviously, this process is very slow and loud)

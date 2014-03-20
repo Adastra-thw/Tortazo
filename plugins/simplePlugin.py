@@ -28,11 +28,10 @@ class simplePrinter(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def runPlugin(self, *kwargs):
+    def runPlugin(self):
         '''
         The most simplest plugin! Just prints the tor data structure.
         '''
-        print kwargs
         for torNode in self.torNodes:
             print "=========================="
             print "Host: %s " %(torNode.host)
@@ -41,17 +40,17 @@ class simplePrinter(BasePlugin):
             print "Host: %s " %(torNode.nickName)
             for port in torNode.openPorts:
                 print "Open Port!"
-                print "State: %s " %(port.state)
-                print "Reason: %s " %(port.reason)
-                print "Port: %s " %(port.port)
-                print "Name: %s " %(port.name)
-                print "Version: %s " %(port.version)
+                print "     State: %s " %(port.state)
+                print "     Reason: %s " %(port.reason)
+                print "     Port: %s " %(port.port)
+                print "     Name: %s " %(port.name)
+                print "     Version: %s " %(port.version)
             for port in torNode.closedFilteredPorts:
                 print "Closed|Filtered Port!"
-                print "State: %s " %(port.state)
-                print "Reason: %s " %(port.reason)
-                print "Port: %s " %(port.port)
-                print "Name: %s " %(port.name)
-                print "Version: %s " %(port.version)
+                print "     State: %s " %(port.state)
+                print "     Reason: %s " %(port.reason)
+                print "     Port: %s " %(port.port)
+                print "     Name: %s " %(port.name)
+                print "     Version: %s " %(port.version)
             print "=========================="
             print "\n"

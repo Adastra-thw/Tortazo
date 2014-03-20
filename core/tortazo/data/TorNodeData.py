@@ -26,6 +26,7 @@ class TorNodeData:
     Tor Structure to save the Node information.
     '''
     def __init__(self):
+        self. id = None
         self.host = None
         self.state = None
         self.reason = None
@@ -38,6 +39,7 @@ class TorNodePort:
     Information about the scanned port.
     '''
     def __init__(self):
+        self.id = None
         self.state = None
         self.reason = None
         self.port = None

@@ -33,7 +33,7 @@ import Queue
 from stem.util import term
 import logging as log
 import config
-
+from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -61,6 +61,7 @@ import config
 #
 #   TODO IN V1.1:
 #   {-} Upgrade the Shodan Library and use the new features. Move Shodan from "WorkerThread to Discovery" (validate the shodankey file, what happen if the file don't exists?)
+#   - Create a database and save the TOR structure. So, when the user execute Tortazo for a second time, he could perform a new scan in the TOR Network or use the data saved in DB.
 #   - Testing Shodan Features and generate a report with jinja2.
 #   - Plugins system: Just an directory with *.py files. The name of the "py" should define a class with a constructor which receives the "TorNodeData" structure, in this way, the developer can use the internal data representation of Exit Nodes of tor.
 #   - Format reports for Nmap, Shodan, Nessus and SNMP. (Not just an .txt file, create an HTML, XML and probably JSON files)
@@ -94,6 +95,7 @@ class Cli(cli.Application):
     useShodan = cli.Flag(["-s", '--use-shodan'], help="Use ShodanHQ Service. (Specify -k/--shodan-key to set up the file where's stored your shodan key.)")
     useCircuitExitNodes = cli.Flag(["-c", "--use-circuit-nodes"], help="Use the exit nodes selected for a local instance of TOR.")
     openShell = cli.Flag(["-o", "--open-shell"], excludes=["--mode"], requires=["--zombie-mode"],  help="Open a shell on the specified host. example: '--open-shell 1' will spawn a new shell on the host defined in line 1 of the 'tortazo_botnet.bot' file")
+    useDatabase = cli.Flag(["-D", '--use-database'], help="Tortazo will store the last results from the scanning process in a database. If you use this flag, Tortazo will omit the scan and just will try use the data stored from the last execution.")
 
     threads = 1 #Execution Threads.
     # mode = None #Mode: Windows/Linux
@@ -191,7 +193,7 @@ class Cli(cli.Application):
         '''
         self.runCommand = runCommand
 
-    @cli.switch(["-P", "--use-plugins"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" Check the documentation for more detailed information')
+    @cli.switch(["-P", "--use-plugins"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" and you can get the help banner for a plugin executing "pluginName:help". Check the documentation for more detailed information')
     def plugin_management(self, pluginManagement):
         '''
         Plugin Management.
@@ -204,6 +206,8 @@ class Cli(cli.Application):
         '''
 
         self.logger = log
+        self.exitNodes = []
+
         if self.verbose:
             self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
             self.logger.debug(term.format("[+] Verbose mode activated.", term.Color.GREEN))
@@ -212,17 +216,6 @@ class Cli(cli.Application):
         self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
 
         #self.loadAndExecute(self,"simplePlugin:simplePrinter")
-        '''
-        Simple Tests for V1.0
-
-        exitNode = [('127.0.0.1', 'descriptor'), [22,33,44,55,66]]
-        self.queue.put(exitNode)
-        worker = WorkerThread(self.queue, 0, self)
-        worker.setDaemon(True)
-        worker.start()
-        self.queue.join()
-        '''
-
         '''
             List and Scan the exit nodes. The function will return an dictionary with the exitnodes found and the open ports.
             THIS PROCESS IS VERY SLOW AND SOMETIMES THE CONNECTION WITH THE DIRECTORY AUTHORITIES IS NOT AVAILABLE.
@@ -238,18 +231,34 @@ class Cli(cli.Application):
             botnet.start()
 
 
-        elif self.mode is not None:
+        else:
             discovery = Discovery(self)
-            exitNodes = []
-            if self.useCircuitExitNodes:
-                exitNodes = discovery.listCircuitExitNodes()
-            else:
-                exitNodes = discovery.listAuthorityExitNodes() #Returns a list of TorNodeData objects
 
-            if exitNodes is not None and len(exitNodes) > 0:
+            if self.useDatabase:
+                database = TortazoDatabase()
+                torNodeRows = database.initDatabase()
+                #There's a previous scan stored in database. We'll use that information!
+                self.logger.info(term.format("[+] Getting the last scan executed from database..." , term.Color.YELLOW))
+                self.exitNodes = database.searchExitNodes()
+                if len(self.exitNodes) > 0:
+                    self.logger.info(term.format("[+] Done!" , term.Color.YELLOW))
+                else:
+                    self.logger.info(term.format("[+] No records found... You should execute an initial scan." , term.Color.YELLOW))
+                    self.logger.warn(term.format("[-] You've chosen to use the database records, however the database tables are empty because you have not run an initial scan." , term.Color.RED))
+                    self.logger.warn(term.format("[-] Tortazo just saves the relays found in the last scan. Previous scans always will be deleted." , term.Color.RED))
+                    return
+            else:
+                if self.useCircuitExitNodes:
+                    #Try to use a local instance of TOR to get information about the relays in the server descriptors.
+                    self.exitNodes = discovery.listCircuitExitNodes()
+                else:
+                    #Try to connect with the TOR directories to get information about the relays in the server descriptors.
+                    self.exitNodes = discovery.listAuthorityExitNodes() #Returns a list of TorNodeData objects
+
+            if self.exitNodes is not None and len(self.exitNodes) > 0:
                 reporter = Reporting(self)
-                reporter.generateNmapReport(exitNodes, config.NmapOutputFile)
-                for torNode in exitNodes:
+                reporter.generateNmapReport(self.exitNodes, config.NmapOutputFile)
+                for torNode in self.exitNodes:
                     if self.brute:
                         self.queue.put(torNode)
                     #If shodan is activated, let's try to gather some information for every node found.
@@ -270,7 +279,7 @@ class Cli(cli.Application):
 
                 #Check if there's any plugin to execute!
                 if self.pluginManagement != None:
-                    self.loadAndExecute(self.pluginManagement, exitNodes)
+                    self.loadAndExecute(self.pluginManagement, self.exitNodes)
 
                 #Block until the queue is empty.
                 if self.brute:
@@ -279,8 +288,6 @@ class Cli(cli.Application):
                         worker.setDaemon(True)
                         worker.start()
                     self.queue.join()
-        else:
-            self.logger.info(term.format("[-] The option -m/mode is mandatory (values: windows | linux)", term.Color.RED))
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
 
     def loadAndExecute(self, listPlugins, torNodesFound):
@@ -301,7 +308,7 @@ class Cli(cli.Application):
                 module = __import__("plugins."+pluginModule)
                 pluginArguments = pluginClass.split(',')
                 pluginClassName = pluginArguments[0]
-                pluginArguments.remove(0)
+                pluginArguments.remove(pluginClassName)
                 components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
                 self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
                 for comp in components[1:]:
@@ -310,11 +317,17 @@ class Cli(cli.Application):
                 reference.setNodes(torNodesFound)
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
                 self.logger.debug((term.format("[+] Parsing the arguments for the plugin...", term.Color.GREEN)))
-                pluginArguments = {}
-                for argument in pluginArguments:
-                    argumentName, argumentValue = argument.split('=')
-                    pluginArguments[argumentName] = argumentValue
-                reference.setPluginArguments(pluginArguments)
+                pluginArgumentsToSet = {}
+                for arg in pluginArguments:
+                    argumentItem = arg.split('=')
+                    argumentName = argumentItem[0]
+                    argumentValue = argumentItem[1]
+                    self.logger.debug((term.format("[+] Argument Name %s with value %s" %(argumentName, argumentValue), term.Color.GREEN)))
+                    if argumentValue is None:
+                        self.logger.warn((term.format("[-] Error: Argument Name %s without value... " %(argumentName), term.Color.RED)))
+
+                    pluginArgumentsToSet[argumentName] = argumentValue
+                reference.setPluginArguments(pluginArgumentsToSet)
                 reference.runPlugin()
             except ImportError, importErr:
                 self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
