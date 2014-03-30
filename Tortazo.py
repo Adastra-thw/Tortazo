@@ -330,6 +330,7 @@ class Cli(cli.Application):
                 reference.setPluginArguments(pluginArgumentsToSet)
                 reference.runPlugin()
             except ImportError, importErr:
+                print importErr
                 self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
 
 

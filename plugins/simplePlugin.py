@@ -28,11 +28,19 @@ class simplePrinter(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
+    def __init__(self):
+        BasePlugin.__init__(self)
+
+    def __del__(self):
+        pass
+
     def runPlugin(self):
         '''
         The most simplest plugin! Just prints the tor data structure.
         '''
-        for torNode in self.torNodes:
+        pass
+        print "run plugin"
+        '''for torNode in self.torNodes:
             print "=========================="
             print "Host: %s " %(torNode.host)
             print "State: %s " %(torNode.state)
@@ -53,4 +61,4 @@ class simplePrinter(BasePlugin):
                 print "     Name: %s " %(port.name)
                 print "     Version: %s " %(port.version)
             print "=========================="
-            print "\n"
+            print "\n"'''

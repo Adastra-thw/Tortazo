@@ -23,11 +23,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 import config
-import requests
-import httplib2
-import urllib
-from bs4 import BeautifulSoup
-import json
+from pynessus.rest.client.NessusClient import NessusClient
+import pprint
 
 class nessusPlugin(BasePlugin):
     '''
@@ -35,98 +32,274 @@ class nessusPlugin(BasePlugin):
     '''
 
     #http://static.tenable.com/documentation/nessus_5.0_XMLRPC_protocol_guide.pdf
-    '''
-    >>> url = 'https://localhost:8834/login'
-    >>> body = {'password' : 'peraspera', 'seq' : '100', 'login' : 'adastra', 'json' : '1'}
-    >>> headers={'Host': 'localhost:8834', 'Content-type': 'application/x-www-form-urlencoded'}
-    >>> response, content = h.request(url, 'POST', headers=headers, body=urllib.urlencode(body))
-    >>> response
-    {'status': '200', 'content-length': '466', 'set-cookie': 'token=59233cb47877aeba5137becafd4fc4b01a680ea44e2ab019; path=/; expires=Sun, 17-Jan-2038 13:17:07 GMT; secure; HttpOnly', 'expires': 'Tue, 18 Mar 2014 22:56:51 GMT, 0', 'server': 'NessusWWW', 'cache-control': '', 'connection': 'close', 'pragma ': '', 'date': 'Tue, 18 Mar 2014 22:56:51 GMT', 'x-frame-options': 'DENY', 'content-type': 'text/xml'}
-    >>> content
-    '<?xml version="1.0" encoding="UTF-8"?>\n<reply>\n<seq>100</seq>\n<status>OK</status>\n<contents><token>59233cb47877aeba5137becafd4fc4b01a680ea44e2ab019</token>\n<server_uuid>8cb6d623-152c-d63f-4a03-b71d77e4c99c4cc6ff8bf3c2a30a</server_uuid>\n<plugin_set>201203211438</plugin_set>\n<loaded_plugin_set>201203211438</loaded_plugin_set>\n<scanner_boottime>1395181510</scanner_boottime>\n<msp>FALSE</msp>\n<user>\n<name>adastra</name>\n<admin>TRUE</admin>\n</user></contents>\n</reply>
-    '''
+
     def __init__(self):
         BasePlugin.__init__(self)
-        self.NESSUS_FUNCTIONS=['listPlugins','listPolicies','getPolicyByName',
-                               'listReports','singleScan','scan','multiScan',
-                               'downloadReport','findVulnerabilities']
-        self.debug("[*] nessusPlugin Initialized!")
-        self.url = "https://"+config.nessusHost+":"+str(config.nessusPort)
-        self.body =   {'password' : config.nessusPass, 'seq' : config.nessusInitialSeq, 'login' : config.nessusUser, 'json' : '1'}
-        self.headers= {'Host': config.nessusHost+":"+str(config.nessusPort), 'Content-type': 'application/x-www-form-urlencoded'}
-        self.loginNessus()
+        self.NESSUS_FUNCTIONS = ["feed", "serverSecureSettingsList", "serverSecureSettings", "serverPreferencesList",
+                                 "serverPreferences", "serverUpdate", "serverRegister", "serverRestart", "serverLoad",
+                                 "serverUuid", "serverGetCert", "serverPluginsProcess",
+                                 "usersAdd", "usersEdit", "usersDelete", "usersChpasswd", "usersList",
+                                 "pluginsList","pluginsAttributesList", "pluginsListsFamily", "pluginsDescription",
+                                 "pluginsPreferences", "pluginsAttributesFamilySearch",
+                                 "pluginsAttributesPluginSearch", "pluginsMd5", "pluginsDescriptions",
+                                 "listPlugins", "listPolicies", "listReports",
+                                 "policyPreferencesList", "policyList", "policyDelete", "policyCopy",
+                                 "policyAdd", "policyEdit", "policyDownload","policyFileUpload", "policyFileImport",
+                                 'scanNew','scanStop','scanResume','scanPause','scanList',
+                                 'scanTimeZones','scanTemplateNew','scanTemplateEdit',
+                                 'scanTemplateDelete','scanTemplateLaunch',
+                                 'reportList','reportDelete','reportHosts','report2HostsPlugin','report2Hosts',
+                                 'reportPorts','report2Ports','reportDetails','report2DetailsPlugin',
+                                 'report2Details','reportTags','reportHasAuditTrail','reportAttributesList',
+                                 'reportErrors','reportHasKB','reportCanDeleteItems','report2DeleteItem',
+                                 'reportTrailDetails','report2Vulnerabilities','reportChapterList',
+                                 'reportChapter','reportFileImport','reportFileDownload',
+                                 'reportFileXsltList','reportFileXslt','reportFileXsltDownload'
+                                 ]
+        self.nessusClient = NessusClient(config.nessusHost, config.nessusPort)
+        self.nessusClient.login(config.nessusUser, config.nessusPass)
 
     def __del__(self):
+        pass
         self.debug("[*] nessusPlugin Destroyed!")
-        self.logoutNessus()
+        self.nessusClient.logout()
 
-    def requestNessus(self, url, data, headers):
-        response = requests.post( url, data=data, headers=headers, verify=False)
-        return json.loads(response.content)
-        config.nessusInitialSeq += 1
-
-
-    def loginNessus(self):
-        #body = {'password' : 'peraspera', 'seq' : '100', 'login' : 'adastra'}
-        #headers={'Host': 'localhost:8834', 'Content-type': 'application/x-www-form-urlencoded'}
-        print self.requestNessus(self.url+'/login', data=self.body, headers=self.headers)
-
-        '''h = httplib2.Http()
-        url = 'https://localhost:8834/login'
-        body = {'password' : 'peraspera', 'seq' : '100', 'login' : 'adastra', 'json' : '1'}
-        headers={'Host': 'localhost:8834', 'Content-type': 'application/x-www-form-urlencoded'}
-        response, content = h.request(url, 'POST', headers=headers, body=urllib.urlencode(body))
-        print content
-        '''
-
-    def logoutNessus(self):
-        self.body = {'seq' : config.nessusInitialSeq}
-        print self.requestNessus(self.url+'/logout', data=self.body, headers=self.headers)
 
     def runPlugin(self):
         '''
         The most simplest plugin! Just prints the tor data structure.
         '''
-        for argumentName in self.pluginArguments.keys():
-            if argumentName in self.NESSUS_FUNCTIONS:
-                nessusFunction = getattr(self, argumentName)
+        for argumentName, argumentValue in self.pluginArguments.iteritems():
+            print argumentName +":"+ argumentValue
+            if argumentValue in self.NESSUS_FUNCTIONS:
+                nessusFunction = getattr(self, argumentValue)
                 if callable(nessusFunction):
-                    if self.pluginArguments[argumentName] is not None and self.pluginArguments[argumentName] != "":
-                        nessusFunction(self.pluginArguments[argumentName])
-                    else:
-                        nessusFunction()
+                    nessusFunction()
 
-    def listPlugins(self):
-        print "list!"
-
-    def listPolicies(self):
+    def feed(self):
         pass
 
-    def getPolicyByName(self, policyName):
+    def serverSecureSettingsList(self):
         pass
 
-    def listReports(self):
+    def serverSecureSettings(self):
         pass
 
-    def singleScan(self, scanName, target, policyId):
+    def serverPreferencesList(self):
         pass
 
-    def scan(self, scanName, policyId):
+    def serverPreferences(self):
         pass
 
-    def multiScan(self, scanName, targets, policyId):
+    def serverUpdate(self):
         pass
 
-    def downloadReport(self, reportId):
+    def serverRegister(self):
         pass
 
-    def findVulnerabilities(self, target, pluginFamily, riskFactor):
+    def serverRestart(self):
         pass
+
+    def serverLoad(self):
+        pass
+
+    def serverUuid(self):
+        pass
+
+    def serverGetCert(self):
+        pass
+
+    def serverPluginsProcess(self):
+        pass
+
+    def usersAdd(self):
+        pass
+
+    def usersEdit(self):
+        pass
+
+    def usersDelete(self):
+        pass
+
+    def usersChpasswd(self):
+        pass
+
+    def usersList(self):
+        pass
+
+    def pluginsList(self):
+        pprint.pprint(self.nessusClient.pluginsList())
+
+    def pluginsAttributesList(self):
+        pass
+
+    def pluginsListsFamily(self):
+        pass
+
+    def pluginsDescription(self):
+        pass
+
+    def pluginsPreferences(self):
+        pass
+
+    def pluginsAttributesFamilySearch(self):
+        pass
+
+    def pluginsAttributesPluginSearch(self):
+        pass
+
+    def pluginsMd5(self):
+        pass
+
+    def pluginsDescriptions(self):
+        pass
+
+    def policyPreferencesList(self):
+        pass
+
+    def policyList(self):
+        pass
+
+    def policyDelete(self):
+        pass
+
+    def policyCopy(self):
+        pass
+
+    def policyAdd(self):
+        pass
+
+    def policyEdit(self):
+        pass
+
+    def policyDownload(self):
+        pass
+
+    def policyFileUpload(self):
+        pass
+
+    def policyFileImport(self):
+        pass
+
+    def scanNew(self):
+        pass
+
+    def scanStop(self):
+        pass
+
+    def scanResume(self):
+        pass
+
+    def scanPause(self):
+        pass
+
+    def scanList(self):
+        pass
+
+    def scanTimeZones(self):
+        pass
+
+    def scanTemplateNew(self):
+        pass
+
+    def scanTemplateEdit(self):
+        pass
+
+    def scanTemplateDelete(self):
+        pass
+
+    def scanTemplateLaunch(self):
+        pass
+
+    def reportList(self):
+        pass
+
+    def reportDelete(self):
+        pass
+
+    def reportHosts(self):
+        pass
+
+    def report2HostsPlugin(self):
+        pass
+
+    def report2Hosts(self):
+        pass
+
+    def reportPorts(self):
+        pass
+
+    def report2Ports(self):
+        pass
+
+    def reportDetails(self):
+        pass
+
+    def report2DetailsPlugin(self):
+        pass
+
+    def report2Details(self):
+        pass
+
+    def reportTags(self):
+        pass
+
+    def reportHasAuditTrail(self):
+        pass
+
+    def reportAttributesList(self):
+        pass
+
+    def reportErrors(self):
+        pass
+
+    def reportHasKB(self):
+        pass
+
+    def reportCanDeleteItems(self):
+        pass
+
+    def report2DeleteItem(self):
+        pass
+
+    def reportTrailDetails(self):
+        pass
+
+    def report2Vulnerabilities(self):
+        pass
+
+    def reportChapterList(self):
+        pass
+
+    def reportChapter(self):
+        pass
+
+    def reportFileImport(self):
+        pass
+
+    def reportFileDownload(self):
+        pass
+
+    def reportFileXsltList(self):
+        pass
+
+    def reportFileXslt(self):
+        pass
+
+    def reportFileXsltDownload(self):
+        pass
+
+
+
+
 
     def help(self):
         self.info("[*] Help for plugin nessusPlugin: \n")
         self.info("[*][*]  Important: Some settings are readed from config.py. Change this file for your own needs.  \n")
-        self.info("[*][*] Available Options: \n")
+        self.info("[*][*] Available Functions and arguments: \n")
+        self.info("[*][*]   feed: Feed for the Nessus Server. Arguments: None. \n")
+        self.info("[*][*]   feed: Feed for the Nessus Server. Arguments: None. \n")
+
         self.info("[*][*]   listPlugins: List of plugins loaded. Arguments: None. \n")
         self.info("[*][*]   listPolicies: List of policies loaded. Arguments: None. \n")
         self.info("[*][*]   getPolicyByName: Get Policy ID by Name. Arguments: PolicyName.  \n")

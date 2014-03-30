@@ -42,5 +42,5 @@ dropTableTorNodePort="drop table if exists TorNodePort"
 nessusHost="127.0.0.1"
 nessusPort=8834
 nessusUser="adastra"
-nessusPass="adastra"
+nessusPass="peraspera"
 nessusInitialSeq=200
