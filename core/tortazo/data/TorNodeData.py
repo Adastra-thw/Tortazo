@@ -45,3 +45,4 @@ class TorNodePort:
         self.port = None
         self.name = None
         self.version = None
+        self.torNodeId = None

@@ -238,8 +238,9 @@ class Cli(cli.Application):
                 database = TortazoDatabase()
                 torNodeRows = database.initDatabase()
                 #There's a previous scan stored in database. We'll use that information!
-                self.logger.info(term.format("[+] Getting the last scan executed from database..." , term.Color.YELLOW))
-                self.exitNodes = database.searchExitNodes()
+                self.logger.info(term.format("[+] Getting the last %s scans executed from database..."  %(self.exitNodesToAttack),  term.Color.YELLOW))
+                self.logger.debug(term.format("[+] Use -n/--servers-to-attack option to include more or less records from the scans recorded in database.",  term.Color.GREEN))
+                self.exitNodes = database.searchExitNodes(self.exitNodesToAttack)
                 if len(self.exitNodes) > 0:
                     self.logger.info(term.format("[+] Done!" , term.Color.YELLOW))
                 else:
@@ -258,6 +259,7 @@ class Cli(cli.Application):
             if self.exitNodes is not None and len(self.exitNodes) > 0:
                 reporter = Reporting(self)
                 reporter.generateNmapReport(self.exitNodes, config.NmapOutputFile)
+                shodanHosts = []
                 for torNode in self.exitNodes:
                     if self.brute:
                         self.queue.put(torNode)
@@ -273,9 +275,12 @@ class Cli(cli.Application):
                             try:
                                 shodanKeyString = open(self.shodanKey).readline().rstrip('\n')
                                 shodanHost = discovery.shodanSearchByHost(shodanKeyString, torNode.host)
-                                reporter.generateShodanReport(shodanHost, config.ShodanOutputFile)
+                                shodanHosts.append(shodanHost)
                             except IOError, ioerr:
                                 self.logger.warn(term.format("[-] Shodan's key File: %s not Found." %(self.shodanKey), term.Color.RED))
+
+                if len(shodanHosts) > 0:
+                    reporter.generateShodanReport(shodanHosts, config.ShodanOutputFile)
 
                 #Check if there's any plugin to execute!
                 if self.pluginManagement != None:

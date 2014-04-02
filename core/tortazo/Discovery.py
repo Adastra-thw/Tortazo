@@ -153,9 +153,7 @@ class Discovery:
         else:
             database = TortazoDatabase.TortazoDatabase()
             database.initDatabase()
-            database.cleanDatabaseState()
             database.insertExitNode(self.exitNodes)
-
         return self.exitNodes
 
     def shodanSearchByHost(self, shodanKey, ip):
