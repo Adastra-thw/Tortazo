@@ -40,5 +40,5 @@ dropTableScan="drop table if exists Scan"
 nessusHost="127.0.0.1"
 nessusPort=8834
 nessusUser="adastra"
-nessusPass="peraspera"
+nessusPass="adastra"
 nessusInitialSeq=200
