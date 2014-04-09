@@ -22,6 +22,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
+from IPython.config.loader import Config
+from IPython.terminal.embed import InteractiveShellEmbed
 
 class simplePrinter(BasePlugin):
     '''
@@ -38,9 +40,23 @@ class simplePrinter(BasePlugin):
         '''
         The most simplest plugin! Just prints the tor data structure.
         '''
-        pass
-        print "run plugin"
-        '''for torNode in self.torNodes:
+        try:
+            get_ipython
+        except NameError:
+            nested = 0
+            cfg = Config()
+            prompt_config = cfg.PromptManager
+            prompt_config.in_template = 'Tortazo Plugin <\\#>: '
+            prompt_config.in2_template = '   .\\D.: '
+            prompt_config.out_template = '<\\#>: '
+        else:
+            cfg = Config()
+            nested = 1
+        tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter...',banner2="simplePlugin Help:", exit_msg = 'Leaving Tortazo plugin interpreter.')
+        tortazoShell()
+
+    def printRelaysFound(self):
+        for torNode in self.torNodes:
             print "=========================="
             print "Host: %s " %(torNode.host)
             print "State: %s " %(torNode.state)
@@ -61,4 +77,4 @@ class simplePrinter(BasePlugin):
                 print "     Name: %s " %(port.name)
                 print "     Version: %s " %(port.version)
             print "=========================="
-            print "\n"'''
+            print "\n"

@@ -1,8 +1,8 @@
 ####
 ####          REPORTING SETTINGS
 ####
-ShodanOutputFile="/home/adastra/Escritorio/shodanReport.html"
-NmapOutputFile="/home/adastra/Escritorio/nmapReport.html"
+ShodanOutputFile="/home/adastra/Desktop/shodanReport.html"
+NmapOutputFile="/home/adastra/Desktop/nmapReport.html"
 
 ####
 ####          DATABASE SETTINGS
@@ -17,8 +17,10 @@ createTableScan="create table if not exists Scan (id integer primary key autoinc
 ####    Selection of hosts, ports and scans.
 selectTorNodeData="SELECT id, host, state, reason, nickName FROM TorNodeData WHERE scanId = ?"
 selectTorNodePort="SELECT id, state, reason, port, name, version, torNodeId  FROM TorNodePort WHERE torNodeId = ?"
+checkTorNodeData="SELECT count(*) FROM TorNodeData WHERE host = ? and nickName = ?"
 selectTorScan="select id, scanDate from Scan limit ?"
-lastAutoIncrement="select last_insert_rowid();"
+selectTorScanIdentifier="select id, scanDate from Scan where id = ?"
+nextIdHostNodeData="select max(node.id) from TorNodeData as node"
 
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, scanId) values(?, ?, ?, ?, ?)"

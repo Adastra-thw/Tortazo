@@ -96,6 +96,7 @@ class Cli(cli.Application):
     useCircuitExitNodes = cli.Flag(["-c", "--use-circuit-nodes"], help="Use the exit nodes selected for a local instance of TOR.")
     openShell = cli.Flag(["-o", "--open-shell"], excludes=["--mode"], requires=["--zombie-mode"],  help="Open a shell on the specified host. example: '--open-shell 1' will spawn a new shell on the host defined in line 1 of the 'tortazo_botnet.bot' file")
     useDatabase = cli.Flag(["-D", '--use-database'], help="Tortazo will store the last results from the scanning process in a database. If you use this flag, Tortazo will omit the scan and just will try use the data stored from the last execution.")
+    cleanDatabase = cli.Flag(["-C", '--clean-database'], help="Tortazo will delete all records stored in database when finished executing. This option will delete every record stored, included the data from previous scans.")
 
     threads = 1 #Execution Threads.
     # mode = None #Mode: Windows/Linux
@@ -108,11 +109,10 @@ class Cli(cli.Application):
     queue = Queue.Queue() #Queue with the host/open-port found in the scanning.
     controllerPort = '9151'
     zombieMode = None
-    mode = None
+    mode = "linux"
     runCommand = None
     pluginManagement = None
-
-
+    scanIdentifier = None
 
     @cli.switch(["-n", "--servers-to-attack"], int, help="Number of TOR exit-nodes to attack. Default = 10")
     def servers_to_attack(self, exitNodesToAttack):
@@ -193,12 +193,20 @@ class Cli(cli.Application):
         '''
         self.runCommand = runCommand
 
-    @cli.switch(["-P", "--use-plugins"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" and you can get the help banner for a plugin executing "pluginName:help". Check the documentation for more detailed information')
+    @cli.switch(["-P", "--use-plugin"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" and you can get the help banner for a plugin executing "pluginName:help". Check the documentation for more detailed information')
     def plugin_management(self, pluginManagement):
         '''
         Plugin Management.
         '''
         self.pluginManagement = pluginManagement
+
+
+    @cli.switch(["-S", "--scan-identifier"], int, requires=["--use-database"],  help="scan identifier in the Scan table. Tortazo will use the relays related with the scan identifier specified with this option.")
+    def scan_identifier(self, scanIdentifier):
+        '''
+        Scan Identifier. Tortazo will use the relays associated with this scan. (Relation between the Scan and TorNodeData tables.)
+        '''
+        self.scanIdentifier = scanIdentifier
 
     def main(self):
         '''
@@ -207,6 +215,7 @@ class Cli(cli.Application):
 
         self.logger = log
         self.exitNodes = []
+        self.database = TortazoDatabase()
 
         if self.verbose:
             self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
@@ -235,18 +244,25 @@ class Cli(cli.Application):
             discovery = Discovery(self)
 
             if self.useDatabase:
-                database = TortazoDatabase()
-                torNodeRows = database.initDatabase()
+                torNodeRows = self.database.initDatabase()
                 #There's a previous scan stored in database. We'll use that information!
-                self.logger.info(term.format("[+] Getting the last %s scans executed from database..."  %(self.exitNodesToAttack),  term.Color.YELLOW))
-                self.logger.debug(term.format("[+] Use -n/--servers-to-attack option to include more or less records from the scans recorded in database.",  term.Color.GREEN))
-                self.exitNodes = database.searchExitNodes(self.exitNodesToAttack)
+                if self.scanIdentifier is None:
+                    self.logger.info(term.format("[+] Getting the last %s scans executed from database..."  %(self.exitNodesToAttack),  term.Color.YELLOW))
+                    self.logger.debug(term.format("[+] Use -n/--servers-to-attack option to include more or less records from the scans recorded in database.",  term.Color.GREEN))
+                    self.exitNodes = self.database.searchExitNodes(self.exitNodesToAttack, None)
+                else:
+                    self.logger.info(term.format("[+] Getting the relays for the scan %d ..."  %(self.scanIdentifier),  term.Color.YELLOW))
+                    self.exitNodes = self.database.searchExitNodes(self.exitNodesToAttack, self.scanIdentifier)
+
                 if len(self.exitNodes) > 0:
                     self.logger.info(term.format("[+] Done!" , term.Color.YELLOW))
                 else:
-                    self.logger.info(term.format("[+] No records found... You should execute an initial scan." , term.Color.YELLOW))
-                    self.logger.warn(term.format("[-] You've chosen to use the database records, however the database tables are empty because you have not run an initial scan." , term.Color.RED))
-                    self.logger.warn(term.format("[-] Tortazo just saves the relays found in the last scan. Previous scans always will be deleted." , term.Color.RED))
+                    if self.scanIdentifier is None:
+                        self.logger.info(term.format("[+] No records found... You should execute an initial scan." , term.Color.YELLOW))
+                        self.logger.warn(term.format("[-] You've chosen to use the database records, however the database tables are empty because you have not run an initial scan." , term.Color.RED))
+                        self.logger.warn(term.format("[-] Tortazo just saves the relays found in the last scan. Previous scans always will be deleted." , term.Color.RED))
+                    else:
+                        self.logger.warn(term.format("[+] No records found with the scan identifier specified, check the database..." , term.Color.RED))
                     return
             else:
                 if self.useCircuitExitNodes:
@@ -259,7 +275,7 @@ class Cli(cli.Application):
             if self.exitNodes is not None and len(self.exitNodes) > 0:
                 reporter = Reporting(self)
                 reporter.generateNmapReport(self.exitNodes, config.NmapOutputFile)
-                shodanHosts = []
+                self.shodanHosts = []
                 for torNode in self.exitNodes:
                     if self.brute:
                         self.queue.put(torNode)
@@ -275,12 +291,13 @@ class Cli(cli.Application):
                             try:
                                 shodanKeyString = open(self.shodanKey).readline().rstrip('\n')
                                 shodanHost = discovery.shodanSearchByHost(shodanKeyString, torNode.host)
-                                shodanHosts.append(shodanHost)
+                                self.shodanHosts.append(shodanHost)
                             except IOError, ioerr:
                                 self.logger.warn(term.format("[-] Shodan's key File: %s not Found." %(self.shodanKey), term.Color.RED))
 
-                if len(shodanHosts) > 0:
-                    reporter.generateShodanReport(shodanHosts, config.ShodanOutputFile)
+                if len(self.shodanHosts) > 0:
+                    print self.shodanHosts
+                    reporter.generateShodanReport(self.shodanHosts, config.ShodanOutputFile)
 
                 #Check if there's any plugin to execute!
                 if self.pluginManagement != None:
@@ -293,12 +310,43 @@ class Cli(cli.Application):
                         worker.setDaemon(True)
                         worker.start()
                     self.queue.join()
+
+                if self.cleanDatabase:
+                    self.logger.info(term.format("[+] Cleaning database... Deleting all records.", term.Color.YELLOW))
+                    self.database.initDatabase()
+                    self.database.cleanDatabaseState()
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
 
     def loadAndExecute(self, listPlugins, torNodesFound):
-        '''
-        Load and execute external rutines (plugins)
-        '''
+        #simplePlugin:simplePrinter
+        if listPlugins is None:
+            self.logger.warn((term.format("[-] You should specify a plugin with the option -P/--use-plugin", term.Color.YELLOW)))
+            return
+        pluginModule, pluginClass = listPlugins.split(":")
+        if pluginModule is None or pluginClass is None:
+            self.logger.info((term.format("[-] Format "+ listPlugins +" invalid. Check the documentation to use plugins in Tortazo", term.Color.YELLOW)))
+            return
+        try:
+            module = __import__("plugins."+pluginModule)
+            pluginArguments = pluginClass.split(',')
+            pluginClassName = pluginArguments[0]
+            components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
+            self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
+            for comp in components[1:]:
+                module = getattr(module, comp)
+            reference = module()
+            reference.setNodes(torNodesFound)
+            reference.runPlugin()
+            self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
+        except ImportError, importErr:
+            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
+        except AttributeError, attrErr:
+            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
+
+
+    '''
+    def loadAndExecute(self, listPlugins, torNodesFound):
+        #Load and execute external rutines (plugins)
         #simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN
         if listPlugins is None:
             self.logger.warn((term.format("[-] You should specify a list of plugins with the option -P/--use-plugins", term.Color.YELLOW)))
@@ -338,7 +386,7 @@ class Cli(cli.Application):
                 print importErr
                 self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
 
-
+    '''
 if __name__ == "__main__":
     '''
     Start the main program.

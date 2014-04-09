@@ -37,7 +37,7 @@ class Reporting:
         Generate NMap report.
         '''
         if self.cli:
-            self.cli.logger.info(term.format("[+] Generating the NMAP Report in: "+absolutePathFile, term.Color.GREEN))
+            self.cli.logger.info(term.format("[+] Generating the NMAP Report in: "+absolutePathFile, term.Color.YELLOW))
         dir = os.path.dirname(os.path.abspath(__file__))
         env = Environment(loader=FileSystemLoader(dir+'/templates'))
         template = env.get_template('nmapTemplate.html')
@@ -71,7 +71,7 @@ class Reporting:
                          "shodanHost" : results,
                          "APIInfo" : apiInfo,
                          "shodanHostName" : shodanHost.host}
-                fd = open(absolutePathFile, 'w')
+                fd = open(absolutePathFile, 'a')
                 fd.write(template.render(templateVars))
                 fd.close()
 

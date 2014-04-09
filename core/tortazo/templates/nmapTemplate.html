@@ -9,53 +9,76 @@
 {% endblock %}
 {% block content %}
     <center>
-    <h1><p class="important"> ==== NMAP Scan Results ==== </p></h1>
-    {% for torNode in nodes: %}
-        <table id="nmapReport">
+    <h1><p class="important">NMAP Report</p></h1>
+	<table style="width:50%">
+		<tr>
+			<td><b>Host</b></td>
+			<td><b>State</b></td>
+			<td><b>Reason</b></td>
+			<td><b>NickName</b></td>
+			<td><b>Ports</b></td>
+		</tr>
+        {% for torNode in nodes: %}
             <tr>
+                <td>{{ torNode.host }}</td>
+                <td>{{ torNode.state }}</td>
+                <td>{{ torNode.reason }} </td>
+                <td>{{ torNode.nickName }}</td>
                 <td>
-                    <center>
-                        <table border="1">
-                            <tr><td><b> Host: {{ torNode.host }} </b></td></tr>
-                            <tr><td><b> State: {{ torNode.state }} </b></td></tr>
-                            <tr><td><b> Reason: {{ torNode.reason }} </b></td></tr>
-                            <tr><td><b> NickName: {{ torNode.nickName }} </b></td></tr>
-                        </table>
-                    </center>
-                    <center>
-                    <h3> Open Ports </h3>
-                    <table  border="0" class="list">
-                        {% for openPort in torNode.openPorts: %}
-                            <tr><td>Name: {{ openPort.name }}  </td></tr>
-                            <tr><td>Port: {{ openPort.port }} </td></tr>
-                            <tr><td>State: {{ openPort.state }} </td></tr>
-                            <tr><td>Reason: {{ openPort.reason }} </td></tr>
-                            <tr><td>Version: {{ openPort.version }} </td></tr>
-                        {% endfor %}
-                        {% if torNode.openPorts|length <= 0 %}
-                            <tr><td>No open ports detected in this target.</td></tr>
-                        {% endif %}
-                    </table>
-                    </center>
-                    <center>
-                    <h3> Closed or Filtered Ports </h3>
-                    <table  border="0" class="list">
-                        {% for cfPort in torNode.closedFilteredPorts: %}
-                            <tr><td>Name: {{ cfPort.name }}  </td></tr>
-                            <tr><td>Port: {{ cfPort.port }} </td></tr>
-                            <tr><td>State: {{ cfPort.state }} </td></tr>
-                            <tr><td>Reason: {{ cfPort.reason }} </td></tr>
-                            <tr><td>Version: {{ cfPort.version }} </td></tr>
-                        {% endfor %}
-                        {% if torNode.closedFilteredPorts|length <= 0 %}
-                            <tr><td>No closed or filtered ports detected in this target.</td></tr>
-                        {% endif %}
-                    </table>
-                    </center>
+                   <ul>
+                       <li>
+                           <a href="/opened-{{ torNode.host }}/" onclick="return expandir('opened-{{ torNode.host }}');">Open Ports</a>
+                           <div id="opened-{{ torNode.host }}" style="display: none;">
+                               <table  border="0" class="list">
+                                   <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>Port</b></td>
+                                        <td><b>State</b></td>
+                                        <td><b>Reason</b></td>
+                                        <td><b>Version</b></td>
+                                   </tr>
+                                   {% for openPort in torNode.openPorts: %}
+                                        <tr><td>{{ openPort.name }}  </td></tr>
+                                        <tr><td>{{ openPort.port }} </td></tr>
+                                        <tr><td>{{ openPort.state }} </td></tr>
+                                        <tr><td>{{ openPort.reason }} </td></tr>
+                                        <tr><td>{{ openPort.version }} </td></tr>
+                                   {% endfor %}
+                                   {% if torNode.openPorts|length <= 0 %}
+                                       <tr><td>No open ports detected in this target.</td></tr>
+                                   {% endif %}
+                                </table>
+                           </div>
+                       </li>
+                       <li>
+                            <a href="/closed-{{ torNode.host }}/" onclick="return expandir('closed-{{ torNode.host }}');">Closed Ports</a>
+                            <div id="closed-{{ torNode.host }}" style="display: none;">
+                                <table  border="0" class="list">
+                                    <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>Port</b></td>
+                                        <td><b>State</b></td>
+                                        <td><b>Reason</b></td>
+                                        <td><b>Version</b></td>
+                                   </tr>
+                                    {% for cfPort in torNode.closedFilteredPorts: %}
+                                        <tr><td>{{ cfPort.name }}  </td></tr>
+                                        <tr><td>{{ cfPort.port }} </td></tr>
+                                        <tr><td>{{ cfPort.state }} </td></tr>
+                                        <tr><td>{{ cfPort.reason }} </td></tr>
+                                        <tr><td>{{ cfPort.version }} </td></tr>
+                                    {% endfor %}
+                                    {% if torNode.closedFilteredPorts|length <= 0 %}
+                                        <tr><td>No closed or filtered ports detected in this target.</td></tr>
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </li>
+                   </ul>
                 </td>
             </tr>
-        </table>
-    {% endfor %}
+        {% endfor %}
+    </table>
     <br />
     </center>
 {% endblock %}

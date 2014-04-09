@@ -44,11 +44,15 @@ class TortazoDatabase:
         self.connection.execute(config.createTableTorNodePort)
         self.connection.execute(config.createTableScan)
 
-    def searchExitNodes(self, numberOfScans):
+    def searchExitNodes(self, numberOfScans, scanIdentifier):
         if self.cursor is None:
             self.initDatabase()
         exitNodes = []
-        self.cursor.execute(config.selectTorScan, (numberOfScans,))
+        if scanIdentifier is None:
+            self.cursor.execute(config.selectTorScan, (numberOfScans,))
+        else:
+            self.cursor.execute(config.selectTorScanIdentifier, (scanIdentifier,))
+
         for row in self.cursor.fetchall():
             scanId, scanDate = row
             self.cursor.execute(config.selectTorNodeData, (scanId,))
@@ -78,6 +82,7 @@ class TortazoDatabase:
                 exitNodes.append(nodeData)
         return exitNodes
 
+
     def insertExitNode(self, torNodeData):
         '''
         Insert the Tor Structure found.
@@ -90,11 +95,17 @@ class TortazoDatabase:
         scanId = self.cursor.lastrowid
 
         for nodeData in torNodeData:
+            #Check the record before store.
+            self.cursor.execute(config.checkTorNodeData, (nodeData.host, nodeData.nickName))
+            if self.cursor.fetchone()[0] > 0:
+                #Node scaned before.
+                continue
             node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(config.insertTorNodeData, node)
-            nodeId = self.cursor.lastrowid
 
+            self.cursor.execute(config.nextIdHostNodeData)
+            nodeId = self.cursor.fetchone()[0]
             for openPort in nodeData.openPorts:
                 opened = (openPort.state, openPort.reason, openPort.port, openPort.name, openPort.version, nodeId)
                 #Insert a TorNodePort
@@ -113,6 +124,7 @@ class TortazoDatabase:
             self.cursor.execute(config.truncateTorNodePort)
             self.cursor.execute(config.truncateTorNodeData)
             self.cursor.execute(config.truncateTorScan)
+            self.connection.commit()
         except Exception, e:
             print e.__doc__
             print e.message

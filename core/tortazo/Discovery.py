@@ -129,7 +129,9 @@ class Discovery:
         nm = nmap.PortScanner()
         for descriptor in listDescriptors[0:self.cli.exitNodesToAttack]:
         #for descriptor in parse_file(open("/home/adastra/Escritorio/tor-browser_en-US-Firefox/Data/Tor/cached-consensus")):
-            if self.cli.mode.lower() in descriptor.operating_system.lower() and descriptor.exit_policy.is_exiting_allowed():
+            if descriptor.operating_system is not None and \
+               self.cli.mode.lower() in descriptor.operating_system.lower() and \
+               descriptor.exit_policy.is_exiting_allowed():
                 #SEARCH FILTERING BY FINGERPRINT
                 #Conditions: Fingerprint specified in command-line AND
                 #Relay Fingerprint equals to the Fingerprint specified in command-line. AND
@@ -146,7 +148,7 @@ class Discovery:
                     else:
                         nm.scan(descriptor.address, self.cli.scanPorts)
                     self.recordNmapScan(nm, descriptor)
-                    self.cli.logger.debug(term.format('[+] Scan Ended for %s .' % (descriptor.nickname), term.Color.YELLOW))
+                    self.cli.logger.info(term.format('[+] Scan Ended for %s .' % (descriptor.nickname), term.Color.YELLOW))
                     nodesAlreadyScanned.append(descriptor.address)
         if len(self.exitNodes) == 0:
             self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
