@@ -22,59 +22,42 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from IPython.config.loader import Config
-from IPython.terminal.embed import InteractiveShellEmbed
+from prettytable import PrettyTable
 
 class simplePrinter(BasePlugin):
     '''
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self):
-        BasePlugin.__init__(self)
+    def __init__(self, torNodes):
+        BasePlugin.__init__(self, torNodes, 'simplePrinter')
 
     def __del__(self):
         pass
 
-    def runPlugin(self):
-        '''
-        The most simplest plugin! Just prints the tor data structure.
-        '''
-        try:
-            get_ipython
-        except NameError:
-            nested = 0
-            cfg = Config()
-            prompt_config = cfg.PromptManager
-            prompt_config.in_template = 'Tortazo Plugin <\\#>: '
-            prompt_config.in2_template = '   .\\D.: '
-            prompt_config.out_template = '<\\#>: '
-        else:
-            cfg = Config()
-            nested = 1
-        tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter...',banner2="simplePlugin Help:", exit_msg = 'Leaving Tortazo plugin interpreter.')
-        tortazoShell()
-
     def printRelaysFound(self):
+        #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
+        tableRelays = PrettyTable(["NickName", "Host", "State", "Reason", "Open Ports"])
+        tableRelays.padding_width = 1
+        openPorts = None
+
         for torNode in self.torNodes:
-            print "=========================="
-            print "Host: %s " %(torNode.host)
-            print "State: %s " %(torNode.state)
-            print "Host: %s " %(torNode.reason)
-            print "Host: %s " %(torNode.nickName)
             for port in torNode.openPorts:
-                print "Open Port!"
-                print "     State: %s " %(port.state)
-                print "     Reason: %s " %(port.reason)
-                print "     Port: %s " %(port.port)
-                print "     Name: %s " %(port.name)
-                print "     Version: %s " %(port.version)
-            for port in torNode.closedFilteredPorts:
-                print "Closed|Filtered Port!"
-                print "     State: %s " %(port.state)
-                print "     Reason: %s " %(port.reason)
-                print "     Port: %s " %(port.port)
-                print "     Name: %s " %(port.name)
-                print "     Version: %s " %(port.version)
-            print "=========================="
-            print "\n"
+                openPorts = ''
+                openPorts += str(port.reason)+':'+str(port.port)
+
+            if openPorts is None:
+                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
+            else:
+                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
+            openPorts = None
+        print tableRelays.get_string(sortby='NickName')
+
+    def help(self):
+        print "[*] Functions availaible available in the Plugin..."
+        tableHelp = PrettyTable(["Function", "Description", "Example"])
+        tableHelp.padding_width = 1
+        tableHelp.padding_width = 1
+        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
+        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
+        print tableHelp

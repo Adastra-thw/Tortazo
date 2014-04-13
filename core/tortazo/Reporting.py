@@ -56,24 +56,19 @@ class Reporting:
         dir = os.path.dirname(os.path.abspath(__file__))
         env = Environment(loader=FileSystemLoader(dir+'/templates'))
         template = env.get_template('shodanTemplate.html')
-        results = {}
+        hosts = []
         for shodanHost in shodanHosts:
             if shodanHost is not None:
-                self.extract(shodanHost.results, results)
-                headers = results['data']
-                listHeaders = headers.split(':')
-                mapHeaders = {}
-                for header in listHeaders:
-                    mapHeaders[header[0]] = header[1]
-                    listHeaders.remove(header)
-                apiInfo = shodanHost.keyInfo
-                templateVars = { "title" : "Shodan Report generated with Tortazo",
-                         "shodanHost" : results,
-                         "APIInfo" : apiInfo,
-                         "shodanHostName" : shodanHost.host}
-                fd = open(absolutePathFile, 'a')
-                fd.write(template.render(templateVars))
-                fd.close()
+                hosts.append(shodanHost)
+
+        #for shodanHost in shodanHosts:
+        #    for key in shodanHost.results.keys():
+        #        print key
+
+        templateVars = { "title" : "Shodan Report generated with Tortazo", "ShodanHosts" : hosts, "APIInfo" : shodanHosts[0].keyInfo}
+        fd = open(absolutePathFile, 'w')
+        fd.write(template.render(templateVars).encode('utf-8'))
+        fd.close()
 
     '''def compose(self,data):
         for key, value in data.iteritems():

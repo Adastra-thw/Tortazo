@@ -114,7 +114,7 @@ class Cli(cli.Application):
     pluginManagement = None
     scanIdentifier = None
 
-    @cli.switch(["-n", "--servers-to-attack"], int, help="Number of TOR exit-nodes to attack. Default = 10")
+    @cli.switch(["-n", "--servers-to-attack"], int, help="Number of TOR exit-nodes to attack. If this switch is used with --use-database, will recover information stored from the last 'n' scans. Default = 10")
     def servers_to_attack(self, exitNodesToAttack):
         '''
         Number of "exit-nodes" to attack received from command-line
@@ -124,7 +124,7 @@ class Cli(cli.Application):
     @cli.switch(["-t", "--threads"], cli.Range(1, 20), help='Number of threads to use.')
     def number_threads(self, threads):
         '''
-        Number of threads to create when the scanning process has been done.
+        Number of threads to create when the brute-force switches has been specified.
         '''
         self.threads = threads
 
@@ -244,7 +244,6 @@ class Cli(cli.Application):
             discovery = Discovery(self)
 
             if self.useDatabase:
-                torNodeRows = self.database.initDatabase()
                 #There's a previous scan stored in database. We'll use that information!
                 if self.scanIdentifier is None:
                     self.logger.info(term.format("[+] Getting the last %s scans executed from database..."  %(self.exitNodesToAttack),  term.Color.YELLOW))
@@ -296,7 +295,6 @@ class Cli(cli.Application):
                                 self.logger.warn(term.format("[-] Shodan's key File: %s not Found." %(self.shodanKey), term.Color.RED))
 
                 if len(self.shodanHosts) > 0:
-                    print self.shodanHosts
                     reporter.generateShodanReport(self.shodanHosts, config.ShodanOutputFile)
 
                 #Check if there's any plugin to execute!
@@ -334,8 +332,8 @@ class Cli(cli.Application):
             self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
             for comp in components[1:]:
                 module = getattr(module, comp)
-            reference = module()
-            reference.setNodes(torNodesFound)
+            reference = module(torNodesFound)
+            #reference.setNodes(torNodesFound)
             reference.runPlugin()
             self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
         except ImportError, importErr:

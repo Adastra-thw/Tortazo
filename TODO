@@ -1,0 +1,18 @@
+TO DO in V1.1:
+- Improve the CSS styles for the HTML reports.
+- Update Documentation
+- Implement SOCKS to execute requests through TOR.
+- Plugin for W3AF.
+- Plugin for Nikto.
+- Plugin for Metasploit Framework.
+- Plugin for Shodan.
+- Plugin for Nessus.
+- Plugin for DeepWebFinder.
+- Put an ArtASCII Banner.
+- Extend the -m/--mode option.
+-Notify to relay administrator.
+
+DONE:
+- The Shodan report is wrong.
+
+TO DO in V1.2

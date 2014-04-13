@@ -23,13 +23,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import logging as log
 from stem.util import term
+from IPython.config.loader import Config
+from IPython.terminal.embed import InteractiveShellEmbed
+import socks
+import socket
+import config
+from prettytable import PrettyTable
 
 class BasePlugin():
     '''
     Every plugin in Tortazo should inher
     '''
 
-    def __init__(self):
+    def __init__(self, torNodes, pluginLoaded):
         '''
         Constructor for the Base plugin class.
         '''
@@ -37,6 +43,8 @@ class BasePlugin():
         self.torNodes = []
         self.pluginArguments = {}
         self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
+        self.torNodes = torNodes
+        self.pluginLoaded = pluginLoaded
 
     def info(self, message):
          self.logger.info(term.format(message, term.Color.YELLOW))
@@ -47,21 +55,45 @@ class BasePlugin():
     def debug(self, message):
         self.logger.debug(term.format(message, term.Color.GREEN))
 
+    def printRelaysFound(self):
+        #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
+        tableRelays = PrettyTable(["NickName", "Host", "State", "Reason", "Open Ports"])
+        tableRelays.padding_width = 1
+        openPorts = None
 
-    def setNodes(self, torNodes):
-        '''
-        Function used to set the Tor Nodes scanned.
-        '''
-        self.torNodes = torNodes
+        for torNode in self.torNodes:
+            for port in torNode.openPorts:
+                openPorts = ''
+                openPorts += str(port.reason)+':'+str(port.port)
 
-    def setPluginArguments(self, pluginArguments):
-        '''
-        Arguments passed from command-line to the plugin.
-        '''
-        self.pluginArguments = pluginArguments
+            if openPorts is None:
+                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
+            else:
+                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
+            openPorts = None
+        print tableRelays.get_string(sortby='NickName')
 
     def runPlugin(self):
-        pass
+        '''
+        The most simplest plugin! Just prints the tor data structure.
+        '''
+        try:
+            get_ipython
+        except NameError:
+            nested = 0
+            cfg = Config()
+            prompt_config = cfg.PromptManager
+            prompt_config.in_template = 'Tortazo Plugin <%s> : ' %(self.pluginLoaded)
+            prompt_config.in2_template = "Type 'self.help()' to get information about the functions available in this plugin :"
+        else:
+            cfg = Config()
+            nested = 1
+        tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter... ',banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
+        tortazoShell()
+
+    def setSocksProxy(self):
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5 , config.socksHost, config.socksPort, True)
+        socket.socket = socks.socksocket
 
     def help(self):
-        self.info("[*] Help for the plugin... You should overwrite this method in your own plugin class")
+        pass

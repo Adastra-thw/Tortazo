@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from pynessus import pynessus
-import config
+from pynessus.rest.client.NessusClient import NessusClient
 import os
 
 class nessusPlugin(BasePlugin):
@@ -31,33 +31,12 @@ class nessusPlugin(BasePlugin):
     This class uses PyNessus to connect and execute scans with nessus.
     '''
 
-    def __init__(self):
-        BasePlugin.__init__(self)
-        if os.path.isfile(".nessus_token"):
-            os.remove(".nessus_token")
-        self.nessusInstance = pynessus.NessusServer(config.nessusHost, config.nessusPort, config.nessusUser, config.nessusPass)
-        self.debug("Token File: %s " %(pynessus.TOKEN_FILE) )
-        self.NESSUS_FUNCTIONS=['listPlugins','listPolicies','getPolicyByName',
-                               'listReports','singleScan','scan','multiScan',
-                               'downloadReport','findVulnerabilities']
-        self.debug("[*] nessusPlugin Initialized!")
+    def __init__(self, torNodes):
+        BasePlugin.__init__(self, torNodes, 'nessusPlugin')
 
     def __del__(self):
         self.debug("[*] nessusPlugin Destroyed!")
         self.nessusInstance.logout()
-
-    def runPlugin(self):
-        '''
-        The most simplest plugin! Just prints the tor data structure.
-        '''
-        for argumentName in self.pluginArguments.keys():
-            if argumentName in self.NESSUS_FUNCTIONS:
-                nessusFunction = getattr(self, argumentName)
-                if callable(nessusFunction):
-                    if self.pluginArguments[argumentName] is not None and self.pluginArguments[argumentName] != "":
-                        nessusFunction(self.pluginArguments[argumentName])
-                    else:
-                        nessusFunction()
 
     def listPlugins(self):
         print self.nessusInstance.list_plugins()
@@ -87,6 +66,14 @@ class nessusPlugin(BasePlugin):
         pass
 
     def help(self):
+        print "[*] Functions availaible available in the Plugin..."
+        tableHelp = PrettyTable(["Function", "Description", "Example"])
+        tableHelp.padding_width = 1
+        tableHelp.padding_width = 1
+        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
+        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
+        print tableHelp
+
         self.info("[*] Help for plugin nessusPlugin: \n")
         self.info("[*][*]  Important: Some settings are readed from config.py. Change this file for your own needs.  \n")
         self.info("[*][*] Available Options: \n")

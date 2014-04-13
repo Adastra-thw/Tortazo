@@ -75,7 +75,7 @@ class TortazoDatabase:
                     nodePort.name = portName
                     nodePort.version = portVersion
                     nodePort.torNodeId = torNode
-                    if "open" in state:
+                    if "open" in portState:
                         nodeData.openPorts.append(nodePort)
                     else:
                         nodeData.closedFilteredPorts.append(nodePort)

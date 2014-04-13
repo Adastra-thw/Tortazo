@@ -166,7 +166,12 @@ class Discovery:
         try:
             self.shodanApi = shodan.Shodan(shodanKey)
             self.results = self.shodanApi.host(ip)
-            return self.recordShodanResults(ip, self.shodanApi.info(), self.results)
+            shodanHost = ShodanHost()
+            shodanHost.keyInfo = self.shodanApi.info()
+            shodanHost.host = ip
+            self.extract(self.results, shodanHost.results)
+            return shodanHost
+
         except shodan.APIError:
             self.cli.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(ip), term.Color.RED))
             pass
@@ -201,35 +206,22 @@ class Discovery:
             else:
                 self.cli.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))
 
-    def recordShodanResults(self, host, keyInfo, results):
-        '''
-        Generate a report with the results of shodan.
-        '''
-        shodanHost = ShodanHost()
-        shodanHost.keyInfo = keyInfo
-        shodanHost.results = results
-        shodanHost.host = host
+    def extract(self, DictIn, Dictout):
+        for key, value in DictIn.iteritems():
+            if isinstance(value, dict): # If value itself is dictionary
+                self.extract(value, Dictout)
+            elif isinstance(value, list): # If value itself is list
+                for i in value:
+                    if type(i) == dict:
+                        self.extract(i, Dictout)
+                    else:
+                        if value is not None and isinstance(value, str):
+                            Dictout[i] = value.decode('utf-8')
+                        else:
+                            Dictout[i] = value
 
-        return shodanHost
-        '''entryFile = 'shodanScan-%s.txt' %(host)
-        shodanFileResults = open(entryFile, 'a')
-        entry = '------- SHODAN REPORT START FOR %s ------- \n' %(host)
-        self.recursiveInfo(entry, results)
-        entry += '------- SHODAN REPORT END FOR %s ------- \n' %(host)
-        shodanFileResults.write(entry)
-        shodanFileResults.close()
-        self.cli.logger.debug("[+] Shodan File Created.")
-        '''
-
-    '''def recursiveInfo(self, entry, data):
-        if type(data) == dict:
-            for key in self.results.keys():
-                if type(key) == dict:
-                    entry += self.recursiveInfo(entry, key)
-                elif type(key) == list:
-                    for element in key:
-                        if type(key) == dict:
-                            entry += self.recursiveInfo(entry, key)
+            else:
+                if value is not None and isinstance(value, str):
+                    Dictout[key] = value.decode('utf-8')
                 else:
-                    entry += '[+]%s : %s \n' %(key, self.results[key])
-    '''
+                    Dictout[key] = value

@@ -17,6 +17,9 @@ To use the script, you'll need the following dependencies:
 * Plumbum:          https://pypi.python.org/pypi/plumbum
 * Fabric:           http://docs.fabfile.org/en/1.8/
 * Requests:         https://pypi.python.org/pypi/requests
+* IPython:          http://ipython.org/
+* PrettyTable:      https://pypi.python.org/pypi/PrettyTable
+* pynessus-rest:    https://github.com/Adastra-thw/pynessus-rest
 
    
 

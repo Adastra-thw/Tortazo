@@ -3,11 +3,12 @@
 ####
 ShodanOutputFile="/home/adastra/Desktop/shodanReport.html"
 NmapOutputFile="/home/adastra/Desktop/nmapReport.html"
-
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
 ####
 ####          DATABASE SETTINGS
 ####
-
 ####    Creation of tables.
 databaseName="tortazo.db"
 createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, scanId integer)"
@@ -21,7 +22,6 @@ checkTorNodeData="SELECT count(*) FROM TorNodeData WHERE host = ? and nickName =
 selectTorScan="select id, scanDate from Scan limit ?"
 selectTorScanIdentifier="select id, scanDate from Scan where id = ?"
 nextIdHostNodeData="select max(node.id) from TorNodeData as node"
-
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, scanId) values(?, ?, ?, ?, ?)"
 insertTorNodePort="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(?, ?, ?, ?, ?, ?)"
@@ -29,18 +29,26 @@ insertTorScan="insert into Scan(scanDate, numNodes) values(?,?)"
 truncateTorNodeData="delete from TorNodeData"
 truncateTorNodePort="delete from TorNodePort"
 truncateTorScan="delete from Scan"
-
-
 ####    Drop tables.
 dropTableTorNodeData="drop table if exists TorNodeData"
 dropTableTorNodePort="drop table if exists TorNodePort"
 dropTableScan="drop table if exists Scan"
-
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
 ####
-####          NESUS SETTINGS
+####          NESSUS SETTINGS
 ####
 nessusHost="127.0.0.1"
 nessusPort=8834
 nessusUser="adastra"
-nessusPass="adastra"
+nessusPass="peraspera"
 nessusInitialSeq=200
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+####
+####          SOCKS SETTINGS
+####
+socksHost="127.0.0.1"
+socksPort=9151

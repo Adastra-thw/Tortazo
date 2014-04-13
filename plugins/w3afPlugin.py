@@ -24,28 +24,46 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 
 import w3af.core.controllers.w3afCore
-import w3af.core.data.kb.config as cf
-import w3af.core.data.kb.knowledge_base as kb
 from w3af.core.controllers.core_helpers.target import w3af_core_target
 from w3af.core.data.parsers.url import URL as URL_KLASS
+from prettytable import PrettyTable
 
 class w3afPlugin: #(BasePlugin):
     '''
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self):
-        pass
-        #BasePlugin.__init__(self)
+
+    def __init__(self, torNodes):
+        BasePlugin.__init__(self, torNodes, 'w3afPlugin')
+        self.w3afCore = w3af.core.controllers.w3afCore.w3afCore()
 
     def __del__(self):
         pass
 
+    def showPluginsByType(self, type):
+        pluginByType = self.w3afCore.core.plugins.get_plugin_list(type)
+
+    def setTarget(self, url):
+
+
+    def setTargetDeepWeb(self, url):
+        self.w3afCore.target._verify_url(URL_KLASS(url))
+        self.w3afCore.plugins.init_plugins()
+
+    def showPluginTypes(self):
+        types = self.w3afCore.core.plugins.get_plugin_types()
+
+    def enablePlugin(self, pluginName, type):
+        enabled = [pluginName, ]
+        self.w3afCore..plugins.set_plugins(enabled, type)
+
+    def getEnabledPluginsByType(self, type):
+        enabled = self.w3afCore.plugins.get_enabled_plugins(type)
+
+
+
     def runPlugin(self):
-        '''
-        The most simplest plugin! Just prints the tor data structure.
-        '''
-        print "run plugin"
         target = w3af_core_target()
         core = w3af.core.controllers.w3afCore.w3afCore()
 
@@ -69,6 +87,10 @@ class w3afPlugin: #(BasePlugin):
         retrieved = core.plugins.get_enabled_plugins('audit')
         print retrieved
 
-
-w3afPl = w3afPlugin()
-w3afPl.runPlugin()
+    def help(self):
+        print "[*] Functions availaible available in the Plugin..."
+        tableHelp = PrettyTable(["Function", "Description", "Example"])
+        tableHelp.padding_width = 1
+        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
+        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
+        print tableHelp
