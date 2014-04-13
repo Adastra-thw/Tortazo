@@ -34,7 +34,7 @@ from stem.util import term
 import logging as log
 import config
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
-
+import sys
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
 #     ██║   ██║   ██║██████╔╝   ██║   ███████║  ███╔╝ ██║   ██║
@@ -337,8 +337,10 @@ class Cli(cli.Application):
             reference.runPlugin()
             self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
         except ImportError, importErr:
+            print "Unexpected error:", sys.exc_info()[0]
             self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
         except AttributeError, attrErr:
+            print "Unexpected error:", sys.exc_info()[0]
             self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
 
 
