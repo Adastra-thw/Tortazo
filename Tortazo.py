@@ -35,6 +35,8 @@ import logging as log
 import config
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
 import sys
+#from plugins.w3af.core.controllers.w3afCore import w3afCore
+
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
 #     ██║   ██║   ██║██████╔╝   ██║   ███████║  ███╔╝ ██║   ██║
@@ -333,14 +335,16 @@ class Cli(cli.Application):
             for comp in components[1:]:
                 module = getattr(module, comp)
             reference = module(torNodesFound)
+            #w3afCorePlugin = w3afCore()
+            #reference = plugins.w3afPlugin.w3afPlugin(torNodesFound)
             #reference.setNodes(torNodesFound)
             reference.runPlugin()
             self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
         except ImportError, importErr:
-            print "Unexpected error:", sys.exc_info()[0]
+            print "Unexpected error:", sys.exc_info()
             self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
         except AttributeError, attrErr:
-            print "Unexpected error:", sys.exc_info()[0]
+            print "Unexpected error:", sys.exc_info()
             self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
 
 

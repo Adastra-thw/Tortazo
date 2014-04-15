@@ -1,0 +1,34 @@
+.. TortazoDocs documentation master file, created by
+   sphinx-quickstart on Tue Apr 15 13:08:53 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to TortazoDocs's documentation!
+=======================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   Introduction
+   Depedencies
+   Gather Information with Tortazo
+   Database Usage
+   Bruteforce Attacks
+   Parallel execution over SSH Servers.
+   Plugin System
+
+
+
+
+Indices and tables
+==================
+
+* :ref:`Introduction`
+* :ref:`Depedencies`
+* :ref:`Gather Information with Tortazo`
+* :ref:`Database Usage`
+* :ref:`Bruteforce Attacks`
+* :ref:`Parallel execution over SSH Servers`
+* :ref:`Plugin System`
+

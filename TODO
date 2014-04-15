@@ -6,7 +6,6 @@ TO DO in V1.1:
 - Plugin for Nikto.
 - Plugin for Metasploit Framework.
 - Plugin for Shodan.
-- Plugin for Nessus.
 - Plugin for DeepWebFinder.
 - Put an ArtASCII Banner.
 - Extend the -m/--mode option.
@@ -14,5 +13,7 @@ TO DO in V1.1:
 
 DONE:
 - The Shodan report is wrong.
+- Plugin for Nessus.
 
 TO DO in V1.2
+- Plugin for: https://haveibeenpwned.com/API/v2
