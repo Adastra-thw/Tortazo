@@ -100,6 +100,7 @@ class w3af_core_strategy(object):
             self.join_all_consumers()
 
         except Exception, e:
+            print e
             self.terminate()
 
             om.out.debug('strategy.start() is raising exception "%s"' % e)
@@ -320,6 +321,7 @@ class w3af_core_strategy(object):
                     # Not a real error, the user stopped the scan
                     raise
                 except Exception:
+                    print msg
                     raise ScanMustStopException(msg)
                 else:
                     sent_requests += 1
@@ -342,6 +344,7 @@ class w3af_core_strategy(object):
             except Exception, e:
                 msg = 'Failed to initialize the 404 detection, original' \
                       ' exception was: "%s".'
+                print msg % e
                 raise ScanMustStopException(msg % e)
 
     def _setup_crawl_infrastructure(self):
@@ -465,6 +468,7 @@ class w3af_core_strategy(object):
         om.out.debug('Called _setup_audit()')
 
         audit_plugins = self._w3af_core.plugins.plugins['audit']
+        print "Audit: "+str(audit_plugins)
 
         if audit_plugins:
             self._audit_consumer = audit(audit_plugins, self._w3af_core)

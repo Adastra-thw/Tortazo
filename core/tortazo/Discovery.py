@@ -33,6 +33,7 @@ import zlib
 import nmap
 import shodan
 from core.tortazo.databaseManagement import TortazoDatabase
+import urllib2
 
 class Discovery:
     '''
@@ -71,6 +72,9 @@ class Discovery:
             listDescriptors = descriptors.run()
         except zlib.error:
             self.cli.logger.error(term.format("[-] Error fetching the TOR descriptors. This is something quite common... Try again in a few seconds.",term.Color.RED))
+            return
+        except urllib2.HTTPError:
+            self.cli.logger.error(term.format("[-] Figerprint not found... It's not registered in the last valid server descriptor.",term.Color.RED))
             return
         return self.filterNodes(listDescriptors)
 

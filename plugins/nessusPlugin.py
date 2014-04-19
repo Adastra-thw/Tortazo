@@ -654,6 +654,7 @@ class nessusPlugin(BasePlugin):
         tableHelp = PrettyTable(["Function", "Description", "Example"])
         tableHelp.padding_width = 1
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
+        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
         tableHelp.add_row(['feed', 'Return the Nessus Feed', 'self.feed()'])
         tableHelp.add_row(['serverSecureSettingsList', 'List of Server Secure Settings', 'self.serverSecureSettingsList()'])
         tableHelp.add_row(['serverRegister', 'Registers the Nessus server with Tenable Network Security', "self.serverRegister('FEED_CODE')"])

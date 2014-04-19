@@ -31,7 +31,7 @@ class niktoPlugin(BasePlugin):
     '''
 
     def __init__(self, torNodes):
-        BasePlugin.__init__(self, torNodes, 'niktoPrinter')
+        BasePlugin.__init__(self, torNodes, 'niktoPlugin')
         self.info("[*] NiktoPlugin Initialized!")
 
     def __del__(self):
@@ -40,38 +40,54 @@ class niktoPlugin(BasePlugin):
     def executeAll(self, switches):
         for torNode in self.torNodes:
             for torNodePort in torNode.openPorts:
-                if torNodePort.port == '80':
-                    subprocess.call("nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                try:
+                    if torNodePort.port == '80':
+                        subprocess.call("perl nikto-2.1.5/nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                except KeyboardInterrupt:
+                    pass
 
     def executeAllOnPort(self, port, switches):
         for torNode in self.torNodes:
             for torNodePort in torNode.openPorts:
-                if torNodePort.port == port:
-                    subprocess.call("nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                try:
+                    if torNodePort.port == port:
+                        subprocess.call("perl nikto-2.1.5/nikto.pl -H "+torNode.host+" "+ switches+" -p "+port, shell=True)
+                except KeyboardInterrupt:
+                    pass
 
     def executeByNickname(self, nickname, switches):
         for torNode in self.torNodes:
             for torNodePort in torNode.openPorts:
-                if torNodePort.port == '80' and torNode.nickName == nickname:
-                    subprocess.call("nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                try:
+                    if torNodePort.port == '80' and torNode.nickName == nickname:
+                        subprocess.call("perl nikto-2.1.5/nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                except KeyboardInterrupt:
+                    pass
 
     def executeByIP(self, ipAddress, switches):
         for torNode in self.torNodes:
             for torNodePort in torNode.openPorts:
-                if torNodePort.port == '80' and torNode.host == ipAddress:
-                    subprocess.call("nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                try:
+                    if torNodePort.port == '80' and torNode.host == ipAddress:
+                        subprocess.call("perl nikto-2.1.5/nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                except KeyboardInterrupt:
+                    pass
 
     def executeByIPOnPort(self, ipAddress, port, switches):
         for torNode in self.torNodes:
             for torNodePort in torNode.openPorts:
-                if torNodePort.port == port and torNode.host == ipAddress:
-                    subprocess.call("nikto.pl -H "+torNode.host+" "+ switches, shell=True)
+                try:
+                    if torNodePort.port == port and torNode.host == ipAddress:
+                        subprocess.call("perl nikto-2.1.5/nikto.pl -H "+torNode.host+" "+ switches+" -p "+port, shell=True)
+                except KeyboardInterrupt:
+                    pass
 
     def help(self):
         print "[*] Functions availaible available in the Plugin..."
         tableHelp = PrettyTable(["Function", "Description", "Example"])
         tableHelp.padding_width = 1
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
+        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
         tableHelp.add_row(['executeAll', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'])
         tableHelp.add_row(['executeAllOnPort', 'Execute Nikto against all TOR relays found on the specified port.', 'self.executeAllOnPort(8080, "nikto_switches")'])
         tableHelp.add_row(['executeByNickname', 'Execute Nikto against the relay specified by NickName (by default, against port 80)', "self.executeByNickname('TorNodeNickName','nikto_switches')"])

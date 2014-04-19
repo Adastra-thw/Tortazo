@@ -168,7 +168,7 @@ class w3afCore(object):
 
         # Let the output plugins know what kind of plugins we're
         # using during the scan
-        om.out.log_enabled_plugins(self.plugins.get_all_enabled_plugins(),
+        print(self.plugins.get_all_enabled_plugins(),
                                    self.plugins.get_all_plugin_options())
 
         self._first_scan = False
@@ -445,7 +445,6 @@ class w3afCore(object):
         except Exception:
             msg = ('The w3af tmp directory "%s" is not writable. Please set '
                    'the correct permissions and ownership.' % TEMP_DIR)
-            print msg
             sys.exit(-3)
 
 

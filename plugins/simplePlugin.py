@@ -31,9 +31,10 @@ class simplePrinter(BasePlugin):
 
     def __init__(self, torNodes):
         BasePlugin.__init__(self, torNodes, 'simplePrinter')
+        self.info("[*] simplePrinter Initialized!")
 
     def __del__(self):
-        pass
+        self.info("[*] simplePrinter Destroyed!")
 
     def printRelaysFound(self):
         #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
