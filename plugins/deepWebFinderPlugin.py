@@ -23,6 +23,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
+from irlib.preprocessor import Preprocessor
+from irlib.matrix import Matrix
+from irlib.metrics import Metrics
+
 
 class deepWebPlugin(BasePlugin):
     '''
@@ -32,6 +36,9 @@ class deepWebPlugin(BasePlugin):
     def __init__(self, torNodes):
         BasePlugin.__init__(self, torNodes, 'deepWebPlugin')
         self.info("[*] DeepWebPlugin Initialized!")
+        prep = Preprocessor()
+        mx = Matrix()
+        metric = Metrics()
 
     def __del__(self):
         self.debug("[*] DeepWebPlugin Destroyed!")
