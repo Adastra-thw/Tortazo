@@ -1,0 +1,47 @@
+This is the list of people that contributed with w3af, a small summary of what they have done follows their name.
+
+Project leader:
+    Andres Riancho
+    
+Main contributors:
+    Javier Andalia <javier_andalia!rapid7.com> - Full time employee working on w3af!
+    Alexander Berezhnoy - spiderMan refactoring, new console user interface, plugins
+    Taras Ivashchenko <oxdef!oxdef.info> - A lot of BIG contributions.
+
+GUI design and usability contributors:
+    Facundo Batista - pyGTK user interface
+    Eduardo Mercovich - *Incredible* work in design and usability of the GTK user interface. Most of his recommendations still need to be coded.
+    Sebastian Ardita - Splash screen and vulnerability icons
+    
+Contributors from Cybsec:
+    Mariano Nuñez DiCroce -  webUi
+    Juan Pablo Perez Etchegoyen - htmlFile output plugin
+    Lucas Freije - Testing and bug reporting
+    Victor Montero - Moral and political support
+    Pablo Milano - Bug reporting
+
+Testing:
+    Ulises Cuñe - Bug reports and ideas
+    Sebastian Garcia (eldraco|en|gmail.com) - A lot of bug reports and good ideas
+    
+Plugin contributors:
+    Dominique Righetto - Various core and plugin contributions (CORS, CSP)
+    Sharad Ganapathy - Mark of the web plugin
+    Francisco Amato - mod_security evasion plugin
+    Josh Summitt - xst plugin
+    Constantinos - A lot of small fixes and help
+    Viktor Gazdag - eval() plugin
+    Eduardo Jorge - Local File inclusion plugin help
+    Andres Tarantini <atarantini@gmail.com> - Wordpress plugins
+
+Documentation:
+    Mike Harbison - Documentation review
+    Andy Bach - Documentation review
+    Jerome Athias - Users guide translation to French
+    Anton Kuzmin <anton.kuzmin.russia!gmail.com> - Users guide translation to Russian
+
+General:
+    Achim Hoffmann (ah|at|securenet.de) - Great ideas and OWASP SoC Reviewer
+    Kevin Denver - xmlFile plugin, urlParser extension, bug fixing, testing and more!
+    Martin Tartarelli - Hacked around the cmd.aspx file in order to evade AV detection, documentation, and more.
+
