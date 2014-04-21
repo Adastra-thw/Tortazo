@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 import config
 from pynessus.rest.client.NessusClient import NessusClient
-from pynessus.rest.data.NessusStructure import NessusStructure, NessusConverter
+from pynessus.rest.data.NessusStructure import NessusConverter
 from prettytable import PrettyTable
 import sys
 

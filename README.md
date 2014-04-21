@@ -10,17 +10,17 @@ Tortazo is an open source Python Script to gather information about ExitNodes in
 ## Dependencies
 To use the script, you'll need the following dependencies:
 
-* Paramiko:         https://github.com/paramiko/paramiko
-* Python-Nmap       http://xael.org/norman/python/python-nmap/
-* Python-shodan:    https://github.com/achillean/shodan-python
-* Stem:             https://stem.torproject.org/
-* Plumbum:          https://pypi.python.org/pypi/plumbum
-* Fabric:           http://docs.fabfile.org/en/1.8/
-* Requests:         https://pypi.python.org/pypi/requests
-* IPython:          http://ipython.org/
-* PrettyTable:      https://pypi.python.org/pypi/PrettyTable
-* pynessus-rest:    https://github.com/Adastra-thw/pynessus-rest
-
+* Paramiko:          https://github.com/paramiko/paramiko
+* Python-Nmap        http://xael.org/norman/python/python-nmap/
+* Python-shodan:     https://github.com/achillean/shodan-python
+* Stem:              https://stem.torproject.org/
+* Plumbum:           https://pypi.python.org/pypi/plumbum
+* Fabric:            http://docs.fabfile.org/en/1.8/
+* Requests:          https://pypi.python.org/pypi/requests
+* IPython:           http://ipython.org/
+* PrettyTable:       https://pypi.python.org/pypi/PrettyTable
+* pynessus-rest:     https://github.com/Adastra-thw/pynessus-rest
+* topia.termextract: https://pypi.python.org/pypi/topia.termextract/
    
 
 ## Examples

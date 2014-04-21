@@ -91,9 +91,15 @@ class BasePlugin():
         tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter... ',banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
         tortazoShell()
 
+    def create_connection(self, address, timeout=None, source_address=None):
+        sock = socks.socksocket()
+        sock.connect(address)
+        return sock
+
     def setSocksProxy(self):
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5 , config.socksHost, config.socksPort, True)
         socket.socket = socks.socksocket
+        socket.create_connection = self.create_connection
 
     def help(self):
         pass

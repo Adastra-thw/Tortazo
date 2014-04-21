@@ -5,13 +5,13 @@ Created on 22/01/2014
 #Author: Adastra.
 #twitter: @jdaanial
 
-deepWebFinderPlugin.py
+deepWebStemmingPlugin.py
 
-deepWebFinderPlugin is free software; you can redistribute it and/or modify
+deepWebStemmingPlugin is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation version 2 of the License.
 
-deepWebFinderPlugin is distributed in the hope that it will be useful,
+deepWebStemmingPlugin is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -23,22 +23,25 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
-from irlib.preprocessor import Preprocessor
-from irlib.matrix import Matrix
-from irlib.metrics import Metrics
+import requests
 
 
-class deepWebPlugin(BasePlugin):
+class deepWebStemmingPlugin(BasePlugin):
     '''
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
     def __init__(self, torNodes):
-        BasePlugin.__init__(self, torNodes, 'deepWebPlugin')
+        BasePlugin.__init__(self, torNodes, 'deepWebStemmingPlugin')
+        self.setSocksProxy()
         self.info("[*] DeepWebPlugin Initialized!")
-        prep = Preprocessor()
-        mx = Matrix()
-        metric = Metrics()
+
+    def compareAllRelaysWithHiddenService(self, hiddenWebSite):
+        for node in self.torNodes:
+            requestHidden = requests.get(hiddenWebSite)
+            requestRelay = requests.get(node.host)
+
+
 
     def __del__(self):
         self.debug("[*] DeepWebPlugin Destroyed!")
@@ -49,5 +52,5 @@ class deepWebPlugin(BasePlugin):
         tableHelp.padding_width = 1
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
         tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['compareRelayWithHiddenService', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'])
+        tableHelp.add_row(['compareRelayWithHiddenWebSite', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'])
         print tableHelp

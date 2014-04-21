@@ -21,8 +21,6 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-#from w3af.core.controllers.w3afCore import w3afCore
-#from w3af.core.controllers.core_helpers.target import w3af_core_target
 from w3af.core.data.parsers.url import URL as URL_KLASS
 from prettytable import PrettyTable
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
@@ -32,8 +30,6 @@ from w3af.core.data.options.opt_factory import opt_factory
 from w3af.core.data.kb.knowledge_base import kb
 from w3af.core.controllers.misc_settings import MiscSettings
 import w3af.core.data.kb.config as cf
-import time
-from multiprocessing.dummy import Process
 
 class w3afPlugin(BasePlugin):
     '''
