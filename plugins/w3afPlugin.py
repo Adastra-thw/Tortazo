@@ -302,16 +302,27 @@ class w3afPlugin(BasePlugin):
             tableVulns.add_row([vuln.get_severity(),vuln.get_desc()])
         print tableVulns
 
-    def exploitVulns(self,pluginExploit,vulnId):
-        print "[*] Checking the vulnerabily and plugin to exploit..."
+    def exploitAllVulns(self,pluginExploit):
+        print "[*] Checking the vulnerability and plugin to exploit..."
+        pluginAttack = self.w3afCorePlugin.plugins.get_plugin_inst('attack',pluginExploit)
+        for vuln in kb.get_all_vulns():
+            if vuln.get_id() is not None:
+                shells = pluginAttack.exploit(vuln.get_id())
+                for shell in shells:
+                    print "Shell Generated %s " %(shell.id)
+
+        print "[*] Exploit vulnerability finished."
+
+    def exploitVuln(self,pluginExploit,vulnId):
+        print "[*] Checking the vulnerability and plugin to exploit..."
         pluginAttack = self.w3afCorePlugin.plugins.get_plugin_inst('attack',pluginExploit)
         for vuln in kb.get_all_vulns():
             if vuln.get_id() is not None:
                 if int(vulnId) in vuln.get_id():
-                    print pluginAttack.exploit(vuln.get_id())
+                    shells = pluginAttack.exploit(vuln.get_id())
+                    for shell in shells:
+                        print "Shell Generated %s " %(shell.id)
         print "[*] Exploit vulnerability finished."
-        self.listShells()
-
 
     def help(self):
         print "[*] Functions availaible in the Plugin..."
@@ -372,7 +383,8 @@ class w3afPlugin(BasePlugin):
         tableHelpShells.add_row(['listAttackPlugins', 'List of attack plugins.', 'self.listAttackPlugins()'])
         tableHelpShells.add_row(['listInfos', 'List of Infos in the Knowledge Base of W3AF', 'self.listInfos()'])
         tableHelpShells.add_row(['listVulnerabilities', 'List of Vulns in the Knowledge Base of W3AF', 'self.listVulnerabilities()'])
-        tableHelpShells.add_row(['exploitVulns', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)'])
+        tableHelpShells.add_row(['exploitAllVulns', 'Exploits all vulns in the Knowledge Base of W3AF', 'self.exploitVulns("sqli")'])
+        tableHelpShells.add_row(['exploitVuln', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)'])
         print tableHelpShells
 
 

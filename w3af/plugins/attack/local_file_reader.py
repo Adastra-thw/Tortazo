@@ -190,7 +190,7 @@ class FileReaderShell(ReadShell):
     :author: Andres Riancho (andres.riancho@gmail.com)
     """
 
-    def __init__(self, vuln, url_opener, worker_pool, header_len, footer_len):
+    def __init__(self, vuln, url_opener, worker_pool, header_len=None, footer_len=None):
         super(FileReaderShell, self).__init__(vuln, url_opener, worker_pool)
 
         self.set_cut(header_len, footer_len)

@@ -180,6 +180,7 @@ class os_commanding(AttackPlugin):
         """
         # Check if we really can execute commands on the remote server
         strategy = self._verify_vuln(vuln)
+        print "strategy"
         if strategy:
             # Create the shell object
             shell_obj = OSCommandingShell(strategy, self._uri_opener,

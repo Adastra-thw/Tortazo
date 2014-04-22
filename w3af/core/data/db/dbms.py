@@ -362,7 +362,6 @@ def get_default_temp_db_instance():
     if temp_default_db is None:
         create_temp_dir()
         temp_default_db = SQLiteDBMS('%s/main.db' % get_temp_dir())
-        
     return temp_default_db
 
 
