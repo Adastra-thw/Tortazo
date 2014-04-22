@@ -87,6 +87,9 @@ class w3afPlugin(BasePlugin):
 
     def enablePlugin(self, pluginName, type):
         enabled = [pluginName, ]
+        enabledPlugins = self.w3afCorePlugin.plugins.get_all_enabled_plugins()
+        for plugin in enabledPlugins[type]:
+            enabled.append(plugin)
         self.w3afCorePlugin.plugins.set_plugins(enabled, type)
         self.getEnabledPluginsByType(type)
 
@@ -160,9 +163,12 @@ class w3afPlugin(BasePlugin):
 
     def startAttack(self):
         print "[*] W3AF Attack Starting..."
-        print '[*] Starting Attack against: '+str(cf.cf['targets'])
-        self.w3afCorePlugin.plugins.create_instances()
+        #print '[*] Starting Attack against: '+str(cf.cf['targets'])
+        self.w3afCorePlugin.plugins.init_plugins()
+        self.w3afCorePlugin.verify_environment()
         self.w3afCorePlugin.start()
+        #self.w3afCorePlugin.plugins.create_instances()
+        #self.w3afCorePlugin.start()
         print "[*] W3AF Attack Finished! Check the results using the right functions in this plugin."
 
     '''

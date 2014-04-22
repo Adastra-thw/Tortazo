@@ -359,7 +359,7 @@ class nessusPlugin(BasePlugin):
         targets = ''
         for node in self.torNodes:
             targets +=node.host+"\n"
-        nessusConverter = NessusConverter(self.nessusClient.scanNew(targets, policyId, scanName))
+        nessusConverter = NessusConverter(self.nessusClient.scanNew(targets, policyId, scanName, method="POST"))
         nessusConverter.scanToStructure()
         tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
         tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
@@ -381,7 +381,7 @@ class nessusPlugin(BasePlugin):
                     found = True
                     break
         if found:
-            nessusConverter = NessusConverter(self.nessusClient.scanNew(relay, policyId, scanName))
+            nessusConverter = NessusConverter(self.nessusClient.scanNew(relay, policyId, scanName, method="POST"))
             nessusConverter.scanToStructure()
             print "[*] Nessus scan using the relay %s " %(relay)
             tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
@@ -443,14 +443,15 @@ class nessusPlugin(BasePlugin):
         print tableScan
 
     def scanList(self):
-        nessusConverter = NessusConverter(self.nessusClient.scanList())
-        nessusConverter.scanToStructure()
+        nessusConverter = NessusConverter(self.nessusClient.scanList(method="POST"))
+        nessusConverter.scanListToStructure()
         print "[*] Nessus scan List."
         tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-        for scan in nessusConverter.nessusStructure.scanList:
-            tableScan.add_row([scan.owner, scan.scanName, scan.startTime, scan.uuid,
-                               scan.readableName, scan.status,
-                               scan.completionCurrent, scan.completionTotal])
+        if len(nessusConverter.nessusStructure.scanList) > 0:
+            for scan in nessusConverter.nessusStructure.scanList:
+                tableScan.add_row([scan.owner, scan.scanName, scan.startTime, scan.uuid,
+                                   scan.readablename, scan.status,
+                                   scan.completionCurrent, scan.completionTotal])
         print tableScan
 
     def scanTemplateAllRelays(self, policyId, templateName):
