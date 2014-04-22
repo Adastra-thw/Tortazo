@@ -200,16 +200,11 @@ class w3afPlugin(BasePlugin):
         valid_profiles, invalid_profiles = self.w3afCorePlugin.profiles.get_profile_list()
         print "[*] List of profiles."
         print "\n"
-        tableProfiles = PrettyTable(["Description","Profile File", "Name", "Target"])
+        tableProfiles = PrettyTable(["Description", "Profile File", "Name"])
         for profile in valid_profiles:
             tableProfiles.add_row([profile.get_desc(),
                                    profile.get_profile_file(),
-                                   profile.get_name(),
-                                   profile.get_target().get("target")])
-        tableProfiles["Description"].align="l"
-        tableProfiles["Profile File"].align="l"
-        tableProfiles["Name"].align="l"
-        tableProfiles["Target"].align="l"
+                                   profile.get_name()])
         print tableProfiles
 
 
@@ -222,12 +217,8 @@ class w3afPlugin(BasePlugin):
     def createProfileWithCurrentConfig(self, profileName, profileDescription):
         print "[*] Creating profile %s " %(profileName)
         profile = self.w3afCorePlugin.profiles.save_current_to_new_profile(profileName, profileDescription)
-        tableProfiles = PrettyTable(["Description","Profile File", "Name", "Target"])
-        tableProfiles.add_row([profile.get_desc(),profile.get_profile_file(),profile.get_name(),profile.get_target().get("target")])
-        tableProfiles["Description"].align="l"
-        tableProfiles["Profile File"].align="l"
-        tableProfiles["Name"].align="l"
-        tableProfiles["Target"].align="l"
+        tableProfiles = PrettyTable(["Description","Profile File", "Name"])
+        tableProfiles.add_row([profile.get_desc(),profile.get_profile_file(),profile.get_name()])
         print tableProfiles
 
 
