@@ -27,7 +27,7 @@ import sys
 from stem.util import term
 
 from core.tortazo.CommandAndControl import CommandAndControl
-from core.tortazo.data import BotMachine
+from core.tortazo.data.BotMachine import BotMachine
 
 
 class BotNet:
