@@ -55,7 +55,6 @@ class deepWebStemmingPlugin(BasePlugin):
                 for port in node.openPorts:
                     if port.port in self.webPorts:
                         try:
-                            print port.port
                             if httpMethod == "GET":
                                 response = requests.get("http://"+node.host+":"+str(port.port), timeout=config.timeOutRequests)
                                 self.validateResponse(response, queryTerms)
@@ -97,7 +96,7 @@ class deepWebStemmingPlugin(BasePlugin):
                 cnt[word] += 1
             tableTerms = PrettyTable(["Term", "Frequency"])
             for word in sorted(cnt, key=cnt.get, reverse=True):
-                if word.lower() in queryTerms.lower().split():
+                if word.encode('ascii').lower() in queryTerms.encode('ascii').lower().split():
                     tableTerms.add_row([word, cnt[word]])
             print tableTerms
         else:

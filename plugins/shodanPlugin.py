@@ -129,6 +129,6 @@ class shodanPlugin(BasePlugin):
         tableHelp.add_row(['setApiKeyFile', 'Sets the API Key file. Reads the first line of the file and then sets the API Key string.', 'self.setApiKeyFile("/home/apiKeyFile")'])
         tableHelp.add_row(['basicSearchQuery', 'Performs a basic search with Shodan. By default prints the 10 first results', 'self.basicSearchQuery("OpenSSL 1.0.1", 15)'])
         tableHelp.add_row(['basicSearchAllRelays', 'Performs a basic search with Shodan against all TOR relays. Uses the "net" filter.', 'self.basicSearchQuery("OpenSSL 1.0.1")'])
-        tableHelp.add_row(['basicSearchByRelay', 'Performs a basic search with Shodan against the specified TOR relay.', 'self.basicSearchByRelay("OpenSSL 1.0.1", "80.80.80.80")'])
+        tableHelp.add_row(['basicSearchByRelay', 'Performs a basic search with Shodan against the specified TOR relay.', 'self.basicSearchAllRelays("OpenSSL 1.0.1", "80.80.80.80")'])
         tableHelp.add_row(['basicSearchByNickname', 'Performs a basic search with Shodan against the specified TOR NickName.', 'self.basicSearchByRelay("OpenSSL 1.0.1", "TORNickName")'])
         print tableHelp
