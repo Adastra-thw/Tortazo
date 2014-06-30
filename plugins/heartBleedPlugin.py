@@ -37,7 +37,7 @@ class heartBleedPlugin(BasePlugin):
             self.info("[*] heartBleedPlugin Initialized!")
 
     def __del__(self):
-        if self.torNodes is not None:
+        if len(self.torNodes) > 0:
             self.info("[*] heartBleedPlugin Destroyed!")
 
     def setTarget(self, relayIp):

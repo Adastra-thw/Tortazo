@@ -242,23 +242,11 @@ class Cli(cli.Application):
             plugins = glob.glob("plugins/*.py")
             plugins.remove('plugins/__init__.py')
 
-            import inspect
+            print "[*] Plugins list... "
             for plugin in plugins:
-                '''
-                module = __import__("plugins."+pluginModule)
-                pluginArguments = pluginClass.split(',')
-                pluginClassName = pluginArguments[0]
-                components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
-                self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
-                for comp in components[1:]:
-                    module = getattr(module, comp)
-                reference = module(torNodesFound)
-                reference.runPlugin()
-                '''
                 pluginModule = plugin.replace(".py", "").replace(".pyc", "").replace('/', '.')
                 import pyclbr
                 moduleReaded = pyclbr.readmodule(pluginModule)
-                print "[*] Plugins list... "
                 for k, v in moduleReaded.items():
                     mod = __import__(pluginModule)
                     fullClassName = pluginModule+"."+v.name

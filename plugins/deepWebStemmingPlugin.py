@@ -45,7 +45,7 @@ class deepWebStemmingPlugin(BasePlugin):
 
 
     def __del__(self):
-        if self.torNodes is not None:
+        if len(self.torNodes) > 0:
             self.debug("[*] deepWebStemmingPlugin Destroyed!")
 
     def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", portNumber=None):

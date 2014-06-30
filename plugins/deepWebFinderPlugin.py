@@ -39,7 +39,7 @@ class deepWebFinderPlugin(BasePlugin):
             self.info("[*] deepWebFinderPlugin Initialized!")
 
     def __del__(self):
-        if self.torNodes is not None:
+        if len(self.torNodes) > 0:
             self.debug("[*] DeepWebPlugin Destroyed!")
 
     def compareAllRelaysWithHiddenService(self, hiddenWebSite):

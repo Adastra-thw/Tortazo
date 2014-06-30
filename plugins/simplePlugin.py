@@ -37,7 +37,7 @@ class simplePrinter(BasePlugin):
 
 
     def __del__(self):
-        if self.torNodes is not None:
+        if len(self.torNodes) > 0:
             self.info("[*] simplePrinter Destroyed!")
 
     def printRelaysFound(self):

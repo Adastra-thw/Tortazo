@@ -38,7 +38,7 @@ class shodanPlugin(BasePlugin):
 
 
     def __del__(self):
-        if self.torNodes is not None:
+        if len(self.torNodes) > 0:
             self.info("[*] shodanPlugin Destroyed!")
 
     def setApiKey(self, apiKey):
