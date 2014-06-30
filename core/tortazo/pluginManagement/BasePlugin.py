@@ -45,6 +45,10 @@ class BasePlugin():
         self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
         self.torNodes = torNodes
         self.pluginLoaded = pluginLoaded
+        self.name = None
+        self.desc = None
+        self.version = None
+        self.author = None
 
     def info(self, message):
          self.logger.info(term.format(message, term.Color.YELLOW))
@@ -75,7 +79,7 @@ class BasePlugin():
 
     def runPlugin(self):
         '''
-        The most simplest plugin! Just prints the tor data structure.
+        Runs the plugin.
         '''
         try:
             get_ipython
@@ -100,6 +104,12 @@ class BasePlugin():
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5 , config.socksHost, config.socksPort, True)
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection
+
+    def setPluginDetails(self,name,desc,version,author):
+        self.name = name
+        self.desc = desc
+        self.version = version
+        self.author = author
 
     def help(self):
         pass

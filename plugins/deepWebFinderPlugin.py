@@ -26,15 +26,21 @@ from prettytable import PrettyTable
 import requests
 
 
-class deepWebStemmingPlugin(BasePlugin):
+class deepWebFinderPlugin(BasePlugin):
     '''
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
-        BasePlugin.__init__(self, torNodes, 'deepWebStemmingPlugin')
-        self.setSocksProxy()
-        self.info("[*] DeepWebPlugin Initialized!")
+    def __init__(self, torNodes=[]):
+        BasePlugin.__init__(self, torNodes, 'deepWebFinderPlugin')
+        self.setPluginDetails('deepWebFinderPlugin', 'Basic pentesting tasks against hidden services in the TOR network', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.setSocksProxy()
+            self.info("[*] deepWebFinderPlugin Initialized!")
+
+    def __del__(self):
+        if self.torNodes is not None:
+            self.debug("[*] DeepWebPlugin Destroyed!")
 
     def compareAllRelaysWithHiddenService(self, hiddenWebSite):
         for node in self.torNodes:
@@ -43,8 +49,7 @@ class deepWebStemmingPlugin(BasePlugin):
 
 
 
-    def __del__(self):
-        self.debug("[*] DeepWebPlugin Destroyed!")
+
 
     def help(self):
         print "[*] Functions availaible available in the Plugin..."

@@ -36,16 +36,20 @@ class w3afPlugin(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
+    def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'w3afPlugin')
-        self.info("[*] w3afPlugin Initialized!")
-        self.w3afCorePlugin = w3afCore()
-        self.w3afCorePlugin.plugins.init_plugins()
-        self.w3afCorePlugin.plugins.zero_enabled_plugins()
-        self.miscSettings = MiscSettings()
+        self.setPluginDetails('w3afPlugin', 'Plugin to load the W3AF context in Tortazo. You can execute W3AF against the TOR deep web.', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.info("[*] w3afPlugin Initialized!")
+            self.w3afCorePlugin = w3afCore()
+            self.w3afCorePlugin.plugins.init_plugins()
+            self.w3afCorePlugin.plugins.zero_enabled_plugins()
+            self.miscSettings = MiscSettings()
+
 
     def __del__(self):
-        self.info("[*] w3afPlugin Destroyed!")
+        if self.torNodes is not None:
+            self.info("[*] w3afPlugin Destroyed!")
 
 
     '''

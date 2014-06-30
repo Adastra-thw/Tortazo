@@ -30,12 +30,16 @@ class shodanPlugin(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
+    def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'shodanPlugin')
-        self.info("[*] shodanPlugin Initialized!")
+        self.setPluginDetails('shodanPlugin', 'Plugin to gather information using the Shodan Database.', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.info("[*] shodanPlugin Initialized!")
+
 
     def __del__(self):
-        self.info("[*] shodanPlugin Destroyed!")
+        if self.torNodes is not None:
+            self.info("[*] shodanPlugin Destroyed!")
 
     def setApiKey(self, apiKey):
         self.apiKey = apiKey

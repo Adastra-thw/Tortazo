@@ -32,17 +32,21 @@ class deepWebStemmingPlugin(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
-        BasePlugin.__init__(self, torNodes, 'deepWebPlugin')
-        self.setSocksProxy()
-        #self.prepocessor = Preprocessor()
-        #self.matrix = Matrix()
-        #self.metric = Metrics()
-        self.info("[*] deepWebStemmingPlugin Initialized!")
-        self.webPorts = [80,443,8080]
+    def __init__(self, torNodes=[]):
+        BasePlugin.__init__(self, torNodes, 'deepWebStemmingPlugin')
+        self.setPluginDetails('DeepWebStemmingPlugin', 'Basic stemming tasks against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.setSocksProxy()
+            #self.prepocessor = Preprocessor()
+            #self.matrix = Matrix()
+            #self.metric = Metrics()
+            self.info("[*] deepWebStemmingPlugin Initialized!")
+            self.webPorts = [80,443,8080]
+
 
     def __del__(self):
-        self.debug("[*] deepWebStemmingPlugin Destroyed!")
+        if self.torNodes is not None:
+            self.debug("[*] deepWebStemmingPlugin Destroyed!")
 
     def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", portNumber=None):
         import requests
@@ -96,7 +100,7 @@ class deepWebStemmingPlugin(BasePlugin):
                 cnt[word] += 1
             tableTerms = PrettyTable(["Term", "Frequency"])
             for word in sorted(cnt, key=cnt.get, reverse=True):
-                if word.encode('ascii').lower() in queryTerms.encode('ascii').lower().split():
+                if word.lower() in queryTerms.lower().split():
                     tableTerms.add_row([word, cnt[word]])
             print tableTerms
         else:

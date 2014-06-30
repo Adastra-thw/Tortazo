@@ -35,16 +35,20 @@ class nessusPlugin(BasePlugin):
 
     #http://static.tenable.com/documentation/nessus_5.0_XMLRPC_protocol_guide.pdf
 
-    def __init__(self,torNodes):
+    def __init__(self,torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'nessusPlugin')
-        self.nessusClient = NessusClient(config.nessusHost, config.nessusPort)
-        self.nessusClient.login(config.nessusUser, config.nessusPass)
-        self.info("[*] NessusPlugin Initialized!")
+        self.setPluginDetails('NessusPlugin', 'Plugin developed to interact with the REST API of Nessus. Uses pynessus-rest library', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.nessusClient = NessusClient(config.nessusHost, config.nessusPort)
+            self.nessusClient.login(config.nessusUser, config.nessusPass)
+            self.info("[*] NessusPlugin Initialized!")
+
 
 
     def __del__(self):
-        self.debug("[*] NessusPlugin Destroyed!")
-        self.nessusClient.logout()
+        if self.torNodes is not None:
+            self.debug("[*] NessusPlugin Destroyed!")
+            self.nessusClient.logout()
 
     def feed(self):
         nessusConverter = NessusConverter(self.nessusClient.feed(method="POST"))

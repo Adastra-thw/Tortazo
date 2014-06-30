@@ -30,12 +30,16 @@ class niktoPlugin(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
+    def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'niktoPlugin')
-        self.info("[*] NiktoPlugin Initialized!")
+        self.setPluginDetails('niktoPlugin', 'Plugin to execute tests with nikto.', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.info("[*] NiktoPlugin Initialized!")
+
 
     def __del__(self):
-        self.debug("[*] NiktoPlugin Destroyed!")
+        if self.torNodes is not None:
+            self.debug("[*] NiktoPlugin Destroyed!")
 
     def executeAll(self, switches):
         for torNode in self.torNodes:

@@ -29,12 +29,16 @@ class simplePrinter(BasePlugin):
     Class to  implement a simple plugin which prints the TOR Data structure.
     '''
 
-    def __init__(self, torNodes):
+    def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'simplePrinter')
-        self.info("[*] simplePrinter Initialized!")
+        self.setPluginDetails('simplePrinter', 'Example of a plugin in Tortazo.', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.info("[*] simplePrinter Initialized!")
+
 
     def __del__(self):
-        self.info("[*] simplePrinter Destroyed!")
+        if self.torNodes is not None:
+            self.info("[*] simplePrinter Destroyed!")
 
     def printRelaysFound(self):
         #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
