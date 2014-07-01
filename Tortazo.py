@@ -272,7 +272,7 @@ class Cli(cli.Application):
                 components = completeModulePath.split('.')
                 for comp in components[1:]:
                     module = getattr(module, comp)
-                inst = mod([])
+                inst = module([])
                 print "Plugin Name: %s" %(inst.name)
                 print "Plugin Description: %s" %(inst.desc)
                 print "Plugin Version: %s" %(inst.version)
