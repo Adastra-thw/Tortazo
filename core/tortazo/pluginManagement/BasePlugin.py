@@ -29,6 +29,7 @@ import socks
 import socket
 import config
 from prettytable import PrettyTable
+import requests
 
 class BasePlugin():
     '''
@@ -49,6 +50,9 @@ class BasePlugin():
         self.desc = None
         self.version = None
         self.author = None
+        self.socksHost = None
+        self.socksPort = None
+
 
     def info(self, message):
          self.logger.info(term.format(message, term.Color.YELLOW))
@@ -95,13 +99,20 @@ class BasePlugin():
         tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter... ',banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
         tortazoShell()
 
+    def setSocksProxySettings(self, socksHost, socksPort):
+        self.socksHost = socksHost
+        self.socksPort = socksPort		
+
     def create_connection(self, address, timeout=None, source_address=None):
         sock = socks.socksocket()
         sock.connect(address)
         return sock
 
     def setSocksProxy(self):
-        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5 , config.socksHost, config.socksPort, True)
+        if self.socksHost is not None and self.socksPort is not None:
+            socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
+        else:
+            socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, config.socksHost, config.socksPort, True)
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection
 
@@ -110,6 +121,10 @@ class BasePlugin():
         self.desc = desc
         self.version = version
         self.author = author
+	
+    def onionHttpGetRequest(self, onionUrl, headers={}, auth=None, urlParameters={}):
+        self.setSocksProxy()
+        return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters)
 
     def help(self):
         pass

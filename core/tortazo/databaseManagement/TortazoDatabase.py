@@ -100,7 +100,7 @@ class TortazoDatabase:
             if self.cursor.fetchone()[0] > 0:
                 #Node scaned before.
                 continue
-            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, scanId)
+            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(config.insertTorNodeData, node)
 

@@ -34,7 +34,7 @@ import logging as log
 import config as tortazoConfiguration
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
 import sys
-from prettytable import PrettyTable
+
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -95,9 +95,9 @@ class Cli(cli.Application):
     useDatabase = cli.Flag(["-D", '--use-database'], help="Tortazo will store the last results from the scanning process in a database. If you use this flag, Tortazo will omit the scan and just will try use the data stored from the last execution.")
     cleanDatabase = cli.Flag(["-C", '--clean-database'], help="Tortazo will delete all records stored in database when finished executing. This option will delete every record stored, included the data from previous scans.")
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
+    useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")	
 
     threads = 1 #Execution Threads.
-    # mode = None #Mode: Windows/Linux
     dictFile = None #Dict. file for brute-force attacks.
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
@@ -112,6 +112,9 @@ class Cli(cli.Application):
     pluginManagement = None
     torLocalInstance = None
     scanIdentifier = None
+
+    socksHost = None
+    socksPort = None
 
     @cli.switch(["-n", "--servers-to-attack"], int, help="Number of TOR exit-nodes to attack. If this switch is used with --use-database, will recover information stored from the last 'n' scans. Default = 10")
     def servers_to_attack(self, exitNodesToAttack):
@@ -219,7 +222,7 @@ class Cli(cli.Application):
         Shows the Logs for the TOR startup.
         '''
         if "Bootstrapped " in log:
-            self.logger.info(term.format(log, term.Color.RED))
+            self.logger.debug(term.format(log, term.Color.GREEN))
 
     def main(self):
         '''
@@ -238,7 +241,7 @@ class Cli(cli.Application):
         self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
 
         if self.listPlugins:
-            import glob
+            '''import glob
             plugins = glob.glob("plugins/*.py")
             plugins.remove('plugins/__init__.py')
 
@@ -259,6 +262,22 @@ class Cli(cli.Application):
                     print "Plugin Version: %s" %(inst.version)
                     print "Plugin Author: %s" %(inst.author)
                     print "\n"
+            '''
+            print "[*] Plugins list... "
+            import pluginsDeployed
+            for plugin in pluginsDeployed.plugins.keys():
+                completeModulePath = pluginsDeployed.plugins.get(plugin)
+                pluginModule = completeModulePath[:completeModulePath.rfind(".")]
+                module = __import__(pluginModule)
+                components = completeModulePath.split('.')
+                for comp in components[1:]:
+                    module = getattr(module, comp)
+                inst = mod([])
+                print "Plugin Name: %s" %(inst.name)
+                print "Plugin Description: %s" %(inst.desc)
+                print "Plugin Version: %s" %(inst.version)
+                print "Plugin Author: %s" %(inst.author)
+                print "\n"
             return
 
         if self.torLocalInstance:
@@ -276,8 +295,16 @@ class Cli(cli.Application):
                 try:
                     for config in torConfig.keys():
                         self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
-                    torProcess = stem.process.launch_tor_with_config(config = torConfig,)
-                    self.logger.debug(term.format("[+] TOR Process created. PID %s " %(torProcess.pid),  term.Color.GREEN))
+                    torProcess = stem.process.launch_tor_with_config(config = torConfig, init_msg_handler=self.logsTorInstance)
+                    if torProcess > 0:
+                        self.logger.debug(term.format("[+] TOR Process created. PID %s " %(torProcess.pid),  term.Color.GREEN))
+                        self.socksHost = torConfig['SocksListenAddress']
+                        self.socksPort = torConfig['SocksPort']
+                        #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
+                        if self.socksHost is None:
+                            self.socksHost = '127.0.0.1'
+                        if self.socksPort is None:
+                            self.socksPort = '9150'
                 except OSError, ose:
                     print sys.exc_info()
                     #OSError: Stem exception raised. Tpically, caused because the "tor" command is not in the path.
@@ -290,7 +317,7 @@ class Cli(cli.Application):
 
 
         if self.zombieMode is None and self.useDatabase is False and self.mode is None:
-            self.logger.warn(term.format("Specify the execution mode. Type '--help' to see the available options. ", term.Color.RED))
+            self.logger.warn(term.format("Specify the execution mode. You should use Info Gathering (-m), Botnet Mode (-z) or Database Mode (-D). Type '--help' to see the available options. ", term.Color.RED))
             return
 
         #self.loadAndExecute(self,"simplePlugin:simplePrinter")
@@ -341,7 +368,6 @@ class Cli(cli.Application):
 
             if self.exitNodes is not None and len(self.exitNodes) > 0:
                 reporter = Reporting(self)
-                print tortazoConfiguration
                 reporter.generateNmapReport(self.exitNodes, tortazoConfiguration.NmapOutputFile)
                 self.shodanHosts = []
                 for torNode in self.exitNodes:
@@ -389,27 +415,44 @@ class Cli(cli.Application):
         if listPlugins is None:
             self.logger.warn((term.format("[-] You should specify a plugin with the option -P/--use-plugin", term.Color.YELLOW)))
             return
-        pluginModule, pluginClass = listPlugins.split(":")
+        '''pluginModule, pluginClass = listPlugins.split(":")
         if pluginModule is None or pluginClass is None:
             self.logger.info((term.format("[-] Format "+ listPlugins +" invalid. Check the documentation to use plugins in Tortazo", term.Color.YELLOW)))
             return
+        '''
         try:
-            module = __import__("plugins."+pluginModule)
+            '''module = __import__("plugins."+pluginModule)
             pluginArguments = pluginClass.split(',')
             pluginClassName = pluginArguments[0]
             components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
+            '''
+            import pluginsDeployed
             self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
-            for comp in components[1:]:
-                module = getattr(module, comp)
-            reference = module(torNodesFound)
-            reference.runPlugin()
-            self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
+
+            if pluginsDeployed.plugins.__contains__(listPlugins):
+                completeModulePath = pluginsDeployed.plugins.get(listPlugins)
+                pluginModule = completeModulePath[:completeModulePath.rfind(".")]
+                module = __import__(pluginModule)
+                components = completeModulePath.split('.')
+                for comp in components[1:]:
+                    module = getattr(module, comp)
+                if self.socksHost is not None and self.socksPort is not None and self.useLocalTorInstance:
+                    reference = module(torNodesFound)
+                    reference.setSocksProxySettings(self.socksHost, self.socksPort)
+                    reference.runPlugin()
+                else:
+                     reference = module(torNodesFound)
+                reference.runPlugin()
+                self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
+            else:
+                self.logger.warn((term.format("[-] The plugin specified is unknown... Check the available plugins with -L/--list-plugins option", term.Color.RED)))
+
         except ImportError, importErr:
             print "Unexpected error:", sys.exc_info()
-            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
+            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package and registered in pluginsDeployed.py. Check the available plugins with -L/--list-plugins option", term.Color.RED)))
         except AttributeError, attrErr:
             print "Unexpected error:", sys.exc_info()
-            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
+            self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package and registered in pluginsDeployed.py. Check the available plugins with -L/--list-plugins option", term.Color.RED)))
 
 
     '''

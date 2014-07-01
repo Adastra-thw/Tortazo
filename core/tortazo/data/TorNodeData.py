@@ -33,6 +33,9 @@ class TorNodeData:
         self.openPorts = [] #List of TorNodePort objects
         self.closedFilteredPorts = [] #List of TorNodePort objects
         self.nickName = None
+        self.fingerprint = None
+        self.torVersion = None
+        self.contactData = None
 
 class TorNodePort:
     '''

@@ -39,7 +39,6 @@ class Discovery:
     '''
 		Class used to list the current "exit-nodes" from the TOR network and perform the nmap scanning to discover the open ports.
 	'''
-    exitNodes = {}
     cli = None
     scan = None
 
@@ -142,7 +141,7 @@ class Discovery:
                 #Relay's Operative System equals to the Operative System (option mode) specified in command-line AND
                 #The Relay is a Exit Node.
                 if descriptor.address not in nodesAlreadyScanned:
-                    self.cli.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s - Fingerprint: %s" % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system, descriptor.fingerprint), term.Color.YELLOW))
+                    self.cli.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s - Fingerprint: %s - TOR Version: %s " % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system, descriptor.fingerprint, descriptor.tor_version), term.Color.YELLOW))
                     self.cli.logger.debug(term.format("[+] Starting the NMap Scan with the following options: ", term.Color.GREEN))
                     self.cli.logger.debug(term.format("[+][+] Scan Address: %s " % (descriptor.address), term.Color.GREEN))
                     self.cli.logger.debug(term.format("[+][+] Scan Arguments: %s " % (self.cli.scanArguments), term.Color.GREEN))
@@ -186,6 +185,10 @@ class Discovery:
             torNode = TorNodeData()
             torNode.host = host
             torNode.nickName = descriptor.nickname
+            torNode.fingerprint = descriptor.fingerprint
+            torNode.torVersion = descriptor.tor_version
+            if descriptor.contact is not None:
+                torNode.contactData = descriptor.contact.decode("utf-8", "replace")
             if scan[host].has_key('status'):
                 torNode.state = scan[host]['status']['state']
                 torNode.reason = scan[host]['status']['reason']

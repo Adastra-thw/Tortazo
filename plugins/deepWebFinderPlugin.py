@@ -42,13 +42,33 @@ class deepWebFinderPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.debug("[*] DeepWebPlugin Destroyed!")
 
-    def compareAllRelaysWithHiddenService(self, hiddenWebSite):
+    def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
         for node in self.torNodes:
             requestHidden = requests.get(hiddenWebSite)
             requestRelay = requests.get(node.host)
+    
+    def crawlImagesHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
+        from bs4 import BeautifulSoup
+        from PIL import Image
+        from StringIO import StringIO
+
+        response = self.onionHttpGetRequest(hiddenWebSite)
+        rootSite = BeautifulSoup(response.content)
+        images = rootSite.find_all("img")
+        for image in images:
+            responseImage = self.onionHttpGetRequest(images.src)
+            i = Image.open(StringIO(responseImage.content))
 
 
 
+    def crawlContentsHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
+        pass
+
+    def crawlLinksHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
+        pass
+		
+    def findGeoLocationByIP(self):
+        pass
 
 
     def help(self):
@@ -57,5 +77,9 @@ class deepWebFinderPlugin(BasePlugin):
         tableHelp.padding_width = 1
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
         tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['compareRelayWithHiddenWebSite', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'])
+        tableHelp.add_row(['compareRelaysWithHiddenWebSite', ''])
+        tableHelp.add_row(['crawlImagesHiddenWebSite', ''])
+        tableHelp.add_row(['crawlLinksHiddenWebSite', ''])
+        tableHelp.add_row(['crawlContentsHiddenWebSite', ''])
+        tableHelp.add_row(['findGeoLocationByIP', ''])
         print tableHelp

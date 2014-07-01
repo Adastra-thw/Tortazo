@@ -11,7 +11,7 @@ NmapOutputFile="/home/adastra/Desktop/nmapReport.html"
 ####
 ####    Creation of tables.
 databaseName="tortazo.db"
-createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, scanId integer)"
+createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer)"
 createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer)"
 createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer)"
 
@@ -23,7 +23,7 @@ selectTorScan="select id, scanDate from Scan limit ?"
 selectTorScanIdentifier="select id, scanDate from Scan where id = ?"
 nextIdHostNodeData="select max(node.id) from TorNodeData as node"
 ####    DML operations.
-insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, scanId) values(?, ?, ?, ?, ?)"
+insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, scanId) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertTorNodePort="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(?, ?, ?, ?, ?, ?)"
 insertTorScan="insert into Scan(scanDate, numNodes) values(?,?)"
 truncateTorNodeData="delete from TorNodeData"
