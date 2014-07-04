@@ -1,0 +1,45 @@
+[misc-settings]
+maxThreads = 15
+form_fuzzing_mode = tmb
+fuzzed_files_extension = gif
+autoDependencies = True
+demo = False
+fuzzable_headers = 
+fuzzCookie = False
+fuzz_form_files = True
+fuzz_url_filenames = False
+max_discovery_time = 120
+
+non_targets = 
+local_ip_address = 127.0.0.1
+
+[target]
+target = 
+
+[output.console]
+verbose = True
+
+[profile]
+description = This is an empty profile that you can use to start a new configuration from.
+name = empty_profile
+
+[http-settings]
+proxy_port = 8080
+url_parameter = 
+basic_auth_domain = 
+maxFileSize = 400000
+proxy_address = 
+headers_file = 
+always_404 = 
+max_http_retries = 2
+never_404 = 
+ntlm_auth_user = 
+ntlm_auth_passwd = 
+ignore_session_cookies = False
+cookie_jar_file = 
+timeout = 10
+user_agent = w3af.org
+basic_auth_user = 
+basic_auth_passwd = 
+string_match_404 = 
+

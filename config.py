@@ -51,5 +51,7 @@ nessusInitialSeq=200
 ####          SOCKS SETTINGS
 ####
 socksHost="127.0.0.1"
-socksPort=9150
+#Default Socks Port if TOR has beed started with tor-browser.
+# If you start manually TOR using the command "tor -f torrc" the default Socks Port will be 9050. Beware with that!!
+socksPort=9050
 timeOutRequests=15

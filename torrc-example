@@ -4,20 +4,18 @@
 AutomapHostsOnResolve 1
 AutomapHostsSuffixes 
 ContactInfo debiadastra at gmail dot com
-#DataDirectory /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US-3-6-2/Data/Tor
+DataDirectory /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US/Data/Tor
 DirPort 9030
 DNSPort 5353
 DownloadExtraInfo 1
 ExitPolicy reject *:*
 FetchDirInfoEarly 1
 FetchDirInfoExtraEarly 1
-#GeoIPFile /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US-3-6-2/Data/Tor/geoip
-#GeoIPv6File /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US-3-6-2/Data/Tor/geoip6
-#HiddenServiceDir /home/adastra/hidden_service_tomcat/
-#HiddenServicePort 80 127.0.0.1:8080
-#HiddenServiceDir /home/adastra/hidden_service_onioncat/
-#HiddenServicePort 8060 127.0.0.1:8060
-#Log notice file /home/adastra/tor_data_directory/tor_log.log
+GeoIPFile /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US/Data/Tor/geoip
+#HashedControlPassword 16:C22C5B525DF74AAF60A0BF907FFD1764397566822DE97F6C43CF91B764
+HiddenServiceDir /home/adastra/django_hidden_service/
+HiddenServicePort 80 127.0.0.1:8080
+Log err file /home/adastra/tor_data_directory/tor_log.log
 #Nickname AdastraTORY
 ORPort 4443
 RelayBandwidthBurst 10485760

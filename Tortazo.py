@@ -296,16 +296,18 @@ class Cli(cli.Application):
                 try:
                     for config in torConfig.keys():
                         self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
-                    torProcess = stem.process.launch_tor_with_config(config = torConfig, init_msg_handler=self.logsTorInstance)
-                    if torProcess > 0:
-                        self.logger.debug(term.format("[+] TOR Process created. PID %s " %(torProcess.pid),  term.Color.GREEN))
-                        self.socksHost = torConfig['SocksListenAddress']
-                        self.socksPort = torConfig['SocksPort']
+                    self.torProcess = stem.process.launch_tor_with_config(config = torConfig, init_msg_handler=self.logsTorInstance)
+                    if self.torProcess > 0:
                         #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
-                        if self.socksHost is None:
+                        self.logger.debug(term.format("[+] TOR Process created. PID %s " %(self.torProcess.pid),  term.Color.GREEN))
+                        if torConfig.has_key('SocksListenAddress'):
+                            self.socksHost = torConfig['SocksListenAddress']
+                        else:
                             self.socksHost = '127.0.0.1'
-                        if self.socksPort is None:
-                            self.socksPort = '9150'
+                        if torConfig.has_key('SocksPort'):
+                            self.socksPort = torConfig['SocksPort']
+                        else:
+                            self.socksPort = '9050'
                 except OSError, ose:
                     print sys.exc_info()
                     #OSError: Stem exception raised. Tpically, caused because the "tor" command is not in the path.
@@ -409,6 +411,10 @@ class Cli(cli.Application):
                     self.logger.info(term.format("[+] Cleaning database... Deleting all records.", term.Color.YELLOW))
                     self.database.initDatabase()
                     self.database.cleanDatabaseState()
+        #If TOR process has been started, it should be stopped.
+        if hasattr(self, 'torProcess') and self.torProcess is not None:
+            self.logger.info(term.format("[+] Killing TOR process with PID %s " %(self.torProcess.pid), term.Color.YELLOW))
+            self.torProcess.kill()
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
 
     def loadAndExecute(self, listPlugins, torNodesFound):
@@ -438,11 +444,18 @@ class Cli(cli.Application):
                 for comp in components[1:]:
                     module = getattr(module, comp)
                 if self.socksHost is not None and self.socksPort is not None and self.useLocalTorInstance:
+                    self.logger.info((term.format("[+] You've started a TOR local instance and specified the -U/--use-localinstance option. The plugin loaded will use the following options to connect with TOR and Hidden Services in the deep web: " , term.Color.YELLOW)))
+                    self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
                     reference = module(torNodesFound)
                     reference.setSocksProxySettings(self.socksHost, self.socksPort)
-                    reference.runPlugin()
+                    reference.setSocksProxy()
                 else:
-                     reference = module(torNodesFound)
+                    self.logger.info((term.format("[+] If you want to connect with Hidden Services in the deep web using the loaded plugin, you must start a TOR local instance manually. The default configuration used to connect with the TOR Socks Server is: " , term.Color.YELLOW)))
+                    self.logger.info((term.format("[+] Host=%s , Port=%s" %(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort), term.Color.YELLOW)))
+                    self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
+                    reference = module(torNodesFound)
+                    reference.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
+                    reference.setSocksProxy()
                 reference.runPlugin()
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
             else:

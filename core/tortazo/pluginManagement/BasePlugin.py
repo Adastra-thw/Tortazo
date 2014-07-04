@@ -109,6 +109,8 @@ class BasePlugin():
         return sock
 
     def setSocksProxy(self):
+        #print "SOCKSSS"
+        #print self.socksHost , self.socksPort
         if self.socksHost is not None and self.socksPort is not None:
             socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
         else:
