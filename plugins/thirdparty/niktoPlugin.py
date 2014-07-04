@@ -50,7 +50,7 @@ class niktoPlugin(BasePlugin):
         else:
             if 80 in self.niktoData[ipAddress]:
                 print "Excec..."
-                proc = subprocess.Popen(["nikto.pl"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                proc = subprocess.Popen(["perl nikto.pl"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                 print proc.communicate()
             else:
                 print "[-] Port '80' is reported to closed in the selected relay. Please, select another port and execute: 'executeByIPOnPort'."
