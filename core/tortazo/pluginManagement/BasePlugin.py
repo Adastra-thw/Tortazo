@@ -53,6 +53,7 @@ class BasePlugin():
         self.socksHost = None
         self.socksPort = None
         self.cli = None
+        self.defaultSocket = socket.socket
 
 
     def info(self, message):
@@ -97,7 +98,7 @@ class BasePlugin():
         else:
             cfg = Config()
             nested = 1
-        tortazoShell = InteractiveShellEmbed(config=cfg,banner1 = 'Loading Tortazo plugin interpreter... ',banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
+        tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
         tortazoShell()
 
     def setSocksProxySettings(self, socksHost, socksPort):
@@ -110,14 +111,15 @@ class BasePlugin():
         return sock
 
     def setSocksProxy(self):
-        print "SOCKSSS"
-        print self.socksHost , self.socksPort
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
         self.socksHost =config.socksHost
         self.socksPort =config.socksPort
 
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection
+
+    def unsetSocksProxy(self):
+        socket.socket = self.defaultSocket
 
     def setPluginDetails(self,name,desc,version,author):
         self.name = name
