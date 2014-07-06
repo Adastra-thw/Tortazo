@@ -19,5 +19,8 @@ plugins = {
                    "deepWebStemmingPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin",
 
                    #ATTACK PLUGINS.
-                   "heartBleedPlugin"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin"
+                   "heartBleedPlugin"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin",
+
+                   #BRUTERFORCE PLUGINS.
+                   "bruterPlugin"    : "plugins.bruteforce.bruterPlugin.bruterPlugin"
                    }

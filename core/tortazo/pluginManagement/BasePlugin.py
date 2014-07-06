@@ -52,6 +52,7 @@ class BasePlugin():
         self.author = None
         self.socksHost = None
         self.socksPort = None
+        self.cli = None
 
 
     def info(self, message):
@@ -109,12 +110,12 @@ class BasePlugin():
         return sock
 
     def setSocksProxy(self):
-        #print "SOCKSSS"
-        #print self.socksHost , self.socksPort
-        if self.socksHost is not None and self.socksPort is not None:
-            socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
-        else:
-            socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, config.socksHost, config.socksPort, True)
+        print "SOCKSSS"
+        print self.socksHost , self.socksPort
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
+        self.socksHost =config.socksHost
+        self.socksPort =config.socksPort
+
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection
 

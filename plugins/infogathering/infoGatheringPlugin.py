@@ -7,11 +7,11 @@ Created on 22/01/2014
 
 infoGatheringPlugin.py
 
-simplePlugin is free software; you can redistribute it and/or modify
+infoGatheringPlugin is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation version 2 of the License.
 
-simplePlugin is distributed in the hope that it will be useful,
+infoGatheringPlugin is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -32,7 +32,7 @@ class infoGatheringPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'infoGatheringPlugin')
-        self.setPluginDetails('infoGatheringPlugin', 'Example of a plugin in Tortazo.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('infoGatheringPlugin', 'Information Gathering of Tor relays.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] infoGatheringPlugin Initialized!")
 

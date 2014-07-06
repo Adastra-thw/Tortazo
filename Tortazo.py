@@ -448,14 +448,14 @@ class Cli(cli.Application):
                     self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
                     reference = module(torNodesFound)
                     reference.setSocksProxySettings(self.socksHost, self.socksPort)
-                    reference.setSocksProxy()
+                    reference.cli = self
                 else:
                     self.logger.info((term.format("[+] If you want to connect with Hidden Services in the deep web using the loaded plugin, you must start a TOR local instance manually. The default configuration used to connect with the TOR Socks Server is: " , term.Color.YELLOW)))
                     self.logger.info((term.format("[+] Host=%s , Port=%s" %(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort), term.Color.YELLOW)))
                     self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
                     reference = module(torNodesFound)
                     reference.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
-                    reference.setSocksProxy()
+                    reference.cli = self
                 reference.runPlugin()
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
             else:
@@ -468,50 +468,6 @@ class Cli(cli.Application):
             print "Unexpected error:", sys.exc_info()
             self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package and registered in pluginsDeployed.py. Check the available plugins with -L/--list-plugins option", term.Color.RED)))
 
-
-    '''
-    def loadAndExecute(self, listPlugins, torNodesFound):
-        #Load and execute external rutines (plugins)
-        #simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN
-        if listPlugins is None:
-            self.logger.warn((term.format("[-] You should specify a list of plugins with the option -P/--use-plugins", term.Color.YELLOW)))
-            return
-        plugins = listPlugins.split(";")
-        for plugin in plugins:
-            pluginModule, pluginClass = plugin.split(":")
-            if pluginModule is None or pluginClass is None:
-                self.logger.info((term.format("[-] Format "+ listPlugins +" invalid. Check the documentation to use plugins in Tortazo", term.Color.YELLOW)))
-                return
-            try:
-                module = __import__("plugins."+pluginModule)
-                pluginArguments = pluginClass.split(',')
-                pluginClassName = pluginArguments[0]
-                pluginArguments.remove(pluginClassName)
-                components = ("plugins."+pluginModule+"."+pluginClassName).split('.')
-                self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
-                for comp in components[1:]:
-                    module = getattr(module, comp)
-                reference = module()
-                reference.setNodes(torNodesFound)
-                self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
-                self.logger.debug((term.format("[+] Parsing the arguments for the plugin...", term.Color.GREEN)))
-                pluginArgumentsToSet = {}
-                for arg in pluginArguments:
-                    argumentItem = arg.split('=')
-                    argumentName = argumentItem[0]
-                    argumentValue = argumentItem[1]
-                    self.logger.debug((term.format("[+] Argument Name %s with value %s" %(argumentName, argumentValue), term.Color.GREEN)))
-                    if argumentValue is None:
-                        self.logger.warn((term.format("[-] Error: Argument Name %s without value... " %(argumentName), term.Color.RED)))
-
-                    pluginArgumentsToSet[argumentName] = argumentValue
-                reference.setPluginArguments(pluginArgumentsToSet)
-                reference.runPlugin()
-            except ImportError, importErr:
-                print importErr
-                self.logger.warn((term.format("[-] Error loading the class. Your plugin class should be located in 'plugins' package. Check if "+pluginModule+"."+pluginClass+" exists", term.Color.RED)))
-
-    '''
 if __name__ == "__main__":
     '''
     Start the main program.

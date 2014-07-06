@@ -12,7 +12,6 @@ ExitPolicy reject *:*
 FetchDirInfoEarly 1
 FetchDirInfoExtraEarly 1
 GeoIPFile /opt/AdastraRealm/Hacking/anonymity/tor-browser_en-US/Data/Tor/geoip
-#HashedControlPassword 16:C22C5B525DF74AAF60A0BF907FFD1764397566822DE97F6C43CF91B764
 HiddenServiceDir /home/adastra/django_hidden_service/
 HiddenServicePort 80 127.0.0.1:8080
 Log err file /home/adastra/tor_data_directory/tor_log.log
