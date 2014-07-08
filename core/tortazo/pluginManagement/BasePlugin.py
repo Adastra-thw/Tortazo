@@ -111,6 +111,7 @@ class BasePlugin():
         return sock
 
     def setSocksProxy(self):
+        print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
         self.socksHost =config.socksHost
         self.socksPort =config.socksPort
