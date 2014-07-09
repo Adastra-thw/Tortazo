@@ -1,8 +1,10 @@
+from os.path import expanduser
+home = expanduser("~")
 ####
 ####          REPORTING SETTINGS
 ####
-ShodanOutputFile="/home/adastra/Desktop/shodanReport.html"
-NmapOutputFile="/home/adastra/Desktop/nmapReport.html"
+ShodanOutputFile=home+"/shodanReport.html"
+NmapOutputFile=home+"/nmapReport.html"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################

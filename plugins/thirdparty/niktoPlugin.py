@@ -67,7 +67,7 @@ class niktoPlugin(BasePlugin):
             for torNodePort in torNode.openPorts:
                 try:
                     if torNodePort.port == '80':
-                        subprocess.call("perl nikto-2.1.5/nikto.pl -host "+torNode.host+" "+ switches, shell=True)
+                        subprocess.call("perl nikto/nikto.pl -host "+torNode.host+" "+ switches, shell=True)
                 except KeyboardInterrupt:
                     pass
 
@@ -76,7 +76,7 @@ class niktoPlugin(BasePlugin):
             for torNodePort in torNode.openPorts:
                 try:
                     if torNodePort.port == port:
-                        subprocess.call("perl nikto-2.1.5/nikto.pl -host "+torNode.host+" "+ switches+" -p "+port, shell=True)
+                        subprocess.call("perl nikto/nikto.pl -host "+torNode.host+" "+ switches+" -p "+port, shell=True)
                 except KeyboardInterrupt:
                     pass
 
@@ -85,7 +85,7 @@ class niktoPlugin(BasePlugin):
             for torNodePort in torNode.openPorts:
                 try:
                     if torNodePort.port == '80' and torNode.nickName == nickname:
-                        subprocess.call("perl nikto-2.1.5/nikto.pl -host "+torNode.host+" "+ switches, shell=True)
+                        subprocess.call("perl nikto/nikto.pl -host "+torNode.host+" "+ switches, shell=True)
                 except KeyboardInterrupt:
                     pass
 
@@ -94,7 +94,7 @@ class niktoPlugin(BasePlugin):
             for torNodePort in torNode.openPorts:
                 try:
                     if torNodePort.port == port and torNode.host == ipAddress:
-                        subprocess.call("perl nikto-2.1.5/nikto.pl -host "+torNode.host+" "+ switches+" -p "+port, shell=True)
+                        subprocess.call("perl nikto/nikto.pl -host "+torNode.host+" "+ switches+" -p "+port, shell=True)
                 except KeyboardInterrupt:
                     pass
 
