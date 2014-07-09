@@ -30,6 +30,7 @@ import socket
 import config
 from prettytable import PrettyTable
 import requests
+from core.tortazo.pluginManagement.utils.ServiceConnector import ServiceConnector
 
 class BasePlugin():
     '''
@@ -54,6 +55,7 @@ class BasePlugin():
         self.socksPort = None
         self.cli = None
         self.defaultSocket = socket.socket
+        self.serviceConnector = ServiceConnector()
 
 
     def info(self, message):

