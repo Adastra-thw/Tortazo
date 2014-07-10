@@ -158,7 +158,7 @@ class w3afPlugin(BasePlugin):
 
 
     def setTargetDeepWeb(self, url):
-        #self.setSocksProxy()
+        self.serviceConnector.setSocksProxy()
         #if self.w3afCorePlugin.target._verify_url(URL_KLASS(url)):
         options = self.w3afCorePlugin.target.get_options()
         options['target'].set_value(url)

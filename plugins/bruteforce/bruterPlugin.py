@@ -23,9 +23,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
+import socket
 import os
 import sys
+import time
 from socket import error as socket_error
+import signal
 
 class bruterPlugin(BasePlugin):
     '''
@@ -83,7 +86,9 @@ class bruterPlugin(BasePlugin):
                             stop_attack = True
                             break
                     except:
-                        print "[-] Captured exception. Finishing attack."
+                        print "[-] Captured exception. Finishing attack. "
+                        print "[-] Exception Trace: "
+                        print sys.exc_info()
                         return
         else:
             print "[+] Using the 'dictFile' stored in %s. Verifing the file. " %(dictFile)
@@ -98,6 +103,8 @@ class bruterPlugin(BasePlugin):
                         break
                 except:
                     print "[-] Captured exception. Finishing attack."
+                    print "[-] Exception Trace: "
+                    print sys.exc_info()
                     return
 
             
@@ -134,6 +141,8 @@ class bruterPlugin(BasePlugin):
             if os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
                 print "[-] The dictFile selected doesn't exists or is a directory."
                 return
+            else:
+                print "Executing the dictionary attack. Be patient."
             for line in open(dictFile, "r").readlines():
                 [user, password] = line.strip().split(self.separator)
                 try:
@@ -155,9 +164,9 @@ class bruterPlugin(BasePlugin):
         For this reason there's no checks to see if the host is stored in database. The user could enter the address for an onion service and this is perfectly valid.
         '''
         if proxy:
-            self.setSocksProxy()
+            self.serviceConnector.setSocksProxy()
         else:
-            self.unsetSocksProxy()
+            self.serviceConnector.unsetSocksProxy()
         print "[+] Starting FTP BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Trying Anonymous access in: %s " %(host)
         if self.serviceConnector.anonymousFTPAccess(host,port):
@@ -212,7 +221,7 @@ class bruterPlugin(BasePlugin):
         '''
         TOR only works on TCP, and typically SNMP works on UDP, so teorically you cann't configure an SNMP Service as Hidden Service.
         '''
-        self.unsetSocksProxy()
+        self.serviceConnector.unsetSocksProxy()
         print "[+] Starting SNMP BruteForce mode against %s on port %s" %(host, str(port))
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
@@ -248,9 +257,14 @@ class bruterPlugin(BasePlugin):
     def smbBruterOnRelay(self, host, port=139, dictFile=None):
         print "[+] Starting SMB BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Testing a Null-Session against the target."
-        if self.serviceConnector.performSMBConnection(host, port,'',''):
-            print "[+] SMB Null-Session found in host: %s " %(host)
-            return
+        try:
+            if self.serviceConnector.performSMBConnection(host, port,'',''):
+                print "[+] SMB Null-Session found in host: %s " %(host)
+                return
+        except socket_error:
+            print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
+            raise
+
 
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
@@ -260,10 +274,9 @@ class bruterPlugin(BasePlugin):
                     if self.serviceConnector.performSMBConnection(host,port, user=user, passwd=passwd):
                         print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
-                except Exception as excep:
-                    print "[-] Captured exception. Finishing attack."
-                    print sys.exc_info()
-                    return
+                except socket_error as excep:
+                    print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
+                    raise
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
             usersList = self.getUserlistFromFuzzDB()
@@ -279,10 +292,9 @@ class bruterPlugin(BasePlugin):
                         if self.serviceConnector.performSMBConnection(host,port, user=user, passwd=passwd):
                             print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return
-            except Exception as excep:
-                print "[-] Captured exception. Finishing attack."
-                print sys.exc_info()
-                return
+            except socket_error as excep:
+                print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
+                raise
             
 
     def smbBruterOnAllRelays(self, relay, port=139, dictFile=None):
@@ -290,19 +302,36 @@ class bruterPlugin(BasePlugin):
             self.smbBruterOnRelay(relay, port=port, dictFile=dictFile)
 
 
-    def smbBruterOnHiddenService(self, onionService, dictFile=None):
-        if dictFile is None:
-            print "[+] No specified 'dictFile', using FuzzDB Project to execute the attack."
-
+    def smbBruterOnHiddenService(self, onionService, servicePort=139, localPort=139, dictFile=None):
+        smbSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        smbSocket.settimeout(1)
+        result = smbSocket.connect_ex(('127.0.0.1',localPort))
+        if result == 0:
+            print "[-] The selected local port "+str(localPort)+" is being used by another process. Please, select an port available in this machine"
+            return
+        else:
+            try:
+                print "[+] Starting a local proxy with Socat to forward requests to the hidden service through the local machine and the local Socks Proxy... "
+                socatProcess = self.serviceConnector.startLocalSocatTunnel(localPort,onionService,servicePort,socksPort=self.serviceConnector.socksPort)
+                time.sleep(10)
+                print "[+] Socat process started! PID: "+str(socatProcess.pid)
+                self.smbBruterOnRelay('127.0.0.1', port=localPort, dictFile=dictFile)
+                print "[+] SMB Bruter finished. Shutting down the local Socat tunnel..."
+                os.killpg(socatProcess.pid, signal.SIGTERM)
+            except socket_error:
+                print "[+] The following exception was raised, however, shutting down the local Socat tunnel..."
+                print sys.exc_info()
+                os.killpg(socatProcess.pid, signal.SIGTERM)
+                time.sleep(10)
 
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM HTTP BRUTEFORCE ATTACKS.########################################################################
     ################################################################################################################################################
     def httpBruterOnSite(self, url, dictFile=None, proxy=False):
         if proxy:
-            self.setSocksProxy()
+            self.serviceConnector.setSocksProxy()
         else:
-            self.unsetSocksProxy()
+            self.serviceConnector.unsetSocksProxy()
         print "[+] Starting HTTP BruteForce mode against %s " %(url)
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
@@ -414,7 +443,6 @@ class bruterPlugin(BasePlugin):
         communities = []
         commonCommunities = open('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt', 'r')
         for community in commonCommunities.readlines():
-            print community
             communities.append(community.rstrip('\n'))
         return  communities
 

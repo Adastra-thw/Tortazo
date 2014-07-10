@@ -59,22 +59,15 @@ class deepWebStemmingPlugin(BasePlugin):
                 for port in node.openPorts:
                     if port.port in self.webPorts:
                         try:
-                            if httpMethod == "GET":
-                                response = requests.get("http://"+node.host+":"+str(port.port), timeout=config.timeOutRequests)
-                                self.validateResponse(response, queryTerms)
-                            else:
-                                response = requests.post("http://"+node.host+":"+str(port.port), timeout=config.timeOutRequests)
-                                self.validateResponse(response, queryTerms)
+                            response = self.serviceConnector.performHTTPConnection("http://"+node.host+":"+str(port.port), method=httpMethod)
+                            self.validateResponse(response, queryTerms)
                         except requests.ConnectionError:
-                            pass
+                            continue
                         except requests.Timeout:
-                            pass
-                        except Socks5Error:
-                            pass
+                            continue
 
-    def stemmingWebSite(self, webSite, queryTerms):
-        import requests
-        response = requests.get(webSite, timeout=config.timeOutRequests)
+    def stemmingHiddenService(self, webSite, queryTerms):
+        response = self.serviceConnector.performHTTPConnectionHiddenService(webSite, method="GET")
         self.validateResponse(response, queryTerms)
 
 
@@ -91,11 +84,8 @@ class deepWebStemmingPlugin(BasePlugin):
             metric = Metrics()
             terms = prep.ngram_tokenizer(text=soup.get_text())
             mx.add_doc( doc_id=response.url,doc_terms=terms,frequency=True,do_padding=True)
-            '''for doc in mx.docs:
-                distance = metric.euclid_vectors(doc['terms'], q_vector)
-                print distance
-            '''
             cnt = Counter()
+
             for word in terms:
                 cnt[word] += 1
             tableTerms = PrettyTable(["Term", "Frequency"])
@@ -114,5 +104,5 @@ class deepWebStemmingPlugin(BasePlugin):
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
         tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
         tableHelp.add_row(['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugins. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer")'])
-        tableHelp.add_row(['stemmingWebSite', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")'])
+        tableHelp.add_row(['stemmingHiddenService', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")'])
         print tableHelp

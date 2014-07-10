@@ -25,11 +25,8 @@ import logging as log
 from stem.util import term
 from IPython.config.loader import Config
 from IPython.terminal.embed import InteractiveShellEmbed
-import socks
 import socket
-import config
 from prettytable import PrettyTable
-import requests
 from core.tortazo.pluginManagement.utils.ServiceConnector import ServiceConnector
 
 class BasePlugin():
@@ -51,11 +48,8 @@ class BasePlugin():
         self.desc = None
         self.version = None
         self.author = None
-        self.socksHost = None
-        self.socksPort = None
         self.cli = None
-        self.defaultSocket = socket.socket
-        self.serviceConnector = ServiceConnector()
+        self.serviceConnector = ServiceConnector(self.cli)
 
 
     def info(self, message):
@@ -103,36 +97,12 @@ class BasePlugin():
         tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
         tortazoShell()
 
-    def setSocksProxySettings(self, socksHost, socksPort):
-        self.socksHost = socksHost
-        self.socksPort = socksPort		
-
-    def create_connection(self, address, timeout=None, source_address=None):
-        sock = socks.socksocket()
-        sock.connect(address)
-        return sock
-
-    def setSocksProxy(self):
-        print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
-        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
-        self.socksHost =config.socksHost
-        self.socksPort =config.socksPort
-
-        socket.socket = socks.socksocket
-        socket.create_connection = self.create_connection
-
-    def unsetSocksProxy(self):
-        socket.socket = self.defaultSocket
-
     def setPluginDetails(self,name,desc,version,author):
         self.name = name
         self.desc = desc
         self.version = version
         self.author = author
-	
-    def onionHttpGetRequest(self, onionUrl, headers={}, auth=None, urlParameters={}):
-        self.setSocksProxy()
-        return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters)
+
 
     def help(self):
         pass

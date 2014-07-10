@@ -447,14 +447,16 @@ class Cli(cli.Application):
                     self.logger.info((term.format("[+] You've started a TOR local instance and specified the -U/--use-localinstance option. The plugin loaded will use the following options to connect with TOR and Hidden Services in the deep web: " , term.Color.YELLOW)))
                     self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
                     reference = module(torNodesFound)
-                    reference.setSocksProxySettings(self.socksHost, self.socksPort)
+                    reference.serviceConnector.setSocksProxySettings(self.socksHost, self.socksPort)
+                    reference.serviceConnector.cli = self
                     reference.cli = self
                 else:
                     self.logger.info((term.format("[+] If you want to connect with Hidden Services in the deep web using the loaded plugin, you must start a TOR local instance manually. The default configuration used to connect with the TOR Socks Server is: " , term.Color.YELLOW)))
                     self.logger.info((term.format("[+] Host=%s , Port=%s" %(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort), term.Color.YELLOW)))
                     self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
                     reference = module(torNodesFound)
-                    reference.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
+                    reference.serviceConnector.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
+                    reference.serviceConnector.cli = self
                     reference.cli = self
                 reference.runPlugin()
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))

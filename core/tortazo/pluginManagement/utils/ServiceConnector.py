@@ -24,20 +24,31 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 import paramiko
 import ftplib
+import socket
 import os
 import sys
 from smb.SMBConnection import SMBConnection
 import logging as log
 import requests
-
+import socks
+import config
 
 class ServiceConnector():
+    '''
+    This utility class is used to perform connections against different protocolos like SSH, FTP, SNMP, SMB, etc. against hidden services and TOR relays.
+    '''
 
-    def startSocatTunnel(self, tcpListen,hiddenServiceAddress,hiddenServicePort, socksPort='9150'):
+    def __init__(self, cli):
+        self.socksHost = None
+        self.socksPort = None
+        self.defaultSocket = socket.socket
+        self.cli = None
+
+    def startLocalSocatTunnel(self, tcpListen,hiddenServiceAddress,hiddenServicePort, socksPort='9150'):
         from subprocess import Popen, PIPE, STDOUT
-        cmd = os.getcwd()+'/plugins/utils/socat/socat TCP4-LISTEN:%s,reuseaddr,fork SOCKS4A:127.0.0.1:%s:%s,socksport=%s' %(tcpListen,hiddenServiceAddress,hiddenServicePort,socksPort)
-        process = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True)
-        print process.pid
+        cmd = os.getcwd()+'/plugins/utils/socat/socat TCP4-LISTEN:'+str(tcpListen)+',reuseaddr,fork SOCKS4A:127.0.0.1:'+str(hiddenServiceAddress)+':'+str(hiddenServicePort)+',socksport='+str(socksPort)+' &'
+        print "[+] Socat command to execute: %s " %(cmd)
+        process = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True, preexec_fn=os.setsid)
         return process
 
     def anonymousFTPAccess(self,host, port):
@@ -77,7 +88,6 @@ class ServiceConnector():
             raise sockerror
         except ftplib.all_errors, e:
             errorcode_string = str(e).split(None, 1)
-            print errorcode_string
             if errorcode_string[0] == '530':
                 if "Login" in errorcode_string[1]:
                     return False
@@ -140,7 +150,7 @@ class ServiceConnector():
         self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=self.cli.logger.ERROR)
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        proxyCommand = os.getcwd()+'/plugins/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
+        proxyCommand = os.getcwd()+'/plugins/utils/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
         proxy = paramiko.ProxyCommand(proxyCommand)
         try:
             # IF Hidden Service is incorrect: SSHException: Error reading SSH protocol banner
@@ -172,6 +182,8 @@ class ServiceConnector():
             sshFile.write(entry+'\n')
             sshFile.close()
             client.close()
+            return True
+
 
     def performSNMPConnection(self, host, port=161, community='public'):
         snmpCmdGen = cmdgen.CommandGenerator()
@@ -187,10 +199,9 @@ class ServiceConnector():
             print "[*] SNMP Success ... community name: %s " % (community)
             return True
 
-    def performSMBConnection(self, host, port, user, passwd):
-        import socket
+    def performSMBConnection(self, host='127.0.0.1', port=139, user="", passwd=""):
         client_name =socket.gethostname()
-        smbClient = SMBConnection(user, passwd, client_name, "", use_ntlm_v2 = True)
+        smbClient = SMBConnection(user, passwd, client_name, "")
         if smbClient.connect(host, port):
             print "[+] SMB Connection Success ... "
             print "[+] Listing the Shared resources"
@@ -203,17 +214,13 @@ class ServiceConnector():
 
     def performHTTPAuthConnection(self, url, user, passwd):
         initialResponse = requests.get(url)
-        for header in initialResponse.headers:
-            print header + " - " + initialResponse.headers[header]
         if initialResponse.status_code == 401:
             if 'www-authenticate' in initialResponse.headers and 'Digest' in initialResponse.headers['www-authenticate']:
                 #Digest Auth.
-                print "[+] Header 'www-authenticate' in response. Digest Authentication requested by the server."
                 from requests.auth import HTTPDigestAuth
                 res = requests.get(url, auth=HTTPDigestAuth(user, passwd))
             elif 'www-authenticate' in initialResponse.headers and 'Basic' in initialResponse.headers['www-authenticate']:
                 #Basic Auth.
-                print "[+] Header 'www-authenticate' in response. Basic Authentication requested by the server."
                 from requests.auth import HTTPBasicAuth
                 res = requests.get(url, auth=HTTPBasicAuth(user, passwd))
             if res and res.status_code == 200:
@@ -221,3 +228,54 @@ class ServiceConnector():
                 return True
             else:
                 return False
+
+    def performHTTPConnectionHiddenService(self, onionUrl, headers={}, method="GET", urlParameters=None, auth=None):
+        self.setSocksProxy()
+        if method == "GET":
+            return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "POST":
+            return requests.post(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "HEAD":
+            return requests.head(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "PUT":
+            return requests.put(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+
+    def performHTTPConnection(self, siteUrl, headers, method="GET", urlParameters=None, auth=None):
+        self.unsetSocksProxy()
+        if method == "GET":
+            return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "POST":
+            return requests.post(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "HEAD":
+            return requests.head(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+        elif method == "PUT":
+            return requests.put(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+
+
+
+########################################################################################################################
+########################################################################################################################
+##########################SOCKS CONNECTION FUNCTIONS####################################################################
+########################################################################################################################
+########################################################################################################################
+
+    def setSocksProxySettings(self, socksHost, socksPort):
+        self.socksHost = socksHost
+        self.socksPort = socksPort
+
+    def create_connection(self, address, timeout=None, source_address=None):
+        sock = socks.socksocket()
+        sock.connect(address)
+        return sock
+
+    def setSocksProxy(self):
+        print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
+        self.socksHost =config.socksHost
+        self.socksPort =config.socksPort
+
+        socket.socket = socks.socksocket
+        socket.create_connection = self.create_connection
+
+    def unsetSocksProxy(self):
+        socket.socket = self.defaultSocket

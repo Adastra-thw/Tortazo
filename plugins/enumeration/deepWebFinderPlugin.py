@@ -44,15 +44,17 @@ class deepWebFinderPlugin(BasePlugin):
 
     def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
         for node in self.torNodes:
-            requestHidden = requests.get(hiddenWebSite)
-            requestRelay = requests.get(node.host)
+            responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+            if responseHidden.status_code == 200:
+                responseRelay = self.serviceConnector.performHTTPConnection('http://'+node.host, method="GET")
+                requestRelay = requests.get(node.host)
     
     def crawlImagesHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
         from bs4 import BeautifulSoup
         from PIL import Image
         from StringIO import StringIO
 
-        response = self.onionHttpGetRequest(hiddenWebSite)
+        response = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite)
         rootSite = BeautifulSoup(response.content)
         images = rootSite.find_all("img")
         for image in images:
