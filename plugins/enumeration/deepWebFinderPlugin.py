@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
 import requests
+import difflib
 
 
 class deepWebFinderPlugin(BasePlugin):
@@ -42,12 +43,29 @@ class deepWebFinderPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.debug("[*] DeepWebPlugin Destroyed!")
 
+    def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
+        #CHECK THIS: https://docs.python.org/2/library/difflib.html#module-difflib
+		responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        if responseHidden.status_code == 200:
+		    responseRelay = self.serviceConnector.performHTTPConnection('http://'+node.host, method="GET")
+			if responseRelay.status_code == 200:
+			    print "[+] Executing the matcher tool against the responses."
+			    ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
+				print "[+] Match ration between the web sites: %s " %(str(ratio))
+			else:
+			    print "[-] The website returned an non HTTP 200 code. %s " %(str(responseRelay.status_code))
+		else:
+		    print "[-] The Hidden website returned an non HTTP 200 code. %s " %(str(responseRelay.status_code))
+					
     def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
-        for node in self.torNodes:
-            responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        #CHECK THIS: https://docs.python.org/2/library/difflib.html#module-difflib
+		responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        for node in self.torNodes:            
             if responseHidden.status_code == 200:
                 responseRelay = self.serviceConnector.performHTTPConnection('http://'+node.host, method="GET")
-                requestRelay = requests.get(node.host)
+				if responseRelay.status_code == 200:
+				    ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
+					print str(ratio)
     
     def crawlImagesHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
         from bs4 import BeautifulSoup
@@ -63,10 +81,12 @@ class deepWebFinderPlugin(BasePlugin):
 
 
 
-    def crawlContentsHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
+
+    def crawlContentsHiddenWebSite(self, hiddenWebSite, outputDir='./'+hiddenWebSite, storeBD=False):
+        os.mkdir(outputDir+'hiddenWebSite')
         pass
 
-    def crawlLinksHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
+    def crawlLinksHiddenWebSite(self, hiddenWebSite, outputDir='./'+hiddenWebSite, storeBD=False):
         pass
 		
     def findGeoLocationByIP(self):
