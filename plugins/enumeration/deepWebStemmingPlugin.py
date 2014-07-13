@@ -22,7 +22,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from core.tortazo.pluginManagement.socks import Socks5Error
 from prettytable import PrettyTable
 from collections import Counter
 import config
@@ -36,7 +35,7 @@ class deepWebStemmingPlugin(BasePlugin):
         BasePlugin.__init__(self, torNodes, 'deepWebStemmingPlugin')
         self.setPluginDetails('DeepWebStemmingPlugin', 'Basic stemming tasks against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
-            self.setSocksProxy()
+            self.serviceConnector.setSocksProxy()
             #self.prepocessor = Preprocessor()
             #self.matrix = Matrix()
             #self.metric = Metrics()

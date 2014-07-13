@@ -45,6 +45,11 @@ class ServiceConnector():
         self.cli = None
 
     def startLocalSocatTunnel(self, tcpListen,hiddenServiceAddress,hiddenServicePort, socksPort='9150'):
+        print "[+] Starting socat tunnel. "
+        print "[+][+] TCP Listen: "+str(tcpListen)
+        print "[+][+] Onion Address: "+str(hiddenServiceAddress)
+        print "[+][+] Onion Port: "+str(hiddenServicePort)
+        print "[+][+] Socks Port: "+str(socksPort)
         from subprocess import Popen, PIPE, STDOUT
         cmd = os.getcwd()+'/plugins/utils/socat/socat TCP4-LISTEN:'+str(tcpListen)+',reuseaddr,fork SOCKS4A:127.0.0.1:'+str(hiddenServiceAddress)+':'+str(hiddenServicePort)+',socksport='+str(socksPort)+' &'
         print "[+] Socat command to execute: %s " %(cmd)
@@ -243,13 +248,13 @@ class ServiceConnector():
     def performHTTPConnection(self, siteUrl, headers, method="GET", urlParameters=None, auth=None):
         self.unsetSocksProxy()
         if method == "GET":
-            return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+            return requests.get(siteUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
         elif method == "POST":
-            return requests.post(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+            return requests.post(siteUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
         elif method == "HEAD":
-            return requests.head(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+            return requests.head(siteUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
         elif method == "PUT":
-            return requests.put(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
+            return requests.put(siteUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
 
 
 
@@ -271,9 +276,6 @@ class ServiceConnector():
     def setSocksProxy(self):
         print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
-        self.socksHost =config.socksHost
-        self.socksPort =config.socksPort
-
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection
 

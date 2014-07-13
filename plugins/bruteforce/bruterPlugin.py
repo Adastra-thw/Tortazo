@@ -73,8 +73,8 @@ class bruterPlugin(BasePlugin):
 
         if dictFile is None:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.getUserlistFromFuzzDB()
-            passList = self.getPasslistFromFuzzDB()
+            usersList = self.__getUserlistFromFuzzDB()
+            passList = self.__getPasslistFromFuzzDB()
             stop_attack = False
             for user in usersList:
                 if stop_attack:
@@ -120,8 +120,8 @@ class bruterPlugin(BasePlugin):
         print "[+] Starting SSH BruteForce mode against %s on port %s" %(onionService, str(port))
         if dictFile is None:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.getUserlistFromFuzzDB()
-            passList = self.getPasslistFromFuzzDB()
+            usersList = self.__getUserlistFromFuzzDB()
+            passList = self.__getPasslistFromFuzzDB()
             stop_attack = False
             for user in usersList:
                 if stop_attack:
@@ -187,8 +187,8 @@ class bruterPlugin(BasePlugin):
                     return
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.getUserlistFromFuzzDB()
-            passList = self.getPasslistFromFuzzDB()
+            usersList = self.__getUserlistFromFuzzDB()
+            passList = self.__getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -279,8 +279,8 @@ class bruterPlugin(BasePlugin):
                     raise
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.getUserlistFromFuzzDB()
-            passList = self.getPasslistFromFuzzDB()
+            usersList = self.__getUserlistFromFuzzDB()
+            passList = self.__getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -347,8 +347,8 @@ class bruterPlugin(BasePlugin):
                     return
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.getUserlistFromFuzzDB()
-            passList = self.getPasslistFromFuzzDB()
+            usersList = self.__getUserlistFromFuzzDB()
+            passList = self.__getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -378,7 +378,8 @@ class bruterPlugin(BasePlugin):
     ###########################   COMMON FUNCTIONS.   ##############################################################################################
     ################################################################################################################################################
 
-    def getUserlistFromFuzzDB(self):
+    @staticmethod
+    def __getUserlistFromFuzzDB(self):
         '''
         Reads:
         fuzzdb/wordlists-user-passwd/names/namelist.txt
@@ -410,7 +411,8 @@ class bruterPlugin(BasePlugin):
             users.append(userfaithwriter.rstrip('\n'))
         return users
 
-    def getPasslistFromFuzzDB(self):
+    @staticmethod
+    def __getPasslistFromFuzzDB(self):
         '''
         Reads:
         fuzzdb/wordlists-user-passwd/passwds/john.txt
@@ -434,7 +436,8 @@ class bruterPlugin(BasePlugin):
 
         return passwords
 
-    def getSNMPCommunitiesFromFuzzDB(self):
+    @staticmethod
+    def __getSNMPCommunitiesFromFuzzDB(self):
         '''
         Reads:
         fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt
@@ -460,18 +463,18 @@ class bruterPlugin(BasePlugin):
         tableHelp.add_row(['sshBruterOnAllRelays', 'Execute a bruteforce attack against an SSH Server in the relays founded. Uses FuzzDB if the dictFile is not specified.', "self.sshBruterOnAllRelays(dictFile='/home/user/dict')"])
         tableHelp.add_row(['sshBruterOnHiddenService', 'Execute a bruteforce attack against an SSH Server in the onion address entered.', 'self.sshBruterOnHiddenService("5bsk3oj5jufsuii6.onion", dictFile="/home/user/dict")'])
 
-		tableHelp.add_row(['ftpBruterOnRelay', 'Execute a bruteforce attack against an FTP Server in the relay entered.', 'self.ftpBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
-		tableHelp.add_row(['ftpBruterOnAllRelays', 'Execute a bruteforce attack against an FTP Server in the relays founded.', 'self.ftpBruterOnAllRelays(dictFile="/home/user/dict")'])
-		tableHelp.add_row(['ftpBruterOnHiddenService', 'Execute a bruteforce attack against an FTP Server in the onion address entered.', 'self.ftpBruterOnHiddenService("5bsk3oj5jufsuii6.onion", dictFile="/home/user/dict")'])		
+        tableHelp.add_row(['ftpBruterOnRelay', 'Execute a bruteforce attack against an FTP Server in the relay entered.', 'self.ftpBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
+        tableHelp.add_row(['ftpBruterOnAllRelays', 'Execute a bruteforce attack against an FTP Server in the relays founded.', 'self.ftpBruterOnAllRelays(dictFile="/home/user/dict")'])
+        tableHelp.add_row(['ftpBruterOnHiddenService', 'Execute a bruteforce attack against an FTP Server in the onion address entered.', 'self.ftpBruterOnHiddenService("5bsk3oj5jufsuii6.onion", dictFile="/home/user/dict")'])
 
-		tableHelp.add_row(['smbBruterOnRelay', 'Execute a bruteforce attack against an SMB Server in the relay entered.', 'self.smbBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
-		tableHelp.add_row(['smbBruterOnAllRelays', 'Execute a bruteforce attack against an SMB Server in the relays founded.', 'self.ftpBruterOnAllRelays(dictFile="/home/user/dict")'])
-		tableHelp.add_row(['smbBruterOnHiddenService', 'Execute a bruteforce attack against an SMB Server in the onion address entered. This function uses socat to create a local Socks proxy to route the requests from the local machine to the hidden service.', 'self.smbBruterOnHiddenService("5bsk3oj5jufsuii6.onion", servicePort=139, localPort=139, dictFile="/home/user/dict")'])		
+        tableHelp.add_row(['smbBruterOnRelay', 'Execute a bruteforce attack against an SMB Server in the relay entered.', 'self.smbBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
+        tableHelp.add_row(['smbBruterOnAllRelays', 'Execute a bruteforce attack against an SMB Server in the relays founded.', 'self.ftpBruterOnAllRelays(dictFile="/home/user/dict")'])
+        tableHelp.add_row(['smbBruterOnHiddenService', 'Execute a bruteforce attack against an SMB Server in the onion address entered. This function uses socat to create a local Socks proxy to route the requests from the local machine to the hidden service.', 'self.smbBruterOnHiddenService("5bsk3oj5jufsuii6.onion", servicePort=139, localPort=139, dictFile="/home/user/dict")'])
 
-		tableHelp.add_row(['snmpBruterOnRelay', 'Execute a bruteforce attack against an SNMP Server in the relay entered.', 'self.snmpBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
-		tableHelp.add_row(['snmpBruterOnAllRelays', 'Execute a bruteforce attack against an SNMP Server in the relays founded.', 'self.snmpBruterOnAllRelays(dictFile="/home/user/dict")'])
+        tableHelp.add_row(['snmpBruterOnRelay', 'Execute a bruteforce attack against an SNMP Server in the relay entered.', 'self.snmpBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'])
+        tableHelp.add_row(['snmpBruterOnAllRelays', 'Execute a bruteforce attack against an SNMP Server in the relays founded.', 'self.snmpBruterOnAllRelays(dictFile="/home/user/dict")'])
 
-		tableHelp.add_row(['httpBruterOnSite', 'Execute a bruteforce attack against an web site.', 'self.httpBruterOnSite("http://eviltorrelay.com/auth/", dictFile="/home/user/dict")'])
-		tableHelp.add_row(['httpBruterOnHiddenService', "Execute a bruteforce attack against an onion site (hidden service in TOR's deep web).", 'self.httpBruterOnHiddenService("http://5bsk3oj5jufsuii6.onion/auth/", dictFile="/home/user/dict")'])
-		
+        tableHelp.add_row(['httpBruterOnSite', 'Execute a bruteforce attack against an web site.', 'self.httpBruterOnSite("http://eviltorrelay.com/auth/", dictFile="/home/user/dict")'])
+        tableHelp.add_row(['httpBruterOnHiddenService', "Execute a bruteforce attack against an onion site (hidden service in TOR's deep web).", 'self.httpBruterOnHiddenService("http://5bsk3oj5jufsuii6.onion/auth/", dictFile="/home/user/dict")'])
+
         print tableHelp

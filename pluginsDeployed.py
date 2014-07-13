@@ -15,7 +15,7 @@ plugins = {
                    "shodanPlugin"        : "plugins.infogathering.shodanPlugin.shodanPlugin",
 
                    #ENUMERATION PLUGINS.
-                   "deepWebFinderPlugin" : "plugins.enumeration.deepWebFinderPlugin.deepWebFinderPlugin",
+                   "deepWebCrawlerPlugin" : "plugins.enumeration.deepWebCrawlerPlugin.deepWebCrawlerPlugin",
                    "deepWebStemmingPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin",
 
                    #ATTACK PLUGINS.

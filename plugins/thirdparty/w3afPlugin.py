@@ -381,31 +381,3 @@ class w3afPlugin(BasePlugin):
         tableHelpShells.add_row(['exploitAllVulns', 'Exploits all vulns in the Knowledge Base of W3AF', 'self.exploitVulns("sqli")'])
         tableHelpShells.add_row(['exploitVuln', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)'])
         print tableHelpShells
-
-
-
-'''
-    def runPlugin(self):
-        target = w3af_core_target()
-        core = w3af.core.controllers.w3afCore.w3afCore()
-
-        print core.target._verify_url(URL_KLASS('http://www.google.com/'))
-        core.plugins.init_plugins()
-
-        plugin_types = core.plugins.get_plugin_types()
-        print plugin_types
-        plugin_list = core.plugins.get_plugin_list('audit')
-        print plugin_list
-
-        plugin_inst = core.plugins.get_plugin_inst('audit', 'sqli')
-        print plugin_inst
-
-        for plugin_name in core.plugins.get_plugin_list('audit'):
-            plugin_inst = core.plugins.get_plugin_inst('audit', plugin_name)
-            print plugin_inst.get_name()
-
-        enabled = ['sqli', ]
-        core.plugins.set_plugins(enabled, 'audit')
-        retrieved = core.plugins.get_enabled_plugins('audit')
-        print retrieved
-'''
