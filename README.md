@@ -23,6 +23,7 @@ To use the script, you'll need the following dependencies:
 * topia.termextract: https://pypi.python.org/pypi/topia.termextract/
 * Jinja2:	     http://jinja.pocoo.org/docs/intro/
 * PySNMP:	     http://pysnmp.sourceforge.net/	
+* Scrapy:	     http://scrapy.org/
 
 You can use the "Tortazo.py" script with the Python interpreter (you need to install the dependencies) or you can use the executable generated with the last version available of this tool in <TORTAZO_DIR>/dist/Tortazo. The executable is "Tortazo.exe" for windows and "Tortazo" for Unix-like systems.
 
