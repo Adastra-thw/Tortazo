@@ -12,7 +12,7 @@ NmapOutputFile=home+"/nmapReport.html"
 ####          DATABASE SETTINGS
 ####
 ####    Creation of tables.
-databaseName="tortazo.db"
+databaseName="db/tortazo.db"
 createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer)"
 createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer)"
 createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer)"
@@ -35,6 +35,21 @@ truncateTorScan="delete from Scan"
 dropTableTorNodeData="drop table if exists TorNodeData"
 dropTableTorNodePort="drop table if exists TorNodePort"
 dropTableScan="drop table if exists Scan"
+
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+####
+####          DATABASE SETTINGS FOR "deepWebCrawlerPlugin".
+####
+createTableCrawlerPluginLinks="create table if not exists CrawlerPluginLinks (id integer primary key autoincrement, link varchar, linkParent integer, FOREIGN KEY (linkParent) REFERENCES CrawlerPluginLinks(id) )"
+createTableCrawlerPluginImages="create table if not exists CrawlerPluginImages (id integer primary key autoincrement, link integer, imageSrc, FOREIGN KEY (link) REFERENCES CrawlerPluginLinks(id) )"
+createTableCrawlerPluginFormData="create table if not exists CrawlerPluginFormData (id integer primary key autoincrement, link integer, formAttributeName varchar, formAttributeValue varchar, formAttributeType varchar, FOREIGN KEY (link) REFERENCES  CrawlerPluginLinks(id) )"
+####    DML operations.
+insertCrawlerPluginLinks="insert into CrawlerPluginLinks(id, link, linkParent) values(?,?,?)"
+insertCrawlerPluginImages="insert into CrawlerPluginImages(id, link, imageSrc) values(?,?,?)"
+insertCrawlerPluginFormData="insert into CrawlerPluginFormData(id, link, formAttributeName, formAttributeValue, formAttributeType) values(?,?,?,?,?)"
+
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
