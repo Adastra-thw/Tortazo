@@ -42,13 +42,32 @@ dropTableScan="drop table if exists Scan"
 ####
 ####          DATABASE SETTINGS FOR "deepWebCrawlerPlugin".
 ####
-createTableCrawlerPluginLinks="create table if not exists CrawlerPluginLinks (id integer primary key autoincrement, link varchar, linkParent integer, FOREIGN KEY (linkParent) REFERENCES CrawlerPluginLinks(id) )"
-createTableCrawlerPluginImages="create table if not exists CrawlerPluginImages (id integer primary key autoincrement, link integer, imageSrc, FOREIGN KEY (link) REFERENCES CrawlerPluginLinks(id) )"
-createTableCrawlerPluginFormData="create table if not exists CrawlerPluginFormData (id integer primary key autoincrement, link integer, formAttributeName varchar, formAttributeValue varchar, formAttributeType varchar, FOREIGN KEY (link) REFERENCES  CrawlerPluginLinks(id) )"
+createTableCrawlerPluginPage="create table if not exists CrawlerPluginPage (id integer primary key autoincrement, title varchar, page varchar NOT NULL, pageParent integer, body varchar NOT NULL, headers varchar NOT NULL, FOREIGN KEY (pageParent) REFERENCES CrawlerPluginPage(id) )"
+createTableCrawlerPluginPageImage="create table if not exists CrawlerPluginPageImage (page integer, image integer, FOREIGN KEY (page) REFERENCES CrawlerPluginPage(page), FOREIGN KEY (image) REFERENCES CrawlerPluginImage(image) )"
+createTableCrawlerPluginImage="create table if not exists CrawlerPluginImage (id integer primary key autoincrement, imageSrc varchar)"
+createTableCrawlerPluginForm="create table if not exists CrawlerPluginForm (id integer primary key autoincrement, formName varchar, page integer, FOREIGN KEY (page) REFERENCES CrawlerPluginPage(page))"
+createTableCrawlerPluginFormControl="create table if not exists CrawlerPluginFormControl (id integer primary key autoincrement, form integer, controlName varchar, controlValue varchar, controlType varchar, FOREIGN KEY (form) REFERENCES CrawlerPluginForm(page))"
+#createTableCrawlerPluginFormData="create table if not exists CrawlerPluginFormData (id integer primary key autoincrement, link integer, formAttributeName varchar, formAttributeValue varchar, formAttributeType varchar, FOREIGN KEY (link) REFERENCES  CrawlerPluginLinks(id) )"
+
+###     SELECTION
+existsPageByUrl="select count(*) from CrawlerPluginPage where page = ?"
+searchPageByUrl="select id from CrawlerPluginPage where page = ?"
+existsImageByPage="select count(cppi.image) from CrawlerPluginImage cpi, CrawlerPluginPageImage cppi, CrawlerPluginPage cpp where cpi.id = cppi.image and cpp.id = cppi.page and cpi.imageSrc = ? and cpp.id = ?"
+existsFormByPage="select count(cpf.page) from CrawlerPluginForm cpf where cpf.formName = ? and cpf.page = ?"
+
 ####    DML operations.
-insertCrawlerPluginLinks="insert into CrawlerPluginLinks(id, link, linkParent) values(?,?,?)"
-insertCrawlerPluginImages="insert into CrawlerPluginImages(id, link, imageSrc) values(?,?,?)"
-insertCrawlerPluginFormData="insert into CrawlerPluginFormData(id, link, formAttributeName, formAttributeValue, formAttributeType) values(?,?,?,?,?)"
+insertCrawlerPluginPage="insert into CrawlerPluginPage(title, page, pageParent, body, headers) values(?,?,?,?,?)"
+insertCrawlerPluginImage = "insert into CrawlerPluginImage(imageSrc) values(?)"
+insertCrawlerPluginPageImage = "insert into CrawlerPluginPageImage(page, image) values(?,?)"
+insertCrawlerPluginPageForm = "insert into CrawlerPluginForm (formName, page) values(?,?)"
+insertCrawlerPluginPageFormControl = "insert into CrawlerPluginFormControl (form, controlName, controlValue, controlType) values(?,?,?,?)"
+
+'''insertCrawlerPluginImages="insert into CrawlerPluginImages(page, imageSrc) values(?,?)"
+insertCrawlerPluginFormData="insert into CrawlerPluginFormData(link, formAttributeName, formAttributeValue, formAttributeType) values(?,?,?,?)"
+truncateCrawlerPluginLinks="delete from CrawlerPluginLinks"
+truncateCrawlerPluginImages="delete from CrawlerPluginImages"
+truncateCrawlerPluginFormData="delete from CrawlerPluginFormData"
+'''
 
 ################################################################################################################################################
 ################################################################################################################################################

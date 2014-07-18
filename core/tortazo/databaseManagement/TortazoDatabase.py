@@ -26,6 +26,8 @@ import config
 from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
 from datetime import datetime
 import sys
+
+
 class TortazoDatabase:
 
     def __init__(self):
@@ -130,5 +132,102 @@ class TortazoDatabase:
             print e.message
             print "Unexpected error:", sys.exc_info()[0]
 
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+####                                                                                                                                        ####
+####          DATABASE FUNCTIONS FOR "deepWebCrawlerPlugin".                                                                                ####
+####                                                                                                                                        ####
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+
+    def initDatabaseDeepWebCrawlerPlugin(self):
+        if self.connection is None:
+            self.connect()
+        self.connection.execute(config.createTableCrawlerPluginPage)
+        self.connection.execute(config.createTableCrawlerPluginImage)
+        self.connection.execute(config.createTableCrawlerPluginPageImage)
+        self.connection.execute(config.createTableCrawlerPluginForm)
+        self.connection.execute(config.createTableCrawlerPluginFormControl)
 
 
+    def insertPage(self, page):
+        if self.cursor is None:
+            self.initDatabase()
+        title = ''
+        url = ''
+        pageParentId = None
+        body = ''
+        headers = ''
+
+        if page.has_key('title'):
+            title = page['title']
+        if page.has_key('url'):
+            url = page['url']
+        if page.has_key('body'):
+            body = page['body']
+        if page.has_key('headers'):
+            headers = page['headers']
+
+
+        if page.has_key('pageParent'):
+            pageParent = page['pageParent']
+            if self.existsPageByUrl(pageParent['url']):
+                pageParentId = self.searchPageByUrl(pageParent['url'])
+            else:
+                pageParentId = self.insertPage(pageParent)
+        data = (title, url, pageParentId, body, str(headers))
+        self.cursor.execute(config.insertCrawlerPluginPage, data )
+        linkId = self.cursor.lastrowid
+        self.connection.commit()
+        return linkId
+
+    def insertImages(self, page, pageId):
+        if self.cursor is None:
+            self.initDatabase()
+        if page.has_key('images'):
+            for image in page['images']:
+
+                self.cursor.execute(config.existsImageByPage, (image,pageId))
+                if self.cursor.fetchone()[0] > 0:
+                    continue
+                else:
+                    self.cursor.execute(config.insertCrawlerPluginImage, (image, ) )
+                    imageId = self.cursor.lastrowid
+                    self.cursor.execute(config.insertCrawlerPluginPageImage, (pageId, imageId, ) )
+        self.connection.commit()
+
+    def insertForms(self, page, pageId):
+        if self.cursor is None:
+            self.initDatabase()
+
+        if page.has_key('forms'):
+            for formName in page['forms'].keys():
+                self.cursor.execute(config.existsFormByPage, (formName, pageId, ))
+                if self.cursor.fetchone()[0] > 0:
+                    continue
+                self.cursor.execute(config.insertCrawlerPluginPageForm, (formName, pageId, ) )
+                formId = self.cursor.lastrowid
+                for control in page['forms'][formName]:
+                    (controlName, controlType, controlValue) = page['forms'][formName]
+                    self.cursor.execute(config.insertCrawlerPluginPageFormControl, (formId, controlName, controlType, controlValue, ) )
+        self.connection.commit()
+
+    def existsPageByUrl(self, url):
+        if self.cursor is None:
+            self.initDatabase()
+        if url is not None:
+            self.cursor.execute(config.existsPageByUrl, (url,))
+            if self.cursor.fetchone()[0] > 0:
+                return True
+        return False
+
+    def searchPageByUrl(self, url):
+        if self.cursor is None:
+            self.initDatabase()
+        if url is not None:
+            self.cursor.execute(config.searchPageByUrl, (url,))
+            pageId = self.cursor.fetchone()[0]
+            return pageId
+        return None

@@ -23,9 +23,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from scrapy.item import Item, Field
 
-class HiddenSiteItem(Item):
+class HiddenSitePage(Item):
     title = Field()
-    link = Field()
-    links = Field()
+    url = Field()
+    pageParent = Field()
+    pages = Field()
     images = Field()
     forms = Field()
+    body = Field()
+    headers = Field()

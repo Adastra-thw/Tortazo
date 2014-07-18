@@ -8,8 +8,9 @@ Tortazo is an open source Python Script to gather information about ExitNodes in
 * **Use Nmap** - Using python-nmap, Tortazo is able to perform NMap scans against a list of ExitNodes
 
 ## Dependencies
-To use the script, you'll need the following dependencies:
+To use the script, you'll need the following Python dependencies:
 
+* SimpleJson:	     https://pypi.python.org/pypi/simplejson/
 * Paramiko:          https://github.com/paramiko/paramiko
 * Python-Nmap        http://xael.org/norman/python/python-nmap/
 * Python-shodan:     https://github.com/achillean/shodan-python
@@ -24,6 +25,13 @@ To use the script, you'll need the following dependencies:
 * Jinja2:	     http://jinja.pocoo.org/docs/intro/
 * PySNMP:	     http://pysnmp.sourceforge.net/	
 * Scrapy:	     http://scrapy.org/
+* PySMB:             https://pypi.python.org/pypi/pysmb
+* BeautifulSoup:     http://www.crummy.com/software/BeautifulSoup/
+
+## Other Dependendies:
+* Nmap:												http://nmap.org/
+* TOR (optional if you want to run tests using your own TOR local instance):			https://www.torproject.org/
+* W3AF, Nessus, NeXpose... etc. If you want to use the plugins those tools in Tortazo.
 
 You can use the "Tortazo.py" script with the Python interpreter (you need to install the dependencies) or you can use the executable generated with the last version available of this tool in <TORTAZO_DIR>/dist/Tortazo. The executable is "Tortazo.exe" for windows and "Tortazo" for Unix-like systems.
 

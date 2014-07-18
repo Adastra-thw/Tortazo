@@ -34,7 +34,8 @@ from time import sleep
 import socket
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
-from scrapy import log
+from socket import error as socket_error
+import  sys
 
 class deepWebCrawlerPlugin(BasePlugin):
 
@@ -53,6 +54,12 @@ class deepWebCrawlerPlugin(BasePlugin):
 
     def setExtractorRules(self, extractorRules):
         self.extractorRules = extractorRules
+
+    def setCrawlRulesLinks(self, crawlRulesLinks):
+        self.crawlRulesLinks = crawlRulesLinks
+
+    def setCrawlRulesImages(self, crawlRulesImages):
+        self.crawlRulesImages = crawlRulesImages
 
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
         #CHECK THIS: https://docs.python.org/2/library/difflib.html#module-difflib
@@ -112,18 +119,29 @@ class deepWebCrawlerPlugin(BasePlugin):
         #Extracts the Onion Site, everything before ".onion"
         onionSite = onionSite[:onionSite.find('.onion') + 6]
 
+        try:
+            print "[+] Starting a local proxy with Socat to forward requests to the hidden service through the local machine and the local Socks Proxy... "
+            socatProcess = self.serviceConnector.startLocalSocatTunnel(socatTcpListenPort, onionSite,hiddenWebSitePort, socksPort=self.serviceConnector.socksPort)
+            sleep(5)
+            print "[+] Socat process started! PID: "+str(socatProcess.pid)
+            self.__crawl(hiddenWebSite, socatTcpListenPort,extraPath, crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True,)
+            os.killpg(socatProcess.pid, signal.SIGTERM)
+            print "[+] Socat process killed."
+        except:
+            print "[+] The following exception was raised, however, shutting down the local Socat tunnel..."
+            print sys.exc_info()
+            os.killpg(socatProcess.pid, signal.SIGTERM)
+            sleep(5)
 
-        print "[+] Starting a local proxy with Socat to forward requests to the hidden service through the local machine and the local Socks Proxy... "
-        socatProcess = self.serviceConnector.startLocalSocatTunnel(socatTcpListenPort, onionSite,hiddenWebSitePort, socksPort=self.serviceConnector.socksPort)
-        sleep(5)
-        print "[+] Socat process started! PID: "+str(socatProcess.pid)
-        self.__crawl(socatTcpListenPort,extraPath, crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True)
-        os.killpg(socatProcess.pid, signal.SIGTERM)
-        print "[+] Socat process killed."
 
-    def __crawl(self, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True):
+    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True):
         def catch_item(sender, item, **kwargs):
-            print "Item Extraido:", item
+            item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort), hiddenWebSite)
+            print "[+]Processing URL %s ...  " %(item['url'])
+            from core.tortazo.databaseManagement.TortazoDatabase import TortazoDatabase
+            database = TortazoDatabase()
+            database.initDatabaseDeepWebCrawlerPlugin()
+            self.__processPage(item, database)
 
         def stop_reactor():
             reactor.stop()
@@ -147,6 +165,24 @@ class deepWebCrawlerPlugin(BasePlugin):
         reactor.run()
         print "[+] Crawler finished."
 
+    def __processPage(self, page, db):
+        #Search the page in database. Maybe is already registered.
+        if page.has_key('url'):
+            exists = db.existsPageByUrl(page['url'])
+            if exists == False:
+                #The page was not found in database. Let's insert it.
+                pageId = db.insertPage(page)
+            else:
+                #The page already exists in database. Let's get the primary key.
+                pageId = db.searchPageByUrl(page['url'])
+
+            if pageId is not None:
+                db.insertImages(page, pageId)
+                db.insertForms(page, pageId)
+            else:
+                print "[-] Seems that an error occurred while inserting or querying the page %s in database. Images and forms not saved." %(page['url'])
+
+        
     def findGeoLocationByIP(self):
         pass
 
