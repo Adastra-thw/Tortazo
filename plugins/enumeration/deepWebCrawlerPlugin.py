@@ -34,7 +34,7 @@ from time import sleep
 import socket
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
-from socket import error as socket_error
+import config
 import  sys
 
 class deepWebCrawlerPlugin(BasePlugin):
@@ -136,24 +136,24 @@ class deepWebCrawlerPlugin(BasePlugin):
 
     def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True):
         def catch_item(sender, item, **kwargs):
-            item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort), hiddenWebSite)
+            item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort)+extraPath, hiddenWebSite)
             print "[+]Processing URL %s ...  " %(item['url'])
             from core.tortazo.databaseManagement.TortazoDatabase import TortazoDatabase
             database = TortazoDatabase()
             database.initDatabaseDeepWebCrawlerPlugin()
             self.__processPage(item, database)
 
-        def stop_reactor():
-            reactor.stop()
-
         # setup crawler
         dispatcher.connect(catch_item, signal=signals.item_passed)
-        dispatcher.connect(stop_reactor, signal=signals.spider_closed)
+        dispatcher.connect(reactor.stop, signal=signals.spider_closed)
 
         settings = get_project_settings()
+        settings.set('ITEM_PIPELINES', {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}, priority='cmdline')
+        settings.set('IMAGES_STORE', config.deepWebCrawlerOutdir+hiddenWebSite)
+
         crawler = Crawler(settings)
         crawler.configure()
-        spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, self.extractorRules)
+        spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, hiddenWebSite, self.extractorRules)
         spider.setImages(crawlImages)
         spider.setLinks(crawlLinks)
         spider.setContents(crawlContents)

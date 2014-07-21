@@ -1,4 +1,5 @@
 from os.path import expanduser
+import os
 home = expanduser("~")
 ####
 ####          REPORTING SETTINGS
@@ -47,8 +48,6 @@ createTableCrawlerPluginPageImage="create table if not exists CrawlerPluginPageI
 createTableCrawlerPluginImage="create table if not exists CrawlerPluginImage (id integer primary key autoincrement, imageSrc varchar)"
 createTableCrawlerPluginForm="create table if not exists CrawlerPluginForm (id integer primary key autoincrement, formName varchar, page integer, FOREIGN KEY (page) REFERENCES CrawlerPluginPage(page))"
 createTableCrawlerPluginFormControl="create table if not exists CrawlerPluginFormControl (id integer primary key autoincrement, form integer, controlName varchar, controlValue varchar, controlType varchar, FOREIGN KEY (form) REFERENCES CrawlerPluginForm(page))"
-#createTableCrawlerPluginFormData="create table if not exists CrawlerPluginFormData (id integer primary key autoincrement, link integer, formAttributeName varchar, formAttributeValue varchar, formAttributeType varchar, FOREIGN KEY (link) REFERENCES  CrawlerPluginLinks(id) )"
-
 ###     SELECTION
 existsPageByUrl="select count(*) from CrawlerPluginPage where page = ?"
 searchPageByUrl="select id from CrawlerPluginPage where page = ?"
@@ -61,14 +60,14 @@ insertCrawlerPluginImage = "insert into CrawlerPluginImage(imageSrc) values(?)"
 insertCrawlerPluginPageImage = "insert into CrawlerPluginPageImage(page, image) values(?,?)"
 insertCrawlerPluginPageForm = "insert into CrawlerPluginForm (formName, page) values(?,?)"
 insertCrawlerPluginPageFormControl = "insert into CrawlerPluginFormControl (form, controlName, controlValue, controlType) values(?,?,?,?)"
+truncateCrawlerPluginPage="delete from CrawlerPluginPage"
+truncateCrawlerPluginPageImage="delete from CrawlerPluginPageImage"
+truncateCrawlerPluginImage="delete from CrawlerPluginImage"
+truncateCrawlerPluginForm="delete from CrawlerPluginForm"
+truncateCrawlerPluginFormControl="delete from CrawlerPluginFormControl"
 
-'''insertCrawlerPluginImages="insert into CrawlerPluginImages(page, imageSrc) values(?,?)"
-insertCrawlerPluginFormData="insert into CrawlerPluginFormData(link, formAttributeName, formAttributeValue, formAttributeType) values(?,?,?,?)"
-truncateCrawlerPluginLinks="delete from CrawlerPluginLinks"
-truncateCrawlerPluginImages="delete from CrawlerPluginImages"
-truncateCrawlerPluginFormData="delete from CrawlerPluginFormData"
-'''
 
+deepWebCrawlerOutdir=os.getcwd()+"/onionSites/"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################

@@ -63,10 +63,6 @@ import sys
 #   - Plugin for Metasploit Framework.
 #   - Plugin for Nikto.
 #   - Plugin for NeXpose.
-#   - Plugin: Deep Web Crawler: Crawler using Mechanize and scrapy to crawl hidden services in TOR. Crawl links, forms and store in database
-#   - Plugin: Deep Web Finder: Compare sites in the clear web (from the relays found) with hidden services in TOR.
-#   - Plugin: Deep Web Bruter: Find hidden directories in deep web sites using a custom list of directories or using FuzzDB project.
-#   - Plugin: Deep Web Auth: Find protected resources using authentication (HTTP 401 code) and try to guess the username and password using custom lists of users and passwords or using FuzzDB project.
 
 
 #    TODO FIXES:
@@ -318,7 +314,6 @@ class Cli(cli.Application):
                     if self.scanIdentifier is None:
                         self.logger.info(term.format("[+] No records found... You should execute an initial scan." , term.Color.YELLOW))
                         self.logger.warn(term.format("[-] You've chosen to use the database records, however the database tables are empty because you have not run an initial scan." , term.Color.RED))
-                        self.logger.warn(term.format("[-] Tortazo just saves the relays found in the last scan. Previous scans always will be deleted." , term.Color.RED))
                     else:
                         self.logger.warn(term.format("[+] No records found with the scan identifier specified, check the database..." , term.Color.RED))
                     return

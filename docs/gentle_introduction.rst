@@ -35,25 +35,27 @@ Who?
 =============================
 I'm a software developer and security enthusiast. Just a guy who spent his time playing with libraries, programming languages, tools, security techniques, network protocols and anything related with computers :-)
 What I like:
-I like to read almost about everything.
-I like the free speech.
-I like free software.
-I like the hacker philosophy.
-I like the hacktivism.
-I like to write code.
-I like to find and fix bugs in code.
-I like to improve code.
-I like the reverse engineering.
-I like to talk with people about things that matters. (not about football, politics, tv shows and other bullshit).
-I like the freedom. Everyone should be free to do anything, but without affecting the freedom of others.
+
+* I like to read almost about everything.
+* I like the free speech.
+* I like free software.
+* I like the hacker philosophy.
+* I like the hacktivism.
+* I like to write code.
+* I like to find and fix bugs in code.
+* I like to improve code.
+* I like the reverse engineering.
+* I like to talk with people about things that matters. (not about football, politics, tv shows and other bullshit).
+* I like the freedom. Everyone should be free to do anything, but without affecting the freedom of others.
 
 What I dislike:
-I dislike the bugs.
-I dislike the awful code.
-I dislike the people lazy.
-I dislike the mediocrity.
-I dislike the authoritarianism. 
-I dislike some rock stars "selling smoke" in conferences and other events. We need more mentors and less security rock stars. Sadly, this is the worst thing that I've found in the infosec environment.
+
+* I dislike the bugs.
+* I dislike the awful code.
+* I dislike the people lazy.
+* I dislike the mediocrity.
+* I dislike the authoritarianism. 
+* I dislike some rock stars "selling smoke" in conferences and other events. We need more mentors and less security rock stars. Sadly, this is the worst thing that I've found in the infosec environment.
 
 
 Contact?

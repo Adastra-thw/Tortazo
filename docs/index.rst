@@ -7,17 +7,16 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-.. gentle_introduction.rst
-.. getting_started.rst
-.. gatherinfo_tor_nodes.rst
-.. botnet_mode.rst
-.. supported_options.rst
-.. plugins.rst::
-   :maxdepth: 2   
+   gentle_introduction.rst
+   getting_started.rst
+   gatherinfo_tor_nodes.rst
+   botnet_mode.rst
+   supported_options.rst
+   plugins.rst::
    quick_start.rst
    available_plugins.rst
    plugin_development.rst
-.. faqs.rst
+   faqs.rst
 
 
 Indices and tables

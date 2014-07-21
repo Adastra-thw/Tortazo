@@ -17,6 +17,8 @@ plugins = {
                    #ENUMERATION PLUGINS.
                    "deepWebCrawlerPlugin" : "plugins.enumeration.deepWebCrawlerPlugin.deepWebCrawlerPlugin",
                    "deepWebStemmingPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin",
+                   "deepWebDirBruterPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebDirBruterPlugin",
+
 
                    #ATTACK PLUGINS.
                    "heartBleedPlugin"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin",

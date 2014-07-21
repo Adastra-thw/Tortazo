@@ -126,6 +126,15 @@ class TortazoDatabase:
             self.cursor.execute(config.truncateTorNodePort)
             self.cursor.execute(config.truncateTorNodeData)
             self.cursor.execute(config.truncateTorScan)
+            self.cursor.execute(config.truncateTorScan)
+
+            #DeepWebPlugin tables.
+            self.cursor.execute(config.truncateCrawlerPluginFormControl)
+            self.cursor.execute(config.truncateCrawlerPluginForm)
+            self.cursor.execute(config.truncateCrawlerPluginPageImage)
+            self.cursor.execute(config.truncateCrawlerPluginImage)
+            self.cursor.execute(config.truncateCrawlerPluginPage)
+
             self.connection.commit()
         except Exception, e:
             print e.__doc__
@@ -186,8 +195,8 @@ class TortazoDatabase:
     def insertImages(self, page, pageId):
         if self.cursor is None:
             self.initDatabase()
-        if page.has_key('images'):
-            for image in page['images']:
+        if page.has_key('imagesSrc'):
+            for image in page['imagesSrc']:
 
                 self.cursor.execute(config.existsImageByPage, (image,pageId))
                 if self.cursor.fetchone()[0] > 0:
@@ -210,7 +219,7 @@ class TortazoDatabase:
                 self.cursor.execute(config.insertCrawlerPluginPageForm, (formName, pageId, ) )
                 formId = self.cursor.lastrowid
                 for control in page['forms'][formName]:
-                    (controlName, controlType, controlValue) = page['forms'][formName]
+                    (controlName, controlType, controlValue) = control
                     self.cursor.execute(config.insertCrawlerPluginPageFormControl, (formId, controlName, controlType, controlValue, ) )
         self.connection.commit()
 

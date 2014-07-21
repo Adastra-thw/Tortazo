@@ -5,13 +5,13 @@ Created on 12/07/2014
 #Author: Adastra.
 #twitter: @jdaanial
 
-deepWebCrawlerPlugin.py
+HiddenSitePage.py
 
-deepWebCrawlerPlugin is free software; you can redistribute it and/or modify
+HiddenSitePage is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation version 2 of the License.
 
-deepWebCrawlerPlugin is distributed in the hope that it will be useful,
+HiddenSitePage is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -28,7 +28,11 @@ class HiddenSitePage(Item):
     url = Field()
     pageParent = Field()
     pages = Field()
-    images = Field()
+    imagesSrc = Field()
     forms = Field()
     body = Field()
     headers = Field()
+
+    #Fields used for Images PipeLine. http://doc.scrapy.org/en/latest/topics/images.html
+    image_urls = Field()
+    images = Field()
