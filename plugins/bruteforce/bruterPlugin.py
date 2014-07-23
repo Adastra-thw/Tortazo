@@ -29,6 +29,7 @@ import sys
 import time
 from socket import error as socket_error
 import signal
+import paramiko
 
 class bruterPlugin(BasePlugin):
     '''
@@ -73,8 +74,8 @@ class bruterPlugin(BasePlugin):
 
         if dictFile is None:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.__getUserlistFromFuzzDB()
-            passList = self.__getPasslistFromFuzzDB()
+            usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
+            passList = self.fuzzDBReader.getPasslistFromFuzzDB()
             stop_attack = False
             for user in usersList:
                 if stop_attack:
@@ -120,8 +121,8 @@ class bruterPlugin(BasePlugin):
         print "[+] Starting SSH BruteForce mode against %s on port %s" %(onionService, str(port))
         if dictFile is None:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.__getUserlistFromFuzzDB()
-            passList = self.__getPasslistFromFuzzDB()
+            usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
+            passList = self.fuzzDBReader.getPasslistFromFuzzDB()
             stop_attack = False
             for user in usersList:
                 if stop_attack:
@@ -132,6 +133,12 @@ class bruterPlugin(BasePlugin):
                             print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, password)
                             stop_attack = True
                             break
+                    except paramiko.SSHException as sshex:
+                        print "[-] Error connection with the SSH Server: %s Aborting the attack" %(sshex.message)
+                        return
+                    except paramiko.ProxyCommandFailure as proxyExc:
+                        print "[-] Proxy Failure. Aborting the attack"
+                        return
                     except socket_error as serr:
                         print serr
                         print "Connection Refused... Exiting."
@@ -176,7 +183,10 @@ class bruterPlugin(BasePlugin):
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
             for line in open(dictFile, "r").readlines():
+                if len(line.strip().split(self.separator)) != 2:
+                    continue
                 [user, passwd] = line.strip().split(self.separator)
+
                 try :
                     if self.serviceConnector.performFTPConnection(host,port, user=user, passwd=passwd):
                         print "[+] FTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
@@ -187,8 +197,8 @@ class bruterPlugin(BasePlugin):
                     return
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.__getUserlistFromFuzzDB()
-            passList = self.__getPasslistFromFuzzDB()
+            usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
+            passList = self.fuzzDBReader.getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -237,7 +247,7 @@ class bruterPlugin(BasePlugin):
                     return
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            communities = self.getSNMPCommunitiesFromFuzzDB()
+            communities = self.fuzzDBReader.getSNMPCommunitiesFromFuzzDB()
             try :
                 for community in communities:
                     if self.serviceConnector.performSNMPConnection(host,port, community=community):
@@ -279,8 +289,8 @@ class bruterPlugin(BasePlugin):
                     raise
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.__getUserlistFromFuzzDB()
-            passList = self.__getPasslistFromFuzzDB()
+            usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
+            passList = self.fuzzDBReader.getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -347,8 +357,8 @@ class bruterPlugin(BasePlugin):
                     return
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
-            usersList = self.__getUserlistFromFuzzDB()
-            passList = self.__getPasslistFromFuzzDB()
+            usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
+            passList = self.fuzzDBReader.getPasslistFromFuzzDB()
 
             try :
                 for user in usersList:
@@ -371,83 +381,6 @@ class bruterPlugin(BasePlugin):
             self.httpBruterOnSite('http://'+onionService,dictFile=dictFile, proxy=True)
         else:
             self.httpBruterOnSite(onionService,dictFile=dictFile, proxy=True)
-
-
-
-    ################################################################################################################################################
-    ###########################   COMMON FUNCTIONS.   ##############################################################################################
-    ################################################################################################################################################
-
-    @staticmethod
-    def __getUserlistFromFuzzDB(self):
-        '''
-        Reads:
-        fuzzdb/wordlists-user-passwd/names/namelist.txt
-        fuzzdb/wordlists-user-passwd/passwds/john.txt
-        fuzzdb/wordlists-user-passwd/unix-os/unix-users.txt
-        fuzzdb/wordlists-user-passwd/faithwriters.txt
-        and returns a list of words (used as possible usernames)
-        '''
-        print "[+] Generating users list using the files in FuzzDB"
-        users = []
-        try:
-            namelist = open('fuzzdb/wordlists-user-passwd/names/namelist.txt', 'r')
-            johnlist = open('fuzzdb/wordlists-user-passwd/passwds/john.txt', 'r')
-            unixusers = open('fuzzdb/wordlists-user-passwd/unix-os/unix_users.txt', 'r')
-            faithwriters = open('fuzzdb/wordlists-user-passwd/faithwriters.txt', 'r')
-        except:
-            print sys.exc_info()
-
-        for userNameList in namelist.readlines():
-            users.append(userNameList.rstrip('\n'))
-
-        for userJohnList in johnlist.readlines():
-            users.append(userJohnList.rstrip('\n'))
-
-        for userunix in unixusers.readlines():
-            users.append(userunix.rstrip('\n'))
-
-        for userfaithwriter in faithwriters.readlines():
-            users.append(userfaithwriter.rstrip('\n'))
-        return users
-
-    @staticmethod
-    def __getPasslistFromFuzzDB(self):
-        '''
-        Reads:
-        fuzzdb/wordlists-user-passwd/passwds/john.txt
-        fuzzdb/wordlists-user-passwd/unix-os/unix-passwords.txt
-        fuzzdb/wordlists-user-passwd/weaksauce.txt
-        and returns a list of words (used as possible usernames)
-        '''
-        print "[+] Generating passwords list using the files in FuzzDB"
-        passwords = []
-        johnlist = open('fuzzdb/wordlists-user-passwd/passwds/john.txt', 'r')
-        unixpasswords = open('fuzzdb/wordlists-user-passwd/unix-os/unix_passwords.txt', 'r')
-        weaksauce = open('fuzzdb/wordlists-user-passwd/passwds/weaksauce.txt', 'r')
-        for johnpass in johnlist.readlines():
-            passwords.append(johnpass.rstrip('\n'))
-
-        for unixpass in unixpasswords.readlines():
-            passwords.append(unixpass.rstrip('\n'))
-
-        for sauce in weaksauce.readlines():
-            passwords.append(sauce.rstrip('\n'))
-
-        return passwords
-
-    @staticmethod
-    def __getSNMPCommunitiesFromFuzzDB(self):
-        '''
-        Reads:
-        fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt
-        '''
-        print "[+] Reading the wordlist with common SNMP communities from FuzzDB"
-        communities = []
-        commonCommunities = open('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt', 'r')
-        for community in commonCommunities.readlines():
-            communities.append(community.rstrip('\n'))
-        return  communities
 
 
     def help(self):

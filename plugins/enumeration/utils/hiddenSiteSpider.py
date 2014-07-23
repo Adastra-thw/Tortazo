@@ -31,6 +31,8 @@ from urlparse import urljoin
 import mechanize
 import config
 import os
+import random
+from plugins.bruteforce.bruterPlugin import bruterPlugin
 
 class HiddenSiteSpider(CrawlSpider):
 
@@ -39,6 +41,7 @@ class HiddenSiteSpider(CrawlSpider):
         self.onionSite = onionSite
         self.localTunnel = localTunnel
         self.start_urls=[localTunnel]
+        self.visitedLinks=[]
         self._rules = [Rule(LinkExtractor(allow=extractorRules), follow=True, callback=self.parse),]
 
     def setImages(self, images):
@@ -53,34 +56,36 @@ class HiddenSiteSpider(CrawlSpider):
     def setForms(self, forms):
         self.forms = forms
 
-
-    def setCrawlRules(self, crawlRules):
-        self.crawlRules = crawlRules
-
+    def setUserAgents(self, userAgents):
+        self.userAgents = userAgents
 
     def parse(self, response):
+        if response.url in self.visitedLinks:
+            return
+        else:
+            self.visitedLinks.append(response.url)
+        #if response.status == 401:
+            #Request authentication.
+
         item = HiddenSitePage()
         selector = Selector(response)
         item['title'] = selector.xpath('//title/text()').extract()[0]
         item['url']  =  response.url
-        item['body']  =  response.body
-
-        onion = response.url
-        onion = onion.replace(self.localTunnel,self.onionSite)
-        onion = onion.replace('http://', '')
-        onion = onion.replace(':','')
-
-        indexResource = onion.rfind('/')
-        dirStructure = onion[:indexResource]
-        resource = onion[indexResource:].replace('/','')
-
-        if os.path.exists(config.deepWebCrawlerOutdir+dirStructure) == False:
-            os.makedirs(config.deepWebCrawlerOutdir+dirStructure)
-
-        if resource == '':
-            open(config.deepWebCrawlerOutdir+dirStructure+"/index.html", 'wb').write(response.body)
-        else:
-            open(config.deepWebCrawlerOutdir+dirStructure+"/"+resource, 'wb').write(response.body)
+        if self.contents:
+            item['body']  =  response.body
+            onion = response.url
+            onion = onion.replace(self.localTunnel,self.onionSite)
+            onion = onion.replace('http://', '')
+            onion = onion.replace(':','')
+            indexResource = onion.rfind('/')
+            dirStructure = onion[:indexResource]
+            resource = onion[indexResource:].replace('/','')
+            if os.path.exists(config.deepWebCrawlerOutdir+dirStructure) == False:
+                os.makedirs(config.deepWebCrawlerOutdir+dirStructure)
+            if resource == '':
+                open(config.deepWebCrawlerOutdir+dirStructure+"/index.html", 'wb').write(response.body)
+            else:
+                open(config.deepWebCrawlerOutdir+dirStructure+"/"+resource, 'wb').write(response.body)
 
         headers = ''
         for header, value in response.headers.iteritems():
@@ -126,5 +131,11 @@ class HiddenSiteSpider(CrawlSpider):
         if self.links:
             linksFound = response.xpath('//a/@href').extract()
             for url in linksFound:
-                yield Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
+                if len(self.userAgents) > 0:
+                    userAgent = random.choice(self.userAgents)
+                    newRequest = Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
+                    newRequest.headers.setdefault('User-Agent', userAgent)
+                    yield newRequest
+                else:
+                    yield Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
         yield item

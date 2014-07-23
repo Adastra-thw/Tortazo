@@ -99,10 +99,11 @@ class deepWebCrawlerPlugin(BasePlugin):
             i = Image.open(StringIO(responseImage.content))
 
 
-    def crawOnionWebSite(self, hiddenWebSite, hiddenWebSitePort=80,
+    def crawlOnionWebSite(self, hiddenWebSite, hiddenWebSitePort=80,
                          socatTcpListenPort=8765,
                          crawlImages=True, crawlLinks=True,
-                         crawlContents=True, crawlFormData=True):
+                         crawlContents=True, crawlFormData=True,
+                         useRandomUserAgents=True):
         onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         onionSocket.settimeout(1)
         result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
@@ -124,17 +125,20 @@ class deepWebCrawlerPlugin(BasePlugin):
             socatProcess = self.serviceConnector.startLocalSocatTunnel(socatTcpListenPort, onionSite,hiddenWebSitePort, socksPort=self.serviceConnector.socksPort)
             sleep(5)
             print "[+] Socat process started! PID: "+str(socatProcess.pid)
-            self.__crawl(hiddenWebSite, socatTcpListenPort,extraPath, crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True,)
+            self.__crawl(hiddenWebSite, socatTcpListenPort,
+                         extraPath=extraPath, crawlImages=crawlImages,
+                         crawlLinks=crawlLinks, crawlContents=crawlContents,
+                         crawlFormData=crawlFormData, useRandomUserAgents=useRandomUserAgents)
             os.killpg(socatProcess.pid, signal.SIGTERM)
             print "[+] Socat process killed."
-        except:
+        except Exception as exce:
             print "[+] The following exception was raised, however, shutting down the local Socat tunnel..."
             print sys.exc_info()
+            print exce
             os.killpg(socatProcess.pid, signal.SIGTERM)
             sleep(5)
 
-
-    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True):
+    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True, useRandomUserAgents=True):
         def catch_item(sender, item, **kwargs):
             item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort)+extraPath, hiddenWebSite)
             print "[+]Processing URL %s ...  " %(item['url'])
@@ -148,16 +152,29 @@ class deepWebCrawlerPlugin(BasePlugin):
         dispatcher.connect(reactor.stop, signal=signals.spider_closed)
 
         settings = get_project_settings()
-        settings.set('ITEM_PIPELINES', {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}, priority='cmdline')
-        settings.set('IMAGES_STORE', config.deepWebCrawlerOutdir+hiddenWebSite)
+        #settings.set('ITEM_PIPELINES', {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}, priority='cmdline')
+        #settings.set('IMAGES_STORE', config.deepWebCrawlerOutdir+hiddenWebSite)
 
         crawler = Crawler(settings)
         crawler.configure()
+
+        import urllib
+        try:
+            httpcode = urllib.urlopen("http://127.0.0.1:"+str(localPort)+extraPath).getcode()
+            if httpcode not in range(200,299):
+                print "[-] Seems that the hidden service is not responding... detected HTTP Status code %s. The scrapper could fail." %(str(httpcode))
+        except IOError as ioError:
+            error, code,desc,detail = ioError
+            if "http protocol" in error:
+                print "[-] Seems that the hidden service is not responding... Detected HTTP Protocol error. The scrapper could fail."
+
         spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, hiddenWebSite, self.extractorRules)
         spider.setImages(crawlImages)
         spider.setLinks(crawlLinks)
         spider.setContents(crawlContents)
         spider.setForms(crawlFormData)
+        if useRandomUserAgents:
+            spider.setUserAgents(self.fuzzDBReader.getUserAgentsFromFuzzDB())
 
         crawler.crawl(spider)
         print "\n[+] Starting scrapy engine... this process could take some time, depending on the crawling and extractor rules applied... \n"

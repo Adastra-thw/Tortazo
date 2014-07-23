@@ -166,13 +166,13 @@ class ServiceConnector():
         except paramiko.AuthenticationException:
             return False
         except paramiko.ProxyCommandFailure as proxyExc:
-            print "Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort)
+            print "[-] Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort)
             raise proxyExc
         except paramiko.SSHException as sshExc:
-            print "Seems that the Hidden Service is not running. Please, check that before running the bruteforce attack."
+            print "[-] Seems that the Hidden Service is not running. Please, check that before running the bruteforce attack."
             raise sshExc
         except Exception as exc:
-            print "An error ocurred. See the full trace: "
+            print "[-] An error ocurred. See the full trace: "
             print sys.exc_info()
             raise exc
 
@@ -245,7 +245,7 @@ class ServiceConnector():
         elif method == "PUT":
             return requests.put(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
 
-    def performHTTPConnection(self, siteUrl, headers, method="GET", urlParameters=None, auth=None):
+    def performHTTPConnection(self, siteUrl, headers={}, method="GET", urlParameters=None, auth=None):
         self.unsetSocksProxy()
         if method == "GET":
             return requests.get(siteUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)

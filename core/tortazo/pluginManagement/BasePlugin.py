@@ -28,6 +28,7 @@ from IPython.terminal.embed import InteractiveShellEmbed
 import socket
 from prettytable import PrettyTable
 from core.tortazo.pluginManagement.utils.ServiceConnector import ServiceConnector
+from core.tortazo.pluginManagement.utils.FuzzDBReader import FuzzDBReader
 
 class BasePlugin():
     '''
@@ -50,6 +51,7 @@ class BasePlugin():
         self.author = None
         self.cli = None
         self.serviceConnector = ServiceConnector(self.cli)
+        self.fuzzDBReader = FuzzDBReader()
 
 
     def info(self, message):

@@ -3,26 +3,26 @@
 ####
 plugins = {
                    #EXAMPLE PLUGINS. IF YOU ARE A DEVELOPER, THIS IS A GOOD STARTING POINT :-)
-                   "examplePlugin"       : "plugins.examples.examplePlugin.examplePlugin",
+                   "example"       : "plugins.examples.examplePlugin.examplePlugin",
 
                    #THIRDPARTY PLUGINS. INTEGRATION OF OTHER FRAMEWORKS AND TOOLS AVAILABLE.
-                   "w3afPlugin"          : "plugins.thirdparty.w3afPlugin.w3afPlugin",
-                   "nessusPlugin"        : "plugins.thirdparty.nessusPlugin.nessusPlugin",
-                   "niktoPlugin"         : "plugins.thirdparty.niktoPlugin.niktoPlugin",
+                   "w3af"          : "plugins.thirdparty.w3afPlugin.w3afPlugin",
+                   "nessus"        : "plugins.thirdparty.nessusPlugin.nessusPlugin",
+                   "nikto"         : "plugins.thirdparty.niktoPlugin.niktoPlugin",
 
                    #INFORMATION GATHERING PLUGINS.
-                   "infoGatheringPlugin" : "plugins.infogathering.infoGatheringPlugin.infoGatheringPlugin",
-                   "shodanPlugin"        : "plugins.infogathering.shodanPlugin.shodanPlugin",
+                   "infoGathering" : "plugins.infogathering.infoGatheringPlugin.infoGatheringPlugin",
+                   "shodan"        : "plugins.infogathering.shodanPlugin.shodanPlugin",
 
                    #ENUMERATION PLUGINS.
-                   "deepWebCrawlerPlugin" : "plugins.enumeration.deepWebCrawlerPlugin.deepWebCrawlerPlugin",
-                   "deepWebStemmingPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin",
-                   "deepWebDirBruterPlugin" : "plugins.enumeration.deepWebStemmingPlugin.deepWebDirBruterPlugin",
+                   "crawler" : "plugins.enumeration.deepWebCrawlerPlugin.deepWebCrawlerPlugin",
+                   "stemming" : "plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin",
+                   "dirBruter" : "plugins.enumeration.deepWebDirBruterPlugin.deepWebDirBruterPlugin",
 
 
                    #ATTACK PLUGINS.
-                   "heartBleedPlugin"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin",
+                   "heartBleed"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin",
 
                    #BRUTERFORCE PLUGINS.
-                   "bruterPlugin"    : "plugins.bruteforce.bruterPlugin.bruterPlugin"
+                   "bruter"    : "plugins.bruteforce.bruterPlugin.bruterPlugin"
                    }
