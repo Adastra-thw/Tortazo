@@ -1,4 +1,4 @@
-.. _extensions:
+.. _database-mode-label:
 
 ****************************************************
 Database mode in Tortazo

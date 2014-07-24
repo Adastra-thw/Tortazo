@@ -23,7 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" /> 
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="Supported Switches in Tortazo." href="supported_options.html" />
+    <link rel="prev" title="Gather Information mode." href="gatherinfo_tor_nodes.html" /> 
   </head>
   <body>
     <div class="related">
@@ -32,6 +34,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="supported_options.html" title="Supported Switches in Tortazo."
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gatherinfo_tor_nodes.html" title="Gather Information mode."
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -42,7 +50,36 @@
           <div class="body">
             
   <div class="section" id="botnet-mode-in-tortazo">
-<h1>Botnet mode in Tortazo.<a class="headerlink" href="#botnet-mode-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<span id="botnet-mode-label"></span><h1>Botnet mode in Tortazo.<a class="headerlink" href="#botnet-mode-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<p>The botnet mode is specified with the option -z/&#8211;zombie and depends on the tortazo_botnet.bot file. In this mode, Tortazo will read that file and then, tries to perform SSH Connections using the hosts and credentials defined in that file.
+Every line in &#8220;tortazo_botnet.bot&#8221; have the next format:</p>
+<div class="highlight-python"><div class="highlight"><pre>host:user:passwd:port:nickname
+</pre></div>
+</div>
+<p>The python library Fabric is used to connect with the SSH servers and execute commands across a set of SSH Servers.
+When you specify the -z/&#8211;zombie option, Tortazo will not download or parse descriptors from Tor authorities, just reads the tortazo_botnet.bot file and then tries to open a shell on the specified bot (-o/&#8211;open-shell switch) or run a command (-r/&#8211;run-command switch).
+In this mode, you must specify the nicknames that will be excluded from the botnet (comma separated) or the keyword &#8220;all&#8221; to include all bots from tortazo_botnet.bot file.</p>
+<div class="section" id="botnet-mode-examples">
+<h2>Botnet mode examples.<a class="headerlink" href="#botnet-mode-examples" title="Permalink to this headline">¶</a></h2>
+<p>Using this mode is very simple, but the file located in &lt;TORTAZO_DIR&gt;/tortazo_botnet.bot must have a list of bots with the connection details of every bot for each line.</p>
+<p><strong>Execute commands across the entirely botnet</strong>
+Runs the commands id; uname -a; uptime:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -v -z all -r &quot;id; uname -a; uptime; w&quot;
+python Tortazo.py --verbose --threads 10 --zombie-mode all --run-command &quot;id; uname -a; uptime; w&quot;
+</pre></div>
+</div>
+<p><strong>Open a shell in the specified bot</strong>
+Entering the shell identifier to open a new console in the specified host.:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -v -z all -o
+python Tortazo.py --verbose --zombie-mode all --open-shell
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>KEEP IN MIND:</p>
+<p class="last">Obviously, the credentials in the tortazo_botnet.bot file should be valid for every host registered. If the credentials are not valid, Fabric will resolve the authentication method (password or public key) and will require that you enter the password or passphase.</p>
+</div>
+</div>
 </div>
 
 
@@ -51,6 +88,20 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Botnet mode in Tortazo.</a><ul>
+<li><a class="reference internal" href="#botnet-mode-examples">Botnet mode examples.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gatherinfo_tor_nodes.html"
+                        title="previous chapter">Gather Information mode.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="supported_options.html"
+                        title="next chapter">Supported Switches in Tortazo.</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/botnet_mode.txt"
@@ -79,6 +130,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="supported_options.html" title="Supported Switches in Tortazo."
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gatherinfo_tor_nodes.html" title="Gather Information mode."
+             >previous</a> |</li>
         <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

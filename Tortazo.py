@@ -21,19 +21,19 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from plumbum import cli
-from time import gmtime, strftime
 from core.tortazo.Discovery import Discovery
 from core.tortazo.BotNet import BotNet
 from core.tortazo.Reporting import Reporting
+from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
+from core.tortazo.OnionRepository import  RepositoryGenerator
+import config as tortazoConfiguration
 import Queue
 from stem.util import term
 import stem.process
 import logging as log
-import config as tortazoConfiguration
-from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
 import sys
-
+from plumbum import cli
+from time import gmtime, strftime
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -85,7 +85,12 @@ class Cli(cli.Application):
     useDatabase = cli.Flag(["-D", '--use-database'], help="Tortazo will store the last results from the scanning process in a database. If you use this flag, Tortazo will omit the scan and just will try use the data stored from the last execution.")
     cleanDatabase = cli.Flag(["-C", '--clean-database'], help="Tortazo will delete all records stored in database when finished executing. This option will delete every record stored, included the data from previous scans.")
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
-    useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")	
+    useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")
+
+    onionRepositoryMode = cli.Flag(["-R", '--onion-repository'], help="Onion Repository Mode. Tries to discover onion addresses in the TOR network.")
+
+
+
 
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
@@ -100,6 +105,8 @@ class Cli(cli.Application):
     pluginManagement = None
     torLocalInstance = None
     scanIdentifier = None
+    generatorThreads = 10
+    workerThreads = 10
 
     socksHost = None
     socksPort = None
@@ -190,6 +197,20 @@ class Cli(cli.Application):
         '''
         self.scanIdentifier = scanIdentifier
 
+    @cli.switch(["-G", "--generator-threads"], int, requires=["--onion-repository"],  help="Number of threads for the Onion Addresses generator. You should use the switch -R / --onion-repository. Default Value: 10")
+    def generator_threads(self, generatorThreads):
+        '''
+        Generator Threads. Number of threads used by the generator of onion addresses.
+        '''
+        self.generatorThreads = generatorThreads
+
+    @cli.switch(["-W", "--worker-threads"], int, requires=["--onion-repository"],  help="Number of threads for the workers used by the Onion Address generator. You should use the switch -R / --onion-repository. Default Value: 10")
+    def worker_threads(self, workerThreads):
+        '''
+        Generator Threads. Number of threads used by the generator of onion addresses.
+        '''
+        self.workerThreads = workerThreads
+
 
     def logsTorInstance(self, log):
         '''
@@ -218,6 +239,13 @@ class Cli(cli.Application):
             self.logger.info(term.format("[+] Cleaning database... Deleting all records.", term.Color.YELLOW))
             self.database.initDatabase()
             self.database.cleanDatabaseState()
+
+        if self.onionRepositoryMode:
+            #Tortazo should start a process and the goes to sleep. In this mode should not be other actions to be performed.
+            #This switch will invalidate the other switches, just repository mode should be started.
+            repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
+            repository.startGenerator()
+            return
 
         if self.listPlugins:
             print "[*] Plugins list... "

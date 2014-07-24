@@ -23,7 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" /> 
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="Plugin Development in Tortazo" href="plugin_development.html" />
+    <link rel="prev" title="Supported Switches in Tortazo." href="supported_options.html" /> 
   </head>
   <body>
     <div class="related">
@@ -32,6 +34,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plugin_development.html" title="Plugin Development in Tortazo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="supported_options.html" title="Supported Switches in Tortazo."
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -42,7 +50,718 @@
           <div class="body">
             
   <div class="section" id="available-plugins-in-tortazo">
-<span id="extensions"></span><h1>Available Plugins in Tortazo<a class="headerlink" href="#available-plugins-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<h1>Available Plugins in Tortazo<a class="headerlink" href="#available-plugins-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<p>There’s some plugins integrated in Tortazo and you can use them immediately just by loading the plugin in the interpreter using the switch “-P  / &#8211;use-plugin”. In this version, the following plugins are available to use.</p>
+<div class="section" id="plugins-to-gather-information-and-enumeration-of-hidden-services-and-tor-relays">
+<h2>Plugins to Gather Information and enumeration of hidden services and TOR relays<a class="headerlink" href="#plugins-to-gather-information-and-enumeration-of-hidden-services-and-tor-relays" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="infogathering">
+<h3>infoGathering<a class="headerlink" href="#infogathering" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: infoGathering</em></p>
+<p><em>Definition: plugins.infogathering.infoGatheringPlugin.infoGatheringPlugin</em></p>
+<p><em>Description:</em></p>
+<p>Plugin with some functions to gather information about the relays loaded in the plugin context. The source of the information loaded could be from the last scan performed by Tortazo or Database records stored by previous scans.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="stemming">
+<h3>stemming<a class="headerlink" href="#stemming" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: stemming</em></p>
+<p><em>Definition: plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin</em>
+<em>Description:</em></p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="crawler">
+<h3>crawler<a class="headerlink" href="#crawler" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name:  crawler</em></p>
+<p><em>Definition:   plugins.enumeration. deepWebCrawlerPlugin.deepWebCrawlerPlugin</em></p>
+<p><em>Description:</em></p>
+<p>This plugin uses Scrapy Framework to crawl a hidden service in TOR network. By default, the rules used follow every link in the specified website and downloads the contents found, however the user could overwrite this behavior specifying custom XPATH rules. The first action performed by the plugin is creating a new Socat tunnel in the local machine in the port 8765 by default. The endpoint will be the hidden service specified by the user, but the crawler will performs the requests directly against the local machine through the Socat tunnel created. This is very useful to route the requests from the local machine to the TOR network transparently. Also, the user could specify arguments to overwrite the XPATH rules for content extraction and the pages that the crawler should visit before to start the crawler process.</p>
+</div></blockquote>
+<p>The website structure will be stored in database and the contents will be downloaded in local file system in the path &#8220;&lt;TORTAZO_DIR&gt;/onionSites/&lt;hiddenServiceName&gt;/&#8221;</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>setExtractorRulesAllow</td>
+<td>Sets the XPATH rules to specify the allowed pages to visit and analyse.
+This value will be passed to the &#8220;allow&#8221; attribute of the class:
+&#8220;scrapy.contrib.linkextractors.LinkExtractor&#8221;</td>
+<td>self.setExtractorRulesAllow(&#8220;index.php| index.jsp&#8221;)</td>
+</tr>
+<tr class="row-even"><td>setExtractorRulesDeny</td>
+<td>Sets the XPATH rules to specify the disallowed pages to visit and analyze.
+This value will be passed to the “deny” attribute of the class:
+“scrapy.contrib.linkextractors.LinkExtractor”</td>
+<td>self.setExtractorRulesDeny(&#8220;index.php| index.jsp&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>setCrawlRulesLinks</td>
+<td>Sets the XPath rules to extract links from every webpage analyzed.
+Default value should be enough to almost every case,
+however you can use this function to overwrite this value.
+Default: <a class="reference external" href="mailto:'//a/&#37;&#52;&#48;href">'//a/<span>&#64;</span>href</a>&#8216;</td>
+<td>self.setCrawlRulesLinks(&#8216;//a[contains(&#64;href, &#8220;confidential&#8221;)]/&#64;href&#8217;)</td>
+</tr>
+<tr class="row-even"><td>setCrawlRulesImages</td>
+<td>Sets the XPath rules to extract images from every webpage analyzed.
+Default value should be enough to almost every case,
+however you can use this function to overwrite this value.
+Default: &#8216; <a class="reference external" href="mailto://img/&#37;&#52;&#48;src">//img/<span>&#64;</span>src</a>&#8216;</td>
+<td>self.setCrawlRulesImages(&#8216;//a[contains(&#64;href, &#8220;image&#8221;)]/&#64;href&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>compareWebSiteWithHiddenWebSite</td>
+<td>Compares the contents of a website in clear web with the contents
+of a web site in TOR’s deep web.
+The return value will be a percent of similitude between both sites.</td>
+<td>self.compareWebSiteWithHiddenWebSite(&#8220;<a class="reference external" href="http://exit-relay-found.com/">http://exit-relay-found.com/</a>&#8221;, &#8220;<a class="reference external" href="http://gai12dase4sw3f5a.onion/">http://gai12dase4sw3f5a.onion/</a>&#8221;)</td>
+</tr>
+<tr class="row-even"><td>compareRelaysWithHiddenWebSite</td>
+<td>This function will perform an HTTP connection against every relay found.
+If the response is a HTTP 200 status code,
+performs an HTTP connection against the hidden service specified
+and compares the contents of both responses.
+The return value will be a percent of similitude between both sites.</td>
+<td>self.compareRelaysWithHiddenWebSite(&#8220;<a class="reference external" href="http://gai12dase4sw3f5a.onion/">http://gai12dase4sw3f5a.onion/</a>&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>crawlOnionWebSite</td>
+<td>This function executes a crawler against the specified hidden service.
+The following parameters allows to control the behaviour of the crawler:
+hiddenWebSite: The hidden site to crawl. This is a mandatory parameter.
+hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80
+socatTcpListenPort: Port for the Socat proxy. Default value: 8765
+crawlImages: Search and download the images from every page.
+Default value: True.
+crawlLinks: Search and visit the links found in every page.
+Default value: True.
+crawlContents: Download and save in local file system the
+contents of every page found.
+crawlFormData: Search the forms in every page and store
+that structure in database.
+useRandomUserAgents: Use a random list of User-Agents
+in every HTTP connection performed by the crawler.
+FuzzDB project is used to get a list of User-Agents reading the file
+fuzzdb/attack-payloads/http-protocol/user-agents.txt</td>
+<td><ul class="first last simple">
+<li>self.crawlOnionWebSite(&#8220;<a class="reference external" href="http://gai12dase4sw3f5a.onion/">http://gai12dase4sw3f5a.onion/</a>&#8221;)</li>
+<li>self.crawlOnionWebSite(&#8220;<a class="reference external" href="http://gai12dase4sw3f5a.onion/">http://gai12dase4sw3f5a.onion/</a>&#8221;, hiddenWebSitePort=8080, crawlImages=False)</li>
+<li>self.crawlOnionWebSite(&#8220;<a class="reference external" href="http://gai12dase4sw3f5a.onion/">http://gai12dase4sw3f5a.onion/</a>&#8221;, crawlFormData=False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="shodan">
+<h3>shodan<a class="headerlink" href="#shodan" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: shodan</em></p>
+<p><em>Definition: plugins.infogathering.shodanPlugin.shodanPlugin</em></p>
+<p><em>Description:</em></p>
+<p>Plugin used to perform tests against Shodan service using the information gathered by Tortazo. This plugin is much more flexible that the switch “-s  /  &#8211;use-shodan”.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>setApiKey</td>
+<td>Sets the API Key string.</td>
+<td>self.setApiKey(&#8220;XXXXXXXXXXXX&#8221;)</td>
+</tr>
+<tr class="row-even"><td>setApiKeyFile</td>
+<td>Sets the API Key file.
+Reads the first line of the file and then sets the API Key string.</td>
+<td>self.setApiKeyFile(&#8220;/home/apiKeyFile&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>basicSearchQuery</td>
+<td>Performs a basic search with Shodan.
+By default prints the 10 first results</td>
+<td>self.basicSearchQuery(&#8220;OpenSSL 1.0.1&#8221;, 15)</td>
+</tr>
+<tr class="row-even"><td>basicSearchAllRelays</td>
+<td>Performs a basic search with Shodan against all TOR relays.
+Uses the &#8220;net&#8221; filter.</td>
+<td>self.basicSearchAllRelays(&#8220;OpenSSL 1.0.1&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>basicSearchByRelay</td>
+<td>Performs a basic search with Shodan against the specified TOR relay.</td>
+<td>self.basicSearchByRelay(&#8220;OpenSSL 1.0.1&#8221;, &#8220;80.80.80.80&#8221;)</td>
+</tr>
+<tr class="row-even"><td>basicSearchByNickname</td>
+<td>Performs a basic search with Shodan against the specified TOR NickName.</td>
+<td>self.basicSearchByNickname(&#8220;OpenSSL 1.0.1&#8221;, &#8220;TORNickName&#8221;)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="plugins-to-pentesting-and-attack-hidden-services-and-tor-relays">
+<h2>Plugins to Pentesting and attack hidden services and TOR relays<a class="headerlink" href="#plugins-to-pentesting-and-attack-hidden-services-and-tor-relays" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bruter">
+<h3>bruter<a class="headerlink" href="#bruter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: bruter</em></p>
+<p><em>Definition: plugins.bruteforce.bruterPlugin.bruterPlugin</em></p>
+<p><em>Description:</em></p>
+<p>This plugin is used to perform dictionary attacks against TOR relays and hidden services. Supports brute forcing against services like SSH, FTP, SNMP and SMB.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="33%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>setDictSeparator</td>
+<td>Sets an separator for dictionary files.
+Every line en the file must contain &lt;user&gt;&lt;separator&gt;&lt;passwd&gt;.</td>
+<td>self.setDictSeparator(&#8221;:&#8221;)</td>
+</tr>
+<tr class="row-even"><td>sshBruterOnRelay</td>
+<td>Bruteforce attack against an SSH Server in the relay entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.sshBruterOnRelay(&#8216;37.213.43.122&#8217;, dictFile=&#8217;/home/user/dict&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>sshBruterOnAllRelays</td>
+<td>Bruteforce attack against an SSH Server in the relays founded.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.sshBruterOnAllRelays(dictFile=&#8217;/home/user/dict&#8217;)</td>
+</tr>
+<tr class="row-even"><td>sshBruterOnHiddenService</td>
+<td>Bruteforce attack against an SSH Server in the onion address entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.sshBruterOnHiddenService(&#8220;5bsk3oj5jufsuii6.onion&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>ftpBruterOnRelay</td>
+<td>Bruteforce attack against an FTP Server in the relay entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.ftpBruterOnRelay(&#8220;37.213.43.122&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-even"><td>ftpBruterOnAllRelays</td>
+<td>Bruteforce attack against an FTP Server in the relays founded.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.ftpBruterOnAllRelays(dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>ftpBruterOnHiddenService</td>
+<td>Bruteforce attack against an FTP Server in the onion address entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.ftpBruterOnHiddenService(&#8220;5bsk3oj5jufsuii6.onion&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-even"><td>smbBruterOnRelay</td>
+<td>Bruteforce attack against an SMB Server in the relay entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.smbBruterOnRelay(&#8220;37.213.43.122&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>smbBruterOnAllRelays</td>
+<td>Bruteforce attack against an SMB Server in the relays founded.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.smbBruterOnAllRelays(dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-even"><td>smbBruterOnHiddenService</td>
+<td>Bruteforce attack against an SMB Server in the onion address entered.
+This function uses socat to create a local Socks proxy and
+route the requests from the local machine to the hidden service.</td>
+<td>self.smbBruterOnHiddenService(&#8220;5bsk3oj5jufsuii6.onion&#8221;, servicePort=139, localPort=139, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>snmpBruterOnRelay</td>
+<td>Bruteforce attack against an SNMP Server in the relay entered.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.snmpBruterOnRelay(&#8220;37.213.43.122&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-even"><td>snmpBruterOnAllRelays</td>
+<td>Bruteforce attack against an SNMP Server in the relays founded.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.snmpBruterOnAllRelays(dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>httpBruterOnSite</td>
+<td>Bruteforce attack against a web site.
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.httpBruterOnSite(&#8220;<a class="reference external" href="http://eviltorrelay.com/auth/">http://eviltorrelay.com/auth/</a>&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+<tr class="row-even"><td>httpBruterOnHiddenService</td>
+<td>Bruteforce attack against an onion site (hidden site in TOR&#8217;s deep web).
+Uses FuzzDB if the dictFile is not specified.</td>
+<td>self.httpBruterOnHiddenService(&#8220;<a class="reference external" href="http://5bsk3oj5jufsuii6.onion/auth/">http://5bsk3oj5jufsuii6.onion/auth/</a>&#8221;, dictFile=&#8221;/home/user/dict&#8221;)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="heartbleed">
+<h3>heartBleed<a class="headerlink" href="#heartbleed" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: heartBleed</em></p>
+<p><em>Definition: plugins.attack.heartBleedPlugin.heartBleedPlugin</em></p>
+<p><em>Description:</em></p>
+<p>Perform HearthBleed Extension vulnerability tests. This plugin allows to discovery TOR relays with this vulnerability.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>setTarget</td>
+<td>Set the relay for the HeartBleed attack.
+Check the targets using the function &#8220;printRelaysFound&#8221;.
+Default port: 443.</td>
+<td>self.setTarget(&#8220;1.2.3.4&#8221;)</td>
+</tr>
+<tr class="row-even"><td>setTargetWithPort</td>
+<td>Set the relay and port for the HeartBleed attack.
+Check the targets using the function &#8220;printRelaysFound&#8221;.</td>
+<td>self.setTarget(&#8220;1.2.3.4&#8221;, &#8220;8443&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>startAttack</td>
+<td>Starts the HeartBleed attack against the specified target.</td>
+<td>self.startAttack()</td>
+</tr>
+<tr class="row-even"><td>startAttackAllRelays</td>
+<td>Starts the HeartBleed attack against all relays loaded in the plugin.
+Default port: 443</td>
+<td>self.startAttackAllRelays()</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="plugins-for-integration-with-third-party-tools">
+<h2>Plugins for integration with Third-Party tools<a class="headerlink" href="#plugins-for-integration-with-third-party-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="w3af">
+<h3>w3af<a class="headerlink" href="#w3af" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name: w3af</em></p>
+<p><em>Definition:   plugins.thirdparty.w3afPlugin.w3afPlugin</em></p>
+<p><em>Description:</em></p>
+<p>W3AF is a powerful scanner focused on discovering vulnerabilities and attack</p>
+</div></blockquote>
+<p>web applications. As is written in Python and has a GNU/GPL license, you can use the classes and utilities from any script in Python. In this case, the plugin does not
+only cover the features included in w3af, but also allows the execution
+of audits in web applications that are hosted in the deep web. In the official release of W3AF, you can’t use any site on the deep web whose name is an ONION TLD. Using this plugin, you can do it.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="34%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>showPluginsByType</td>
+<td>List of available plugins filtered by type.</td>
+<td>self.showPluginsByType(&#8220;audit&#8221;)</td>
+</tr>
+<tr class="row-even"><td>showPluginTypes</td>
+<td>List of available plugin types.</td>
+<td>self.showPluginTypes()</td>
+</tr>
+<tr class="row-odd"><td>getEnabledPluginsByType</td>
+<td>Enabled plugins by types.</td>
+<td>self.getEnabledPluginsByType(&#8220;audit&#8221;)</td>
+</tr>
+<tr class="row-even"><td>getPluginTypeDescription</td>
+<td>Description for the plugin type specified.</td>
+<td>self.getPluginTypeDescription(&#8220;audit&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>getAllEnabledPlugins</td>
+<td>List of enabled plugins.</td>
+<td>self.getAllEnabledPlugins()</td>
+</tr>
+<tr class="row-even"><td>enablePlugin</td>
+<td>Enable a plugin.</td>
+<td>self.enablePlugin(&#8220;blind_sqli&#8221;,&#8221;audit&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>disablePlugin</td>
+<td>Disable a plugin.</td>
+<td>self.disablePlugin(&#8220;blind_sqli&#8221;,&#8221;audit&#8221;)</td>
+</tr>
+<tr class="row-even"><td>enableAllPlugins</td>
+<td>Enable all plugins.</td>
+<td>self.enableAllPlugins(&#8220;audit&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>disableAllPlugins</td>
+<td>Disable all plugins.</td>
+<td>self.disableAllPlugins(&#8220;audit&#8221;)</td>
+</tr>
+<tr class="row-even"><td>getPluginOptions</td>
+<td>Get Options for the plugin specified.</td>
+<td>self.getPluginOptions(&#8220;audit&#8221;,&#8221;blind_sqli&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>setPluginOptions</td>
+<td>Set Options for the plugin specified.</td>
+<td>self.setPluginOptions(&#8220;audit&#8221;,&#8221;eval&#8221;,&#8221;boolean&#8221;,&#8221;use_time_delay&#8221;,&#8221;False&#8221;)</td>
+</tr>
+<tr class="row-even"><td>getPluginStatus</td>
+<td>Check if the specified plugin is enabled.</td>
+<td>self.getPluginStatus(&#8220;audit&#8221;,&#8221;eval&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>setTarget</td>
+<td>Sets the target for the attack (clear web).</td>
+<td>self.setTarget(&#8220;<a class="reference external" href="http://www.target.com">http://www.target.com</a>&#8221;)</td>
+</tr>
+<tr class="row-even"><td>setTargetDeepWeb</td>
+<td>Sets the target in the DeepWeb of TOR.</td>
+<td>self.setTarget(&#8220;<a class="reference external" href="http://torlongonionpath.onion">http://torlongonionpath.onion</a>&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>startAttack</td>
+<td>Starts the attack.</td>
+<td>self.startAttack()</td>
+</tr>
+<tr class="row-even"><td>listMiscConfigs</td>
+<td>List of Misc Settings.</td>
+<td>self.listMiscConfigs()</td>
+</tr>
+<tr class="row-odd"><td>setMiscConfig</td>
+<td>Sets a Misc Setting.</td>
+<td>self.setMiscConfig(&#8220;msf_location&#8221;,&#8221;/opt/msf&#8221;)</td>
+</tr>
+<tr class="row-even"><td>listProfiles</td>
+<td>List of Profiles.</td>
+<td>self.listProfiles()</td>
+</tr>
+<tr class="row-odd"><td>useProfile</td>
+<td>Use a Profile.</td>
+<td>self.useProfile(&#8220;profileName&#8221;)</td>
+</tr>
+<tr class="row-even"><td>createProfileWithCurrentConfig</td>
+<td>Creates a new Profile with the current settings.</td>
+<td>self.createProfileWithCurrentConfig(&#8220;profileName&#8221;, &#8220;Profile Description&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>modifyProfileWithCurrentConfig</td>
+<td>Modifies an existing profile with the current settings.</td>
+<td>self.modifyProfileWithCurrentConfig(&#8220;profileName&#8221;, &#8220;Profile Description&#8221;)</td>
+</tr>
+<tr class="row-even"><td>removeProfile</td>
+<td>Removes an existing profile.</td>
+<td>self.removeProfile(&#8220;profileName&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>listShells</td>
+<td>List of Shells.</td>
+<td>self.listShells()</td>
+</tr>
+<tr class="row-even"><td>executeCommand</td>
+<td>Executes a command in the specified shell.</td>
+<td>self.executeCommand(1,&#8221;lsp&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>listAttackPlugins</td>
+<td>List of attack plugins.</td>
+<td>self.listAttackPlugins()</td>
+</tr>
+<tr class="row-even"><td>listInfos</td>
+<td>List of Infos in the Knowledge Base of W3AF.</td>
+<td>self.listInfos()</td>
+</tr>
+<tr class="row-odd"><td>listVulnerabilities</td>
+<td>List of Vulns in the Knowledge Base of W3AF.</td>
+<td>self.listVulnerabilities()</td>
+</tr>
+<tr class="row-even"><td>exploitAllVulns</td>
+<td>Exploits all vulns in the Knowledge Base of W3AF.</td>
+<td>self.exploitVulns(&#8220;sqli&#8221;)</td>
+</tr>
+<tr class="row-odd"><td>exploitVuln</td>
+<td>Exploits the specified Vuln in the Knowledge Base of W3AF.</td>
+<td>self.exploitVulns(&#8220;sqli&#8221;,18)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nessus">
+<h3>nessus<a class="headerlink" href="#nessus" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><em>Plugin Name:  nessus</em></p>
+<p><em>Definition: plugins.thirdparty.nessusPlugin.nessusPlugin</em></p>
+<p><em>Description:</em></p>
+<p>This plugin is responsible for executing the authentication process against a Nessus instance and allows you to use the full features of the engine from the repeaters</p>
+</div></blockquote>
+<p>analyzed by Tortazo. It has the functions necessary to list the available plugins,
+manage policies, users, create specific scans, scheduled scans and consult
+reports generated by Nessus. To carry out the interaction between
+Tortazo and Nessus, the pynessus-rest library is used; which has been developed
+primarily to meet the needs of this plugin and directly uses the functions
+available in the latest version of Nessus REST API. In this way, you can run the
+same tasks that are available from the web interface enabled on Nessus. The
+connection and authentication must be declarated in the properties
+file located in &lt;TORTAZO_DIR&gt;/config.py, which should specify the details for the connection to the server; these details include the address and port of the Nessus server and the credentials required to access.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="36%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+<th class="head">Usage Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>help</td>
+<td>Shows the banner help.</td>
+<td>self.help()</td>
+</tr>
+<tr class="row-odd"><td>serverLoad</td>
+<td>Shows details about the load of the server.
+Number of opened sessions and memory usage, etc.</td>
+<td>self.serverLoad()</td>
+</tr>
+<tr class="row-even"><td>feed</td>
+<td>Return the Nessus Feed.</td>
+<td>self.feed()</td>
+</tr>
+<tr class="row-odd"><td>serverSecureSettingsList</td>
+<td>List of Server Secure Settings.</td>
+<td>self.serverSecureSettingsList()</td>
+</tr>
+<tr class="row-even"><td>serverRegister</td>
+<td>Registers the Nessus server with Tenable Network Security.</td>
+<td>self.serverRegister(&#8216;FEED_CODE&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>serverLoad</td>
+<td>Server Load and Platform Type.</td>
+<td>self.serverLoad()</td>
+</tr>
+<tr class="row-even"><td>serverUuid</td>
+<td>Server UUID.</td>
+<td>self.serverUuid()</td>
+</tr>
+<tr class="row-odd"><td>userAdd</td>
+<td>Create a new user.
+The third parameter defines the user as administrator (1) or regular user (0).</td>
+<td>self.userAdd(&#8216;adastra&#8217;,&#8217;adastra&#8217;,0)</td>
+</tr>
+<tr class="row-even"><td>userEdit</td>
+<td>Edit the user specified.
+The third parameter defines the user as administrator (1) or regular user (0).</td>
+<td>self.userEdit(&#8216;adastra&#8217;,&#8217;new_password&#8217;,1)</td>
+</tr>
+<tr class="row-odd"><td>userDelete</td>
+<td>Delete the user specified.
+The third parameter defines the user as administrator (1) or regular user (0).</td>
+<td>self.userDelete(&#8216;adastra&#8217;)</td>
+</tr>
+<tr class="row-even"><td>userChpasswd</td>
+<td>Change the password for the user specified.
+The third parameter defines the user as administrator (1) or regular user (0).</td>
+<td>self.userChpasswd(&#8216;adastra&#8217;,&#8217;new_password&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>usersList</td>
+<td>List of users.</td>
+<td>self.usersList()</td>
+</tr>
+<tr class="row-even"><td>pluginsList</td>
+<td>List of plugins.</td>
+<td>self.pluginsList()</td>
+</tr>
+<tr class="row-odd"><td>pluginAttributesList</td>
+<td>List of plugins attributes for plugin filtering.</td>
+<td>self.pluginListsFamily(&#8216;AIX Local Security Checks&#8217;)</td>
+</tr>
+<tr class="row-even"><td>pluginDescription</td>
+<td>Returns the entire description of a given plugin.</td>
+<td>self.pluginDescription(&#8216;ping_host.nasl&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>pluginsAttributesFamilySearch</td>
+<td>Filters against the family of plugins.</td>
+<td>self.pluginsAttributesFamilySearch(&#8216;match&#8217;,&#8217;or&#8217;,&#8217;modicon&#8217;,&#8217;description&#8217;)</td>
+</tr>
+<tr class="row-even"><td>pluginsAttributesPluginSearch</td>
+<td>Returns the plugins in a family that match a given filter criteria.
+Check the Nessus documentation to see filter criteria.</td>
+<td>self.pluginsAttributesPluginSearch(&#8216;match&#8217;,&#8217;or&#8217;,&#8217;modicon&#8217;,&#8217;description&#8217;,&#8217;FTP&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>pluginsMd5</td>
+<td>List of plugin file names and corresponding MD5 hashes.</td>
+<td>self.pluginsMd5()</td>
+</tr>
+<tr class="row-even"><td>policyList</td>
+<td>List of available policies, policy settings and default values.</td>
+<td>self.policyList()</td>
+</tr>
+<tr class="row-odd"><td>policyDelete</td>
+<td>Delete the policy specified.</td>
+<td>self.policyDelete(POLICY_ID)</td>
+</tr>
+<tr class="row-even"><td>policyCopy</td>
+<td>Copies an existing policy to a new policy.</td>
+<td>self.policyCopy(POLICY_ID)</td>
+</tr>
+<tr class="row-odd"><td>policyDownload</td>
+<td>Download the policy from the server to the local system.</td>
+<td>self.policyDownload(POLICY_ID, /home/user/policy.nessus)</td>
+</tr>
+<tr class="row-even"><td>scanAllRelays</td>
+<td>Create a new scan with all relays loaded.</td>
+<td>self.scanAllRelays(&lt;POLICY_ID&gt;, &#8216;newScan&#8217;)</td>
+</tr>
+<tr class="row-odd"><td>scanByRelay</td>
+<td>Create a new scan with the specified relay.</td>
+<td>self.scanAllRelays(&lt;POLICY_ID&gt;, &#8216;newScan&#8217;, &lt;IP_OR_NICKNAME&gt;)</td>
+</tr>
+<tr class="row-even"><td>scanStop</td>
+<td>Stops the specified started scan.</td>
+<td>self.scanStop(&lt;SCAN_UUID&gt;)</td>
+</tr>
+<tr class="row-odd"><td>scanResume</td>
+<td>Resumes the specified paused scan.</td>
+<td>self.scanResume(&lt;SCAN_UUID&gt;)</td>
+</tr>
+<tr class="row-even"><td>scanPause</td>
+<td>Pauses the specified actived scan.</td>
+<td>self.scanPause(&lt;SCAN_UUID&gt;)</td>
+</tr>
+<tr class="row-odd"><td>scanList</td>
+<td>List of scans.</td>
+<td>self.scanList()</td>
+</tr>
+<tr class="row-even"><td>scanTemplateAllRelays</td>
+<td>Create a new scan template (scheduled) with all relays loaded.</td>
+<td>self.scanTemplateAllRelays(&lt;POLICY_ID&gt;,&lt;TEMPLATE_NAME&gt;)</td>
+</tr>
+<tr class="row-odd"><td>scanTemplateByRelay</td>
+<td>Create a new scan template (scheduled) with the specified relay.</td>
+<td>self.scanTemplateByRelay(&lt;POLICY_ID&gt;,&lt;TEMPLATE_NEW_NAME&gt;,&lt;IP_OR_NICKNAME&gt;)</td>
+</tr>
+<tr class="row-even"><td>scanTemplateEditAllRelays</td>
+<td>Edit the scan template specified with all relays loaded.</td>
+<td>self.scanTemplateEditAllRelays(&lt;POLICY_ID&gt;,&lt;TEMPLATE_NEW_NAME&gt;)</td>
+</tr>
+<tr class="row-odd"><td>scanTemplateEditByRelay</td>
+<td>Edit the scan template specified with the specified relay.</td>
+<td>self.scanTemplateEditByRelay(&lt;TEMPLATE_UUID&gt;,&lt;TEMPLATE_NEW_NAME&gt;,&lt;POLICY_ID&gt;,&lt;IP_OR_NICKNAME&gt;)</td>
+</tr>
+<tr class="row-even"><td>scanTemplateDelete</td>
+<td>Delete the scan template specified.</td>
+<td>self.scanTemplateDelete(&lt;TEMPLATE_UUID&gt;)</td>
+</tr>
+<tr class="row-odd"><td>scanTemplateLaunch</td>
+<td>Launch the scan template specified.</td>
+<td>self.scanTemplateLaunch(&lt;TEMPLATE_UUID&gt;)</td>
+</tr>
+<tr class="row-even"><td>reportList</td>
+<td>List of available scan reports.</td>
+<td>self.reportList()</td>
+</tr>
+<tr class="row-odd"><td>reportDelete</td>
+<td>Delete the specified report.</td>
+<td>self.reportDelete(&lt;REPORT_UUID&gt;)</td>
+</tr>
+<tr class="row-even"><td>reportHosts</td>
+<td>List of hosts contained in a specified report.</td>
+<td>self.reportHosts(&lt;REPORT_UUID&gt;)</td>
+</tr>
+<tr class="row-odd"><td>reportPorts</td>
+<td>List of ports and the number of findings on each port.</td>
+<td>self.reportPorts(&lt;REPORT_UUID&gt;,&lt;HOSTNAME&gt;)</td>
+</tr>
+<tr class="row-even"><td>reportDetails</td>
+<td>Details of a scan for a given host.</td>
+<td>self.reportDetails(&lt;REPORT_UUID&gt;,&lt;HOSTNAME&gt;,&lt;PORT&gt;,&lt;PROTOCOL&gt;)</td>
+</tr>
+<tr class="row-odd"><td>reportTags</td>
+<td>Tags of a scan for a given host.</td>
+<td>self.reportTags(&lt;REPORT_UUID&gt;, &lt;HOSTNAME&gt;)</td>
+</tr>
+<tr class="row-even"><td>reportAttributesList</td>
+<td>List of filter attributes associated with a given report.</td>
+<td>self.reportAttributesList(&lt;REPORT_UUID&gt;)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 
 
@@ -51,6 +770,36 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Available Plugins in Tortazo</a><ul>
+<li><a class="reference internal" href="#plugins-to-gather-information-and-enumeration-of-hidden-services-and-tor-relays">Plugins to Gather Information and enumeration of hidden services and TOR relays</a><ul>
+<li><a class="reference internal" href="#infogathering">infoGathering</a></li>
+<li><a class="reference internal" href="#stemming">stemming</a></li>
+<li><a class="reference internal" href="#crawler">crawler</a></li>
+<li><a class="reference internal" href="#shodan">shodan</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins-to-pentesting-and-attack-hidden-services-and-tor-relays">Plugins to Pentesting and attack hidden services and TOR relays</a><ul>
+<li><a class="reference internal" href="#bruter">bruter</a></li>
+<li><a class="reference internal" href="#heartbleed">heartBleed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins-for-integration-with-third-party-tools">Plugins for integration with Third-Party tools</a><ul>
+<li><a class="reference internal" href="#w3af">w3af</a></li>
+<li><a class="reference internal" href="#nessus">nessus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="supported_options.html"
+                        title="previous chapter">Supported Switches in Tortazo.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="plugin_development.html"
+                        title="next chapter">Plugin Development in Tortazo</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/available_plugins.txt"
@@ -79,6 +828,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="plugin_development.html" title="Plugin Development in Tortazo"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="supported_options.html" title="Supported Switches in Tortazo."
+             >previous</a> |</li>
         <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

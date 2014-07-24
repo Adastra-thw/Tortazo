@@ -36,13 +36,13 @@ from plugins.bruteforce.bruterPlugin import bruterPlugin
 
 class HiddenSiteSpider(CrawlSpider):
 
-    def __init__(self, localTunnel, onionSite, extractorRules=[r'^/*']):
+    def __init__(self, localTunnel, onionSite, extractorAllowRules=[r'^/*'], extractorDenyRules=['']):
         self.name="TortazoSpider"
         self.onionSite = onionSite
         self.localTunnel = localTunnel
         self.start_urls=[localTunnel]
         self.visitedLinks=[]
-        self._rules = [Rule(LinkExtractor(allow=extractorRules), follow=True, callback=self.parse),]
+        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
 
     def setImages(self, images):
         self.images = images

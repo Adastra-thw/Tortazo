@@ -44,7 +44,8 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.setPluginDetails('deepWebFinderPlugin', 'Basic crawling tasks against web sites in the TOR network', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] deepWebFinderPlugin Initialized!")
-        self.extractorRules=[r'^/*']
+        self.extractorRulesAllow=[r'^/*']
+        self.extractorRulesDeny=[]
         self.crawlRulesLinks = '//a/@href'
         self.crawlRulesImages = '//img/@src'
 
@@ -52,8 +53,11 @@ class deepWebCrawlerPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.debug("[*] DeepWebPlugin Destroyed!")
 
-    def setExtractorRules(self, extractorRules):
-        self.extractorRules = extractorRules
+    def setExtractorRulesAllow(self, extractorRulesAllow):
+        self.extractorRulesAllow = extractorRulesAllow
+
+    def setExtractorRulesDeny(self, extractorRulesDeny):
+        self.extractorRulesDeny = extractorRulesDeny
 
     def setCrawlRulesLinks(self, crawlRulesLinks):
         self.crawlRulesLinks = crawlRulesLinks
@@ -168,7 +172,7 @@ class deepWebCrawlerPlugin(BasePlugin):
             if "http protocol" in error:
                 print "[-] Seems that the hidden service is not responding... Detected HTTP Protocol error. The scrapper could fail."
 
-        spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, hiddenWebSite, self.extractorRules)
+        spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, hiddenWebSite, self.extractorRulesAllow, self.extractorRulesDeny)
         spider.setImages(crawlImages)
         spider.setLinks(crawlLinks)
         spider.setContents(crawlContents)

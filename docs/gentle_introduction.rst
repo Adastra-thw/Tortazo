@@ -5,8 +5,6 @@
 About Tortazo - Gentle Introduction.
 ***************
 
-.. _installing-docdir:
-
 
 What?
 =============================
@@ -68,4 +66,4 @@ Legal Warning!!
 I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool. If you found vulnerabilities or any kind of flaw in any non-malicious exit node of TOR Network, please, send the report to the admin, in this way you can contribute to build solid and secure TOR circuits for all of us.
 
 
-OK, are you ready? Go and read about Tortazo and star to use it :file:`getting_started.rst`
+OK, are you ready? Go and read about Tortazo and star to use it :ref:`getting_started`
