@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gather Information mode. &mdash; Tortazo 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="Botnet mode in Tortazo." href="botnet_mode.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="botnet_mode.html" title="Botnet mode in Tortazo."
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="getting_started.html" title="Getting Started"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gather-information-mode">
+<span id="gathering-information-label"></span><h1>Gather Information mode.<a class="headerlink" href="#gather-information-mode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gather-information-about-exit-relays-in-tor">
+<h2>Gather information about exit relays in TOR<a class="headerlink" href="#gather-information-about-exit-relays-in-tor" title="Permalink to this headline">¶</a></h2>
+<p>This is the simplest mode of execution in Tortazo. In this mode, Tortazo always performs an Nmap scan and the results for every exit node in the Directory Authorities or in the local TOR instance will be stored in the local database used by Tortazo. Below you’ll see various switches to explain how to use the script Tortazo.py. On other hand, is much, much faster to use the local descriptors than to connect with the directory authorities (directly or using mirrors, both connection types are very slow sometimes) also depending on the number of users connected, sometimes the servers are busy and the connections with the directory authorities will fail or will be unstable. Anyways, you can use any method to gather information, but the fact is that the directory authorities have a lot of information about new relays available and the local descriptors have a short set of exit nodes. So, choose wisely your weapon!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">KEEP IN MIND:</p>
+</div>
+<ul class="simple">
+<li>In the new versions of the TOR Client, by default the microdescriptors will be downloaded to compose the circuits. This is good because the circuit construction is much faster, but the information about the relays is very limited. So, if you plan to gather information with Tortazo using the TOR Client, you need to set the &#8220;UseMicrodescriptors&#8221; switch to &#8220;0&#8221; in your torrc file.</li>
+<li>If you want to use the TOR Client to gather information, you&#8217;ll need to open the Control Port to use the Stem Controller (and set a password for security issues) to connect with the local instance and get the server descriptors. Please, check your torrc file.</li>
+<li>The connections with the TOR Authorities could be slow and sometimes unstable.</li>
+<li>You can use all the features included in Nmap, NSE Scripts even, just by using the switch &#8220;-a/&#8211;scan-arguments&#8221;</li>
+<li>If you want to use Shodan, you&#8217;ll need a valid developer key. That value should be written into a file in a single line and use the switches &#8220;&#8211;use-shodan&#8221; and &#8220;&#8211;shodan-key&#8221;</li>
+<li>In botnet mode, Tortazo will not perform connections against TOR (neither local nor remote)</li>
+</ul>
+<div class="section" id="gather-information-examples">
+<h3>Gather information examples.<a class="headerlink" href="#gather-information-examples" title="Permalink to this headline">¶</a></h3>
+<p>Ok, now lets see some examples about the use of Tortazo in this execution mode.</p>
+<p><strong>Show the available Options</strong></p>
+<p>Shows the help banner of Tortazo:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -h
+</pre></div>
+</div>
+<p><strong>Connecting to the Mirror servers of TOR</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities using the mirrors servers (-d / &#8211;use-mirrors).</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose).</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Windows (-m / &#8211;mode windows):</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -d -v -m windows
+python Tortazo.py --use-mirrors --verbose --mode windows
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Connecting to the TOR servers (authorities)</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities directly.</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose)</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux):</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -v -m linux
+python Tortazo.py --verbose --mode linux
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Specify the number of relays to fetch from the descriptors downloaded</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities directly.</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose).</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux)</p>
+</li>
+<li><p class="first">Fetch the first 30 nodes from the list of exit nodes found (this value by default is very short: 10):</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -n 30 -v -m linux
+python Tortazo.py --servers-to-attack 30 --verbose --mode linux
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Custom Nmap scan</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities directly.</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose)</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux)</p>
+</li>
+<li><p class="first">Fetch the first 30 nodes from the list of exit nodes found</p>
+</li>
+<li><p class="first">Perform the Nmap scan with the specified options &#8220;-sSV -A -n&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -n 30 -v -m linux -a &quot;-sSV -A -n&quot;
+python Tortazo.py --servers-to-attack 30 --verbose --mode linux --scan-arguments &quot;-sSV -A -n&quot;
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Connect with an Local instance of TOR.</strong></p>
+<ul>
+<li><p class="first">Connect to the Local instance of TOR and use the ExitNodes stored in the local descriptors (-c / &#8211;use-circuit-nodes)</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose)</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux):</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -v -m linux -c
+python Tortazo.py --verbose --mode linux --use-circuit-nodes
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Specify an relay&#8217;s fingerprint to filter</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities directly.</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose)</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux)</p>
+</li>
+<li><p class="first">Fetch the first 30 nodes from the list of exit nodes found</p>
+</li>
+<li><p class="first">Perform the Nmap scan with the specified options &#8220;-sSV -A -n&#8221;</p>
+</li>
+<li><p class="first">Filter by FingerPrint (-e / &#8211;exit-node-fingerprint):</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -n 30 -v -m linux -a &quot;-sSV -A -n&quot; -e FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
+python Tortazo.py --servers-to-attack 30 --verbose --mode linux --scan-arguments &quot;-sSV -A -n&quot; --exit-node-fingerprint FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Using Shodan to Gather information about the relays found</strong></p>
+<ul>
+<li><p class="first">Connect to the TOR Authorities directly.</p>
+</li>
+<li><p class="first">Enable the &#8220;verbose&#8221; mode (-v / &#8211;verbose)</p>
+</li>
+<li><p class="first">Scan ExitNodes which operative system is Linux (-m / &#8211;mode linux)</p>
+</li>
+<li><p class="first">Fetch the first 30 nodes from the list of exit nodes found</p>
+</li>
+<li><p class="first">Perform the Nmap scan with the specified options &#8220;-sSV -A -n&#8221;</p>
+</li>
+<li><p class="first">Use Shodan (-s  / &#8211;use-shodan) with the specified developer key (-k  /  &#8211;shodan-key). The key must be stored in a text file in a single line:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py -n 30 -v -m linux -a &quot;-sSV -A -n&quot; -s -k /home/developer/shodanKeyFile
+python Tortazo.py --servers-to-attack 30 --verbose --mode linux --scan-arguments &quot;-sSV -A -n&quot; --use-shodan --shodan-key /home/developer/shodanKeyFile
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gather Information mode.</a><ul>
+<li><a class="reference internal" href="#gather-information-about-exit-relays-in-tor">Gather information about exit relays in TOR</a><ul>
+<li><a class="reference internal" href="#gather-information-examples">Gather information examples.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="getting_started.html"
+                        title="previous chapter">Getting Started</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="botnet_mode.html"
+                        title="next chapter">Botnet mode in Tortazo.</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/gatherinfo_tor_nodes.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="botnet_mode.html" title="Botnet mode in Tortazo."
+             >next</a> |</li>
+        <li class="right" >
+          <a href="getting_started.html" title="Getting Started"
+             >previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Adastra.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

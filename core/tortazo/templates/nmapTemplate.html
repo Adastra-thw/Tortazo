@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <title>{{ title }}</title>
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <center>
+    <h1><p class="important">NMAP Report</p></h1>
+	<table style="width:50%">
+		<tr>
+			<td><b>Host</b></td>
+			<td><b>State</b></td>
+			<td><b>Reason</b></td>
+			<td><b>NickName</b></td>
+			<td><b>Ports</b></td>
+		</tr>
+        {% for torNode in nodes: %}
+            <tr>
+                <td>{{ torNode.host }}</td>
+                <td>{{ torNode.state }}</td>
+                <td>{{ torNode.reason }} </td>
+                <td>{{ torNode.nickName }}</td>
+                <td>
+                   <ul>
+                       <li>
+                           <a href="/opened-{{ torNode.host }}/" onclick="return expandir('opened-{{ torNode.host }}');">Open Ports</a>
+                           <div id="opened-{{ torNode.host }}" style="display: none;">
+                               <table  border="0" class="list">
+                                   <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>Port</b></td>
+                                        <td><b>State</b></td>
+                                        <td><b>Reason</b></td>
+                                        <td><b>Version</b></td>
+                                   </tr>
+                                   {% for openPort in torNode.openPorts: %}
+                                        <tr><td>{{ openPort.name }}  </td></tr>
+                                        <tr><td>{{ openPort.port }} </td></tr>
+                                        <tr><td>{{ openPort.state }} </td></tr>
+                                        <tr><td>{{ openPort.reason }} </td></tr>
+                                        <tr><td>{{ openPort.version }} </td></tr>
+                                   {% endfor %}
+                                   {% if torNode.openPorts|length <= 0 %}
+                                       <tr><td>No open ports detected in this target.</td></tr>
+                                   {% endif %}
+                                </table>
+                           </div>
+                       </li>
+                       <li>
+                            <a href="/closed-{{ torNode.host }}/" onclick="return expandir('closed-{{ torNode.host }}');">Closed Ports</a>
+                            <div id="closed-{{ torNode.host }}" style="display: none;">
+                                <table  border="0" class="list">
+                                    <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>Port</b></td>
+                                        <td><b>State</b></td>
+                                        <td><b>Reason</b></td>
+                                        <td><b>Version</b></td>
+                                   </tr>
+                                    {% for cfPort in torNode.closedFilteredPorts: %}
+                                        <tr><td>{{ cfPort.name }}  </td></tr>
+                                        <tr><td>{{ cfPort.port }} </td></tr>
+                                        <tr><td>{{ cfPort.state }} </td></tr>
+                                        <tr><td>{{ cfPort.reason }} </td></tr>
+                                        <tr><td>{{ cfPort.version }} </td></tr>
+                                    {% endfor %}
+                                    {% if torNode.closedFilteredPorts|length <= 0 %}
+                                        <tr><td>No closed or filtered ports detected in this target.</td></tr>
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </li>
+                   </ul>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br />
+    </center>
+{% endblock %}

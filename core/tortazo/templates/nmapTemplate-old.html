@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <title>{{ title }}</title>
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <center>
+    <h1><p class="important"> ==== NMAP Scan Results ==== </p></h1>
+    {% for torNode in nodes: %}
+        <table id="nmapReport">
+            <tr>
+                <td>
+                    <center>
+                        <table border="1">
+                            <tr><td><b> Host: {{ torNode.host }} </b></td></tr>
+                            <tr><td><b> State: {{ torNode.state }} </b></td></tr>
+                            <tr><td><b> Reason: {{ torNode.reason }} </b></td></tr>
+                            <tr><td><b> NickName: {{ torNode.nickName }} </b></td></tr>
+                        </table>
+                    </center>
+                    <center>
+                    <h3> Open Ports </h3>
+                    <table  border="0" class="list">
+                        {% for openPort in torNode.openPorts: %}
+                            <tr><td>Name: {{ openPort.name }}  </td></tr>
+                            <tr><td>Port: {{ openPort.port }} </td></tr>
+                            <tr><td>State: {{ openPort.state }} </td></tr>
+                            <tr><td>Reason: {{ openPort.reason }} </td></tr>
+                            <tr><td>Version: {{ openPort.version }} </td></tr>
+                        {% endfor %}
+                        {% if torNode.openPorts|length <= 0 %}
+                            <tr><td>No open ports detected in this target.</td></tr>
+                        {% endif %}
+                    </table>
+                    </center>
+                    <center>
+                    <h3> Closed or Filtered Ports </h3>
+                    <table  border="0" class="list">
+                        {% for cfPort in torNode.closedFilteredPorts: %}
+                            <tr><td>Name: {{ cfPort.name }}  </td></tr>
+                            <tr><td>Port: {{ cfPort.port }} </td></tr>
+                            <tr><td>State: {{ cfPort.state }} </td></tr>
+                            <tr><td>Reason: {{ cfPort.reason }} </td></tr>
+                            <tr><td>Version: {{ cfPort.version }} </td></tr>
+                        {% endfor %}
+                        {% if torNode.closedFilteredPorts|length <= 0 %}
+                            <tr><td>No closed or filtered ports detected in this target.</td></tr>
+                        {% endif %}
+                    </table>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    {% endfor %}
+    <br />
+    </center>
+{% endblock %}

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plugin Development in Tortazo &mdash; Tortazo 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="FAQs" href="faqs.html" />
+    <link rel="prev" title="Available Plugins in Tortazo" href="available_plugins.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="faqs.html" title="FAQs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="available_plugins.html" title="Available Plugins in Tortazo"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="plugin-development-in-tortazo">
+<h1>Plugin Development in Tortazo<a class="headerlink" href="#plugin-development-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<p>Develop a plugin in Tortazo is a very simple task, which is composed by the following steps:</p>
+<ol class="arabic simple">
+<li>Create a Python file in &lt;TORTAZO_DIR&gt;/plugins/&lt;CATEGORY&gt; where category is the root module which better describes the actions of your plugin (attack, bruteforce, enumeration, infogathering, etc.) In &lt;TORTAZO_DIR&gt;/plugins you’ll see the module “examples” where you can create your Python file to follow this guide.</li>
+</ol>
+<p>2. Open the Python file created in the previous step and create a new class which will extend from the class “core.tortazo.pluginManagement.BasePlugin.BasePlugin”. BasePlugin class defines the elements to integrate Python routines with Tortazo, so every plugin developed in Totazo must be a children class of BasePlugin class. Also, you should define a constructor (__init__) with the parameter “torNodes” which will be used by Tortazo to inject the dataset of relays loaded in the execution context; as probably already you know, that data are the relays found in the current scan perfomed by Tortazo or database records from previous scan, depends on the switches used.
+The following script could be a valid example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">core.tortazo.pluginManagement.BasePlugin</span> <span class="kn">import</span> <span class="n">BasePlugin</span>
+
+<span class="k">class</span> <span class="nc">TestPlugin</span><span class="p">(</span><span class="n">BasePlugin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">torNodes</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="n">BasePlugin</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">torNodes</span><span class="p">,</span> <span class="s">&#39;examplePlugin&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setPluginDetails</span><span class="p">(</span><span class="s">&#39;testPlugin&#39;</span><span class="p">,</span> <span class="s">&#39;Example of a plugin in Tortazo.&#39;</span><span class="p">,</span> <span class="s">&#39;1.0&#39;</span><span class="p">,</span> <span class="s">&#39;Adastra: @jdaanial&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;[*] examplePlugin Initialized!&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;[*]testPlugin Destroyed!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that you should use the function “setPluginDetails” to define the settings for the plugin (name, description, version and author).</p>
+<ol class="arabic" start="3">
+<li><p class="first">Your plugin is almost done. Now you need to register it in Tortazo. Edit the file  &lt;TORTAZO_DIR&gt;/pluginsDeployed.py and add your new plugin in the dict structure defined in the script. You need to add the name for your plugin and the class that you’ve defined in the previous step. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>plugins = {
+#OTHER PLUGINS LOADED IN TORTAZO
+#Now, the definition of your plugin.
+&quot;testingPlugin&quot;: plugins.examples.testing.TestPlugin&quot;
+}
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Assuming that you’ve created the module “testing” inside the module “plugins.examples”, the class “TestPlugin” will be loaded in Tortazo when you use the switch “-P  /  &#8211;use-plugin”. Execute the following command to check if your plugin can be successfully loaded.:</p>
+<div class="highlight-python"><div class="highlight"><pre>python Tortazo.py –v –D –P testingPlugin
+</pre></div>
+</div>
+<p>If you can see the IPython interpreter loaded, you’re done. Your simple plugin is now integrated in Tortazo. Please, note that if your python script has compilation errors, the load process will fail, so you should verify that your program is don’t have any errors before trying to load it in Tortazo.</p>
+<div class="section" id="utilities-in-tortazo-for-plugin-development">
+<h2>Utilities in Tortazo for Plugin Development.<a class="headerlink" href="#utilities-in-tortazo-for-plugin-development" title="Permalink to this headline">¶</a></h2>
+<p>When you create a plugin, the functions declared in that plugin will requiere to access to  hidden services and TOR relays. You can&#8217;t access to any hidden service without a connection with TOR and a Socks proxy up and running. The utilities included in Tortazo manage this issues for you and you can create and start your own TOR instance (with Socks Proxy to browse in the TOR&#8217;S deep web) or indicate to Tortazo that execute an local instance and use the Socks Proxy settings to connect with any hidden service. The main utility to perform connections to SMB, SSH, HTTP, FTP, and other services in the TOR&#8217;s deep web is the attribute “serviceConnector” defined in the class “BasePlugin”. The class “ServiceConnector” includes some functions to performs connections to services in TOR&#8217;s deep web and uses utilities to manage connections like “socat” and “connect-socks”. The functions declared in “ServiceConnector” are the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>startLocalSocatTunnel(self, tcpListen,hiddenServiceAddress,hiddenServicePort, socksPort=&#8216;9150&#8217;)</td>
+<td>Starts a local socat tunnel using the “TCP4-LISTEN” switch. The command executed will have the following format:
+&lt;TORTAZO_INSTALL&gt;/plugins/utils/socat/socat TCP4-LISTEN:&lt;tcp_port&gt;,reuseaddr,fork SOCKS4A:127.0.0.1:&lt;hidden_service_onion_address&gt;:&lt;hidden_service_onion_port&gt;,socksport=&lt;tor_socksport&gt; &amp;</td>
+</tr>
+<tr class="row-odd"><td>anonymousFTPAccess(self,host, port)</td>
+<td>Try to perform an FTP anonymous connection in the host and port specified.</td>
+</tr>
+<tr class="row-even"><td>performFTPConnection(self, host, port, user, passwd)</td>
+<td>Try to perform an FTP connection using the user and password specified.</td>
+</tr>
+<tr class="row-odd"><td>performSSHConnection(self, host, port, user, passwd, brute=False)</td>
+<td>Try to perform an SSH connection using the user and password specified. If the parameter &#8220;brute&#8221; is True, Tortazo will append the connection settings to the tortazo_botnet.bot file.</td>
+</tr>
+<tr class="row-even"><td>performSSHConnectionHiddenService(self, onionService, port, user, passwd)</td>
+<td>Try to perform an SSH connection using the user and password specified against a hidden service.</td>
+</tr>
+<tr class="row-odd"><td>performSNMPConnection(self, host, port=161, community=&#8217;public&#8217;)</td>
+<td>Try to perform an SNMP connection using the community name specified.</td>
+</tr>
+<tr class="row-even"><td>performSMBConnection(self, host=&#8216;127.0.0.1&#8217;, port=139, user=&#8221;&#8221;, passwd=&#8221;&#8221;)</td>
+<td>Try to perform an SMB connection using the user and password specified. If the connection is successful, lists the shared resources in the server.</td>
+</tr>
+<tr class="row-odd"><td>performHTTPAuthConnection(self, url, user, passwd)</td>
+<td>Try to perform an HTTP connection using the user and password specified against an protected resource in the server. This function checks if the resource has Basic or Digest authentication.</td>
+</tr>
+<tr class="row-even"><td>performHTTPConnectionHiddenService(self, onionUrl, headers={}, method=&#8221;GET&#8221;, urlParameters=None, auth=None)</td>
+<td>Try to perform an HTTP connection against a hidden service. The caller of the function could specify headers, url parameters and authentication details as needed.</td>
+</tr>
+<tr class="row-odd"><td>performHTTPConnection(self, siteUrl, headers, method=&#8221;GET&#8221;, urlParameters=None, auth=None)</td>
+<td>Try to perform a HTTP connection against the web site specified. The caller of the function could specify headers, url parameters and authentication details as needed.</td>
+</tr>
+<tr class="row-even"><td>setSocksProxySettings(self, socksHost, socksPort)</td>
+<td>Sets the socks proxy settings. Host and Port where the TOR socks proxy is running.</td>
+</tr>
+<tr class="row-odd"><td>setSocksProxy(self)</td>
+<td>Enable the socks proxy defined by the function “setSocksProxySettings” and allows to route every connection through the TOR socks proxy.</td>
+</tr>
+<tr class="row-even"><td>unsetSocksProxy(self)</td>
+<td>Disable the socks proxy defined by the function “setSocksProxySettings” and allows to perform every connection directly with the service, without using the TOR socks proxy.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plugin Development in Tortazo</a><ul>
+<li><a class="reference internal" href="#utilities-in-tortazo-for-plugin-development">Utilities in Tortazo for Plugin Development.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="available_plugins.html"
+                        title="previous chapter">Available Plugins in Tortazo</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="faqs.html"
+                        title="next chapter">FAQs</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/plugin_development.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="faqs.html" title="FAQs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="available_plugins.html" title="Available Plugins in Tortazo"
+             >previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Adastra.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

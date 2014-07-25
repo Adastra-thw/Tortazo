@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Supported Switches in Tortazo. &mdash; Tortazo 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="Available Plugins in Tortazo" href="available_plugins.html" />
+    <link rel="prev" title="Botnet mode in Tortazo." href="botnet_mode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="available_plugins.html" title="Available Plugins in Tortazo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="botnet_mode.html" title="Botnet mode in Tortazo."
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="supported-switches-in-tortazo">
+<h1>Supported Switches in Tortazo.<a class="headerlink" href="#supported-switches-in-tortazo" title="Permalink to this headline">¶</a></h1>
+<p>The following list is a summary of the core switches supported by Tortazo v1.1 and their usage.</p>
+<div class="section" id="simple-switches">
+<h2>Simple Switches.<a class="headerlink" href="#simple-switches" title="Permalink to this headline">¶</a></h2>
+<p>The following is a list of single switches which doesn’t receive any value. This options allows to activate features in Tortazo.</p>
+<ul class="simple">
+<li><strong>-v  /  &#8211;verbose</strong>: Activates the debug mode. Shows debug, info and error messages. It’s very useful to see a full trace of actions performed by Tortazo and is recommended to use. However, in some cases this option shows many traces, for example, the plugin “BruterPlugin” uses Paramiko library to execute Brute Force attacks against relays and hidden services with an SSH Server up and running and Paramiko shows a very detailed information about every connection when the debug mode is active.</li>
+<li><strong>-b  /  &#8211;brute</strong>: Deprecated in v1.1. Replaced by the plugin “BruterPlugin”. Actually this switch is not supported</li>
+<li><strong>-d  /  &#8211;use-mirrors</strong>: By default, Tortazo uses the authoritative directories of TOR and with this option, Tortazo will perform a connection with the mirrors of the authoritative directories to get the last consensus available.</li>
+<li><strong>-s  /  &#8211;use-shodan</strong>: Allows to use ShodanHQ service to gather information about every relay found (up and running) in the descriptors downloaded from the TOR authorities or their mirrors up and running or stored in database. The switch “-k  /  &#8211;shodan-key” must be specified.</li>
+<li><strong>-c  /  &#8211;use-circuit-nodes</strong>: Instructs to Tortazo to connect to a local instance of TOR through the control port of that instance instead of connect with authoritative directories or their mirrors. Any TOR client (i.e. TorBrowser) will connect with the authoritative directories to download the last consensus and build new virtual circuits with the TOR relays included in the descriptors. Tortazo use the information downloaded by that TOR instance (client) and perform the actions specified by the other switches used. Note that the TOR instance should use the option “UseMicrodescriptors” with the value “0” in the “torrc” file used to start the instance. This is important to Tortazo, because in this way, the TOR instance will download the “Server Descriptors” from the authoritative directories instead of the “Micro Descriptors”. In recent versions of TOR, by default the client will download the “Micro Descriptors” with much less information about the relays in the network, this default behaviour should be overwritten and allows Tortazo to get as much information as he can from the descriptors downloaded.</li>
+<li><strong>-o  /  &#8211;open-shell</strong>: This option is used in “Botnet Mode”, which is activated with the switch “-z   /  &#8211;zombie-mode” and allows to create a new interactive shell with the bot entered by the user.</li>
+<li><strong>-D  /   &#8211;use-database</strong>: Tortazo always store in a SQLite database every scan performed against the relays found in the descriptors downloaded. This switch uses the records stored in database and avoids performing connections to the TOR authoritative directories. The option “-s  /  &#8211;scan-identifier” allows to specify the number of scan and recover the records associated with that scan identifier. The database is located in “&lt;TORTAZO_DIR&gt;/db/tortazo.db”.</li>
+<li><strong>-C  /  &#8211;clean-database</strong>: Deletes every record stored in the database.</li>
+<li><strong>-L / &#8211;list-plugins</strong>: List of plugins loaded in Tortazo. Shows author, description, version, etc.</li>
+<li><strong>-U  / &#8211;use-localinstance</strong>: Tortazo can start a new instance of TOR automatically using the switch “-T  /  &#8211;tor-localinstance”. Use the switch “-U  /  &#8211;use-localinstance” and if you want to use the socks proxy and other settings defined in the instance started by Tortazo.</li>
+</ul>
+</div>
+<div class="section" id="valued-switches">
+<h2>Valued Switches.<a class="headerlink" href="#valued-switches" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>-n  &lt;number_of_relays&gt; /  &#8211;servers-to-attack &lt;number_of_relays&gt;</strong>: The number of relays returned by the TOR authoritative directories usually is very large. The user uses this switch to specify the limit, a maximum number of relays which will be used by Tortazo. The default value is “10” if it’s not specified. Note that 10 relays is a very low value, the user should use this switch and specify a higher value.</li>
+<li><strong>-t  &lt;number_of_threads&gt;/  &#8211;theads&lt;number_of_threads&gt;</strong>: Deprecated in v1.1. Replaced by the plugin “BruterPlugin”. Actually this switch is not supported.</li>
+<li><strong>-m &lt;os&gt;  /  &#8211;mode &lt;os&gt;</strong>: Filter the platform (operative system) of the relay to attack. The accepted values are: &#8220;windows&#8221;, &#8220;linux&#8221;, &#8220;darwin&#8221;, &#8220;freebsd&#8221;, &#8220;openbsd&#8221;, &#8220;bitrig&#8221;,&#8221;netbsd&#8221;. Not case-sensitive.</li>
+<li><strong>-f  &lt;password_file&gt;  /  &#8211;passwords-file &lt;password_file&gt;</strong>: Deprecated in v1.1. Replaced by the plugin “BruterPlugin”. Actually this switch is not supported.</li>
+<li><strong>-k &lt;shodan_key_file&gt;  /  &#8211;shodan-key &lt;shodan_key_file&gt;</strong>:  Used with the “-s  /  &#8211;use-shodan” to perform queries with Shodan using the IP address of the relays found. This switch receives a text file, which contain a unique line with the developer key used by the Shodan API to perform queries. More info: <a class="reference external" href="https://developer.shodan.io/">https://developer.shodan.io/</a></li>
+<li><strong>-l  &lt;list_of_ports&gt;  /  &#8211;list-ports &lt;list_of_ports&gt;</strong>: Comma-separated list of ports to scan with Nmap. The scan internally will use the Nmap switch “-p” to specify this list of ports.</li>
+<li><strong>-a &lt;nmap_arguments&gt;  /  &#8211;scan-arguments &lt;nmap_arguments&gt;</strong>: Specify the arguments used by Nmap to perform every scan on the relays founded.</li>
+<li><strong>-e &lt;relay_fingerprint&gt;  /  &#8211;exit-node-fingerprint</strong>: Specify an fingerprint to filter the exit nodes received in the dataset (Data from descriptors or Data in the local database.) If the fingerprint is not equals to any relay, Tortazo will finish without any result. This option should be used to perform direct attacks against a known exit node.</li>
+<li><strong>-i &lt;controller_port&gt;  /  &#8211;controller-port &lt;controller_port&gt;</strong>: If the user want to perform connections against a TOR local instance to get and parse descriptors, should use the switch “-c  /  &#8211;use-circuit-nodes” as you’ve seen above. However, if the local instance uses a non-default controller port, this switch allows specifying it.</li>
+<li><strong>-z &lt;excluded_bots&gt;  /  &#8211;zombie-mode &lt;excluded_bots&gt;</strong>: Tortazo supports the Botnet mode over SSH. In this mode, Tortazo will read the file “tortazo_botnet.bot” located in “&lt;TORTAZO_DIR&gt;/tortazo_botnet.bot” where every line of the file is a SSH server compromised using the “BruterPlugin” against relays with SSH servers with usernames and passwords easy to guess. This switch enables the Botnet Mode and allows selecting the nicknames that will be excluded. (Nicknames included in the tortazo_botnet.bot). For instance, “-z Nickname1,Nickname2” excludes the bots with nicknames “Nickname1” and “Nickname2” and  “-z all” allows to include all nicknames in the Botnet Mode. In this mode, Tortazo will not perform any kind of query against the TOR authoritative directories, instead will try to execute parallel commands against the bots loaded. The user usually would like to specify the command to execute against the bots using the switch “-r &lt;command&gt;  /  &#8211;run-command &lt;command&gt;” or open an interactive shell with the switch “-o  /  &#8211;open-shell”.</li>
+<li><strong>-P &lt;plugin_name&gt;  /  &#8211;use-plugin &lt;plugin_name&gt;</strong>: Loads the interpreter for the specified plugin. The plugins have a different section and a develop reference that you should check it. The name of the plugin must be registered in Tortazo. The interpreter loaded will contain the functions and elements available in the plugin. This elements will allows the interaction with the plugin and are easily accessible by IPython interpreter.</li>
+<li><strong>-T &lt;path_to_torrc&gt;  /  &#8211;tor-localinstance &lt;path_to_torrc&gt;</strong>: Start a new local TOR instance with the &#8220;torrc&#8221; file specified. Usually, the user will specify the switch “-U  /  &#8211;use-localinstance” too.</li>
+<li><strong>-S  &lt;scan_identifier&gt;  /  &#8211;scan-identifier &lt;scan_identifier&gt;</strong>: Specify the scan identifier in the Scan table. Tortazo will use the relays related with the scan identifier specified with this switch. This switch should be used with the switch “-D  /  &#8211;use-database”.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Supported Switches in Tortazo.</a><ul>
+<li><a class="reference internal" href="#simple-switches">Simple Switches.</a></li>
+<li><a class="reference internal" href="#valued-switches">Valued Switches.</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="botnet_mode.html"
+                        title="previous chapter">Botnet mode in Tortazo.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="available_plugins.html"
+                        title="next chapter">Available Plugins in Tortazo</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/supported_options.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="available_plugins.html" title="Available Plugins in Tortazo"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="botnet_mode.html" title="Botnet mode in Tortazo."
+             >previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Adastra.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

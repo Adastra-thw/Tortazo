@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; Tortazo 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Tortazo 1.1 documentation" href="index.html" />
+    <link rel="next" title="Gather Information mode." href="gatherinfo_tor_nodes.html" />
+    <link rel="prev" title="About Tortazo - Gentle Introduction." href="gentle_introduction.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="gatherinfo_tor_nodes.html" title="Gather Information mode."
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gentle_introduction.html" title="About Tortazo - Gentle Introduction."
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started">
+<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Stem is a powerful library written in Python to perform various operations against TOR Clients and Directory Authorities. The information gathered using Stem could be very useful to an attacker to gather information about the relays available in the TOR network.
+Tortazo is an open source Python Script to gather information about ExitNodes in the TOR Network, perform bruteforce attacks against services like FTP or SSH and create a Botnet with the compromised ExitNodes over SSH among a long list of interesting features.</p>
+<div class="section" id="dependencies">
+<span id="dependencies-label"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>To use Tortazo, you can use the lastest stable relase binary located in &#8220;bin&#8221; directory.
+However, if you want to use the develpment version located in the GIT repository you&#8217;ll need the following dependencies:</p>
+<ul class="simple">
+<li>Paramiko: <a class="reference external" href="https://github.com/paramiko/paramiko">https://github.com/paramiko/paramiko</a></li>
+<li>Python-Nmap <a class="reference external" href="http://xael.org/norman/python/python-nmap/">http://xael.org/norman/python/python-nmap/</a></li>
+<li>Python-shodan: <a class="reference external" href="https://github.com/achillean/shodan-python">https://github.com/achillean/shodan-python</a></li>
+<li>Stem: <a class="reference external" href="https://stem.torproject.org/">https://stem.torproject.org/</a></li>
+<li>Plumbum: <a class="reference external" href="https://pypi.python.org/pypi/plumbum">https://pypi.python.org/pypi/plumbum</a></li>
+<li>Fabric: <a class="reference external" href="http://docs.fabfile.org/en/1.8/">http://docs.fabfile.org/en/1.8/</a></li>
+<li>Requests: <a class="reference external" href="https://pypi.python.org/pypi/requests">https://pypi.python.org/pypi/requests</a></li>
+<li>IPython: <a class="reference external" href="http://ipython.org/">http://ipython.org/</a></li>
+<li>PrettyTable: <a class="reference external" href="https://pypi.python.org/pypi/PrettyTable">https://pypi.python.org/pypi/PrettyTable</a></li>
+<li>pynessus-rest: <a class="reference external" href="https://github.com/Adastra-thw/pynessus-rest">https://github.com/Adastra-thw/pynessus-rest</a></li>
+<li>PySNMP: <a class="reference external" href="http://pysnmp.sourceforge.net/">http://pysnmp.sourceforge.net/</a></li>
+<li>topia.termextract: <a class="reference external" href="https://pypi.python.org/pypi/topia.termextract/">https://pypi.python.org/pypi/topia.termextract/</a></li>
+<li>Jinja2: <a class="reference external" href="http://jinja.pocoo.org/docs/intro/">http://jinja.pocoo.org/docs/intro/</a></li>
+<li>BeautifulSoup: <a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/">http://www.crummy.com/software/BeautifulSoup/</a></li>
+<li>Scrapy: <a class="reference external" href="http://scrapy.org/">http://scrapy.org/</a></li>
+</ul>
+</div>
+<div class="section" id="other-dependencies">
+<h2>Other Dependencies<a class="headerlink" href="#other-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Among the Python libraries needed to use Tortazo, you&#8217;ll need some tools to use plugins or some execution modes in Tortazo.</p>
+<ul class="simple">
+<li>Nmap: Mandatory dependency in Gather Information mode. <a class="reference external" href="http://nmap.org/">http://nmap.org/</a></li>
+<li>Nessus: Mandatory dependency to use Nessus from Tortazo. (NessusPlugin). <a class="reference external" href="http://www.tenable.com/products/nessus/">http://www.tenable.com/products/nessus/</a></li>
+<li>Metasploit Framework: Mandatory dependency to use Metasploit Framework from Tortazo (MetasploitPlugin). <a class="reference external" href="http://www.metasploit.com/">http://www.metasploit.com/</a></li>
+<li>Nikto: Mandatory dependency to use Nikto from Tortazo (NiktoPlugin). <a class="reference external" href="http://www.cirt.net/Nikto2/">http://www.cirt.net/Nikto2/</a></li>
+<li>Nexpose: Mandatory dependency to use Nexpose from Tortazo (NexposePlugin). <a class="reference external" href="https://www.rapid7.com/products/nexpose/">https://www.rapid7.com/products/nexpose/</a></li>
+</ul>
+</div>
+<div class="section" id="use-tortazo-execution-modes">
+<span id="execution-modes-label"></span><h2>Use Tortazo: Execution Modes<a class="headerlink" href="#use-tortazo-execution-modes" title="Permalink to this headline">¶</a></h2>
+<p>There are three execution modes in the current version of Tortazo, each of this allows gathering information from the TOR network and performing attacks against relays and hidden services. The execution modes are the following.</p>
+<div class="section" id="gathering-information">
+<h3>Gathering Information<a class="headerlink" href="#gathering-information" title="Permalink to this headline">¶</a></h3>
+<p>This is the most basic execution mode, which will download the descriptors from the latest consensus generated by the TOR directory authorities and then allows applying some filters on the information downloaded. Finally, launches an Nmap scan against the data filtered identifying open ports and a lot of details about the target, you can use every option included in Nmap scanner, including the Scripting Engine (NSE). The results will be stored in the local database of Tortazo and if you run Tortazo multiple times in this mode, more information you’ll get stored in database. The larger samples of data have more chances of getting positive results against any of the relays registered, so it’s recommended to run Tortazo multiple times.
+Read more about gather information in Tortazo <a class="reference internal" href="gatherinfo_tor_nodes.html#gathering-information-label"><em>Gather Information mode.</em></a></p>
+</div>
+<div class="section" id="botnet-mode">
+<h3>Botnet Mode<a class="headerlink" href="#botnet-mode" title="Permalink to this headline">¶</a></h3>
+<p>This mode is used to execute commands over a set of SSH servers compromised using the bruterPlugin. As you can see in <tt class="file docutils literal"><span class="pre">available_plugins.rst</span></tt> bruterPlugin is used to execute dictionary attacks against multiple services in relays or hidden services. If the dictionary attack against a target is successful, the plugin will write the details of the compromised server in the file &#8220;&lt;TORTAZO_DIR&gt;/tortazo_botnet.bot&#8221;. In this mode, Tortazo will read this to create the bots in the context of the botnet. You can run parallel commands against the entirely botnet or exclude bots to run the commands just over some few machines.
+Read more about Botnet mode in Tortazo <a class="reference internal" href="botnet_mode.html#botnet-mode-label"><em>Botnet mode in Tortazo.</em></a></p>
+</div>
+<div class="section" id="database-mode">
+<h3>Database Mode<a class="headerlink" href="#database-mode" title="Permalink to this headline">¶</a></h3>
+<p>If you have enough information in your database, you can use it to perform direct attacks using some of the available plugins in Tortazo. In this mode, there are no connections to the TOR directory authorities to gather information about the relays that conforms the network, instead of, Tortazo will use the information stored in database.
+Read more about Database mode in Tortazo <a class="reference internal" href="database_mode.html#database-mode-label"><em>Database mode in Tortazo</em></a></p>
+</div>
+</div>
+<div class="section" id="plugins-management">
+<h2>Plugins management<a class="headerlink" href="#plugins-management" title="Permalink to this headline">¶</a></h2>
+<p>The plugins in Tortazo are the best way to integrate external routines written in Python directly in the framework, allowing to any Python developer to write his own tools to perform audits against hidden services and TOR relays. There are various plugins already developed which integrates tools like Nessus, W3AF, Metasploit Framework, among others and custom plugins to perform pentesting activities.
+Read more about the development and usage of plugins in Tortazo <a class="reference internal" href="plugins.html#plugins-management-label"><em>Plugins in Tortazo. Getting started</em></a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#other-dependencies">Other Dependencies</a></li>
+<li><a class="reference internal" href="#use-tortazo-execution-modes">Use Tortazo: Execution Modes</a><ul>
+<li><a class="reference internal" href="#gathering-information">Gathering Information</a></li>
+<li><a class="reference internal" href="#botnet-mode">Botnet Mode</a></li>
+<li><a class="reference internal" href="#database-mode">Database Mode</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plugins-management">Plugins management</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gentle_introduction.html"
+                        title="previous chapter">About Tortazo - Gentle Introduction.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gatherinfo_tor_nodes.html"
+                        title="next chapter">Gather Information mode.</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/getting_started.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="gatherinfo_tor_nodes.html" title="Gather Information mode."
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gentle_introduction.html" title="About Tortazo - Gentle Introduction."
+             >previous</a> |</li>
+        <li><a href="index.html">Tortazo 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Adastra.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

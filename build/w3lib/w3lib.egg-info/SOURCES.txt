@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+w3lib/__init__.py
+w3lib/encoding.py
+w3lib/form.py
+w3lib/html.py
+w3lib/http.py
+w3lib/url.py
+w3lib/util.py
+w3lib.egg-info/PKG-INFO
+w3lib.egg-info/SOURCES.txt
+w3lib.egg-info/dependency_links.txt
+w3lib.egg-info/requires.txt
+w3lib.egg-info/top_level.txt
