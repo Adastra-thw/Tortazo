@@ -1,3 +1,0 @@
-These certificates are used in the test_ssl_certificate.py unittest and
-don't have any real value. They simply trigger different states in the
-sslCertificate.py audit plugin.
