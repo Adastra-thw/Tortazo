@@ -42,7 +42,8 @@ class HiddenSiteSpider(CrawlSpider):
         self.localTunnel = localTunnel
         self.start_urls=[localTunnel]
         self.visitedLinks=[]
-        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
+        #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
+        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), follow=True, callback=self.parse),]
 
     def setImages(self, images):
         self.images = images

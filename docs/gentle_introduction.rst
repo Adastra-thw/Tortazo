@@ -14,7 +14,7 @@ Tortazo is a python tool to perform pentesting activities throught the TOR's dee
 
 How?
 =============================
-Tortazo is written in Python language using a lot of libraries written in Python to perform pentesting activities. This project is almost entirely "I+D" because there's so few tools publicly available in the market focused to pentesting TOR hidden services or even TOR relays. The researching and innovative ideas are much appreciated because, there's a lot of work and thing to implement in Tortazo.
+Tortazo is written in Python language using a lot of libraries written in Python to perform pentesting activities. This project is almost entirely "I+D" because there's so few tools publicly available in the market focused to pentesting TOR hidden services or even TOR relays. The researching and innovative ideas are much appreciated because, there's a lot of work and things to implement in Tortazo.
 
 
 Why?
@@ -66,4 +66,4 @@ Legal Warning!!
 I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool. If you found vulnerabilities or any kind of flaw in any non-malicious exit node of TOR Network, please, send the report to the admin, in this way you can contribute to build solid and secure TOR circuits for all of us.
 
 
-OK, are you ready? Go and read about Tortazo and star to use it :ref:`getting_started`
+OK, are you ready? Go and read about Tortazo and start to use it

@@ -45,7 +45,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         if len(torNodes) > 0:
             self.info("[*] deepWebFinderPlugin Initialized!")
         self.extractorRulesAllow=[r'^/*']
-        self.extractorRulesDeny=[]
+        self.extractorRulesDeny=['']
         self.crawlRulesLinks = '//a/@href'
         self.crawlRulesImages = '//img/@src'
 

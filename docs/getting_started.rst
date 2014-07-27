@@ -6,16 +6,18 @@ Getting Started
 ******************************************
 
 Stem is a powerful library written in Python to perform various operations against TOR Clients and Directory Authorities. The information gathered using Stem could be very useful to an attacker to gather information about the relays available in the TOR network.
-Tortazo is an open source Python Script to gather information about ExitNodes in the TOR Network, perform bruteforce attacks against services like FTP or SSH and create a Botnet with the compromised ExitNodes over SSH among a long list of interesting features.
+Tortazo is an open source Python Script to gather information about ExitNodes in the TOR Network, perform bruteforce attacks against services like FTP or SSH and create a Botnet with the compromised ExitNodes over SSH.
+Tortazo includes a lot of features like the plugins to perform pentesting activities against TOR relays and hidden services in the deep web. In this documentation, you'll see in detail all the features included in Tortazo.
 
 .. _dependencies-label:
 
 =================
-Dependencies
+Instalation and Dependencies
 =================
 To use Tortazo, you can use the lastest stable relase binary located in "bin" directory. 
-However, if you want to use the develpment version located in the GIT repository you'll need the following dependencies:
+However, if you want to use the development version located in the GIT repository you'll need the following dependencies:
 
+* Python 2.6 or higher: http://python.org
 * Paramiko: https://github.com/paramiko/paramiko
 * Python-Nmap http://xael.org/norman/python/python-nmap/
 * Python-shodan: https://github.com/achillean/shodan-python
@@ -31,6 +33,7 @@ However, if you want to use the develpment version located in the GIT repository
 * Jinja2: http://jinja.pocoo.org/docs/intro/
 * BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
 * Scrapy: http://scrapy.org/
+* Simpy:  https://pypi.python.org/pysi/simpy/
 
 =================
 Other Dependencies    
@@ -49,7 +52,7 @@ Among the Python libraries needed to use Tortazo, you'll need some tools to use 
 =================
 Use Tortazo: Execution Modes
 =================
-There are three execution modes in the current version of Tortazo, each of this allows gathering information from the TOR network and performing attacks against relays and hidden services. The execution modes are the following.
+There are four execution modes in the current version of Tortazo, each of this allows gathering information from the TOR network and performing attacks against relays and hidden services. The execution modes are the following.
 
 
 Gathering Information
@@ -59,7 +62,7 @@ Read more about gather information in Tortazo :ref:`gathering-information-label`
 
 Botnet Mode
 =============================
-This mode is used to execute commands over a set of SSH servers compromised using the bruterPlugin. As you can see in :file:`available_plugins.rst` bruterPlugin is used to execute dictionary attacks against multiple services in relays or hidden services. If the dictionary attack against a target is successful, the plugin will write the details of the compromised server in the file "<TORTAZO_DIR>/tortazo_botnet.bot". In this mode, Tortazo will read this to create the bots in the context of the botnet. You can run parallel commands against the entirely botnet or exclude bots to run the commands just over some few machines. 
+This mode is used to execute commands over a set of SSH servers compromised using the "bruter" plugin. As you can see in :ref:`plugins-management-label` bruter plugin is used to execute dictionary attacks against multiple services in relays or hidden services. If the dictionary attack against a SSH server is successful, the plugin will write the details of the compromised server in the file "<TORTAZO_DIR>/tortazo_botnet.bot". In this mode, Tortazo will read this to create the bots in the context of the botnet. You can run parallel commands against the entirely botnet or exclude bots to run the commands just over some machines. 
 Read more about Botnet mode in Tortazo :ref:`botnet-mode-label`
 
 
@@ -74,3 +77,10 @@ Plugins management
 =================
 The plugins in Tortazo are the best way to integrate external routines written in Python directly in the framework, allowing to any Python developer to write his own tools to perform audits against hidden services and TOR relays. There are various plugins already developed which integrates tools like Nessus, W3AF, Metasploit Framework, among others and custom plugins to perform pentesting activities.
 Read more about the development and usage of plugins in Tortazo :ref:`plugins-management-label`
+
+=================
+Repository Mode
+=================
+In this mode, Tortazo will try to generate ONION addresses and then tests if the generated addresses point to a hidden service in the deep web. This process will run indefinitely and the user should use CTRL+C to terminate the process.
+Every onion address is composed by 16 characters and the valid chars are the full alphabet in lowercase and the digits between 2 and 7, as you can imagine, the amount of ONION addresses that could be generated is *VERY, VERY HUGE* and this is why the repository execution mode will not finish in few hours. This could take days or even weeks to generate and test every "possible" onion address. Actually, the execution of this mode, depends *A LOT* of the amount of information that you have about of an onion address and the processing capacity of your machine. If you represents a government, maybe this kind of limitations related to processing capacity are less severe compared with the restrictions of any natural person.
+Read more about the development and usage of plugins in Tortazo :ref:`repo-mode.rst`

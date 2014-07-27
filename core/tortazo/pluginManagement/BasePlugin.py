@@ -22,13 +22,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 import logging as log
+
 from stem.util import term
 from IPython.config.loader import Config
 from IPython.terminal.embed import InteractiveShellEmbed
-import socket
 from prettytable import PrettyTable
-from core.tortazo.pluginManagement.utils.ServiceConnector import ServiceConnector
+
 from core.tortazo.pluginManagement.utils.FuzzDBReader import FuzzDBReader
+from core.tortazo.utils.ServiceConnector import ServiceConnector
+
 
 class BasePlugin():
     '''

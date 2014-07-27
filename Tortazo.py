@@ -25,9 +25,11 @@ from core.tortazo.Discovery import Discovery
 from core.tortazo.BotNet import BotNet
 from core.tortazo.Reporting import Reporting
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
-from core.tortazo.OnionRepository import  RepositoryGenerator
+from core.tortazo.OnionRepository import  OnionRepository, OnionGenerator
+from core.tortazo.utils.ServiceConnector import ServiceConnector
 import config as tortazoConfiguration
 import Queue
+import simpy
 from stem.util import term
 import stem.process
 import logging as log
@@ -87,11 +89,6 @@ class Cli(cli.Application):
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
     useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")
 
-    onionRepositoryMode = cli.Flag(["-R", '--onion-repository'], help="Onion Repository Mode. Tries to discover onion addresses in the TOR network.")
-
-
-
-
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
     scanPorts = "21,22,23,53,69,80,88,110,139,143,161,162,389,443,445,1079,1080,1433,3306,5432,8080,9050,9051,5800" #Default ports used to scan with nmap.
@@ -107,6 +104,7 @@ class Cli(cli.Application):
     scanIdentifier = None
     generatorThreads = 10
     workerThreads = 10
+    onionRepositoryMode = ""
 
     socksHost = None
     socksPort = None
@@ -197,19 +195,12 @@ class Cli(cli.Application):
         '''
         self.scanIdentifier = scanIdentifier
 
-    @cli.switch(["-G", "--generator-threads"], int, requires=["--onion-repository"],  help="Number of threads for the Onion Addresses generator. You should use the switch -R / --onion-repository. Default Value: 10")
-    def generator_threads(self, generatorThreads):
+    @cli.switch(["-R", "--onion-repository"], str, help="Onion Repository Mode. Tries to discover onion addresses in the TOR network.")
+    def onionRepository_mode(self, onionRepositoryMode):
         '''
         Generator Threads. Number of threads used by the generator of onion addresses.
         '''
-        self.generatorThreads = generatorThreads
-
-    @cli.switch(["-W", "--worker-threads"], int, requires=["--onion-repository"],  help="Number of threads for the workers used by the Onion Address generator. You should use the switch -R / --onion-repository. Default Value: 10")
-    def worker_threads(self, workerThreads):
-        '''
-        Generator Threads. Number of threads used by the generator of onion addresses.
-        '''
-        self.workerThreads = workerThreads
+        self.onionRepositoryMode = onionRepositoryMode
 
 
     def logsTorInstance(self, log):
@@ -240,12 +231,25 @@ class Cli(cli.Application):
             self.database.initDatabase()
             self.database.cleanDatabaseState()
 
-        if self.onionRepositoryMode:
+        if self.onionRepositoryMode != "":
             #Tortazo should start a process and the goes to sleep. In this mode should not be other actions to be performed.
             #This switch will invalidate the other switches, just repository mode should be started.
-            repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
-            repository.startGenerator()
-            return
+            # Setup and start the simulation
+            env = simpy.Environment()
+            try:
+                onionRepository = OnionRepository(env, 0)
+                serviceConnector = ServiceConnector(self)
+                onionGenerator =  OnionGenerator(serviceConnector)
+                self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
+                env.process(onionGenerator.sender(env, onionRepository, self.onionRepositoryMode))
+                env.process(onionGenerator.receiver(env, onionRepository))
+                env.run()
+                return
+            except KeyboardInterrupt:
+                print "Interrupted!"
+            #repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
+            #repository.startGenerator()
+            #return
 
         if self.listPlugins:
             print "[*] Plugins list... "
