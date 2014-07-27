@@ -31,7 +31,7 @@ from smb.SMBConnection import SMBConnection
 import logging as log
 import requests
 import socks
-import config
+from config import config
 
 class ServiceConnector():
     '''
@@ -39,8 +39,9 @@ class ServiceConnector():
     '''
 
     def __init__(self, cli):
-        self.socksHost = None
-        self.socksPort = None
+        #Default values for the SOCKS proxy.
+        self.socksHost = '127.0.0.1'
+        self.socksPort = 9150
         self.defaultSocket = socket.socket
         self.cli = None
 
@@ -236,6 +237,7 @@ class ServiceConnector():
 
     def performHTTPConnectionHiddenService(self, onionUrl, headers={}, method="GET", urlParameters=None, auth=None):
         self.setSocksProxy()
+
         if method == "GET":
             return requests.get(onionUrl, headers=headers, auth=auth, params=urlParameters, timeout=config.timeOutRequests)
         elif method == "POST":

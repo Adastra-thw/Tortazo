@@ -29,7 +29,7 @@ from plugins.enumeration.utils.hiddenSitePage import HiddenSitePage
 from scrapy import Request
 from urlparse import urljoin
 import mechanize
-import config
+from config import config
 import os
 import random
 from plugins.bruteforce.bruterPlugin import bruterPlugin

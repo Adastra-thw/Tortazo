@@ -34,7 +34,7 @@ from time import sleep
 import socket
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
-import config
+from config import config
 import  sys
 
 class deepWebCrawlerPlugin(BasePlugin):

@@ -11,5 +11,5 @@ socket.create_connection = create_connection
 
 import requests
 
-res = requests.get("http://j64zkuts3pzpb2me.onion/")
+res = requests.get("http://gnionmnsscpbgu42.onion/")
 print res

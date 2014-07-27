@@ -26,9 +26,6 @@ import string
 
 import simpy
 
-from utils import ServiceConnector
-
-
 charsOnionAddress = '234567' + string.lowercase
 
 def getAddressesQuartet():
@@ -94,7 +91,7 @@ class OnionGenerator:
                 #User enters 12 chars, left 4 chars.
                 loopFromFourthQuartet(onionPartialAddress, getAddressesQuartet(), env, onionRepository)
         else:
-            iteratorQuartetIncomplete = itertools.product(*([charsOnionAddress]*(4-mod)))
+            iteratorQuartetIncomplete = itertools.product(*([charsOnionAddress]*(mod)))
             addressesQuartetIncomplete = list(itertools.islice(iteratorQuartetIncomplete, 0, None))
             if iterations == 0:
                 #User enters between 13 and 15 characters
@@ -117,10 +114,32 @@ class OnionGenerator:
         while True:
             # Get event for message pipe
             onionAddress = yield onionRepository.get()
-            print(' %d ONION: %s' % (env.now, onionAddress ))
-            response = self.serviceConnector.performHTTPConnectionHiddenService("http://"+onionAddress)
-            if response.status_code == 200:
-                print "Found!!"
+            print(' %d ONION: %s' % (env.now, "http://"+onionAddress ))
+            addressRequest = "http://"+onionAddress+"/"
+            print type(addressRequest)
+
+            #response = self.serviceConnector.performHTTPConnectionHiddenService("http://gnionmnsscpbgu42.onion/")
+            import requests
+            try:
+                response = self.serviceConnector.performHTTPConnectionHiddenService(addressRequest)
+                print response
+            except requests.exceptions.Timeout:
+                # Maybe set up for a retry, or continue in a retry loop
+                print "Timeout"
+            except requests.exceptions.TooManyRedirects:
+                #  Tell the user their URL was bad and try a different one
+                print "TooManyRedirects"
+            except requests.exceptions.RequestException as e:
+                # catastrophic error. bail.
+                print e
+            except:
+                print ""
+            #res = requests.get("http://gnionmnsscpbgu4222.onion/")
+            #print res
+
+
+            #if response.status_code == 200:
+            #    print "Found!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 
 
 class OnionRepository(object):

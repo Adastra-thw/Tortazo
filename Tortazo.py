@@ -27,7 +27,7 @@ from core.tortazo.Reporting import Reporting
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
 from core.tortazo.OnionRepository import  OnionRepository, OnionGenerator
 from core.tortazo.utils.ServiceConnector import ServiceConnector
-import config as tortazoConfiguration
+from config import config as tortazoConfiguration
 import Queue
 import simpy
 from stem.util import term

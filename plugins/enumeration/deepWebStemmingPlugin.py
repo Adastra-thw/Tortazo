@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
 from collections import Counter
-import config
+from config import config
 
 class deepWebStemmingPlugin(BasePlugin):
     '''
