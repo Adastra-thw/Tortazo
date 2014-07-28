@@ -11,5 +11,8 @@ socket.create_connection = create_connection
 
 import requests
 
-res = requests.get("http://gnionmnsscpbgu42.onion/")
-print res
+try:
+    res = requests.head("http://gnionmnsscpbgu42.onion/", timeout=2)
+    print res
+except Exception as ex:
+    print ex

@@ -25,17 +25,20 @@ from core.tortazo.Discovery import Discovery
 from core.tortazo.BotNet import BotNet
 from core.tortazo.Reporting import Reporting
 from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
-from core.tortazo.OnionRepository import  OnionRepository, OnionGenerator
+from core.tortazo.OnionRepository import  RepositoryGenerator
 from core.tortazo.utils.ServiceConnector import ServiceConnector
 from config import config as tortazoConfiguration
 import Queue
-import simpy
 from stem.util import term
 import stem.process
 import logging as log
 import sys
 from plumbum import cli
 from time import gmtime, strftime
+from distutils.util import strtobool
+import string
+import random
+from pyfiglet import Figlet
 
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
@@ -88,6 +91,7 @@ class Cli(cli.Application):
     cleanDatabase = cli.Flag(["-C", '--clean-database'], help="Tortazo will delete all records stored in database when finished executing. This option will delete every record stored, included the data from previous scans.")
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
     useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")
+    activateOnionRepositoryMode = cli.Flag(["-R", "--onion-repository"], help="Start Tortazo in Onion Repository Mode.")
 
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
@@ -102,9 +106,9 @@ class Cli(cli.Application):
     pluginManagement = None
     torLocalInstance = None
     scanIdentifier = None
-    generatorThreads = 10
     workerThreads = 10
     onionRepositoryMode = ""
+    validchars ='234567' + string.lowercase
 
     socksHost = None
     socksPort = None
@@ -195,13 +199,27 @@ class Cli(cli.Application):
         '''
         self.scanIdentifier = scanIdentifier
 
-    @cli.switch(["-R", "--onion-repository"], str, help="Onion Repository Mode. Tries to discover onion addresses in the TOR network.")
+    @cli.switch(["-O", "--onionpartial-address"], str, help="Partial address of a hidden service. Used in Onion repository mode.")
     def onionRepository_mode(self, onionRepositoryMode):
         '''
         Generator Threads. Number of threads used by the generator of onion addresses.
         '''
         self.onionRepositoryMode = onionRepositoryMode
 
+    @cli.switch(["-W", "--workers-repository"], int, requires=["--onion-repository"], help="Number of threads used to process the ONION addresses generated.")
+    def workers_repository(self, workers_repository):
+        '''
+        Worker Threads for processing the ONION addresses generated.
+        '''
+        self.workerThreads = workers_repository
+
+
+    @cli.switch(["-V", "--validchars-repository"], str, help="Valid characters to use in the generation process of onion addresses. Default: All characters between a-z and digits between 2-7")
+    def validchars_repository(self, validchars_repository):
+        '''
+        Valid characters to use in the generation process of onion addresses.
+        '''
+        self.validchars = validchars_repository
 
     def logsTorInstance(self, log):
         '''
@@ -212,8 +230,20 @@ class Cli(cli.Application):
 
     def main(self):
         '''
-        Initialization of logger system.
+        Initialization of logger system and banner ascii.
+        http://www.figlet.org/examples.html
         '''
+        fonts = ['slant','doom','avatar', 'barbwire', 'big', 'bigchief', 'binary', 'calgphy2', 'chunky', 'colossal', 'computer','cosmic','cosmike','cyberlarge','digital','doh','dotmatrix',
+                 'drpepper', 'eftitalic','eftiwater','epic','gothic','isometric1','invita', 'isometric2','isometric3', 'isometric4','larry3d', 'lean','linux','madrid','mini','ntgreek', 'ogre'
+                 'poison','puffy','roman','rounded','runyc','script','shadow','slscript','small','speed','standard','starwars','straight','twopoint','univers','weird']
+        bannerTortazo = Figlet(font=random.choice(fonts))
+        print "\n\n"
+        print bannerTortazo.renderText('Tortazo v %s.%s' %(tortazoConfiguration.tortazo_majorversion,tortazoConfiguration.tortazo_minorversion) )
+
+        bannerAuthor = Figlet(font='threepoint')
+        print "\n\n"
+        print bannerAuthor.renderText('By Adastra ' )
+        print bannerAuthor.renderText('@jdaanial \n' )
 
         self.logger = log
         self.exitNodes = []
@@ -231,19 +261,36 @@ class Cli(cli.Application):
             self.database.initDatabase()
             self.database.cleanDatabaseState()
 
-        if self.onionRepositoryMode != "":
+        if self.activateOnionRepositoryMode:
             #Tortazo should start a process and the goes to sleep. In this mode should not be other actions to be performed.
             #This switch will invalidate the other switches, just repository mode should be started.
             # Setup and start the simulation
-            env = simpy.Environment()
             try:
-                onionRepository = OnionRepository(env, 0)
                 serviceConnector = ServiceConnector(self)
-                onionGenerator =  OnionGenerator(serviceConnector)
                 self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
-                env.process(onionGenerator.sender(env, onionRepository, self.onionRepositoryMode))
-                env.process(onionGenerator.receiver(env, onionRepository))
-                env.run()
+                self.logger.info(term.format("[+] Entering in Onion Repository Mode. This process could take a lot of time depending what you know of the hidden service to discover...", term.Color.YELLOW))
+                if len(self.onionRepositoryMode) == 0:
+                    self.logger.warn(term.format("[+] Consider to use the switches -O / --onionpartial-address or -V / --validchars-repository to filter the results. ", term.Color.YELLOW))
+
+                if len(self.onionRepositoryMode) <= 10:
+                    self.logger.warn(term.format("[+] You've entered an address with 10 or less characters [just %s chars]. The number of combinations will be very huge. You'll need a considerable process capacity in this machine and let run this process for hours, days or even weeks! If you're sure, let this process run" %(str(len(self.onionRepositoryMode))), term.Color.YELLOW))
+                    sys.stdout.write('%s [y/n]\n' %('Are you sure?'))
+                    while True:
+                        try:
+                            input = raw_input
+                            if strtobool(input().lower()) == True:
+                                break
+                            else:
+                                return
+                        except NameError:
+                            pass
+                        except ValueError:
+                            sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
+
+                self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.onionRepositoryMode, self.workerThreads)
+                repository.startGenerator()
+                self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 return
             except KeyboardInterrupt:
                 print "Interrupted!"

@@ -1,5 +1,8 @@
 from os.path import expanduser
 import os
+
+tortazo_minorversion=1
+tortazo_majorversion=1
 home = expanduser("~")
 ####
 ####          REPORTING SETTINGS
@@ -89,11 +92,7 @@ socksHost="127.0.0.1"
 #Default Socks Port if TOR has been started with tor-browser.
 # If you start manually TOR using the command "tor -f torrc" the default Socks Port will be 9050. Beware with that!!
 socksPort=9150
-timeOutRequests=5
+timeOutRequests=1
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
-####
-####          REPOSITORY MODE SETTINGS
-####
-minCharsOnionAddress=10

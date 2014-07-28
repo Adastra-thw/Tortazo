@@ -59,7 +59,8 @@ class Socks5AuthError(ProxyError):
 		return repr(self.value)
 
 class Socks5Error(ProxyError):
-	def __init__(self, value):
+	def __init__(self, ordinal, value):
+		self.ordinal = ordinal
 		self.value = value
 
 	def __str__(self):

@@ -34,6 +34,7 @@ However, if you want to use the development version located in the GIT repositor
 * BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
 * Scrapy: http://scrapy.org/
 * Simpy:  https://pypi.python.org/pysi/simpy/
+* PyFiglet:  https://github.com/pwaller/pyfiglet
 
 =================
 Other Dependencies    

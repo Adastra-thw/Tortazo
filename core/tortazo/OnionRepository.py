@@ -21,152 +21,168 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-import itertools
-import string
+import multiprocessing
+import string, itertools
+import requests
 
-import simpy
+#https://mail.python.org/pipermail/tutor/2012-September/091595.html
 
-charsOnionAddress = '234567' + string.lowercase
+#http://simpy.readthedocs.org/en/latest/examples/carwash.html   SEE SIMPY
+#http://simpy.readthedocs.org/en/latest/examples/latency.html
 
-def getAddressesQuartet():
-    iterator = itertools.product(*([charsOnionAddress]*4))
-    return list(itertools.islice(iterator, 0, None))
+class RepositoryGenerator:
 
-def loopFromFirstQuartet( partialAddress, addressFirstQuartet, env, onionRepository):
-    for state, onion1Quartet in enumerate(addressFirstQuartet):
-        for state, onion2Quartet in enumerate(getAddressesQuartet()[0 : ]):
-            for state, onion3Quartet in enumerate(getAddressesQuartet()[0 : ]):
-                for state, onion4Quartet in enumerate(getAddressesQuartet()[0 : ]):
-                    yield env.timeout(1)
-                    onionRepository.put(partialAddress+onion1Quartet+onion2Quartet+onion3Quartet+onion4Quartet+'.onion')
+    def __init__(self, validChars, serviceConnector, partialOnionAddress, threadsForProcessing):
+        self.process = RepositoryProcess(serviceConnector, threadsForProcessing)
+        self.partialOnionAddress = partialOnionAddress
+        self.charsOnionAddress = validChars
+        print "[+] Generator initalized. Using the following chars: %s " %(self.charsOnionAddress)
 
-
-def loopFromSecondQuartet( partialAddress, addressSecondQuartet, env, onionRepository):
-    for state, onion2Quartet in enumerate(addressSecondQuartet[0 : ]):
-        for state, onion3Quartet in enumerate(getAddressesQuartet()[0 : ]):
-            for state, onion4Quartet in enumerate(getAddressesQuartet()[0 : ]):
-                yield env.timeout(1)
-                onionRepository.put(partialAddress+onion2Quartet+onion3Quartet+onion4Quartet+'.onion')
-
-def loopFromThirdQuartet( partialAddress, addressThirdQuartet, env, onionRepository):
-    for state, onion3Quartet in enumerate(addressThirdQuartet[0 : ]):
-        for state, onion4Quartet in enumerate(getAddressesQuartet()[0 : ]):
-            yield env.timeout(1)
-            onionRepository.put(partialAddress+onion3Quartet+onion4Quartet+'.onion')
+    def createProcess(self, onion):
+        process = multiprocessing.Process(target=self.process.onionQueue.put, args=(onion,))
+        process.daemon=True
+        process.start()
+        process.join()
 
 
-def loopFromFourthQuartet( partialAddress, addressFourthQuartet, env, onionRepository):
-    for state, onion4Quartet in enumerate(addressFourthQuartet[0 : ]):
-        yield env.timeout(1)
-        onionRepository.put(partialAddress+onion4Quartet+'.onion')
+    def getAddressesQuartet(self):
+        iterator = itertools.product(*([self.charsOnionAddress]*4))
+        return list(itertools.islice(iterator, 0, None))
 
 
-class OnionGenerator:
+    def loopFromFirstQuartet(self, partialAddress, addressFirstQuartet):
+        for first, onion1Quartet in enumerate(addressFirstQuartet):
+            for second, onion2Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                for thrid, onion3Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                    for fourth, onion4Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                        self.createProcess(partialAddress+(''.join(onion1Quartet))+(''.join(onion2Quartet))+(''.join(onion3Quartet))+(''.join(onion4Quartet))+'.onion')
+        self.process.onionQueue.join()
 
-    def __init__(self, serviceConnector):
-        self.serviceConnector = serviceConnector
+    def loopFromSecondQuartet(self, partialAddress, addressSecondQuartet):
+        for second, onion2Quartet in enumerate(addressSecondQuartet[0 : ]):
+            for thrid, onion3Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                for fourth, onion4Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                    self.createProcess(partialAddress+(''.join(onion2Quartet))+(''.join(onion3Quartet))+(''.join(onion4Quartet))+'.onion')
+        self.process.onionQueue.join()
 
-    def sender(self, env, onionRepository, onionPartialAddress):
-        #A process which randomly generates messages.
-        #  wait for next transmission
-        charsUnknown = (16 - len(onionPartialAddress))
+    def loopFromThirdQuartet(self, partialAddress, addressThirdQuartet):
+        for third, onion3Quartet in enumerate(addressThirdQuartet[0 : ]):
+            for fourth, onion4Quartet in enumerate(self.getAddressesQuartet()[0 : ]):
+                self.createProcess(partialAddress+(''.join(onion3Quartet))+(''.join(onion4Quartet))+'.onion')
+        self.process.onionQueue.join()
+
+
+    def loopFromFourthQuartet(self, partialAddress, addressFourthQuartet):
+        for fourth, onion4Quartet in enumerate(addressFourthQuartet[0 : ]):
+            self.createProcess(partialAddress+(''.join(onion4Quartet))+'.onion')
+        self.process.onionQueue.join()
+
+
+
+    def addressesGenerator(self):
+        charsUnknown = (16 - len(self.partialOnionAddress))
         iterations = charsUnknown / 4
         mod = charsUnknown % 4
-        print charsUnknown
-        print iterations
-        print mod
-
         if mod == 0:
             #Exact quartet.
+            addressesQuartetComplete = self.getAddressesQuartet()
             if iterations == 0:
                 #Full process. The user enters the full onion address (16 chars).
                 print "[+] Entered full address (16 characters). Nothing to found."
             if iterations == 1:
                 #User enters 4 chars, left 12 chars.
-                loopFromSecondQuartet(onionPartialAddress, getAddressesQuartet(), env, onionRepository)
+                self.loopFromSecondQuartet(self.partialOnionAddress, addressesQuartetComplete)
             elif iterations == 2:
                 #User enters 8 chars, left 8 chars.
-                loopFromThirdQuartet(onionPartialAddress, getAddressesQuartet(), env, onionRepository)
+                self.loopFromThirdQuartet(self.partialOnionAddress, addressesQuartetComplete)
             elif iterations == 3:
                 #User enters 12 chars, left 4 chars.
-                loopFromFourthQuartet(onionPartialAddress, getAddressesQuartet(), env, onionRepository)
+                self.loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetComplete)
         else:
-            iteratorQuartetIncomplete = itertools.product(*([charsOnionAddress]*(mod)))
+            iteratorQuartetIncomplete = itertools.product(*([self.charsOnionAddress]*(mod)))
             addressesQuartetIncomplete = list(itertools.islice(iteratorQuartetIncomplete, 0, None))
             if iterations == 0:
                 #User enters between 13 and 15 characters
-                #loopFromFourthQuartet(onionPartialAddress, addressesQuartetIncomplete, env, onionRepository)
-                for state, onion4Quartet in enumerate(addressesQuartetIncomplete[0 : ]):
+                self.loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
+                '''for state, onion4Quartet in enumerate(addressesQuartetIncomplete[0 : ]):
                     yield env.timeout(1)
-                    onionRepository.put(onionPartialAddress +  "".join(onion4Quartet) + '.onion')
+                    onionRepository.put(onionPartialAddress + "".join(onion4Quartet) + '.onion')
+                '''
             elif mod == 1:
                 #User enters between 9 and 11 characters
-                loopFromThirdQuartet(onionPartialAddress, addressesQuartetIncomplete, env, onionRepository)
+                self.loopFromThirdQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
             elif mod == 2:
                 #User enters between 5 and 7 characters
-                loopFromSecondQuartet(onionPartialAddress, addressesQuartetIncomplete, env, onionRepository)
+                self.loopFromSecondQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
             elif mod == 3:
                 #User enters between 1 and 3 characters
-                loopFromFirstQuartet(onionPartialAddress, addressesQuartetIncomplete, env, onionRepository)
+                self.loopFromFirstQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
 
-    def receiver(self, env, onionRepository):
-        #A process which consumes messages.
-        while True:
-            # Get event for message pipe
-            onionAddress = yield onionRepository.get()
-            print(' %d ONION: %s' % (env.now, "http://"+onionAddress ))
-            addressRequest = "http://"+onionAddress+"/"
-            print type(addressRequest)
 
-            #response = self.serviceConnector.performHTTPConnectionHiddenService("http://gnionmnsscpbgu42.onion/")
-            import requests
+    def startGenerator(self):
+        self.process.startProcess()
+        self.addressesGenerator()
+
+
+
+
+class RepositoryProcess:
+
+    def __init__(self, serviceConnector, threads):
+        self.serviceConnector = serviceConnector
+        #Reads the previous state of scan of onion urls.
+        print "Starting multiprocess."
+        print "Number of CPUs available in the system: ",multiprocessing.cpu_count()
+        self.threads = threads
+        '''
+        import socks
+        import socket
+        def create_connection(address, timeout=2, source_address=None):
+            sock = socks.socksocket()
+            sock.connect(address)
+            return sock
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
+        socket.socket = socks.socksocket
+        socket.create_connection = create_connection
+        '''
+
+    def startProcess(self):
+        self.onionQueue=multiprocessing.JoinableQueue()
+        for i in range(self.threads):
             try:
-                response = self.serviceConnector.performHTTPConnectionHiddenService(addressRequest)
-                print response
-            except requests.exceptions.Timeout:
-                # Maybe set up for a retry, or continue in a retry loop
-                print "Timeout"
-            except requests.exceptions.TooManyRedirects:
-                #  Tell the user their URL was bad and try a different one
-                print "TooManyRedirects"
-            except requests.exceptions.RequestException as e:
-                # catastrophic error. bail.
-                print e
+                proc = multiprocessing.Process(target=self.processOnionUrl)
+                proc.daemon=True
+                proc.start()
             except:
-                print ""
-            #res = requests.get("http://gnionmnsscpbgu4222.onion/")
-            #print res
-
-
-            #if response.status_code == 200:
-            #    print "Found!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-
-
-class OnionRepository(object):
-    def __init__(self, env, delay):
-        self.env = env
-        self.delay = delay
-        self.store = simpy.Store(env)
-
-    def latency(self, value):
-        yield self.env.timeout(self.delay)
-        self.store.put(value)
-
-    def put(self, value):
-        self.env.process(self.latency(value))
-
-    def get(self):
-        return self.store.get()
+                print "Interrupt"
+                proc.terminate()
+        self.onionQueue.join()
 
 
 
-'''
-if __name__ == "__main__":
-    env = simpy.Environment()
-    onionRepository = OnionRepository(env, 0)
-    onionGenerator =  OnionGenerator()
-    onion = "gnionmnsscpbgu4"
-    env.process(onionGenerator.sender(env, onionRepository, onion))
-    env.process(onionGenerator.receiver(env, onionRepository))
-    env.run()
-'''
+    def processOnionUrl(self):
+        while True:
+            onionUrl = self.onionQueue.get()
+            #HEAD REQUEST TO THE ONION SITE!!!
+            #http://twistedmatrix.com/documents/current/web/howto/client.html
+            #http://pythonquirks.blogspot.com.es/2011/04/twisted-asynchronous-http-request.html
+
+            httpAddress = "http://"+(''.join(onionUrl))+"/"
+
+            try:
+                response = self.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
+                print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
+            except requests.exceptions.Timeout as timeout:
+                print timeout
+            except Exception as exc:
+                pass
+
+            #time.sleep(5)
+            self.onionQueue.task_done()
+
+
+
+if __name__ == '__main__':
+    #r = RepositoryGenerator(0, "gnionmnsscpbgu4", 10, 10)
+    r = RepositoryGenerator(0, "vp5de356iyuvcwq", 10, 10)
+    r.startGenerator()
