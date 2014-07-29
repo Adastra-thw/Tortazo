@@ -45,6 +45,8 @@ class TortazoDatabase:
         self.connection.execute(database.createTableTorNodeData)
         self.connection.execute(database.createTableTorNodePort)
         self.connection.execute(database.createTableScan)
+        self.connection.execute(database.createTableOnionRepositoryProgress)
+        self.connection.execute(database.createTableOnionRepositoryResponses)
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -151,6 +153,24 @@ class TortazoDatabase:
             print e.__doc__
             print e.message
             print "Unexpected error:", sys.exc_info()[0]
+
+
+    def insertOnionRepositoryResult(self, onionAddress, responseCode, responseHeaders ):
+        if self.cursor is None:
+            self.initDatabase()
+        responseHiddenService = (onionAddress, responseCode, responseHeaders)
+        self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
+        self.connection.commit()
+
+    def searchOnionRepositoryProgress(self, partialOnionAddress):
+        if self.cursor is None:
+            self.initDatabase()
+        self.cursor.execute(database.selectOnionRepositoryProgress, (partialOnionAddress,))
+        if self.cursor.fetchone() == None:
+            return (0, datetime.now(), 0, 0, 0, 0)
+        id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet = self.cursor.fetchone()
+        return (id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet)
+
 
 
 ################################################################################################################################################
