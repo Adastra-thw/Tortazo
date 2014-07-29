@@ -32,10 +32,11 @@ import requests
 
 class RepositoryGenerator:
 
-    def __init__(self, validChars, serviceConnector, partialOnionAddress, threadsForProcessing):
-        self.process = RepositoryProcess(serviceConnector, threadsForProcessing)
+    def __init__(self, validChars, serviceConnector, databaseConnection, partialOnionAddress, threadsForProcessing):
+        self.process = RepositoryProcess(serviceConnector, databaseConnection, threadsForProcessing)
         self.partialOnionAddress = partialOnionAddress
         self.charsOnionAddress = validChars
+        self.databaseConnection = databaseConnection
         print "[+] Generator initalized. Using the following chars: %s " %(self.charsOnionAddress)
 
     def createProcess(self, onion):
@@ -145,26 +146,18 @@ class RepositoryGenerator:
 
 class RepositoryProcess:
 
-    def __init__(self, serviceConnector, threads):
+    def __init__(self, serviceConnector, databaseConnection, threads):
         self.serviceConnector = serviceConnector
         #Reads the previous state of scan of onion urls.
         print "Starting multiprocess."
         print "Number of CPUs available in the system: ",multiprocessing.cpu_count()
         self.threads = threads
-        '''
-        import socks
-        import socket
-        def create_connection(address, timeout=2, source_address=None):
-            sock = socks.socksocket()
-            sock.connect(address)
-            return sock
-        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
-        socket.socket = socks.socksocket
-        socket.create_connection = create_connection
-        '''
+        self.databaseConnection = databaseConnection
 
     def startProcess(self):
         self.onionQueue=multiprocessing.JoinableQueue()
+        self.onionQueueResponses=multiprocessing.JoinableQueue()
+        
         for i in range(self.threads):
             try:
                 proc = multiprocessing.Process(target=self.processOnionUrl)
@@ -175,6 +168,15 @@ class RepositoryProcess:
                 proc.terminate()
         self.onionQueue.join()
 
+        for i in range(self.threads):
+            try:
+                proc = multiprocessing.Process(target=self.saveAddressDetails)
+                proc.daemon=True
+                proc.start()
+            except:
+                print "Interrupt"
+                proc.terminate()
+        self.onionQueueResponses.join()
 
 
     def processOnionUrl(self):
@@ -198,8 +200,20 @@ class RepositoryProcess:
             self.onionQueue.task_done()
 
 
+    def saveAddressDetails(self):
+        while True:
+            response = self.onionQueueResponses.get()
+            #Save address details in database.
+            #Table: OnionRepositoryProgess.        PartialOnionAddress, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet
+            #Table: OnionRepositoryResponses.      OnionAddress, httpcode, headers
+            self.databaseConnection.initDatabase()
+            try:
+                
+                print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
+            except requests.exceptions.Timeout as timeout:
+                print timeout
+            except Exception as exc:
+                pass
 
-if __name__ == '__main__':
-    #r = RepositoryGenerator(0, "gnionmnsscpbgu4", 10, 10)
-    r = RepositoryGenerator(0, "vp5de356iyuvcwq", 10, 10)
-    r.startGenerator()
+            #time.sleep(5)
+            self.onionQueueResponses.task_done()

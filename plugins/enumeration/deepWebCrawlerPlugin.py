@@ -1,6 +1,5 @@
-# coding=utf-8
 '''
-Created on 22/01/2014
+Created on 20/06/2014
 
 #Author: Adastra.
 #twitter: @jdaanial
@@ -204,19 +203,17 @@ class deepWebCrawlerPlugin(BasePlugin):
                 print "[-] Seems that an error occurred while inserting or querying the page %s in database. Images and forms not saved." %(page['url'])
 
         
-    def findGeoLocationByIP(self):
-        pass
-
-
     def help(self):
         print "[*] Functions availaible available in the Plugin..."
         tableHelp = PrettyTable(["Function", "Description", "Example"])
         tableHelp.padding_width = 1
         tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['compareRelaysWithHiddenWebSite', ''])
-        tableHelp.add_row(['crawlImagesHiddenWebSite', ''])
-        tableHelp.add_row(['crawlLinksHiddenWebSite', ''])
-        tableHelp.add_row(['crawlContentsHiddenWebSite', ''])
-        tableHelp.add_row(['findGeoLocationByIP', ''])
+        tableHelp.add_row(['setExtractorRulesAllow', 'Sets the XPATH rules to specify the allowed pages to visit and analyze. This value will be passed to the "allow" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor".', "self.setExtractorRulesAllow('index\.php| index\.jsp')"])
+        tableHelp.add_row(['setExtractorRulesDeny', 'Sets the XPATH rules to specify the disallowed pages to visit and analyze. This value will be passed to the "deny" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor"', "self.setExtractorRulesDeny('index\.php| index\.jsp')"])
+        tableHelp.add_row(['setCrawlRulesLinks', 'Sets the XPath rules to extract links from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//a/@href"', "self.setCrawlRulesLinks('//a[contains(@href, 'confidential')]/@href')"])
+        tableHelp.add_row(['setCrawlRulesImages', 'Sets the XPath rules to extract images from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//img/@src"', "self.setCrawlRulesImages('//a[contains(@href, 'image')]/@href')" ])
+        tableHelp.add_row(['compareWebSiteWithHiddenWebSite', 'This function compares the contents of a website in clear web with the contents of a web site in TOR’s deep web. The return value will be a percent of correlation and similitude between both sites.', 'self.compareWebSiteWithHiddenWebSite("http://exit-relay-found.com/", "http://gai12dase4sw3f5a.onion/")'])
+        tableHelp.add_row(['compareRelaysWithHiddenWebSite', 'This function will perform an HTTP connection against every relay found and if the response is a HTTP 200 status code, performs an HTTP connection against the hidden service specified and compares the contents of both responses.  The return value will be a percent of correlation and similitude between both sites.', 'self.compareRelaysWithHiddenWebSite("http://gai12dase4sw3f5a.onion/")'])
+        tableHelp.add_row(['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value: True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found.  crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/") -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False) -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)'])
+        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
         print tableHelp

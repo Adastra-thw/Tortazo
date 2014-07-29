@@ -1,4 +1,3 @@
-# coding=utf-8
 '''
 Created on 22/01/2014
 
@@ -23,6 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import sqlite3
 from config import database
+from config import databasePlugins
 from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
 from datetime import datetime
 import sys
@@ -45,6 +45,16 @@ class TortazoDatabase:
         self.connection.execute(database.createTableTorNodeData)
         self.connection.execute(database.createTableTorNodePort)
         self.connection.execute(database.createTableScan)
+
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
+####                                                                                                                                        ####
+####          DATABASE FUNCTIONS FOR INFO. GATERHING MODE                                                                                   ####
+####                                                                                                                                        ####
+################################################################################################################################################
+################################################################################################################################################
+################################################################################################################################################
 
     def searchExitNodes(self, numberOfScans, scanIdentifier):
         if self.cursor is None:
@@ -126,7 +136,8 @@ class TortazoDatabase:
             self.cursor.execute(database.truncateTorNodePort)
             self.cursor.execute(database.truncateTorNodeData)
             self.cursor.execute(database.truncateTorScan)
-            self.cursor.execute(database.truncateTorScan)
+            self.cursor.execute(database.truncateOnionRepositoryProgress)
+            self.cursor.execute(database.truncateOnionRepositoryResponses)
 
             #DeepWebPlugin tables.
             self.cursor.execute(database.truncateCrawlerPluginFormControl)
@@ -141,6 +152,7 @@ class TortazoDatabase:
             print e.message
             print "Unexpected error:", sys.exc_info()[0]
 
+
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
@@ -154,11 +166,11 @@ class TortazoDatabase:
     def initDatabaseDeepWebCrawlerPlugin(self):
         if self.connection is None:
             self.connect()
-        self.connection.execute(database.createTableCrawlerPluginPage)
-        self.connection.execute(database.createTableCrawlerPluginImage)
-        self.connection.execute(database.createTableCrawlerPluginPageImage)
-        self.connection.execute(database.createTableCrawlerPluginForm)
-        self.connection.execute(database.createTableCrawlerPluginFormControl)
+        self.connection.execute(databasePlugins.createTableCrawlerPluginPage)
+        self.connection.execute(databasePlugins.createTableCrawlerPluginImage)
+        self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage)
+        self.connection.execute(databasePlugins.createTableCrawlerPluginForm)
+        self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl)
 
 
     def insertPage(self, page):
@@ -187,7 +199,7 @@ class TortazoDatabase:
             else:
                 pageParentId = self.insertPage(pageParent)
         data = (title, url, pageParentId, body, str(headers))
-        self.cursor.execute(database.insertCrawlerPluginPage, data )
+        self.cursor.execute(databasePlugins.insertCrawlerPluginPage, data )
         linkId = self.cursor.lastrowid
         self.connection.commit()
         return linkId
@@ -198,13 +210,13 @@ class TortazoDatabase:
         if page.has_key('imagesSrc'):
             for image in page['imagesSrc']:
 
-                self.cursor.execute(database.existsImageByPage, (image,pageId))
+                self.cursor.execute(databasePlugins.existsImageByPage, (image,pageId))
                 if self.cursor.fetchone()[0] > 0:
                     continue
                 else:
-                    self.cursor.execute(database.insertCrawlerPluginImage, (image, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginImage, (image, ) )
                     imageId = self.cursor.lastrowid
-                    self.cursor.execute(database.insertCrawlerPluginPageImage, (pageId, imageId, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageImage, (pageId, imageId, ) )
         self.connection.commit()
 
     def insertForms(self, page, pageId):
@@ -213,21 +225,21 @@ class TortazoDatabase:
 
         if page.has_key('forms'):
             for formName in page['forms'].keys():
-                self.cursor.execute(database.existsFormByPage, (formName, pageId, ))
+                self.cursor.execute(databasePlugins.existsFormByPage, (formName, pageId, ))
                 if self.cursor.fetchone()[0] > 0:
                     continue
-                self.cursor.execute(database.insertCrawlerPluginPageForm, (formName, pageId, ) )
+                self.cursor.execute(databasePlugins.insertCrawlerPluginPageForm, (formName, pageId, ) )
                 formId = self.cursor.lastrowid
                 for control in page['forms'][formName]:
                     (controlName, controlType, controlValue) = control
-                    self.cursor.execute(database.insertCrawlerPluginPageFormControl, (formId, controlName, controlType, controlValue, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControl, (formId, controlName, controlType, controlValue, ) )
         self.connection.commit()
 
     def existsPageByUrl(self, url):
         if self.cursor is None:
             self.initDatabase()
         if url is not None:
-            self.cursor.execute(database.existsPageByUrl, (url,))
+            self.cursor.execute(databasePlugins.existsPageByUrl, (url,))
             if self.cursor.fetchone()[0] > 0:
                 return True
         return False
@@ -236,7 +248,7 @@ class TortazoDatabase:
         if self.cursor is None:
             self.initDatabase()
         if url is not None:
-            self.cursor.execute(database.searchPageByUrl, (url,))
+            self.cursor.execute(databasePlugins.searchPageByUrl, (url,))
             pageId = self.cursor.fetchone()[0]
             return pageId
         return None

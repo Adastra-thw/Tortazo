@@ -40,6 +40,7 @@ import string
 import random
 from pyfiglet import Figlet
 
+#
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
 #  ╚══██╔══╝██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══███╔╝██╔═══██╗
 #     ██║   ██║   ██║██████╔╝   ██║   ███████║  ███╔╝ ██║   ██║
@@ -288,7 +289,7 @@ class Cli(cli.Application):
                             sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
 
                 self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.onionRepositoryMode, self.workerThreads)
+                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
                 repository.startGenerator()
                 self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 return
