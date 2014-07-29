@@ -234,7 +234,7 @@ class Cli(cli.Application):
         http://www.figlet.org/examples.html
         '''
         fonts = ['slant','doom','avatar', 'barbwire', 'big', 'bigchief', 'binary', 'calgphy2', 'chunky', 'colossal', 'computer','cosmic','cosmike','cyberlarge','digital','doh','dotmatrix',
-                 'drpepper', 'eftitalic','eftiwater','epic','gothic','isometric1','invita', 'isometric2','isometric3', 'isometric4','larry3d', 'lean','linux','madrid','mini','ntgreek', 'ogre'
+                 'drpepper', 'eftitalic','eftiwater','epic','gothic','isometric1','invita', 'isometric2','isometric3', 'isometric4','larry3d', 'lean','linux','madrid','mini','ntgreek', 'ogre',
                  'poison','puffy','roman','rounded','runyc','script','shadow','slscript','small','speed','standard','starwars','straight','twopoint','univers','weird']
         bannerTortazo = Figlet(font=random.choice(fonts))
         print "\n\n"

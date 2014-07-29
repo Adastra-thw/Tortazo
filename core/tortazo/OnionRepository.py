@@ -78,43 +78,60 @@ class RepositoryGenerator:
         self.process.onionQueue.join()
 
 
-
+    # TODO:
+    # Almacenar en base de datos las respuestas positivas. Intentar implementar otra Queue y otro grupo de hilos para meter ahí las respuestas de los Hidden services descubiertos.
+    # Manejar el estado de los procesos guardando en base de datos el nivel de iteración junto con su correspondiente "partialAddress" y conjunto de caracteres ingresados por el usuarios. Esos dos valores serán claves compuestas y permitirán reanudar el proceso.
     def addressesGenerator(self):
         charsUnknown = (16 - len(self.partialOnionAddress))
         iterations = charsUnknown / 4
         mod = charsUnknown % 4
+
+        print iterations, mod
         if mod == 0:
             #Exact quartet.
             addressesQuartetComplete = self.getAddressesQuartet()
             if iterations == 0:
-                #Full process. The user enters the full onion address (16 chars).
+                #The user enters the full onion address (16 chars).
                 print "[+] Entered full address (16 characters). Nothing to found."
+                return
             if iterations == 1:
-                #User enters 4 chars, left 12 chars.
-                self.loopFromSecondQuartet(self.partialOnionAddress, addressesQuartetComplete)
+                #User enters 12 chars, left 4 chars.
+                #print "User enters 12 chars, left 4 chars."
+                self.loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetComplete)
             elif iterations == 2:
+                #print "User enters 8 chars, left 8 chars."
                 #User enters 8 chars, left 8 chars.
                 self.loopFromThirdQuartet(self.partialOnionAddress, addressesQuartetComplete)
             elif iterations == 3:
-                #User enters 12 chars, left 4 chars.
-                self.loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetComplete)
+                #print "User enters 4 chars, left 12 chars."
+                #User enters 4 chars, left 12 chars.
+                self.loopFromSecondQuartet(self.partialOnionAddress, addressesQuartetComplete)
+            elif iterations == 4:
+                #print "User enters 0 chars, left 16 chars."
+                #User enters 4 chars, left 12 chars.
+                self.loopFromFirstQuartet(self.partialOnionAddress, addressesQuartetComplete)
+
         else:
             iteratorQuartetIncomplete = itertools.product(*([self.charsOnionAddress]*(mod)))
             addressesQuartetIncomplete = list(itertools.islice(iteratorQuartetIncomplete, 0, None))
             if iterations == 0:
+                #print "User enters between 13 and 15 characters"
                 #User enters between 13 and 15 characters
                 self.loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
                 '''for state, onion4Quartet in enumerate(addressesQuartetIncomplete[0 : ]):
                     yield env.timeout(1)
                     onionRepository.put(onionPartialAddress + "".join(onion4Quartet) + '.onion')
                 '''
-            elif mod == 1:
+            elif iterations == 1:
+                #print "User enters between 9 and 11 characters"
                 #User enters between 9 and 11 characters
                 self.loopFromThirdQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
-            elif mod == 2:
+            elif iterations == 2:
+                #print "User enters between 5 and 7 characters"
                 #User enters between 5 and 7 characters
                 self.loopFromSecondQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
-            elif mod == 3:
+            elif iterations == 3:
+                #print "User enters between 1 and 3 characters"
                 #User enters between 1 and 3 characters
                 self.loopFromFirstQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
 
