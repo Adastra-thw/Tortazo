@@ -162,14 +162,36 @@ class TortazoDatabase:
         self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
         self.connection.commit()
 
-    def searchOnionRepositoryProgress(self, partialOnionAddress):
+    def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
         if self.cursor is None:
             self.initDatabase()
-        self.cursor.execute(database.selectOnionRepositoryProgress, (partialOnionAddress,))
-        if self.cursor.fetchone() == None:
+        self.cursor.execute(database.selectOnionRepositoryProgress, (partialOnionAddress, validChars))
+        values = self.cursor.fetchone()
+        if values == None:
             return (0, datetime.now(), 0, 0, 0, 0)
-        id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet = self.cursor.fetchone()
+        id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet = values
         return (id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet)
+
+
+    def insertOnionRepositoryProgress(self, onionAddress, validChars, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet, finished=False):
+        endDate = None
+        if finished:
+            endDate = datetime.now()
+
+        if self.cursor is None:
+            self.initDatabase()
+
+        self.cursor.execute(database.selectOnionRepositoryProgress, (onionAddress, validChars) )
+
+        values = self.cursor.fetchone()
+        if values is not None:
+            progressId = values[0]
+            if progressId > 0:
+                self.cursor.execute(database.updateOnionRepositoryProgress, (endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet, progressId))
+        else:
+            self.cursor.execute(database.insertOnionRepositoryProgress, (onionAddress, validChars, datetime.now(), endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet))
+        self.connection.commit()
+
 
 
 

@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 import multiprocessing
 import string, itertools
 import requests
+import random
 
 #https://mail.python.org/pipermail/tutor/2012-September/091595.html
 
@@ -42,10 +43,14 @@ class RepositoryGenerator:
         self.progressSecondQuartet = 0
         self.progressThirdQuartet = 0
         self.progressFourthQuartet = 0
-        (self.idProgress, self.startDateProgress, self.progressFirstQuartet, self.progressSecondQuartet, self.progressThirdQuartet, self.progressFourthQuartet) = self.databaseConnection.searchOnionRepositoryProgress(partialOnionAddress)
-
+        if partialOnionAddress.lower() != 'random':
+            (self.idProgress, self.startDateProgress, self.progressFirstQuartet, self.progressSecondQuartet, self.progressThirdQuartet, self.progressFourthQuartet) = self.databaseConnection.searchOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress)
+            print "[+] Incremental Generator initialized. Using the following chars: %s " %(self.charsOnionAddress)
+        else:
+            print "[+] Random Generator initialized ... "
         self.process = RepositoryProcess(self, threadsForProcessing)
-        print "[+] Generator initalized. Using the following chars: %s " %(self.charsOnionAddress)
+        self.finishedScan = False
+
 
     def __createProcess(self, onion):
         process = multiprocessing.Process(target=self.process.onionQueue.put, args=(onion,))
@@ -72,6 +77,7 @@ class RepositoryGenerator:
             self.progressFirstQuartet = self.progressFirstQuartet + (first+1)
             self.progressSecondQuartet = 0
         self.process.onionQueue.join()
+        self.finishedScan = True
 
     def __loopFromSecondQuartet(self, partialAddress, addressSecondQuartet):
         for second, onion2Quartet in enumerate(addressSecondQuartet[self.progressSecondQuartet : ]):
@@ -84,6 +90,7 @@ class RepositoryGenerator:
             self.progressSecondQuartet = self.progressSecondQuartet + (second+1)
             self.progressThirdQuartet = 0
         self.process.onionQueue.join()
+        self.finishedScan = True
 
     def __loopFromThirdQuartet(self, partialAddress, addressThirdQuartet):
         for thrid, onion3Quartet in enumerate(addressThirdQuartet[self.progressThirdQuartet : ]):
@@ -93,18 +100,26 @@ class RepositoryGenerator:
             self.progressThirdQuartet = self.progressThirdQuartet + (thrid +1)
             self.progressFourthQuartet = 0
         self.process.onionQueue.join()
+        self.finishedScan = True
 
 
     def __loopFromFourthQuartet(self, partialAddress, addressFourthQuartet):
         for fourth, onion4Quartet in enumerate(addressFourthQuartet[self.progressFourthQuartet : ]):
             self.__createProcess(partialAddress+(''.join(onion4Quartet))+'.onion')
             self.progressFourthQuartet = self.progressFourthQuartet+1
-
         self.process.onionQueue.join()
-    # TODO:
-    # Almacenar en base de datos las respuestas positivas. Intentar implementar otra Queue y otro grupo de hilos para meter ahí las respuestas de los Hidden services descubiertos.
-    # Manejar el estado de los procesos guardando en base de datos el nivel de iteración junto con su correspondiente "partialAddress" y conjunto de caracteres ingresados por el usuarios. Esos dos valores serán claves compuestas y permitirán reanudar el proceso.
-    def addressesGenerator(self):
+        self.finishedScan = True
+
+    def addressesGeneratorRandom(self):
+        onion = '234567'+string.lowercase
+        while True:
+            self.__createProcess(''.join(random.choice(onion) for i in range(16))  + '.onion' )
+        self.process.onionQueue.join()
+
+
+
+
+    def addressesGeneratorIncremental(self):
         charsUnknown = (16 - len(self.partialOnionAddress))
         iterations = charsUnknown / 4
         mod = charsUnknown % 4
@@ -115,6 +130,19 @@ class RepositoryGenerator:
             if iterations == 0:
                 #The user enters the full onion address (16 chars).
                 print "[+] Entered full address (16 characters). Nothing to found."
+                try:
+                    httpAddress = "http://"+(''.join(self.partialOnionAddress))+".onion/"
+                    print httpAddress
+                    response = self.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
+                    print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
+                    if response.status_code not in range(400,499):
+                        self.process.onionQueueResponses.put(response)
+                except requests.exceptions.Timeout as timeout:
+                    print timeout
+                except Exception as exc:
+                    print exc
+
+
                 return
             if iterations == 1:
                 #User enters 12 chars, left 4 chars.
@@ -161,15 +189,18 @@ class RepositoryGenerator:
     def startGenerator(self):
         try:
             self.process.startProcess()
-            self.addressesGenerator()
-        except:
-            print "exc"
+            if self.partialOnionAddress.lower() == 'random':
+                self.addressesGeneratorRandom()
+            else:
+                self.addressesGeneratorIncremental()
         finally:
             print "Process stoped... The indexes are: "
+            print "Partial Address"+ self.partialOnionAddress
             print "First "+str(self.progressFirstQuartet)
             print "Second "+str(self.progressSecondQuartet)
             print "Thrid "+str(self.progressThirdQuartet)
             print "Fourth "+str(self.progressFourthQuartet)
+            self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
 
 
 
@@ -222,10 +253,10 @@ class RepositoryProcess:
                 print response.status_code
                 if response.status_code not in range(400,499):
                     self.onionQueueResponses.put(response)
-            except requests.exceptions.Timeout as timeout:
-                print timeout
+                    self.onionQueueResponses.join()
             except Exception as exc:
-                continue
+                if exc.message == 'connection timeout':
+                    print httpAddress
 
 
             #time.sleep(5)

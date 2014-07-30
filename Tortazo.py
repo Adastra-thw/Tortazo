@@ -268,31 +268,35 @@ class Cli(cli.Application):
             # Setup and start the simulation
             try:
                 serviceConnector = ServiceConnector(self)
-                self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
                 self.logger.info(term.format("[+] Entering in Onion Repository Mode. This process could take a lot of time depending what you know of the hidden service to discover...", term.Color.YELLOW))
-                if len(self.onionRepositoryMode) == 0:
-                    self.logger.warn(term.format("[+] Consider to use the switches -O / --onionpartial-address or -V / --validchars-repository to filter the results. ", term.Color.YELLOW))
-
-                if len(self.onionRepositoryMode) <= 10:
-                    self.logger.warn(term.format("[+] You've entered an address with 10 or less characters [just %s chars]. The number of combinations will be very huge. You'll need a considerable process capacity in this machine and let run this process for hours, days or even weeks! If you're sure, let this process run" %(str(len(self.onionRepositoryMode))), term.Color.YELLOW))
-                    sys.stdout.write('%s [y/n]\n' %('Are you sure?'))
-                    while True:
-                        try:
-                            input = raw_input
-                            if strtobool(input().lower()) == True:
-                                break
-                            else:
-                                return
-                        except NameError:
-                            pass
-                        except ValueError:
-                            sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
+                if self.onionRepositoryMode.lower() == 'random':
+                    self.logger.info(term.format("[+] Random address generator selected ...", term.Color.YELLOW))
+                else:
+                    self.logger.info(term.format("[+] Incremental address generator selected ...", term.Color.YELLOW))
+                    self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
+                    if len(self.onionRepositoryMode) == 0:
+                        self.logger.warn(term.format("[+] Consider to use the switches -O / --onionpartial-address or -V / --validchars-repository to filter the results. ", term.Color.YELLOW))
+                    if len(self.onionRepositoryMode) <= 10:
+                        self.logger.warn(term.format("[+] You've entered an address with 10 or less characters [just %s chars]. The number of combinations will be very huge. You'll need a considerable process capacity in this machine and let run this process for hours, days or even weeks! If you're sure, let this process run" %(str(len(self.onionRepositoryMode))), term.Color.YELLOW))
+                        sys.stdout.write('%s [y/n]\n' %('Are you sure?'))
+                        while True:
+                            try:
+                                input = raw_input
+                                if strtobool(input().lower()) == True:
+                                    break
+                                else:
+                                    return
+                            except NameError:
+                                pass
+                            except ValueError:
+                                sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
 
                 self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
                 repository.startGenerator()
                 self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 return
+
             except KeyboardInterrupt:
                 print "Interrupted!"
             #repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)

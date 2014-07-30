@@ -13,7 +13,7 @@ databaseName="db/tortazo.db"
 createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer)"
 createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer)"
 createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer)"
-createTableOnionRepositoryProgress="create table if not exists OnionRepositoryProgress (id integer primary key autoincrement, partialOnionAddress VARCHAR(16) NOT NULL, startDate DATETIME not null, endDate DATETIME not null, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress) )"
+createTableOnionRepositoryProgress="create table if not exists OnionRepositoryProgress (id integer primary key autoincrement, partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATETIME not null, endDate DATETIME, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponses="create table if not exists OnionRepositoryResponses (id integer primary key autoincrement, onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR)"
 
 ####    Selects
@@ -23,13 +23,13 @@ checkTorNodeData="SELECT count(*) FROM TorNodeData WHERE host = ? and nickName =
 selectTorScan="select id, scanDate from Scan limit ?"
 selectTorScanIdentifier="select id, scanDate from Scan where id = ?"
 nextIdHostNodeData="select max(node.id) from TorNodeData as node"
-selectOnionRepositoryProgress="select id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet from OnionRepositoryProgress WHERE endDate IS NULL AND partialOnionAddress = ?"
+selectOnionRepositoryProgress="select id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet from OnionRepositoryProgress WHERE endDate IS NULL AND partialOnionAddress = ? AND validChars = ?"
 
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, scanId) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertTorNodePort="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(?, ?, ?, ?, ?, ?)"
 insertTorScan="insert into Scan(scanDate, numNodes) values(?,?)"
-insertOnionRepositoryProgress="insert into OnionRepositoryProgress(partialOnionAddress, startDate, endDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet) values(?, ?, ?, ?, ?, ?, ?)"
+insertOnionRepositoryProgress="insert into OnionRepositoryProgress(partialOnionAddress, validChars, startDate, endDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertOnionRepositoryResponses="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders) values(?,?,?)"
 updateOnionRepositoryProgress="update OnionRepositoryProgress set endDate =?,progressFirstQuartet=?,progressSecondQuartet=?,progressThirdQuartet=?,progressFourthQuartet=?  WHERE id=?"
 
