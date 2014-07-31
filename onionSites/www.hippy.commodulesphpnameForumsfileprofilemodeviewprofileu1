@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Welcome to Hippyland, Home of the Hippies!</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+<META NAME="RESOURCE-TYPE" CONTENT="DOCUMENT">
+<META NAME="DISTRIBUTION" CONTENT="GLOBAL">
+<META NAME="AUTHOR" CONTENT="">
+<META NAME="COPYRIGHT" CONTENT="Copyright (c) by ">
+<META NAME="KEYWORDS" CONTENT="">
+<META NAME="DESCRIPTION" CONTENT="Hippyland, Home of the Hippies, Young and Old!">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="REVISIT-AFTER" CONTENT="1 DAYS">
+<META NAME="RATING" CONTENT="GENERAL">
+<META NAME="GENERATOR" CONTENT="PHP-Nuke Copyright (c) 2006 by Francisco Burzi. This is free software, and you may redistribute it under the GPL (http://phpnuke.org/files/gpl.txt). PHP-Nuke comes with absolutely no warranty, for details, see the license (http://phpnuke.org/files/gpl.txt).">
+<!-- tinyMCE -->
+			<script language="javascript" type="text/javascript" src="includes/tiny_mce/tiny_mce.js"></script>
+			<script language="javascript" type="text/javascript">
+		   	tinyMCE.init({
+	      		mode : "textareas",
+				theme : "basic",
+				language : "english",
+				editor_css : "themes/Sunset/style/editor.css",
+				force_p_newlines: "false",
+				force_br_newlines: "true"
+		   	});
+			</script>
+			<!-- /tinyMCE --><script type="text/javascript">
+<!--
+function openwindow(){
+	window.open ("modules/Forums/copyright.php","Copyright","toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,copyhistory=no,width=400,height=200");
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript">function gothere(mname){var thisform = mname;
+if (thisform.selectsite.options[thisform.selectsite.options.selectedIndex].value != "nolink") {location.href=thisform.selectsite.options[thisform.selectsite.options.selectedIndex].value;}}</script>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="backend.php">
+<LINK REL="StyleSheet" HREF="themes/Sunset/style/style.css" TYPE="text/css">
+
+
+<link rel="shortcut icon" href="http://www.hippy.com/favicon.ico" />
+
+
+</head>
+
+<body bgcolor="#660066" text="#000000" link="#035D8A" vlink="#035D8A" background="http://hipforums.com/images/tiedyeback.jpg"><center><table border=0 width=100% cellpadding=3 cellspacing=0><tr><td align="center"><a href="http://www.hipforums.com/newforums/addonchat.php"><img src="http://www.hipforums.com/hipchat2.jpg" border=0></a></td><td align="center" valign="middle"><a href=><img src=themes/Sunset/images/logo.gif Alt="Welcome to " border=0></a></center>
+<br><center><table border=1 cellspacing=0 cellpadding=0 bgcolor="#CC99FF" style="margin-bottom:-10px;"><tr><td><center><table style="margin-bottom:-10px; margin-bottom: expression('0px');" border=0 cellspacing=0 cellpadding=1><tr><td><center><FORM name="UserOptions" action="javascript:gothere(document.UserOptions);" method="post">
+<SELECT name="selectsite" onChange="gothere(document.UserOptions);" style="font-family:Helvetica,Arial; FONT-SIZE:11px; font-weight:800; font-style:normal; text-decoration:None; background-color:#660066; color:#ffffff; margin-bottom:0px;">
+<OPTION value="nolink">User Options
+<OPTION value="http://www.hipforums.com/forums/register.php?">Register
+<OPTION value="http://www.hipforums.com/forums/usercp.php?">User Control Panel
+<OPTION value="http://www.hipgallery.com/photopost2/uploadphoto.php?cat=500">Upload Photos
+<OPTION value="http://hipforums.com/forums/private.php?">View PMs
+<OPTION value="http://hipforums.com/forums/private.php?do=newpm">Send PM
+<OPTION value="http://hipforums.com/forums/chat.php?">Chat
+<OPTION value="http://www.hipforums.com/forums/newfavorites.php">Your Favorites
+<OPTION value="http://www.hipforums.com/modules.php?moduleid=26">Search Your Posts
+<OPTION value="http://www.hipforums.com/forums/journal.php?do=gotomyjournal&styleid=8">Your Journal
+<OPTION value="http://hipforums.com/forums/profile.php?do=editoptions">Your Options
+<OPTION value="http://hipforums.com/forums/profile.php?do=editprofile">Your Profile
+<OPTION value="http://www.hipforums.com/forums/profile.php?do=editlist">Buddy/Ignore List
+<OPTION value="http://www.hipforums.com/forums/donate.php">Subscribe/Donate
+<OPTION value="http://www.hipforums.com/forums/account.php?action=status">Account Status
+<OPTION value="http://hipforums.com/forums/login.php?do=logout&u=">Logout</select>
+</center></td></form><td><center><FORM name="ForumOptions" action="javascript:gothere(document.ForumOptions);" method="post">
+<SELECT name="selectsite" onChange="gothere(document.ForumOptions);" style="font-family:Helvetica,Arial; FONT-SIZE:11px; font-weight:800; font-style:normal; text-decoration:None; background-color:#660066; color:#ffffff;">
+<OPTION value="nolink">Forum Options
+<OPTION value="http://www.hipforums.com/">Forum Homepage
+<OPTION value="http://www.hipforums.com/forums/index.php">All Forums
+<OPTION value="http://www.hipforums.com/forums/search.php?do=getdaily">Active Threads
+<OPTION value="http://www.hipforums.com/forums/calendar.php?">Calendar
+<OPTION value="http://www.hipforums.com/forums/sendmessage.php">Contact Us
+<OPTION value="http://www.hipforums.com/forums/faq.php?">FAQ
+<OPTION value="http://www.hipforums.com/forumguidelines.htm">Forum Guidelines
+<OPTION value="http://www.hipforums.com/forums/journal.php?styleid=8">Journals
+<OPTION value="http://www.hipforums.com/forums/memberlist.php?">Memberlist
+<OPTION value="http://www.hipforums.com/modules.php?moduleid=22">Member Map
+<OPTION value="http://www.hipforums.com/forums/forumdisplay.php?f=101">Personal Forums
+<OPTION value="http://hipforums.com/privacy.htm">Privacy Policy
+<OPTION value="http://www.hipforums.com/forums/search.php?">Search
+<OPTION value="http://www.hipforums.com/archivesearch.php3">Search Archives
+<OPTION value="http://www.hipforums.com/modules.php?s=&mop=modload&file=index&name=Recommend_Us">Tell A Friend
+<OPTION value="http://www.hipforums.com/forums/online.php?")">Who's Online</select>
+</center></td></form><td><center><FORM name="Language" action="javascript:gothere(document.Language);" method="post">
+<SELECT name="selectsite" onChange="gothere(document.Language);" style="font-family:Helvetica,Arial; FONT-SIZE:11px; font-weight:800; font-style:normal; text-decoration:None; background-color:#660066; color:#ffffff;">
+<OPTION value="nolink" SELECTED>Language
+<OPTION value="http://translate.google.com/translate?hl=fr&sl=en&u=http://www.hippy.com/">French
+<OPTION value="http://translate.google.com/translate?hl=es&sl=en&u=http://www.hippy.com/">Spanish
+<OPTION value="http://translate.google.com/translate?hl=de&sl=en&u=http://www.hippy.com/">German
+<OPTION value="http://translate.google.com/translate?hl=it&sl=en&u=http://www.hippy.com/">Italian
+<OPTION value="http://translate.google.com/translate?hl=pt&sl=en&u=http://www.hippy.com/">Portugese</select>
+</center></td></form><td><center><FORM name="HipUniverse" action="javascript:gothere(document.HipUniverse);" method="post">
+<SELECT name="selectsite" onChange="gothere(document.HipUniverse);" style="font-family:Helvetica,Arial; FONT-SIZE:11px; font-weight:800; font-style:normal; text-decoration:None; background-color:#660066; color:#ffffff;">
+<OPTION value="nolink">Hip Universe
+<OPTION value="http://www.hippy.com">Hippyland
+<OPTION value="http://www.hipforums.com">Hip Forums
+<OPTION value="http://www.hipplanet.com">Hip Planet
+<OPTION value="http://www.hipmarket.com">Hip Market
+<OPTION value="http://www.hiptravelguides.com">Hip Travel Guide
+<OPTION value="http://www.hipgallery.com/">Hip Galleries
+<OPTION value="http://www.coolove.org/">Coolove
+<OPTION value="http://www.hipforums.com/forums/forumdisplay.php?f=519">2008 Calendars
+<OPTION value="http://www.hipforums.com/modules.php?name=Content&pa=showpage&pid=27">Hip Forums Store
+<OPTION value="http://www.hipforums.com/modules.php?name=Content&pa=showpage&pid=3">Hip Poster Store
+<OPTION value="http://www.hipforums.com/forums/chat.php">Hip Chat
+<OPTION value="http://www.hipforums.com/modules.php?moduleid=23">Hip Search
+<OPTION value="http://hip.mail.everyone.net/email/scripts/loginuser.pl">Free E-Mail
+<OPTION value="http://ads.hipuniverse.com">Free Classifieds
+<OPTION value="http://www.hipplanet.com/links.php">Free Links</select></td></tr></table></td></tr></table></form><br><center><a href="index.php?op=ad_click&amp;bid=30" target="_blank"><img src="http://www.hipmarket.com/images/hipad.gif" border="0" alt="Advertise on Hippy.com and other Hip Websites!" title="Advertise on Hippy.com and other Hip Websites!"></a></center></td>
+<td></td><td align=center>
+<a href="http://www.hipforums.com"><img src="http://www.hippy.com/hipforums.jpg" border=0></a></td></tr></table>
+<hr size=2 color=#660066>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td valign=top width=140>
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left2.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=941C31 width="100%"><b><font size="2" color="#FFFFFF">Main Menu</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right2.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=941C31><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=941C31><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<table border="0" align="left">
+<tr>
+<td>&middot; <a href="index.php">Home</a> <br>
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="http://www.hipforums.com/">Login</a>
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="http://www.hipforums.com/newforums/register.php">Register</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="http://hipforums.com/newforums/addonchat.php">Hip Chat</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=News">Articles</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Reviews">Reviews</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Surveys">Surveys</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Topics">Topics</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Video_Stream">Videos</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="http://www.hipgallery.com/index.php">Photo Galleries</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="search.php?type=reviews&cat=7">Hippie Havens</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="quotes.php">Hip Quotes</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="glossary.php">Hip Glossary</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=OldCalendar">Event Calendar</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Submit_News">Submit Article</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Reviews&rop=write_review">Submit Review</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Recommend_Us">Recommend Hippy.com</a></td>
+</tr>
+
+<tr>
+<td>&nbsp;&middot; <a href="modules.php?name=Advertising">Advertise on Hippy.com</a></td>
+</tr>
+</table>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom2.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left4.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=0066FF width="100%"><b><font size="2" color="#FFFFFF">Search</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right4.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=0066FF><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=0066FF><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<form onSubmit="this.submit.disabled='true'" action="search.php" method="post"><br><center>Search: <input type="text" name="query" size="15"><br><br>In: <select name="type">
+  <option value="stories">Articles</option>
+  <option value="reviews">Reviews</option>
+  <option value="comments">Comments</option>
+  <option value="quotes">Quotes</option>
+  <option value="glossary">Glossary</option>
+</select><br><br><input type="submit" value="Search"></center></form>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom4.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left2.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=941C31 width="100%"><b><font size="2" color="#FFFFFF">Categories Menu</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right2.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=941C31><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=941C31><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<span class="content"><strong><big>&middot;</big></strong>&nbsp;<b>All Categories</b><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=17">A Trip Thru the '60s</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=2">Archives</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=9">Ask The Old Hippy</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=4">Columns</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=16">Hip Profiles</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=8">Hippies From A to Z</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=6">Hippyland Tour</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=5">Interviews</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=18">Letters to Hippyland</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=10">Links</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=3">News</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=1">Reviews</a><br><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=categories&amp;op=newindex&amp;catid=12">Skip's Corner</a><br></span>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom2.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+<table width="165" border="0" cellspacing="0" cellpadding="0"><tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="themes/Sunset/images/left4.gif" alt="" border="0" width="5" height="19"></td>
+<td bgcolor=0066FF width="100%"><b><font size="2" color="#FFFFFF">New Articles</font></b></td>
+<td align="right"><img src="themes/Sunset/images/right4.gif" alt="" border="0" width="5" height="19"></td></tr></table>
+</td></tr><tr><td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor=0066FF><tr><td width=100%>
+<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor=0066FF><tr><td width="100%" valign="top" bgcolor="#FFFFE6">
+<table width="100%" border="0"><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=406">How Saving Water Helps Reduce Global Warming</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=405">Cannabis in Alchemical Literature</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=404">A Call to Elder Stoners: Your Job has Just Begun</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=403">UN, Natives And Hippies Unite To Save The World</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=402">The Beyond Prohibition Foundation</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=401">Peoples Revolution</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=400">Hippie Drum (free ebook)</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=399">Book from Roger Rea: Hipppies never die</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=398">Comedy, Cocaine and Cable TV</a></td></tr><tr><td align="left"><strong><big>&middot;</big></strong>&nbsp;<a href="modules.php?name=News&amp;file=article&amp;sid=397">Hippie Songs Invade Texas Cowboy Country</a></td></tr></table><br><center>[ <a href="modules.php?name=News">More in News Section</a> ]</center>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td>
+<img src="pixel.gif" width="1" height="4" alt="" border="0"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr>
+<td align="center" valign="bottom">
+<img width="100%" height="5" src="themes/Sunset/images/bottom4.gif" vspace="0" border="0"></td></tr></table>
+<br>
+
+
+</td><td>&nbsp;</td><td valign=top width=100%>
+
+
+<center><table width="90%" border="0" cellspacing="1" cellpadding="0" bgcolor="#660066" background="pinkthing.jpg" style="-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-style: expression('ridge');
+	padding: 5px 15px 0px 15px;
+	border-width: expression('3px');
+	border-color: expression('660066');
+	border-style: ridge;
+	border-width: 3px;
+	border-color: #660066;"><tr><td>
+<center><table width="100%" border="0" cellspacing="1" cellpadding="8" bgcolor="#FFFFE6" background="pinkthing.jpg"><tr><td>
+<center>Sorry, this Module isn't active!<br><br>[ <a href="javascript:history.go(-1)">Go Back</a> ]</center></td></tr></table></td></tr></table></center>
+<div align="right"><a href="javascript:openwindow()">Forums &copy;</a></div></td></tr></table></td></tr></table><span class="tiny">
+All logos and trademarks in this site are property of their respective owner. The comments are property of their posters, all the rest &copy; by Hip Inc.
+<br>
+</body>
+</html>

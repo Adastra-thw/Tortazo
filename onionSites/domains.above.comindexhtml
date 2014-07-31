@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Above.com Domain Registration - ICANN Accredited Registrar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Above.com is an ICANN accredited registrar. We offer everyday low prices on domain registrations, including free whois privacy for as long as you own the domain" />
+<meta name="keywords" content= "domain registrar, domain registration, domain name,above.com domain, icann, accredited, registrar" /> 
+<meta name="robots" content="all" /> 
+<meta name="copyright" content="Trellian" />
+<meta name="owner" content="Trellian" />
+<meta name="alias" content="http://domains.above.com/" />
+<meta name="Author" content="Domain Registration Manager" />
+<meta name="revisit-after" content="3 days" />
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+<link href="http://domains.above.com/css/global.css" rel="stylesheet" type="text/css" />
+<link href="http://domains.above.com/css/default.css" rel="stylesheet" type="text/css" />
+<!--<link href="http://domains.above.com/css/style.css" rel="stylesheet" type="text/css" /> -->
+<!--<link href="http://domains.above.com/css/keyworddiscovery.css" rel="stylesheet" type="text/css" /> -->
+
+<script language="javascript" type="text/javascript" src="http://domains.above.com/js/general.js"></script>
+<script language="javascript" type="text/javascript" src="http://domains.above.com/js/jquery126.js"></script>
+<script language="javascript" type="text/javascript" src="http://domains.above.com/js/jquery.flot.min.js"></script>
+<!--[if IE]><script language="javascript" type="text/javascript" src="http://domains.above.com/js/excanvas.compiled.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="http://domains.above.com/js/login.js?nocache=1"></script>
+</head>
+<body>
+<script language="Javascript">
+	  
+	$(document).ready(function() {
+	  
+	    $('#password-clear').show();
+	    $('#password-password').hide();
+	  
+	    $('#password-clear').focus(function() {
+	        $('#password-clear').hide();
+	        $('#password-password').show();
+	        $('#password-password').focus();
+	    });
+	    $('#password-password').blur(function() {
+	        if($('#password-password').val() == '') {
+	            $('#password-clear').show();
+	            $('#password-password').hide();
+	        }
+	    });
+	  
+	    $('.default-value').each(function() {
+	        var default_value = this.value;
+	        $(this).focus(function() {
+	            if(this.value == default_value) {
+	                this.value = '';
+	            }
+	        });
+	        $(this).blur(function() {
+	            if(this.value == '') {
+	                this.value = default_value;
+	            }
+	        });
+	    });
+	  
+	});
+</script>
+<link href="/css/aboveGlobal.css" rel="stylesheet" type="text/css">
+<link href="/css/aboveGlobal-1.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery172.js"></script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="height: 100%;">
+<tr>
+<td valign="top">
+  <div id="header">
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%"><!-- end of top blue table -->	
+				<tr>
+			<td>
+                    <table cellpadding="0" cellspacing="0" border="0" width="920" align="center" height="85"><!-- start of top section -->	
+                        <tr>
+                            <td height="60" width="30%">
+                               <!-- <a href="http://www.above.com/" title="Parking Manager"><img src="/img/logo_1.gif" align="middle" width="176" height="36"></a>-->
+                                <div style="float:left">
+    <div class="logo"><a  href="http://www.above.com/" title="Parking Manager"></a></div>
+    <div class="ftr-hdr" title="Domain Investor Platform">Domain Investor Platform</div>
+  </div>
+                            </td>
+                            <td width="70%" align="right" valign="top">
+                                <!--<form name="form1" method="post" action="http://domains.above.com/login.html">
+                                <table cellpadding="2" cellspacing="0" border="0" style="font-family:arial;color:#8d8d8d">
+                                <tr>
+                               <td align="right" nowrap="nowrap"><input id="username" name="username" class="t_login"  onblur="this.value = this.value || this.defaultValue; this.style.color = '#8d8d8d';" onfocus="this.value=''; this.style.color = '#000';"   value="Username" >
+                                </td>
+                                <td align="right" nowrap="nowrap">                                    
+                                <input id="password-clear" type="text" value="Password" class="t_passwd">
+                                <input id="password-password" type="password" name="password" class="t_passwd"></td>
+                                <td align="right" nowrap="nowrap">                                    
+                                <div class="t_login_btn_div"><input type=submit value="Login" name="subLogin" class="t_login_btn"></div>
+                                </td></tr></table></form> -->
+                                
+                                <div class="topNav">
+  <div class="loginDiv">
+    <nav>
+      <ul>
+        <li id="login" style="margin:0 !important"><a id="login-trigger" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold">Login <span>&#9660;</span></a>
+          <div id="login-content">
+            <form name="form1" method="post" action="http://domains.above.com/login.html">
+              <table align="center" border="0" cellspacing="2" cellpadding="2" class="loginTbl-1">
+                <tr>
+                  <td align="right">Username</td>
+                  <td colspan="2"><input id="username" name="username" class="uname" /></td>
+                </tr>
+                <tr>
+                  <td align="right">Password</td>
+                  <td><input id="password" type="password" name="password" class="pswd" /></td>
+                  <td>
+                  <input type="hidden" value="Login" name="subLogin"/>
+                  <input type="submit" value="" name="subLoginButton" class="login-but" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="sm_links" colspan="3" align="center"><a href="http://www.above.com/forgotten-pass.html">Forgot password?</a> | <a href="http://www.above.com/register.html">Create new account</a></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="topNavLinks">
+    <ul>
+      <li class="fL au" style="margin:0 !important"><a href="http://www.above.com/blog/">Above Blog</a></li>
+      <li class="fL au" style="margin:0 !important"><a href="http://www.above.com/about.html">About Us</a></li>
+      <li class="fL cu" style="margin:0 !important"><a href="http://www.above.com/contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+                            </td>
+                        </tr>
+                    </table><!-- end of top section -->		
+			</td>		
+		</tr>
+		<tr>	
+			<td style="background: url('/img/base/middle-tab-bg.gif') repeat-x;">
+				<table cellpadding="0" cellspacing="0" border="0" width="920" align="center"><!-- start of right menus table -->	
+					<tr>
+						<td>
+							<div id="Nsites" style="border:0px solid;">
+							    <div style="float:left; vertical-align: bottom; margin-top: 2px;">
+									<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+									<td class="left" style="vertical-align: bottom; padding-right: 1px; padding-left: 0px; vertical-align: bottom;"><a href="http://www.above.com/parkingmanager.html" class="top_mnu_tab"><b>Parking Manager</b></a></td>
+									<td style="vertical-align: bottom; background: none; padding-right: 1px; padding-left: 0px;"><a href="/" class="top_mnu_active_tab"><b>Domain Registration</b></a></td>
+                                    <td style="vertical-align: bottom; background: none; padding-right: 1px; padding-left: 0px;"><a href="http://www.above.com/marketplace/" class="top_mnu_tab"><b>Domain Marketplace</b></a></td>
+									</tr>
+									</table>
+								</div>
+<!--								<div style="float:right; margin-top: 5px;">
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                <td style="padding-bottom: 7px"><a href="http://www.above.com/blog/" style="font-size:13px;font-weight:bold;">Above Blog</a></td>    
+                                <td class="divider"></td>                          
+                                <td style="padding-bottom: 7px"><a href="http://www.above.com/about.html" style="font-size:13px;font-weight:bold;">About Us</a></td>
+                                <td class="divider"></td>
+                                <td style="padding-bottom: 7px"><a href="http://www.above.com/contact.html" style="font-size:13px;font-weight:bold;">Contact Us</a></td>									
+                                </tr>
+                                </table>
+								</div>-->
+							</div>
+						</td>
+					</tr>
+				</table><!-- end of right menus table -->	
+			</td>		
+		</tr>
+				
+				
+					
+		<tr>
+			<td id="shadow"></td>
+		</tr>
+	</table><!-- end of top blue table -->	
+ 
+	</div>
+
+	<div class="content">
+        <!--<table cellpadding=0 cellspacing=0 width="900" align="center" border="0" style="margin-top:20px">
+         <tr>
+          <td valign="top" style="width:510px;font-size:13px;">
+           <div class="home_col_bg1 txtcontent">
+    			
+           </div>
+          </td>
+          <td valign="top" style="width:370; padding: 0px 0px 0px 30px">
+            <div class="home_col_bg2">
+          		<span class="txtred font16 b">Special Offer</span><br />
+				<span style="font-family:arial;font-size:12px">.COM domains only $9.45 per year.</span>
+          </div>
+          </td>
+         </tr>
+        </table> -->
+	  		<table cellpadding=0 cellspacing=0 width="900" border="0" align="center" class="mT20">
+				<tr>
+					<td width="500" valign="top" class="pT15">
+						<table cellpadding="0" cellspacing="0" width="100%" border="0">
+							<tr>
+								<td width="10" height="10"><img src="/img/top_left.gif" /></td>
+								<td bgcolor="#f6f7f9"></td>
+                                <td width="10" height="10"><img src="/img/top_right1.gif" /></td>
+							</tr>
+							<tr>
+								<td bgcolor="#f6f7f9"></td>
+								<td valign="top" bgcolor="#f6f7f9" nowrap="nowrap" height="150px">
+									<div class="rdn">Register Your Domain Name</div>
+									<div class="pT10 pL20">
+									<form name="register_domain" action="domain-check.html" method="post">
+                                        <table cellpadding="0" cellspacing="0" width="50%" border="0">
+                                        <tr>
+                                        <td width="50%"><input type="text" name="domain" class="domainname" /></td>
+                                        <!--<td width="20%" style="padding-left:5px" valign="top">
+                                        <select class="domainopt" name="domaintype">
+                                        	<option value="com" selected="selected">.com</option>
+                                            <option value="net">.net</option>
+                                            <option value="info">.info</option>
+                                            <option value="org">.org</option>
+                                            <option value="biz">.biz</option>
+                                            <option value="us">.us</option>                                                                                        
+                                            <option value="co.uk">.co.uk</option>
+                                            </select></td> -->
+                                        <td width="30%" class="pL5">
+                                        <input name="submit" type="image" src="/img/btn_go1.gif" />
+                                        </td>
+                                        </tr>                                       
+                                        </table>
+                                        </form>
+                                    </div>
+                                    <div class="pTL20 font14 blue"><a href="transfer-domain.html" class="font14 u_link">Domain Transfer</a><span class="mLR15">|</span><a href="whois.html" class="font14  u_link">Whois</a><!--<a href="advanced.html" class="font14  u_link">Advanced Search</a> --></div>
+                                </td>
+                                <td bgcolor="#f6f7f9"></td>
+							</tr>
+
+							<tr>
+								<td width="10" height="10"><img src="/img/bottom_left.gif" /></td>
+								<td bgcolor="#f6f7f9"></td>
+                                <td width="10" height="10"><img src="/img/bottom_right1.gif" /></td>
+							</tr>	
+						</table>	
+					</td>
+
+                    <td width="70" valign="top"></td>
+					<td width="330" valign="top" class="pT15">
+							<div class="pT20">
+                                <span class="txtred b font16">Special Offer</span><br /><br />
+                                <span class="font13">.COM domains only <strong>$9.45</strong> per year.</span><br /><br /><br /><br />
+                                
+                                
+                          </div>
+					</td>						
+
+										
+
+					<!--<td width="229" valign="bottom">
+							<table cellpadding="0" cellspacing="0" width="100%" border="0">
+							<tr>
+
+								<td bgcolor="#29aae3"></td>
+								<td width="10px" height="10px" background="/img/top_right.gif"></td>
+							</tr>
+							<tr>
+								<td valign="top" bgcolor="#29aae3" height="227px" style="padding-left:20px">
+									<div class="white" style="margin-top:30px">
+                                    <form name="frmLogin" action="login.html" method="post">
+                                                                            <div class="loginheader">Domain Registrar Login</div>
+                                        <table border="0" cellpadding="1" cellspacing="0" width="177">
+                                        <tr>
+                                            <td colspan="2" style="font-size:11px"><strong>Login Username:</strong> </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="text" name="username" value="" class="formfld1" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="fsize11 fB">Password: </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="50%"><input type="password" name="password" value="" class="formfld2" /></td>
+                                            <td width="50%"><input type="submit" name="subLogin" value="Login" class="login_button" /></td>
+                                        </tr>
+                                         <tr>
+                                            <td colspan="2"  style="font-size:11px" height="18">Create a <a href="http://www.above.com/register.html"  class="lsty1">new login account.</a></td>
+                                        </tr>
+                                         <tr>
+                                            <td colspan="2"  style="font-size:11px"><a href="/forgotten-pass.html" class="lsty1">Retrieve</a> lost password.</td>
+                                        </tr>
+                                        
+                                        </table>
+                                    </form>
+                                    </div>
+								</td>
+								<td bgcolor="#29aae3"></td>
+							</tr>
+							<tr>
+								<td bgcolor="#29aae3"></td>
+								<td width="10px" height="10px" background="/img/bottom_right.gif"></td>
+
+							</tr>	
+						</table>
+					</td> -->
+						
+				</tr>
+			</table>
+     
+     	<table cellpadding="0" cellspacing="0" width="900" border="0" class="mT30">
+            <!--<tr>
+                <td width="10" height="10" valign="top" bgcolor="#c6d6ea"><img src="/img/top_left1.gif" /></td>
+                <td bgcolor="#c6d6ea">&nbsp;</td>
+                <td width="10" height="10"  valign="top" bgcolor="#c6d6ea"><img src="/img/top_right2.gif" /></td>
+            </tr> -->
+            <tr>
+            	<!--<td colspan="3" class="home_col_bg1"> -->
+                <td colspan="3" class="">
+                    <div class="font14 l150">
+                    <p>Above.com Pty Ltd is a fully accredited domain name registrar. Accredited by ICANN and supporting many domain name TLDs and ccTLDs worldwide including: .com, .net, .info, .org, .biz, .us, and .co.uk. Please see our extremely low and <a href="domain-pricing.html" class="font14">discounted domain pricing</a> and the full list of supported domain name extensions.</p>
+                    <p>As an added benefit Above.com Domain Privacy is included free for all Above clients along with free domain parking.</p>
+                    <p>Our interface is fast and easy to use including high security, easy to lock domains for further protection, along with many bulk update features, ideal for large domain portfolio owners.</p>
+                    <p>If you have more than 100 domain names and would like to <a href="transfer-domain.html" class="font14">transfer your domains</a> to Above.com domain registrar, please contact us for further pricing discounts. Above.com also offers a free <a href="http://www.above.com" class="font14">domain parking management service</a> so do a search and register your domain now.</p>
+                    <br />
+                    <img src="/img/icann.gif" border="0" align="left" class="mR5" /><br />Above.com is an ICANN Accredited Registrar with over 750,000 domains registered
+                    </div>
+                    
+                </td>
+            </tr>
+        </table>                    
+
+        
+        <table cellpadding=0 cellspacing=0 border="0" width="900" align="center" class="box" style="display:none">
+				<tr>
+					<td width="7" valign="top">
+                    	<table cellpadding=0 cellspacing=0 border="0" width="100%">
+							<tr><td><img src="/img/top_left_stroke.gif"></td></tr>
+							<tr><td class="bL" height="65">&nbsp;</td></tr>
+							<tr><td><img src="/img/bottom_left_stroke.gif"></td></tr>
+						</table>
+
+					</td>
+                    <td valign="top">
+                    	<table cellpadding=0 cellspacing=0 width="100%" class="bB">
+							<tr>
+								<td width="33%" align="center" class="bTB"><h4 class="txtsty3"><a href="http://www.above.com/blog/abovecom-news/">Latest News</a></h4></td>
+								<td width="34%" align="center" class="bTB"><h4 class="txtsty3"><a href="#">Accreditation</a></h4></td>
+								<td width="33%" align="center" class="bTB"><h4 class="txtsty3"><a href="http://www.above.com/blog/">Latest Blog Post</a></h4></td>
+							</tr>
+							<tr>
+								<td valign="top" align="center" class="bRD pT5" >1.2 Million Domains are now <br>benefiting from the Above<br> Domain Parking Solution.<br><a href="http://www.above.com/blog/2009/12/above-parking-manager-servicing-over-1-million-domains.html ">Read more...</a></td>
+								<td valign="top"  class="bRD pT5"><img src="/img/icann.gif" border="0" align="left" class="pR10 pB10 pL20" /><br />Above.com Pty Ltd is an ICANN Accredited Registrar.</td>
+								<td valign="top" align="center" class="pT5">Above.com Acquires<br>DomainState.com <br>a Domainers Forum<br><a href="http://www.above.com/blog/2010/01/trellian-and-abovecom-acquires-domainstatecom.html">Read more...</a>&nbsp;</td>
+
+							</tr>
+						</table>	
+					</td>
+                    <td width="7" valign="top">
+							<table cellpadding=0 cellspacing=0 border="0" width="100%">
+							<tr><td><img src="/img/top_right_stroke.gif"></td></tr>
+							<tr><td class="bR" height="65">&nbsp;</td></tr>
+							<tr><td><img src="/img/bottom_right_stroke.gif"></td></tr>
+							</table>
+                    </td>
+                </tr>
+        </table>             
+        
+               
+       
+     
+     </div><!-- end of content -->
+
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="pB20">
+
+<div class="footerWrapper">
+    <div class="footer">
+      <div class="tblFooter">
+        <div class="w25 fL vDvdr">
+          <div class="fHdr">Domain Registration</div>
+          <div class="colFooter">
+            <ul class="p0" id="cft">
+              <li><!--<a href="http://domains.above.com/index.html" class="cft">Register Domains</a>-->
+                              <a href="/register.html" class="cft">Register Domains</a>
+                             </li>
+              <li><a href="/view_domains.html" class="cft">Manage Domains</a></li>
+              <li><a href="/domain-pricing.html" class="cft">Pricing</a></li>
+              <li><a href="/domain-dispute-policy.html" class="cft">Dispute Policy</a></li>
+              <li><a href="/domain-registrar-terms.html" class="cft">Terms</a></li>
+              <li><a href="/whois.html" class="cft">Whois</a></li>
+              <li><a href="/api-manual.html" class="cft">API</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w25 fL vDvdr">
+          <div class="m012012">
+            <div class="fHdr">Domain Parking Manager</div>
+            <div class="colFooter">
+              <ul class="p0">
+                <li><a href="http://www.above.com/about.html" class="cft">About Domain Parking</a></li>
+                <li><a href="http://www.above.com/features.html" class="cft">Domain Features</a></li>
+                <li><a href="http://www.above.com/reporting.html" class="cft">Reporting</a></li>
+                <li><a href="http://www.above.com/terms.html" class="cft">Terms</a></li>
+                <li><a href="http://www.above.com/verifiedstats/verified-stats.html" class="cft">Verified Stats</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="w25 fL vDvdr">
+          <div class="m012012">
+            <div class="fHdr">Domain Marketplace</div>
+            <div class="colFooter">
+              <ul class="p0">
+                <li><a href="http://www.above.com/marketplace/" class="cft">About Marketplace</a></li>
+                <li><a href="http://www.above.com/marketplace/features.html" class="cft">Features</a></li>
+                <li><a href="http://www.above.com/marketplace/faq.html" class="cft">Faq's</a></li>
+                <li><a href="http://www.above.com/marketplace/terms.html" class="cft">Terms</a></li>
+                <li><a href="http://www.above.com/marketplace/escrow.html" class="cft">Escrow</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fL w24">
+          <div class="m012012">
+            <div class="fHdr">Above.com</div>
+            <br />
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><a href="http://www.above.com/about.html" class="ftLinks">About us</a></td>
+                <td><a href="http://www.above.com/blog/" class="ftLinks">Blog</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.above.com/contact.html" class="ftLinks">Contact us</a></td>
+                <td><a href="http://www.above.com/sitemap.html" class="ftLinks">Site Map</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.above.com/partner.html" class="ftLinks">Affiliates</a></td>
+                <td><a href="http://www.above.com/privacy-policy.html" class="ftLinks">Privacy Policy</a></td>
+              </tr>
+            </table>
+            
+            <br clear="all" />
+            <div class="cr"> Above.com Pty Ltd &copy; 2004
+        <script language="JavaScript">
+        var d=new Date();
+        yr=d.getFullYear();
+        if (yr!=2004)
+        document.write("- "+yr);
+        </script><br />
+              All Rights Reserved </div>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+  <div class="media">
+    <div class="socialsites" style="padding-top:0 !important"><a href="http://twitter.com/above_domain" class="tweet" target="_blank"></a> <a href="http://www.facebook.com/above.domain" class="fb" target="_blank"></a></div>
+    <a href="http://www.above.com/verified-by-above.html" class="veri"><img src="/img/verified-icon.png" width="74" height="37" title="Verified by Above" /></a> <a href="http://www.internetcommerce.org/" class="ica" target="_blank"><img src="/img/ICA_Supporter_137x38.gif" width="137" height="38" title="Internet Commerce Association" /></a><a href="http://www.domainstate.com/" class="ds" target="_blank"><img src="/img/recommends120x31.gif" width="120" height="31" title="DomainState.com" /></a><a href="http://www.domaining.com/" class="dmn" target="_blank"><img src="/img/domaining-120x31.gif" width="120" height="31" title="Domaining recommends this site" /></a><a  href="http://www.icann.org/" target="_blank"><img src="/img/icann-accredited-trans-56.png" width="56" height="56" title="ICANN Accredited Registrar" /></a></div>
+</div>
+
+      <br clear="all" />
+      <br />
+    </div>
+
+  </div>  
+ 
+</td>
+</tr></table>
+</body>
+</html>

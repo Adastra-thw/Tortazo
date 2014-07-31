@@ -1,0 +1,643 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+M. Megaceros  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Travis the Chimp
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+a psuedo news story
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+3/5/2012
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\page[yes,right]
+
+It’s been said that humans and chimpanzees share 99.9\% identical DNA. So close is the connection to chimps that beings from another planet, conducting an anthropological survey would probably conclude that humans are the third family of chimpanzees; that humans are nothing more than a large-headed hairless branch of the chimp family. In truth, it will surprise no one to learn that the human species is indeed considered a branch of the great ape family tree. Thousands of chimps live among humans. They exist in captivity, in research labs, zoos, show business and private homes. Here’s some other facts pertinent to the following story. At least 10\% of American adult humans are currently taking anti-anxiety drugs. I suspect that close to 100\% of American humans sate their anxiety and isolation in consumer culture and yummy convenience food. Travis was just such an American. 
+
+
+Travis was a 1990’s TV Star. Highlights in his career would include his work in commercials and several television sitcoms. He was born in the zoo. His parents were two captive chimpanzees. His career was long and extremely profitable for his owners. In his retirement, Travis lived in a suburban house. He was considered very bright. He was able to use and to flush the toilet, wear clothes, and was able to open the house front door with his own key. He was able to get his favorite snack foods from the kitchen when and as often as he pleased. There was always a large Tupperware bowl filled with a special mixture of Cheez-its and Corny Bugles. His favorite burger was a yummy BK Double Whopper with Bacon. He would often raid the freezer for pints of Hagen Daas, Double Butter Pecan ice cream. Like other Americans, he became obese on this diet. 
+
+
+Travis loved to go shopping with his “mother”, that is to say — his owner. They would spend hours at the mall, greeted by smiles from his fans. He could log in to the Web and had a special fondness for conducting Google searches. He loved looking for images of cute kittens. His computer screen-saver showed a tiny tabby cat clinging to the bottom rung of a ladder. The caption read, ‘hang in there, baby’ Though, it is doubtful that Travis was able to read it, he seemed to enjoy it very much. His owner joked to her visitors that Travis was trying to ’figure it out — like a puzzle’. Still, by all measures, Travis was a ‘good monkey’, as a friend of the family would later put it. So well behaved was he that he went everywhere with his owner in the car. 
+
+
+Travis liked to play X-box games, watch baseball, and go to the shopping mall. He was particular about his outfits and often spent time studying his appearance in a full length mirror. When on an outing, he would often spot a patrol car or policeman. When this happened, he would become visibly happy, bounce, smile and point. He probably felt a fondness for the kind, uniformed guards on the stage sets, where he worked for so many years. These network employees would often keep candy in their pockets — to give to the ape. Travis loved firemen too. But he held a special fondness for the men in blue. In short, Travis had become civilized; he was living the good life. A dream come true. American freedom in its purest form.
+
+
+When Travis began to develop symptoms of anxiety and had panic attacks, his owner put him on xanax, a potent anti-anxiety drug. This increased his appetite even further and caused Travis to be lethargic and sometimes confused and short tempered. One morning, Travis asked to go on an outing to the park. Frustrated, his “mother” flatly told him no. She told Travis that she was far too busy to go outside. Travis asked repeatedly to be let outside. Perhaps, she said, if he was well-behaved they might go to the strip mall for ice cream cone\unknown{}later. At this disappointment, Travis began to exhibit symptoms of extreme anxiety. He rocked back and forth, hugged himself and ran from the front door to the back. His “mother” became even more stern with him and threatened the usual punishments. Travis unlatched the door lock and ran outside. His “mother” tried to block his escape. In her desperation to control the animal, she grabbed a butcher knife and a garden shovel.
+
+
+Later, in recounting the tragedy to the authorities, she added that she needed the tools, ‘for my protection’. When Travis refused to be subdued, she stabbed Travis in the chest with the knife, several times. In retaliation, Travis viciously attacked the her, ripping and biting her face and hands. A passing driver honked and chased the chimp away from his victim. Using his brand new silver Tahoe LT, Special Edition SUV, the driver chased Travis away and down the leafy street. When police arrived, Travis is said to have becalmed himself and smiled sweetly as he approached the police cruiser. Travis calmly reached for the door handle and opened the patrol car door to see the nice policemen and perhaps receive a candy. 
+
+
+The officers shot 160 pound Travis with their .40 caliber duty pistols, without hesitation. Witnesses say that Travis tried desperately to drag himself back to the protection his “mother” as police fired the killing shots into the animal. Media stories featured the usual rounds of interviews with shocked neighbors and relatives. Travis was said to have been a “quiet monkey\unknown{}very nice and polite.” Other than that, he was said to be a good “boy”. Most news stories concluded their narratives with understandable pronouncements that wild animals should never be expected to become fully domesticated. 
+
+
+In fact, Travis’ chimpanzee mother Suzy was also shot and killed following an escape attempt in 2001. Wild creatures, news readers inform us, will never fully submit to domesticated life\unknown{}as humans have so willingly have done. The more thoughtful of these programs are quick to remind us that apes can only truly thrive and be happy in the wild, in small quiet groupings — in the habitat where they evolved. We should not be surprised when a domesticated anthropoid like Travis goes mad — on a violent killing binge. Their analysis, though often interesting stop short, saying that although we humans are very close kin to chimps, humans are totally different in their basic needs. When a domesticated human becomes madly violent, it is merely a personal failing. In their speculations, these stories never seem to describe the habitat that humans evolved in. Or call attention to our distance from that habitat. 
+
+
+On the contrary, humans, it is implied — truly belong in towering glass and stone cities, surrounded large and small machines and somehow human lives are enhanced and refined by isolation, competition, routine and small personal humiliations. These stories never seem to make a connection with mass killings like the one at Columbine High School or Virginia Tech. These stories attempt to teach us the lesson that intelligent, well adjusted humans are satisfied to live a vicarious and mediated life — working long hours and eating bulk processed foods, watching the raging colored lights of computers and TV screens. And it is perfectly normal to have one’s ears flooded by the blaring din from electric amplification both day and night. 
+
+
+Our basic, fundamental needs are so vastly different than those of our closest cousins — the chimps, that critiquing our own domestication is irrelevant — not worth mentioning. In other words, domestication of apes is disastrous in all cases except in that of human beings. For humans, domestication is just fine.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+M. Megaceros
+
+
+
+Travis the Chimp
+
+
+
+a psuedo news story
+
+
+
+
+3/5/2012
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+I saw several stories about the incident in the news in 2010 and something about the tone of the reporting got under my skin. I resolved to write my own version of the “facts”.
+
+
+
+original text
+
+
+\stopalignment
+
+\stoptext
+
+

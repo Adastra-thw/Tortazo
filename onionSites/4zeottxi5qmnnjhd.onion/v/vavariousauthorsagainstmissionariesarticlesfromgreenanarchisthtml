@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Against Missionaries. Articles from “Green Anarchist”</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Against Missionaries. Articles from “Green Anarchist”
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-anonymous">Anonymous</a>
+	  	  <a href="../../authors.html#library-index-green-anarchist">Green Anarchist</a>
+	  	  <a href="../../authors.html#library-index-nornan-lewis">Nornan Lewis</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  2003
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-green-anarchist">Green Anarchist</a>
+	  	  <a href="../../topics.html#library-index-green-anarchist-68-69">Green Anarchist #68–69</a>
+	  	  <a href="../../topics.html#library-index-papua">Papua</a>
+	  	  <a href="../../topics.html#library-index-primitivist">primitivist</a>
+	  	  <a href="../../topics.html#library-index-wiwa-wewo">Wiwa Wewo</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  Articles from <em>Green Anarchist</em> #68–69, Summer 2003
+	</p>
+	
+	<strong>Source:</strong>
+	Retrieved on January 1, 2005 from <a href="http://www.greenanarchist.org">www.greenanarchist.org</a>
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="various-authors-against-missionaries-articles-from-green-anarchist.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Various Authors</h2>
+	
+	<h1 id="textttitleh">Against Missionaries. Articles from “Green Anarchist”</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Commandos for Christ!
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">What’s Wrong with Missionaries? The Role of Religion in the Destruction of Human Diversity
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">The First Enemy: Religious Organisations.
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4"><em>Missionaries Forbid Traditional Culture.</em> Another Papuan speaks out
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h3 id="toc1">Commandos for Christ!
+</h3>
+<p>The New Tribes Mission are a right-wing Christian missionary organisation, who have spread themselves all over the world.  From their modest, though violent, beginnings they have never looked back. NTM’s purpose is to make contact with every ‘uncontacted’ tribe on earth and plant churches in the areas where these tribes live. They use coercion and force, having no regard for the peoples’ cultures and lives they are imposing upon.
+</p><p>They have links with the CIA and various multinationals, helping to maintain their power and growth to some of the most secluded places on earth. They have met with resistance from the tribal people whose wild existence they are on a latter day crusade to eradicate, replacing egalitarian ecological existence with authoritarian monotheistic religion. There have also been attacks on their modes of evangelism here in the West, through liberal do-gooding NGOs, such as Survival Int’l.
+</p><p>There has also been direct action taken against them here in England.  This is an ongoing war of the civilised versus the savage, a war that most people thought died out in the last century. Most of us when we think of evangelical Christians conjure up images of tacky US TV preachers with microphones, fleecing cash from the alienated dumb(struck) wannabe believers. However, behind this exists the genocide of some of the last peoples on earth, forging an existence on the periphery of civilisation.
+</p><p>The NTM exist purely as an organisation who are set up to commit cultural genocide across the globe, and they have the resources to carry out this aim. They claim they have no money, asking their recruits to rely on God and fund themselves. Yet somehow they have offices across the world (if not you, who?), training centres for new recruits and even their own airline for flying in missionaries to remote parts of the earth.  They use their planes to spot ‘unreached’ peoples as they fly over otherwise unpenetrable terrain, then build airstrips in jungles in order to land missionaries. These are the first wave of civilisation’s troops, followed hot on the heels by the military. The military use the missionaries’ airstrips, and enter with guns instead of bibles in their hands and the end result is the same: death. As they say themselves: 
+</p>
+<blockquote>
+<p>“The resources needed for this are beyond our human means. But what seems impossible to us is God’s opportunity to demonstrate who He is, to the praise and honor of His name. Now is the time. This is the generation. We are trusting God to use a worldwide team of believers to reach the last tribe in this generation.  To God be the glory!”...“Motivated by the love of Christ, and empowered by the Holy Spirit, NTM exists to assist the ministry of the local church through the mobilizing, equipping, and coordinating of missionaries to evangelize unreached people groups, translate the Scriptures, and see indigenous New Testament churches established that truly glorify God.”
+</p></blockquote>
+<p>The sect is extrememly authoritarian.  Hardliners in the NTM are discouraged from socialising with ‘liberal’ missionaries. Marriage with nonAmericans is ‘strongly advised against’. Leaders are appointed rather than elected to their posts. The NTM has consistently been unafraid to use violence and force to coerce ‘unreached’ (re-wild) people into conversion to their bastardised brand of Christianity. They have admitted that it matters little to them if a person dies shortly after ‘taking god into their hearts’, as it is ‘souls they are saving’, not lives. The NTM’s brand of Christianity is the fire and brimstone version then multiplied by ten.  Evidence of their violence and lack of feeling for their victims is highlighted in this incident from Guatemala...  
+</p>
+<blockquote>
+<p>“Having finished his photography in the central area of the camp, Donald had strolled off towards two huts on the outskirts, followed by Mr Stolz’s son, a friendly and clearly intelligent boy of about twelve who was by now carrying his tripod and who told him with reasonable pride that he was the only member of the missionary group who had been able to master Ache. A smiling young missionary overtook them and barred the entrance to the fists of the huts, saying that there was nothing there.  Donald pushed him aside, went in and came back to call me. I followed him into the hut and saw two old ladies lying on some rags on the ground in the last stages of emaciation and clearly on the verge of death. One was unconscious, the second in what was evidently a state of catalepsy, because although her eyes were wide-open she did not move them to follow my hand as i moved it from side to side close to her face. The fingers on her left hand were covered with the black mud scrabbled from the floor.  There was no food or water in sight. In the second hut lay another woman, also in a desperate condition and with untreated wounds on her legs. A small, naked, tearful boy sat at her side. Mr Stolz’s son, happy to help, gave us a matter of fact account of what had happened.  The three women and the boy had been taken in a recent forest roundup, the third woman having been shot in the side whilst trying to escape.”  
+</p></blockquote>
+<p><em>October 1974 p159, ‘Gods war against the indians’ by Norman Lewis   </em>
+</p><p>Lewis later had these photographs and accompanying article published in several major newspapers both here in the UK and in the US. The NTM denied the allegations strongly despite such overwhelming evidence.
+</p><p>But of course it is not just physical violence that the NTM missionaries use to coerce perfectly happy indigenous peoples away from their culture and lifeways they have enjoyed for millenia, but cultural violence...
+</p>
+<blockquote>
+<p>“The missionaries had made a start with their inculcation of a sense of values by the provision of almost every toddler with a piggy bank.  The older children showed us padlocks and keys from the same source. At this stage in Panare evolution, when there were no doors to keep locked, they remained purely ornamental, incorporated occasionally in necklaces.” 1982, P169 
+</p></blockquote>
+<p>This is just one example of the values they were attempting to push on a people. Other examples include money boxes for people who do not use money, so that the idea of thrift and saving and capital accumulation can be foisted on a people who live egalitarian communal lives. This reminds us of the role of the puritans during the industrial revolution in Britain, when similar ideologies were being pushed onto the transitionary peasant/working class.
+</p><p>Shockingly the NTM Missionaries admit that one of their tactics in bringing a settlement under the moral rule of their warped beliefs is to find an individual, whom in our culture we would call ‘disabled’, and target them for favouritism, gifts etc and then use them to police the rest of the tribal group. They would do this by getting him to snitch on any practice of ‘outlawed’ behaviour, ceremonies, etc.
+</p><p>The NTM have spread across the globe. In 1945 they expanded into India, in 1946 into Venezuela, and in 1949 into Brazil, New Guinea and Japan. By 1952 there were missions in the Philippines and Thailand.  Expansion followed rapidly in Latin America, Africa and the Far East. As of 1988 the NTM claimed to have around 2,500 evangelists in 24 countries, working with 159 tribes.
+</p><p>As one would expect, the behaviour of the NTM is often met with resistance in the places they impose themselves, their cultish behaviour and warped social values. As Norman Lewis points out in his ‘The Missionaries — God Against The Indians’ “both the Summer Institute of Linguaistics (SIL) and NTM have met with great resistance in the countries in which they have established missions; both sects have been excluded from a number of these, but have always succeeded in making a return”. The NTM had headquarters in Matlock, Derbyshire (england) until they were hounded out by the locals. It seems that they had made themselves hugely unpopular mainly due to the fact that they were brainwashing local teenagers. They now hide themselves away in the desolate flatlands of Lincolnshire.
+</p><p>This strange invulnerability has aroused increasing resentment in countries involved, with complaints of behind-scenes pressure permitting this to happen. Evidence of this pressure can be seen in the statement regarding a similar group, the SIL: “I never met a Bolivian who did not regard the Summer Institute of Linguistics as the base for CIA operations in Bolivia; possibly in South America itself.” p102. There are many examples of the NTM being involved in various dodgy things in the countries where they base themselves, and not just links with the CIA.
+</p><p>There are also accusations of the NTM having heavy links with corporations, even doing their groundwork for them. Naval captain Marino Blanco, employed by the state to keep an eye on the doings of foreigners in Venezuela’s remote regions, spoke of their scientific espionage.  These allegations have also been made in several Latin American countries, not just Venezuela. He noted that the missionaries installed themselves in areas known to contain strategic materials, such as cobalt and uranium, and claimed to have proof that they were in the pay of American multinationals. Blanco also discovered bags with geiger counters in and claims the head of the NTM tried to bribe him. Other reports of the NTM’s corporate shit are reports that once they clear airstrips for their planes, they fly iconoclastic consumer crap in like Coca Cola.
+</p><p>As previously mentioned in this issue of GA last October there was an action carried out against the NTM and in solidarity with peoples of the South Pacific. People stormed the European HQ offices confronted leading NTM officials, whilst others appear to have been busy damaging and taking away computer equipment. As a bonus to all this, the action disrupted a very important meeting between leading NTMers from the US/UK, a meeting which we hear has failed to be re-scheduled since.
+</p><p>Since then there has been a wave of repression against activists across Britain. Over 30 people were arrested in a series of raids on houses in Leeds, Sheffield, Nottingham, Doncaster and Norwich. Computers and personal items were seized.  Doors were smashed in close to dawn and people were rounded up for arrest. All these people were placed on bail for ‘conspiracy to burgal’.  Nearly all of these people have had their bail removed and only two have been officially charged. Another 3 are pending a decision on whether they will be charged or not. The investigation is being carried out by the Skegness division of Lincolnshire police. A force more used to dealing with inbreeding and cabbage theft than direct action in defence of wild peoples. There is also evidence that one of the cops involved in the operation was the son of the chairman of the NTM!
+</p><p>This must be one of the largest state attacks on the UK direct action movement for years, if not to date. One wonders where all this money has come from to mount dawn raids on so many addresses across the country, and what they will do when they are inevitably sued for taking part in a fishing expedition. We have to wonder if all the fuss is not the result of pressure from NTM’s US legal eagles. The NTM unsurprisingly seem to have been reluctant to actually publicize any news of this daylight raid. Nothing has appeared in any local papers, despite it being exceptionally newsworthy, one would have thought, for sleepy lincolnshite.
+</p><p>It seems evident that the NTM and others like them dont like it when the tables are turned — when the hunter becomes the hunted. Even the more reason to keep the pressure on. The action last October seems like a step in the right direction.
+</p>
+<blockquote>
+<p>Quotes taken from <em>Missionaries — Gods War Against the Indians</em>, by Nornan Lewis
+</p></blockquote>
+<h3 id="toc2">What’s Wrong with Missionaries? The Role of Religion in the Destruction of Human Diversity
+</h3>
+<p>Much of the history of the ancient world recounts the struggles between the Indo-Europeans and the Semitic peoples. Over a period of several millennia, the two cultures clashed and blended. By the second millennium B.C., some Indo-Europeans, most specifically the Greeks, had adopted the practice of building cities, thus becoming involved in the process which they named “Civilization.”
+</p><p>Both cultures developed technologies peculiar to civilizations. The Semitic peoples invented kilns which enabled the creation of pottery for trade, and storage of surpluses. As trade becomes more necessary, for whatever reasons, the tribesman becomes increasingly less of a tribesman and more of a peasant. The process is neither immediate nor is it necessarily absolute, but to the degree that a tribesman becomes dependent, he becomes less of a tribesman. The early kilns eventually evolved into ovens which could generate enough heat to smelt metals, notably copper, tin and bronze. The Indo-Europeans developed a way of smelting iron.
+</p><p>Rome fell heir to these two cultures, and became the place where the final meshing occurred. Rome is also the true birthplace of Christianity. The process that has become the culture of the West is historically and linguistically a Semitic/Indo-European culture, but has been commonly termed the Judeo-Christian tradition.  
+</p><p>Christianity was an absolutely essential element in the early development of this kind of technology.  Christianity advocated only one God.  It was a religion which imposed itself exclusively of all other beliefs.  Primitive people did not feel the need to impose their particular spirits (or whatever) on other tribes. Spirits belong to the place they inhabit. The local people of the European forests were a people who believed in the spirits of the forests, waters, hills and the land; Christianity attacked those beliefs, and effectively de-spiritualized the European world. The Christian peoples, who possessed superior weaponry and a need for expansion, were able to militarily subjugate the tribal peoples of Europe.
+</p><p>You might think that only an imbecile would fail to see the irony in a culture which has almost entirely destroyed its own local habitat sending out people to teach neighbouring cultures, who haven’t, how they should live, but as I cycle away from my uncle Herbie’s special hospital after telling all his friends about missionaries, I can still hear them laughing nearly a mile away. Only the staff seemed unconvinced, and as I was being ushered out of the door I could see the syringes and pill boxes being hurriedly drawn from their shelves in a way reminiscent of the gun racks in a sheriff’s office.
+</p><p>The fact is that to anyone not a part of our great drive forward to erm... our great drive forward, just about everything we do looks totally insane, and that is why missionaries are an essential part of that great drive forward. Only blind faith in a false world-view can drive people to destroy their own source of wellbeing. Only fear can convince people to run blindly and only ignorance can enable people to ignore signs of danger. Religion provides these three things in bucketloads, together with sufficient emotional reinforcement to prevent subjects defecting back to reality.
+</p><p>Missionaries provide a dual service to the globalising monocultural monster we call civilization. On the one hand they actively assist the spread of lies and coercion into the last remaining peoples on earth who have held on to their freedom. On the other, they destroy the evidence of fulfilling human existences which are apparent in those places, which might otherwise cast doubt in the minds of the already brainwashed. They spread false propaganda about the people in their ‘care’, and directly assist genocidal regimes in their subjugation of those people. Many individuals within these organisations are probably well-meaning, but the organisations themselves are driven by the same bigotry that drove civilization into tribal people throughout history.
+</p><p>France made repeated attempts to send missionaries, especially Jesuits, among the nations of the Hau de no sau nee. These missions were the major tool of propaganda for the European nations. Missionaries then, as today, are expected to carry more than the message of Christianity.  They serve as lay ambassadors of their culture, splitting off individuals from families, families from villages, villages from nations, one by one.  Some priests even served as the leaders of troops going into battle.
+</p><p>The missionaries made persistent attacks on the economic structures of the People of the Longhouse. They specifically attacked the spiritual ceremonies as “pagan,” and thereby sought to end the practice of giveaways and public feasts. In addition, they sought to break the power of the clans by causing division which would split the people into nuclear households.
+</p><p>European churches, especially in colonial practice, take on their feudal roles as economic institutions.  Among uncvilised people, they are the most dangerous agents of destruction. They invariably seek to destroy the spiritual/economic bonds of the people to the forests, land and animals. They spread both ideologies and technologies which make people slaves to the extractive system which defines colonialism.
+</p><p>In 1704, the first Anglican missionaries were sent, by England, to the Mohawks living along the Mohawk River. In 1710, a delegation of Mohawk chiefs received an invitation to visit England. They returned bearing four bibles, a prayer book and a communion plate for the Anglican chapel, gifts from Queen Anne. But the missionaries also brought behind them a long, long tail. To house themselves they needed a mission, to protect the mission they needed a fort, and to propagate the faith, they needed a school. Missionaries spread more than the word of God.
+</p><p>When there is no other culture to compare ourselves to, there will be no objective basis on which to appraise our ‘progress’. We will be unable to envisage other ways to live that are viable and the culture of domination will be unchallenged. The missionaries (along with the ‘development’ workers, who are merely missionaries of mammon and are here included in the term) are and always have been the spearhead of civilization’s attack on freedom.
+</p><h3 id="toc3">The First Enemy: Religious Organisations.
+</h3>
+
+<blockquote>
+<p>Wiwa Wewo, a Lani man from West Papua and author of <em>Just Leave Us Alone</em>, on his experience of missionaries
+</p></blockquote>
+<p>I was born and grew up in a Christian family, therefore most of my criticism will go towards the work and teachings of Christianity, with very few references to the Moslem religion. As a Christian and based on my experience working in the church for more than ten years, I believe that there is something wrong with religions that come in from foreign countries. In what follows I will outline some of the problems that Lani people face due to religions from outside. Religious leaders and missionaries will definitely argue that I am wrong. They will ask my father and his colleagues as founders of my church to justify their arguments, however, this will be manipulative. It is because of the successful brainwashing process that has been happening since the1960s. The religious missionaries and leaders from the West poisoned my father and his colleagues with their philosophy. I know, from my deep heart, that they suffer a lot because of being Christianised and civilised. I know that they miss their world, the world that they have experienced, that vanished in the early 1960s, the world that missionaries would describe as “Primitive and animist!”
+</p><p>Religious believers are required to believe that theirs is the true religion. They stand against the beliefs that already exist in areas where they go and they also condemn other religions as being misleading.  Their typical statement is this: “There is only one way to heaven, therefore, if you do not do this and that, you are in danger of going to hell!” This message means, all other things are wrong, and this is the only truth.
+</p><p>If someone threatens me with anything, a knife, a bow and arrow, a gun, the Gospel, the Qura’an, culture, education or whatever, then they are terrorising me. Those who terrorise me are commonly called terrorists. If I am wrong please correct me, but this is my basic understanding about terrorism. However, ironically, religious groups are called ‘good people’. I just cannot understand why people who terrorise my culture are called good people.
+</p><p>The result is that religion has completely destroyed he way we think, the way we behave and the way we talk. In the Lani community, all people look “brown in colour but white in behaviour!” Their arguments make sense, are very strong and sound correct, exactly the same as their missionary fathers did. They want to change everything we have into their missionary culture. However, we will never change our race, skin colour, or hair because the missionaries never allowed their children to marry with us. Once an Indonesian policeman fell in love with a missionary woman in my village. She was sent back to her home country straight away, accused of falling in love with people from “outside their culture”. In other words, what the missionaries want is for us to get involved in and believe in their religion, but they do not think we can marry them. Thus, philosophically and culturally, they want us to be in their world, but physically they want us to be separate because we are brown, we are curly haired, we are in Indonesia, and perhaps because they think we are inferior.
+</p><p>No doubt, it is obvious to me that all troubles that come into the Lani community are brought in through the door marked ‘religion’. Therefore, if people come into my village and destroy my life, my worldview, my culture, then the first thing to blame is the religion, nothing else. They have started the cultural genocide, and they claim to be ‘good people’, preaching good news and messages of peace. What on earth is this?  
+</p><p>It is typical of the West. They have a belief that there is always right and wrong, and that they are best to judge them. This concept relates to all other things like the way of talking, the way of working, the way of governing, the way of farming, and so on. In this way they set themselves apart from the rest of the world. In comparison, we never ever judge other cultures, other religions, or other communities based on knowledge of our own.
+</p><p>We never tried to impose our culture and our belief on others. We never think that the West needs to learn from us. What we know is that they are Western people, they have their own life and culture, we cannot change them, because they are as they are. However, they do not have this concept. They do not judge things through the eyes of other cultures, but instead bring all things into their world and then make judgement. And this is wrong, according to me, anyway.
+</p><p>The result is that we Lani people have lost our own identity. If people asked “Who are the Lani?” then the first answer, unfortunately, will be “They are all Christians”. They are not the Lani anymore, they are Christians. If I were to list the characteristics of being a Lani, then about 90% would not exist in the life of Lani people anymore. What has happened?  Christianity has replaced them all.  What a pity! Western Christians, however, will say, “Praise the Lord!”
+</p><p>Religion does not only spread widely because they believe it, but also because they want to win other people to join their religion, to gain strength in numbers. Some of the political parties are based on religious beliefs. It is clear to me now that some politicians and political parties have been born from religious beliefs; that they fight for religions and make decisions based on this. In other words, human beings and humanity become second to religion. That is why it is not surprising for me to see many West Papuans saying “We need to get rid of Indonesian Muslims!” even though this is not the reason we should fight for. Neither Christianity nor Islam are from the Lani. Why should we bother with them and why should we base our struggle on them? Why can’t our position be based on our own culture?  Is it because we are already assimilated into modern religions?
+</p><p>In many cases governments have sponsored the activities of religious groups. Of course, there is nothing wrong with having religions, but what is wrong is imposing one’s religions onto others and creating problems, starting wars against other religions. I agree that religion is one part of the culture but the problem here is imposing one culture on the other, and considering other religions as wrong and dragging other people into one’s religion. Religion has caused, is causing, and will continue to cause most of the brutal wars in human history, but it is still strongly regarded as something essential within human life. In what sense is it important?  This is not clear and I cannot understand it. If not the atomic bomb, religion will destroy planet Earth.  However, people love religion. It is true that religion has ended some tribal wars in West Papua. This is what the imams and missionaries are proud of. This is what they point out as the result of their ministries.
+</p><p>However, it is also true that they have started more than one war; religious wars, denominational wars, economic wars, political wars, to mention just a few. These wars have no simple solutions, have no moral basis, and are very destructive.  Imagine tribal wars. Almost all tribal wars happened because of tribal problems like theft, sexual relationships and other domestic affairs. There is rarely war because of one tribe’s intention to exploit or conquer another. Tribal wars are like small conflicts inside a family. There was no serious damage after tribal wars, there was even real peace established, which does not and cannot exist in modern society. Compare the peace that follows tribal war with that follows wars in civilisation. What peace in the Balkans after Bosnia? What peace in the Gulf after Desert Storm?
+</p><p>Religions increase the intensity of war. The feeling of affiliation to religion has caused so much trouble on this plant. Let us forget the words like ‘fundamentalist’ and ‘extremist’. For me, most often these terms are related to war and religion. From the records in the Bible and Qura’an, wars are there. Therefore, for me, trying to end wars, especially by religious leaders or religious figures, is nonsense. In Indonesia, it is called “Usaha menjaring angin” (’the efforts to catch the air’). Religions even justify some wars. Therefore, as long as people are committed to religion(s), there is great potential for war, not the reverse.
+</p><p>Below is a story: 
+</p><p>Once upon a time, there was a man called Mbakwi Gombo. He lived a nomadic life, a bit strange for all his fellow villagers. He built his houses on the banks lf the river Mulik, a river that changes course, sometimes flowing in the eastern bank, sometimes on the western bank. It was difficult to figure out, even within a day. Mbakwi likes the behaviour of the Mulik. He had been living in ‘his way’ all of his life.
+</p><p>He did not farm. He ate fruit and leaves from the forests, and meat from hunting. Most often he caught little pigs, snakes and cassowary birds. He raised them in the riverbank, he fed them and they knew him well. He built them their nests and huts. He knew when they were hungry, when they were sick, and when they were crying. He loved the animals and they loved him in return.  Sometimes, people from other villages came to his hut and asked him to give them some of the animals he had, either in the bush or those around him. He then asked people to choose which ever they preferred. After they chose what they wanted, he then led those to be killed into a pen. Her then fed them ell and talked to them, pretending nothing dangerous was happening. Even the food at this time seemed better than before. The animals were so happy. They greeted him very well. Unfortunately, they were animals and they did not know what was actually happening. The guests shot and killed them in front of Mr. Gombo. The animals shouted at him, they cried to him, and sometimes they ran to him and died in front of him. Yes, but Mr. Gombo wanted money, not just to raise them.  These animals could not give him money, so they should be killed to make him money.
+</p><p>When some of the fellow animals were killed, the rest ran away to the bush. They became wild again.  However, with his skills, Gombo called them back, and fed them ell.  They became friends again. I do not know what was happening in the minds of those animals. Did they remember how their fellows were killed in front of their eyes? Were they prepared to be slaughtered as had happened to the others? How did Gombo manager to become a ‘good shepherd’ while at the same time her was their killer? How come the animals did not run away from him forever? Who is Mr. Gombo? Mr.  Gombo is ‘the missionary’. And who are the people who came to kill those animals? They are the ‘government’. And the animals are us, the Lani, all tribal people. It is clear to me that religions have been used by the civilised community as a tool to brainwash and control the minds of people. When I became a Christian, I can see how foolish I was to respond to this world’s powers. As a Christian, I need to forgive those who kill me, I must forget what happened yesterday, I must give my eyes if my ears are taken away. Religion is a tool used by those in power to control the human beings of this earth.  
+</p><p><em>The Book ‘Just Leave us alone’ is available from Solidarity South Pacifi, c/o SDEF!, Prior House, 6 Tilbury Place, Brighton, E. Sussex, BN2 2GY, UK. Price £2.50</em>
+</p><h3 id="toc4"><em>Missionaries Forbid Traditional Culture.</em> Another Papuan speaks out
+</h3>
+<p>I am quite amazed to see the UN Declaration on Minorities that clearly protects the rights of the tribal people to own, practice and belong to our cultural heritage, such as our beliefs.  I was questioning when I was reading the articles, “Who is writing these?” I realised later that the terms used and the contexts presented in the declaration are based on European values and beliefs, or Eurocentric.
+</p><p>Then I questioned, “Who are the people in West Papua who tell us not to own and practice our cultural beliefs?” The answer was, “The same Europeans!” In fact the “don’ts” of the missionaries are also Eurocentric.  Then I wondered, “What on earth are they doing?” “What are they doing?” “What should I do?”
+</p><p>Perhaps what they meant by their declaration on minorities was not regarding the cultural beliefs of the Tribal people? If so, are we humans?  Are we minorities? Are we not also subjects to the declaration?
+</p><p>If so, then I need to state that:
+</p>
+<ol>
+<li><p>Missionaries are actually in essence terrorists. Why? They come to us and say, “If you don’t do as we say, you are going to hell! You will die! You will be judged! You are not part of us!  You are children of the Satan!”  etc.etc. Aren’t these sentences terrorising?
+</p>
+</li>
+<li><p>The missionaries are actually the people to be accountable for misconduct against the Resolution on Minorities.
+</p>
+</li>
+<li><p>How can the declaration be promoted without calling the missionaries responsible for their sins of killing the cultures of minorities?
+</p>
+</li>
+<li><p>Are the beliefs we have as tribal people not part of the resolutions?  If so, what are our cultural beliefs called?
+</p>
+</li>
+<li><p>I think that missionaries should be responsible for what they have done to us. They at first killed our culture, planted their culture and then left us to die in their new cultural perspectives.
+</p>
+</li>
+<li><p>They opened the doors for Indonesian military to come and kill us. It is missionaries that built airstrips all over villages. It is them that first came to our isolated villages. It is them that came wth Gospel in their right hand and Guns in their left hand. After they opened the isolation, they brought in government officials, opened army and police offices, and started killing us. Can they deny their involvement in killing us? NO, ABSOLUTELY NOT!!!! They are part of various human rights violations in West Papua, they are the doors to various human rights violations in West Papua.
+</p>
+</li>
+<li><p>Do you know what missionaries have done when the Indonesian army they brought in were killing us? They left the villages. Lucky, they got airplanes to fly them out from the bombardments into the villages. After some months, after houses and churches were burned down, after many of their sheep (flocks) were killed, they come with big smile and open hands to embrace and to encourage poor Papuans to repent and thank God that they were not killed. What do they preach? FORGIVE! FORGIVE! If they kill your brother, give your husband as well, that is according to our culture that we brought in to you. DON’T fight back, if you do so, you are going to hell.
+</p>
+</li>
+<li><p>So, you can see how well the missionaries and Indonesian army work together to kill Papuans both culturally and physically.
+</p>
+</li>
+<li><p>And for me, they who kill my culture are the most terrorist people in the world. Killing a culture means killing the root of a people. If Indonesians kill hundreds of Papuans physically, I know there are one or two Papuans alive and they will live as Papuans. But what can happen if one million Papuans are without any knowledge of Papuan culture? Are they Papuans? Are they Christians? Are they ......?
+</p>
+</li>
+
+</ol>
+<p>Anyway, missionary work is more dangerous to indigenous and tribal peoples than any other work on earth that you know. Remember this!
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

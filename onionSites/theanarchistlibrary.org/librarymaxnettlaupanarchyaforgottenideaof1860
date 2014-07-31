@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Panarchy, a Forgotten Idea of 1860 (Max Nettlau) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/max-nettlau-panarchy-a-forgotten-idea-of-1860?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=max-nettlau-panarchy-a-forgotten-idea-of-1860">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Panarchy, a Forgotten Idea of 1860
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/max-nettlau">Max Nettlau</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1909
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/panarchy">panarchy</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    In Kurt Zube (Ed.), On the Topic No. 9. Germany: Mackay Gesellschaft
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Anarchy is Order CD
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="max-nettlau-panarchy-a-forgotten-idea-of-1860.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Max Nettlau</h2>
+	
+	<h1 id="textttitleh">Panarchy, a Forgotten Idea of 1860</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>For a long time I have been fascinated by the thought how wonderful it would be if at last, in public opinion on the succession of political and social institutions, the fateful term “one after another” would be replaced through the very simple and self-evident “simultaneously.” “Down with the State!” and “Only upon the ruins of the State...” express emotions and wishes of many but it seems that only the cool “Opt out of the State” (No. 2 of “The Socialist”) can help them towards their realization. 
+</p><p>When a new scientific insight appears, then those convinced of it do simply proceed upon it, without wanting to persuade the old professors who do not intend to follow it or to force them to accept the new way or to slay them: Quite on their own, they will fall behind, diminish in reputation and dry up — if only the new method is full of life. Indeed, in many cases, maliciousness and stupidity will put many obstacles in the road of the new idea. That is the reason why hard struggles must be fought for unconditional mutual tolerance, until it is finally achieved. Only from then on will everything proceed automatically, science will bloom and advance, because the necessary foundation for every progress, namely experimental freedom and free research have been achieved. 
+</p><p>One should by no means attempt to “bring everything under one hat.” Even the State did not achieve that. The socialists and the anarchists slipped away from its power. And we would not be any more successful with such an attempt, for the statists do still exist (are one of the facts of our reality). Besides, it should rather please us not to have to drag a die-hard cripple of the State into our free society. The frequently discussed question: “What ought to be done with the reactionaries, who cannot adapt to liberty?”, would thereby be very simply solved: They may retain their State, as long as they want it. But for us it would become unimportant. Over us it would have no more power than the eccentric ideas of a sect which are of interest to no one else. Thus it will happen, sooner or later. Freedom will break a path for itself, everywhere. 
+</p><p>Once, while we were on a steamer on Lake Como, a teacher from Milan boarded the ship with a large class. She wanted all the kids to sit down and rushed from one group to the other, ordering them to sit. However, barely had she turned her back upon any of the groups when most of the group stood up again and whenever she attempted to survey all of them, believing at last to have finished with her labour, she found them standing up and around, in the same disorder as before. Instead of now becoming more severe with them, the young woman laughed herself about it and left the children in peace. Most of them soon sat down anyhow, on their own initiative. This is just a harmless example to demonstrate that everything, which is left to itself, solves itself best. 
+</p><p>Consequently and as an aside: Before the idea of MUTUAL TOLERANCE in political and social affairs will break its path, we could do nothing better than to prepare ourselves for it — by realizing it in our own daily living and thinking. How often do we still act contrary to it? 
+</p><p>These words are intended to demonstrate how much I have fallen in love with this idea and to make others understand my pleasure to have found a forgotten essay of a pioneer of this idea, an idea which is not talked about much in our literature. However, one must admit that the struggle it is engaged in was really forced upon it. I am speaking of the article “PANARCHIE” by P.E. De Puydt in the “REVUE TRIMESTRIELLE” (Brussels), July 1860, pages 222 to 245. The author, who was so far unknown to me and about whom I did not care in order not to disturb my impression of his ideas, does probably stand apart from the social movements. But he has a clear vision of the extent to which the present political system, according to which ALL have to submit to one government, constituted upon a majority decision or otherwise, flies right into the face of the simplest requirements for liberty. Without identifying with his own proposal in any way, or attempting to achieve completeness, I want to summarize his views and quote some details. 
+</p><p>One will feel closer to his idea if one replaces in one’ s mind the word “government” , which he always uses, by “social organization,” especially since he himself proclaims the coexistence of all governmental forms up to and including “even the AN-ARCHY of Mr. Proudhon”, each form for those who are really interested in it. 
+</p><p>The author declares himself for the teachings of the political economy of “LAISSEZ-FAIRE, LAISSEZ PASSER” (the Manchester School of free competition without state intervention). There are no half-truths. From this he concludes that the law of free competition, LAISSEZ-FAIRE, LAISSEZ PASSER, does not only apply to the industrial and commercial relationships but would have to be brought to its breakthrough in the political sphere. . Some say that there is too much freedom, the others, that there is not enough freedom. In reality, the fundamental freedom is missing, precisely the one needed, the freedom to be free or not free, according to one’s choice. Everybody decides this question for himself and since there are as many opinions, as there are human beings, the mix-up, called politics, results. The freedom of one party is the negation of the freedom of the others. The best government functions never in accordance with the will of all. There are victors and defeated, suppressors in the name of the present law and insurgents in the name of freedom. 
+</p><p>Do I want to propose my own system? Not at all! I am an advocate of all systems, i. e. of all forms of government that find followers. Every system is like a block of flats in which the proprietor and the main tenants have the best accommodations and feel well off. The others, for whom there is not sufficient space in it, are dissatisfied. I hate the destroyers as much as the tyrants. The dissatisfied ones should go their own way, but without destroying the building. What does not please them may give pleasure to their neighbours. Should they emigrate instead, to seek for themselves, anywhere in the world, another government? Not at all. Nor should people be deported, here and there, in accordance with their opinions. “I wish them to continue living in coexistence, wherever one happens to be or elsewhere, if one wants to, but without a struggle, like brothers, each freely speaking his mind and each subordinating himself only to those powers personally elected or accepted by him. 
+</p><p>Let us come to the subject. “Nothing develops and lasts that is not based upon liberty. Nothing that exists maintains itself and functions successfully except through the free play of all its active components. Otherwise, there will be loss of energy through friction, rapid wear of the cog-wheels, too many breakages and accidents. Therefore, I demand for each and every element of human society (individual) the liberty to associate with others, according to his choice and congeniality, to function only in accordance with his capabilities, in other words, the absolute right to select the political society in which they want to live and to depend only upon it.” 
+</p><p>Today the republican attempts to overthrow the existing form of the State in order to establish his ideal of the State. He is opposed as an enemy by all monarchists and others not interested in his ideal. Instead, according to the idea of the author, one should proceed in a way which corresponds to legal separation or divorce in family relationships. He proposes a similar divorce option for politics, one which would harm no one. One wants to be politically separated? Nothing is more simple than to go one’s own way — but without infringing the rights and opinions of others, who, on their side, would just have to make a little bit of room and would have to leave the others full liberty to realize their own system. 
+</p><p>In practice, the machinery of the civil registry office would suffice. In each municipality a new office would be opened for the POLITICAL MEMBERSHIP of individuals with GOVERNMENTS. The adults would let themselves be entered, according to their discretion, in the lists of the monarchy, of the republic, etc. From then on they remain untouched by the governmental systems of others. Each system organizes itself, has its own representatives, laws, judges, taxes, regardless of whether there are two or ten such organizations next to each other. For the differences that might arise between these organisms, arbitration courts will suffice, as between befriended peoples. 
+</p><p>There will, probably, be many affairs common to all organisms, which can be settled by mutual agreements, as was, for instance, the relationship between the Swiss cantons and of the American States with their federations. There may be people who do not want to fit into any of these organisms. These may propagate their ideas and attempt to increase the numbers of their followers until they have achieved an independent budget, i. e. can pay for what they want to have in their own way. Up to then, they would have to belong to one of the existing organisms. That would be merely a financial matter. 
+</p><p>Freedom must be so extensive that it includes the right not to be free. Consequently, clericalism and absolutism for those who do not want it any other way. There will be free competition between the governmental systems. The governments will have to reform themselves in order to secure to themselves followers and clients. 
+</p><p>What is involved is merely a simple declaration at the local Office for Political Membership and without having to part with one’s dressing gown and slippers, one may transfer from the republic to the monarchy, from parliamentarianism to autocracy, from oligarchy to democracy or even to the anarchy of Mr. Proudhon, according to one’s own discretion. “You are dissatisfied with your government? Take another one for yourself” — without an insurrection or revolution and without any unrest — simply by a walk to the Office for Political Membership. The old governments may continue to exist until the freedom to experiment, here proposed, will lead to their decline and fall. Only one thing is demanded: free choice. Free choice, competition — these will, one day, be the mottos of the political world. 
+</p><p>Wouldn’t that lead to an unbearable chaos? One should merely remember the times when one throttled each other in religious wars. What became of these deadly hatreds? The progress of the human spirit has swept it away like the wind does with the last leaves of autumn. The religions, in whose names the stakes and torture were operating, do nowadays coexist peacefully, side by side. Especially there wherever several of them coexist, each of them is more than otherwise concerned about its dignity and purity. Should what was possible in this sphere, in spite of all hindrances, not be likewise possible in the sphere of politics? 
+</p><p>Nowadays, while governments only exist under exclusion of all other powers, each party dominates after having thrown down its opponents and the majority suppresses the minority, it is inevitable that the minorities, the suppressed, grumble and intrigue on their side and wait for the moment of revenge, for the finally achieved power. But when all coercion is abolished, when every adult has at any time a completely free choice for himself, then every fruitless struggle will become impossible. 
+</p><p>While governments are subjected to the principle of free experimentation, to free competition, they will improve and perfect themselves on their own. No more aloofness, up in the clouds, which only hides their emptiness. Success for them will entirely depend upon them doing it better and cheaper than the others do. The energies, presently lost in fruitless labours, friction and resistance, will unite themselves in order to promote progress and happiness of man, in unforeseen and wonderful ways. 
+</p><p>Upon the objection that after all these experiments with governments of all kinds, one would, finally, return to a single one, the perfect one, the author remarks that even if that were the case, this general agreement would have been achieved through the free play of all forces. But that could happen only in afar away future, “when the function of government, with general agreement, is reduced to its most simple expression.” In the meantime, people are of a different mind, and have so varied customs that only this multiplicity of governments is possible. One seeks excitement and struggle, the other wants rest, this one needs encouragement and aid, the other, a genius, tolerates no direction. One wishes for a republic, submission and renunciation, the other desires the absolute monarchy with its pomp and splendour. This orator wants a parliament, the silent one, there, condemns all the babblers. There are strong minds and weak heads, ambitious ones and simple and contented people. There are as many characters as there are persons, as many needs as there are different natures. How could all of them be satisfied by a single form of government? The contented ones will be in a minority . Even a perfect government would find its opposition. 
+</p><p>In the proposed system, on the other hand, all disagreements would be merely squabbles at home, with divorce as the ultimate solution. Governments would compete with each other and those who associated themselves to their government, would be especially loyal to it because it would correspond to their own ideas. How would one sort all these different people out? — I believe in “the sovereign power of freedom to establish peace among men.” I cannot foresee the day and the hour of this concord. My idea is like a seed thrown into the wind. Who has in former times thought of freedom of conscience and who would question it today? 
+</p><p>For its practical realization one might, for instance, set the minimum period for membership, in one form of government, at one year. Each group would find and collect its followers whenever it needs them, like a church does for its members and a share company for its share holders. Would this coexistence of many governmental organisms lead to a flood of public servants and a corresponding waste of energies? This objection is important; however, once such an excess is felt, it will be done away with. Only the truly viable organisms will persist, the others will perish from enfeeblement. Will the presently ruling dynasties and parties ever agree to such a proposal? It would be in their interest to do so. They would be better off with less members but all of these volunteers completely subordinating themselves. No coercion would be necessary against them, no soldiers, no gendarmes, no policemen. There would be neither conspiracies nor usurpations. Each and no one would be legitimate. 
+</p><p>A government might today go into liquidation and, later on, when it can find more followers, it can re-establish itself, by a simple constitutional act, like a share company. The small fees to be paid for the registration would support the offices for political membership. It would be a simple mechanism, one that could be led by a child and that, nevertheless, would correspond to all requirements. All this is so simple and correct that I am convinced that no one will want to know anything about this. Man, being man ... 
+</p><p>The style and the way of thinking of the author, De PUYDT, remind me somewhat of AMSELM BELLEGARRIGUE, as one learns to know him in his numerous articles in a newspaper of the Toulouse of 1849, “Civilization.” Similar ideas, especially with regard to taxes, were later and for many years expressed by AUBERON HERBERT (voluntary taxation). The fact that his arguments appear much more plausible to us than they may have appeared to his readers of 1860, does demonstrate that at least some progress has been made. The decisive thing is to give to this idea the KIND OF EXPRESSION THAT CORRESPONDS TO TODAYS FEELINGS AND REQUIREMENTS and to prepare oneself towards its REALIZATION. It is the idea of the own initiative that was still amiss in the cool reasoning of the isolated author of 1860. Shouldn’t that be the aspect that would make the discussion of these questions today more promising and hopeful? 
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

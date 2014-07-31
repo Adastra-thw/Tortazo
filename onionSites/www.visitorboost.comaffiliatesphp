@@ -1,0 +1,159 @@
+<html>
+	<head>
+
+		<title>Visitor Boost - Website Traffic Reseller Affiliate Program</title>
+		<link rel="stylesheet" href="/inc/new.css" media="all" type="text/css" />
+		<script type="text/javascript" src="/inc/order.js"></script>	
+	
+	</head>
+	<body>
+
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<div id="header" style="white-space: nowrap; overflow: hidden">
+		
+	<div style="float: right; padding: 5px">
+		<div class="AuthorizeNetSeal"> <script type="text/javascript" language="javascript">var ANS_customer_id="52eb2aa2-5bc6-41f4-99c2-509af23bcab2";</script> <script type="text/javascript" language="javascript" src="https://verify.authorize.net/anetseal/seal.js" ></script></div>   
+	</div>
+	
+	<div style="float: right; padding: 20px 20px 5px 5px">
+		<!-- <a href="#" onclick="javascript:window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=350');"><img src="/images/paypal.png" border="0" alt="PayPal Accepted"></a> -->
+		<img src="/images/paymethods_nopp.png" alt="Visa MasterCard American Express Discover" />			
+	</div>
+
+	<a href="/"><img src="/images/vblogo.png" alt="Visitor Boost: Advertise Your Website With Guaranteed Traffic" /></a>
+	
+	<div style="clear: both"></div>
+ 
+	<a href="/about.php"><img src="/images/how.png" alt="Advertising" /></a><a href="/"><img src="/images/order.png" alt="Promotion" /></a><a href="/publishers.php"><img src="/images/publishers.png" alt="Advertise" /></a><a href="/affiliates.php"><img src="/images/affiliates.png" alt="Affiliate Program Advertising" /></a><a href="http://awio.zendesk.com"><img src="/images/help.png" alt="Help Increase Traffic" /></a><a href="/account"><img src="/images/login.png" alt="Website Hits" /></a>
+			
+</div>
+
+		<div id="wrap">
+		
+			<div id="sidebar">
+
+	<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px">	
+				
+			<h3>Customer Login</h3>
+			<form action="/account/index.php" method="post" style="margin: 0px">
+				<input type="hidden" name="action" value="login">
+				<table>
+					<tr>
+						<td style="font-family: arial; font-size: 8pt; font-weight: bold; padding: 0 5px 0 0">Email:</td>
+						<td style="padding: 0"><input type="text" name="email" style="font-size: 8pt; width: 75px" /></td>
+					</tr>
+			        <tr>
+		                <td style="font-family: arial; font-size: 8pt; font-weight: bold; padding: 5px 5px 0 0">Password:&nbsp;</td>
+		                <td style="padding: 5px 0 0 0"><input type="password" name="password" style="font-size: 8pt; width: 75px" /></td>
+			        </tr>
+					<tr>
+						<td colspan="2" style="text-align: right; padding: 10px 0"><input type="submit" value="Sign In" style="font-size: 8pt"></td>
+					</tr>
+				</table>
+			</form>
+		
+			</div>
+	
+	<a href="/affiliates.php"><img src="/images/affiliate2.gif" alt="Affiliate Program - Earn Cash" style="border: 0"></a>
+	
+</div>
+
+					
+			<div id="content" style="margin-left: 200px">
+
+				<h1>Affiliate Program - Earn Cash</h1> 
+				
+				Refer new customers to us and earn 20% of each sale! VisitorBoost's affiliate program is perfect for web designers, 
+				web hosting companies, and customers who want to recommend us to friends and family. Sign up for our affiliate 
+				program and place one of our text links or banner ads on your website, or provide the URL directly to your 
+				referrals, and we'll pay 20% of any sales that result.
+				<br /><br />				
+				
+				A tracking cookie remembers who referred each website visitor up to 30 days, so you're credited for sales even if 
+				the referral comes back to place an order at a later date. Nearly a third of our customers who purchase a 
+				trial campaign from us (which you receive commission for) return to place a larger order. You receive 20% of 
+				each order.
+				<br /><br />
+								
+				<a href="http://www.shareasale.com/shareasale.cfm?merchantID=9788">Click here to sign up now!</a>
+				<br /><br /> 
+				
+				<h3>What sales will I get paid for?</h3> 
+				You are paid 20% of each sale you refer. This includes multiple sales from referred customers and 20% of any 
+				recharges made to their campaigns.
+				<br /><br />
+								
+				<h3>When do I get paid?</h3> 
+				Payments are sent out on the 20th of every month, for the previous month's commissions. So, commissions that you 
+				earn in January, for example, are eligible for payment on February 20th. If the 20th falls on a weekend, payments
+				are sent out on the following Monday.
+				<br /><br /> 
+				
+				<h3>Do you have banners I can use on my website?</h3> 
+				Yes, once you sign up you will be able to download text links and banner ads to place on your website. 
+				Most standard sizes are provided.
+				
+			</div>
+			
+		</div>
+		
+		<div id="footer">		
+	Copyright &copy; 2005-2014 <a href="http://www.awio.com">Awio Web Services LLC</a>. 
+	By purchasing you agree to the <a href="/terms.php">Terms and Conditions</a>. <a href="/privacy.php">Privacy Policy</a>. Prices are in USD.<br /><br />
+	
+	</div>
+
+<!-- Begin w3roi Landing Page Code -->
+<script type="text/javascript" src="https://awio.w3roi.com/js/adtrack.js"></script> 
+<script type="text/javascript"> 
+	w3roi('awio');
+</script>
+<!-- End w3roi Landing Page Code -->
+
+<!-- Begin W3Counter Secure Tracking Code --> 
+<script type="text/javascript" src="https://www.w3counter.com/securetracker.js"></script> 
+<script type="text/javascript"> 
+w3counter(5);
+</script> 
+<noscript> 
+<div><a href="http://www.w3counter.com"><img src="https://www.w3counter.com/tracker.php?id=5" style="border: 0" alt="W3Counter Web Stats" /></a></div> 
+</noscript> 
+<!-- End W3Counter Secure Tracking Code--> 
+
+<!-- Begin W3Counter Pulse Real-Time Heartbeat Code -->
+<script type="text/javascript">
+(function(){
+  var ps = document.createElement('script');
+	 ps.type = 'text/javascript';
+	 ps.async = true;
+	 ps.src = '//pulse.w3counter.com/pulse.js?id=5';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ps);
+})();
+</script>
+<!-- End W3Counter Pulse Real-Time Heartbeat Code-->
+
+<!-- Begin Google Analytics Code -->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+var pageTracker = _gat._getTracker("UA-3933272-3");
+pageTracker._trackPageview();
+</script> 
+<!-- End Google Analytics Code -->
+
+<script type="text/javascript">
+var im_domain = 'awio';
+var im_project_id = 1;
+(function(e,t){window._improvely=[];var n=e.getElementsByTagName("script")[0];var r=e.createElement("script");r.type="text/javascript";r.src="https://"+im_domain+".iljmp.com/improvely.js";r.async=true;n.parentNode.insertBefore(r,n);if(typeof t.init=="undefined"){t.init=function(e,t){window._improvely.push(["init",e,t])};t.goal=function(e){window._improvely.push(["goal",e])};t.label=function(e){window._improvely.push(["label",e])}}window.improvely=t;t.init(im_domain,im_project_id)})(document,window.improvely||[])
+</script>
+
+
+<script type="text/javascript">
+Shopify = { shop: 'www.visitorboost.com' };
+</script>
+<script type="text/javascript" src="https://icf.improvely.com/icf-button.js?shop=www.visitorboost.com"></script>
+		
+	</body>
+</html>

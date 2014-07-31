@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+   <base href="http://www.hipmarket.com/hipinc.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="hip, websites, hosting, design, publishing, e-books, magazines, video, dvd, marketing, banners, photography" />
+  <meta name="title" content="Hip Publishing" />
+  <meta name="author" content="Administrator" />
+  <meta name="description" content="Hip Inc offers a wide range of services including website design and hosting, publishing, video production and marketing." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Hip Internet Publishing - Hip Market</title>
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+
+ <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+ <link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="/templates/hipmarket/css/template.css" media="screen" />
+ <!--[if IE 6]><link rel="stylesheet" href="/templates/hipmarket/css/template.ie6.css" type="text/css" media="screen" /><![endif]-->
+ <!--[if IE 7]><link rel="stylesheet" href="/templates/hipmarket/css/template.ie7.css" type="text/css" media="screen" /><![endif]-->
+ <script type="text/javascript">if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</script>
+ <script type="text/javascript" src="/templates/hipmarket/jquery.js"></script>
+ <script type="text/javascript">jQuery.noConflict();</script>
+ <script type="text/javascript" src="/templates/hipmarket/script.js"></script>
+ <script type="text/javascript">if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</script>
+</head>
+<body>
+<div id="art-page-background-glare-wrapper">
+    <div id="art-page-background-glare"></div>
+</div>
+<div id="art-main">
+    <div class="cleared reset-box"></div>
+<div class="art-box art-sheet">
+    <div class="art-box-body art-sheet-body">
+<div class="art-header">
+<div class="art-textblock"> </div>
+<div class="art-headerobject"></div>
+<div class="art-logo">
+ <h1 class="art-logo-name"><a href="/">Hip Market</a></h1>
+ <h2 class="art-logo-text">The Alternative Place to Shop</h2>
+</div>
+
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+			<div class="art-nav-center">
+	<ul class="art-hmenu"><li class="item1"><a href="http://www.hipmarket.com/">Home</a></li><li class="item68"><a href="/whats-hot.html">What's Hot!</a></li><li class="item54"><a href="/calendars.html">Calendars</a></li><li class="item67"><a href="/hip-t-shirts.html">Hip T-Shirts</a></li><li class="item64"><a href="/purchase-and-download-electronic-books.html">E-Books</a></li><li class="item57"><a href="/books.html">Books</a></li><li class="item58"><a href="/music.html">Music</a></li><li class="item56"><a href="/posters.html">Posters</a></li><li class="item59"><a href="/videos.html">Videos</a></li><li class="item55"><a href="/skips-picks.html">Skip's Picks</a></li><li class="item65"><a href="/your-cart.html">Your Cart</a></li></ul>	</div>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-layout-wrapper">
+    <div class="art-content-layout">
+        <div class="art-content-layout-row">
+<div class="art-layout-cell art-sidebar1">
+        <div class="art-box art-block">
+            <div class="art-box-body art-block-body">
+        
+                        <div class="art-box art-blockcontent">
+            <div class="art-box-body art-blockcontent-body">
+        
+        <form action="index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="Search Mall"  onblur="if(this.value=='') this.value='Search Mall';" onfocus="if(this.value=='Search Mall') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value=75 />
+</form>
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        <div class="art-box art-block">
+            <div class="art-box-body art-block-body">
+        
+                <div class="art-bar art-blockheader">
+            <h3 class="t">
+        Main Menu</h3>
+        </div>
+                <div class="art-box art-blockcontent">
+            <div class="art-box-body art-blockcontent-body">
+        
+        <ul class="menu"><li class="item63"><a href="/advertise.html"><span>Advertise</span></a></li><li class="item69"><a href="/contact-us.html"><span>Contact Us</span></a></li><li id="current" class="active item75"><a href="/hipinc.html"><span>Hip Inc.</span></a></li></ul>
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+
+  <div class="cleared"></div>
+</div>
+<div class="art-layout-cell art-content">
+
+<div class="item-page"><div class="art-box art-post">
+    <div class="art-box-body art-post-body">
+<div class="art-post-inner">
+<h2 class="art-postheader">Hip Internet Publishing</h2>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="art-box art-post">
+    <div class="art-box-body art-post-body">
+<div class="art-post-inner">
+<div class="art-postheadericons art-metadata-icons">
+<a href="/component/mailto/?tmpl=component&amp;link=aHR0cDovL3d3dy5oaXBtYXJrZXQuY29tL2hpcGluYy5odG1s" title="E-mail" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;"><img src="/templates/hipmarket/images/emailButton.png" alt="E-mail"  /></a>
+</div>
+<div class="art-postcontent">
+<div class="art-article"><h1 style="text-align: center;">HIP Publishing</h1>
+<div>HIP Inc. has been helping businesses promote their products and reach their target markets since 1996. We specialize in publishing alternative content for a diverse audience.
+<p>If you need a new website, or wish to publish a book, or advertise your business and products, we can help you succeed. Check out our list of professional services below to see what we can do for you!</p>
+<ul>
+<li><strong>Websites:</strong> Design, Implementation, Webhosting, Management, SEO of E-Commerce, Social Networking and small business sites.</li>
+</ul>
+<ul>
+<li><strong>Publishing:</strong> Design, Editing, Printing, Marketing and Sales of books, E-books and magazines. </li>
+</ul>
+<ul>
+<li><strong>Video Production:</strong> Video Photography and Editing, DVD production. </li>
+</ul>
+<ul>
+<li><strong>Marketing:</strong> Display ads, Creative Ad Campaigns, logo design, product photography, web banner design and placement. </li>
+</ul>
+<ul>
+<li><strong>Hip Websites:</strong> We have our own network of websites to help you promote your business and products.</li>
+</ul>
+</div>
+<div>Let us know what you need and we can provide you with a custom quote.
+<p><a href="/advertise.html">Click here</a> if you just want to place an ad in our Network.</p>
+<p><a href="/contact-us.html">Click here</a> if you just want to contact us.</p>
+</div></div>
+</div>
+<div class="cleared"></div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+</div>
+  <div class="cleared"></div>
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+
+<div class="art-footer">
+    <div class="art-footer-body">
+                        <div class="art-footer-text">
+                                        <p><a href="http://www.hippy.com">Hippy.com</a> | <a href="http://www.hipforums.com">Hip Forums</a></p><p>Copyright © 2011, Hip Inc. All Rights Reserved.</p>
+
+                                                        </div>
+        <div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+<p class="art-page-footer"><a href="http://www.artisteer.com/?p=joomla_templates" target="_blank">Joomla template</a> created with Artisteer.</p>
+
+    <div class="cleared"></div>
+</div>
+
+</body>
+</html>

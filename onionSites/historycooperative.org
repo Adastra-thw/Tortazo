@@ -1,0 +1,1513 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+
+<head><link rel="stylesheet" type="text/css" href="http://historycooperative.org/wp-content/cache/minify/000000/dY7RDsIwCEV_aIgmGj_HMNqtxLUsBaPz6-2i8Wl7A87N4V4wkCVhLXbIUrozetvuvb7-Q3fChp3YYdCa4YpSeHqEaMhmaL5M0bojah2pCN8yjfSWEr9kF0DWXrb5qv0dwZJWZw3bL9bk0MoBPaNp3rXNNbovMCd1_QA.css" media="all" />
+<script type="text/javascript" src="http://historycooperative.org/wp-content/cache/minify/000000/fY7NDoJADIRfaGE1mPgM3jx5NetSoMi22HaN-vT-hBgPwm2S-fLNVL6_ZJC7q6ZQJGwlGJQJya08SxsI4zGFNjyQwPc6gWXMapxmGAFDCm7jrcN4PvHtG5alA4d6z2rq1j4yWYhWNCyp2HqkOOQa9Id-N5-ji7BGwfFl_D-seQRpULuZvuMryI4MyJavN2gHrPUJ.js"></script>
+<script type="text/javascript" src="http://historycooperative.org/wp-content/cache/minify/000000/M9DPL0pPzMtMjs9NTE-sysxL1c8q1s8qLE0tqtTLzU9JzNHLzcwDAA.js"></script>
+<script type="text/javascript" src="http://historycooperative.org/wp-content/cache/minify/000000/fZBRCsJADEQvVLoFPYg3kLQb15TdTU2yqD29ReiHkPr7XpgZMgSWBJWma4EEK1UMs4b50VDe_SJo9r7c2bg7hwLKdaOFanfaT35ho5036icW9PiTYkLzjMGoHodpy4rE1ZOFm7o9gkorjNmVUSClIzk2M79sYSU7GBIJMqevGf599ZbxpZkiygc.js"></script>
+
+
+<meta charset="UTF-8">
+
+<!-- Mobile View -->
+<meta name="viewport" content="width=device-width">
+
+<title>History Cooperative | A short history of nearly everything!</title>
+<link rel="Shortcut Icon" href="http://historycooperative.org/wp-content/themes/organic_magazine/images/favicon.ico" type="image/x-icon">
+
+<style type="text/css" media="screen">
+
+body {
+-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+
+#content a, #content a:link, #content a:visited,
+#homepage a, #homepage a:link, #homepage a:visited,
+#slideshow a, #slideshow a:link, #slideshow a:visited {
+color: #3396a5;}
+
+#content a:hover, #content a:focus, #content a:active,
+#homepage a:hover, #homepage a:focus, #homepage a:active,
+#slideshow a:hover, #slideshow a:focus, #slideshow a:active,
+#content .sidebar ul.menu .current_page_item a {
+color: #33CCCC;}
+
+.container h1 a, .container h2 a, .container h3 a, .container h4 a, .container h5 a, .container h6 a,
+.container h1 a:link, .container h2 a:link, .container h3 a:link, .container h4 a:link, .container h5 a:link, .container h6 a:link,
+.container h1 a:visited, .container h2 a:visited, .container h3 a:visited, .container h4 a:visited, .container h5 a:visited, .container h6 a:visited {
+color: #333333!important;}
+
+.container h1 a:hover, .container h2 a:hover, .container h3 a:hover, .container h4 a:hover, .container h5 a:hover, .container h6 a:hover,
+.container h1 a:focus, .container h2 a:focus, .container h3 a:focus, .container h4 a:focus, .container h5 a:focus, .container h6 a:focus,
+.container h1 a:active, .container h2 a:active, .container h3 a:active, .container h4 a:active, .container h5 a:active, .container h6 a:active {
+color: #33CCCC!important;}
+
+#submit:hover, #comments #respond input#submit:hover, #searchsubmit:hover, #pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active, .reply a:hover, .gallery img:hover, .gform_wrapper input.button:hover, .pagination a:hover, .pagination a:active, .pagination .current, .flex-direction-nav li .prev:hover, .flex-direction-nav li .next:hover {
+background-color: #33CCCC !important;}
+</style>
+<link rel="alternate" type="application/rss+xml" title="History Cooperative Feed" href="http://historycooperative.org/feed/">
+<link rel="pingback" href="http://historycooperative.org/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="History Cooperative &raquo; Feed" href="http://historycooperative.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="History Cooperative &raquo; Comments Feed" href="http://historycooperative.org/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.5 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-49878943-1']);
+				            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			
+
+
+
+
+
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='organic-shortcodes-ie8-css'  href='http://historycooperative.org/wp-content/themes/organic_magazine/css/organic-shortcodes-ie8.css?ver=1.0' type='text/css' media='all' />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://historycooperative.org/wp-content/themes/organic_magazine/css/font-awesome-ie7.css?ver=1.0' type='text/css' media='all' />
+<![endif]-->
+
+<link rel='stylesheet' id='oswald-css'  href='http://fonts.googleapis.com/css?family=Oswald%3A400%2C700%2C300&#038;ver=3.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='merriweather-css'  href='http://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C300%2C900&#038;ver=3.9.1' type='text/css' media='all' />
+
+
+
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://historycooperative.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://historycooperative.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- All in one Favicon 4.3 --><link rel="icon" href="http://historycooperative.org/wp-content/uploads/2014/03/HC-Fav-16.png" type="image/png"/>
+
+<!-- All in One SEO Pack 2.1.6 by Michael Torbert of Semper Fi Web Design[569,655] -->
+<link rel='next' href='http://historycooperative.org/page/2/' />
+
+<link rel="canonical" href="http://historycooperative.org" />
+<!-- /all in one seo pack -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://historycooperative.org/wp-content/themes/organic_magazine/images/background.png'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+
+<!-- Social -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+</head>
+
+<body class="home blog custom-background">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=246727095428680";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="container">
+	
+	<div class="row">
+	
+	    <div id="header">
+	    
+	    		    			    			<h1 id="custom-header"><a href="http://historycooperative.org/" title="Home"><img src="http://historycooperative.org/wp-content/uploads/2014/04/cropped-HC-Logo-small-tag-middle.jpg" height="160" width="980" alt="History Cooperative" />History Cooperative</a></h1>
+	    			    		    	
+	    </div>
+    
+    </div>
+    
+    <div class="row">
+    
+        <nav id="navigation">
+        
+        	<div class="menu"><ul id="menu-menu-1" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-10"><a href="/">Home</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="http://historycooperative.org/technology/" >Technology</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33"><a href="http://historycooperative.org/society/" >Society</a></li>
+<li id="menu-item-24" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24"><a href="http://historycooperative.org/food/" >Food</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25"><a href="http://historycooperative.org/religion/" >Religion</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26"><a href="http://historycooperative.org/government/" >Government</a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27"><a href="http://historycooperative.org/business/" >Business</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28"><a href="http://historycooperative.org/recreation/" >Recreation</a></li>
+<li id="menu-item-203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203"><a href="http://historycooperative.org/health/" >Health</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="http://historycooperative.org/about/" >About</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="http://historycooperative.org/contact/" >Contact</a></li>
+</ul></div>        	
+        	        	    <div class="searchnav">
+        	        <form method="get" id="searchform" action="http://historycooperative.org/">
+        	        <input type="text" class="inputbox" value="Search" onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" name="s" id="s" />
+        	        </form>
+        	    </div>
+        	        	
+        </nav>
+        
+        <nav id="navigation-mobile">
+        	<div class="menu-menu-1-container"><select id="sec-selector" name="sec-selector"><option value="/" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-10"selected >Home</option>
+<option value="http://historycooperative.org/technology/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23">Technology</option>
+<option value="http://historycooperative.org/society/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33">Society</option>
+<option value="http://historycooperative.org/food/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24">Food</option>
+<option value="http://historycooperative.org/religion/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25">Religion</option>
+<option value="http://historycooperative.org/government/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26">Government</option>
+<option value="http://historycooperative.org/business/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27">Business</option>
+<option value="http://historycooperative.org/recreation/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28">Recreation</option>
+<option value="http://historycooperative.org/health/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203">Health</option>
+<option value="http://historycooperative.org/about/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11">About</option>
+<option value="http://historycooperative.org/contact/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">Contact</option>
+</select></div>        </nav>
+    
+    </div>
+
+		
+	<div class="row">
+		
+		<div id="slideshow">
+	    	<div class="flexslider loading" data-speed="6000">
+		        <ul class="slides">
+		            		            		            		            		            
+		            <li>
+		            	<div class="eight columns">
+			                			                    <a class="featureimg" href="http://historycooperative.org/the-hisory-of-icecream/" rel="bookmark"><img width="600" height="360" src="http://historycooperative.org/wp-content/uploads/2014/02/shutterstock_59478175-ice-cream-600-600x360.jpg" class="attachment-slide wp-post-image" alt="shutterstock_59478175-ice-cream 600" /></a>
+			                		                </div>
+		                <div class="four columns">
+							<div class="article">
+		                    <h1 class="headline smaller"><a href="http://historycooperative.org/the-hisory-of-icecream/" rel="bookmark">
+		                    	A Sweet History of an Icy Treat		                    </a></h1>
+		                    <h6 class="text-date">Wednesday, March 26, 2014</h6>
+		                    <p>Every American person should know the old rhyme “You scream! I scream! We all scream for ice cream!”  In any country in the world, the word Ice Cream&#8230;</p>
+		                    <p><a class="more-link" href="http://historycooperative.org/the-hisory-of-icecream/" rel="bookmark">Read More</a></p>
+		                    </div>
+		                </div>
+		            </li>
+		            
+		            		            		            		            
+		            <li>
+		            	<div class="eight columns">
+			                			                    <a class="featureimg" href="http://historycooperative.org/the-vatican-city-history-in-the-making/" rel="bookmark"><img width="640" height="360" src="http://historycooperative.org/wp-content/uploads/2014/03/Vatican-city-640x360.jpg" class="attachment-slide wp-post-image" alt="Vatican city" /></a>
+			                		                </div>
+		                <div class="four columns">
+							<div class="article">
+		                    <h1 class="headline smaller"><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/" rel="bookmark">
+		                    	The Vatican City &#8211; History in the Making		                    </a></h1>
+		                    <h6 class="text-date">Tuesday, February 25, 2014</h6>
+		                    <p>Sited on the banks of the Tiber River, on a hill sits the Vatican City. It is a place that has one of the richest histories in the&#8230;</p>
+		                    <p><a class="more-link" href="http://historycooperative.org/the-vatican-city-history-in-the-making/" rel="bookmark">Read More</a></p>
+		                    </div>
+		                </div>
+		            </li>
+		            
+		            		            		            		            
+		            <li>
+		            	<div class="eight columns">
+			                			                    <a class="featureimg" href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark"><img width="640" height="360" src="http://historycooperative.org/wp-content/uploads/2014/03/iphone-apple-reinvents-the-phone-1-640x360.jpg" class="attachment-slide wp-post-image" alt="iphone-apple-reinvents-the-phone-1" /></a>
+			                		                </div>
+		                <div class="four columns">
+							<div class="article">
+		                    <h1 class="headline smaller"><a href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark">
+		                    	The iPhone &#8211; 7 Years and Counting		                    </a></h1>
+		                    <h6 class="text-date">Wednesday, January 15, 2014</h6>
+		                    <p>The iPhone is one of the world’s most iconic devices and, in the grand scheme of things, it isn’t very old. But when did it begin? Where did&#8230;</p>
+		                    <p><a class="more-link" href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark">Read More</a></p>
+		                    </div>
+		                </div>
+		            </li>
+		            
+		            		            		            		            
+		            <li>
+		            	<div class="eight columns">
+			                			                    <a class="featureimg" href="http://historycooperative.org/30-years-of-financial-crisis/" rel="bookmark"><img width="600" height="360" src="http://historycooperative.org/wp-content/uploads/2014/01/shutterstock_wall-street-600x360.jpg" class="attachment-slide wp-post-image" alt="shutterstock_wall street" /></a>
+			                		                </div>
+		                <div class="four columns">
+							<div class="article">
+		                    <h1 class="headline smaller"><a href="http://historycooperative.org/30-years-of-financial-crisis/" rel="bookmark">
+		                    	30 Years of Financial Crisis		                    </a></h1>
+		                    <h6 class="text-date">Sunday, January 5, 2014</h6>
+		                    <p>The world’s financial markets are destined to be stuck in a loop, forever repeating history, as overspending and bad business decisions result in financial crisis for everyone. This&#8230;</p>
+		                    <p><a class="more-link" href="http://historycooperative.org/30-years-of-financial-crisis/" rel="bookmark">Read More</a></p>
+		                    </div>
+		                </div>
+		            </li>
+		            
+		            		            		        </ul>
+	        </div>
+	    </div>
+		    
+	</div>
+	
+	
+
+</div> <!-- close container -->
+
+<div class="container">
+
+<div class="row">
+	
+	<div class="eight columns">
+		<div id="homepage">
+	    	
+	    		        
+	        <div class="post first">
+	            
+	            					            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Jan</div>
+	            			    <div class="day">15</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/the-history-of-the-iphone/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-history-of-the-iphone/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-history-of-the-iphone/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-history-of-the-iphone/"
+		            			    data-via=""
+		            			    data-text="The iPhone &#8211; 7 Years and Counting"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark">The iPhone &#8211; 7 Years and Counting</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark"><img width="640" height="361" src="http://historycooperative.org/wp-content/uploads/2014/03/iphone-apple-reinvents-the-phone-1.jpg" class="attachment-post wp-post-image" alt="iphone-apple-reinvents-the-phone-1" /></a>
+		                              
+	                        <p>The iPhone is one of the world’s most iconic devices and, in the grand scheme of things, it isn’t very old. But when did it begin? Where did the idea come from?</p>
+<p>The very first iPhone was unveiled in January 2007 at the MacWorld convention. Steve Jobs revealed what Apple had been developing for nearly 3 years and, for its time, it represented the cutting edge of technology.</p>
+<p>The device was introduced as an iPod with a wider screen, controlled by touch instead of physical buttons. In short, it was a mobile phone and a device to communicate with the internet. At the time, Jobs told the audience that this device would “reinvent the phone”.</p>
+<p>While revealing the design of this new device, Jobs took time out to make fun of the current smartphones on the market, ones that relied on a physical keyboard and were unwieldy to use.  He showed off how simple it was to control a phone using simple touch gestures on a screen and the audience were hooked.</p>
+<p> <a href="http://historycooperative.org/the-history-of-the-iphone/#more-50"  class="more-link">Read More</a></p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Jan</div>
+	            			    <div class="day">11</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/" title="Posts by " rel="author"></a></p> 
+	            			<p><a href="http://historycooperative.org/the-history-of-the-seduction-community/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-history-of-the-seduction-community/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-history-of-the-seduction-community/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-history-of-the-seduction-community/"
+		            			    data-via=""
+		            			    data-text="Seduction Community in the Spotlight"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-history-of-the-seduction-community/" rel="bookmark">Seduction Community in the Spotlight</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-the-seduction-community/" rel="bookmark"><img width="600" height="400" src="http://historycooperative.org/wp-content/uploads/2014/04/mens-dating-advice.jpg" class="attachment-post wp-post-image" alt="history of mens dating advice" /></a>
+		                              
+	                        <p>In the beginning, there was Dear Abby – an American institution since the 1950s. Write in, and get nice, sensible advice on your dating dilemma. But the catch was that it was PG-rated, written by a woman and generally for them. Young men continued to get a lot of their dating advice from their peers in the locker room, and if they were lucky, an older male mentor who knew the ropes.</p>
+<p>Away from the safe, clean-cut mainstream arena, there were always the racy magazines like <a href="http://en.wikipedia.org/wiki/Playboy" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">Playboy</a> which gave a totally different view. After finishing the articles, the attentive reader could go to the back and find books advertised with titles like “How to Pick Up Girls”. This classic by Eric Weber appeared in 1970, and included advice such as wearing bell-bottoms and marching in peace marches to pick up the hot hippies. The 1950s were gone, and men&#8217;s dating advice had moved on from how long you should wait to kiss a girl on the cheek at her doorstep. This was red-blooded and unashamed pick-up artistry! The term itself became part of the language, and the 1970s was a time when pick-up artistry flourished, albeit still underground.</p>
+<p>Things changed as the 1980s brought in a different atmosphere. Reagan was in the White House, concerned parents were clamping down on rock and roll lyrics, and most importantly the specter of AIDS changed the whole dating landscape. The free-wheeling 1970s over, in dating advice magazines and on TV, there was understandably a focus on staying safe.</p>
+<p>Moving into the 1990s, <a href="http://www.oprah.com/index.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.oprah.com']);">Oprah</a> gave voice to women&#8217;s viewpoints on relations between the sexes, and ushered in the sensitive metrosexual. It was also a time of such bestselling books as “Men Are From Mars, Women Are From Venus” and “The Rules”. While the former was written by a man, it seemed to cater more to women and required men to “get with the program”. And the latter defined the 1990s dating scene with what was effectively game for women. It was the decade of women making the rules. It was a tough and confusing time to be a man in the 1990s, as men no longer knew whether to be a traditional macho male, or a Sensitive New Age Guy.</p>
+<p>Towards the end of the decade, new things started to stir. AIDS was no longer front-and-center in people&#8217;s minds, Oprah&#8217;s “you go girl!” brand of feminism was mainstream, and the time was right for men to start something of their own. Most importantly, the Web was starting to provide a new platform for men to give advice on the dating arena. The internet would well and truly shake things up.</p>
+<p>One of the first gurus of the new era was <a href="http://en.wikipedia.org/wiki/Ross_Jeffries" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">Ross Jeffries</a>. Selling books and CDs from his website, he told the would-be Casanova that no matter how nebbish you might be, you could learn to charm any woman into bed. Jeffries was big on NLP, effectively a rebranded form of hypnosis. In many ways, he was like a holdover from the 1970s with his unrepentant focus on getting women into bed. Love him or hate him, he showed that there was a huge market on the internet for male-focused dating tips.</p>
+<p>Next on the scene was David De Angelo. More family-friendly than Ross Jeffries, who could come across as misogynistic, De Angelo promised you could “Double Your Dating” through attending his seminars or buying his DVD sets. De Angelo offered some key concepts which at the time were breakthroughs to many young men. His audience were the “nice guys” created by the feminism of the 80s and 90s who now found that the jerks seemed to be getting all the girls. He told them to be “cocky and funny”, skating just on the socially acceptable side of jerkdom. De Angelo also introduced the concept of the “neg”, one of the most notorious (and misunderstood) concepts of new-school “Game”.</p>
+<p>Basically, a “neg” is giving a back-handed or ambiguous compliment to a girl, such as “I love your hair – is it real?” or telling an obviously glamorous and beautiful woman “ you&#8217;re cute – like my bratty little sister”. Designed to get the attention of sought-after women used to getting fawning compliments, it was easily abused by novices, who would make these kind of remarks to less attractive and more insecure women, or turn them into outright insults. This was the kind of dating advice that had its place, but could easily go wrong, and tended to get bad press. De Angelo was everywhere on the internet in the first few years of the 2000s, as he was essentially a marketer and businessman using the dating advice for men arena as his stepping stone to bigger things. Now under his real name, he has gone on to become a hugely successful and wealthy entrepreneur.</p>
+<p>But even more important than De Angelo and the marketers was the ragtag group of men who started to congregate on various internet message boards in the late 1990s and early 2000s. This was something new – men learning and sharing their dating experiences pseudonymously in real time. One of them was a young Canadian by the name of Eric von Markovic, better known as Mystery. Striding around the streets of Toronto in platform boots and a top hat, wearing a feather boa (“peacocking”), Mystery would perform magic tricks to the delight of young women, in the most flamboyant pick-up artist tradition. While perhaps not the greatest or most original of PUAs, he now had an online audience of eager acolytes who took his approach and went out on the streets to try to replicate it.</p>
+<p>A movement was forming, and online forum posts were studded with enough jargon and acronyms to require a glossary. The online seduction community, or simply “The Community” as it was known, grew enormously as it bubbled up from the grassroots. Various gurus espoused their own approaches, such as “direct” or “indirect”. The most notorious would simply advise men to “get into sexual state” as they talked to women, and let their raging pheromones do the seducing for them. Others, building from Mystery&#8217;s more cerebral approach, built elaborate theoretical models which could be drawn up on a whiteboard like a physics problem.</p>
+<p>The time was right for a breakout into the mainstream, and it occurred in 2005 with the publication of <a href="http://www.amazon.com/Game-Neil-Strauss-ebook/dp/B006MPKDOU/ref=sr_1_1?ie=UTF8&amp;qid=1397200188&amp;sr=8-1&amp;keywords=the+game+neil+strauss" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.amazon.com']);">“The Game: Penetrating the Secret Society of Pickup Artists” by Neil Strauss</a>. This book provided a window on “the Community” and revealed the techniques of Mystery and his followers, as well as their real-life stories. Suddenly, a whole new generation of young men were getting advice on women which wasn&#8217;t given by women or filtered through family values.</p>
+<p>Within a couple of years, most young men were at least passingly familiar with this kind of approach to dating and women, especially after more media exposure like the <a href="http://www.vh1.com/shows/the_pickup_artist/season_1/series.jhtml" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.vh1.com']);">VH1 show “The Pick-Up Artist”</a> which starred none other than Mystery. Some people laughed it off, others drew out what they saw as valuable lessons. In the wake of this mainstream exposure, a number of companies and individuals sprang up, creating a small industry of dating and pickup advice through DVDs and coaching and “boot camps” where &#8211; for a fee &#8211; you could go out on the town with a seduction guru and learn the “crimson arts”. Many major cities have become accustomed to these groups of young men going out and practicing their techniques, with lesser or greater effectiveness.</p>
+<p>This vast array of dating products and services flooding the market started to cause concern amongst large sections of the &#8216;community&#8217;, due to the complete lack of regulation. Any person could walk in off the street, proclaim themselves a &#8216;guru&#8217;, and start selling products and services, often for fees in excess of $4,000, to anyone who would purchase them. To combat the rise of the fake guru who was just looking to make a quick dollar, PUA accountability groups started appears. PUAWatchDog started analysing the claims of different Gurus to test their validity and dating product review sites such as <a href="http://seductionreview.net" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://seductionreview.net']);">Seduction Review</a> started giving customers a voice to share their opinions and experiences with other potential customers. These accountability groups helped ensure that customers weren&#8217;t getting ripped off by unscrupulous marketers.</p>
+<p>With the level of information on pickup techniques reaching new saturation point, with every possible scenario for attracting a woman having it&#8217;s own book, DVD, and live coaching program, seduction community focussed turned to the effect the inner-psychology of the individual had on the outcome of the flirting and seduction attempts. This was known as &#8216;Inner Game&#8217;. Companies such as Authentic Man Program and The Attraction Institute developed structures and tactics for eliminating ones inner-roadblocks that were getting in the way of a successful seduction.</p>
+<p>At this point, the PUA gurus and online communities are no longer new and novel, but they haven&#8217;t become exactly mainstream either. More recently, there has been less of a focus on “Game” and specific techniques to seduce women, and more emphasis on general self-improvement – fitness, finances, etc. &#8211; in order to increase not only success with women but overall life satisfaction. This definitely seems to be a more balanced approach than going out to hit on dozens of women every night.</p>
+<p>There are other trends for men seeking to improve their dating success, such as an increased realization that American and Western women in general are not the only women in the world, and many men are reporting having better love lives from branching out to foreign countries. Whole online communities are devoted to the life of the budding international playboy, who enjoys not only the sights and food of other countries but also reports back on their success with the local women.</p>
+<p>Meanwhile, there are totally different online communities, such as popular dating advice sub&#8211;Reddits, where a group of peers give advice either to the opposite sex or to their own gender. It could be considered a kind of crowd-sourced dating advice and unlike the “PUA” communities, gurus are shunned in favor of a more democratic and gender-equal approach. Men who identify as feminist or are in favor of a chivalrous approach to women will find a more friendly place for dating advice on mainstream sites like Reddit. One thing is for sure, there are many options and approaches to dating in 2014, and the spread of information is ensuring that men have plenty of information and advice to help them navigate this aspect of their lives.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Jul</div>
+	            			    <div class="day">20</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/internet-business-a-history/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/internet-business-a-history/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/internet-business-a-history/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/internet-business-a-history/"
+		            			    data-via=""
+		            			    data-text="Internet Business: A History"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/internet-business-a-history/" rel="bookmark">Internet Business: A History</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/internet-business-a-history/" rel="bookmark"><img width="640" height="426" src="http://historycooperative.org/wp-content/uploads/2014/07/ecommerce.jpg" class="attachment-post wp-post-image" alt="INGMRF-00028492-001" /></a>
+		                              
+	                        <p>The internet is a vast and beautiful entity that allows unprecedented access to information, the likes of which we have never seen before. Never before has one had as much access to knowledge as today, and that’s thanks to the internet. Not only is the internet a giant repository of information, it is also a vast marketplace. Never before has the world’s market been so easily accessible to individuals and businesses all over the world. The internet has changed the way we do business forever.</p>
+<p>These days, ecommerce has become as common place as watching tv. It’s something that many people do every single day, and probably couldn’t imagine their lives without. There are lots of people that started out with small local business who have used ecommerce to boost sales and make up a large part of their income. It’s exciting to see that this entirely new system of doing business only came into existence a few decades ago. It’s amazing to see how far it’s come, and even more exciting to speculate how it will advance in the future.</p>
+<p>&nbsp;</p>
+<p><strong>Electronic Data Interchange</strong> (<strong>1960-1982)</strong></p>
+<p>In the very, very beginning, there was the development of the Electronic Data Interchange (EDI). The EDI was very convenient as it replaced the more traditional forms of document exchange such as mailing and faxing. This system was used mainly by trading partners who utilised it to transfer orders, invoices and pretty much any other business transaction. The data format that was used, met the ANSI ASC X12, which was the main set of standards in America.</p>
+<p>When an order is sent, it was then examined by a Value Added Network, and then proceeded to be processed by the recipient’s system. The EDI was a great tool in its time. It allowed quick and easy transfer of data, without the need for any human intervention.</p>
+<p>The man credited with inventing the earliest form of ecommerce is Michael Aldrich. He was an English inventor and entrepreneur. According to the stories, he was one day out with his wife and he was complaining about having to make a long trip to the supermarket. He was then struck with a sudden wave of inspiration. He had the idea of hooking up television to your supermarket to get them to deliver your groceries. In 1979, he connected his television to a computer that was designed for processing transactions. He then coined the term “teleshopping”, which is the earliest form of ecommerce that we know today.</p>
+<p>&nbsp;</p>
+<p><strong>The 90’s and Beyond</strong></p>
+<p>The internet as we know it today, was invented by a man called Tim Berners Lee. He was formerly an employee of CERN. He and his friend Robert Caillau, created a proposal to build a “hypertext project” called “WorldWideWeb” in 1990. Later that year, Lee used his NeXT computer (product of Steve Jobs after being ousted from apple) and created the very first web server and hand coded the first browser. Soon after, he went on to make the internet publicly available on August 6, 1991. He went on further to integrate hypertext in the internet and <a title="Web Design Through the Years" href="http://historycooperative.org/web-design-through-the-years/" >proceeded to develop the URL, HTML and HTTP</a>.</p>
+<p>Initially, there was a ban on ecommerce. People were not allowed to engage in commercial use of the internet. Eventually, the <a href="http://www.nsf.gov/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.nsf.gov']);">National Science Foundation</a> lifted the ban in 1991. Since then, the internet and ecommerce has been experiencing exponential growth. It wasn’t until 1995 that the NSF began charging a fee for registering domain names. There were then 120,000 registered domain names. Within 3 years, however, that number grew to over 2 million. At that point in time, the NSF no longer controlled the internet.</p>
+<p>The 1992 book, Future Shop: How Technologies Will Change The Way We Shop And What We Buy, provided insight and predictions on the future of consumerism. An overview of the book explains:</p>
+<blockquote><p>For hundreds of years the marketplace has been growing more complex and more confusing for consumers to navigate. Published in 1992, long before the Internet became a household word. Future Shop argued that new information technologies, combined with innovative public policies, could help consumers overcome that confusion. A prescient manifesto of the coming revolution in e-commerce, Future Shop’s vision of consumer empowerment still resonates today.</p></blockquote>
+<p>From the early days of the internet, there were many concerns regarding online shopping. In 1994, Netscape developed Secure Socket Layers (SSL) which was a new security protocol that protected sensitive information transferred over the web. Browsers had the ability to detect if a site had an SSL certificate, which was a major indicator as to the trustworthiness of a site.</p>
+<p>Nowadays, the SSL encryption is one of the most powerful security protocols of the internet. Recently, it was recently exposed to the Heartbleed exploit, which made waves in the web industry. It just goes to show how important SSL was in the online community.</p>
+<p>&nbsp;</p>
+<p><strong>The Dot Com Bubble</strong></p>
+<p>The dot-com bubble<a href="http://en.wikipedia.org/wiki/Dot-com_bubble" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);"> was one of the darkest times in internet history</a>. It was giant bubble in the stock market that was created by eager investors looking to cash in on the new “dot com” companies. They were drawn in by the hype and the novelty which caused them to ignore common sense business strategies. Eventually, the bubble popped in 2001. This resulted in many people going bankrupt, trillions of dollars lost and some very valuable lessons learned. The bubble was so bad, that it triggered a small economic recession in the early 2000’s.</p>
+<p>There were numerous factors that contributed to the bubble, the period of speculation and investment in internet firms between the years 1995 and 2001. In 1995, with the increase in popularity of internet users, many firms saw the increase in users as potential customers and increased revenue. As a result of this, many internet start-ups were conceptualized in the late 1990’s. They came to be known as “dot coms” because of the popular TLD “.com” which followed their names.</p>
+<p>The entire dot com industry was well known for their rash business practices which were based on “potential” rather than actual revenue. The policies were mainly growth over profit, which was the incorrect assumption that if they increased their customer base, that their profits would also rise. Many companies spent millions of dollars attempting to dominate the market for a specific product or need.</p>
+<p>&nbsp;</p>
+<p><strong>Ecommerce Giants</strong></p>
+<p>Very few companies survived and thrived after the infamous dot com bubble, these included e-commerce giants such as <a href="http://ebay.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://ebay.com']);">eBay</a> and <a href="http://amazon.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://amazon.com']);">Amazon</a>. Today Amazon and Ebay are both amongst the most successful companies on the Internet!</p>
+<p>Only a few weeks after selling his first ever book online, the founder of Amazon, Jeff Bezos, was selling books to every state in the U.S and over 40 other countries. The simplified process of order fulfilment and shipping enabled him to order books directly from the publishers.</p>
+<p>Another eCommerce giant, eBay, saw amazing growth as well. They allowed pretty much anyone to buy and sell online. In just a couple of years the website became a household name. It revolutionised ecommerce and was turning over hundreds of millions of dollars each year.</p>
+<p>From its humble beginning in 1995 modern Ecommerce has become the fastest growing area of business, showing continued growth year after year. Technology has advanced further making it so much more accessible to people from all walks of life, and entire industries have been built around Ecommerce which are today, the who&#8217;s who of the business world.</p>
+<p>These days, practically anything can be bought or sourced online. From your dinner to, clothes <a href="http://www.jamesedition.com/jets" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.jamesedition.com']);">to a private jet</a>. Over 60% of adults have purchased stuff online and this figure will only increase in the coming years. This shows that people love shopping online. The convenience of not having to leave your home, to the transparency of user reviews make it irresistible to today’s youth.  One of the greatest lures of ecommerce is the fact that anyone with drive and motivation can succeed. The potential for growth and scalability is unprecedented. The advantages are practically endless.</p>
+<p>&nbsp;</p>
+<p><strong>Tech Startups</strong></p>
+<p>There has been another surge in tech companies recently, following the increased popularity of mobile phone and web apps, as well as social media. These tech startups are often the epitome of new-age business. Seemingly small companies are worth billions of dollars and in many cases the employees don’t even live in the same city, or even the same country. These companies are being sold for millions of dollars with the help of website brokers. This is a career solely based on the buying and selling of web properties. Learn more about website brokers: <a href="http://www.incomediary.com/sell-with-a-website-broker" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.incomediary.com']);">http://www.incomediary.com/sell-with-a-website-broker</a></p>
+<p>Many speculators are worried that this may be the beginning of another bubble. But silicon valley investors are relentless and for the time being, have been seeing a substantial ROI.</p>
+<p>&nbsp;</p>
+<p><strong>Conclusion</strong></p>
+<p>In conclusion, the way we do business has been changed substantially ever since the inception of the internet. From eCommerce giants like Amazon and eBay making it easier to get anything you want online, to regular mom-and-pop stores extending their reach globally, to bloggers that earn based on their ability to engage an audience, to <a href="http://www.businessinsider.com/startups-with-billion-dollar-valuations-2014-3?op=1" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.businessinsider.com']);">multi-billion dollar tech startups</a>. The world is changing rapidly and more opportunities are being created. Many people no longer have to depend on their local economy to find work, start a business and earn money.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">May</div>
+	            			    <div class="day">29</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/admin/" title="Posts by admin" rel="author">admin</a></p> 
+	            			<p><a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/"
+		            			    data-via=""
+		            			    data-text="The History Of Divorce Law In The USA"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/" rel="bookmark">The History Of Divorce Law In The USA</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/" rel="bookmark"><img width="412" height="324" src="http://historycooperative.org/wp-content/uploads/2014/05/Dutch_Painting_in_the_19th_Century_-_Van_de_Laar_-_The_Divorce.png" class="attachment-post wp-post-image" alt="Dutch_Painting_in_the_19th_Century_-_Van_de_Laar_-_The_Divorce" /></a>
+		                              
+	                        <p>While divorce perhaps doesn&#8217;t have the same stigma connected to it as it once did, the practice is still a touchy subject in many parts of America. Indeed, as we will see throughout the article, it has changed drastically in law as well as in the attitudes of the general population across the history of the country.</p>
+<p>What was once a forbidden practice and only every used as a last resort is now very common. The medium length for a marriage in the US these days is around 11 years and divorce rates have been rising steadily throughout the 20<sup>th</sup> century and some 29% of marriages will suffer some form of ‘disruption’ and in many cases lead to a divorce.</p>
+<p>However how has divorce law changed over time?</p>
+<p><strong>Colonial Divorce</strong></p>
+<p>Even before the United States officially became the nation that we know it as today divorce was a hot topic in the colonies.</p>
+<p>One of the earliest instances of a divorce law was in the Colony of Massachusetts Bay who actually created a judicial tribunal that dealt with divorce matters in 1629. This legislative body was allowed to grant divorces on the basis of adultery, desertion, bigamy and in many cases impotence as well. In the North the colonies adopted their own approaches that made divorce available whereas the southern colonies did all they could to prevent the act even if they did have legislation in place.</p>
+<p>After 1776 divorce law was actually less restrictive. Hearing divorce cases took the legislature away from what they deemed as more important work so it was handed to the judiciary where it remains today. The big problem at the time, for women at least, was that they were basically a legal non-entity in the sense that it was difficult for them to claim ownership of property or financial assets which worked against them in the case of a divorce.</p>
+<p>The Married Women&#8217;s Property Acts in 1848 went some way to rectifying this however throughout the 17<sup>th</sup>, 18<sup>th</sup> and 19<sup>th</sup> centuries divorce remain fairly uncommon if we think of how much it is used today and women were at a tremendous disadvantage from the get go.</p>
+<p><strong>Early 20<sup>th</sup> Century</strong></p>
+<p>By the end of the 18<sup>th</sup> century there were numerous ‘divorce mill’ states or places such as Indiana, Utah, and the Dakotas where you could go and get a divorce. Many towns provided accommodation, restaurants, bars and events centered on this trade. In 1887 Congress ordered the first compilation fo divorce statistics at a federal level to see how big the ‘problem’ had become.</p>
+<p>The Inter-Church Conference on Marriage and Divorce which was held in in 1903 in an attempt to use religion to ensure that divorce was kept at a minimum. However with the onset of feminism and the general relaxation of views towards divorce from a societal and moral stand point the practice was gaining traction.</p>
+<p>In the 1920’s trial marriages were established that allowed a couple of try out a marriage without actually being married, not having kids or any lifelong financial commitments. In a way it was simply two people of the opposite sex living in the same quarters however for the time it was a new concept and was one of the first ways in which the law tried to accommodate prenuptial contracts. In fact marriage counseling was beginning to become popular as well and represented the recognition that a problem existed even if they law did not strictly prohibit it.</p>
+<p><strong>The Family Court</strong></p>
+<p>As the years rolled by and the nation found itself embroiled in two world wars, divorce took a back seat as far as lawmakers were concerned. However the Family Court system that started in the 1950’s was the first time in decades that the legislature and judicial system in the US tackled the divorce issue.</p>
+<p>For years, couples had to go through the traditional court system to get a divorce or at least plead their case to do so. However with new laws in the place that established the Family Court, this created a way for judges to essentially ratify agreements between couples for divorce that had been created beforehand. While the law used to ensure that a case had to be heard in a court of law this now changed.</p>
+<p>With these changes, law firms specialising in divorce started appearing all over the country &#8211; <a href="http://www.heathnewton.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.heathnewton.com']);">San Francisco</a>, <a href="http://www.rinellaandrinella.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.rinellaandrinella.com']);">Chicago</a>, <a href="http://spodeklawgroup.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://spodeklawgroup.com']);">New York</a>, and just about every other large city soon became involved in these family courts.</p>
+<p><strong>No Fault Divorces</strong></p>
+<p>Possibly the biggest change to divorce law in the United States in its history came with no fault divorces in the 1970’s. Up until now there still had to be a party at fault. Even in the Family Courts there was still a need for an adulterer or such like to be identified and then for the terms of the divorce to be agreed however with the change in the law then a divorce could be granted if neither party was at fault.</p>
+<p>California actually led the way in 1969 however it wasn’t until the 1970’s that other states (Iowa being the second) adopted the law. In many respects it was enacted to bring down the cost of divorce in terms of hiring lawyers and expensive court fees with drawn out trials although that didn&#8217;t really come to fruition. Divorce lawyers and financial advisors all still profited greatly from divorce proceedings even if both parties simply wanted to split and move on.</p>
+<p>Something that this change in the law didn’t focus on was child custody and it still remained a neglected topic. Laws to address this included:</p>
+<ul>
+<li><a href="http://www.uniformlaws.org/shared/docs/child_custody_jurisdiction/uccja68.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.uniformlaws.org/shared/docs/child_custody_jurisdiction/uccja68.pdf']);">The Uniform Child Custody Jurisdiction Act in 1968</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Parental_Kidnapping_Prevention_Act" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">Parent Kidnapping Act in 1980</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hague_Convention_on_the_Civil_Aspects_of_International_Child_Abduction" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">The Hague Convention on International Child Abduction in 1986</a></li>
+</ul>
+<p>While the law has attempted to create a fair an equal child custody process it still isn’t quite right in many respects and even with the legislation that has been enacted over the years there remains work to do.</p>
+<p><strong>Modern Day America</strong></p>
+<p>Divorce towards the end of the 20<sup>th</sup> century and into the early 21<sup>st</sup> century was a much different proposition from a hundred years ago.</p>
+<p>While there are new laws being enacted all the time to deal with the finer points of divorce the no fault legislation essentially changed everything about the practice and made it into the divorce proceedings that we know today. That being said the attitudes towards divorce are still traditional in many quarters. Even though it has been set in law and that, in general at least, the stigma around divorce has gone it still plays a major role in affected a child’s upbringing and other societal problems.</p>
+<p>Furthermore the equal share of property and finances is something else that the law is still trying to get right. Although this differs from state to state across the United States of America in most cases who is to blame doesn’t always transfer over to who gets the property. The legislature and the court system are still trying to find a balance in modern day America between a system that allows for divorce without needing evidence of wrong doing and one that is fair and equal while also addressing the child factor as well.</p>
+<p>It isn’t easy but there is still a lot of work behind the scenes to address it.</p>
+<p><strong>Conclusion</strong></p>
+<p>Divorces were being carried out before the United States of America was even a nation. The colonies had their own measures and laws for dealing with such things however for centuries they were largely used in extreme cases. Indeed, up until the No Fault rule it was unusual to see a divorce that was granted on the basis that both parties simply wanted to break up.</p>
+<p>This happens fairly regularly these days however back then there generally had to be a reason of some sort behind the divorce – a women cheating on a man for instance or a man having several wives.</p>
+<p>The big question now is whether or not the law can develop even further and change with the rising divorce cases across the country and the more complicated financial and property ownership models. Up until now at least divorce law in the United States has developed at a fairly fast rate. It might not always have favored the couple given that much of the early legislation was there to deal with extreme cases that were even frowned upon by the religious orders of the day.</p>
+<p>Divorce law was very reactionary and has been throughout the past 300 years aside from a few isolated cases. It is still adapting to a growing trend however while the stigma of divorce has largely vanished in many places the law is still trying to keep up.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">May</div>
+	            			    <div class="day">23</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/web-design-through-the-years/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/web-design-through-the-years/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/web-design-through-the-years/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/web-design-through-the-years/"
+		            			    data-via=""
+		            			    data-text="Web Design Through the Years"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/web-design-through-the-years/" rel="bookmark">Web Design Through the Years</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/web-design-through-the-years/" rel="bookmark"><img width="605" height="350" src="http://historycooperative.org/wp-content/uploads/2014/01/shutterstock_webdesign-605x350.jpg" class="attachment-post wp-post-image" alt="shutterstock_webdesign-605x350" /></a>
+		                              
+	                        <p>The internet is a relatively new invention but boy have things changed in its short life! The internet has changed the way we live and it has been responsible for the creation of thousands upon thousands of jobs that simply would not exist without it.</p>
+<p>One of those categories of job is web design, something that we would sorely miss now if it disappeared.  What would we do without the animations? The colorful backgrounds, the fancy writing and the music playing in the background?</p>
+<p><strong>When did it Begin?</strong></p>
+<p>In 1990, <a href="http://www.w3.org/People/Berners-Lee/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.w3.org']);">Tim Berners-Lee</a> developed the very first web browser, and it was called WorldWdeWeb, although it was later renamed as Nexus. At that time, only text could be displayed on a web page. No fancy fonts, no pretty pictures or videos, just simple plain text, with links underlined in blue.</p>
+<p>In 1993 Mosaic was released, the first ever web browser that allowed developers to add images to their web pages.  It was able to support .gif images and web forms, a massive leap forward for the time.</p>
+<p>Design was not brilliant because of the constraint of the browser and to a limit in bandwidth programmers rather than designers designed most websites.</p>
+<p><strong>Mid 1990’s to 2000</strong></p>
+<p>By the mid-nineties, Netscape was the top web browser but it was soon knocked off its pedestal by Internet Explorer and so began the war of the browsers. Around this time, web design began to get a little more complex, using frames and tables as well as images.</p>
+<p>Animated .gif images could be used to create buttons on sites and JavaScript began to appear on some websites.</p>
+<p>From 1998, we began to see the introduction of web development tool kits. Remember DreamWeaver? GoLive?  These began to be more popular as they gave a larger number of users access to web page creation.</p>
+<p>Jobs in web design began to grow as more designers were offered jobs to build sites.  Flash technology also made its appearance during this era of web site design although it was not all that popular to start off with.</p>
+<p><strong>2000 -2004</strong></p>
+<p>In the year 2000, the bubble burst and hundreds of thousands of web businesses crashed. However, while this may have put the clamps on things for a while, it was not for long.  Web design standards began to pick up again.</p>
+<p>Now we started to see a better class of design. We got designs that were not based on tables, we got transparency with .png images and CMS began to grow in popularity.  Content management System was a program that allowed designers to publish content on the web. They could go back in and edit what they had published and modify it as they saw fit.</p>
+<p><strong>2004 – 2007</strong></p>
+<p>Web 2.0 was born in 2004. This was the era of bold websites, sites that were aimed at communities. There was bold typography and shiny gradients. Corners became rounded, edges softened and web design, once again, took off at the speed of light.</p>
+<p>Websites began to be more functional and needed more in the way of an interface to work properly. Widgets were introduced all over the place to help integrate one site with another. This was more often, where a social network site was involved, lining outside feeds to the site, or lining from the site to a blog.</p>
+<p>This era was also marked by an increase in accessibility of websites to common people. Developments such as <a href="http://wordpress.org" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://wordpress.org']);">WordPress</a> and <a href="http://blogger.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://blogger.com']);">Blogger</a>, along with user-friendly guides such as <a href="http://yourbrandnewwebsite.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://yourbrandnewwebsite.com']);">Your Brand New Website</a>, helped every day people make a website without having to learn HTML or CSS.</p>
+<p><strong>2008 to the Present</strong></p>
+<p>Web site design has evolved incredibly over the last few years and one thing that has given it a push, unbelievably, was the iPhone. Mobile website design was introduced, allowing people to view sites properly on their phones.</p>
+<p>Many of the bigger websites created mobile versions of their sites specifically for the smartphone and the tablets that were fast becoming popular devices.  On the internet itself, the large and fast growing social network sites created more widgets for user to put on their blogs and other websites created widgets designed to go on social network sites.</p>
+<p>In design, typography increased tremendously and grid-based designs are fast becoming the norm.</p>
+<p>Today, website design is a huge business. Designs are more complex yet less cluttered. Early websites were difficult to navigate; today, a well-designed website is enough to ensure your business will succeed.</p>
+<p>In terms of design, where the internet goes from now is anyone’s guess. We have color, we have fonts and we have images. We can even embed videos into websites now so who knows where the next trend will take us.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">May</div>
+	            			    <div class="day">23</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/admin/" title="Posts by admin" rel="author">admin</a></p> 
+	            			<p><a href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/"
+		            			    data-via=""
+		            			    data-text="Divine Madness &#8211; a History of Schizophrenia"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/" rel="bookmark">Divine Madness &#8211; a History of Schizophrenia</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/" rel="bookmark"><img width="640" height="480" src="http://historycooperative.org/wp-content/uploads/2014/05/shutterstock_98088356-640x480.jpg" class="attachment-post wp-post-image" alt="The history of Schizophrenia" /></a>
+		                              
+	                        <p><strong>Mental Illness in Antiquity</strong></p>
+<p>The label schizophrenia is a recent term, first used in 1908 by Eugen Bleuler, a Swiss psychiatrist, and was meant to describe the disunity of functioning between personality, perception, thinking and memory. Whilst the label is new, accounts of schizophrenia-like symptoms can be found in ancient texts dating back to 2000 BC, and across a number of cultural contexts. The oldest of these texts is the ancient Egyptian Ebers papyrus, around two millennia old.</p>
+<p>There are descriptions of illnesses marked by bizarre behaviour and lack of self-control in the Hindu Arthava Veda, dating approximately 1400 BC, and a Chinese text from approximately 1000 BC called The Yellow Emperor’s Classic of Internal Medicine, which attributes insanity and seizures to supernatural and demonic forces.</p>
+<p>The Greeks and Romans are also found to have a general awareness of psychotic illnesses. Plato, who lived in the fourth and fifth centuries BC, spoke of a madness of divine origin, which could inspire poets and create prophets. Demonic possession and supernatural forces as the cause of mental illness are a common theme in the ancient literature.</p>
+<p>Whilst we can infer these ancient scribes were reporting on the symptoms and causes of the illness we currently describe as schizophrenia, we cannot be certain of it. Some suggest that the lack of clear diagnostic examples in the older literature points to schizophrenia being an entirely modern affliction. Perhaps cultural differences in the understanding of a sufferer’s behaviour can account for the discrepancy in reporting of the illness in ancient times.</p>
+<p>&nbsp;</p>
+<p><strong>The Middle Ages &#8211; A Demonic Affliction</strong></p>
+<p>The Medieval era saw the beginnings of formal detention and institutionalisation of those deemed mentally ill. In Europe, sufferers were occasionally cared for in monasteries. Some towns had “fools towers”, which housed madmen. In The 1400’s, a number of hospitals to treat the insane sprang up throughout Spain.</p>
+<p>In England in 1247, The Priory of Saint Mary of Bethlehem was founded – later known as the notorious Bedlam, the word becoming synonymous with madness itself.</p>
+<p>Whilst scholars and Universities at this time had developed a scientific approach towards mental disturbances, there was still a great deal of belief in the lay population in supernatural forces.</p>
+<p>In 15th century Europe, delusions and hallucinations were seen as proof of demonic possession. Treatments to overcome these disturbances included confession and exorcism.</p>
+<p>&nbsp;</p>
+<p><strong>Schizophrenia and Early Psychiatry</strong></p>
+<p>It is not until the middle of the 19th century that European psychiatrists begin to <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3181977/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.ncbi.nlm.nih.gov']);">describe a disease</a>, of unknown origin, typically with an adolescent onset and with a propensity towards chronic deterioration. Emil Kraeplin, a German psychiatrist, utilised the term “dementia praecox” to describe a variety of previously separately recognised illnesses, such as adolescent insanity and catatonia syndrome.</p>
+<p>Kraeplin’s long term studies of a large number of cases led him to believe that despite the diversity of clinical presentations, the commonalities in the progression of the illness meant they could be categorised under the singular heading of dementia praecox. Later, he suggested nine categories of the disorder.</p>
+<p>This leads us to Eugen Bleuler, who coined the term schizophrenia, meaning “split mind”, replacing the previous terminology dementia praecox. Bleuler’s “schizophrenia” incorporated an understanding that the disorder was a group of illnesses, and did not always deteriorate into a permanent state of “dementia” – as was previously considered by Kraeplin to be a hallmark of the disease.</p>
+<p>Further, Bleuler suggested schizophrenia had four main symptoms, known as the 4 A’s: blunted Affect – a reduction in emotional response to stimuli, loosening of Associations and disordered pattern of thought, Ambivalence, or difficulty making decisions, and Autism, by which he meant a loss of awareness of external events and preoccupation with one’s own thoughts.</p>
+<p>&nbsp;</p>
+<p><strong>Schizophrenia and Eugenics</strong></p>
+<p>Increased scientific understanding of schizophrenia and other mental illness was overshadowed by persistent stigma and misunderstanding of mental illness. Schizophrenia was thought to be an inheritable disorder, and as such sufferers were subject to Eugenics and sterilisation.</p>
+<p>In 1910, Winston Churchill, wrote to the Prime Minister Herbert Asquith, insisting on the implementation of mass forced sterilisations of those deemed feeble minded and insane.</p>
+<p>Churchill was not successful in implementing this policy. Forced sterilisation was, however, practised in parts of the USA throughout the twentieth century, and Nazi Germany utilised Eugenics as justification for extreme measures against those it saw as undesirable, including the mentally ill.</p>
+<p>&nbsp;</p>
+<p><strong>Ancient Treatments </strong></p>
+<p>Examples of treatments for what would be recognised today as a mental illness go back thousands of years, and include trepanning, the drilling of holes into the skull to allow evil spirits to exit, and various forms of exorcism. The ancient Greeks and Romans tended to employ somewhat enlightened and humane treatment methods.</p>
+<p>The Greeks applied their theory of humoural pathology, or the belief that an imbalance in the body’s various fluids could induce madness, amongst other illnesses.</p>
+<p>Treatment involved correcting the imbalance in fluids, and encompassed dietary and lifestyle changes, to blood-letting and purging. The Roman treatments consisted of warm baths, massage and diets, although more punitive treatments were also suggested by Cornelius Celsus, stemming from the belief that the symptoms were caused through having angered the gods, and included flogging and starvation.</p>
+<p>&nbsp;</p>
+<p><strong>Modern Treatments</strong></p>
+<p>We may view some of the older techniques for treating mental illness as deplorable, yet many modern pre-pharmacotherapy treatments were unfortunately not much better in some respects.</p>
+<p>From the wretched conditions of many asylums, the raising of the body temperature by injection of sulphur and oils to insulin shock therapy, which kept the patient in a coma, deep sleep therapy and electroconvulsive therapy, which were all widely used treatments for schizophrenia and a variety of other mental illnesses prior to the advent of anti-psychotics, patients could expect widely variable results and the risk of further harm.</p>
+<p>Lobotomy, developed in the 1930’s, also became a popular treatment for schizophrenia. Initially, the procedure required an operating theatre as holes were drilled into the skull, and either alcohol injected into the frontal lobes or an instrument called a leucotome used to create lesions in the brain.</p>
+<p>The technique was soon refined and simplified. American psychiatrist Walter Freeman, seeking to make the procedure accessible to patients in asylums where there was no access to an operating theatre, developed the trans orbital lobotomy. Freeman accessed the prefrontal area through the eye socket, and using an instrument similar to an ice pick made a series of cuts.</p>
+<p>The process was quick, and for many had devastating effects, patients were left with impairments of intellectual, social and cognitive function, and often there was no great improvement in the symptoms for which the procedure was performed.</p>
+<p>&nbsp;</p>
+<p><strong>Current Treatments and Research</strong></p>
+<p>Antipsychotic drugs to treat schizophrenia were first introduced in the 1950’s. Their success led, in part, to the deinstitutionalisation and integration of sufferers into the community. Antipsychotics, whilst allowing many sufferers of schizophrenia to lead functional lives, have their drawbacks.</p>
+<p>Common adverse side effects can include weight gain, involuntary movements, lowered libido, low blood pressure and tiredness. Antipsychotics do not represent a cure for schizophrenia, but used in combination with community based and psychological therapies, sufferers have every chance of recovery.</p>
+<p>The internet has also become a useful tool for schizophrenia sufferers and their families, friends and carers, with many useful resources and schizophrenia <a href="http://www.schizlife.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.schizlife.com']);">support sites</a> now available.</p>
+<p>Scientific investigations in to the causes and treatment of schizophrenia are ongoing, with a focus on genetic research, which will hopefully lead to more effective treatments and possibly prevention. Information on current research is available <a href="http://www.nimh.nih.gov/health/publications/schizophrenia/index.shtml" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.nimh.nih.gov']);">here</a>.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">May</div>
+	            			    <div class="day">13</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/" title="Posts by " rel="author"></a></p> 
+	            			<p><a href="http://historycooperative.org/the-history-of-buddhism/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-history-of-buddhism/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-history-of-buddhism/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-history-of-buddhism/"
+		            			    data-via=""
+		            			    data-text="Buddha&#8217;s Backstory"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-history-of-buddhism/" rel="bookmark">Buddha&#8217;s Backstory</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-buddhism/" rel="bookmark"><img width="600" height="400" src="http://historycooperative.org/wp-content/uploads/2014/05/buddha-600x400.jpg" class="attachment-post wp-post-image" alt="a history of buddhism" /></a>
+		                              
+	                        <p>Seated but immense, with his eyes closed in meditation and reflection, the giant, austere statues of the Great Buddha look over a population of adherents that stretches from Indonesia to Russia and from Japan to the Middle East. His gentle philosophy also appeals to many believers scattered all over the world.</p>
+<p>Somewhere between 500 million and 1 billion people worldwide are estimated to be Buddhists.</p>
+<p>It’s exactly the nebulous nature of Buddha’s philosophy, crisscrossed by many sects of adherents with a dizzying assortment of beliefs and approaches to the faith, that makes it so difficult to estimate exactly how many Buddhists there are. Some scholars go so far as to refuse to define Buddhism as a religion at all, and prefer to refer to it as a personal philosophy, a way of life, rather than a true theology.</p>
+<p>Two and a half centuries ago, a boy named Siddhartha Gautama was born into a royal family in a rural backwater in the northeast corner of the Indian subcontinent, in modern-day Nepal. An astrologer told the boy’s father, King Suddhodana, that when the child grew he would either become a king or a monk depending on his experience in the world. Intent on forcing the issue, Siddhartha’s father never let him see the world outside the walls of the palace, a virtual prisoner until he was 29 years old. When he finally ventured forth into the real world, he was touched by the suffering of the ordinary people he encountered.</p>
+<p>Siddhartha dedicated his life to ascetic contemplation until he achieved “enlightenment,” a feeling of inner peace and wisdom, and adopted the title of “Buddha.” For over forty years he crisscrossed India on foot to spread his Dharma, a set of guidelines or laws for behaviors for his followers.</p>
+<p>When Buddha died in 483 BC, his religion was already prominent throughout central India. His word was spread by monks seeking to become <em>arhats</em>, or holy men. Arhats believed they could reach <em>Nirvana</em>, or perfect peace, in this lifetime by living an ascetic life of contemplation. Monasteries dedicated to the memory of Buddha and his teachings became prominent in large Indian cities like Vaishali, Shravasti, and Rajagriha.</p>
+<p>Shortly after Buddha’s death, his most prominent disciple called a meeting of five hundred Buddhist monks. At this assembly, all of Buddha’s teachings, or <em>sutras</em>, as well as all the rules Buddha had set down for life in his monasteries, were read aloud to the congregation. All of this information together forms the core of Buddhist scripture to this day.</p>
+<p>With a defined way of life outlined for all his disciples, Buddhism spread throughout the rest of India. Differences in interpretation crept in as the number of adherents grew distant from each other. One hundred years after the first great assembly, another was convened to try to iron out their differences, with little unity but no animosity, either. By the third century BC, eighteen separate schools of Buddhist thought were at work in India, but all the separate schools recognized each other as fellow adherents of Buddha’s philosophy.</p>
+<p>A third council was convened in the third century BC, and a sect of the Buddhist called the Sarvastivadins migrated west and established a home in the city of Mathura. Over the intervening centuries their disciples have dominated religious thought throughout much of central Asia and Kashmir. Their descendants form the core of the current-day schools of Tibetan Buddhism.</p>
+<p>The Third Emperor of the Mauryan Empire, Ashoka, became a supporter of the Buddhist religion. Ashoka and his descendants used their power to build monasteries and spread Buddhist influence into Afghanistan, great swathes of central Asia, Sri Lanka, and beyond into Thailand, Burma, Indonesia, and then China, Korea, and Japan. These pilgrimages went as far as Greece in the east, where it spawned a hybrid of Indo-Greek Buddhism</p>
+<p>Over the centuries, Buddhist thought continued to spread and splinter, with innumerable changes added to its scriptures by a multitude of authors. During the three centuries of the Gupta period, Buddhism reigned supreme and unchallenged throughout India. But then, in the sixth century, invading hordes of Huns raged across India and destroyed hundreds of Buddhist monasteries. The Huns were opposed by a series of kings that defended the Buddhists and their monasteries, and for four hundred years the Buddhists thrived once again in northeastern India.</p>
+<p>During the Middle Ages, a great, muscular religion appeared from the deserts of the Middle East to challenge Buddhism. Islam spread quickly east, and by the late Middle Ages Buddhism was wiped almost completely from the map of India. It was the end of the expansion of Buddhism.</p>
+<p>Buddhism today is represented by three main strains that cover distinct geographical areas.</p>
+<ul>
+<li>Theravada Buddhism- Sri Lanka, Cambodia, Thailand, Laos, And Burma</li>
+<li>Mahayana Buddhism- Japan, Korea, Taiwan, Singapore, Vietnam, and China</li>
+<li>Tibetan Buddhism- Mongolia, Nepal, Bhutan, Tibet, a bit of Russia, and parts of northern India</li>
+</ul>
+<p>Beyond these, several philosophies have developed that hold the Buddhist ideals at their core. These include <a href="http://people.bu.edu/wwildman/WeirdWildWeb/courses/wphil/lectures/wphil_theme04.htm" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://people.bu.edu']);">Helenistic Philosophy</a>, <a href="http://www.merriam-webster.com/dictionary/idealism" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.merriam-webster.com']);">Idealism</a>, and <a href="http://vedanism.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://vedanism.com']);">Vedanism</a></p>
+<p>Since Buddhist thought is more of a personal philosophy than a well-defined creed, it has always invited an enormous multitude of interpretations. This continual churning of thought in Buddhist thought continues into the present day with contemporary Buddhist movements with names like Neo-Buddhism, Engaged Buddhism, and an array of truly tiny, and sometimes, literally individual traditions in the West.</p>
+<p>In the latter half of the 20<sup>th</sup> century, a movement of Japanese Buddhists calling themselves the Value Creation Society sprang up and spread to neighboring countries. The members of this Soka Gakkai movement are not monks, but consist solely of lay members interpreting and meditating on Buddha’s legacy on their own, centuries after Siddhartha first stepped foot outside his palace walls and looked on the world that he felt need his call for peace, contemplation, and harmony.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Apr</div>
+	            			    <div class="day">24</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/admin/" title="Posts by admin" rel="author">admin</a></p> 
+	            			<p><a href="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/"
+		            			    data-via=""
+		            			    data-text="Idiopathic Thrombocytopenic Pupura: A History"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/" rel="bookmark">Idiopathic Thrombocytopenic Pupura: A History</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/idiopathic-thrombocytopenic-pupura-a-history/" rel="bookmark"><img width="640" height="480" src="http://historycooperative.org/wp-content/uploads/2014/04/eye-needle-thin-640x480.jpg" class="attachment-post wp-post-image" alt="The History of ITP" /></a>
+		                              
+	                        <p><strong>A rare disorder</strong></p>
+<p>Idiopathic Thrombocytopenic Purpura (ITP) is a misnomer. The rare condition causes antibodies to destroy platelets important for blood clotting, and can produce symptoms of low platelet count, unusual haemorrhaging, including intracranial haemorrhage (rare but potentially life threatening), mucosal and gingival haemorrhaging, abnormal menstruation, petichiae, purpura and a general propensity to bruise easily. However, some patients may remain asymptomatic other than a low platelet count. Acute and spontaneously resolving occurrences are more commonly seen in children, whilst adult onset ITP is more likely to be chronic. The terminology assigned to the disorder has changed and evolved over time, reflecting increased understanding of the mechanisms of ITP through medical and scientific advancements. The issue of the misnomer stems from our increased knowledge – as it turns out, ITP is <a href="http://www.antimicrobe.org/history/NEJM-Schwartz-Immune%20thrombocytopenia-2007.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.antimicrobe.org/history/NEJM-Schwartz-Immune%20thrombocytopenia-2007.pdf']);" target="_blank">generally not “Idiopathic</a>”, and <a href="http://www.ebmt.org/Contents/Resources/Library/Resourcesfornurses/Documents/ITP%20Practical%20Guide%20-%20Australian.Version.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.ebmt.org/Contents/Resources/Library/Resourcesfornurses/Documents/ITP%20Practical%20Guide%20-%20Australian.Version.pdf']);" target="_blank">purpura is not seen in all patients.</a></p>
+<p><strong>Early history</strong></p>
+<p>Medicine has a long held fascination for ITP. Stasi and Newland’s <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2010.08562.x/full" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://onlinelibrary.wiley.com']);" target="_blank">ITP: a historical perspective</a>, notes a number of potential examples of ITP, the first dating back almost a thousand years. A description by Avicenna of purpura with characteristics of ITP can be found in the 1025 <em>The Canon of Medicine.</em>In 1556 a case of spontaneously resolving purpura and bleeding is reported by Portuguese physician Amatus Lusitanus in the book <em>Curationum Medicinalium Centuriae. </em>Lazarus de la Riviere, physician to the King of France proposes in 1658 that purpura is a phenomenon caused by a systemic bleeding disorder. In 1735 Paul Gottlieb Werlhof, a German physician and poet, provides us with the first detailed description of a case of ITP, which subsequently becomes known as Werlhof’s disease.</p>
+<p><strong>Controversies</strong></p>
+<p>Controversy arises regarding the mechanisms of thrombocytopenia, with Frank in 1915 suggesting it is the result of suppression of megakaryocytes by a substance produced in the spleen, alternatively Kaznelson purports thrombocytopenia is due to increased destruction of platelets in the spleen. In 1916, Kaznelson persuades a professor to perform a splenectomy on a patient with chronic ITP, the outcome of which is a startling postoperative increase in the patient’s platelet count and resolution of purpura. Splenectomy becomes the prevailing treatment for those with refractory ITP for many years.</p>
+<p><strong>The Harrington-Hollingsworth experiment</strong></p>
+<p>Self-experimentation in medicine is considered by some to be a historical tradition, and preferable to the unethical treatment of patient subjects, the extremes of which can be seen in examples such as the <a href="http://dash.harvard.edu/bitstream/handle/1/3372911/Brandt_Racism.pdf?sequence=1" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://dash.harvard.edu']);" target="_blank">Tuskegee Syphilis Experiment</a>. The self-experimentation undertaken in the <a href="http://www.antimicrobe.org/history/NEJM-Schwartz-Immune%20thrombocytopenia-2007.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.antimicrobe.org/history/NEJM-Schwartz-Immune%20thrombocytopenia-2007.pdf']);" target="_blank">Harrington -Hollingsworth </a>experiment was risky for the participants, but is a good example of experimentation that could not be undertaken ethically on research subjects. In 1950 Harrington and Hollingsworth, who were hematology fellows at Barnes Hospital in St Louis, endeavored to test their idea that the cause of ITP was a factor in blood that destroyed platelets. Harrington, who happened to match the blood type of a patient being treated at the hospital for ITP, received a 500ml transfusion of the patient’s blood. Hours after the procedure Harrington’s platelet count plummeted, and he had a major seizure. Bruising and petichiae became conspicuous over four days of low platelet count, improvement not noted until five days later.</p>
+<p>On examination of Harrington’s bone marrow, no effect on megakaryocytes could be deduced. This suggested an effect on the platelets, rather than the marrow. The experiment was replicated on all viable members of the hospital’s hematology department, with all recipients of plasma from patients with ITP experiencing a decrease in platelet count within 3 hours of transfusion. The legacy of Harrington-Hollingsworth experiment, along with other reports published in 1951, led not only to new understanding of the disorder, but also a name change: idiopathic thrombocytopenic purpura became <a href="http://immunethrombocytopenicpurpura.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://immunethrombocytopenicpurpura.com']);">immune thrombocytopenic purpura</a>.</p>
+<p><strong>Evolution of treatment</strong></p>
+<p>The increased understanding of ITP as an autoimmune disorder led to the development of treatments other than splenectomy. Corticosteroids were introduced in the 1950’s, and since the 1960’s a number of immunosuppressive agents have been utilised, however the evidence for their efficacy is <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2010.08562.x/full" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://onlinelibrary.wiley.com']);">somewhat lacking</a>.</p>
+<p>Intravenous immunoglobulin (IVIG) as a treatment for ITP was <a href="http://www.antimicrobe.org/history/SMW-Thrombocytopenia%20insights-2012.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.antimicrobe.org/history/SMW-Thrombocytopenia%20insights-2012.pdf']);">first trialed in 1980</a> on a 12 year old boy with severe, refractory ITP, with the result of an increased platelet count within 24 hours, and continued increases upon further daily IVIG administrations. Pilot studies ensued, with results establishing the efficacy of IVIG therapy in increasing platelet counts in ITP patients. IVIG consumption, not only for the treatment of ITP but for various hematologic, inflammatory and autoimmune diseases, has increased world-wide since 1980 from 300kg per year to 1000 tonnes per year in 2010. Alongside corticosteroid therapy, IVIG remains a first line treatment for ITP, particularly in patients at high risk for bleeding or pre operatively. Currently, second line therapy includes use of immunosuppressants, corticosteroid-sparing agents, monoclonal antibodies, splenectomy, thrombopoietin receptor agonists and vinca alkaloids. We have come a long way since <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2010.08562.x/full" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://onlinelibrary.wiley.com']);">Werlhof’s apparent cure</a> of ITP with citric acid!</p>
+<p>The 1980’s also saw <a href="http://asheducationbook.hematologylibrary.org/content/2008/1/205.full.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://asheducationbook.hematologylibrary.org/content/2008/1/205.full.pdf']);">new evidence arise</a> regarding platelet destruction in ITP by investigators at the Puget Sound Blood Centre. Further studies were able to demonstrate the inhibition of megakaryocyte growth and maturation in vitro, of antibodies from ITP patients.</p>
+<p>More recently an international working group has established <a href="http://www.ccjm.org/content/78/6/358.full" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.ccjm.org']);">two major diagnostic categories</a> of ITP, Primary ITP, where other conditions of thrombocytopenia are excluded, and Secondary ITP in which the condition is due to infection by other diseases and bacterias, for example HIV or hepatitis C. Further, categories have been established to assist with the approach to management of ITP, including newly diagnosed ITP, where the diagnosis is less than three months old, persistent ITP where diagnosis is between three and twelve months old and the condition has not spontaneously resolved, chronic ITP lasting longer than twelve months, and severe ITP, described as bleeding at presentation requiring treatment, or new bleeding symptoms which demand additional treatment with a different platelet enhancing therapy or increased dosage of current therapy.</p>
+<p><strong>Current understanding of Idiopathic Thrombocytopenic Purpura</strong></p>
+<p>The pathogenic causes of ITP remain little understood, but a multifaceted etiology is suspected. The role of eradication of Helicobacter pylori in raising platelet counts of ITP patients has recently been explored, with a considerable variability found in response to H.pylori eradication from country to country. This high variation may be due to differences in strains of H.pylori internationally, with Japanese strains being frequently CagA-positive, and American strains usually CagA-negative. Increased platelet responses due to eradication of H.pylori are higher in patients with the CagA-positve strain of the bacteria.</p>
+<p><a href="http://itpandme.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://itpandme.com']);">Personal blogs of individuals with ITP</a> are also providing doctors and other medical professionals with greater insights into possible causes of the condition.</p>
+<p>Massive leaps in the treatment and management of ITP have been achieved within the last hundred years, though clearly there are still gaps in the understanding of its pathogenesis. Treatment for refractory ITP failing first and second line treatments is an area that may still yield improvements. Greater understanding and management of the course of ITP means more patients are treated appropriately.</p>
+<p>From “Werlhof’s disease”, to “Idiopathic Thrombocytopenic Purpura”, to the more recent and appropriate “Primary Immune Thrombocytopenia” – and a number of variants in between, all of which are eponyms – ITP continues to be a source for emerging medical knowledge almost three hundred years since it was first described in depth by Werlhof. The change in name mirrors our scientific and technological advances in treating and understanding ITP.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Apr</div>
+	            			    <div class="day">21</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/admin/" title="Posts by admin" rel="author">admin</a></p> 
+	            			<p><a href="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/"
+		            			    data-via=""
+		            			    data-text="Charting The History Of The iPhone Jailbreaking Community"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/" rel="bookmark">Charting The History Of The iPhone Jailbreaking Community</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/charting-the-history-of-the-iphone-jailbreaking-community/" rel="bookmark"><img width="640" height="480" src="http://historycooperative.org/wp-content/uploads/2014/04/stefan-esser-iphone-serial-to-usb-connector-640x480.jpg" class="attachment-post wp-post-image" alt="stefan-esser-iphone-serial-to-usb-connector" /></a>
+		                              
+	                        <p>While the iPhone has become one of the most iconic products on the market and <a href="http://www.apple.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.apple.com']);">Apple</a> have redesigned how we view cell phones and technology in general, there has always been a view that it can be improved. When the first generation iPhone hit the market back in 2007 it was a revolutionary product and one that had not been seen before with its innovation and decidedly cool design. While the masses lapped up the iPhone in its default state through the various generations there was an online community that felt things could be improved.</p>
+<p>How could you improve a device such as the iPhone?</p>
+<p>Well hackers and other technological experts decided that the source code could be edited. While Apple tend to keep these things under wraps and protected many people felt that it could be edited just enough to enhance the device and make it seem like a completely different phone with new features.</p>
+<p><strong>Defining &#8216;Jailbreaking&#8217;</strong></p>
+<p>Many people have compared jailbreaking an Apple iPhone to the process of rooting an Android device.</p>
+<p>While the basic concept may have similarities the process and what it actually does is quite different. For example when you root an Android device it reboots a whole new operating system,= onto the phone whereas this is not possible with the iPhone even given the skills of many modern day jailbreakers and those that take an interesting in hacking.</p>
+<p>With a jailboken iPhone users can have a whole new experience with the device. While it serves many practical measures such as extending battery life by cutting down on unnecessary apps it also allows for for customizable features and being able to use the Cydia app store with access to thousands of new apps.</p>
+<p><strong>The Early Stages</strong></p>
+<p>As opposed to an elite network or group of computer hackers spending weeks on end trying complicated ways and methods to jailbreak the iPhone, the whole concept was first started by George Hotz otherwise known as &#8216;geohot&#8217;, a 17 year old who wanted to change his iPhone network. <a href="http://www.newyorker.com/reporting/2012/05/07/120507fa_fact_kushner" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.newyorker.com']);">The New Yorker</a> goes into detail how Hotz used a screwdriver, a guitar pick, and a soldering tool to jailbreak the first iPhone.</p>
+<p>Hotz was by no means the only one to break into the source code and gain control of the iPhone OS. A separate group of hackers did so a few days after the first iPhone hit the stores and another team calling themselves the iPhone Dev Team released the first public jailbreak in October of that year. While it wasn&#8217;t as sophisticated as the jailbreaks we have at the minute and it did come before Cydia was released, it was a major step on the road to offering a jailbreak for everyone to use.</p>
+<p><strong>Birth Of Cydia</strong></p>
+<p>In 2008 Cydia was born.</p>
+<p>We spoke above about what Cydia can offer and it was the iPhone Dev Team again that pioneered this concept of an alternative app store for Apple iPhone first generation users.</p>
+<p>It was developed by Jay Freeman who is more commonly known online by the pseudonym &#8216;saurik&#8217; and since its inception almost 6 years ago in 2008 the alternative to the Apple App Store has grown and grown. That being said the intention behind Cydia for jailbroken iPhone&#8217;s was never just to offer alternative apps. Instead it has also been used for new features and while the Apple app store allows various applications to be installed, Cydia can tweak your whole iPhone and add a new default feature or function via a simple download. For early users of the iPhone circa  2008-2010 this was a major advancement in technology.</p>
+<p><strong>Apple Strikes Back</strong></p>
+<p>Jailbreaking has never been a true &#8216;underground&#8217; movement and Apple have always been aware of the existence even right back to its early days. In 2009 when iOS 3.0 was released by Apple, jailbreakers had to rethink their approach. Apple have specifically shut up shop and decided to stop the exploitation of the device via a jailbreaking method however it wasn&#8217;t long until this too was breached.</p>
+<p>Georghe Hotz was back on the scene with the release of a jailbreak known as <a href="http://news.cnet.com/8301-17938_105-10279029-1.html" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://news.cnet.com']);">purplera1n</a> that worked for all iOS 3.0 models and blackra1n came out to coincide with iOS 3.1.2.</p>
+<p>The whole jailbreaking process increasingly became like a cat and mouse affair between the two sides; on the one hand Apple kept releasing security fixes to ensure that it became even more difficult to exploit the device and then jailbreakers such as Hotz and the iPhone Dev Team saw this as a challenge to exploit.</p>
+<p>Another group calling themselves the <span style="color: #363636;">Chronic Dev Team also came onto the scene and started to release jailbreaks of their own and used the base of Hotz&#8217;s jailbreak to work on Mac devices. </span></p>
+<p>The whole jailbreaking scene was quickly becoming an Apple vs the hackers scenario. Apple were doing their best to stifle the jailbreakers and keep their iOS and source code as tightly secured as possible however within days of every new release and security update they were finding that their code was being breached.</p>
+<p>No matter what Apple tried to do it seemed as though they were always a step behind the jailbreakers.</p>
+<p><strong>Mainstream Jailbreaking</strong></p>
+<p>By 2010 jailbreaking was starting to be seen as a mainstream alternative to simply using the default iPhone device.</p>
+<p>By now it was openly being used by hackers, tech geeks, and those interested in exploiting the iPhone in general and while there had been attempts at trying to bring it into the mainstream they so far had remain futile.</p>
+<p>In 2010 however Comex released JailbreakMe 2.0, a jailbreak that could be accessed by simply visiting a website, paying a small fee and then having your iPhone jailbroken in a short space of time via the use of a tool. Up until this point jailbreaking required a certain degree of technical know how even for the average user. With this new process of jailbreaking the iPhone a normal user of the iPhone range could simply pay a fee to a website and have their iPhone jailbroken.</p>
+<p>Apple wasn&#8217;t having any of this however.</p>
+<p>Only a few weeks after the release of JailbreakMe 2.0 they brought out a security fix and <span style="color: #363636;">iOS 4.1 that essentially stopped the tool from working. Like all Apple security fixes it is only a matter of time before they are breached again and rather than holding off jailbreakers and hackers for months at a time this was quickly turning into weeks and even days in some cases. As soon as a new iOS security fix hit the device and new jailbreak was on the scene shortly after.</span></p>
+<p><strong>Jailbreaking Becomes Permanent</strong></p>
+<p>The Chronic Dev Team were quickly becoming the most prominent iPhone jailbreaking group around. They came up with an ingenuous permanent jailbreak. Exploiting a bootroom vulnerability they released a permanent fix in 2010 and called it &#8216;<span style="color: #363636;">SHAtter&#8217; and it would jailbreak all current iOS models for life and not just until a new security fix came out.</span></p>
+<p>Since then JailbreakME 3.0 has been released and even though Apple have been attempting to cover up their security breaches as <a href="http://bgr.com/2014/03/11/ios-7-1-jailbreak-apple-taunt/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://bgr.com']);">BGR</a> has explained.  This has become particularly true since iOS 7 has been released however over the past 4 years since jailbreaking became permanent there has been a much more wider acceptance of the process.</p>
+<p>For example the first jailbreaking convention was held in London in 2011. Called <span style="color: #363636;">MyGreatFest the event brought together jailbreakers and hackers from all over the world including the likes of the iPhone Dev Team, Chronic Dev Team and George Hotz.</span></p>
+<p><strong>Is Jailbreaking Here To Stay?</strong></p>
+<p>The history of jailbreaking the iPhone devices is an interesting one.</p>
+<p>What started with a teenager messing about with the iPhone by using a screwdriver and guitar pic has evolved in a million dollar industry with countless services offering to jailbreak all iPhone&#8217;s and base band models. A simple Google search yields thousands of results for iPhone jailbreaking and the process really has become a mainstream attraction for users of the phone.</p>
+<p>Apple themselves are struggle to counteract the popularity of jailbreaking. The legal status is a grey area however in most countries including America it is currently legal by definition however unlocking has since been outlawed and the issues of jailbreaking is due to be looked at again next year in 2015.</p>
+<p>The creation of a permanent jailbreak has really boosted its appeal as there is no longer the need to have the process done over and over again. Indeed Apple have attempted to match the hackers by incorporating some of the main features of jailbreaking into their default device and this was evident in iOS 7 and the subsequent iOS releases including iOS 7.1.</p>
+<p>The fact remains that jailbreaking doesn&#8217;t look like going anywhere soon.</p>
+<p>It&#8217;s history is currently very short in the grand scheme of things. Trends come and go and 6 years is not a long time by any means however with literally millions of people using jailbreaking at the minute then there is no suggestion that it will disappear in the near future.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Mar</div>
+	            			    <div class="day">26</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/the-hisory-of-icecream/#respond">2 Comments</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-hisory-of-icecream/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-hisory-of-icecream/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-hisory-of-icecream/"
+		            			    data-via=""
+		            			    data-text="A Sweet History of an Icy Treat"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-hisory-of-icecream/" rel="bookmark">A Sweet History of an Icy Treat</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-hisory-of-icecream/" rel="bookmark"><img width="600" height="406" src="http://historycooperative.org/wp-content/uploads/2014/02/shutterstock_59478175-ice-cream-600.jpg" class="attachment-post wp-post-image" alt="shutterstock_59478175-ice-cream 600" /></a>
+		                              
+	                        <p>Every American person should know the old rhyme “<b>You scream! I scream! We all scream for ice cream!”  </b>In any country in the world, the word Ice Cream brings to mind memories of summer. Hot hazy days lounging in the shade with a dripping cone of the icy treat.</p>
+<p>Ice cream is the ultimate treat but where does it come from?  The history if ice cream stretches right across the world.  In Italy, it’s called gelato, in India, Kulfi and in Japan its Mochi. Everywhere enjoys ice cream so let’s delve a little deeper into its history.</p>
+<h4><strong>The Origins of Ice Cream</strong></h4>
+<p>There are some who say that ice cream came from the Far East, with Marco Polo. Yet others say it was Catherine De Medici who took it to France when she moved there to marry King Henry II.</p>
+<p>It’s unlikely that either of these stories is the truth because ice cream goes back much further than that.  What we eat now bears almost no resemblance to what ice cream used to be. Passages in the bible refer to King Solomon partaking of cool ice drinks throughout the harvest season.</p>
+<p>Alexander the Great from Ancient Greece drank iced drinks that were flavored with wine or honey. Between 54 and 68 BC, while Nero reigned Rome, there were ice harvest from the mountains. The ice was kept in ice houses, which were deep straw covered pits and used to make icy drinks.</p>
+<h4><strong>The First Frozen Ice Cream</strong></h4>
+<p>The first instance of anyone eating frozen sweet treats is believed to go back to the Tang Dynasty, between 618 and 907 AD.  The emperors were thought to have eaten frozen milk confections, made with milk from cows, buffalo or goats and heated with flour.</p>
+<p>Camphor was harvested from evergreen trees and added to give it a flavor and a better texture. The entire mix was then put in metal tubes and stored in ice pools until it was thoroughly frozen.</p>
+<p>In the Medieval era, it’s thought that Arabs would drink icy concoctions called sherbet (sharabt in Arabic). This would be flavored with quince, pomegranate or cherry.  As time went by, this type of dink would become a favorite of the European aristocracy with the Italians being the first to master it followed by the French.</p>
+<h4><strong>From Sorbet to Ice Cream</strong></h4>
+<p>In the 17<sup>th</sup> century, ice drinks would be made into desserts. Sugar was added and thus we saw Sorbet.  The man responsible for writing the first ever recipe for sorbet and also for creating one made with a milk base, was Antonio Latini, a man who worked in Naples, for a Spanish Viceroy.  This milk sorbet is commonly considered as the first proper ice cream.</p>
+<p>The first Café in Paris, called Il Procope, was opened in 1686 by a Sicilian man called Franceso Procopio dei Coltelli.  It because a popular place for intellectuals, such as Benjamin Franklin, Napoleon and Victor Hugo to meet up.  It was here that gelato was first served.  Gelato is an Italian version of sorbet and was served in tiny eggcup size bowls.</p>
+<p>At about the same time, the French were beginning to experiment with something called Fromage.  Nicolas Audiger, a French confectioner, wrote a book called La Maison Reglee in which he noted down several different Fromage recipes.</p>
+<p>These were made from fruit flavored ice and one that he noted included cream, orange flower water and sugar.  He also suggested that if the ice were stirred while it was freezing, air would be introduced and the result would be fluffier.</p>
+<p>You could be mistaken for thinking that Fromage was cheese but it wasn’t and it is not clear why they chose this name. One thought is that cheese molds were used to freeze the desserts or it could just refer to the French for any edible substance that had been compressed or molded.</p>
+<h4><strong>When Ice Cream Arrived in America</strong></h4>
+<p>We cannot really pinpoint the exact time when ice cream arrived in America. It is widely belied though that is arrived in the early 1700’s, with European settlers.  By now there had been a few books published on confectionary, containing recipes for ice creams and ice drinks.</p>
+<p>Housewives served these desserts to houseguests, molded in the shape of animal, vegetables and fruits, thanks to special molds that had been developed for the purpose. In 179, New York opened the first ever Ice Cream parlor and in the summer of that year, President George Washington is thought to have spent around $200 (a lot of money back then) satisfying his craving for the sweet icy treat.</p>
+<p>Records from his home in Mt Vernon indicate the Washington also owned a few ice cream pots, fashioned from pewter and tin. It’s also recorded that Thomas Jefferson had a few ice houses, capable of being able to hold around 62 wagonloads of ice as well as untold amounts of ice cream.</p>
+<p>The Lincolns also gained a taste for ice cream. Before Abraham Lincoln became President and even during his presidential term, his wife, Mary Todd, would hold strawberry parties for friends to celebrate the Berry season. Fresh strawberries would be served with cake and ice cream.</p>
+<h4><strong>A popular Treat in America</strong></h4>
+<p>The history of ice cream is firmly embedded in countries across the whole globe and is now very comfortably at home in the States.  It is now, quite possibly, the most popular of all desserts and around 9% of all the cow’s milk produced in the country is made into ice cream.</p>
+<p>Apple pie may still be considered as popular but it is generally served with a scoop of ice cream on the side. It looks as though, no matter where it started life, ice cream is now planted firmly in the States, and is also a popular treat in many other countries.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Mar</div>
+	            			    <div class="day">9</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/the-right-to-speak-freely/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-right-to-speak-freely/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-right-to-speak-freely/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-right-to-speak-freely/"
+		            			    data-via=""
+		            			    data-text="The Right to Speak Freely"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-right-to-speak-freely/" rel="bookmark">The Right to Speak Freely</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-right-to-speak-freely/" rel="bookmark"><img width="600" height="354" src="http://historycooperative.org/wp-content/uploads/2014/03/shutterstock_83915677_protest-600.jpg" class="attachment-post wp-post-image" alt="shutterstock_83915677_protest 600" /></a>
+		                              
+	                        <p>In 1783, George Washington spoke to a group of Military officers, telling them “If freedom of speech is taken away, them dumb and silent we may be led, like sheep to the slaughter.” Unlike today’s modern world, freedom of speech has not always been a right and, particularly in America, the government has not always preserved it. The tradition of freedom of speech has been challenged by several hundred years of war, of changes in culture and of legal challenges.</p>
+<p><strong>1790</strong></p>
+<p>After listening to a suggestion made by Thomas Jefferson, James Madison secured the Bill of Rights, of which the First Amendment is a part of, ensuring it was included in the US Constitution. The theory of the First Amendment is that it is there to protect people’s rights to free speech. In practice, it is more of a symbolic gesture.</p>
+<p><strong>1798</strong></p>
+<p>President John Adams took umbrage when his administration was criticized and made a successful push for the Alien and Sedition Acts. The Sedition Act was aimed at those people who supported Thomas Jefferson and it was passed to restrict people from criticizing any President. In 1800, Thomas Jefferson took over the presidency and the law expired. John Adams party would never again be in a position of power.</p>
+<p><strong>1873</strong></p>
+<p>In 1873 the Federal Comstock Act was passed, granting the US Postal Service the authority to be able to censor mail. In particular, it was aimed at letters containing material that could be classed as “obscene, lewd and /or lascivious”.</p>
+<p><strong>1897</strong></p>
+<p>The desecration of the US Flag was officially banned in South Dakota and Illinois, Pennsylvania in this year. This ban was to last almost 100 years before the Supreme Court declared the ban as unconstitutional and lifted it.</p>
+<p><strong>1918</strong></p>
+<p>In this year, the Sedition Act was passed to target socialists, anarchists and any other left-wing activists that were against the participation of the US in World War 1. This marks the nearest point to which the US Government came to adopting a model of government that could be classed as Fascist and nationalist.</p>
+<p><strong>1940</strong></p>
+<p>The Smith Act, or The Alien Registration Act as it was officially known, was aimed at any person who recommended the replacement of the government, i.e. who wanted the current government overthrown. It also made it a requirement that all adults who were not US citizens were to register for monitoring purposes with government agencies. In 1957, the Act was weakened by the Supreme Court.</p>
+<p><strong>1942</strong></p>
+<p>The Fighting Words Doctrine was established by the Supreme Court, with a definition stating that laws that restricted the use of insulting or hateful language were not necessarily a violation of the First Amendment.</p>
+<p><strong>1969</strong></p>
+<p>Students, who were punished because they donned black armbands to demonstrate their opposition to the Vietnam War, went to the Supreme Court where it was ruled that they are covered in the Free Speech Protection mentioned in the First Amendment.</p>
+<p><strong>1971</strong></p>
+<p>The Washington Post started a series of publications on the Pentagon papers. This was a copy of a US Defense Department report which had been leaked and concerned the relations between the US and Vietnam between 1945 and 1967. The papers revealed that there were a number of embarrassing and highly dishonest foreign policy messes made by the US Government. The government made several futile attempts to stop the publication but were never successful.</p>
+<p><strong>1978</strong></p>
+<p>The Supreme Court granted power to the Federal Communications Commission to levy fines against any network that broadcast content that was considered to be indecent.</p>
+<p><strong>1996</strong></p>
+<p>Congress passed the Communications Decency Act. This was a federal law, aimed at applying indecency restrictions, classed as criminal law restrictions, to the internet. Just one year later, the Supreme Court, struck the law to its knees.</p>
+<p>These are just some of the notable points in history pertaining to the freedom of speech and the long battle to gain it. Many governments, not just in the US but everywhere, have attempted to bring about laws that would effectively silence people and ensure that they controlled what could and could not be spoken, published or broadcast.</p>
+<p>Many governments have tried and many governments have failed but there is no doubt that this is a battle that will continue to the end of time.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Feb</div>
+	            			    <div class="day">25</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/the-vatican-city-history-in-the-making/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/the-vatican-city-history-in-the-making/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/the-vatican-city-history-in-the-making/"
+		            			    data-via=""
+		            			    data-text="The Vatican City &#8211; History in the Making"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/" rel="bookmark">The Vatican City &#8211; History in the Making</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-vatican-city-history-in-the-making/" rel="bookmark"><img width="640" height="480" src="http://historycooperative.org/wp-content/uploads/2014/03/Vatican-city-640x480.jpg" class="attachment-post wp-post-image" alt="Vatican city" /></a>
+		                              
+	                        <p>Sited on the banks of the Tiber River, on a hill sits the Vatican City. It is a place that has one of the richest histories in the world and is one of the most influential. The religious history that surrounds the Vatican City crosses centuries and is now the embodiment of many of the most important parts of the cultural history of Rome.</p>
+<p>The Vatican City is home to the Roman Catholic Church headquarters. There you will find the central government for the Church, the Bishop of Rome, otherwise known as the Pope and the College of Cardinals.</p>
+<p>Every year millions upon millions of people travel to the Vatican City, primarily to see the Pope but also to worship in St Peter’s basilica and to view the wonders that are stored in the Vatican Museums.</p>
+<p><strong>The Beginning of the Vatican City</strong></p>
+<p>Technically speaking, the Vatican City is a country, an independent city-state and is the smallest in the whole world. The Vatican City’s political body is governed by the Pope but, and not everyone knows this, it is many, many years younger than the Church.</p>
+<p>As a political body, the Vatican City has been classed as a Sovereign State since 1929, when a treaty was signed between the Kingdom of Italy and the Catholic Church. That treaty was the end result of more than 3 years of negotiations on how certain relations should be handled between them, namely political, financial and religious.</p>
+<p>Although the negotiations took 3 years, the dispute actually began back in 1870 and neither the Pope nor his cabinet would agree to leave the Vatican City until the dispute was resolved. That happened in 1929 with the Lateran Treaty.</p>
+<p>This was the defining point for the Vatican as it was this treaty that determined the City as a completely new entity. It was this treaty that split the Vatican City from the rest of the Papal States that were, in essence, most of the Kingdom of Italy from 765 through to 1870. Much of the territory was brought into The Kingdom of Italy in 1860 with Rome and Lazio not capitulating until 1870.</p>
+<p>The roots of the Vatican City go back much further though. Indeed, we can trace them back as far as the 1st Centruy AD when the Catholic Church was first established. Between the 9th and 10th Centuries right on through to the Renaissance period, the Catholic Church was at the top of its power, politically speaking. The Popes gradually took on more and more governing power eventually heading up all of the regions that surrounded Rome.</p>
+<p>The Papal States were responsible of the government of Central Italy until the unification of Italy, almost a thousand years of rule. For a great deal of this time, following their return to the City in 1377 after an exile to France that lasted 58 years, the reigning Popes would reside in one of a number of palaces in Rome.   When the time cane for Italy to unify the popes refused to recognize that the Italian King had a right to rule and they refused to leave the Vatican. This ended in 1929.</p>
+<p>Much of what people see in the Vatican City, the paintings, sculpture and architecture, was created during those Golden years. Now revered artists, people such as Raphael, Sandro Botticelli and Michelangelo made the journey to the Vatican City to pronounce their faith and their dedication to the Catholic Church. This faith can be seen in the Sistine Chapel and St Peter’s basilica.</p>
+<p><strong>The Vatican City Now</strong></p>
+<p>Today, the Vatican City remains a religious and historical landmark, as important now as it was then. It receives millions of visitors from all around the world, visitors who come to see the beauty of the City, to take in its history and the culture and to express their belief in the Catholic Church.</p>
+<p>The influence and the power of the Vatican City were not left in the past though. It is the center, the heart of the Catholic Church and, as such, because Catholicism is still one of the single largest religions in the entire world, it remains as a highly influential and visible presence in the world today.</p>
+<p>In between the priceless art houses in the Museums, the beautiful architecture that is St Peters Basilica and the religious significance of the Pope, the Vatican City has become one of the most popular destinations in the world for travelers. It is the embodiment of some of the more significant parts of both Western and Italian history, opening a window onto the past, a past that lives on today.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Feb</div>
+	            			    <div class="day">17</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/a-browse-through-the-history-of-the-internet/#respond">Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/a-browse-through-the-history-of-the-internet/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/a-browse-through-the-history-of-the-internet/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/a-browse-through-the-history-of-the-internet/"
+		            			    data-via=""
+		            			    data-text="A Browse Through the History of the Internet"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/a-browse-through-the-history-of-the-internet/" rel="bookmark">A Browse Through the History of the Internet</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/a-browse-through-the-history-of-the-internet/" rel="bookmark"><img width="624" height="351" src="http://historycooperative.org/wp-content/uploads/2014/03/xl_Internet_GlobeImage_624.jpg" class="attachment-post wp-post-image" alt="xl_Internet_GlobeImage_624" /></a>
+		                              
+	                        <p>Unlike many things we take for granted these days, like a light bulb or perhaps the telephone, the invention of the internet cannot be attributed to one single inventor. It is something that has evolved through the years and is now one our biggest recreational pastimes.</p>
+<p>We can pinpoint the beginnings of the internet by going back to the Cold War when the Americans used it as a weapon. For many years, it was used as a method of communication between researchers and scientists, for them to share their data with one another. Today, it is used for just about anything and, for some, life without the internet would be unthinkable.</p>
+<p><strong>Enter the Sputnik</strong></p>
+<p>October 4th, 1957. The Russians, then known as the Soviet Union, launched Sputnik. This was the first man-made satellite, sent into orbit, to circle around the earth. It was a failure; all it dis was tumble around in outer space, with no real direction, sending back the odd bleep from the on-board radio transmitters.</p>
+<p>Failure it may have been, the USA still saw it as a threat, a warning that they needed to take notice of. While some of the brightest minds in the USA had spent their time designing televisions and cars it would seem that the Soviets had been directing their energies elsewhere – on something that would help them win the Cold War.</p>
+<p>It took the launch of this satellite to make America sit up and think. Subjects such as chemistry and physics began to appear on the school syllabus. Government grants were provided for corporations to invest in research and development.</p>
+<p>The Federal government began to form new agencies and, so, NASA (National Aeronautics and Space Administration) was born. Alongside NASA another Department of Defense Agency appeared. The Advanced Research Projects Agency, or ARPA for short, was set up for the development of space-age technology – rockets, computers and weapons.</p>
+<p><strong>ARPAnet is born</strong></p>
+<p>One of the main concerns with Sputnik from the point of view of the scientists and the military experts was the effect a Soviet attack could have on the telephone system. The biggest fear was that the whole system would be destroyed in one fell swoop, leaving the Americans without any form of communication.</p>
+<p>In 1962, J C R Licklider, an MIT and ARPA scientist came up with a solution. He proposed a “galactic” network, a series of computers that could communicate with each other, which would allow government leaders to talk to each other even if the telephone system were destroyed.</p>
+<p>In 1965, yet another MIT scientist came up with something called packet switching, a system of sending information from one computer straight to another.</p>
+<p>The way that packet switching works is it breaks data into smaller blocks before sending it on its way. Each block, or packet, can then find its own route to its destination and, without this system, the entire network would still have been open to attack.</p>
+<p><strong>“Login”</strong></p>
+<p>In 1969, ARPAnet, as the system became known, sent its very first message. It was called a “node to node” communication and it went from one computer, housed at UCLA inside a research lab to another one in Stanford. At that time, each computer was about the size of a small house.</p>
+<p>The message they sent was very short and very simple – LOGIN – but it still managed to bring down the ARPA network and the Stanford computer received only the first two letters of the message.</p>
+<p><strong>The Growth of the Network</strong></p>
+<p>By the time 1969 had ended there were 4 computers connected to ARPAnet but, throughout the seventies, the network began to grow, In 1971, the University of Hawaii’s ALOHAnet was added to the network followed a couple of years later by those from the London University College and Norway’s Royal Radar Establishment.</p>
+<p>As these networks began to multiply it started to become difficult to integrate them all into one universal global network, called the “internet”. By the end of the seventies Vinton Cerf, a computer scientist, had found the solution to this by coming up with a way for all of the computers on these mini-networks to talk to each other. It was called “Transmission Control Protocol” or TCP for short.</p>
+<p>He later added another protocol into the mix called “internet protocol” and that is what we know today as TCP/IP.</p>
+<p><strong>The Beginning of the World Wide Web</strong></p>
+<p>This protocol turned the entire series of mini networks into one big worldwide network. During the eighties, scientists and researchers alike made use of this new network to send each other files and date, from one computer straight to another. However, in 1991, everything changed again.</p>
+<p>Tim Berners-Lee, a computer programmer from Switzerland, gave us the World Wide Web. This was a system that could be used, not just to send data and files between computers but also as a place of information, a web if you like. This was somewhere where anyone could go to find information about things. This was the internet, as we know it today.</p>
+<p>Since then, the internet has evolved beyond recognition. In 1992, at the University of Illinois, a group of researchers and students got together and produced Mosaic. This was the world’s very first internet browser, a very sophisticated one for its time, although later its name was changed to Netscape.  Mosaic made it easy to search the internet for information; it let users see pictures as well as words, both on the same page for the very first time.</p>
+<p>Mosaic also allowed users to use things like scrollbars and links that you could click, to navigate their way around the web. In the same year, Congress allowed that the web could be used for commercial use of. Because of that, a number of companies began to set up websites, and e-commerce entrepreneurs started to sell goods and services on the internet and now, with social sites like Twitter and Facebook, it is a complete world of its own.</p>
+<p>&nbsp;</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            	            
+	            	<div class="holder single">
+	            	
+	            		<div class="postdata">
+	            			<div class="datebox">
+	            			    <div class="month">Jan</div>
+	            			    <div class="day">31</div>
+	            			</div>
+	            			<p><span class="label">Author:</span><br/> 
+	            			<a href="http://historycooperative.org/author/history-cooperative/" title="Posts by History Cooperative" rel="author">History Cooperative</a></p> 
+	            			<p><a href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/#respond">1 Comment</a></p>
+	            			
+	            				            			<div class="social">
+		            			<div class="like_btn">
+		            			    <div class="fb-like" href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" data-send="false" data-layout="box_count" data-width="100" data-show-faces="false"></div>
+		            			</div>
+		            			<div class="plus_btn">
+		            				<g:plusone size="tall" href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/"></g:plusone>
+		            			</div>
+		            			<div class="tweet_btn">
+		            			    <a href="http://twitter.com/share" class="twitter-share-button"
+		            			    data-url="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/"
+		            			    data-via=""
+		            			    data-text="A Hallucinogenic History of Pyschoactive Drugs"
+		            			    data-related=""
+		            			    data-size="small"
+		            			    data-count="vertical">Tweet</a>
+		            			</div>
+	            			</div>
+	            				            		</div>
+	            		
+	            		<div class="article">
+	            			<h2 class="headline"><a href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" rel="bookmark">A Hallucinogenic History of Pyschoactive Drugs</a></h2> 
+		                    		                        <a class="featureimg" href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" rel="bookmark"><img width="615" height="345" src="http://historycooperative.org/wp-content/uploads/2014/01/marijuanaplant-shutterstock-615x345.jpg" class="attachment-post wp-post-image" alt="shutterstock-615" /></a>
+		                              
+	                        <p>There is no doubt about it, drugs do have a long and lasting effect on society, perhaps none more so than those that come under the heading of psychoactive. What is a psychoactive drug though?</p>
+<p>The medical definition states that a psychoactive drug is one that has an impact of sorts on the mood, the way of thinking and the behavior of the person taking it.  This is done by way of manipulation of the central nervous system.</p>
+<p>Human beings have a long history of using these drugs, going back many millennia.  While it is not possible to list every single instance of a psychoactive drug being used, we can find some of them. The earliest instances of this type of drug come from plants and fruits that have the ability to alter mood.</p>
+<h4><strong>The Ancient Civilizations</strong></h4>
+<p>The Egyptian, the Chinese, the Indians, South Americans and Sumerians, to name but a few of the ancient cultures, used alcohol, opium, cannabis, psychedelic (magic) mushrooms, peyote and coca leaves.</p>
+<h4><strong>The Middle-Ages</strong></h4>
+<p>This was the year of psychoactive plants and much use was made of belladonna and psilocybin mushrooms, mostly by shamans for the purpose of healing. Also widely used were coffee and distilled alcohol.</p>
+<h4><strong>Renaissance</strong></h4>
+<p>The most used psychoactive ingredients in this period we tobacco, coffee, distilled alcohol, opium and tea. The tea would have been made from the leaves of certain plants, not tea as we know it today.</p>
+<h4><strong>Early Industrial Revolution</strong></h4>
+<p>This was the era when techniques were developed to refine the drugs.  They made morphine from opiates; they came up with hypodermic needles and rolling machines for tobacco. All of this served to increase the abuse and the chances of addiction to these drugs.</p>
+<h4><strong>20<sup>th</sup> Century</strong></h4>
+<p>The drug scene picked up speed, if you will pardon the pun, in this era.  We got better at distributing the drugs; we made newer drugs from synthetic ingredients and so began the era of drug regulation.  We got prohibition and the <a href="http://en.wikipedia.org/wiki/Legality_of_cannabis_by_country" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">exclusion of marijuana</a> and all this served to do increase the use.</p>
+<h4><strong>Today</strong></h4>
+<p>The drug business is huge these days, with vast amounts of cash. Believe it or not, terrorism has played its part in exacerbating the situation, opening up new markets and new channels for distribution.  Certain countries thrive on the growth of cocaine, cannabis and other such drugs.</p>
+<p>When the 21<sup>st</sup> Centruy dawned, we saw a huge increase in so-called club drugs, such as Ecstasy and GHB although this increase was only for a short time. Instead, alcohol, marijuana and methamphetamines increase in use.</p>
+<p>Prescription drugs became the drug of choice, mainly because they were so easy to get hold off.  Psychoactive drugs had found their home and they were to stay.  Despite early regulations that ruled marijuana illegal, many US states have now declared it a legal substance for medical purposes only.</p>
+<h4><strong>Psychoactive Classification</strong></h4>
+<p>Psychoactive drugs are generally known either by their trade or street name:</p>
+<ul>
+<li><b>Uppers – </b>Cocaine, Methamphetamine, caffeine, nicotine</li>
+<li><b>Downers – </b>Opioids, heroin, alcohol, sedative hypnotics</li>
+<li><b>Psychedelics &#8211; </b> LSD, MDMA</li>
+<li><b>Psychiatric medications – </b>anti-biotic, mood stabilizers, anti-anxiety drugs</li>
+</ul>
+<h4><strong>Hallucinogens</strong></h4>
+<p>The history of hallucinogenic drugs goes back around 2000 years. The Native Indian used the Peyote cactus, psilocybin mushrooms were used by the Mayans while the use of Cannabis began in 3000BC in China.</p>
+<p>It is widely believed that psychoactive and hallucinogenic drugs were largely responsible for the creation of some cultures.  They were a major influence of art and religion for the Mayans. Peyote is thought to have been the influence of religion of the Huichol Indians in Mexico.  The list could go on because, somewhere though history, psychoactive drugs have had a major influence on society in one way or another.</p>
+<h4><strong>The foods you eat</strong></h4>
+<p>What may be worrying is that many of the common psychoactive ingredients can be found in the food you consume on a daily basis. Coffee, tea and chocolate, not to mention anything with alcohol or tobacco in it. Many prescription drugs, though they may seem to be relatively harmless, also contain psychoactive ingredients.  So, the next time you feel higher than normal or inexplicably down, take a look at what you are consuming for the answer first.</p>
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+	            	            	            
+	            <div class="navigation"><p><a href="http://historycooperative.org/page/2/" >Next Page &raquo;</a></p></div>
+				
+			</div>
+	        
+	        	        
+	        	        
+	        <h3 class="title"></h3>
+	
+	    	<div class="post second">
+	
+									            	            	            	            	
+					<div class="holder double first">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark"><img width="640" height="361" src="http://historycooperative.org/wp-content/uploads/2014/03/iphone-apple-reinvents-the-phone-1.jpg" class="attachment-post wp-post-image" alt="iphone-apple-reinvents-the-phone-1" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/the-history-of-the-iphone/" rel="bookmark">The iPhone &#8211; 7 Years and Counting</a></h2>
+	                        <h6 class="text-date">Wednesday, January 15, 2014</h6>          
+	                        <p>The iPhone is one of the world’s most iconic devices and, in the grand scheme of things, it isn’t very old. But when did it begin? Where did&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            	            	            	
+					<div class="holder double second">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-the-seduction-community/" rel="bookmark"><img width="600" height="400" src="http://historycooperative.org/wp-content/uploads/2014/04/mens-dating-advice.jpg" class="attachment-post wp-post-image" alt="history of mens dating advice" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/the-history-of-the-seduction-community/" rel="bookmark">Seduction Community in the Spotlight</a></h2>
+	                        <h6 class="text-date">Saturday, January 11, 2014</h6>          
+	                        <p>In the beginning, there was Dear Abby – an American institution since the 1950s. Write in, and get nice, sensible advice on your dating dilemma. But the catch&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            	            	            	
+					<div class="holder double first">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/internet-business-a-history/" rel="bookmark"><img width="640" height="426" src="http://historycooperative.org/wp-content/uploads/2014/07/ecommerce.jpg" class="attachment-post wp-post-image" alt="INGMRF-00028492-001" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/internet-business-a-history/" rel="bookmark">Internet Business: A History</a></h2>
+	                        <h6 class="text-date">Sunday, July 20, 2014</h6>          
+	                        <p>The internet is a vast and beautiful entity that allows unprecedented access to information, the likes of which we have never seen before. Never before has one had&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            	            	            	
+					<div class="holder double second">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/" rel="bookmark"><img width="412" height="324" src="http://historycooperative.org/wp-content/uploads/2014/05/Dutch_Painting_in_the_19th_Century_-_Van_de_Laar_-_The_Divorce.png" class="attachment-post wp-post-image" alt="Dutch_Painting_in_the_19th_Century_-_Van_de_Laar_-_The_Divorce" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/" rel="bookmark">The History Of Divorce Law In The USA</a></h2>
+	                        <h6 class="text-date">Thursday, May 29, 2014</h6>          
+	                        <p>While divorce perhaps doesn&#8217;t have the same stigma connected to it as it once did, the practice is still a touchy subject in many parts of America. Indeed, as&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            	            	            	
+					<div class="holder double first">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/web-design-through-the-years/" rel="bookmark"><img width="605" height="350" src="http://historycooperative.org/wp-content/uploads/2014/01/shutterstock_webdesign-605x350.jpg" class="attachment-post wp-post-image" alt="shutterstock_webdesign-605x350" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/web-design-through-the-years/" rel="bookmark">Web Design Through the Years</a></h2>
+	                        <h6 class="text-date">Friday, May 23, 2014</h6>          
+	                        <p>The internet is a relatively new invention but boy have things changed in its short life! The internet has changed the way we live and it has been&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            	            	            	
+					<div class="holder double second">
+					
+						<div class="article">
+						
+		                    		                        <a class="featureimg" href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/" rel="bookmark"><img width="640" height="480" src="http://historycooperative.org/wp-content/uploads/2014/05/shutterstock_98088356-640x480.jpg" class="attachment-post wp-post-image" alt="The history of Schizophrenia" /></a>
+		                    	                    	
+	                        <h2 class="headline smaller"><a href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/" rel="bookmark">Divine Madness &#8211; a History of Schizophrenia</a></h2>
+	                        <h6 class="text-date">Friday, May 23, 2014</h6>          
+	                        <p>Mental Illness in Antiquity The label schizophrenia is a recent term, first used in 1908 by Eugen Bleuler, a Swiss psychiatrist, and was meant to describe the disunity&#8230;</p>
+	                        
+	                    </div>
+	                    
+	                </div>
+				
+					            
+	            	                <div class="pagination">
+	                	<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='http://historycooperative.org/page/2/'>2</a>
+<a class='page-numbers' href='http://historycooperative.org/page/3/'>3</a>
+<a class='page-numbers' href='http://historycooperative.org/page/4/'>4</a>
+<a class="next page-numbers" href="http://historycooperative.org/page/2/">»</a>	                </div><!-- END .pagination -->
+	            	            
+	            	
+	        </div>
+	        	
+	        	
+		</div> <!-- close homepage --> 
+	</div> <!-- close eight columns --> 
+
+	<div class="four columns">
+		
+<div class="sidebar right">
+	<div id="facebook-like-box" class="widget widget_flb"><h4>Follow us on Facebook!</h4><iframe src="http://www.facebook.com/plugins/fan.php?id=1436319986608262&amp;width=235&amp;connections=8&amp;stream=true&amp;header=false&amp;locale=en_US" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:235px; height:550px"></iframe></div><div id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://historycooperative.org/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h4>Recent Posts</h4>		<ul>
+					<li>
+				<a href="http://historycooperative.org/internet-business-a-history/">Internet Business: A History</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/">The History Of Divorce Law In The USA</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/web-design-through-the-years/">Web Design Through the Years</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/">Divine Madness &#8211; a History of Schizophrenia</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/the-history-of-buddhism/">Buddha&#8217;s Backstory</a>
+						</li>
+				</ul>
+		</div><div id="text-3" class="widget widget_text"><h4>Feature Articles</h4>			<div class="textwidget"><p>&nbsp;</p>
+<h4 style="text-align: center;"><a href="http://historycooperative.org/the-hisory-of-icecream/" ><strong>The Sweet History of an Icy Treat</strong></a></h4>
+<p><a href="http://historycooperative.org/the-hisory-of-icecream/" ><img src="http://historycooperative.org/wp-content/uploads/2014/02/shutterstock_59478175-ice-cream-600.jpg"></a></p>
+<p>Every American person should know the old rhyme “You scream! I scream! We all scream for ice cream!”  In any country in the world, the word Ice Cream brings to mind memories of summer. Hot hazy days lounging...</p>
+<p><a href="http://historycooperative.org/the-hisory-of-icecream/" ><strong>Read More...</strong></a></p>
+<p>&nbsp;</p>
+<h4 style="text-align: center;"><a href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" ><strong>A Hallucinogenic History of Pyschoactive Drugs</strong></a></h4>
+<p><a href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" ><img src="http://historycooperative.org/wp-content/uploads/2014/01/marijuanaplant-shutterstock-615x345.jpg"></a></p>
+<p>There is no doubt about it, drugs do have a long and lasting effect on society, perhaps none more so than those that come under the heading of…</p>
+<p><a href="http://historycooperative.org/a-hallucinogenic-history-of-psychoactive-drugs/" ><strong>Read More...</strong></a></p>
+<p>&nbsp;</p>
+<h4 style="text-align: center;"><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/" ><strong>The Vatican City – History in the Making</strong></a></h4>
+<p><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/" ><img src="http://historycooperative.org/wp-content/uploads/2014/03/Vatican-city.jpg"></a></p>
+<p>Sited on the banks of the Tiber River, on a hill sits the Vatican City. It is a place that has one of the richest histories in the world and is one of the most influential. The religious history that surrounds...</p>
+<p><a href="http://historycooperative.org/the-vatican-city-history-in-the-making/" ><strong>Read More...</strong></a></p>
+</div>
+		</div><div id="categories-2" class="widget widget_categories"><h4>Categories</h4>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://historycooperative.org/business/" title="View all posts filed under Business">Business</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://historycooperative.org/feature-histories/" title="View all posts filed under Feature Histories">Feature Histories</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://historycooperative.org/food/" title="View all posts filed under Food">Food</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://historycooperative.org/government/" title="View all posts filed under Government">Government</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://historycooperative.org/health/" title="View all posts filed under Health">Health</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://historycooperative.org/latest-updates/" title="View all posts filed under Latest Updates">Latest Updates</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://historycooperative.org/recreation/" title="View all posts filed under Recreation">Recreation</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://historycooperative.org/religion/" title="View all posts filed under Religion">Religion</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://historycooperative.org/society/" title="View all posts filed under Society">Society</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://historycooperative.org/technology/" title="View all posts filed under Technology">Technology</a>
+</li>
+		</ul>
+</div><div id="recent-comments-2" class="widget widget_recent_comments"><h4>Recent Comments</h4><ul id="recentcomments"><li class="recentcomments">Onis on <a href="http://historycooperative.org/web-design-through-the-years/#comment-386">Web Design Through the Years</a></li><li class="recentcomments">Laura on <a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/#comment-313">The History Of Divorce Law In The USA</a></li><li class="recentcomments">jzguzlowski on <a href="http://historycooperative.org/the-history-of-buddhism/#comment-275">Buddha&#8217;s Backstory</a></li><li class="recentcomments">No Self Control on <a href="http://historycooperative.org/the-hisory-of-icecream/#comment-40">A Sweet History of an Icy Treat</a></li><li class="recentcomments">Perry Croft on <a href="http://historycooperative.org/the-hisory-of-icecream/#comment-39">A Sweet History of an Icy Treat</a></li></ul></div>		
+</div>
+
+	</div>
+	
+</div>
+
+<div class="clear"></div>
+
+</div> <!-- close container -->
+
+<div class="footerwidgets">
+
+	<div class="row">
+        
+            <div class="two columns">
+				<div id="text-2" class="widget widget_text"><h4>Our Friends</h4>			<div class="textwidget"><p><a href="http://palmersguide.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://palmersguide.com']);">Palmers Guide to the Internet</a></p>
+</div>
+		</div>            </div>
+            
+            <div class="two columns">
+				<div id="categories-4" class="widget widget_categories"><h4>Categories</h4>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://historycooperative.org/business/" title="View all posts filed under Business">Business</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://historycooperative.org/feature-histories/" title="View all posts filed under Feature Histories">Feature Histories</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://historycooperative.org/food/" title="View all posts filed under Food">Food</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://historycooperative.org/government/" title="View all posts filed under Government">Government</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://historycooperative.org/health/" title="View all posts filed under Health">Health</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://historycooperative.org/latest-updates/" title="View all posts filed under Latest Updates">Latest Updates</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://historycooperative.org/recreation/" title="View all posts filed under Recreation">Recreation</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://historycooperative.org/religion/" title="View all posts filed under Religion">Religion</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://historycooperative.org/society/" title="View all posts filed under Society">Society</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://historycooperative.org/technology/" title="View all posts filed under Technology">Technology</a>
+</li>
+		</ul>
+</div>            </div>
+            
+            <div class="two columns">
+            	<div id="archives-2" class="widget widget_archive"><h4>Archives</h4>		<ul>
+	<li><a href='http://historycooperative.org/2014/07/'>July 2014</a></li>
+	<li><a href='http://historycooperative.org/2014/05/'>May 2014</a></li>
+	<li><a href='http://historycooperative.org/2014/04/'>April 2014</a></li>
+	<li><a href='http://historycooperative.org/2014/03/'>March 2014</a></li>
+	<li><a href='http://historycooperative.org/2014/02/'>February 2014</a></li>
+	<li><a href='http://historycooperative.org/2014/01/'>January 2014</a></li>
+		</ul>
+</div>            </div>
+            
+            <div class="two columns">
+            	<div id="recent-comments-4" class="widget widget_recent_comments"><h4>Discussion</h4><ul id="recentcomments"><li class="recentcomments">Onis on <a href="http://historycooperative.org/web-design-through-the-years/#comment-386">Web Design Through the Years</a></li><li class="recentcomments">Laura on <a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/#comment-313">The History Of Divorce Law In The USA</a></li><li class="recentcomments">jzguzlowski on <a href="http://historycooperative.org/the-history-of-buddhism/#comment-275">Buddha&#8217;s Backstory</a></li><li class="recentcomments">No Self Control on <a href="http://historycooperative.org/the-hisory-of-icecream/#comment-40">A Sweet History of an Icy Treat</a></li><li class="recentcomments">Perry Croft on <a href="http://historycooperative.org/the-hisory-of-icecream/#comment-39">A Sweet History of an Icy Treat</a></li></ul></div>            </div>
+            
+            <div class="four columns">
+						<div id="recent-posts-5" class="widget widget_recent_entries">		<h4>Recent Posts</h4>		<ul>
+					<li>
+				<a href="http://historycooperative.org/internet-business-a-history/">Internet Business: A History</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/the-history-of-divorce-law-in-the-usa/">The History Of Divorce Law In The USA</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/web-design-through-the-years/">Web Design Through the Years</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/divine-madness-a-history-of-schizophrenia/">Divine Madness &#8211; a History of Schizophrenia</a>
+						</li>
+					<li>
+				<a href="http://historycooperative.org/the-history-of-buddhism/">Buddha&#8217;s Backstory</a>
+						</li>
+				</ul>
+		</div>            </div>
+
+	</div>
+
+</div>
+
+<div class="footer">
+
+	<div class="row">
+		<div class="twelve columns">
+    
+    	<div class="footerleft">       
+            <p>Copyright &copy; 2014 &middot; All Rights Reserved &middot; History Cooperative</p>
+
+            <p></p>
+        </div>
+        
+        <div class="footerright">
+    		<a href="" title="" target="_blank"><img src="http://historycooperative.org/wp-content/themes/organic_magazine/images/footer_logo.png" alt="Organic Themes" /></a>
+    	</div>
+		
+		</div>
+	</div>
+	
+</div> <!-- close container -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/historycooperative.org\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pbd_alp = {"startPage":"1","maxPages":"2","nextLink":"http:\/\/historycooperative.org\/page\/2\/"};
+/* ]]> */
+</script>
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/historycooperative.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+Database Caching 13/33 queries in 0.010 seconds using disk
+Object Caching 3465/3541 objects using disk
+
+ Served from: historycooperative.org @ 2014-07-30 16:32:56 by W3 Total Cache -->

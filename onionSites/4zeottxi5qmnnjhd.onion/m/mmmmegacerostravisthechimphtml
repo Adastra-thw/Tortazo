@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Travis the Chimp</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Travis the Chimp
+	</p>
+	
+	<p id="textsubtitle"><strong>Subtitle:</strong>
+	  a psuedo news story
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  M. Megaceros
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  3/5/2012
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-angry-apes">angry apes</a>
+	  	  <a href="../../topics.html#library-index-animal-liberation">animal liberation</a>
+	  	  <a href="../../topics.html#library-index-green-anarchy">green anarchy</a>
+	  	  <a href="../../topics.html#library-index-primativism">primativism</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  I saw several stories about the incident in the news in 2010 and something about the tone of the reporting got under my skin. I resolved to write my own version of the “facts”.
+	</p>
+	
+	<strong>Source:</strong>
+	original text
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="m-megaceros-travis-the-chimp.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="m-megaceros-travis-the-chimp.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="m-megaceros-travis-the-chimp.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="m-megaceros-travis-the-chimp.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="m-megaceros-travis-the-chimp.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="m-megaceros-travis-the-chimp.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>M. Megaceros</h2>
+	
+	<h1 id="textttitleh">Travis the Chimp</h1>
+	
+	<h2>a psuedo news story</h2>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>It’s been said that humans and chimpanzees share 99.9% identical DNA. So close is the connection to chimps that beings from another planet, conducting an anthropological survey would probably conclude that humans are the third family of chimpanzees; that humans are nothing more than a large-headed hairless branch of the chimp family. In truth, it will surprise no one to learn that the human species is indeed considered a branch of the great ape family tree. Thousands of chimps live among humans. They exist in captivity, in research labs, zoos, show business and private homes. Here’s some other facts pertinent to the following story. At least 10% of American adult humans are currently taking anti-anxiety drugs. I suspect that close to 100% of American humans sate their anxiety and isolation in consumer culture and yummy convenience food. Travis was just such an American. 
+</p><p>Travis was a 1990’s TV Star. Highlights in his career would include his work in commercials and several television sitcoms. He was born in the zoo. His parents were two captive chimpanzees. His career was long and extremely profitable for his owners. In his retirement, Travis lived in a suburban house. He was considered very bright. He was able to use and to flush the toilet, wear clothes, and was able to open the house front door with his own key. He was able to get his favorite snack foods from the kitchen when and as often as he pleased. There was always a large Tupperware bowl filled with a special mixture of Cheez-its and Corny Bugles. His favorite burger was a yummy BK Double Whopper with Bacon. He would often raid the freezer for pints of Hagen Daas, Double Butter Pecan ice cream. Like other Americans, he became obese on this diet. 
+</p><p>Travis loved to go shopping with his “mother”, that is to say — his owner. They would spend hours at the mall, greeted by smiles from his fans. He could log in to the Web and had a special fondness for conducting Google searches. He loved looking for images of cute kittens. His computer screen-saver showed a tiny tabby cat clinging to the bottom rung of a ladder. The caption read, ‘hang in there, baby’ Though, it is doubtful that Travis was able to read it, he seemed to enjoy it very much. His owner joked to her visitors that Travis was trying to ’figure it out — like a puzzle’. Still, by all measures, Travis was a ‘good monkey’, as a friend of the family would later put it. So well behaved was he that he went everywhere with his owner in the car. 
+</p><p>Travis liked to play X-box games, watch baseball, and go to the shopping mall. He was particular about his outfits and often spent time studying his appearance in a full length mirror. When on an outing, he would often spot a patrol car or policeman. When this happened, he would become visibly happy, bounce, smile and point. He probably felt a fondness for the kind, uniformed guards on the stage sets, where he worked for so many years. These network employees would often keep candy in their pockets — to give to the ape. Travis loved firemen too. But he held a special fondness for the men in blue. In short, Travis had become civilized; he was living the good life. A dream come true. American freedom in its purest form.
+</p><p>When Travis began to develop symptoms of anxiety and had panic attacks, his owner put him on xanax, a potent anti-anxiety drug. This increased his appetite even further and caused Travis to be lethargic and sometimes confused and short tempered. One morning, Travis asked to go on an outing to the park. Frustrated, his “mother” flatly told him no. She told Travis that she was far too busy to go outside. Travis asked repeatedly to be let outside. Perhaps, she said, if he was well-behaved they might go to the strip mall for ice cream cone...later. At this disappointment, Travis began to exhibit symptoms of extreme anxiety. He rocked back and forth, hugged himself and ran from the front door to the back. His “mother” became even more stern with him and threatened the usual punishments. Travis unlatched the door lock and ran outside. His “mother” tried to block his escape. In her desperation to control the animal, she grabbed a butcher knife and a garden shovel.
+</p><p>Later, in recounting the tragedy to the authorities, she added that she needed the tools, ‘for my protection’. When Travis refused to be subdued, she stabbed Travis in the chest with the knife, several times. In retaliation, Travis viciously attacked the her, ripping and biting her face and hands. A passing driver honked and chased the chimp away from his victim. Using his brand new silver Tahoe LT, Special Edition SUV, the driver chased Travis away and down the leafy street. When police arrived, Travis is said to have becalmed himself and smiled sweetly as he approached the police cruiser. Travis calmly reached for the door handle and opened the patrol car door to see the nice policemen and perhaps receive a candy. 
+</p><p>The officers shot 160 pound Travis with their .40 caliber duty pistols, without hesitation. Witnesses say that Travis tried desperately to drag himself back to the protection his “mother” as police fired the killing shots into the animal. Media stories featured the usual rounds of interviews with shocked neighbors and relatives. Travis was said to have been a “quiet monkey...very nice and polite.” Other than that, he was said to be a good “boy”. Most news stories concluded their narratives with understandable pronouncements that wild animals should never be expected to become fully domesticated. 
+</p><p>In fact, Travis’ chimpanzee mother Suzy was also shot and killed following an escape attempt in 2001. Wild creatures, news readers inform us, will never fully submit to domesticated life...as humans have so willingly have done. The more thoughtful of these programs are quick to remind us that apes can only truly thrive and be happy in the wild, in small quiet groupings — in the habitat where they evolved. We should not be surprised when a domesticated anthropoid like Travis goes mad — on a violent killing binge. Their analysis, though often interesting stop short, saying that although we humans are very close kin to chimps, humans are totally different in their basic needs. When a domesticated human becomes madly violent, it is merely a personal failing. In their speculations, these stories never seem to describe the habitat that humans evolved in. Or call attention to our distance from that habitat. 
+</p><p>On the contrary, humans, it is implied — truly belong in towering glass and stone cities, surrounded large and small machines and somehow human lives are enhanced and refined by isolation, competition, routine and small personal humiliations. These stories never seem to make a connection with mass killings like the one at Columbine High School or Virginia Tech. These stories attempt to teach us the lesson that intelligent, well adjusted humans are satisfied to live a vicarious and mediated life — working long hours and eating bulk processed foods, watching the raging colored lights of computers and TV screens. And it is perfectly normal to have one’s ears flooded by the blaring din from electric amplification both day and night. 
+</p><p>Our basic, fundamental needs are so vastly different than those of our closest cousins — the chimps, that critiquing our own domestication is irrelevant — not worth mentioning. In other words, domestication of apes is disastrous in all cases except in that of human beings. For humans, domestication is just fine.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

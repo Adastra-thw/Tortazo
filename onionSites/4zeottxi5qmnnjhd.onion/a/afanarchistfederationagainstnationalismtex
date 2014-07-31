@@ -1,0 +1,978 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Anarchist Federation  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Against Nationalism
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+2009
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+\chapter{Preface
+}
+
+This pamphlet has its origins in a particular time and place, with the impetus behind it coming from the Israeli state’s military campaign in the Gaza strip in late 2008 and early 2009. As the record of atrocities and the death toll mounted, coming to a final stop at around 1,500 dead, large protests took place around the world, with a significant protest movement developing in Britain. This movement took the form of regular street protests in cities, a wave of 28 university occupations around the country and occasional attacks against companies supposedly implicated in the war. There were also, depressingly, actions with clear anti-Semitic overtones. \footnote{A Tesco Metro supermarket in Stepney had its windows smashed and the words ‘kill Jews’ were daubed on the wall}
+
+
+Anarchist Federation members were involved in a range of ways, being present on street demonstrations and involved in a number of occupations. As anarchists, we are opposed to war, militarism and imperialism, and see a powerful movement against these forces as a vital part of internationalism in action and the process of building the confidence necessary for a social movement against the state and capitalism.
+
+
+However, we were unimpressed by the way in which support for the ‘Palestinian resistance’ — in other words Hamas, Islamic Jihad, Al-Aqsa Martyrs brigade and the other proto-state forces in the region — became mixed in with the legitimate revulsion felt as the bombs and shells fell onto the heads of ordinary Gazans. These groups — which called on ordinary Palestinians to ‘martyr’ themselves for the nation — have a clear history of repressing workers’ struggles at gunpoint, oppressing women, gays and lesbians, and spreading the virulently reactionary doctrines of nationalism and Islamism. As the war ground on, they showed their true colours by attempting to indiscriminately kill Israelis, settling scores with their rivals through summary executions, and making political capital out of refugees by preventing them from accessing medical aid over the border.\footnote{Hamas prevented Gazans from reaching a field hospital on the Israeli side of the border at Erez at the end of January. See Dozens believed dead in reprisal attacks as Hamas retakes control, {\em The Guardian}, 30/01/09} As ordinary Palestinians fled in droves, ignoring the calls from militant groups and their Western cheerleaders to throw themselves upon the pyre and join the ‘resistance’, the true face of that ‘resistance’ became apparent.
+
+
+As anarchist communists, we have always opposed nationalism, and have always marked our distance from the left through vocally opposing all nationalism — including that of ‘oppressed nations’. While we oppose oppression, exploitation and dispossession on national grounds, and oppose imperialism and imperialist warfare, we refuse to fall into the trap so common on the left of identifying with the underdog side and glorifying ‘the resistance’ — however ‘critically’ — which is readily observable within Leninist/Trotskyist circles. We took this stance on Northern Ireland in the past, and take it on Israel/Palestine today.
+
+
+Therefore, in order to give context to the text that follows and show our analysis in a practical context, we reproduce as appendices two texts which AF groups circulated as leaflets during the campaign, and which were utilised by other anarchist comrades in the UK, such as locals of the anarcho-syndicalist Solidarity Federation and Organise! in Northern Ireland. We hope that this text will circulate as widely as our original leaflets did, which were translated into Spanish and Polish and reproduced as far away as Central America, and open debate within the wider anti-state communist movement.
+
+
+September 2009
+
+
+\chapter{The nation and nationalism
+}
+
+Whenever we involve ourselves in everyday life, we find ourselves defined in national terms. When we use our passports, when we apply for a job, when we go to hospital or when we claim benefits, we come up against our national status and the possibilities or handicaps that follow. When we travel, turn on the television, open the paper or make conversation, the categorisation of people into one of several hundred varieties of human being looms in the background, often taking centre stage. We are all assumed to belong to a national group, and even those people who can claim multiple national identities are still assumed to be defined by them. The division of the world’s population into distinct nations and its governance accordingly is a given, and seems as straightforward as anything occurring in nature. When we say, for example, that we are British, Polish, Korean or Somalian we feel that we are describing an important part of ourselves and how we relate to the world around us, giving us commonality with some people and setting us apart from others
+
+
+Bureaucracy makes this intuition more solid. Nationality is its most fundamental category — determining what rights and privileges we have access to, whether we are inside or outside the community of citizenship which nationalism presumes, and ultimately whether we are a valid, ‘legal’, person. When we come across bureaucracy, the various definitions assigned to us by it loom large: gender, nationality and race in particular. These things seem to be as obvious a part of ourselves as eye colour or blood type, and more often than not go unquestioned.
+
+
+But despite appearing a fundamental attribute of ourselves and others, the principle of nationality is also fundamentally problematic. On one level, it defines itself. To a bureaucracy nationality just is. You have the right passport, the right entitlements, or you don’t. However, as with all social questions, we are dealing not with some ‘natural’ aspect of the human condition, but with a form of social organisation which has both an origin and a rationale. So we come up against the question, ‘what is a nation?’
+
+
+Common sense seems to provide the usual answer: a ‘people’ share a culture, a history, an origin, a community, a set of values, and, usually, a language which make them a nation. People within the nation share a commonality with one another which they lack with foreigners. From this point of view, the world is made up of such nations; it always has been and always will be. But the ideology of nationalism, regardless of which ‘nation’ we are discussing, is a political one, describing the relationship between ‘the people’ and the state. The nation-state is seen as the outgrowth of the national community, its means of conducting its business and the instrument of its collective will and wellbeing; at the very least a one-on-one correspondence between nation and state is seen as the usual, natural and desirable state of affairs, with any international co-operation, business and organisation progressing from this starting point . This rhetoric is assumed even in states which do not bother to claim legitimacy through representative democracy.
+
+
+But when we attempt to uncover the qualities which make some collectivities of people a nation and others not, we encounter problems. When we attempt to articulate what ‘Britishness’, ‘Gambianess’ or ‘Thainess’ might be about, we are in trouble. Nationalist partisans will offer suggestions, but these are always fashionable banalities, whether they are ‘honour’, ‘loyalty’, ‘liberty’, ‘fairness’, or whatever else is current. A handful of iconic national institutions will be pointed to, and a great many more ignored. Nationalisms on this level are unlike political ideologies, there is no definite model for the organisation of society, and there is no unity of principle or program; the unity assumed is an arbitrary one.
+
+
+There are no observable rules to clearly define what makes a national ‘people’, as opposed to other forms of commonality. The usual prerequisites are a shared language and culture. But this shared, culture is difficult to define, and we often find as much cultural variation across populations within nations as between them. Two Han Chinese are assumed to share a commonality as ‘Chinese’ and a natural solidarity on this basis even if they speak mutually incomprehensible ‘dialects’. Likewise, understanding continuity between the historical ‘national culture’ and what actually exists requires some dubious reasoning — for example, how is someone in Athens who speaks modern, Attic-derived official Greek expressing the same culture which built the Acropolis, (itself a Greek culture which lacked a Greek nation)? This ‘nation’ must often include many who do not meet its supposedly defining attributes; regional, linguistic, cultural, religious and sometimes ‘national’ minorities. This fact that nation-states often exhibit as much variation within their geographic bounds as across them is obvious in many postcolonial African states or in Indonesia for instance, and even in less exotic locales such as Switzerland.
+
+
+Nonetheless, nationalists often reduce the question down to a narrative of ‘human nature’, in which ‘peoples’ simply cannot mix without conflict, making the natural state of affairs the ‘self-determination’ of nations through their sovereign states. Such thinking is usually mired in the pseudo-science of race, making an appeal to historical just-so stories and misplaced naturalistic myths. To assume that ‘peoples’ are defined by their antagonism to other ‘peoples’, but that they are antagonistic because they are different ‘peoples’ is circular thinking. There is still no clear reason why certain groups deserve national status and others don’t. Antagonism between particular metropolitan areas has a longer pedigree than supposed national antagonism does, but the population of such areas are not assumed to have access to national status on these grounds.
+
+
+Moreover, there are countries, such as Madagascar, and areas, such as large swathes of Latin America, where the ‘race’ of the population is a mixed one. In Madagascar, the ‘Madagascan people’ is in fact a localised mix of populations of African and Austronesian settlers. The same applies to less exotic locations too. The ‘English people’ are a mix of waves of conquest and settlement, their supposed ‘national culture’ even more mongrelised than their genetic ‘race’.
+
+
+Nationalism, then, is a strange thing that is everywhere, intuitively ‘common sense’ but impossible to precisely describe, a basic principle of structuring the entire population of the world but a principle which doesn’t stand up to much scrutiny.
+
+
+However, things weren’t always this way. For most of history people didn’t have a particular nationality, or overlapping claims on them, which defined their person in such fundamental but elusive ways, let alone any nationalism to accompany it. Though ‘common sense’ tells us that national divisions are a thing as old as humanity, the reality is rather different. Nationalism is a creation of the modern world, and is bound up with the development of a certain kind of society, which today is worldwide and total in its reach — capitalism.
+
+
+\chapter{The origins of nationalism
+}
+
+Capitalism and the modern nation-state developed at the same time in the same place, in Europe in the 16\high{th} to 19\high{th} centuries. The evolution of the nation-state and capitalism were bound up, each catalysing the development of the other. Capitalism took hold in a certain time and place not by accident but because the conditions were right to breed it; it required a fragmented arena of competing states with embedded mercantilist interests (though they were not for a good time the ‘nations’ we’d recognise), and for that reason evolved in Europe rather than in the Ottoman Empire, Manchu China or any of the other land empires that dominated much of the world.
+
+
+Like capitalism itself, the idea of the modern nation-state didn’t appear from nowhere, but developed out of pre-existing conditions. However, capitalism as a total economic system and the world of sovereign nation-states are historical novelties, standing in contrast to a long history of feudal and imperial state forms. The modern nation-state is a product of the revolutions of the Eighteenth century which marked the decline of the feudal period and the rise of capitalism as a world system. But the phenomenon did not fall from the sky upon the storming of the Bastille\footnote{The inhabitants of Paris attacked the notorious fortress-prison in 1789 to secure gun-powder, sparking off the French Revolution. The revolution is often seen as the point marking the transfer of power from the old aristocratic class to the ascendant capitalist classes.}, it was nurtured and developed as capitalism itself evolved and matured.
+
+
+The technological innovations associated with the earliest developments of capitalism laid the foundation for the subsequent evolution of nationalism. The production and circulation of printed books was one of the very earliest capitalist industries. Once the initial market of Latin-speaking Europeans was glutted, the production of books in localised languages oriented towards the small but growing literate strata in Europe would have an important role in creating a language of administration and high culture, and the foundations of what could be claimed as a ‘national culture’ in later centuries — with significant nation-building implications in the cases of what would become Germany and Italy. The reformation\footnote{The wave of religious and social upheaval across Europe which established Protestantism and saw the decline in power of the Catholic Church.} (its own success deeply associated with that of the printing industry) combined with the rising power of the merchant class in imperial states — whose own success at exchanging commodities acted as a beachhead for the capitalist social relations in Europe — would lead to the establishment of several states which were neither dynastic monarchies nor city-states. They were not the nation-states of developed capitalism, but were significant steps towards them.
+
+
+The merchants, traders and bankers which had previously operated at the fringes of feudal economies played an increasingly central role as European empires spread around the world. Their trade in the plunder of the colonies — both riches and slaves — would make them vital to the workings of their economies, and the progressive dominance of European imperialism swelled their numbers, wealth, and political significance. Their density in the Seventeen Provinces in the Low Countries would spur the rebellion there, and the subsequent creation of the Dutch republic in 1581 was a portent of what would follow. The commercial successes of the merchants of the empires would lead to their influence redoubling into the societies that launched them. In Britain the enclosure of common land\footnote{The private seizure of the common grazing lands of the traditional village, which was important to the development of capitalism on two fronts: first by laying the basis of the commodification of land in tandem with the market-led developments in agriculture, and secondly by dispossessing swathes of the population who were then forced to become wage-labourers.} , the development of industry under the pressures of commerce and the outcompeting of small producers by industrial capitalist pioneers would create a dispossessed working class with no choice but to labour for private employers — in other words it would lead to the establishment of capitalism proper. The industrial capitalist would replace the merchant as the leading player of the bourgeois class.
+
+
+Concurrently, with the beginning of the end of the feudal world, and the transition to a world centred on the interests of the ascendant capitalist class, the state was redefined. The era of monarchs and subjects was replaced by the era of ‘citizens’. A period of competing dynasties gave way to the modern period of competing nations. Following the revolutions in France and America, the liberal conception of the state which laid the basis for nationalism solidified. It wasn’t programmatic, and didn’t need to be, as it wasn’t conjured into reality from the minds of intellectuals but from the needs of a developing class society to create the conditions for its own perpetuation.
+
+
+The idea was articulated in French Declaration of Rights\footnote{The document laying out the universal, fundamental rights of French citizens following the French revolution. These rights were understood to be based on human nature.} of 1795 as follows:
+
+
+“Each people is independent and sovereign, whatever the number of individuals who compose it and the extent of the territory it occupies. This sovereignty is inalienable”.
+
+
+This understanding of the role of the state stood in contrast to the absolutism of earlier periods. Now it was the ‘people’ who were sovereign, not the person of the divinely ordained ruler. But during this period there was no clear definition of what made a ‘people’. It was circular, and relied on the territory and population of existing states, as at this point there was little in the way of attempts to define national citizenship or ‘peoples’ on linguistic, cultural or racial grounds. It was nearly always a question of practicality. The ‘science’ and library on national definition would not explode until a century later.
+
+
+When attempts at definition did occur at this stage, such as during the second half of the Eighteenth century, nations were understood on the basis of their domination by specific states. The French Encyclopédie, a work usually understood as encapsulating enlightenment thought prior to the revolution and published in volumes in the 1750s and 60s, defined nations in such a way. There was no assumption of ethnic, linguistic or cultural homogeneity — to the enlightenment theorists, a nation was nothing more than a great number of people defined by proper borders and all subject to the same regime of law.
+
+
+The revolution would build on this nation of subjects to create the nation of citizens; the nation became those capable and willing of the conditions of citizenship, expressed through the state. This understanding is still preserved in the rhetoric — if not the practice — of the nationalism of one of the nations created in the revolutions of the late 1700s: Americans are those who sign up to ‘Americanism’ and aspire to be Americans. For the bourgeois revolutionaries, the theoretical community of ‘citizens’ — however it was defined — represented the sovereignty of the common interest against the narrow interests of the crown, though of course this was not the reality of the class society they presided over.
+
+
+The understanding of nationality in terms of ethnic, cultural and linguistic distinctiveness came later, in the course of intellectual debates about what made a nation, and what ‘nations’, however defined, deserved expression through a nation-state. Once the principle of the state as the expression of the sovereign ‘people’ was established, the process of definition of ‘peoples’ intensified throughout the Nineteenth Century. The political theorist John Stuart Mill mulled over the criteria of common ethnicity, language, religion, territory and history. But even as thinkers were debating where the ‘people’ came from, the issue was mostly understood in terms of practicability. Which ‘peoples’ should make nations was a question of viability, and the nations which were viable were often actually existing ones. Eligible new nations needed the economic or cultural basis to make them sustainable, as was the case with the creation of Italy and Germany in the second half of the Nineteenth century. The difficult question of turning populations into peoples, and peoples into nations only produced vague answers, but largely relied on the size of the population, association with a prior state, having a viable cultural elite (as with the Germans and Italians) and most importantly, a history of expansion and warfare, which has the virtue of creating an outside to unite against. Ireland was exceptional in possessing a national movement of the kind that would appear later much earlier on — indeed it would provide the archetypal model to nationalisms manufactured in later years, such as those of the Indians and Basques. However the viability of this movement was regularly dismissed on practical grounds.
+
+
+Nonetheless most of the ‘peoples’ who would come to form ‘nations’ later on still did not see themselves in national terms, and did not see a moral aberration in rule by elites who spoke a different language, for the main reason that there were no unified national languages in a world of local dialects and widespread illiteracy. Even the role of the ‘official’ languages had little in common with the status of modern national languages. They were the product of expediency, and had nothing to do with any ‘national consciousness’. This had been the case for some time. In England, for instance, the elite language progressed from Anglo-Saxon, to Latin, to Norman, to the hybrid product of Norman French and Anglo-Saxon that was early English. The language spoken by elites remained an irrelevance to an illiterate subject population. Even in later periods the picture was the same — in 1789 only 12\% of the French population spoke ‘proper’ French, with half speaking no form of French at all. Though a shared Italian-speaking elite culture was essential to the formation of an Italian state in the Nineteenth Century, the Italian language was only spoken by about 2.5\% of ‘Italians’ on unification; the population at large spoke a variety of dialects which were often mutually incomprehensible.
+
+
+There had been occasional and limited attempts at telling national origin stories in earlier centuries — such as the stories circulating in Sixteenth century France about the descent of the French (i.e. its elite) from the Franks and from Troy. However, these were limited to small literate circles and functioned to rationalise royal and/or aristocratic rights, rights which were defended much more frequently, effectively and popularly by claims to divine orders or to Roman precedent. These stories were the consequence of a small literate elite sharing the same language and institutional privileges communicating with each other, a starting point for the nationalism of later centuries. They in no way indicated a modern, popular ‘national consciousness’. They lacked the popular motive force of nationalism, the understanding that the state should express the wellbeing of the nation as a whole, and the constitution of this nation on a popular level. When the old dynasties attempted to reconcile themselves with modern nationalism in the age of its dominance they did so at their own peril: Kaiser Wilhelm II, though increasingly marginalised during the First World War, positioned himself as the nation’s leading German, therefore implying some form of responsibility to the German people and national interest — and thus the conclusion that he had failed in this responsibility, the very conclusion which led to his abdication. Such ideas would have been unthinkable in earlier years where the right of the Kaiser was inviolable and accountable to no-one.
+
+
+As the Nineteenth century progressed, so too did the idea that all peoples had a right to self-determination, irrespective of questions of viability. The Italian Nationalist and philosopher Giuseppe Mazzini would pose the formula ‘every nation a state, and only one state for each nation’ to resolve ‘the national question’. This way of thinking consolidated towards the end of the century, at the same time that nationalism had gained a common currency amongst the masses. The proliferation of nationalist and ‘national liberation’ movements in the late 1800s is striking — the birth of Zionism alongside Indian, Armenian, Macedonian, Georgian, Belgian, Catalan movements, along with many others occurred in this period, though whether these specific movements had any traction among the wider population is another matter. Though in earlier periods there had been some ethnic or linguistic groups which understood themselves as in some way distinct from their neighbours, the translation of this into the need to have a nation-state of each and every grouping was a new phenomenon. And even prior to this, the ‘commonality’ which was used to define the nation, however it was understood, was something produced by the modern period — modern printing, education, transport and communications led to the erosion of local linguistic variation and a public culture which would allow for the idea of the nation to take hold. This wouldn’t have been possible in earlier periods where this infrastructure for breaking down cultures which could be specific from one village to the next didn’t exist. The national language, often a prerequisite for functioning nationalism, was a contemporary invention, requiring increased literacy, circulation of people and the erosion of parochial, feudal social relations, as we have seen. Contrary to the fantasies of nationalists, who see the shared language as the basic bond on which the nation-state is based, a common national language was the creation of the developing modern state.
+
+
+By the last decades of the Nineteenth Century, the idea that each ‘people’ had a moral right to their own nation-state was solidly established. The concerns about viability which defined earlier debates had disappeared. It was now a right of ‘peoples’, defined in whichever way, to a state of their own. To be ruled by another nation or its representatives was abhorrent (in theory at least — imperialism had its own logic). It was during this period that the ethnic and linguistic definition of the ‘nation’ came to dominance over earlier forms. The competing imperialist nation-states of contemporary capitalism were fully-formed, and movements advocating resistance to and secession from them understood their activity and ultimate aims in terms of creating new nation-states.
+
+
+The development of modern nationalism was bound up with the fact that the modern capitalist state, with an exploited population educated to a higher level than its feudal predecessors, required more from its citizens than the passive peasantry of earlier periods. It required a socially unifying force, and to integrate the working class into the state regime — it needed the active allegiance of the population, rather than the immiserated passivity of the peasants. The invention of patriotism filled this need. A consciousness of and allegiance to the ‘fatherland’ or ‘motherland’ was developed became commonplace through the European nation-states of the final third of the Nineteenth century. The development of the term ‘patriotism’ tells us all we need to know. The ‘Patrie’, the ‘homeland’ which forms the basis of the term, was defined prior to the French revolution as simply being a local area of origin, without national implications. By the late Nineteenth century, it was the imagined community of the nation, which demanded mass participation. Combined with the new pseudoscience of race, which had become so important in replacing paganism as the justification for imperial dispossession of various local populations, the ideology of national supremacy was born.
+
+
+This principle reached its apogee in the First World War and the period following it. Late nineteenth century jingoism was transformed into an ideology of total war, of mechanised slaughter between militarised national blocs. Every aspect of life was subsumed under the ‘national interest’; internal disputes had to be suspended for the sake of the nation’s supremacy and — given every combatant state claimed the war was a defensive one — survival. Following the end of this capitalist bloodbath, the European map was redrawn on national lines. An attempt was made to put the ideal of ‘every nation a state’ into practice, and the ‘Wilsonian idealism’\footnote{Woodrow Wilson, the US president at the war’s end, was instrumental in framing nationality and self-determination as the path to orderly world affairs.} of ‘national self-determination’ was made a geopolitical reality. The break-up of the Austro-Hungarian Empire into new nation-states was an attempt to solve the problem of ‘oppressed nations’. It didn’t work, for reasons which are integral to nationalism — these new states were not homogenous, and were themselves were full of new minorities.
+
+
+The principle of ‘self-determination’ of ‘peoples’ once accepted, has no end, hence the rapid diffusion of antagonistic minority nationalisms throughout the world, with few countries untouched by them. The fundamental principle of nationalism is that national collectives of human beings have a right to self-determination in and through ‘their’ nation, but when it comes down to it, it is impossible to define exactly which groups of people are ‘nations’ and which aren’t, and there are always smaller and smaller groups claiming this mantle.
+
+
+Nationalism, then, is something with a very real history and origin. Its power lies in the way it is presented as a natural state of things, and the assumption that national divisions and national determination are a natural part of human life, always have been and always will be. Anarchists take a very different view. The same period of history which created the nation-state and capitalism also created something left out of nationalist accounts — the dispossessed class of wage-workers whose interests stand in opposition to those of the capitalist nation state: the working class. This class which is obliged to fight in their interests against capital are not a ‘people’, but a condition of existence within capitalism, and as such transcend national borders. This antagonism led to the development of revolutionary perspectives challenging the world of capitalism, and posing a different world entirely. Our perspective, anarchist communism, is one of these.
+
+
+\chapter{Why do anarchists oppose nationalism?
+}
+
+Anarchists in the class struggle (or communist) tradition, such as the anarchist federation, do not see the world in terms of competing national peoples, but in terms of class. We do not see a world of nations in struggle, but of classes in struggle. The nation is a smokescreen, a fantasy which hides the struggle between classes which exists within and across them. Though there are no real nations, there are real classes with their own interests, and these classes must be differentiated. Consequently, there is no single ‘people’ within the ‘nation’, and there is no shared ‘national interest’ which unifies them.
+
+
+Anarchist communists do not simply oppose nationalism because it is bound up in racism and parochial bigotry. It undoubtedly fosters these things, and mobilised them through history. Organising against them is a key part of anarchist politics. But nationalism does not require them to function. Nationalism can be liberal, cosmopolitan and tolerant, defining the ‘common interest’ of ‘the people’ in ways which do not require a single ‘race’. Even the most extreme nationalist ideologies, such as fascism, can co-exist with the acceptance of a multiracial society, as was the case with the Brazilian Integralist movement\footnote{A fascist movement in Brazil which, given its inability to mobilise the masses on racial lines, took up the slogan of “Union of all races and all peoples” while utilising the same rhetoric about communism, liberalism etc as its European relatives.}. Nationalism uses what works — it utilises whatever superficial attribute is effective to bind society together behind it. In some cases it utilises crude racism, in other cases it is more sophisticated. It manipulates what is in place to its own ends. In many western countries, official multiculturalism is a key part of civic policy and a corresponding multicultural nationalism has developed alongside it. The shared ‘national culture’ comes to be official multiculturalism itself, allowing for the integration of ‘citizens’ into the state without recourse to crude monoculturalism. If the nationalist rhetoric of the capitalist state was of the most open, tolerant and anti-racist kind, anarchists would still oppose it.
+
+
+This is because, at heart, nationalism is an ideology of class collaboration. It functions to create an imagined community of shared interests and in doing so to hide the real, material interests of the classes which comprise the population. The ‘national interest’ is a weapon against the working class, and an attempt to rally the ruled behind the interests of their rulers. The ideological and sometimes physical mobilisation of the population on a mass scale in the name of some shared and central national trait have marked the wars of the Twentieth and Twenty-First centuries — the bloodbath in Iraq rationalised in the name of Western democratic culture and the strengthening of the domestic state in the name of defending the British or American traditions of freedom and democracy against Islamic terror are recent examples.
+
+
+Ultimately, the anarchist opposition to nationalism follows a simple principle. The working class and the employing class have nothing in common. This is not just a slogan, but the reality of the world we live in. Class antagonism is an inherent part of capitalism, and will exist irrespective of whether intellectuals and political groups theorise about its existence or non-existence. Class is not about your accent, your consumption habits, or whether your collar is blue or white. The working class — what is sometimes called the proletariat — is the dispossessed class, the class who have no capital, no control over the overall conditions of their lives and nothing to live off but their ability to work for a wage. They may well have a house and a car, but they still need to sell their ability to work to an employer in return for the money they need to live on. Their interests are specific, objective and material: to get more money from their employers for less work, and to get better living and working conditions. The interests of capital are directly opposed: to get more work out of us for less, and to cut corners and costs, in order to return a higher rate of profit and allow their money to become more money more quickly and efficiently. Class struggle is the competition between these interests. Even non-productive workplaces are shaped by these rules, as they are the fundamental principles of capitalist society. The interests of capital are expressed through those with power, who are likewise obliged to maintain these interests in order to keep their own power — owners of private capital, the bosses who make decisions on its behalf, and the state which is required to enshrine and defend private property and ownership rights.
+
+
+The ‘national interest’ is simply the interest of capital within the country in question. It is the interest of the owners of society, who in turn can only express the fundamental needs of capital — accumulate or die. At home, its function is to domesticate those within a society who can pose antagonism with it — the working class. This antagonism, which is inherent to capitalism, is one which anarchists see as being capable of moving beyond capitalism. We have to struggle in our interests to get the things we need as concessions from capital. This dynamic takes place regardless of whether elaborate theories are constructed around it. Workers in China or Bangladesh occupying factories and rioting against the forces of the state are not necessarily doing it because they have encountered revolutionary theory, but because the conditions of their lives mean they have to. Similarly class solidarity exists not because people are charitable but because solidarity is in their interests. The capitalists have the state — the law, the courts and prisons. We only have each other. Alone we can achieve very little, but together we can cause disruption to the everyday functioning of capitalism, a powerful weapon. Of course, class struggles are rarely pure and unsullied things, and they can be overlaid with bigotries and factional interests of various kinds. It is the job of revolutionary groups and anarchist organisation in the workplace to combat these tendencies, to contribute to the development of class consciousness and militancy and to complement the process by which divisions are challenged through joint struggle which takes place within struggles of significant magnitude.
+
+
+The ruling class are fully aware of these issues, and are conscious in acting in their interests. Solidarity is the only thing we can hold over their heads, and for that reason the state takes great care to get us to act against our own interests. Nationalism is one of their greatest weapons in this regard, and has consequently served an important historical purpose. It lines us up behind our enemies, and demands we ignore our own interests as members of the working class in deference to those of the nation. It leads to the domestication of the working class, leading working class people to identify themselves in and through the nation and to see solutions to the problems they face in terms of it. This is not terminal as we already know; circumstances can force people to act in their interests, and through this process ideas develop and change. To take a dramatic example from history, workers across the world marched off to war to butcher one another in 1914, only to take up arms against their masters in an international wave of strikes, mutinies, uprisings and revolutions from 1917 onwards.
+
+
+Nonetheless, nationalism is a poison to be resisted tooth and nail. It is an ideology of domestication.
+
+
+It is a weapon against us. It is an organised parochialism, designed to split the working class — which as a position within the economic system is international — along national lines.
+
+
+Ultimately, even if we lay aside our principled and theoretical opposition to nationalism, the idea of any kind of meaningful national self-determination in the modern world is idealism. Nations cannot self-determine when subject to a world capitalist market, and those who frame their politics in terms of regaining national sovereignty against world capitalism, such as contemporary fascists and their fellow travellers, seek an unattainable golden age before modern capitalism. The modern world is an integrated one, one where international ‘co-operation’ and conflict cannot be readily separated, and which are expressed through international institutions and organisations like the UN, WTO, World Bank, EU, NATO, and so on. The nationalist fantasy is an empty one as much as it is a reactionary one. Anarchists recognise as much in their opposition. We will return to this point later.
+
+
+Before we go further, it is necessary to pre-empt a common and fallacious ‘criticism’. We do not stand for monoculture. We do not seek to see the rich diversity of human cultural expression standardised in an anarchist society. How could we? The natural mixing of culture stands against the fantasies of nationalists. National blocs are never impervious to cultural influence, and culture spreads and mingles with time. The idea of self-contained national cultures, which nationalists are partisans of, is a myth. Against this we pose the free interchange of cultural expression in a free, stateless communist society as a natural consequence of the struggle against the state and capitalism.
+
+
+The anarchist communist opposition to nationalism must be vocal and clear. We do not fudge internationalism. Internationalism does not mean the co-operation of capitalist nations, or national working classes, but [i]the fundamental critique of the idea of the nation and nationality.
+
+
+\chapter{The left and the ‘national question’
+}
+
+The contemporary sight of leftist groups supporting reactionary organisations and states is something frequently criticised by a number of voices for a number of reasons. The revulsion at the sight of self-proclaimed socialists cheerleading organisations like Hamas, chanting “we are all Hezbollah” at ‘anti-war’ demonstrations, and supporting regimes which repress workers’ struggles, imprison and execute working class activists, oppress women and persecute gays and lesbians is entirely justified. But the manner of thinking which allows for this to happen has a long pedigree. The way in which Marxist movements accommodated to nationalism, and in many cases functioned as the midwives of nationalist movements and nation-states every bit as objectionable as their western counterparts is the foundation of contemporary ‘anti-imperialist’ nationalism, and understanding the relationship between the workers’ movement and nationalism is vital to understanding modern ‘wars of national liberation’ and the response to them.
+
+
+Marx himself, as on so many questions, did not provide any one clear position which we can accurately attribute as categorically ‘his’. {\em The Communist Manifesto}, despite comprising a patently non-communist program, concluded with the famous call, ‘workers of the world, unite!’, expressing the internationalist opposition to the domestication of the working class by nationalism. At the same time, Marx and Engels shared the standard liberal-nationalist view of the time that the principle of nation-building was consolidation, not disintegration. Engels famously remarked that he did not see the Czechs surviving as an independent people for this reason. For some time Marx and Engels supported the ‘national liberation’ of Poland (and consequently a movement for independence led by aristocrats) for strategic reasons — striking a blow against autocratic Russia and, in their view, defending capitalist development and therefore the preconditions for socialism in Western Europe. His attitude to Ireland was marked by similar tactical considerations. Discussing the rights and wrongs of this approach in a period of developed world capitalism is academic, and beyond the remit of this pamphlet. But it is clear that in many ways Marx was reflecting the widespread views of the early to mid 19\high{th} century liberal nationalism as it has been outlined above.
+
+
+The leftist demand for national self-determination as a right was current at the same time it became so more generally and debates over the ‘national question’ animated the second international, with the conflict on the question between Lenin and the Polish-born Marxist Rosa Luxembourg becoming notorious. Lenin’s positions were typically contradictory, though in the main he argued on similar grounds to Marx on the matter — national liberation should be supported in as far as it advanced the development of the working class cause and the preconditions for socialism. Nonetheless, the Bolsheviks were vocal in their support of ‘the right of nations to self-determination’, following the passing of a resolution by the second international supporting the ‘complete right of all nations to self-determination’.
+
+
+This view was opposed by Rosa Luxemburg. Luxemburg recognised that the matter of ‘national independence’ was a question of force, not ‘rights’. For her, the discussion of the ‘rights’ of ‘self-determination’ was utopian, idealist and metaphysical; its reference point was the not the material opposition of classes but the world of bourgeois nationalist myths. She was particularly vocal on this point when arguing against the Polish socialists, who used Marx’s earlier (tactical) position as a permanent blessing for their own nationalism.
+
+
+Nonetheless, it was the Bolsheviks who seized power in Russia, leading the counter-revolution in that country. Following the civil war, their support for the ‘right of nations to self-determination’ led to some curious experiments in ‘nation-building’ which stood in parallel with the efforts of Woodrow Wilson and the Versailles Treaty in Europe a few years previously.\footnote{The Versailles treaty ended the war — with the terms being dictated by the Allies and the redrawing of Europe taking place using principles of nationality where feasible.} The creation of ‘national administrative units’ for various non-Russian ‘nations’ within the newly proclaimed USSR was a result of the assumptions of Soviet bureaucrats, not due to some will to nationhood of the Uzbeks, Turkmen and Kazakhs. Of course, with the crushing of the Russian revolution by the state-capitalist regime under the control of the Bolsheviks, who systematically destroyed or co-opted both the organs of self-management the working class had developed for themselves and the revolutionaries who defended them (such as the anarchists), the question was rendered null, as the Bolsheviks’ sole consideration was their own power. Like its Western rival, the USSR used the rhetoric of ‘self-determination’ and ‘independence’ to expand its own sphere of dominance.
+
+
+Still, the principle that nations had an inherent right to self-determination against ‘national oppression’ had gained a commonsensical dominance amongst the workers’ movement, as it had amongst the wider population.
+
+
+\chapter{National Liberation Struggles
+}
+
+Following their consolidation of power during the civil war, Bolshevik policy swiftly took on the nationalist character that could be expected. In 1920, the Bolsheviks granted support to the bourgeois nationalist movement in Turkey under Kemal Pasha for the blow its victory would strike to British imperialism. This was the first stage in the use of support for ‘anti-imperialist’ ‘national liberation struggles’ as Bolshevik geopolitical strategy. For the working class in Turkey, it was disastrous, resulting in the vigorous crushing of strikes and demonstrations by the new Turkish republic. Similarly the Kuomintang — the Chinese nationalist movement — were extended Soviet support, leading to the slaughter of insurrectionary workers in Shanghai. The new ruling class in Russia extended their support to such anti-working class forces in the name of defending the revolution. Some of these forces would paint their nationalist state-capitalism in the colours of communism, but nonetheless represented movements to establish a viable nation-state with an exploited working class and a commodity producing (state-) capitalist economy.
+
+
+The influence of this development on the left throughout the world was profound, compounding the place of support for ‘national liberation struggle’ as a basic part of the ‘common sense’ of the workers’ movement. This did not just apply to the various breeds of state-socialists — the Trotskyists, Maoists and Stalinists, but also had its effect on some anarchists.
+
+
+For the Stalinists, whose politics in any case had nationalism in its blood, ‘national liberation struggles’ were seen to undermine US machinations, to the benefit of the USSR — which supported such struggles materially or politically in pursuance of its own imperialist objectives. For the Maoists and those influenced by the Cuban revolution, smashing western imperialism through national liberation was necessary to allow the peasant-worker movements of those countries to rapidly develop their economies to (in their claims) the benefit of the population. For the Trotskyists, various historical schemes were developed explaining why imperialism was, as described by Lenin, the highest form of capitalism, and why the defeat of imperialism by national liberation forces was in the interests of the socialist cause.
+
+
+This was joined and compounded by the wave of Third-Worldism in the 1960s which was in many ways a reflection on the failure of the unrest of that period to materialise into a revolutionary movement, happening as it did at the same time as the decomposition of Western colonialism. Building on the ground laid by Lenin’s writings, the Western working class was seen as dominated by a ‘labour aristocracy’ based on the extraction of wealth from the victims of imperialism, and the hope for socialism lay with the ‘self-determination’ of non-Western peoples. The relativistic support of exotic movements for their opposition to ‘imperialism’, reduced down to US imperialism, continues to this day, and can be seen in the enthusiasm of Western leftists for reactionary Islamists.
+
+
+This view is of course fallacious and reactionary, placing national antagonism before class antagonism. But in the post-war period, the international, postcolonial left had an effective monopoly over national liberation movements. Stalinism had long since accommodated itself to flag-waving nationalism, in many instances being indistinguishable in its rhetoric from fascism proper. The left had taken a leading role in the anti-fascist resistance movements in Europe during the war, allowing for these groups to claim the nationalist mantle upon liberation and to act as the leading representatives of the liberated ‘will’ of the nation. A striking example is the leading role in the Greek resistance during the second world war of the Stalinist and patriotic EAM-ELAS , who were not above publicly decapitating anarchist militants and murdering rivals in the resistance and workers’ movements\footnote{EAM’ being ‘Greek People’s National Liberation Army’, ‘ELAS’ being ‘National Liberation Front’ and the organisation of which it was the armed wing. Both were dominated by the Stalinist Greek Communist Party, which attempted to take power after the German defeat.}. In the post-war period, this consolidation of leftism with patriotism determined the left character of various colonial national liberation movements, making nationalism a key component of the left internationally, and the left the midwife of nationalist movements around the world.
+
+
+Unfortunately, anarchists are not impervious to such views. Many anarchists have managed to defend struggles for ‘national liberation’ — that is, struggles for one form of the state against another — in terms of the struggle against oppression, the basic currency of anarchist politics. By their reasoning, as anarchists oppose the various oppressions of the contemporary world; the exploitation of the working class, the oppression of women and sexual and ethnic minorities, we must also oppose the oppression of one nation by another. There is some basis for this in the classical anarchist tradition, such as in Bakunin’s notorious statement: “every nationality, great or small, has the incontestable right to be itself, to live according to its own nature. This right is simply the corollary of the general principal of freedom”. More recently, Murray Bookchin claimed in {\em Society and Nature} that “no left libertarian \unknown{} can oppose the right of a subjugated people to establish itself as an autonomous entity — be it in a confederation \unknown{} or as a nation-state based in hierarchical and class inequities.”
+
+
+Similarly, leftists often conflate opposition to imperialist war with support for national liberation, or at least muddy the waters of conversation enough to make the confusion inevitable. This is to turn the justified horror felt against such wars on its head, and to move from a position against war to a position for war — as waged by the underdog side. History is replete with examples, from some anti-Vietnam war protestors chanting the name of North Vietnamese leader Ho Chi Minh to some leftists proclaiming ‘we are all Hezbollah now’ during the protests against the bombing of Lebanon by the Israeli state.
+
+
+This support of the underdog state or state in waiting must be opposed. There is no essence of national resistance, no essential oppressed national spirit which is being channelled by the national liberation forces. They are real organised forces with their own aims and goals — to set up a particular form of exploiting state, with particular factions in control of it. The nation is not something primordial to be repressed, but a narrative constructed by the capitalist state in the course of its development. Though the imperial structure comes to be part of the apparatus of exploitation over the working class in the territory affected, the rearrangement of this exploiting apparatus in favour of a ‘native’ state is a reactionary goal. As we have seen, the logic of nationalism is an inherently reactionary one, in that it functions to binds together classes into one national collectivity. Moreover, simply in practical terms, the principle of nationalism has no end; the new, ‘independent’ states always contain minorities whose own ‘national self-determination’ is denied. Secondly, the forms of exploitation set up by ‘native’ rulers after struggles of national liberation are in concrete terms in no way preferable to the methods of the ‘foreigners’. Workers in North Korea are oppressed by a native ‘communist’ state comparable in brutality to the European fascist dictatorships of the 20\high{th} century, workers in Vietnam are exploited by an capitalist export-led economy, workers in Zimbabwe, free of British imperialism, are now preyed on by a gangsterish ‘native’ regime. Many more examples are not difficult to find. All these countries experience class struggle of a greater or lesser intensity. Class struggle is part of the fabric of capitalism, including despotic state-capitalism of the Bolshevik model, and this will be the case irrespective of whether the ruling class faced at any particular time are drawn from ‘native’ ranks or not.
+
+
+Moreover, these ‘liberated’ states, once freed from the national oppression of Western colonialism, have proven to be fully capable of launching brutal wars of their own. The case of Vietnam is instructive. Immediately after re-unification in 1976, which came following the withdrawal of US troops in 1973, Vietnam was embroiled in a series of wars across the Indochinese subcontinent. This started with a brutal territorial war with the Khmer Rouge, who had come to power following the savage US bombing of Cambodia, resulting in the occupation of that country by Vietnamese troops. This led to Vietnam’s domination of the region, supported by Soviet imperialism. Laos was effectively a client state of Vietnam, which maintained military bases in the country and forced the Lao government to cut its ties with China. In 1979, as a consequence of Vietnam’s war with its Cambodian client, and various border incidents and conflicting territorial claims, China invaded the country, leading to tens of thousands of deaths and the devastation of Northern Vietnam.
+
+
+The ‘liberation’ of nations from the yoke of imperialism has led to further cycles of war in other parts of the world, with many 20\high{th} century national movements being directed against new, post-colonial states rather than Western powers. Sri Lanka is an example of the lingering scars of Western imperialism conjoining with the power plays of communalist ruling classes, leading to a downward spiral of war and ethnic-nationalist violence as competing national movements throw ‘their’ working classes into conflict with one another.
+
+
+The British imperial administration in Sri Lanka instituted a system of communalist representation on the Island’s legislative council from the mid-19\high{th} century, establishing antagonism between the minority Tamils and majority Sinhalese which continues to this day. After the introduction of universal suffrage, and eventually the granting of independence after WW2, the access of Tamils — who before this point had been over-represented in government — to privileged positions was squeezed, deepening separatist sentiment alongside increasing discrimination against the Tamil minority. The colonisation of Tamil-speaking areas by the Sinhala government, the establishment of Sinhalese as the official language, and the banning of Tamil books, newspapers and magazines imported from Indian Tamil regions all lay the foundations for the rise of Tamil militant groups and the Sri Lankan civil war.
+
+
+The growth in size of militant groups such as the notorious Liberation Tigers of Tamil Eelam (LTTE) was fuelled by the real grievances faced by Tamils, especially after the Black July pogroms in 1983 in which hundreds of Tamils were massacred. However, the idea that the LTTE is the guardian of Tamil national self-defence fades when it is remembered that among their earliest targets were rival Tamil nationalist and Communist groups, such as Tamil Eelam Liberation Organisation, which was effectively wiped out by the LTTE in 1986. After the LTTE became the de-facto government in a number of Tamil areas, it turned on the new minorities — Sri Lankan Muslims, who were ethnically cleansed from the region through evictions, intimidations and eventually massacres, including the machine-gunning of men, women and children who had been locked inside a mosque. Significant numbers of Sinhalese workers who remained in LTTE-controlled areas suffered similar fates. Nationalism, even that of ‘oppressed nations’ offers nothing but further rounds of violence and conflict, the division of the working class on national lines, and their sacrifice to the ‘national interest’, whether that of the existing state or those of states in waiting.
+
+
+The absence of Western imperialism does not bring peace, and national liberation does not lead to self-determination, an impossibility in the capitalist world. This is due to the very nature of the nation-state, which is imperialist by nature.
+
+
+\chapter{All nation-states are imperialist
+}
+
+‘Imperialism’ has a long history, with its forms and varieties stretching back as far as the forms and varieties of the state and class society. As the word describes many different projects by many different states in various periods, we have to clarify what it means in the context of advanced capitalist society. The Roman Empire was different to the British Empire; contemporary imperialism is different still. This does not mean imperialism isn’t something we can identify. Still, we have to define more precisely the phenomenon we are describing.
+
+
+The power of the classical empires of the ancient world stemmed from the conquest of land and the mobilisation of its resources. The continuity between state control of land and Imperial power made their imperialism the archetype; its most basic and transparent form.
+
+
+The ‘foreign policy’ of contemporary capitalist nation states seems a world away. But in the modern world, imperialism is as embedded in the working of states as at any time in history. The functioning and nature of imperialism changed along with the economic organisation of the society it was part of. As the form of the state in an agrarian slave society is different to that of a developed capitalist society, so too is the imperialism of that state. But despite the multitude of changes the world has since undergone, the state remains the actor of contemporary imperialism. This may seem a strange comment in a world where the leading powers are liberal democracies which send innumerable functionaries to innumerable meetings, summits, forums and international organisations. Nonetheless, imperialism is absolutely vital to the functioning of capitalist societies, and its success is inseparable from the success of leading powers.
+
+
+The pressures of capitalism transformed the imperialism which preceded and nurtured it. The wave of speculative investments which flooded out of Europe from the 1850s as capital sought profitable investment led to an intensification of imperialist activity, with states impelled to protect and regulate the interests of capital within their national bounds. This would intensify after the 1870s. The direct British government of India after the mutiny put its interests in jeopardy is one early example (previously it had been ruled by a British company), and the ‘scramble for Africa’ from the 1880s to the First World War represented the definitive transformation of the ‘informal Imperialism’ of earlier decades to a system of direct rule in which Imperialist powers carved up the world between them.
+
+
+As we know, this system broke apart following the Second World War and during the period of decolonisation through the second half of the Twentieth century. However, the essential dynamic by which states act to the benefit of capital within the country in question by the manipulation of geopolitical inequalities remains as an essential part of the makeup of the capitalist world.
+
+
+The state must act to further the interests of the capital — what is often called the ‘business interests’ — of the country over which it has jurisdiction. Within the country in question it nurtures capitalism, it enshrines the property laws it requires in order to exist, it opens spaces of accumulation for capital, it rescues capital from its own destructive tendencies (sometimes against the protests of particular capitalists) and manages class struggle through the combination of coercion and co-option: it can and does smash strikes, but it also grants unions a role in managing the workforce and thus creates a pressure-valve for class struggle. The state is the ‘collective capitalist’; it is the guarantor and underwriter of the capitalist system.
+
+
+This function also extends to ‘foreign policy’. The state negotiates access for domestic companies to resources, investment, trading and expansion abroad. The success of this process brings profits flowing back into the country in question and by enriching its business and the ‘national economy’, the state secures the material basis of its own power: it increases its own resources, wealth and ability to project itself. It is therefore not simply a puppet of ‘corporate interests’, but is an interested party in its own right.
+
+
+At the same time the state must seek to avoid its own domination, it must marshal its resources — military, diplomatic, cultural and economic — to maintain its own international position. There is constant struggle — whether at the roundtable with ‘international partners’ discussing trade policy or at arms in international ‘hotspots’ and ‘flashpoints’ — to ensure that the ‘national interest’ is advanced abroad and defended at home. These interests are furthered by maintaining, defending and manipulating inequalities which exist within capitalism across geographical space. For example, these asymmetries are today often expressed through phenomena such as regional monopolies, unequal exchange, restricted capital flows, and the manipulation of monopoly rents. Imperialism is about the mobilisation of these differences to the benefit of the economy of the state in question — meaning the capital within it. This is the normal functioning of the world economy, and is visible for example in US mobilisation of the International Monetary Fund and World Trade Organisation to the benefit of US financial industries or in Chinese manoeuvres in sub-Saharan Africa. States must participate in this system of constantly shifting balances of power irrespective of intentions, as those unable to ward off or manage these pressures will be totally dominated by them.
+
+
+War comes to have an obvious function. Imperialist interventions can occasionally be motivated by specific quantitative gains, such as the exploitation of a specific resource. More often, however, the question is one of geopolitical strategy and outflanking other power blocs in order to maintain regional or international power. Resources are usually seen in strategic terms, not in terms of simple exploitation. If exploitation of Iraqi oil had been the US’ sole aim in the Persian Gulf, it would have been far cheaper and easier to leave Saddam in power and negotiate access. The question was one of militarily controlling this strategic resource, hence the invasion of Iraq. Control of Middle Eastern oil, which has a continued shelf-life beyond that of rival reserves, would grant the US effective control over the world economy, and specifically the economies of China, Russia, Japan and Europe, with their rival financial and manufacturing industries.
+
+
+Similarly, the occupation of Afghanistan had little to do with exploiting particular resources, and everything to do with controlling a strategic point in the Caucasus and projecting into the spheres of influence of Russia and China. Afghanistan was occupied by the British and Russians for similar strategic reasons. The war in Vietnam ran the risk of damaging short — term capital accumulation, but nonetheless formed part of a grander imperial strategy which stood to benefit the interests of US capital by securing the leading global role of the US and making the ‘free world’ safe for investment and exploitation.
+
+
+However, when faced with these practices, leftists often draw questionable conclusions. Following the logic of support for national liberation struggles, and the need to discover a proxy to support, leftists will often cheer-lead the regimes of states which are subject to the machinations of Western Imperialism. However, ‘national oppression’ has nothing to do with class struggle, and the support for regimes which are active in the suppression of ‘their’ workers and the persecution of minorities in the pursuit of ‘anti-imperialist’ politics is completely reactionary. It also fails to understand imperialism, which is a consequence of a world capitalist system. States and national capitals which have an uneven relationship with larger powers will also have different asymmetric relations with other powers. The ‘victims’ of Western Imperialism have their own agendas, and imperialist policies of their own. Iran and Venezuela, for instance, certainly do; Venezuela in advancing its interest by expanding its sphere of influence around Latin America, and Iran in doing the same in Iraq, Lebanon, Africa and elsewhere.
+
+
+Imperialism does not simply emanate from a handful of big powers, oppressing smaller countries and extending their reach across the world. Undoubtedly there are imperialist policies that are much more successful than others. But the nation-state has imperialism in its very blood. Even if a state wished to stay ‘civilised’ and avoid the dynamics of imperialist competition and conflict, it would be forced to defend itself against attempts to prey on this weakness by other powers, using methods of greater or lesser directness. As a result, states with less capacity to project themselves align with those with more, using a logic that a child could understand.
+
+
+\chapter{After nationalism
+}
+
+A common question remains however. If anarchists do not line up alongside the left in supporting national liberation struggles, and in demanding national self-determination, what is it that we support? What is our alternative?
+
+
+On one level, the question itself should be rejected. There are many things we do not support on principle, and are never required to offer an alternative to. Refusing to support something actively reactionary in its aims is preferable to ‘doing something’ which stands against our fundamental principles. Nationalism can offer nothing except further rounds of conflict, which look set to increase in number and severity as national competition over the world’s dwindling energy resources increases. When conflict is framed in national terms — understood as the conflict between an oppressed and an oppressor nation — the working class necessarily loses out.
+
+
+Internationalists are familiar with the hysterical response with which interventions can be met. To many, ‘Resistance’ to Imperialist warmongering is beyond question and criticism — antagonists to specific imperialist projects cease to have agency, aims or objectives as the capitalist faction they are; they are simply ‘the resistance’ and as such are beyond criticism. Leftist support for the ‘Palestinian resistance’, for instance, follows such a logic — it extends even to groups such as Hamas, which repress workers’ struggles, break up pickets at gun point, oppress women and brutalise and kill gays and lesbians. But all this is forgotten once Hamas are subsumed into ‘the resistance’, and to criticise ‘the resistance’ is beyond the pale. To bring a class perspective to the issue, to publicise the fact that the forces of national liberation act exactly like the capitalist forces they are and defend the interests of capitalism, the state or the state in waiting against any independent working class struggles, or even the threat of them, is tantamount to siding with imperialism. Refusing to side with one faction by this logic is effectively the same as siding with the other.
+
+
+The problem is that the tendency to see the world in national rather than class terms is deeply engrained in the psychology of the left, as much as it is in wider society. Though leftists may be capable of criticising nationalism in their own back yard, they are incapable of doing it when faced with exotic foreign movements.
+
+
+This reflects the powerlessness of the left. When faced with brutal war and the slaughter of populations in distant parts of the world, a proxy is sought in response to their own lack of agency. Supporting the underdog side — the ‘resistance’ — forms a substitute.
+
+
+However, when faced with wars in other parts of the world, we must face the reality that there is little we can do to stop this or that particular war. Boycotts of the goods of one of the antagonist nations (for example in the repeated calls for the boycotting of Israeli goods) have little effect, despite the positive feelings that ‘doing something’ might entail. Class struggle, in the arena of war and in the antagonist nations is the only strategy we can support if we seek a world without wars — of national liberation or otherwise.
+
+
+Struggling from a class position — advancing the material interests of the working class, rather than fighting on the terrain of nationalism, is what stands to break free of the binds of nationalism. All national forces share an interest in preventing independent workers movements, and ‘national liberation’ forces share a history of suppressing independent workers action — the IRA for example acted to maintain cross-class unity behind Irish republicanism by breaking strikes during the class struggles of the 1920s. More recently Hamas has broken up strikes by teachers and government employees. Nationalism is to be opposed because it binds workers together behind it; class struggles are supported because they pose the possibility of severing this bind, and the risk of this severance strikes terror into nationalist movements.
+
+
+The principle of taking a class line, rather than a national line, must also inform our politics in the countries we reside in. Nationalism is a powerful force, and it holds a strong influence over the working class around the world. In Britain, where identity and communalism are constantly marketed and mobilised in official discourse, the need to belong to a people, community or cultural group fills a powerful function, and offers dispossessed, powerless people something important to belong to, something above and beyond the dreary monotony of daily life. Nationalism is packaged and sold as another commodity, it is a spectacle of participation in a society that is defined the separation between our needs and desires and the reasons for our day-to-day activity. The idea of being part of a community, having a heritage to claim and something above and beyond immediate reality to take pride in is very powerful.
+
+
+As a result, nationalism can overlay and distort class struggles; material struggles can become struggles in the defence of the national interest, struggles for the reorganisation of the nation through the application of a different form of government and against other sections of the working class defined on national, racial or sectarian grounds. There are plenty of historical examples of racist strikes against black workers, against immigrants or to other reactionary ends, from dock workers striking in defence of Enoch Powell to the loyalist Ulster workers’ council strike against power-sharing in Northern Ireland.
+
+
+Even day to day struggles can be infused with nationalism, through the deployment of nationalist myths in discourse, and through the nationalism of the unions. The appearance of national flags at demonstrations, pickets and rallies around the world is not uncommon.
+
+
+However, consciousness develops in the course of struggle. Revolutionary consciousness does not gain a leading position in society as a result of the conversion of the entire population to anarchist positions — it does not come about as a result of winning the ‘war of ideas’ in the arena of democratic debate. Propaganda is useful and necessary, but its purpose is to build political minorities which can join in struggles, winning respect for anarchist ideas and applying them in practice. Revolutionary consciousness comes about as a result of mass struggle, and class struggle is immanent to capitalism.
+
+
+It is through mass struggle that consciousness develops. Under capitalism, ‘pure’ struggles rarely exist. It is through struggle in the defence of material working class interests, related to material demands — more pay, less hours, access to services, eventually against work and capitalism altogether — that the bonds of nationalism can be severed by posing the incompatibility of our needs with the needs of capitalism to stay profitable. The separate interests of classes become apparent in such struggles, and the ability to draw the conclusion that the capitalist system itself must be destroyed can and has spread like wildfire.
+
+
+Internationalist political groups and organisations have an important role to play in agitating against nationalism, and in countering nationalist tendencies in struggles as they develop. We must stand staunchly against militarism, nationalism and war, and agitate on a practical basis accordingly. We must counter nationalism within the working class, offering solidarity around class interests as the practical course through which working class people can defend their own interests. Against the left, and its proposed reorganisation the capitalist world of nation-states, we stand firmly for a world without borders, without nations and without states, for a world based on free access to the products of human activity, for the satisfaction of human needs and desires; a co-operative, stateless world in which human beings can realise their full potential as creative beings. In the struggle towards that ultimate aim, we are firm in our stance that workers have no country, that the working class must unite across all divides, and that solidarity of all workers is the principle on which any future victories rely.
+
+
+To conclude, we here make some suggestions for the activities of anarchists when faced with nationalism in the countries they operate, and when faced with nationalism when engaging in anti-war activities.
+
+
+Firstly, class struggle anarchists should be organising in the workplace wherever possible, and engaging in the support of strikes and other actions which aid the development of class consciousness. Anarchists should network with other libertarian militants, and in the workplace they should be arguing for libertarian tactics such as mass meetings and direct action. Anarchists in the workplace in the course of maintaining a class perspective should also argue against the division of the working class along lines of race or nationality, and should advocate solidarity across all boundaries, a solidarity which has the tendency to develop as workers of different backgrounds come together in struggle.
+
+
+Similarly, anarchists should counter the nationalist myths which hinder practical working class solidarity; lies about immigrants stealing jobs and housing should be opposed with the reality of the situation, that the reasons for our day-to-day problems lie in the fact that the capitalist system does not function to meet our needs, and isn’t supposed to.
+
+
+Secondly, anarchists have always been involved in anti-militarist and anti-war activism. This is no different today, and anarchists are to be found on the street in protests against the wars which imperialism entails. When faced with national liberationist arguments and nationalist responses to war, we should be engaging with the justified revulsion felt when faced with war, but opposing nationalist analysis with an internationalist, class perspective.
+
+
+These are not small tasks, but they are vital ones, and must be central to the activity of the anarchist movement in the here and now.
+
+
+\chapter{Appendices: Statements on the Gaza War
+}
+
+\section{No State Solutions in Gaza (20\high{th} January 2009)
+}
+
+One thing is absolutely clear about the current situation in Gaza: the Israeli state is committing atrocities which must end immediately. With hundreds dead and thousandswounded, it has become increasingly clear that the aim of the military operation, which has been in the planning stages since the signing of the original ceasefire in June, is to break Hamas completely. The attack follows the crippling blockade throughout the supposed ‘ceasefire’, which has destroyed the livelihoods of Gazans, ruined the civilian infrastructure and created a humanitarian disaster which anyone with an ounce of humanity would seek an end to.
+
+
+But that’s not all there is to say about the situation. On both sides of the conflict, the idea that opposing Israel has to mean supporting Hamas and its ‘resistance’ movement is worryingly common. We totally reject this argument. Just like any other set of rulers, Hamas, like all the other major Palestinian factions, are happy and willing to sacrifice ordinary Palestinians to increase their power. This isn’t some vague theoretical point — for a period recently most deaths in Gaza were a result of fighting between Hamas and Fatah. The ‘choices’ offered to ordinary Palestinian people are between Islamist gangsters (Hamas, Islamic Jihad) or nationalist gangsters (Fatah, Al-Aqsa Martyrs brigades). These groups have shown their willingness to attack working class attempts to improve their living conditions, seizing union offices, kidnapping prominent trade unionists, and breaking strikes. One spectacular example is the attack on Palestine Workers Radio by Al-Aqsa Martyrs Brigades, for ‘stoking internal conflicts’. Clearly, a ‘free Palestine’ under the control of any of these groups would be nothing of the sort.
+
+
+As anarchists, we are internationalists, opposing the idea that the rulers and ruled within a nation have any interests in common. Therefore, anarchists reject Palestinian nationalism just as we reject Israeli nationalism (Zionism). Ethnicity does not grant “rights” to lands, which require the state to enforce them. People, on the other hand, have a right to having their human needs met, and should be able to live where they choose, freely. Therefore, against the divisions and false choices set up by nationalism, we fully support the ordinary inhabitants of Gaza and Israel against state warfare — not because of their nationality, ethnicity, or religion, but simply because they’re real living, feeling, thinking, suffering, struggling human beings. And this support has to mean total hostility to all those who would oppress and exploit them — the Israeli state and the Western governments and corporations that supply it with weapons, but also any other capitalist factions who seek to use ordinary working-class Palestinians as pawns in their power struggles. The only real solution is one which is collective, based on the fact that as a class, globally, we ultimately have nothing but our ability to work for others, and everything to gain in ending this system — capitalism — and the states and wars it needs .
+
+
+That this seems like a ‘difficult’ solution does not stop it from being the right one. Any “solution” that means endless cycles of conflict, which is what nationalism represents, is no solution at all. And if that is the case, the fact that it is “easier” is irrelevant. There are sectors of Palestinian society which are not dominated by the would-be rulers — protests organised by village committees in the West Bank for instance. These deserve our support. As do those in Israel who refuse to fight, and who resist the war. But not the groups who call on Palestinians to be slaughtered on their behalf by one of the most advanced armies in the world, and who wilfully attack civilians on the other side of the border.
+
+
+WHOEVER DIES, HAMAS AND THE ISRAELI STATE WIN
+
+
+\section{Solidarity with the Victims of War (25\high{th} January 2009)
+}
+
+\subsection{The atrocity in Gaza
+}
+
+As the dust settles, the extent of the atrocities which the Israeli state has committed against the population of the Gaza strip has become clear. Thousands are dead, killed in the savage bombing of one of the most densely populated places on earth. Israel has used banned white phosphorous munitions in civilian areas, shelled aid convoys, schools, shelters and mosques full of people. It has destroyed aid stockpiles with white phosphorous shells. Over 90,000 people have been displaced. Gaza’s economy and infrastructure, already devastated by the blockade, have been destroyed. With the ceasefire signed, the continued blockade will mean further war against the civilian population by other means.
+
+
+\subsection{A two state solution?
+}
+
+As the bombs rained down every party and group put forward their vision for ‘fixing’ the problem and their vision of the future for Palestinians. But understanding what we can’t do is the first step to understanding what we can. We have to be clear about the ways we can stop such atrocities happening.
+
+
+A ‘two state solution’ based on 1949 or 1967 borders isn’t going to come about except through a massive change in the global balance of power. This will inevitably lead to more conflicts elsewhere. Two states with borders as they currently stand would create a Palestine as dominated by Israel as the territories are now. Even if the ‘one state solution’ became a reality, the Palestinian working class would remain an underclass of cheap labourers. It would be like the end of Apartheid in South Africa. The colour of those in charge changed but left the vast population in the same dreadful state of poverty and hopelessness as before.
+
+
+It is also true that we cannot call on ‘our’ state to reign in Israel. Firstly, the state will not concede anything to us unless the working class — the vast majority of us who can only live off our ability to work for others — is in a confident enough position to force those concessions through collective action. Secondly, it is madness to expect Britain to impose ‘civilised’ behaviour on an ally such as Israel. Britain has taken part in the occupation in Iraq which has resulted in the deaths of 1,033,000 people. The only state which has any ability to reign in Israel is the US. The US will only do this when Israel’s actions threaten its national interest. Moral outrage will not win over dominating the region.
+
+
+\subsection{Solidarity with working class struggles
+}
+
+We must stand in firmly in solidarity with the victims of state warfare. The terrorised population of Gaza did not heed Hamas’ call to resist through ‘martyrdom’, or to undertake suicide attacks. They fled en masse. They showed no willingness to carry out a ‘resistance’ on behalf of their masters which would have meant certain death. Whilst Palestinians fled the onslaught, demonstrations were held in Israel by those refusing to serve the war machine. These refusals to heed the call of the state or the ruling party to fight deserve our support and solidarity.
+
+
+We cannot support Hamas, or any of the other factions in Gaza or the West Bank against Israel, however ‘critically’. Hamas’ record of repressing the attempts of workers to improve their living conditions is well known. They have escorted striking teachers back to work at gunpoint, and have closed down medical facilities where staff attempted to strike. Both Hamas and Fatah have made kidnapping and assassination attempts on the same trade unionists. Hamas execute those forced by necessity into sex work, and persecute gays and lesbians. They offer as little to ordinary Palestinians as their rivals in secular nationalist groups, such as Al-Aqsa Martyrs Brigade, who attacked the Palestine Workers Radio for ‘stoking internal conflicts’. Real internationalism means recognising that the rulers and ruled within a ‘nation’ have nothing in common. In this case, this means supporting the efforts of ordinary Palestinians to improve their conditions. We support them against either Israel, as in the struggles organised by village committees in the West Bank, or against the ‘resistance’ movements which police the population. Our solidarity must be with the victims of war. These are overwhelmingly Palestinian but also workers, Jewish, Arab and others, killed by mortars and rockets in Israel. This cannot be because of their race, nationality, or religion, but because they are living, thinking, feeling and struggling human beings. And we must stand against all those who would sacrifice them to their own ends. Ultimately the only solution to endless global conflict and war is for working class people, the dispossessed majority who must sell their time and energy to those who own and control society, to struggle in our interests collectively, against their exploitation, and against divisions such as gender and race. This means struggle against the capitalist system which creates endemic war and which must exploit us to survive. From this we can set about taking control of our own lives, and putting an end to a world of warring states and states-in-waiting which has produced atrocities such as those in Gaza.
+
+
+ 
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Anarchist Federation
+
+
+
+Against Nationalism
+
+
+
+
+
+
+2009
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Published in September 2009, an analysis of nationalism, where it comes from, and why anarchists fundamentally oppose it.
+
+
+
+Retrieved on 19 October 2010 from \goto{libcom.org}[url(http://libcom.org/library/against-nationalism)]
+
+
+\stopalignment
+
+\stoptext
+
+

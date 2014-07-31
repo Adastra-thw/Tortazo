@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Strange Victories</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Strange Victories
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-midnight-notes">Midnight Notes</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  1985
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-alfredo-m-bonanno">Alfredo M. Bonanno</a>
+	  	  <a href="../../topics.html#library-index-environment">environment</a>
+	  	  <a href="../../topics.html#library-index-nuclear">nuclear</a>
+	  	  <a href="../../topics.html#library-index-violence">violence</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  This edition published 1985 by Elephant Editions <br />B.M Elephant London <br />WC1N 3XX <br />Also published in <em>Midnight notes #1</em>, and the collection <em>Midnight Oil: Work energy and War 1973–1992</em>, available from Autonomedia.
+	</p>
+	
+	<strong>Source:</strong>
+	Retrieved on September 1, 2009 from www.geocities.com/kk_abacus/ioaa/strange.html
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="midnight-notes-strange-victories.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="midnight-notes-strange-victories.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="midnight-notes-strange-victories.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="midnight-notes-strange-victories.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="midnight-notes-strange-victories.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="midnight-notes-strange-victories.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Midnight Notes</h2>
+	
+	<h1 id="textttitleh">Strange Victories</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Introduction
+</a></p>
+
+<p class="tableofcontentline toclevel2"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Strange Victories
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Chapter 1. Who Is Involved in the Anti-Nuclear Movement?
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">An Additional Factor
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Movement in New England
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">Outside the Movement
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">The European Movement
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc8">Chapter 2. The Ideology (Self Definition) of the Nuclear Movement in Relation to Capitalist Planning
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc9">The Anti-Planners
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc10">Attack Nuclear Capital
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc11">Chapter 3. Organisation and Tactics of the Anti-Nuclear Movement
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc12">Affinity Groups
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc13">Consensus
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc14">Civil Disobedience
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc15">Violence and Brutality
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc16">Crises of Non-violence
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc17">Civil Disobedience/Legalism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc18">The European Movement
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc19">Chapter 4. Strange Victories: The Antinuclear Movement and the Nuclear industry
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc20">The Nuclear Plan
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc21">Bad Surprises
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc22">Chapter 5. The Anti-Nuclear Movement in the Cities
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h3 id="toc1">Introduction
+</h3>
+<p>At a certain point in their development, capital and the State manage to rationalise exploitation.
+</p><p>This is happening at the present time to a certain extent: pure repression is giving way to ‘being involved’.
+</p><p>These new forms of repression must be understood if we do not want to remain tied to out-of-date forms of revolutionary activity. The new forms of involvement, though not entirely new, are now being developed in more orginal and highly dangerous ways.
+</p><p>The permissive State, although it still uses dissuasion (in the form of police and army), is tending towards dialogue, allowing a certain amount of freedom of movement and self-regulation so that everyone becomes controllable at all levels.
+</p><p>In this way the counter-revolutionary role of so-called dissent is fundamental to maintaining order and continuing exploitation. Both the bosses and their servants are depending more and more on these forms of recuperation in preference to pure repression by armed forces-although the latter continue to remain the ultimate element in convincing and repressing.
+</p><p>So the State is asking the revolutionary movement to collaborate in maintaining social peace.
+</p><p>Comrades shouldn’t jump back in horror at such a statement. The State can ask what it wants of us. It is up to us to understand whether we are being drawn into manoeuvred consensus, or whether our dissent still has an element of rupture. The State’s projects are continually being updated. One minute they are putting up a wall of repression, the next they are softer, decodifying behaviour that was once condemned and persecuted. The State and capital have no moral code of conduct. They adapt according to the Machiavellian thesis of using the brute force of the lion one day and the cunning of the fox the next.
+</p><p>Today might well be the moment for the fox’s velvety paw.
+</p><p>One extremely useful element in the present day situation, that gives capital’s restructuring a seeming aspect of being a spontaneous process of adjustment, is the massive presence of ‘dissent’. We must say ‘no’. They are putting through anti-union laws, we must say no. They are putting missiles at Greenham Common, we must say no. They are building more and more prisons with special wings, we must say no...
+</p><p>This no must be shouted aloud, not be a simple whisper of platonic dissent. It mustn’t pass into action, but remain simply a ‘minority’ demonstration of disagreement. It is then up to the governing forces to explain the practical impossibility of such a choice, which is nevertheless based on the ‘highest moral values’. As good a way as any of making a fool of people, extinguishing their potential aggressivity, directing this impetus of rebellion towards activities that are dissent merely in appearance, and in fact are counter-revolutionary in every aspect.
+</p><p>This is what is being asked of the peace movement, and that is what they are supplying. As an ideology pacifism lends itself to being exploited for the production of social peace. An indigestible mixture of Christian sacrifice and millenarian fideism, it is much appreciated by the State as a means of involvement. Even the peace demonstrations that comrades are so impressed by are an element that is much appreciated in the spectacular framework of exploitation. The fact that these demonstrations are innocuous has nothing to do with whether or not they clash with the police. They are recuperated on all sides because of their being sporadic and passive as far as the State is concerned, and because of their basic lack of ideology as far as the peace movement is concerned. These new priests, clutching at the altar of their own sacrifice, are incomprehensible to people who would like to participate in struggles, but not for that are prepared to abdicate their patrimony of violent attack against the State. This is what the State puts its trust in, their incomprehensibility,allowing the peace movement demonstrations that are forbidden to others, but intervening as soon as any signs appear of an outside presence within the pacifist organisations.
+</p><p>The same can be said for trade union struggles, even autonomous ones, ‘self-managed’ ones, or those carried out under the leadership of the few anarcho-syndicalist organisations. The State is also asking them for the maintenance of social peace. Their ineffectiveness is the guarantee of their possibility of continuing. Revolutionary ineffectiveness immediately transformable into complying with the State’s counter-revolutionary requests. Their function today is that of lending credibility to the process of restructuring that is taking place, at least in the most sensitive areas, extinguishing dangerous attempts at isolated actions of attack totally in disaccord with any kind of trade union representation.
+</p><p>We should also be more aware of the counter-revolutionary role of the new commune movement, the vegetarian and ecology movements, the anti-psychiatry movements and all the tendencies that are trying to split up the real contrast with power, or are trying to reduce it to simple, formal dissent.
+</p><p>We can consider all forms of strictly formal dissent and all attempts to divide the class conflict into a multitude of sectors, as being functional to power. This is exactly what the couple capital State want to happen.
+</p><p>Many comrades in good faith fall prey to this contradiction.
+</p><p>The best of them, those really in good faith, are only misinformed, or simply stupid due to lack of analytical clarity. They are the ones who limit themselves to great declarations of principle against nuclear weapons, or are abstentionists every time the elections come around, or hand out leaflets against special prisons, then return to their holes to wait for the next time to repeat the sacrosanct ritual of the eternally obvious.
+</p><p>The worst, those in bad faith, are the sceptics who have lost their enthusiasm of the past and now understand everything about life; and the ambitious ones trying to get a little allotment of power on which to seminate their swindles. On the one hand the super-intelligent looking down on those limiting themselves to carrying on with the struggle; on the other, those advancing their careers by kissing the hands of the labour party or the arses of the dissenting church. The nausea that overcomes us on seeing the first is equal only to that which we feel on seeing the second at work. There are many ways of gazing at one’s navel or furthering one’s career, but these are among the worst.
+</p><p>We must oppose the advancing counter-revolution with all our strength. First of all with analytical clarity.
+</p><p>It is time to put an end to shyness. It is time to come out and say things clearly and without half measures. Beautiful declarations of principle are no longer enough, in fact they have become goods for trading with power. We must engage seriously in a struggle to the end, an organised and efficient struggle which has a revolutionary project and is capable of singling out its objectives and means.
+</p><p>The following piece of work, on the anti-nuclear movement in the US and Europe, although written in 1979, is still a valid contribution to this search for clarity as a basis for struggle. Since the time it was written the anti-nuclear/peace movement has grown and multiplied mainly due to the mining of Europe with nuclear missiles. This growth has been of massive quantity, but the logic and quality remain the same as when the following was written. All the more reason then for a critical re-reading today.
+</p>
+<blockquote>
+<p>Alfredo M. Bonanno
+</p></blockquote>
+<h2 id="toc2">Strange Victories
+</h2>
+<p>After the Three Mile Island accident in Pennsylvania, we All know that we pay not only for our electricity, but also for financing the destruction of our health. Nuclear reactors are not only expensive and ineffective, they are a permanent danger. In 1978 alone, atomic plants had 2,835 ‘incidents’ and they ran at only 67.2% of their capacity. (New York Times, April 15, 1979). Radioactivity causes cancer, leukaemia and genetic damages. It doesn’t respect county or State borders; radioactive iodine contaminates our milk and we have no means to control it. Radioactive clouds travel with the wind, and the pollution of our water and food distributes it everywhere. Electricity is only a part of our energy expenditures. We pay also for gas, heating and gasoline. In the last few months the prices for fuel started rising again, after they had risen more than 100% between 1973 and 1975. With Carter’s deregulation of petroleum prices, they will go up continuously in the coming years and probably will reach European levels of 2.50 dollars per gallon of gasoline very soon.
+</p><p>The Government and the energy companies tell us that ‘we’ are in a squeeze since the ‘energy shortage’ forces ‘us’ to build nuclear plants and raise rates and prices. They tell us that the Arabs have us by a string and ‘we’ must ‘protect’ ourselves. Most people have not bought this story. Polls show that 70% of the people do not believe there is an energy shortage-simply because it is obviously false. 78% believe the companies ‘just want to make more money’. (New York Times, April 10, 1979). All other fuel prices are going up as well: natural gas, coal, uranium and oil. This has nothing to do with the Arabs (all our coal and most of our uranium is mined domestically) nor with shortages (US coal reserves could last for hundreds of years and there is more crude oil available than ever before). The energy prices go up because the companies have the power to raise them. They control oil wells, coal-mines and power plants, and they can blackmail us at will because we depend entirely on their supply. We have only the choice between paying or freezing to death. Higher energy prices are a continuous attack on our wages and force us therefore to work more and to work for the plans of the companies, who are not interested in supplying the people with energy, but are interested in making money and strengthening their control over us.
+</p><p>The nuclear power plants are the ultimate peak of this blackmail. The energy companies demand not only that we should accept higher energy prices, but also higher levels of radioactivity, cancer and fear. Not only must we work more and harder to pay the bills, but also we must lose our health and well-being. With the threat of nuclear danger, they can impose ‘safety measures’ on us; install a police State, order us to leave our homes, evacuate our families, respect curfews. How can we know that they tell the truth? Most people don’t believe them anyway; polls showed that only 16% of the people believe what government and nuclear officials said during the Three Mile Island accident.
+</p><p>What can we do against this politics of fear and exploitation? First, we have to reject this crisis mentality they want to impose on us. We must know that there is enough energy, enough money (in 1978 the capitalists made record profits of 130.7 billion dollars), enough food, clothing and housing for everybody, employed or unemployed, waged or unwaged. And if problems of energy conservation arise, we must make sure that the people themselves control such measures and that they are not dictated to us by the energy-capitalists in order to make more money. Before we can speak of energy conservation, we must have more power.
+</p><p>Higher prices and radioactivity hit everybody everywhere: blacks, hispanics and urban whites as well as farmers, small-town residents and atomic workers around nuclear plants. This fact is crucial for the future development of the anti-nuclear movement which started in semi-rural and suburban areas. This movement was a first response of concerned people against nuclear development. This anti-nuclear movement is a social movement with its specific type of people involved, with its specific ideology, tactics and experiences. Now that the situation is changing, that ‘Everybody’ is hit by the nuclear issue, the experiences of the movement must be studied and-if necessary-criticised. It is important both for ‘old’ anti-nuclear militants and for ‘new’ people in urban areas who are entering mobilisations against nuclear energy to find out if and how the anti-nuclear movement can play a role in our struggle against the power of capital.
+</p><p>In the case of the anti-nuclear movement, there is a risk that it could be used against poor urban people. As long as the anti-nuclear movement does not clearly attack the price-policies of the energy companies and does not link the ‘health’ and ‘money’ issues, it cannot be understood by people who are struggling for daily survival In such a situation capital can play the anti-nuclear movement against the poor or vice versa. For example, the energy companies and the State (the government) can blame the anti-nuclear movement for the higher electric bills; or they can try to impose solar energy and higher energy prices.
+</p><p>We are writing this paper because we are convinced that the anti-nuclear movement in general and the ‘new’ anti-nuclear movement in urban areas in particular could be a catalyst for struggles against the ‘crisis’ and capitalism’s attack against the working class. Now the most urgent problem is: How can we organise against capital? In attempting to answer this question, we shall look at the anti-nuclear movement as a movement of social organisation, determined by the class interest of the people involved in it, by its relationship to capital, its historical, geographical and psychological conditions.
+</p><p>We shall not specifically deal with the nuclear issue as an environmental and technological problem. We know that any technology developed by capital is used as a weapon against the working class, i.e., ourselves. Further, the nuclear industry is only one of the actual fronts of new technology, together with the computer and chemical industries. Nuclear energy production is used to break the struggles of the coal-miners in the US or of the oil-workers in the Middle East and in the US. (This is the reason why coal, an abundant energy source which could be made safe with available technology, is not used instead of uranium.) There is no such thing as an independent ‘technological and scientific progress’ occurring outside class struggle. ‘Progress’ has become another word for ‘more effective exploitation’ and has nothing to do with our needs and wishes. The present capitalist technology has been shaped for exploitation and control over our lives. It is not a neutral means that can be used in a different class context. There will be no ‘liberated assembly-line,’ no ‘socialist nuclear power,’ no ‘acceptable risks.’ On the other hand, there is no reason why capital could not be able to use solar energy against us, although so far they have not.
+</p><h3 id="toc3">Chapter 1. Who Is Involved in the Anti-Nuclear Movement?
+</h3>
+<p>Strangely, the anti-nuclear movement did not originate in highly populated, industrialised and polluted areas where, it could be assumed, a struggle against environmental dangers would seem to be urgent. The anti-nuclear movement is not an immediate response to the attack or’ the quality of life which takes place in the ‘industrial triangles’ of the US and Europe. In West Germany, where the anti-nuclear movement first started, it emerged not in the traditionally polluted Ruhr area, but in South-west Germany in a rural zone of vineyards and small farmers (Wyhl, 1974). The same was true for France (Malville, near Lyons, is situated in an essentially rural area), Switzerland (Kaiseraugst, Goesgen, etc) and Italy (e.g. the nuclear plant of montalto di Castro in the Maremme). A similar type of area is found near Seabrook nuclear plant in New England, which is one of the few regions of the US where an older type of small or middle-sized farming and fishing exists (in the rest of the US we should rather speak of agricultural industry).
+</p><p>But the strange location of the anti-nuclear movement is not so puzzling at a second look: It is due to the conscious choice of the nuclear industry. The ‘backto-the4and’ movement of capital is easily explained by the ‘bad experiences’ it had in the metropolitan, industrialised centres. Urban riots, student agitations, workers’ struggles were developed and favoured by the urban environment. The capitalists realised that the cities were dangerous for their health.
+</p><p>Nuclear development presented possibilities for a new organisation of industrial geography, a new industrial frontier. Never before in the history of capital have the sites of industrial installations been more carefully planned than nuclear power plants. Some decisive aspects of this planning have been:
+</p>
+<ul>
+<li><p>minimising risk in case of accidents (rrural areas are less populated and pose fewer problems in case of evacuation);
+</p>
+</li>
+<li><p>safety-distance from dangerous, unreliiable class-sector (problems of sabotage, ‘bad’ influence on personnel);
+</p>
+</li>
+<li><p>strategic locations around metropolitann agglomerations (very useful for evacuations for different purposes, e.g. in case of social troubles);
+</p>
+</li>
+<li><p>political passivity or conservatism of the local populations; (in this respect capital made some of the most painful miscalculations)<a href="#fn1" class="footnote" id="fn_back1">[1]</a>.
+</p>
+</li>
+
+</ul>
+<p>Plant locations were chosen from the beginning to prevent protests and organised actions against or within nuclear plants. The problems of communication and organisation in rural areas compounded by the complicated class situation mixing small owners, wage-depending people or rural intelligentsia, coupled with the relatively immense financial power of the companies, were supposed to guarantee a quiet development and disarm any opposition.
+</p><p>While this plan worked in some cases, it did not in others. Protests developed despite these difficult conditions. Pay-offs to local governments and some advantages to local businesses could not always effectively divide the local population. However, the anti-nuclear protest of local communities usually did not go beyond legal actions (voting in town meetings, lawsuits, petitions, media action, etc.), although there are some significant exceptions, mostly due to the farmers’ radicalism (tractor blockades in Germany, cutting of power lines in Minnesota, and other episodes). For them the construction was not a mere ‘danger for mankind during the next 500,000 years,’ but a direct attack on their income.<a href="#fn2" class="footnote" id="fn_back2">[2]</a> Confronted with the allied power of the companies and the government, these legal actions led mostly to a dead-end. Only the emergence of an additional factor decided whether the struggle would move to a higher level or the nuclear industry had won that round. Only where this ‘factor’ was present can we speak of an anti-nuclear movement.
+</p><h4 id="toc4">An Additional Factor
+</h4>
+<p>This ‘additional factor’ was introduced by an important change in the class structure of some rural areas which occurred in the early seventies, a period when the planning and location of the nuclear plants had already been completed. (In the US, this process takes about 12 years; while in Europe it used to be faster, but most plants now completed had obviously been planned in the sixties.) The change we are speaking of is the resettlement of urban intellectual workers (wage-depending professional, teachers, artists, journalists, social-workers, students, government workers, etc.) in rural zones, a move largely stimulated by the various sixties movements. As a ‘back-to-the-land’ movement, it chose rural areas which were not too isolated and too far from the cities, for it needed continuous contacts with the educational and cultural industries.
+</p><p>In the US this ‘additional factor’ decisively emerged in two regions: in New England and in California.<a href="#fn3" class="footnote" id="fn_back3">[3]</a> These are, not surprisingly, the areas where anti-nuclear movements have developed most continuity and mass-character. The choice of these areas is directly linked to the specific interests of this intellectual proletariat (we use the term proletariat in the original marxist sense: all the people who live on a wage and cannot live on their capital without working — ‘independently of whether the wage is high or low’.) On the level of production these areas are the major national or regional centres of the education industry in which workers receive ‘skills’ and qualifications which result in a higher valuation of their labour power. They provide a variety of full-time, part-time, seasonal and temporary jobs themselves and in related businesses, such as bureaucracy, social assistance, book-stores, printing-shops, building-maintenance, drug-dealing, culture, art, sports, psychiatry, restaurants and small shops, etc. A look at the rate of private and public education expenditures per inhabitant in these areas can give some evidence.
+</p><p>The most typical case for us is Massachusetts, with expenditures far above the 2<sup>nd</sup> ranking New York, and forming the centre of the New England area, while New Hampshire and Connecticut follow close behind in the national ranks. Moreover, rural New England has a good network of highways leading to nearby major cities like New York and Boston, the educational and cultural centre of the US. Thus, rural New England has attracted a lot of intellectual workers in search of a quiet country life. To a lesser degree, this is also true of California around San Francisco, and other areas. Rural New England and California offered not only possibilities of external jobs, but also conditions for cheap reproduction of this type of worker. By the term reproduction we mean all the work that has to be done in order to keep us in shape so that we are able to work: eating, clothing, relaxation, medical care, emotional ‘services’, discipline, education, entertainment, cleaning, procreation, etc. Sometimes what we call ‘life’ is, in reality, only reproduction for capitalist exploitation. Cheap reproduction is particularly urgent for the intellectual workers as they hold only temporary jobs or part-tim jobs or live on welfare and food-stamps.
+</p><p>In New England, subsistence farming, collective reproduction (communal living) and mutual use of the skills of the highly qualified intellectual labour-force via the substitution of capital-intensive re-production (hospitals, microwave ovens) by labour-intensive reproduction techniques (macro-biotics, yoga, bio-genetics, meditation, massage, walks and fresh air) were favoured by the agricultural structure, the climate (which imposes a certain discipline), the vicinity of metropolitan areas and low real estate prices.
+</p><p>This constellation allowed a certain refusal of full-time intellectual work and the loosening of capitalist control over it. Under this aspect, the retreat to the countryside and the alternative lifestyle are forms of struggle by intellectual workers against capital. Capital has always had problems in controlling its intellectual labour force mainly because the profit returns are indirect and slow, particularly for disciplines like philosophy, literature and art. This loose tie between intellectual work and capital does not imply that it stands outside of capital, even if it is temporarily devoted to apple-picking, woodworking or cow-milking, and if it is geographically separated from the centres of formal capitalist command (like universities, publishing houses, etc.). There is no such thing as ‘outside of capital’ in a capitalist society: from a long-term perspective, the ‘back-to-the-land’ intellectuals are just testing out new capitalist possibilities of dealing with certain problems of cheap production.
+</p><p>One of the requirements for the cheap reproduction of the ‘back-to-the-land’ intellectual labour-force is a relatively intact natural surrounding. Nature, if intact, is cheap or even free. Nature as a means of reproduction is important for these intellectual workers because the specialisation and one-sidedness of their work generates psychological instability and requires periods of complete relaxation without jarring sensorial stimuli (noise, media, social contacts). Nature is the most efficient compensation for intellectual stress since it represents the unity of body and mind against the capitalist division of labour. Extensive consumption of nature has traditionally been an element of the re-production of intellectual workers. (It started with Rousseau, then came the Romantics, Thoreau, the early tourists, Tolstoi, artists’ colonies in the Alps, etc). The ecological movement responds directly to the class interests of the intellectual sector of the proletariat and the struggle against nuclear power plants is a mere extension of this struggle.
+</p><h4 id="toc5">Movement in New England
+</h4>
+<p>The history of the Green Mountain Post Films is a good illustration for this process in New England. It’s story began in 1967 in Washington, DC, when Marshall Bloom and Ray Mungo founded Liberation News Service as an essential means of exchanging news in the fast-growing anti-war movement. By 1968 LNS suffered an irreconcilable split between ‘orthodox Marxist-Leninists’ and a ‘less doctrinaire’ faction led by Bloom and Mungo. Mungo and friends decided to leave New York City, then home of LNS, and resettle at a farm in Packers Corner, Vermont; and, soon after, Bloom and his band found a farm in Montague, West-Massachusetts, some 15 miles away.
+</p><p>A weekly news service dispatch came out of the Montague barn for a few months, but it trickled off under the pressure of a New England winter. The abrupt switch to farm life temporarily forced media and politics into the background. The two communities were busy struggling to survive. Then, in November, 1969, Marshall Bloom killed himself, supposedly due to the isolation. His death served to strengthen the farm-people’s resolve to keep working in the media. Over the years the two farms produced a considerable amount of books and articles. After the Vietnam war, political concerns were largely subsumed by the demands of rural self-sufficiency. It takes years to get an organic farm going; fortunately, haying, the maple trees’ gift of sap, and authors’ fees provided some cash.
+</p><p>Then in December 1973, the Northeast Utilities Company announced plans to build a twin-tower nuclear plant three miles from the farm in Montague. One of the first reactions was Sam Lovejoy, a long-term farm resident, cutting down a 500-foot weather observation tower which was to precede the proposed plant. He then hitched a ride to the Montague police station and handed in a statement on the necessity of civil disobedience in times of environmental emergency. He went on trial and won.
+</p><p>The two farms have provided scores of informal ideologists and leaders of the anti-nuclear movement in the New England area: Harvey Wasserman, Anna Gyorgy and others. They produced several films and also distributed a film on the Wyhl anti-nuclear movement which had a strong influence on the movement against the nuclear plants in New England, particularly at Seabrook. (cf New Age, Special Report, 1978 and Ray Mungo, Famous Long Ago).
+</p><p>The crisis after 1973 has intensified also the attacks of capital against the intellectual proletariat which had conquered certain levels of power in the sixties (represented mainly by the high educational budgets and the expansions of the universities and research institutions) and had been able to defend itself against tight command structures. The counter-attack of capital was mainly oriented toward regaining control over the productivity of the intellectual labour force. By cuts of educational and university budgets (engineered with the ‘fiscal crisis’), food-price inflation and destruction of the rural retreats (where reproduction is cheap), capital has tried in the last few years to regain control. This process of devaluation put the underemployed intellectual proletariat in a tight squeeze.
+</p><p>By 1976, when the first wave of attacks was over, it was clear that the job-perspectives for in-tellectual workers would be dim for decades and that they could not expect to get out individually or by intensified retraining (revaluation). in 1976 the Clamshell Alliance was founded, the first sentence of the founding statement being:
+</p><p>“Recognising: 1) That the survival of humankind depends upon preservation of our natural environment.” it is obvious that the ‘survival of mankind’ is intimately linked to the survival of this intellectual proletariat, and the preservation of ‘our’ natural environment can be taken literally. (intellectuals have always had the precious talent of presenting their own class interests as those of ‘humankind’ as though their own class interests were something dirty).
+</p><p>The ‘choice’ of the anti-nuclear issue as terrain of struggle is to be explained not only by the specific history of the two farms in New England or other similar developments. For underemployed or temporarily employed workers it is very difficult to organise on the job. The jobs are unstable, the possibilities of mass struggle are minimal (the worker-boss ratio being low or, in the case of self-managed or ‘alternative’ jobs, reaching 1/1), and sabotage is ineffective in the case of intellectual work and in the absence of expensive capital goods. All this pushed the struggle immediately on the level of the ‘general’ circulation of capital, on the level of ‘society’, of ‘humankind’. As it is not possible for them to attack any specific capital from the inside, the struggle has to be launched from the outside.
+</p><p>The antinuclear protests of local residents presented such a possibility of intervention from the outside. A unifying factor from outside could intervene in a deadlock situation of conflicting interests of small storekeepers, farmers, workers connected with the nuclear plan, professional petty-bourgeois, etc. The anti-nuclear militants of the ‘second movement’ could keep together this strange class mixture and at the same time use it as ‘hostage’ against an isolation of their own struggle. So it was possible to forge that ‘misalliance’ between former urban radicals and rural conservatives. This alliance was, however, never without problems, and the division between locals’ and anti-nuclear militants remained clear on the level of real actions, with the locals, for example,supporting occupations or demonstrations mainly passively.
+</p><p>The development of this movement was facilitated by the fact that a large number of the New England “subsisters” had had experiences in the anti-war movement, i.e., in mobilisation techniques, media work, information finding, legal work, etc. Further, once the movement was started it developed its own dynamic reproductive functions for the militants as it provided social contacts and interesting events for old politicos who began getting bored in the relative isolation of the country life. Additionally, the movement became a source of income and created jobs for intellectual workers (writing and selling articles, books, buttons, T-shirts, making conferences, figuring out “alternative energy sources ’, etc.). In this regard, it was a direct answer to the problem of survival for at least a particular section of “humankind”.
+</p><h4 id="toc6">Outside the Movement
+</h4>
+<p>Perhaps the class structure of the anti-nuclear movement becomes even more clear when we look at those Sectors of the working class who are not present in it: factory workers, blacks and urban minority people, atomic workers (with Some important exceptions), construction workers and young urban clerical and Service workers. All these urban or industrial class-sectors are usually exposed to substantially higher levels of pollution and environmental stress and are, even when living in large cities, not safer in the case of radioactive fallout when a nuclear accident occurs, as the accident at Three Mile Island has demonstrated. But these sectors have a qualitatively different relationship to capital, more stable in the case of the factory workers (unions, family, mass organisation on the job) or without any assets in the case of the poor (their labour-power is not very valuable or is even worthless for capital because little money has been invested in their reproduction). Even more different are the types of re production, including all “cultural” differences, straight lifestyle, etc. The indifference of these sectors toward the anti-nuclear movement (or better: issue) is not based on a “lack of education and information,’ as anti-nuclear militants often bitterly complain. Even very uneducated class-sectors have always been able to grasp the essential knowledge about their problems, if the knowledge were in their interest and presented possibilities of struggle. There is of course no such thing as a “theoretical class interest”: the uneducated Iranian masses have been able to beat the CIA-trained Shah regime which was backed by the most educated capital in the world, U.S. capital; scores of poor people have the skills to cheat welfare; workers can deal with their union bureaucrats; etc. Moreover, recent polls show that practically everybody distrusts the energy lies of the government and the companies. The problem is not education, but Organisation and finding ways of effective and direct struggle.
+</p><p>So far, the anti-nuclear movement has presented no promising way of acting for the urban working or unemployed people. “Nuclear danger” alone can trigger activity only if there is an immediate material interest involved. It is pointless to be afraid of something if you can’t do anything against it... (That’s why nuclear disarmament movements provoke so little reaction, even with a global, horrible catastrophe being possible at any second.) There is no “objective danger” and death is not immediately a political category. Power is.
+</p><h4 id="toc7">The European Movement
+</h4>
+<p>The formation and class composition of the European anti-nuclear movements follow in general the American pattern. The main difference consists in that in Europe the new intellectual, work-refusing working class has not been geographically concentrated in certain regions. European capital has not been able to organise the division of labour, especially between physical and intellectual work, along well-defined geographical lines. The movement started in Germany where the ‘subsistence intellectuals’ had reached relatively high levels of autonomy (the instalment of the social democratic government in the late 60’s marked the impact of the movement and presented large material concessions to students, intellectuals, etc) which were then brutally attacked in the crisis (ideologically covered by Red Army Faction (RAF, ‘Baader-Meinhof’ )-hunting hysteria. The process of alliance of the ‘first anti-nuclear movement’ with the ‘second movement’ was very similar to the one in New England. It represented a ‘little political miracle’, for the ‘alternative’ people were officially stigmatised as ‘terrorists’ and the populations of the nuclear sites were traditionally right-wing.
+</p><p>The lack of geographical division in Europe favoured the class-specific expansion of the movement. Unlike the US, whole sectors of urban young or unemployed workers joined it, not particularly because of the anti-nuclear issue, but for its quality as a general social movement expressing insubordination, rebellion, the possibility of violent struggle, etc. As the whole plethora of the ‘new’ or ‘radical’ left quickly filled its ranks, huge demonstrations of dozens of thousands of people like those in Brokdorf, Kaiseraugst, Malville, Kalkar, etc, were possible. In Europe, everything is geographically and politically ‘near’, communications are easy and fast, there is a continuity of ‘demonstration culture’, while the existence of socially ”homogenised’ political parties (particularly socialist and communist) immediately link all types of issues to the general political power game. This can be seen by the fact that the nuclear issue has been used by different political parties to overthrow the governments: In Sweden the conservatives used it against the ruling social democrats and won; in Prance the socialists use it against a ‘liberal’ government; in Switzerland the antinuclear issue was first used by the extreme right, then the extreme left, at last also by the social democrats. This further proves that the anti-nuclear issue by itself fails to provide a definition of the class-content of the movement.
+</p><h3 id="toc8">Chapter 2. The Ideology (Self Definition) of the Nuclear Movement in Relation to Capitalist Planning
+</h3>
+<p>We have seen that the anti-nuclear movements always express specific class interests, which are not everywhere the same. The nuclear industry creates contradictions not only between certain sectors of the intellectual proletariat and capital, but also between endangered small owners, petty bourgeois, small industrialists and more advanced capital. The nuclear industry represents for the former classes the destruction of older levels of capitalist development and psychological equilibrium. This explains why the anti-nuclear issue and ecological issue in general have been used in the context of reactionary ideologies. We mention ‘ecofascism’, a right-wing ideology which intends to impose austerity, lower wages and longer working hours, old-style family life, etc, while struggling against new technologies. This tendency had some impact in Europe, but obviously not in the US where the Ku Klux Klan supports the construction of nuclear plants.
+</p><p>One of the characteristics of the ecological and anti-nuclear movement is that the class interests of the people involved in it are never directly expressed in its ideologies. Anti-nuclear militants seem to be classless angels, coming directly from the heaven of a general ‘responsibility for humankind’ and announcing the destruction of Sodom and Gomorrah by a core melt-down. The main argument for this classless ideology is, of course, that radioactivity affects all classes, that radioactive waste will be a problem for capitalists as well as workers. This is only partially true, for rich people have more possibilities to avoid radioactive areas and can protect themselves better. But even if radioactivity might kill everybody, it does not eliminate class difference until that moment (and this is obviously the period we try to deal with).
+</p><p>In reality, the ‘classless’ ideology of the anti-nuclear movement is an outflow of the class-situation of its members: as they have no possibility of organisation or self-definition on their jobs, they are forced to operate practically and ideologically on the level of the general development of capital. From their point of view, even if capital is seen as the basic relation of Society, capital’s enemy is taken as ‘humankind’ or ‘all living creatures’. As we read, “Nuclear power is dangerous to all living creatures and to their natural environment. The nuclear industry is designed to concentrate profits and the control of energy resources in the hands of a powerful few, undermining basic principles of human liberty.” (Declaration of nuclear resistance of the Clamshell Alliance, November 1, 1977). This is a pure but useful fiction. The abstraction ‘humankind’ is used to not endanger the alliance with local small owners, professionals, etc. At the same time it is the expression of the class ideology of intellectual workers whose function is to plan for the general development of capital-including the working class-and to sell these plans to us all.
+</p><h4 id="toc9">The Anti-Planners
+</h4>
+<p>Confronted with ‘bad’ nuclear capital, this general responsibility above all classes is transformed into the planning of an alternative development. They don’t simply reject capitalist development, but rather present an anti-plan: “2) that our energy policy be focused on developing and implementing clean and renewable sources of energy in concert with an efficient system of recycling and conservation.” Here again, it is not said who would develop and implement ‘our’ energy policy. This statement about alternative planning is completely disconnected from problems of power and class and thus reveals its merely ideological function.
+</p><p>The anti-plan ideology is in fact one of the most visible class-ideologies of devaluated intellectual workers. Developing anti-plans means nothing less than finding a new function for such intellectuals in a modified capitalist development. The struggle among the anti-planners of ‘our’ future is the struggle about the qualifications of future intellectual workers, for the ability to find alternative futures is exactly the function of intellectual workers (on a ‘lower’ level called management, on a ‘higher’ level, philosophy).
+</p><p>It is clear from the beginning that less valuable labour-power such as factory workers, clerks, housewives, etc cannot participate in this type of management of the future. For them the present is more difficult because their relationship with capital is more immediate and irreconcilable. The anti-plan ideology at the same time keeps away such less valuable workers from the movement, thus keeping the class-composition of the movement ‘clean’. A worker who is in permanent struggle with management will never try to participate in it, even if it is ‘alternative management’. This becomes even more evident when we look at some of these anti-plans:
+</p><p>Ralph Nader proposes a model of ‘sane’ capitalism based on competition of small capitals under the quality-control of the State. This would provide scores of easy jobs for quality-controllers like Nader and consorts, but no advantages for workers, only tighter control (as is typical in smaller businesses).
+</p><p>The most frequent anti-planning ideologies are based on the development of solar or other alternative energy sources. Solar energy has been promoted particularly around the job-issue. It is said that the nuclear industry destroys jobs and that solar developments would create lots of new jobs. This argument starts usually as Harvey Wasserman puts it in one of his articles (New Age, Special Report 1978): “The conflict lies in the basic difference between a capital-intensive economy and one based on human work.” Such a statement is simply false: capitalist intensive economies are based on human work and require still more and more intensive human work. First, the machines, the equipment, etc of capital intensive industries have to be built ultimately by human work. Then, as a glimpse at statistics shows us, non-industrial and service jobs have been expanding rapidly in the last few years ‘despite’ nuclear development. While the rate of unemployment has been stable, overall employment has gone up rapidly. More human work than ever is being extracted from workers in the US. It is true: proportionately less people work in manufacture and automated industries in general, especially in the energy sector. But this doesn’t mean that capital can or wants to do without human work. It is an optical illusion to see only the automated factory and not the sweatshop on the corner. The fact is, human work, and therefore surplus values (surplus human labour extracted by capital), is extracted in less capital-intensive branches and appears as the profit of highly capital-intensive sectors.
+</p><p>One of the instruments of this surplus-value transfer is the hike of energy and food prices. In order to pay their bills, the energy companies make us work more and more in small shops, as salesmen, typists, clerks, drivers, etc. The capitalist System forms a unity: exploitation in one place can result in profits in another place. This would also certainly be the case in the solar industry. The Solar workers would do the shit work and the companies (eg steel companies which produce sheet steel) would make the profits. Wasserman’s cry for a ‘labour-intensive’ development means nothing more than offering capital a new source of human work, a new source of exploitation. The problem is not lack of jobs. Nobody cares about jobs, because every job means self-repression, loss of life, repression of one’s wishes. The real problem is lack of money, access to power and to the wealth which we have ourselves produced. If jobs are an efficient way to get money, we might accept them as a temporary solution, a tactical compromise with capital. But jobs can never be a solution to the problem of the working class.
+</p><p>of course, unemployment is also a weapon used by capital against us, because it forces us to choose between misery or accepting the worst jobs at the lowest wages. On the other hand, many people have discovered temporary unemployment as a weapon against capital: you don’t get much money, but if you organise with other people (as Harvey Wassermann and his crowd did in New England) you have more time for yourself, can regain some strength and develop your talents. Unemployment is not a question of technology, but a question of power. As long as we don’t have the power, the control over all resources and social wealth, ‘human work’ will always be an attack on us, whether it is planned by Rockefeller or anti-planned by Wasserman.
+</p><p>The same is true, of course, for socialist and communist models, like the one of the CPUSA, which includes even nuclear energy, but ‘under democratic control’, ie, managed by the State (whomever that may be). The ‘State’ is only another name for ‘general capital’, especially in the energy sector, and what ultimately we might expect from socialist States can be seen in Russia, China, Vietnam, etc. Even more radical and ‘anarchist’ anti-plans such as Bookchin’s proposals or other similar models, which want to cut back society and economy to small, human, self-sufficient units, without State, capital and money, suffer from the same basic vice:
+</p><p>anticipating and planning a future for ‘others’, assuming the functions of intellectual workers, defending one’s own value as qualified labour-power, putting the future as a barrier between the different class sectors in struggle. The ecological and anti-plan ideology is an expression of the fears of intellectual workers in confronting less valuable labour power. They are not ready to devaluate themselves, to renounce their planning and managing function, to ‘get down’ on the level of immediate,, irreconcilable struggle against capitalist exploitation in all its forms. Hiding behind the concept of ‘responsibility for humankind’, for the future, for ‘constructive alternatives’, for all ‘ifs’ and ‘buts’ (will we have enough energy? who will clean the streets?) they protect their own existence as a distinct sector of the proletariat. This is neither surprising nor vicious-we just have to be aware of it...
+</p><h4 id="toc10">Attack Nuclear Capital
+</h4>
+<p>However, the anti-nuclear movement need not be a movement of anti-planning. Making the nuclear industry a target of struggle is essential at this point. The nuclear industry represents a synthesis of all major trends of capitalist development. All aspects of the general perspective of capital are concentrated in this industry: high capital intensity (70 plants in the US employ only about 79,000 workers and produce 13% of all electricity), extreme discipline and command over the labour force, combination of State and private capital (in research, financing, supervision), internationality, computerisation, and extension of the ‘planning horizon’ far into the future (nuclear waste). The nuclear industry is able to occupy all free spaces geographically (reactors are independent of local resources), politically (all police-State measures can be justified by radioactive dangers), and in time (even if we ‘win’, we will have to deal with the nuclear waste; our ‘utopias’ are infested for thousands of years).
+</p><p>Psychologically, nuclear reactors are symbols of permanent self-control and self-repression, re-presenting the psychological character of the fifties. The controlled expansion, the slow burn-out, corresponds to the process of exploitation of each since worker. Nuclear plants emit bad ‘vibes’ because they are like capital wants us to be. We are not allowed to explode socially-the reactor is not allowed to explode technically. Our control-rods are family-education, responsibility-ideologies including ‘alternative’), fear of death-for if we melt down, we are punished with the ‘technical’ death penalty. The nuclear plant is just another element of this blackmailing with death, together with traffic, machines, etc.
+</p><p>In the sixties, some of this technical reliability melted down, millions of intellectuals and other workers refused the stress of self-repression. In this respect, nuclear development is felt like a counter-attack of capital to create new centres of reliability against the marsh of obscure wishes and desires. It is an attack on the working class because it aims at imposing tighter command and higher productivity on it. The anti-progress, anti-command, anti-concrete-and-steel-ideology within the anti-nuclear movement represents a basis for unity with other class sectors as it is a genuine expression of the class-situation of the intellectual proletariat as well as of factory and office workers, etc.
+</p><p><em>Slime against concrete/refusal of responsibility and command against capital/life against work/wishes against need-these are elements of an ideology and practice which could destroy the planning!/antiplanning dead end.</em>
+</p><h3 id="toc11">Chapter 3. Organisation and Tactics of the Anti-Nuclear Movement
+</h3>
+<h4 id="toc12">Affinity Groups
+</h4>
+<p>The problem of practical organisation in a semi-rural area was resolved in the case of the Clamshell Alliance by the system of affinity groups (a term alluding to the ‘grupos de afinidad’ of the International Brigade in the Spanish Civil War). Under the term ‘affinity group’, different types of social aggregation are included. On the one side, an affinity-group can be constituted by a traditional citizen-committee, ie, a more or less formal, loose type of social organisation based on occasional meetings and limited types of action (mainly legal and institutional). On the other extreme, an affinity group can coincide with reproductive organisations, eg, rural communes’, where there is no distinction between ‘life’ and ‘politics’.
+</p><p>Typical affinity groups in New England are located between two ‘extremes’, ie, they are not necessarily living together but are based on additional common activities (like bicycling, running a mobile kitchen ill an old bus, acting, music playing), job-relationship (students) or pre-existing organisational ties (women, gays, American Friends, socialists, vegetarians). Affinity-groups are limited to 20 members who usually live in the same community or neighbourhood. Some of the names of affinity groups evoke this atmosphere of blending ‘life’ and ‘politics’: Chautauqua, Critical Mass, Medical Alliance, Nuclear Family, Frustrated Flower Children, Winds of Change, White Trash, Tomatoe Sauce, Hard Rain.
+</p><p>The activities and social life of affinity-groups are not focused necessarily on the anti-nuclear issue. With this issue it was possible to put together and ‘centralise’ all these initiatives in the Clamshell Alliance, which then developed a dynamic of its own. Formally, the affinity-groups send their representatives to the Co-ordination Committee, which, with the help of various subcommittees, Organises the activities of the Alliance. Major decisions are made in Clamshell Congresses, meetings of all members of the affinity-groups. Not being based on economic relationships, the affinity-groups require a continuous effort, ideologically and socially, to keep them together It seems that those affinity-groups which were not able to develop a certain type of para-economic activities (mostly reproductive, like being in the same yoga-sessions) proved to be very unstable. This organisational problem was partly resolved by the establishment of nonviolence training sessions, which were publicly announced by posters and leaflets. An organisational force behind these sessions was the American Friends Service Committee (the ‘Quakers’). A typical session consisted of an ideological introduction presented in these terms: “Non-violence is a constant awareness of one’s humanity, dignity, and the self-respect of oneself and others. It implies a vision of a type of society you’re looking for and therefore means there are certain things you do and do not do.” (Wally Nekon as quoted in Valley Advocate, Sept. 1 1976).
+</p><p>After this introduction, the group was divided in different roles, ‘police’, ‘occupiers’, ‘media’, ‘Public Service Company officials’, ‘legal observers’, and these roles were played in the form of a fictive occupation. These sessions served not only to enforce non-violent tactics, but also to create several affinity groups or strengthen shaky groups.
+</p><p>This type of ‘artificial’ organisation corresponds to the situation of an intellectual proletariat spread over a rural area where communications have to be willingly established and ‘spontaneous’ mass mobilisations are not possible. The apparent rigidity of this organisation is a means of self-protection and replaces lacking economic ties. Non-violence training sessions become virtually compulsory for affinity groups. At the same time, participation in occupations and other acts of civil disobedience outside of an affinity group became practically impossible, for ‘everybody knows if nobody knows you’.
+</p><h4 id="toc13">Consensus
+</h4>
+<p>The formally loose and unauthoritarian structure of the affinity groups and the Organisation as a whole is compensated by procedures of ideological and social preselection based on the consensus process. Consensus has been presented as a ‘non-violent way for people to relate to each other as a group’ and practised for centuries by the Quakers. The process is formally democratic like minority/ majority systems, delegation systems, and decision by lot. But on the level of class reality, it excludes the less qualified labour force or people who are forced into full-time jobs or are exhausted by work. Consensus, therefore, favours people with psychological and sociological education since physical power is not allowed to enter group decision making.
+</p><p>The exclusion of physical violence is more than compensated by the sophisticated use of psychological and intellectual pressure and the use of time against people who are less skilled and have less time. Consensus can be used as a means of blackmailing, for it imposes the responsibility for the whole group on each member, thus becoming an additional source of ideological and psychological pressure. Theoretically, it could only work in a non-totalitarian way if all members had the same class-status, the same skills, and the same level of reproduction. Otherwise, it becomes the instrument of an elite which forces other people into ‘withdrawing from the group’. The consensus-system of decision-making is another symptom of the high value of the labour power of its users, expressed by Wally Nelson as the ‘humanity, dignity, and the self-respect of oneself and others’. “It is not a universal, class-independent system and cannot be rigidly adopted in other situations.”
+</p>
+<blockquote>
+<p>A basic set of rules for a consensus process is:
+</p>
+<ol>
+<li><p>Be clear about areas of agreement.
+</p>
+</li>
+<li><p>The problem/situation needing consideration is discussed. A clear idea of what decision needs to be made is formulated. A proposal can then be made. (Part of this discussion should bring out the present position or course of action of the group relating to the issue at hand).
+</p>
+</li>
+<li><p>People present who do not speak are assumed to have no strong feeling on the issue.
+</p>
+</li>
+<li><p>After adequate discussion, it is asked if there is opposition to the proposal as stated.
+</p>
+</li>
+<li><p>If there are no objections the proposal can be formally stated and adopted. A consensus has been reached.
+</p>
+</li>
+<li><p>Opposition to a proposal will block its adoption. Opposition must be resolved for the proposal to be adopted.
+</p>
+</li>
+<li><p>If the objection cannot be satisfied, and no creative alternative solutions can be offered which meet no objections, then a proposal cannot be adopted as consensus. The group would then continue with the last consensus decision it had on the subject, or lacking such a previous decision the consensus would be to take no action on the proposal.
+</p>
+</li>
+
+</ol>
+<p>There are ways to object to a proposal within the consensus:
+</p>
+<ol>
+<li><p>Non-support (“I don’t see the need for this, but I’ll go along.”)
+</p>
+</li>
+<li><p>Reservations (“I think this may be a mistake, but I can live with it.”)
+</p>
+</li>
+<li><p>Standing aside (“I personally can’t do this, but I won’t stop others from doing it.”)
+</p>
+</li>
+<li><p>Withdrawing from the group.
+</p>
+</li>
+
+</ol>
+<p>Some guidelines from consensus process:
+</p>
+<ol>
+<li><p>Responsibility-Block consensus only for serious principled objections. Help others find ways to satisfy your objections.
+</p>
+</li>
+<li><p>Respect-Accept objections, trust those who make them to be acting responsibly. Help find ways to satisfy objections.
+</p>
+</li>
+<li><p>Cooperation-Look for areas of agreement and common ground: avoid competitive right-wrong, win-lose thinking. When a stalemate occurs, look for creative alternatives, or for next-most acceptable proposals. Avoid arguing for your own way to prevail. Present your ideas clearly, then listen to others and try to advance the group synthesis.
+</p>
+</li>
+<li><p>Creative conflict-avoid conflict-reducing techniques like majority vote, averages, or coin-tossing. Try instead to resolve the conflict. Don’t abandon an objection for ‘harmony’ if it is a real problem you are speaking to. Don’t try to trade off objections or to reward people from standing aside.
+</p>
+</li>
+
+</ol>
+<p>We all have the same purpose, to non-violently stop nuclear power. Seemingly irreconcilable differences can be resolved if people speak their feelings honestly and genuinely try to understand all positions (including their own) better.
+</p><p>It should be noted that the above section is only an introduction to consensus and how it works. We are all learning more about the consensus process as we use it.
+</p><p>From the Handbook for the Land and Sea Blockade of the Sea-brook Reactor Pressure Vessel (Clamshell Alliance)
+</p></blockquote>
+<p>In Certain situations ‘Consensus’ was violated even within the Clamshell Alliance, when the consensus of the informal leaders did not Correspond to the consensus of the informal followers. This was the case of the legal rally of June 1978 and the cancellation of a demonstration in November 1978 when the Ku Klux Klan announced a counter-demonstration at Seabrook. In these situations, the real power-structures within the organisation broke through and the democratic fog dissolved. Formal democracy is never a guarantee of real people’s power, for it does not answer the basic question:
+</p><p>who decided to use democracy? who decided on the timing? who poses the questions? The real power in such situations is always based on criteria like: “Who has the money?Who has the information? Who has the education? Who has the technical instrument (paper, telephones, cars, printing machines, megaphones, guns)? Who has the social connections?” Awareness of these basic elements of power is much more effective in preventing the formation of a ruling clique than consensus-rituals. If there are leaders (which might be justified and effective) they must not be allowed to hide behind democratic smoke-screens, but must be forced to operate in their real function and submit to the control and criticism of the movement. It is better to have an open dialectics of leaders and masses than paralysing illusions.
+</p><h4 id="toc14">Civil Disobedience
+</h4>
+<p>Not only are affinity-groups and the consensus system based on labour-intensive reproduction techniques, but so is the third tactic of the anti-nuclear movement: non-violent civil disobedience. With this tactic the movement declares and guarantees the rejection of physical interactions with disciplinary workers (policemen) who are usually less qualified than the anti-nuclear demonstrators. At the basis of non-violent civil disobedience is a deal with the police centred on the value of the militants themselves. On the one side, the cops will refrain from cracking the heads of the highly trained, actual or potential, professional intellectual workers because they might get into trouble, eg, the typical antinuclear militant would have easy access to lawyers or might be a lawyer himself and thus could sue the cop without too much trouble. On the other side, the militants take, almost naturally, the attitude of being the cops’ bosses and assume they have no need to ‘resort to violence’. For example, the advice given to demonstrators for dealing with the cops is first to look them in the eyes and ask“Hi,my name is — , what’s yours?” That is, the cops are to be treated as if they were domestic servants to be dealt with ‘humanely’. This advice is clearly based on the presumption that the demonstrator is highly qualified; needless to say, if a ghetto resident took up this advice he would have some lumps to pay for such ‘humanity’.
+</p>
+<blockquote>
+
+<ol>
+<li><p>Everyone must be non-violent.
+</p>
+</li>
+<li><p>No weapons.
+</p>
+</li>
+<li><p>No dogs.
+</p>
+</li>
+<li><p>No alcohol or drugs (see medical section for exceptions.)
+</p>
+</li>
+<li><p>Safe boating.
+</p>
+</li>
+<li><p>All participants in the Blockade are to undergo some form of non-violent preparation.
+</p>
+</li>
+<li><p>No damage or destruction of property.
+</p>
+</li>
+<li><p>Use discretion and safety in crossing police boat lines.
+</p>
+</li>
+<li><p>Minimum movement after dark. The following are allowable:
+</p>
+<ol style="list-style-type:lower-alpha">
+<li><p>supply and emergency.
+</p>
+</li>
+<li><p>change of watch in boats.
+</p>
+</li>
+<li><p>tactical movement in response to movement or action by reactor shippers or enforcers.
+</p>
+</li>
+<li><p>new arrivals to blockade.
+</p>
+</li>
+
+</ol>
+
+</li>
+
+</ol>
+<p>From the Handbook for tire Land and Sea Blockade of tire Sea-brook Reactor Pressure Vessel (Clamshell Alliance)
+</p></blockquote>
+<p>The Clamshell does not make explicit the class presuppositions of non-violent civil disobedience. They write, “...nonvioient direct action has been a means of mobilising popular support for a movement by convincing the general public that actions taken against an unjust situation are valid.” However, they do not say when such ‘means’ are possible. The social power of non-violent civil disobedience is based on the value embodied in the human capital of the non-violent militants (invested in them by ‘general capital’). Non-violent civil disobedience is a potentially very effective strategy as long as the value of the labour force involved (eg in the case of intellectual workers, especially in New England) is high. It can be used by its proprietors to blackmail single capitals (eg the nuclear industry or a single utility company) from the outside, mobilising the interests of ‘general capital’ (the ‘general public’, the State, etc.) against such a single capital. As long as they are non-violent, the value of their own labour-power protects the militants from being attacked, for their expensive human capital could be damaged.
+</p>
+<blockquote>
+<p>A non-violent group action is an orderly, co-ordinated demonstration of a purpose, and for a purpose. Non-violence is dependent on reason, imagination and discipline. Here are seven specific guidelines on non-violence:
+</p>
+<ol>
+<li><p>Our attitude towards officials and others who may oppose us should be one of sympathetic understanding of their personal burdens and responsibilities without support of their official actions.
+</p>
+</li>
+<li><p>No matter what the circumstances or provocation, do not respond with violence to acts directed against us.
+</p>
+</li>
+<li><p>Don’t call names or make hostile remarks.
+</p>
+</li>
+<li><p>When faced with an unexpected provocation try to make a reasoned, positive, creative and sympathetic response.
+</p>
+</li>
+<li><p>Try to speak to the best in all people, rather than seeking to exploit their weakness to what we may believe is our advantage.
+</p>
+</li>
+<li><p>Try to interpret as clearly as possible to anyone with whom we are in contact-and especially to those who may oppose us-the purpose and meaning of our actions.
+</p>
+</li>
+<li><p>If at any time you cannot maintain the discipline of non-violence, you should withdraw from the action.
+</p>
+</li>
+
+</ol>
+<p>From the Handbook for the Land and Sea Blockade Of the Sea-brook Reactor Pressure Vessel (Clamshell Alliance)
+</p></blockquote>
+<p>Non-violent militants use their value to ‘shame the State’; supposedly, if people as valuable as they violate the law, then the law or policy they are protesting must be obviously unjust! They set themselves and their judgement as the standard for the State’s actions. To send such ‘fine’ people to jail would seem to condemn the State, therefore, and not them. Such ‘moral’ presumption is ultimately based on the high value capital stored in the militants which is not a universal property of all workers. Thus, non-violent civil disobedience cannot be a universal remedy, for its effect depends upon who does it.
+</p><p>The antinuclear movement has not always relied exclusively on non-violent civil disobedience. It has turned to more violent tactics whenever the contract of non-physical behaviour could not work because a sufficient quantity of highly valuated human capital could not be assembled or only a devaluated labour force was present (eg in agricultural areas without ‘new’ intellectuals or in industrial regions). A clear case in point is the anti-nuclear struggle in the Basque country of Spain. The nuclear plant under construction in Lemoniz was bombed by the ETA (a Basque nationalist organisation) on March 17 1978, and two workers were killed. This accident did not impede the anti-nuclear movement but widened its impact. The ETA was not blamed for the death of the two workers, not even by their fellow workers, who protested against the use the unions and left-wing wanted to make of their dead colleagues. (The unions and the parties had used the funeral to denounce ‘violence’). It was revealed that the ETA had announced the bombing half an hour in advance and that the management of the construction firm had refused to evacuate the site. The movement, far from losing support after the bombing, turned the incident against the plant and continued to sponsor mass demonstrations.
+</p><p>The ‘non-violence’ tactic works only if the organisation can guarantee the ‘non-physical’ behaviour of its militants. Non-violence training sessions and general control over the activist personnel of the movement are therefore vital for this tactic. The leadership of the movement has to be able to control its own class composition and exclude less valuable labour-power (like minority people, blacks, factory workers) which could endanger this tactic. Unless the movement can accumulate substantial ‘lumps’ of pure, highly valuated labour-power, non-violent civil disobedience is useless. The exclusion of other class sectors is not enforced on a formal level, but through the whole process of recruitment and ‘socialisation’ of the movement. Thus, a material aspect of affinity groups is the availability of substantial amounts of spare time as well as ideological qualifications most people do not have.
+</p><p>‘Non-violence’ not only requires labour-intensive preparation, it also demands the maintenance of ‘non-violence’ discipline and self-repression. For non-violent civil disobedience implies the acceptance of and submission to violence done to you or to your brothers and sisters. Watching your friends being dragged away by the hair requires additional reproductive work, elaborate ideological motivations (non-violence ideologies, historical justifications, religious and moral support), physical compensation activities to get rid of accumulated anger and frustration (body politics, acting out therapies), psychological work (love, verbalisation-techniques, art), which, in general, are not available to less valuable, less qualified workers. Under-employed intellectual workers can obtain this type of therapy (even if they cannot afford it directly) because they are largely qualified to do it themselves, being psychologists, philosophers and therapists. The New England region has been a ‘greenhouse’ for the developments of methods dealing with advanced problems of reproduction. Such levels were rarely attained before, certainly not in Europe, where, consequently, non-violence tactics could not be applied in the same way.
+</p><h4 id="toc15">Violence and Brutality
+</h4>
+<p>Much confusion has been created around the question of ‘non-violence’ because different points of view-tactical, political, historical, anthropological and philosophical- have been mixed in a jumbled way. From the tactical point of view, non-violent civil disobedience can be very effective under certain class conditions. However, ‘non-violence’ is not compared to other forms of struggle from the standard of effectiveness by the Leaders and ideologists of the antinuclear movement. They give non-violence an almost holy and ahistorical status. Non-violence ideologies go far beyond tactical considerations because they are deeply imbedded in the class composition of the movement, which then generalises its particular interests into a general philosophical system.
+</p><p>Non-violent ideologists maintain that humans are by nature non-violent and that to resort to violence is to begin an endless catastrophic cycle, for ‘violence generates anger and more violence’. There is no evidence, however, that there is any ‘human nature’ either violent or non-violent. For every ‘primitive people’ — an ultimately imperialist category — living in ‘peace and harmony’ there is another glorying in war and slaughter. Facts no more support this ‘non-violence’ conception than they support its ‘conservative’ opposite that views humanity as universally rapacious. However, even a superficial glance at history and literature shows that violence can end violence as well as propagate it.
+</p><p>What is most confusing in this ideology is the definition of violence itself, for to make a distinction between violence and non-violence dependent upon whether someone’s body is hurt or not is to lend support to the most questionable ‘philosophy’: the State’s. There is no borderline between mind and body, unless we accept criminal laws as our philosophical guideline and framework of our lives, ie, only ‘Bodily damage’ is recognised as a crime. The West German State can appear ‘humane’, therefore, by only psychologically and intellectually torturing political prisoners in sensory deprivation calls. Though the prisoners are sometimes driven to insanity and suicide, the German State can escape censure since it has not ‘hurt’ them!
+</p><p>The basic problem is not whether we express our feelings, class interests or political aims violently or non-violently. Our problem is: who controls our actions? In a class society like ours, this comes down to the ultimate question: do our actions express the interests of our class (the working class) or the interests of capital?
+</p><p>One of the more dangerous implications of certain non-violence ideologists is the identification of the violence of the oppressed with the brutality of their oppressors, which completely merges the working class with capital into an abstract ‘humanity’. For the argument that ‘violence breeds violence’ distorts the real class relations and leads them to blame the State’s brutality on the resistance of the working class. Such a logic ends by equating the violence of the Warsaw ghetto fighters with the brutality of their Nazi executioners! But who provokes whom? The State has been in a state of being provoked since it came into existence!
+</p><p>By not making the crucial distinction between working class violence and State brutality we are led to adopt the ideology of our oppressors. On the one side, brutality is a repressive procedure of State agents. A typical example of brutality is Hitler: he was a gentle man in private, loved children, dogs, was a vegetarian and could not stand the sight of blood, the Holocaust, the war, the slaughtering of left-wing militants was a mere bureaucratic operation for him, a ‘job’ that had to be done. That was Hitler’s brutality as well as the ‘little Hitlers’ that preceded and followed him. For the job’ of the State is to impose work on the rest of us and this lob’ can only be done if the State has the power to kill or torture us when we refuse to work: this is the brutality of the State. On the other hand, working class violence attacks work. A typical example is the violence of a strike like the one in ‘Harlan County’ where the struggle against mining wages and working conditions became an armed battle against company guards and scabs. This violence can in no way be equated with the State’s brutality. Only the destruction of work, not the destruction of violence, can destroy brutality (Or as the French writer Jean Genet put it: “If we are able to mobilise all our violence, we might, perhaps, be able to overcome brutality.”)
+</p><h4 id="toc16">Crises of Non-violence
+</h4>
+<p>On a purely tactical level, non-violence is not a general recipe independent of the class composition of a movement. The interrelation of class composition and non-violence tactics is illustrated by the development of the Black Liberation Movement.<a href="#fn4" class="footnote" id="fn_back4">[4]</a>
+</p><p>Started in the South in the fifties as a movement of educated, valuable black intellectual workers or students, it was centred in the colleges and organised around the churches. Personalities like M.L. King himself or Andrew Young are typical representatives of this class composition. The necessary self-disciplining and ideological work was done through the church organisations which played a role comparable to the affinity groups or non-violence training sessions of the antinuclear movement. The accumulated value of this black intellectual labour force was then used against single capital factions, which refused to grant the corresponding wages and positions. Non-violence was therefore a possible tactic. When later (Birmingham 1963) less valuable labour joined the movement, this tactic broke down as violent struggles in the urban ghettos developed. It is significant that leaders like Stokely Carmichael, a member of the Student Non-violent Co-ordinating Committee (SNNC), first committed to non-violence turned later (Selma, 1965) into a propagandist of armed struggle. It was not an ideological critique of non-violence or ‘moral degradation’ that brought this change, but the simple fact that the class-composition of the movement, and therefore its relationship with capital, had changed. Later, in 1971, the brutal repression of the Attica revolt showed drastically how capital deals with an unarmed ‘cheap’ labour force in rebellion.
+</p><p>It is no coincidence that at present, when capital has begun a devaluation-attack on certain sectors of the intellectual labour-force (expressed in the ‘dim job-perspectives’), and when the class composition of the anti-nuclear movement is bound to change, the discussion about certain levels of non-violence (damaging private property or not) and the 100% consensus principle (which is linked to the problem of guaranteeing a certain class composition) arises sharply within the Clam-shell Alliance and in the antinuclear movement in general. It is easy to see that a growing number of militants are beginning to reject the rigid non-violence-contract with capital because it is not useful anymore.
+</p><p>The discussion concerning the destruction of private property arose in response to the practical question of what to do with the fence around the Seabrook construction site and again when in the street-blockade of March 9 1979, some militants proposed to pour oil on the road to make it slippery and dangerous for the truck delivering the reactor vessel.
+</p><h4 id="toc17">Civil Disobedience/Legalism
+</h4>
+<p>Non-violent civil disobedience is a militant activist tactic. Some of its ideologists go as far as saying that it requires more courage than violent struggle because it is more risky for you can be easily caught by the police and jailed!
+</p><p>In this regard, non-violence is in opposition to the legalism of most antinuclear protests by ‘local’ residents. In most illegal sit-ins and blockades, it was not possible to concretise the alliance of local residents and anti-nuclear militants on the level of participation.
+</p><p>The Clamshell Alliance felt so weak after these experiences, that it began to reject, temporarily, non-violent civil disobedience and return to legalism. This happened, eg, with the rally of June 24, 1978, which turned out to be a legal ‘alternatives fair’. This decision, made by the informal leaders of the movement, was a first reaction to the changing class composition of the movement and to the ‘leaks’ in the social and ideological control over it. This was marked by the emergence of such groups as the Bostonian Clams for Democracy who were beginning to propose less ‘peaceful’ methods like breaking down the fence surrounding the plant put up by the authorities to prevent another occupation at Seabrook.
+</p><p>Harvey Wasserman, the most prominent supporter of the ‘return to legalism’, wrote in the June 22 1978 issue of WIN Magazine: “Nonetheless, it is time the movement recognised its growth and divisions. It seems almost inevitable that if the anti-nuclear movement is to proceed-which it must-then those who are dedicated to non-violence must proceed with their own organisations, and those who are not must move into new ones.” (Our emphasis.) This is a clear declaration of his will to divide the movement in order to preserve its class-composition. Problems of consensus or democracy (what is they want to stay?) are put aside in such an emergency.
+</p><p>The division of the movement in order to guarantee its class-composition and the control of its leaders over it is a well known procedure of re-forms and trade-union politicians which serves capitalist domination. The history of the organisations of the working class is in fact a history of ‘expulsions’ of ‘left-wing’ factions. Real social movements, revolutions, are always parties which are taken over by uninvited guests. The threat to divide the movement if it does not accept the (informal) line must be rejected, while the recognition of ‘its growth and divisions’ must occur within the movement.
+</p><p>As for legalism, this is not another possible compromise with capital, like non-violent civil disobedience. Legalism always means disarming and paralysing the real social movement (direct action, ‘subversive’ behaviours, autonomous organisation) in order to get a broad representation on the level of anonymous, formalised, hierarchically controlled institutions (bourgeois democracy, media, unions). On this level, it is possible to get a representation which goes beyond limited class sectors. Capital allows the ‘breakdown’ of all class-divisions within the working class if this process is controlled by the State, ie, by its own institutions. Referendums, elections, legal rallies, for example, ‘overcome’ such class-divisions as those between intellectual workers and local residents. But the price paid is that the movement no longer acts as a social movement. In reality, it is not acting at all but is only symbolically present. It exists only in relationship to State-institutions or the media. Going to such a legal rally does not mean that you are ‘a lot of people’, it means that you are ‘nobody’, only an abstract number, an element in a piece of ‘art’. Totally legal gatherings demonstrate not the strength of the movement but the strength of State-control over it. It shows the that the State can allow such huge accumulations of people without any practical consequences-unless the rally ‘gets out of control’. At the same time, this type of legalism is a weapon against genuine autonomous organisation. First, because it drains away a lot of energy and time from (possibly modest) direct actions. Second, it discourages day-to-day activities and imposes rhythms on the movement which are not its own. Legalism is not a compromise with capital, it is the way capital deals with oppositional movements in ‘normal times’ (if it doesn’t revert to fascism or armed repression). This process of disarmament is exemplified by the struggle of the Granite State Alliance (Manchester, NH) against the electricity rate hikes and particularly the Construction Works in Progress (CWIP) rate hike. The CWIP increase was to be about 25% and was to finance the building of the Seabrook nuclear power plant. The class structure of the initial group was substantially the same as that of the Clamshell Affiance. However, starting with the rate-hike, which meant an attack on all wage-income levels, it was possible to extend the class-composition of the movement potentially to the whole working class and especially the elderly and low-income urban people. The GSA wanted to build a social movement on this basis, but it was used indirectly by the Democratic candidate for Governor, Gallen, who promised not to introduce CWIP and used this issue (in combination with clever TV tactics) for his campaign in the Fall 1978. Against the explicit will of the GSA, the social potential of the rate-hike was transformed into electoral, institutional powerlessness. The possible broad class-composition got diluted into individual votes. Gallen won, but the construction of the Sea-brook plant goes on, with all the financial consequences for the rate payers. There will be no CWIP. However, the State of New Hampshire is now considering the purchase of a part of the shares of the Seabrook plant, through a new State Power Authority. Thus, the plant will be financed with tax money directly, instead of electricity rates, providing a further pretext to cut back vital social services. The defeat would not have been so painful if a lot of free work and political energy had not been exploited by institutional legal activity.
+</p><h4 id="toc18">The European Movement
+</h4>
+<p>The main difference between the European and American antinuclear movements consists in the greater ‘impurity’ of the former. Though a strong tendency in Europe as well, the strategy of non-violent civil disobedience never became dominant or ‘compulsory’ as in the US. Urban unemployed or underemployed workers (mainly intellectual, but also service workers and manual workers), urban youth gangs, the political groups of the old and new New Left (in Germany certain sects of Marxist-Leninists: in France and in Switzerland, Trotskyites), ‘regional’ movements (the ETA in the Basque country, the Occitan-movement in Southern France) were the uninvited guests who spoiled the party from the very beginning. The control over the class-composition was therefore loose. Demonstrations were proportionately much larger than in the US but at the same time unpredictable and often poorly organised. No formal grassroots model with the coherence of the affinity groups emerged. Alliances such as the Clamshell Alliance came into existence, but there was more instability and they were never ‘left alone’.
+</p><p>After the massive and deceptive wave of demonstrations in 1977, the informal leaders and leading organisations went back to legalism as in the US. In Germany, ‘Gruene Listen’ participated in local and regional elections. In France, several ecologist parties took part in the national elections. In Switzerland, various ecologist and left-wing organisations used the anti-nuclear issue in elections and in a national referendum (which was defeated by 49 to 51%). All these attempts had initial successes, but failed in the longer run. As the disaffection with political institutions is very strong among the European working class, the situation did not allow for such electoral games. Ecologists seldom took more than 3–5% of the votes, a percentage which does not correspond to the anti-nuclear attitudes found in the polls (in most countries a majority of the population is against nuclear plants).
+</p><p>The different and more ‘diffuse’ class composition of the European antinuclear movement found its most visible expression in the tactics of the police, which were much more belligerent than the police response in New Hampshire, despite the fact that NH is a ‘law and order’ State. In Europe, unprovoked police responded physically against the demonstrators, using tear gas, clubs, dogs, even grenades, causing hundreds of injured and even death (as in the case of Malville in 1977). Civil war-like street blockades, dozens of miles away from the demonstration-sites and at national borders (which despite ‘European” Unification’ are now more intensively used than ever to control ‘undesirable mobility’), were set up to hassle and withhold demonstrators. Trains were stopped, buses and cars blocked for hours, all ‘weapons’ like lemons, handkerchiefs, motorcycle helmets, raincoats and car tool-kits) were confiscated. In Kalar, West Germany, on September 24 1977, 60,000 demonstrators made it to the the site, mostly walking dozens of miles. But more than 10,000 were blocked on the road. Using the official hysteria created around the Schleyer kidnapping which was going on simultaneously, the West German government mobilised 13,500 policemen, the largest police gathering in German history.
+</p><p>1977 marked a temporary defeat for the European antinuclear movement mainly on the military level. Non-violent civil disobedience reached a threshold which made it obsolete as an effective or even possible tactic.
+</p><p>While a part of the movement went back to legalism, other antinuclear activists experimented with acts of sabotage against power-lines (France), railroad lines (Switzerland), construction sites (Spain), factories supplying nuclear plants (Switzerland, France), and installations of utility companies (bombs at the information pavilion in Kaiseraugst, Switzerland in the spring of 1979). Sometimes bombs were placed near nuclear construction sites or plants, not to damage them but to demonstrate their general vulnerability.
+</p><p>This wave of ‘violent’ acts has triggered an intensive debate within the European antinuclear movement. At first the ‘official’ non-violent organisations denounced these actions as ‘directed against the movement and harmful for its growth’. But later this ‘hard line’ weakened and they sometimes accepted bomb-attacks, if the bombings were carefully and ‘cleanly’ executed without damage to the environment, nature or ‘living creatures’. This debate concerning tactics is still going on, though it is often conducted on an ideological level. Significantly, Anna Gyorgy in her No Nukes mentions neither the violent (or technical) actions of the European movement nor this important debate on the future of the movement.<a href="#fn5" class="footnote" id="fn_back5">[5]</a> By this non-violent censorship, she withholds information from the US movement which could endanger the ideological control of its class-composition.
+</p><p>At this moment, especially after the Harrisburg accident, the European antinuclear movement seems to have overcome its legalistic apathy. The politicisation’ of the movement by traditional or new ‘ecological’ parties has only temporarily disarmed the movement, while a more creative combination of ‘non-violence’ and ‘violence’ has appeared in recent activities and demonstrations.
+</p><h3 id="toc19">Chapter 4. Strange Victories: The Antinuclear Movement and the Nuclear industry
+</h3>
+<p>The immediate enemy of the antinuclear movement is the nuclear industry. This industry is apparently a ‘single capital’ which, however, has financial and technological roots in many other capitals and represents the most ‘general’ single capital so far. In practically all countries, the nuclear industry is tightly linked to the State which has developed and financed its technology through the nuclear weapons industry. This fact alone makes it clear that the struggles around the nuclear cycle, from inside or outside, are immediately concerned with a State/capital and reach the highest levels of class-contradiction.
+</p><h4 id="toc20">The Nuclear Plan
+</h4>
+<p>The nuclear industry was planned throughout the fifties and sixties as a response to the unreliability of domestic coalminers and oil workers in the Middle East (cf the Suez crisis in 1956). It was conceived as the source for a flew capitalist accumulation, a new model of capitalist command, control and territorial organisation. The ‘nuclear worker’ was to be the standard for a new class-composition: a model of discipline, responsibility and political reliability.
+</p><p>The higher level of discipline was to be achieved by a militarisation of the nuclear cycle. ‘Atoms for Peace’ was to be a mere extension and toned down version of the terroristic impact of the nuclear weapons industry. In the late sixties the construction of 1,000 power plants by the year 2,000 was planned. This Plan meant the full ‘nuclearisation’ of US territory and would have been a marvellously powerful but subtle means of social control. The Plan envisioned that the production of 30% of the energy supply would be nuclear. If this had succeeded, the industry would have been able to bust all the struggles of the coal miners andoil workers. The planned location of the plants was also dictated by the need for class control. The plants were sited around the major metropolitan areas, so that the State could impose evacuations or other emergency measures and blackmail the population with radioactive danger in times of ‘social unrest’. (It would not make any difference if the danger were real, for with radioactivity ‘you don’t feel anything’ until <em>after</em> the damage is done). The same command-functions could have been exerted on an international level through the control of the uranium cycle. For example, the European nuclear industry depends completely on US and Canadian uranium and to a large extent on US nuclear technology.
+</p><p>This plan suffered one major internal contradiction: though planned as a profitable single capital, the nuclear industry turned out to be completely unable to function capitalistically. One problem was the immaturity of nuclear technology itself The political pressure of the working class did not give capital enough time to resolve all the technological problems (’safety’, waste, environmental problems). Another problem was the overextended circulation period of nuclear capital. It takes ten years to plan a plant, four years to build it, another 15 years to completely pay off the investments, by which time it is technologically obsolete. This makes the costs of a nuclear plant virtually incalculable, for in this long period many external influences (inflation, changes in the supply costs, changes in the environment) can intervene. Thus the huge cost overruns.
+</p><p>The extended circulation-period of nuclear capital is not a mere financial or economic risk, it is also politically dangerous. It imposes a rigidity on capital which can be ‘exploited’ by the working class’s power of surprise. Between the planning stage of the recently built plants and today, there was the students’ movement, the anti-war movement, a new situation in the Middle East, a general loss of credibility in the ideology of ‘progress’, a breakdown of the family, the crisis after 1973. The antinuclear movement itself is both a part of these general developments as well as their expression. Capital has invested deeply in a future it really does not control. In a sector with short profit-return periods, capital can adjust quickly to new situations without losing huge amounts of already invested money-not so in the nuclear industry.
+</p><p>All these working class surprises forced capital to give up the idea of a really profitable nuclear industry. One response was to make energy in general artificially more expensive. This began in earnest in the oil-crisis of 1973. Once oil was made two times more expensive than before, nuclear energy became more competitive. At the same time, the additional oil-profits could be used to finance the nuclear industry which is connected with the oil-trusts through the banking system. Further, the oil companies are directly interested in the nuclear industry because they control a large share of uranium mining and can co-ordinate the price of uranium with that of oil (eg, between 1973 and the present the delivery price of uranium oxide has gone up from seven dollars to more than twenty.) This profit injection into the energy industry as a whole has been paid for by the working class in the form of higher gasoline prices and inflation. The State organises the inflation of energy prices since it guarantees the electric companies’ profit with money taken from the working class either in the form of taxes or by granting higher utility rates. Further, the State lowers the real cost of nuclear plants because decommissioning costs are not charged, while the liability of the companies is reduced by a law which artificially lowers their insurance costs (the Price-Anderson Act limits liability to a ridiculously low 560 million dollars.)
+</p><p>The nuclear industry is not operating on conventional capitalist cost-principles or, rather, far less so than other industries. It is more like a branch of ‘State socialism’ where the State pays and the industry receives ‘fake’ profits. Its economic function can best be compared to that of the war industries, for it is only under such ‘para-military’ conditions that the nuclear engineering and utility companies survive financially. The ‘flip side’ of this State/capital relation is that the nuclear industry has become a subtly powerful instrument of State planning in the crisis.
+</p><p>Higher energy prices and the ease of price manipulation afforded by the nuclear industry impose higher basic costs on all capitals. Nuclear prices force them either to raise their capital-intensity (rationalisation, automation) or, if they are not able to do this, to raise the rate of exploitation (lower wages, longer hours, faster work rhythms) or both. Not only are workers forced to work more, but single capitals are forced by general capital (the State) either to exploit them more effectively or face bankruptcy.
+</p><p>If we compare the nuclear plants with their actual achievements we find them in a very critical situation. Only 72 plants are operating in the US and most of them are operating far below their capacity. In 1978 no new nuclear plants were ordered while almost every day we read that plants have been cancelled or will be shut down. in March 1979, five plants in the Northeast were shut down by the nuclear Regulatory Commission because of ‘earthquake dangers’. The Seabrook plant is struggling with serious financial problems. The Three Mile Island plant is lost. In Europe, dozens of plants have been cancelled or delayed. In Austria, a completed plant will not go into operation after a referendum on nuclear development. It will become a silent and ugly monument of the ‘nuclear age’ in that country. if we compare this situation to the original plans., we can speak of a ‘victory’ against the nuclear industry. But whose victory? And is it really a victory?
+</p><h4 id="toc21">Bad Surprises
+</h4>
+<p>These victories cannot be due to the antinuclear movement alone because the movement had a direct impact only in a few situations (as in Why!, West Germany). For example, the referendum in Austria was supported by the conservative Wolks-partei against the Social-Democrats and was not started by the anti-nuclear movement. This ‘victory’ occurred, moreover, in a period of open defeat of the movement in Europe.
+</p><p>The nuclear industry puts the blame on ‘rising costs’ and not on the anti-nuclear movement. This is superficially true. But ‘costs’ are only an expression of the social processes that cause them. One very important (if not the most important) element of these costs’ are the nuclear workers themselves, including all types of scientists and the social context in which they move. Nuclear plants were designed for the responsible progress-abiding, intellectual-technical workers of the fifties. The high capital-intensity and the centralised existence of nuclear capital require stable, socially settled ‘family men’, ‘militarily’ disciplined workers, truly ‘scientific’ Stakhanovites of the second half of the 20<sup>th</sup> century.<a href="#fn6" class="footnote" id="fn_back6">[6]</a> It is no accident that the race to develop the atomic bomb also produced the first ‘peaceful’ atomic workers. War has always been capital’s laboratory for developing new production processes and forming new types of workers. The sixties and seventies put this ‘new’ worker in crisis. Wives, mothers and lovers no longer produced stability and discipline, the universities didn’t produce reliability, while academic unemployment ruined the ‘pride’ of these workers.
+</p><p>As this disillusioned, cynical, unstable intellectual proletariat emerges, the future of such capital-intensive industries like the nuclear industry is endangered.
+</p><p>Because of its long planning period, the long term future affects the immediate behaviour of the nuclear industry more than any other branch of capital. The nuclear industry is in crisis because its future is in crisis: not its technological future, but the relationship between its technology and labour force, between technology and ‘humanity’. The last few years have seen a whole wave of nuclear ‘desertions’. Scientists and even members of the NRC went over to the ‘enemy’. Some of these deserters helped make the film China Syndrome. In West Germany, the most spectacular case was that of Traube, the director of the national nuclear power plant programme, whose telephone was tapped by the police because he was suspected of having contacts with the Red Army Faction of Baader-Meinhof. This accusation could not be proven but Traube was fired and then joined the ecological movement. Recently, Kathy Boylan, whose husband is an employee of the nuclear department of the Long Island Lighting Company, pronounced herself against nuclear power. Asked whether her stand against nuclear power could jeopardise her husband’s job, Mrs Boylan replied, “It might.” (N. T. Times, April 6 1979)
+</p><p>The undermined discipline of the nuclear workers imposes high ‘Costs’ on the nuclear industry, i.e., costs for ‘safety and protection’ against its own employees. Sabotage or ‘human error’ are in fact main concerns of the NRC. In 1978 the NRC demanded that all plants apply new, tougher safety procedures: more personnel, introduction of the ‘Two man rule’ (all employees dealing with vulnerable operations should always be accompanied by another employee to prevent sabotage), installation of TV-supervision and new safety clearances of two-thirds of all employees (which costs £6000 per person). It seems that a number of companies refused to apply these rules and risked the loss of their licenses (the deadline was first August 1978 and later extended until February 1979)<a href="#fn7" class="footnote" id="fn_back7">[7]</a>. But these new procedures did not do the job. In fact, the NRC blamed the Three Mile Island accident on ‘human errors’, for the system itself worked fine! Nuclear workers have protested against the ‘two man rule’ and other safety procedures because they consider them a declaration of mistrust. They are right: capital does not trust them. For capital must not only deal with the question: who educates the educators? but, most crucially in the nuclear industry, it must pose the question: who controls the con trollers?<a href="#fn8" class="footnote" id="fn_back8">[8]</a>
+</p><p>Though no nuclear plant has been shut down due to a wage dispute, nuclear workers have been visibly struggling for more safety for themselves against radioactive dangers. Karen Silkwood has become something of a national martyr because she was murdered in 1974 when she tried to make public information about health dangers in the nuclear processing plant where she worked. In 1976 workers in a nuclear reprocessing plant in La Hague went on strike for about six months protesting radioactive contamination at the plant. Most recently in February 18, 1979, nuclear workers at the nuclear power plant of Caorso, Italy went on strike demanding safety guarantees from the company against radioactive dangers. The ‘leaks’ of discipline within the nuclear cycle seem to be enlarging and capital must have strong doubts about the command-creating function of the nuclear industry.
+</p><p>This crisis of command-creation <em>within </em>the plants (or the nuclear cycle in general) is intensified by the crisis of command over the socio-political environment around the plant. Site planning is obviously sensitive to this environment. Thus, in Italy the nuclear programme is relatively modest (11 million people per plant site). This is not surprising in a country with high levels of ‘mass terrorism’ and a general credibility gap between the State and the working class. Capital-intensive industries like nuclear power are too risky there. At the other extreme is Switzerland which has the largest nuclear programme proportional to the population (900,000 people per plant) supplying 25 per cent of its electricity.<a href="#fn9" class="footnote" id="fn_back9">[9]</a> Again this is not surprising for Switzerland is known for its political and social stability. Instead of increasing control over the site environments, however, the construction of nuclear plants has provided an ideal target for social movements of different origins. Many times, the plants ‘organised’ social insubordination around themselves. The high concentration of capital and the ‘visibility’ of this capitalist ‘fortress of confidence and progress’ attracted all types of protest, attacks and threats. For example, in the US, 175 threats or acts of violence against nuclear plants were reported. One of the most spectacular occurred on August 27, 1974 when an incendiary bomb exploded near Pilgrim 1 in Massachusetts while the plant was at one of its rare moments of full power. Nuclear capital could not anticipate this type of reaction which was based on social processes that emerged after the nuclear plants had been put on line. Attacks on the nuclear industry were not only used by the anti-nuclear movement. They were also enmeshed with other political purposes (eg struggles for national or regional liberation or for more traditional ‘party-games’). Thus the anti-nuclear movement is only one of the social movements which forced higher ‘costs’ on the nuclear industry from the outside. These ‘costs’ include: expenses for the military defence of the plants, propaganda and lobbying efforts, additional safety measures, legitimation (safety studies, legal actions), ‘lost time’ and interest charges.
+</p><p>Even the accident at Three Mile Island, the first real-life rehearsal of nuclear command-creation, indicated more symptoms of the decay of command than of its strengthening. Thousands of workers took advantage of the situation and did not show up for work, while the credibility of State and nuclear officials reached only 16 per cent in the polls. On the one side, workers who were told not to leave did leave; on the other side, those told to go often did not go. As Woodrow Miller, 63, former mayor of the town of Goldsboro (near the reactor) explained the attitude of the later type of refusers:
+</p><p>“What is the difference if you stay in New York and die from carbon monoxide or I stay in Goldsboro and die from radiation?” Given the fact that the crisis, the higher costs of living, the cutbacks of social services have generally created so many risks for health, many people are perhaps willing to take the additional radioactive risk, stay in an evacuation area and try to make use of the situation in the form of looting or riots. The renewed interest by the government in ‘civil defence’ and mass, police-run evacuations indicates that nuclear plants are not terrorising and commanding enough for the working class of the seventies.
+</p><p>Even in this critical situation, with all these strange victories’, the nuclear industry (and even less capital in general) is not yet defeated and has other choices. State/capital wants us to pay a high price for our unexpected victors and lack of devotion to its plans. For if splitting atoms cannot do the job of controlling our lives, maybe decaying dollars can.
+</p><p>At this moment, capital is obviously testing out two possible futures: a risky, capital intensive nuclear future and a labour-intensive, low-energy version. Neither is very tempting though there will always be, after the priority is set, a combination of both. The choice we are offered is one between cancer and misery. The ‘loyal opposition’ to capital within the anti-nuclear movement seems to accept such a blackmail and is campaigning for the ‘misery’ version: ‘Solar jobs’, conservation and ‘labour-intensive’ production. In this sense, they are ‘educating’ the masses, but they face the same problem the dominant capital faces with its cancer-option. Imposing labour-intensive production on a working class that has been fighting around the refusal of work is as hopeless as the search for responsible high capital-intensity workers. However, if we are not able to reject the choice between cancer and misery, we will surely get both.
+</p><h3 id="toc22">Chapter 5. The Anti-Nuclear Movement in the Cities
+</h3>
+<p>One of the major achievements of the anti-nuclear movement and its militants (even its ‘solar capital’ planners) is to have created a social movement practically from zero. In the midst of the general decay of old ‘New Left’ organisations, anti-nuclear militants took a practical chance that lots of ‘pure revolutionaries’ didn’t even perceive. But this world is ungrateful and militant merits are not eternally respected because all movements, if they remain alive, change continuously. The anti-nuclear movement emerged with a class composition linked to a type of highly valued intellectual labour force in rural and suburban regions. Will this be the social and geographic limit of the movement? With the Three Mile Island accident and the energy price attack, capital is saying to this movement: “Okay, folks, you got a point. But what about food-riots in the cities, which side will you be on?”
+</p><p>This may appear exaggerated, but this question expresses the main problem the anti-nuclear movement will necessarily face in urban areas. The urban working class forces a choice on the movement: will it stick to its old class-structure or will it try to extend beyond these limits? Will it be a movement of concerned intellectual workers, dealing with problems of antiplanning, restricting its form of struggle and organisation to this class sector or will it deal with more immediate issues such as rate hikes and food prices. The anti-nuclear movement is still pondering over the risks of enlarging its class composition (which could mean self-devaluation) versus the advantages of conserving its own value as a labour force. (For example, at one of the first major occupations of a nuclear plant site after Three Mile Island-the one at Shoreham, New York on June 3, 1979-non-violence training has still been declared compulsory by the organisers).
+</p><p>The anti-nuclear movement has developed a certain rigidity and a fear of uninvited guests. While being harmless in rural areas, this rigidity can become a danger in cities where different class-sectors live closely together. ‘Doing your own thing’ in a city can immediately mean doing it against others, for everything is so directly interrelated. The apparently innocent act of installing a windmill on the roof and saving energy is an attack on a neighbour who probably doesn’t have the necessary money for such an installation and is left alone in the’ struggle against rising electricity bills. One arm of the anti-nuclear movement, ‘alternative energy’, can become just another hobby for higher income people or people with special educations. Thus, Carter’s energy bill subsidises the installation of solar heating devices through tax write-offs, but only those who have houses to install them and taxes to write off can take advantage of the deal. In general, such individual or class restricted energy solutions put poorer sectors in an even tighter squeeze and deepen the divisions within the class. if a nuclear shut down only means solar privileges for some people, capital can divide the possible movement of all energy consumers and we will lose the nuclear battle.
+</p><p>Not to deal with the problem of energy-prices at the urban community level means to automatically play the game of capitalist class division, consciously or not. All types of symbolic or legal activities, like ‘making the link with the atomic bomb’ (can you practically attack an atomic bomb by ‘attacking’ the Pentagon?) divert from possible activities in the community. If we are not able to deal with the local electric company, how can we deal with the Pentagon? Why should we go to Washington if we have never been to the corner utility office?
+</p><p>These questions concerning the movement’s direction must be asked now, for the anti-nuclear movement has a real chance to play a role as a catalyst for struggles in a very critical situation in the cities. The Harrisburg accident has legitimated this movement on a mass level and has ‘educated’ people about the lies of the government and the nuclear industry. Being anti-nuclear means to be against capital, against the energy squeeze, against the ‘Choice’ of cancer or misery. The anti-nuclear issue is a possibility of autonomous organisation outside of all types of compromised party, union and ethnic organisations, and open field of creativity for all types of people. The characteristics of the ‘rural’ anti-nuclear movement are partly an obstacle for such a function. The urban anti-nuclear movement has to develop its own ways of organising, making decisions, and acting. it must insist on its own rhythms and cannot just be an appendix of the established organisations.
+</p>
+<blockquote>
+<p>April 26, 1979
+</p></blockquote>
+<p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> Wyhl in Germany was a christian-democrat (conservative) stronghold, the political attitudes could be described as ‘law and order’, ‘defense of private property’, ‘anti-communist’. Nevertheless, it became the centre of a very militant activism of local people against the planned nuclear reactor and against the christian-democrat government.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> In Wyhl, the quality of the wine would have declined due to climactic changes; the value of the real estate would have gone down; milk production would become problematic, etc.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> Similar ‘factors’ emerged on a lesser scale in other places, including the Denver-Aspen of Colorado; around Chapel Hill, North Carolina, Madison, Wisconsin, etc; in sum, in centres of ‘alternativism’ which co-exist with centres of the education industry.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> Stokely Carmichael and Charles V. Hamilton, Black Power: The Politics of Liberation in America (New York, 1967)
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> Anna Gyorgy and friends, No Nukes: Everyone’s Guide to Nuclear Power (Boston, 1979)
+</p><p class="fnline"><a class="footnotebody" href="#fn_back6" id="fn6">[6]</a> According to G. Daneker and R. Grossman, Jobs and Energy (Washington D.C., 1977) p.15, the ratio of professional and technical workers in atomic plants is 33 percent of the total plant employment; in manufacturing this ratio is 10.2 percent while in mining it is 12.6 percent, Handbook of Labour Statistics 1976 (Washington D.C., 1976)
+</p><p class="fnline"><a class="footnotebody" href="#fn_back7" id="fn7">[7]</a> Interview with R. Jungk, Tages Auzeiger, March 6, 1979.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back8" id="fn8">[8]</a> The typical nuclear plant employs about 733 persons a year according to Ron Langue, Nuclear Power Plants: The More They Build, The More You Pay (New York, 1976). The average cost per plant completed in 1976 is about $ 2 billion, e.g. Seabrook will be about $ 2.5 billion on the basis of 1978 estimates. Thus the average investment a worker handles in a year is $ 2.7 million. The investment per worker per year in petroleum is $ 150,000 while in textiles it is $ 18,600, Statistical Abstract of the US 1978 (Washington D.C., 1979), p.567. Thus the nuclear worker has to be 16 times more reliable than the petroleum worker and 145 times more disciplined than a textile worker.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back9" id="fn9">[9]</a> Calculated from the Statistical Abstract.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

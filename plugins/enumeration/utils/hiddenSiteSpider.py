@@ -69,24 +69,37 @@ class HiddenSiteSpider(CrawlSpider):
             #Request authentication.
 
         item = HiddenSitePage()
-        selector = Selector(response)
-        item['title'] = selector.xpath('//title/text()').extract()[0]
-        item['url']  =  response.url
         if self.contents:
-            item['body']  =  response.body
             onion = response.url
+
             onion = onion.replace(self.localTunnel,self.onionSite)
             onion = onion.replace('http://', '')
+            onion = onion.replace('https://', '')
             onion = onion.replace(':','')
+
             indexResource = onion.rfind('/')
             dirStructure = onion[:indexResource]
             resource = onion[indexResource:].replace('/','')
+
             if os.path.exists(config.deepWebCrawlerOutdir+dirStructure) == False:
                 os.makedirs(config.deepWebCrawlerOutdir+dirStructure)
             if resource == '':
                 open(config.deepWebCrawlerOutdir+dirStructure+"/index.html", 'wb').write(response.body)
             else:
-                open(config.deepWebCrawlerOutdir+dirStructure+"/"+resource, 'wb').write(response.body)
+                open(config.deepWebCrawlerOutdir+dirStructure+resource, 'wb').write(response.body)
+
+        if response.headers['Content-Type'].find('text/') <= -1:
+            return
+        else:
+            item['body']  =  response.body
+
+
+        selector = Selector(response)
+        if len(selector.xpath('//title/text()').extract()) > 0:
+            item['title'] = selector.xpath('//title/text()').extract()[0]
+        else:
+            item['title'] = 'No title'
+        item['url']  =  response.url
 
         headers = ''
         for header, value in response.headers.iteritems():
@@ -98,6 +111,11 @@ class HiddenSiteSpider(CrawlSpider):
             if len(selector.xpath('//form').extract()) > 0:
                 browser = mechanize.Browser()
                 browser.open(response.url)
+                browser.set_handle_robots(False)
+
+                browser.set_handle_equiv(False)
+                userAgent = random.choice(self.userAgents)
+                browser.addheaders = [('User-agent', userAgent), ('Accept', '*/*')]
                 try:
                     pageForms = {}
                     formId = 0
@@ -119,8 +137,8 @@ class HiddenSiteSpider(CrawlSpider):
                         formId = formId + 1
                         pageForms[form.name] = controls
                     item['forms'] = pageForms
-                except AttributeError:
-                        pass
+                except:
+                    pass
 
 
 

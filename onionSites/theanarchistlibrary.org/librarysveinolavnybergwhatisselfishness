@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     What is selfishness? (Svein Olav Nyberg) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/svein-olav-nyberg-what-is-selfishness?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=svein-olav-nyberg-what-is-selfishness">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    What is selfishness?
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/svein-olav-nyberg">Svein Olav Nyberg</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/egoist">egoist</a>
+        <a href="/topics/individualist">individualist</a>
+        <a href="/topics/max-stirner">Max Stirner</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on August 3, 2011 from <a href="http://i-studies.com/journal/n/html/paper.shtml">i-studies.com</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="svein-olav-nyberg-what-is-selfishness.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="svein-olav-nyberg-what-is-selfishness.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="svein-olav-nyberg-what-is-selfishness.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="svein-olav-nyberg-what-is-selfishness.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="svein-olav-nyberg-what-is-selfishness?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="svein-olav-nyberg-what-is-selfishness.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="svein-olav-nyberg-what-is-selfishness.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Svein Olav Nyberg</h2>
+	
+	<h1 id="textttitleh">What is selfishness?</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>I asked about “what egoism means”. I should perhaps also have asked what egoism does not mean. For there are a lot of misconceptions about what egoism is. Religious literature incessantly warns us not to think about our own best interest, but the interest of the heavenly, of Man, and of just about everything else. But seldom is there found any advise to follow exactly this own interest. Why then these warnings against self interest, on and on, again and again? Surely not to counter any opposing system of ideas. For there have been close to none. What then is left to counter but — the individual himself! But to counter the individual is not a position that looks very good, so it has to be disguised, disguised as an attack on some “Deep Evil” lurking in self interest — in egoism. So the common view of egoism is far from formed by observation of actual egoists, but by propaganda in its disfavour. I therefore find it fruitful to list what I consider the types most typically mistaken for egoists, both by critics of egoism and by “egoists” themselves:
+</p><p>THE PSYCHOPATH: The psychopath is characterised by a tendency of always being in the right and of manipulating others. He typically takes little heed of the interests of people he confronts. The reasoning displayed by those who identify psychopaths with egoists are usually of the type “He does not care for others — <em>thus</em> he must care only for himself ...”, which sets up a dichotomy without any basis in reality. Identifying an individual pursuing his own interests with a psychopath is a powerful means of keeping individuals “in line”.
+</p><p>THE EGO-BOOSTER: Somewhat related to the psychopath, in that he tries to make himself “big” in the eyes of others often at the expense of some third person. But the Ego-Booster cares a lot about the judgement of others. In fact — he depends on it. Getting approval from other people dominates his way of life. His focus is not on himself, but on something else — his self <em>image</em>.
+</p><p>THE MATERIALIST: The glutton, the carelessly promiscuous and the one who spends all his time gathering possessions is often seen as the egoist by people who have seen through the traps above. A friend of mine wrote in his thesis on Stirner that these were “vulgar egoists”. They sure enough care for their own interests. But they only care for <em>part</em> of their own interest, giving in to some urge to dominate them. They either care only for the taste in their mouths right-here-right-now, or for the feelings in other parts. They do not satisfy the whole chap, as Stirner wrote.
+</p><p>THE IDEALIST: Not too typical, but still — important. Can range from
+</p><p>the proponent of Fichte’s Absolute or Transcendental Ego, to the person who has as his sole goal in this life to spread his own ideas. The first of these is not a proper egoist in that the “I” he is talking about is not the personal, individual “I” but — an abstraction, the mere <em>idea</em> of an ego. The latter is just the materialist mentality let loose in the realm of ideas.
+</p><p>THE FORMAL EGOIST: The formal egoist is perhaps the most elusively like to the proper egoist. For the formal egoist knows that an egoist looks to the satisfaction of the whole chap. Actually the formal egoist can know more about egoism than the egoist himself. For the formal egoist really wants to be an egoist — and he follows the recipe he has found to the last little detail, and sets out to find even new nuances. There is only one thing missing, and that is his realisation that there is no recipe. Egoism is not a religious or ideological system to be followed by duty, but simply the being and awareness of oneself.
+</p><p>Now we have defined selfishness in the negative. How now about the positive; to what degree is egoism positively definable? First of all: What does it mean to “value oneself”, and is this what selfishness consists in?
+</p><p>This problematic is in particular motivated by a comment from a subscriber, Jon Newton, in a discussion of whether egoism meant following some personal “axioms of value”. First of all, Jon commented that though underneath all “axioms” of evaluation there had to rest the deeper Valuing Subject him[/her]self, that would in no way imply that the Valuing Subject — as a consequence of that alone — had to have a higher value than even the axiom.
+</p><p>Now, how is the above problematic solved, if at all? First, I think that declaring as an axiom that the Valuing Subject <em>is</em> of higher value, or to keep it in some other way as an “act of faith” would be a miss. This would be again — to place the act of evaluation as being mediated by the “axiom” or the “object of faith”.
+</p><p>The Valuing Subject is the subject, and viewing something else — implicitly or explicitly — as the subject, is an act of alienation and untruth. This does, of course, tie in with the question of the value of truth, which I will address in an upcoming post. But let us assume that the person in question sees this, and can value or non-value it as he wants. No generality is lost by this approach.
+</p><p>So the question is whether a person would or should value himself higher than anything or anyone else.
+</p><p>It might be tempting, like so many have done, to say some sentence to the effect that if X is a necessary ground for valuing, the X is necessarily valued — or even the <em>highest</em> of values. In my case, substituting “oneself, the (Valuing) Subject” for X would thereby yield the claim that one should value <em>oneself</em> the most.
+</p><p>But I do not think such an attempt via “a priori” judgement would get us very far if we were honest about it. For such an attempt would at best give us that <strong>I</strong> had a conditional value [derived, instrumental] from my values, and only for a certain limited period of time, given by these values. As an example, I could have valued the propagation of the species above all, and readily sacrifice myself when this goal did so require. All this without the contradiction an “a priori” argument like the above would require.
+</p><div class="center"><p>* * *  
+</p></div><p>Instead, I propose we ask “What does it mean to value oneself the highest?” or “What does it mean to be an egoist?”. Indeed, what does it mean to “value myself” at all?
+</p><p>One answer might be that to “value myself” means to value my existence.
+</p><p>But “existence”? Now what is really that? An empty, eternal staring into blankness is still “existence”. But not what I would call very interesting, less even attractive. Something is missing. But what?
+</p><p>Now, to “value myself” would mean, I suggest, to value that which makes life valuable to me. That means that when I enjoy a good book — when I do what I value the book for — I do not sit there (ho-hum) valuing my existence, accidentally having a book in front of my eyes; rather it means that through the act of valuing the book, which is what I value, I thereby do value myself.
+</p><p>It is almost circular. I “value myself” when I value that which — I value. I <em>value myself</em> when I allow my own judgements of value qua (Valuing) Subject be what is in the end valued.
+</p><p>In contrast, “not valuing myself” would mean to negate my own value judgements qua (Valuing) Subject. It would mean to let a Fixed Idea get the better of me and leave <em>its</em> judgement as the final or one instead of my own; it would mean to let the Fixed Idea brand <em>my</em> values as “sinful”, “un-human” etc. and — bow to it.
+</p><div class="center"><p>* * *  
+</p></div><p>That was the theory. Now what is the practice? Lots of unresolved questions. Good. That’s one reason I created Non Serviam. But this gives a very different picture of the Egoist than what is normally being promoted throughout society. Society’s “Egoist” is nothing more than just another example of what I’d call a “spooked man”; a man who instead of plainly following his own interests — i.e. his own values — follows a Fixed Idea that is accidentally branded “My Own Interests”.
+</p><p>Society’s “Egoist” is a charicature who does not pet cats since oh horror! — the cat might benefit from it too, who does not like other people other than as means to gaining material advantage — “for of course an Egoist can see no value in other people, his gaze is all directed at one person” — and who’s got as his prime imperative “Do not give to beggars!”
+</p><p>As a contrast, let us take some <em>real</em> Egoist, as described by Stirner: He does not only enjoy people when they are safely packed away in material books, but also gets pretty charmed by the smile of a little baby. He pets cats for enjoyment, and loves to sit for a friendly chat with his friends — possibly over a glass of wine given to this friend.
+</p><p>Think about it. If Egoism is not about making life as enjoyable as possible, i.e. about realising one’s values without interference from Fixed Ideas, what is it? Society’s charicature would soon find himself in a logical mess if he thought about this. Not only would he fade away in a Scrooge-like asceticism, but he would begin to wonder why this bugger tomorrow who incidentally identified himself-now with “himself-in-the-past” should ever get a little benefit from himself-now. He couldn’t even get a glass of water.
+</p><div class="center"><p>* * *  
+</p></div><p>As for ever being able to “axiomatise” my own value judgements. Is it possible? Stirner certainly did not think so. “I create myself each day anew” and “I am the creative nothing” are sentences that express this existentialist sentiment.
+</p><p>I lean to the same judgement, and do in particular not see present-day reductionism as a solution to the problem. First of all, I do not think reductionism is universally valid, and secondly, even if it were, our mere biology would probably be of such a nature as to make our values incapturable through fixed axioms at the level on which we normally live and breathe.
+</p><p>The above paragraph is of course merely my opinions. I think that most arguments count in their favour, and hence adopt these opinions as “mine” at the present time. I used to be of the opposite opinion, i.e. that reductionism was the truth, but after a discussion with a friend who found reductionism to be untenable, we switched opinions — both of us!
+</p><p>Anyhow, even given that for some period of my life my values were of the character that they could be axiomatised: Why should they? Would they ever express anything new in regards to my values? If they did, would not that mean they — contradicted them, and thus had become Fixed Ideas and — false?
+</p>
+<blockquote>
+<p>«The self must become concrete, and this it <br />
+becomes through the process of action. [...] <br />
+[T]he abstract man, as only general self, is <br />
+abstract as long as he is not yet a proprietor. <br />
+Only as proprietor is man a particular and <br />
+real man.»
+</p><p>— August von Cieszkowski <br />
+<em>Teleology of world history</em><br />
+(ch.3, <em>Prolegomena to Historiosophie</em>)
+</p></blockquote>
+
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

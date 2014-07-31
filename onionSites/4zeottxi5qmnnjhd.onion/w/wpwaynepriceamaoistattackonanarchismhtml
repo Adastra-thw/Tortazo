@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>A Maoist Attack on Anarchism</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  A Maoist Attack on Anarchism
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-wayne-price">Wayne Price</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  2007
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-critique">critique</a>
+	  	  <a href="../../topics.html#library-index-leftism">leftism</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  Written for Anarkismo.net
+	</p>
+	
+	<strong>Source:</strong>
+	Retrieved on May 10<sup>th</sup>, 2009 from <a href="http://www.anarkismo.net/article/5847">www.anarkismo.net</a>
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="wayne-price-a-maoist-attack-on-anarchism.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Wayne Price</h2>
+	
+	<h1 id="textttitleh">A Maoist Attack on Anarchism</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">An Anarchist Response to Bob Avakian, MLM vs. Anarchism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">The Anarchist Vision
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Avakian’s State
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">Class Analysis of Anarchism and Maoism
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h4 id="toc1">An Anarchist Response to Bob Avakian, MLM vs. Anarchism
+</h4>
+<p>In the 60s and 70s, Maoism was a major current on the Left internationally. Today it is much shrunken in influence. To a great extent, its far-left niche has been taken by anarchism. I only know of one theoretical response to this situation, which is the pamphlet MLM [Marxism-Leninism-Maoism] vs. Anarchism, written by the Chairman of the Revolutionary Communist Party (U.S.), Bob Avakian. (The pamphlet itself is undated; it is composed of articles which Avakian wrote for the Revolutionary Worker paper in 1997.) The RCP is the largest Maoist group still existing in the U.S. and has international associations. It has a cult around Avakian, who is not merely its Chairman. He is The LEADER, constantly referred to in their press as the man with all the answers, the genius who understands the world and who will lead the downtrodden into the promised land. While he does not speak for all those who consider themselves Maoists, it is worth looking at what he calls, “our fundamental answer to anarchism.” (p. 2)
+</p><p>Avakian remarks, “Most anarchists actually aim for something far short of actually carrying out the revolutionary overthrow of the existing order and the revolutionary transformation of society and the world as a whole.” (p. 9) This is true, if not of “most” anarchists, then certainly of “many.” Avakian does not consider differences among anarchists. But there are anarchists who do aim at the revolutionary overthrow of the ruling class and its state and the transformation of the world, who place the working class in the center of their strategy while supporting the struggles of all the oppressed (such as women and People of Color), who are in favor of building organizations of anarchists and of replacing the state with federations of councils and associations. It is from this revolutionary perspective — in the tradition of anarchist-communism — that I look at Avakian’s essay.
+</p><p>Avakian begins by trying to explain the attraction of anarchism today. He quotes Lenin that anarchism is “payment for the sins of right opportunism” and adds, “Honest revolutionary-minded people were attracted to anarchism because it seemed more revolutionary than Marxism.” (p. 1) That is, radicals today look at social democrats and at the Communist Party (and its offshoots), and are disgusted, so they turn to anarchism. This is true. For example, right now many antiwar activists are furious at the Democratic Party’s betrayal of antiwar feeling in the country, and at the reform socialist-Communist Party channeling of the movement into the Democratic Party. This anger creates openings for anarchism.
+</p><p>However, decades have passed since Lenin made that observation. It should be obvious that there is another reason now why “revolutionary-minded people [are] attracted to anarchism.” This is the fact that Marxism-Leninists did succeed in making revolutions, but their new states became totalitarian nightmares, state capitalist exploiters of the workers, and mass murderers of the people. For those who were not turned off by such monstrosity, there was the failure of this system, in the collapse of the Soviet Union and its satellites, and the turn of China from state capitalism to an openly market-oriented economy. It was these events which led to the discrediting of Marxism-Leninism and the current rise of the anarchist movement.
+</p><h4 id="toc2">The Anarchist Vision
+</h4>
+<p>Avakian raises a major difference between Marxism and anarchism, one which, I believe, goes back to Marx. This is the “anarchist vision” (p. 3) of decentralization and face-to-face community, our desire to break down this overcentralized system of statist capitalism and replace it with “small groups of people that got together to carry out production and exchange.” (p. 3) (See my essay on Marx, centralism, and decentralism, <a href="http://www.anarkismo.net/newswire.php?story_id=5714">www.anarkismo.net</a>) It is true that anarchists advocate a decentralized, horizontalized, economy of communes, democratic workplaces, and local production. But Avakian exaggerates this, since anarchist visions have always included federations, regional and international, and the acceptance of centralization when appropriate.
+</p><p>In any case, Avakian goes on to charge that this decentralist vision is implicitly “imperialist chauvinism” (p. 2) in the industrialized (imperialist) countries. The anarchist program would mean “ ‘communizing’ the plunder and exploitation that had been carried out by imperialism....[Y]ou would still be ‘inheriting’ vast and highly developed forces that are, to a significant degree, the fruit of exploitation and plunder carried out over decades and centuries of imperialist domination...for the benefit only of the people in that (formerly) imperialist country...” (p. 3) Avakian’s argument against decentralization is not that it would not work, but that it should not be done.
+</p><p>He has another argument against decentralization. He writes that it would not be possible to immediately and completely abolish commodity production and all market exchange after a revolution. (Incidentally, this was not the opinion of Karl Marx, as expressed in The Critique of the Gotha Program. He thought that there would be lower and higher stages of communism, but that even in the lower stage, right after a revolution, there would no longer be commodity production.) Therefore, “if the means of production were owned or controlled by small groups of people,” (p. 4) they would end up exchanging commodities on the market. This could only lead to the revival, quickly or slowly, of capitalist relations. Communities and enterprises with advantages would became richer than others and some “small groups” would became managers and finally owners of production, exploiting others as workers.
+</p><p>Not surprisingly, to Avakian, the solution is the state — a “socialist state,” a “proletarian state,” a “dictatorship of the proletariat.” “This is the only way that the larger interests of the proletarian class, including its proletarian internationalism, can actually find expression — and actually be implemented and, yes, enforced, against the opposition of the overthrown exploiters and other reactionary forces.” (p. 4) Presumably this state would force the producers (if necessary, against their will) to send a surplus to the impoverished, formerly oppressed, nations, so they could industrialize.
+</p><p>Similarly the state would forcibly lead society to communism, through a stage of commodity production, without restoring capitalism. It would be the “embodiment of interests and, yes, of authority which is higher than the various different small groups and which can therefore unify the masses of people around those higher interests.” (p. 5) (Oddly, he does not raise the supposed benefits of centralized economic planning.)
+</p><p>Since the time of Bakunin, revolutionary anarchists have advocated world revolution, the end of national states, and international federations. Maoists have nothing to teach us about proletarian internationalism. Revolutions in the U.S., Canada, or Western Europe would undoubtedly begin with certain advantages due to the history of “imperialist plunder.” The first (and most important) thing they would do to help the formerly oppressed nations would be the ending of that imperialism! They would cease to drain the rest of the world of its wealth. They would no longer insist on patents and copyrights on medicines and technology against the poorer nations. They would no longer have a need for international exploitation to have a decent level of living, since they would no longer spend trillions of dollars worth on armaments, and other forms of capitalist waste. They would have an interest in helping the poorer peoples industrialize in their own way, since this would prevent the revival of international capitalism and of national wars. Finally, there is a great deal of research and literature about decentralist industrialization which directly applied to the so-called Third World (from the Small-is-Beautiful, alternate technology, researchers such as E.F. Schumacher).
+</p><p>As for going beyond commodity production in a decentralized communal economy, the workers do not need a state but some form of democratic, bottom-up coordination. There need to be federations and networks which can create a radically democratic planning mechanism. There is a whole literature of suggestions of how this might be organized (e.g., Parecon), but different regions may try out alternate methods. There are no guarantees, but my faith is that people who have made a libertarian socialist revolution would be able, by trial and error, to work out a participatory, cooperative, non-market, system.
+</p><h4 id="toc3">Avakian’s State
+</h4>
+<p>Avakian declares that “our ultimate goal...is to abolish the state.” (p. 7) But that will not be for a long time yet. His immediate goal is to overthrow the existing state and to create a new state. This will be a “proletarian state.” That does not mean that the actually existing proletariat, the real workers, will be in charge. His program has nothing in common with that of Marx, who expected the bourgeois state to be replaced by something like the extremely democratic Paris Commune (in The Civil War in France). Instead, Avakian’s state would be managed by “a vanguard party representing the revolutionary outlook and interests of the proletariat.” (p. 7) The party will substitute for the workers. The party will determine whether it “represents” the interests of the workers. It will be a one-party party-state, but anarchist types will be allowed to make limited criticisms which point out the “shortcomings” of the ruling party. Then the party can correct itself if it wants to. The “masses” will be inspired and mobilized by the party, but would not actually decide its program.
+</p><p>Moreover, this state will require centralized armed forces, as opposed to the classical Marxists, as well as anarchists, who advocated a workers’ militia, the armed people. “...[I]t has not been possible to abolish the standing army in socialist society, as originally envisioned by Marx and Engels and then by Lenin...and...it will not be possible to do this for a considerable period.” (p. 21)
+</p><p>Considering the historic failures of such states, Avakian has to admit to some problems with this program. “...[I]t is true...that the most strategically placed forces within socialist society who seek to carry out the restoration of capitalism are precisely high-ranking people within the socialist state (and the vanguard party...).” (p. 7) “...[F]orces do emerge from within the communist party who take this position of seeking to become a new ruling and exploiting clique.” (p. 14) This makes his whole program questionable.
+</p><p>Apparently there is no guarantee that the party-state dictatorship will overcome its tendency to become a new ruling class (there will be strong tendencies in that direction, says Avakian), any more than there is that the anarchist vision will succeed. But Avakian’s vision relies on the wisdom of a few leaders (or one leader) to represent the interests of the working people, while the perspective of revolutionary anarchism relies on the potential for self-government among the workers and oppressed.
+</p><p>Avakian argues that there cannot be a revolution without a “vanguard party.” Many anarchists believe that we should create a revolutionary organization to fight for our ideas through argument and through example. This is part of the process of self-organization of our class. But we do not aim to take power and rule over the mass of workers and oppressed, that is, we are not for a vanguard party. We do not seek “to become a new ruling and exploiting clique.”
+</p><p>To justify the authoritarian state and party which he advocates, Avakian cites the split “between manual and intellectual labor.” (p. 27) No doubt this “mental/manual problem” has been created by capitalism and will not immediately end with the overthrow of capitalism. Avakian gives a whole Marxistical explanation of why professionals should continue to receive higher wages under socialism due to their greater amount of training (which produces a higher exchange value to their labor). However this may be, anarchists argue that, after a revolution, workers should immediately begin to reorganize the process of production to get rid of the division between those who give orders and those who obey orders. This is not something to be put off to the distant future but should be begun to be worked on immediately.
+</p><h4 id="toc4">Class Analysis of Anarchism and Maoism
+</h4>
+<p>Like other Marxists, Avakian states, “...[A]narchism as a program and outlook is ultimately the expression of petit bourgeois interests....” (p. 9) What does this charge mean? It would be hard to demonstrate that the class composition of my anarchist organization is all that different, more middle class (or small business based) than the Maoist RCP. Or that anarchist-syndicalist unions are less working class than some Maoist organizations. But to Avakian, class nature is not really a matter of composition but of “line.” So that the RCP is “proletarian” due to its correct politics and anarchists are “petit bourgeois” due to our bad politics.
+</p><p>Of course, he claims that the program of the Maoists really advances the interests of the workers, as our program supposedly advances the interest of the middle class. But this is something which needs to be demonstrated by argument (and in practice), not by assertion. Otherwise this is merely name-calling. His only argument is that decentralization means small-scale production which is supposedly petit bourgeois. I fail to see the petit bourgeois nature of collectivized communes, workers’ management of industry, and democratic, bottom-up, planning of a non-market economy.
+</p><p>What is the class nature of Avakian’s program? He wishes to create a new society in which there continues to be (for an indefinite period) a mental/manual split, commodity production, money, a state, a centralized standing army, a party which gives orders to the workers, and workers who stay in their factories taking orders. This is a program to continue the capital/labor relationship in a state capitalist form. Maoists seek to use the working class and peasants as a battering ram to smash the old ruling class. Then they intend to replace the old capitalist rulers by becoming the new rulers. Today they are building a party in which Avakian and his closest minions are the bosses of the working class ranks. Tomorrow they hope to create a state in which they boss all society. It is the quintessential middle class (petit bourgeois) dream of rising to become members of the ruling class. We must work to make sure that this does not happen.
+</p><p>With Maoists raising such a state capitalist program, it is not surprising that, as Avakian says, “Honest revolutionary-minded people were attracted to anarchism because it seemed more revolutionary than Marxism.” (p. 1)
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

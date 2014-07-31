@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>The 12 Articles of the Socialist Federation</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  The 12 Articles of the Socialist Federation
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-gustav-landauer">Gustav Landauer</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  1908
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-socialism">socialism</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  First edition, June 14, 1908
+	</p>
+	
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="gustav-landauer-the-12-articles-of-the-socialist-federation.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Gustav Landauer</h2>
+	
+	<h1 id="textttitleh">The 12 Articles of the Socialist Federation</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Article 1
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Article 2
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Article 3
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">Article 4
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Article 5
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">Article 6
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">Article 7
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc8">Article 8
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc9">Article 9
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc10">Article 10
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc11">Article 11
+</a></p>
+
+<p class="tableofcontentline toclevel5"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc12">Article 12
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h5 id="toc1">Article 1
+</h5>
+<p>The basic form of socialist culture is the federation of independently managed economic communities trading together in justice.
+</p><h5 id="toc2">Article 2
+</h5>
+<p>This Socialist Federation, following the path shown by history, replaces governments and the capitalist economy.
+</p><h5 id="toc3">Article 3
+</h5>
+<p>The Socialist Federation accepts as the goal of its efforts the word republic in its original meaning: the cause of the common good.
+</p><h5 id="toc4">Article 4
+</h5>
+<p>The Socialist Federation declares the goal of its efforts to be anarchy in its original meaning: order through voluntary associations.
+</p><h5 id="toc5">Article 5
+</h5>
+<p>The Socialist Federation includes all working men who want the social order of the Socialist Federation. Its task is neither proletarian politics nor class war, which are both necessary accessories of capitalism and the power-state, but struggle and organization for socialism.
+</p><h5 id="toc6">Article 6
+</h5>
+<p>The real effectiveness of the Socialist Federation can begin only when greater portions of the masses have joined it. Until then its task is propaganda and composure.
+</p><h5 id="toc7">Article 7
+</h5>
+<p>The members of the Socialist Federation want to put their work in the service of their consumption.
+</p><h5 id="toc8">Article 8
+</h5>
+<p>They combine their power of consumption to exchange the products of their work with the help of their exchange bank.
+</p><h5 id="toc9">Article 9
+</h5>
+<p>They send ahead pioneers to inland settlements of the Socialist Federation to produce everything themselves as far as possible, including the products of the earth.
+</p><h5 id="toc10">Article 10
+</h5>
+<p>Culture is not based on any particular forms of technology or of satisfying needs, but on the spirit of justice.
+</p><h5 id="toc11">Article 11
+</h5>
+<p>These settlements are to be only models of justice and joyous work: not means to attain the goal. The goal can be attained only when the land comes into the hands of the socialists by means other than purchase.
+</p><h5 id="toc12">Article 12
+</h5>
+<p>The Socialist Federation aims for the right and hence the power to abolish private ownership of the land at the time of transition by great fundamental measures, and to give all citizens the possibility to live in culture and happiness by combining industry and agriculture in independently operated trading communities on the basis of justice.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

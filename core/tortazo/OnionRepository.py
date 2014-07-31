@@ -114,6 +114,10 @@ class RepositoryGenerator:
         onion = '234567'+string.lowercase
         while True:
             self.__createProcess(''.join(random.choice(onion) for i in range(16))  + '.onion' )
+
+        '''addresses = ['am4wuhz3zifexz5u.onion', '3fnhfsfc2bpzdste.onion', '3g2upl4pq6kufc4m.onion', 'kbhpodhnfxl3clb4.onion', '4zeottxi5qmnnjhd.onion', 'c3jemx2ube5v5zpg.onion', 'pyl7a4ccwgpxm6rd.onion']
+        for address in addresses:
+            self.__createProcess(address)'''
         self.process.onionQueue.join()
 
 

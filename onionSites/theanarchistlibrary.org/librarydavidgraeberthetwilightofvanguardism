@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The Twilight of Vanguardism (David Graeber) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/david-graeber-the-twilight-of-vanguardism?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=david-graeber-the-twilight-of-vanguardism">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The Twilight of Vanguardism
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/david-graeber">David Graeber</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2003
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/vanguard">vanguard</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    This essay was delivered as a keynote address during the “History Matters: Social Movements Past, Present, and Future” conference at the New School for Social Research (www.newschool.edu/gf/historymatters for more information).
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on May 16<sup>th</sup>, 2009 from <a href="http://dc.indymedia.org/newswire/display/71522/index.php">dc.indymedia.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="david-graeber-the-twilight-of-vanguardism.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="david-graeber-the-twilight-of-vanguardism.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="david-graeber-the-twilight-of-vanguardism.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="david-graeber-the-twilight-of-vanguardism.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="david-graeber-the-twilight-of-vanguardism?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="david-graeber-the-twilight-of-vanguardism.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="david-graeber-the-twilight-of-vanguardism.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>David Graeber</h2>
+	
+	<h1 id="textttitleh">The Twilight of Vanguardism</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Why So Few Anarchists in the Academy?
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">History of the Idea of Vanguardism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Non-alienated Production
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Revolutionary thinkers have been saying that the age of vanguardism is over for most of a century now. Outside of a handful of tiny sectarian groups, it’s almost impossible to find a radical intellectuals seriously believe that their role should be to determine the correct historical analysis of the world situation, so as to lead the masses along in the one true revolutionary direction. But (rather like the idea of progress itself, to which it’s obviously connected), it seems much easier to renounce the principle than to shake the accompanying habits of thought.  Vanguardist, even, sectarian attitudes have become deeply ingrained in academic radicalism it’s hard to say what it would mean to think outside them.
+</p><p>The depth of the problem first really struck me when I first became acquainted with the consensus modes of decision-making employed in North American anarchist and anarchist-inspired political movements, which, in turn, bore a lot of similarities to the style of political decision-making current where I had done my anthropological fieldwork in rural Madagascar. There’s enormous variation among different styles and forms of consensus but one thing almost all the North American variants have in common is that they are organized in conscious opposition to the style of organization and, especially, of debate typical of the classical sectarian Marxist group. Where the latter are invariably organized around some Master Theoretician, who offers a comprehensive analysis of the world situation and, often, of human history as a whole, but very little theoretical reflection on more immediate questions of organization and practice, anarchist-inspired groups tend to operate on the assumption that no one could, or probably should, ever convert another person completely to one’s own point of view, that decision-making structures are ways of managing diversity, and therefore, that one should concentrate instead on maintaining egalitarian process and considering immediate questions of action in the present. One of the fundamental principles of political debate, for instance, is that one is obliged to give other participants the benefit of the doubt for honesty and good intentions, whatever else one might think of their arguments. In part too this emerges from the style of debate consensus decision-making encourages: where voting encourages one to reduce one’s opponents positions to a hostile caricature, or whatever it takes to defeat them, a consensus process is built on a principle of compromise and creativity where one is constantly changing proposals around until one can come up with something everyone can at least live with; therefore, the incentive is always to put the best possible construction on other’s arguments.
+</p><p>All this struck home to me because it brought home to me just how much ordinary intellectual practice — the kind of thing I was trained to do at the University of Chicago, for example — really does resemble sectarian modes of debate. One of the things which had most disturbed me about my training there was precisely the way we were encouraged to read other theorists’ arguments: that if there were two ways to read a sentence, one of which assumed the author had at least a smidgen of common sense and the other that he was a complete idiot, the tendency was always to chose the latter. I had sometimes wondered how this could be reconciled with an idea that intellectual practice was, on some ultimate level, a common enterprise in pursuit of truth. The same goes for other intellectual habits: for example, that of carefully assembling lists of different “ways to be wrong” (usually ending in “ism”: i.e., subjectivism, empiricism, all much like their sectarian parallels: reformism, left deviationism, hegemonism...) and being willing to listen to points of view differing from one’s own only so long as it took to figure out which variety of wrongness to plug them into. Combine this with the tendency to treat (often minor) intellectual differences not only as tokens of belonging to some imagined “ism” but as profound moral flaws, on the same level as racism or imperialism (and often in fact partaking of them) then one has an almost exact reproduction of style of intellectual debate typical of the most ridiculous vanguardist sects.
+</p><p>I still believe that the growing prevalence of these new, and to my mind far healthier, modes of discourse among activists will have its effects on the academy but it’s hard to deny that so far, the change has been very slow in coming.
+</p><h4 id="toc1">Why So Few Anarchists in the Academy?
+</h4>
+<p>One might argue this is because anarchism itself has made such small inroads into the academy. As a political philosophy, anarchism is going through veritable explosion in recent years. Anarchist or anarchist-inspired movements are growing everywhere; anarchist principles — autonomy, voluntary association, self-organization, mutual aid, direct democracy — have become the basis for organizing within the globalization movement and beyond. As Barbara Epstein has recently pointed out, at least in Europe and the Americas, it has by now largely taken the place Marxism had in the social movements of the ’60s: the core revolutionary ideology, it is the source of ideas and inspiration; even those who do not consider themselves anarchists feel they have to define themselves in relation to it. Yet this has found almost no reflection in academic discourse. Most academics seem to have only the vaguest idea what anarchism is even about; or dismiss it with the crudest stereotypes (“anarchist organization! but isn’t that a contradiction in terms?”) In the United States — and I don’t think is all that different elsewhere — there are thousands of academic Marxists of one sort or another, but hardly anyone who is willing to openly call herself an anarchist.
+</p><p>I don’t think this is just because the academy is behind the times.  Marxism has always had an affinity with the academy that anarchism never will. It was, after all was invented by a Ph.D.; and there’s always been something about its spirit which fits that of the academy. Anarchism on the other hand was never really invented by anyone. True, historians usually treat it as if it were, constructing the history of anarchism as if it’s basically a creature identical in its nature to Marxism: it was created by specific 19<sup>th</sup> century thinkers, perhaps Godwin or Stirner, but definitely Proudhon, Bakunin, Kropotkin, it inspired working-class organizations, became enmeshed in political struggles... But in fact the analogy is rather strained. First of all, the 19<sup>th</sup> century generally credited with inventing anarchism didn’t think of themselves as having invented anything particularly new. The basic principles of anarchism — self-organization, voluntary association, mutual aid — are as old as humanity Similarly, the rejection of the state and of all forms of structural violence, inequality, or domination (anarchism literally means “without rulers”), even the assumption that all these forms are somehow related and reinforce each other, was hardly some startlingly new 19<sup>th</sup> century doctrine. One can find evidence of people making similar arguments throughout history, despite the fact there is every reason to believe that such opinions were the ones least likely to be written down. We are talking less about a body of theory than about an attitude, or perhaps a faith: a rejection of certain types of social relation, a confidence that certain others are a much better ones on which to build a decent or humane society, a faith that it would be possible to do so.
+</p><p>One need only compare the historical schools of Marxism, and anarchism, then, to see we are dealing with a fundamentally different sort of thing. Marxist schools have authors. Just as Marxism sprang from the mind of Marx, so we have Leninists, Maoists, Trotksyites, Gramscians, Althusserians... Note how the list starts with heads of state and grades almost seamlessly into French professors. Pierre Bourdieu once noted that, if the academic field is a game in which scholars strive for dominance, then you know you have won when other scholars start wondering how to make an adjective out of your name. It is, presumably, to preserve the possibility of winning the game that intellectuals insist, in discussing each other, on continuing to employ just the sort of Great Man theories of history they would scoff at in discussing just about anything else: Foucault’s ideas, like Trotsky’s, are never treated as primarily the products of a certain intellectual milieu, as something that emerging from endless conversations and arguments in cafes, classrooms, bedrooms, barber shops involving thousands of people inside and outside the academy (or Party), but always, as if they emerged from a single man’s genius. It’s not quite either that Marxist politics organized itself like an academic discipline or become a model for how radical intellectuals, or increasingly, all intellectuals, treated one another; rather, the two developed somewhat in tandem.
+</p><p>Schools of anarchism, in contrast, emerge from some kind of organizational principle or form of practice: Anarcho-Syndicalists and Anarcho-Communists, Insurrectionists and Platformists, Cooperativists, Individualists, and so on. (Significantly, those few Marxist tendencies which are not named after individuals, like Autonomism or Council Communism, are themselves the closest to anarchism.) Anarchists are distinguished by what they do, and how they organize themselves to go about doing it. And indeed this has always been what anarchists have spent most of their time thinking and arguing about. They have never been much interested in the kinds of broad strategic or philosophical questions that preoccupy Marxists such as Are the peasants a potentially revolutionary class? (anarchists consider this something for the peasants to decide) or what is the nature of the commodity form? Rather, they tend to argue about what is the truly democratic way to go about a meeting, at what point organization stops being empowering people and starts squelching individual freedom. Is “leadership” necessarily a bad thing? Or, alternately, about the ethics of opposing power: What is direct action? Should one condemn someone who assassinates a head of state? When is it okay to break a window?
+</p><p>One might sum it up like this:
+</p>
+<ol>
+<li><p>Marxism has tended to be a theoretical or analytical discourse about revolutionary strategy.
+</p>
+</li>
+<li><p>Anarchism has tended to be an ethical discourse about revolutionary practice.
+</p>
+</li>
+
+</ol>
+<p>Now, this does imply there’s a lot of potential complementary between the two (and indeed there has been: even Mikhail Bakunin, for all his endless battles with Marx over practical questions, also personally translated Marx’s Capital into Russian.) One could easily imagine a systematic division of labor in which Marxists critique the political economy, but stay out of organizing, and Anarchists handle the day-to-day organizing, but defer to the Marxists on questions of abstract theory; i.e., in which the Marxists explain why the economic crash in Argentina occurred and the anarchists deal with what to do about it. (I also should point out that I am aware I am being a bit hypocritical here by indulging in some of the same sort of sectarian reasoning I’m otherwise critiquing: there are schools of Marxism which are far more open-minded and tolerant, and democratically organized, there are anarchist groups which are insanely sectarian; Bakunin himself was hardly a model for democracy by any standards, etc. etc. etc.). But it also makes it easier to understand why there are so few anarchists in the academy. It’s not just that anarchism does not lend itself to high theory. It’s that it is primarily an ethics of practice; and it insists, before anything else, that one’s means most be consonant with one’s ends; one cannot create freedom through authoritarian means; that as much as possible, one must embody the society one wishes to create. This does not square very well with operating within Universities that still have an essentially Medieval social structure, presenting papers at conferences in expensive hotels, and doing intellectual battle in language no one who hasn’t spent at least two or three years in grad school would ever hope to be able to understand. At the very least, then, it would tend to get one in trouble.
+</p><p>All this does not, of course, mean that anarchist theory is impossible — though it does suggest that a single Anarchist High Theory in the style typical of university radicalism might be rather a contradiction in terms. One could imagine a body of theory that presumes and indeed values a diversity of sometimes incommensurable perspectives in much the same way that anarchist decision-making process does, but which nonetheless organizes them around an presumption of shared commitments. But clearly, it would also have to self-consciously reject any trace of vanguardism: which leads to the question the role of revolution intellectuals is not to form an elite that can arrive at the correct strategic analyses and then lead the masses to follow, what precisely is it? This is an area where I think anthropology is particularly well positioned to help. And not only because most actual, self-governing communities, non-market economies, and other radical alternatives have been mainly studied by anthropologists; also, because the practice of ethnography provides at least something of a model, an incipient model, of how non-vanguardist revolutionary intellectual practice might work. Ethnography is about teasing out the hidden symbolic, moral, or pragmatic logics that underly certain types of social action; the way people’s habits and actions makes sense in ways that they are not themselves completely aware of. One obvious role for a radical intellectual is precisely that: the first thing we need to do is to look at those who are creating viable alternatives on the group, and try to figure out what might be the larger implications of what they are (already) doing.
+</p><h4 id="toc2">History of the Idea of Vanguardism
+</h4>
+<p>Untwining social theory from vanguardist habits might seem a particularly difficult task because historically, modern social theory and the idea of the vanguard were born more or less together. On the other hand, so was the idea of an artistic avant garde (“avant garde” is in fact simply the French word for vanguard), and the relation between the three might itself suggest some unexpected possibilities.
+</p><p>The term avant garde was actually coined by Henri de Saint-Simon, the product of a series of essays he wrote at the very end of his life. Like his onetime secretary and disciple (and later bitter rival Auguste Comte), Saint-Simon was writing in the wake of the French revolution and essentially, were asking what had gone wrong: why the transition from a medieval, feudal Catholic society to a modern, industrial democratic one seemed to be creating such enormous violence and social dislocation. The problem he concluded was that modern society lacked any force of ideological cohesion that could play the same role as the Medieval church, which gave everyone the sense of having a meaningful place in the overall social order. Towards the end of their lives each actually ended up creating his own religion: Saint-Simon’s called his the “New Christianity”, Comte, the “New Catholicism”. In the first, artists were to play the role of the ultimate spiritual leaders; in an imaginary dialogue with a scientist, he has an artist explaining that in their role of imagining possible futures and inspiring the public, they can play the role of an “avant garde”, a “truly priestly function” as he puts it; in his ideal future, artists would hatch the ideas which they would then pass on to the scientists and industrialists to put into effect. Saint-Simon was also perhaps the first to conceive the notion of the withering away of the state: once it had become clear that the authorities were operating for the good of the public, one would no more need force to compel the public to heed their advice than one needed it to compel patients to take the advice of their doctors. Government would pass away into at most some minor police functions.
+</p><p>Comte, of course, is most famous as the founder of sociology; he invented the term to describe what he saw as the master-discipline which could both understand and direct society. He ended up taking a different, far more authoritarian approach: ultimately proposing the regulation and control of almost all aspects of human life according to scientific principles, with the role of high priests (effectively, the vanguard, though he did not actually call them this) in his New Catholicism being played by the sociologists themselves.
+</p><p>It’s a particularly fascinating opposition because in the early twentieth century, the positions were effectively reversed. Instead of the left-wing Saint-Simonians looking to artists for leadership, while the right-wing Comtians fancied themselves scientists, we had the fascist leaders like Hitler and Mussolini who imagined themselves as great artists inspiring the masses, and sculpting society according to their grandiose imaginings, and the Marxist vanguard which claimed the role of scientists.
+</p><p>At any rate the Saint Simonians at any rate actively sought to recruit artists for their various ventures, salons, and utopian communities; though they quickly ran into difficulties because so many within “avant garde” artistic circles preferred the more anarchistic Fourierists, and later, one or another branch of outright anarchists. Actually, the number of 19<sup>th</sup> century artists with anarchist sympathies is quite staggering, ranging from Pissaro to Tolstoy or Oscar Wilde, not to mention almost all early 20<sup>th</sup> century artists who later became Communists, from Malevich to Picasso. Rather than a political vanguard leading the way to a future society, radical artists almost invariably saw themselves as exploring new and less alienated modes of life. The really significant development in the 19<sup>th</sup> century was less to idea of a vanguard than that of Bohemia (a term first coined by Balzac in 1838): marginal communities living in more or less voluntary poverty, seeing themselves as dedicated to the pursuit of creative, unalienated forms of experience, united by a profound hatred of bourgeois life and everything it stood for. Ideologically, they were about equally likely to be proponents of “art for art’s sake” or social revolutionaries.  Contemporary theorists are actually quite divided over how to evaluate their larger significance. Pierre Bourdieu for example insisted that the promulgation of the idea of “art for art’s sake”, far from being depoliticizing, should be considered a significant accomplishment, as was any which managed to establish the autonomy of one particular field of human endeavor from the logic of the market. Colin Campbell on the other hand argues that insofar as bohemians actually were an avant garde, they were really the vanguard of the market itself, or more precisely, of consumerism: their actual social function, much though they would have loathed to admit it, was to explore new forms of pleasure or aesthetic territory which could be commoditized in the next generation. (One might call this the Tom Franks version of history.) Campbell also echoes common wisdom that bohemia was almost exclusively inhabited by the children of the bourgeoisie, who had — temporarily, at least — rejecting their families’ money and privilege; and who, if they did not die young of dissipation, were likely to end up back on the board of father’s company. This is a claim that has been repeated so often about activists and revolutionaries over the years that it makes me, at least, immediately wary: in fact, I strongly suspect that bohemian circles emerged from the same sort of social conjuncture as most current activist circles, and historically, most vanguardist revolutionary parties as well: a kind of meeting between certain elements of (intentionally) downwardly mobile professional classes, in broad rejection of bourgeois values, and upwardly mobile children of the working class. Though such suspicions can only be confirmed by historical investigation.
+</p><p>In the 19<sup>th</sup> century idea of the political vanguard was used very widely and very loosely for anyone seen as exploring the path to a future, free society. Radical newspapers for example often called themselves “the Avant Garde”. It was Marx though who began to significantly change the idea by introducing the notion that the proletariat were the true revolutionary class — he didn’t actually use the term “vanguard” in his own writing — because they were the one that was the most oppressed, or as he put it “negated” by capitalism, and therefore had the least to lose by its abolition. In doing so, he ruled out the possibilities that less alienated enclaves, whether of artists or the sort of artisans and independent producers who tended to form the backbone of anarchism, had anything significant to offer. The results we all know. The idea of a vanguard party to dedicated to both organizing and providing an intellectual project for that most-oppressed class chosen as the agent of history, but also, actually sparking the revolution through their willingness to employ violence, was first outlined by Lenin in 1902 in What Is to Be Done?; it has echoed endlessly, to the point where the SDS in the late ’60s could end up locked in furious debates over whether the Black Panther Party should be considered the vanguard of The Movement as the leaders of its most oppressed element. All this in turn had a curious effect on the artistic avant garde who increasingly started to organize themselves like vanguard parties, beginning with the Dadaists, Futurists, publishing their own manifestos, communiques, purging one another, and otherwise making themselves (sometimes quite intentional) parodies of revolutionary sects. (Note however that these groups always defined themselves, like anarchists, by a certain form of practice rather than after some heroic founder.) The ultimate fusion came with the Surrealists and then finally the Situationist International, which on the one hand was the most systematic in trying to develop a theory of revolutionary action according to the spirit of Bohemia, thinking about what it might actually mean to destroy the boundaries between art and life, but at the same time, in its own internal organization, displayed a kind of insane sectarianism full of so many splits, purges, and bitter denunciations that Guy Debord finally remarked that the only logical conclusion was for the International to be finally reduced to two members, one of whom would purge the other and then commit suicide.  (Which is actually not too far from what actually ended up happening.)
+</p><h4 id="toc3">Non-alienated Production
+</h4>
+<p>The historical relations between political and artistic avant gardes have been explored at length by others. For me though the really intriguing questions is: why is it that artists have so often been so drawn to revolutionary politics to begin with? Because it does seem to be the case that, even in times and places when there is next to no other constituency for revolutionary change, the one place on is most likely to find one is among artists, authors, and musicians; even more so, in fact, that among professional intellectuals. It seems to me the answer must have something to do with alienation. There would appear to be a direct link between the experience of first imagining things and then bringing them into being (individually or collectively) — that is, the experience of certain forms of unalienated production — and the ability to imagine social alternatives; particularly, the possibility of a society itself premised on less alienated forms of creativity. Which would allow us to see the historical shift between seeing the vanguard as the relatively unalienated artists (or perhaps intellectuals) to seeing them as the representatives of the “most oppressed” in a new light. In fact, I would suggest, revolutionary coalitions always tend to consist of an alliance between a society’s least alienated and its most oppressed. And this is less elitist a formulation than it might sound, because it also seems to be the case that actual revolutions tend to occur when these two categories come to overlap. That would at any rate explain why it almost always seems to be peasants and craftspeople — or alternately, newly proletarianized former peasants and craftspeople — who actually rise up and overthrow capitalist regimes, and not those inured to generations of wage labor. Finally, I suspect this would also help explain the extraordinary importance of indigenous people’s struggles in that planetary uprising usually referred to as the “anti-globalization” movement: such people tend to be simultaneously the very least alienated and most oppressed people on earth, and once it is technologically possible to include them in revolutionary coalitions, it is almost inevitable that they should take a leading role.
+</p><p>The role of indigenous peoples in turn leads us back to the role of ethnography as a possible model for the would-be non-vanguardist revolutionary intellectual — as well as some of its potential pitfalls.  Obviously what I am proposing would only work if it was, ultimately, a form of auto-ethnography, combined, perhaps, with a certain utopian extrapolation: a matter of teasing out the tacit logic or principles underlying certain forms of radical practice, and then, not only offering the analysis back to those communities, but using them to formulate new visions (“if one applied the same principles as you are applying to political organization to economics, might it not look something like this?”...) Here too there are suggestive parallels in the history of radical artistic movements, which became movements precisely as they became their own critics (and of course the idea of self-criticism took on a very different, and more ominous, tone within Marxist politics); there are also intellectuals already trying to do precisely this sort of auto-ethnographic work. But I say all this not so much to provide models as to open up a field for discussion, first of all, by emphasizing that even the notion of vanguardism itself far more rich in its history, and full of alternative possibilities, than most of us would ever be given to expect.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

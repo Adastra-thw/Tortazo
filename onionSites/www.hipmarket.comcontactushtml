@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+   <base href="http://www.hipmarket.com/contact-us.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Support - Hip Market</title>
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/validate.js"></script>
+  <script type="text/javascript">
+<!--
+		function validateForm( frm ) {
+			var valid = document.formvalidator.isValid(frm);
+			if (valid == false) {
+				// do field validation
+				if (frm.email.invalid) {
+					alert( "Please enter a valid e-mail address:" );
+				} else if (frm.text.invalid) {
+					alert( "Please make sure the form is complete and valid." );
+				}
+				return false;
+			} else {
+				frm.submit();
+			}
+		}
+		// -->
+  </script>
+
+ <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+ <link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="/templates/hipmarket/css/template.css" media="screen" />
+ <!--[if IE 6]><link rel="stylesheet" href="/templates/hipmarket/css/template.ie6.css" type="text/css" media="screen" /><![endif]-->
+ <!--[if IE 7]><link rel="stylesheet" href="/templates/hipmarket/css/template.ie7.css" type="text/css" media="screen" /><![endif]-->
+ <script type="text/javascript">if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</script>
+ <script type="text/javascript" src="/templates/hipmarket/jquery.js"></script>
+ <script type="text/javascript">jQuery.noConflict();</script>
+ <script type="text/javascript" src="/templates/hipmarket/script.js"></script>
+ <script type="text/javascript">if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</script>
+</head>
+<body>
+<div id="art-page-background-glare-wrapper">
+    <div id="art-page-background-glare"></div>
+</div>
+<div id="art-main">
+    <div class="cleared reset-box"></div>
+<div class="art-box art-sheet">
+    <div class="art-box-body art-sheet-body">
+<div class="art-header">
+<div class="art-textblock"> </div>
+<div class="art-headerobject"></div>
+<div class="art-logo">
+ <h1 class="art-logo-name"><a href="/">Hip Market</a></h1>
+ <h2 class="art-logo-text">The Alternative Place to Shop</h2>
+</div>
+
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+			<div class="art-nav-center">
+	<ul class="art-hmenu"><li class="item1"><a href="http://www.hipmarket.com/">Home</a></li><li class="item68"><a href="/whats-hot.html">What's Hot!</a></li><li class="item54"><a href="/calendars.html">Calendars</a></li><li class="item67"><a href="/hip-t-shirts.html">Hip T-Shirts</a></li><li class="item64"><a href="/purchase-and-download-electronic-books.html">E-Books</a></li><li class="item57"><a href="/books.html">Books</a></li><li class="item58"><a href="/music.html">Music</a></li><li class="item56"><a href="/posters.html">Posters</a></li><li class="item59"><a href="/videos.html">Videos</a></li><li class="item55"><a href="/skips-picks.html">Skip's Picks</a></li><li class="item65"><a href="/your-cart.html">Your Cart</a></li></ul>	</div>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-layout-wrapper">
+    <div class="art-content-layout">
+        <div class="art-content-layout-row">
+<div class="art-layout-cell art-sidebar1">
+        <div class="art-box art-block">
+            <div class="art-box-body art-block-body">
+        
+                        <div class="art-box art-blockcontent">
+            <div class="art-box-body art-blockcontent-body">
+        
+        <form action="index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="Search Mall"  onblur="if(this.value=='') this.value='Search Mall';" onfocus="if(this.value=='Search Mall') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value=69 />
+</form>
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        <div class="art-box art-block">
+            <div class="art-box-body art-block-body">
+        
+                <div class="art-bar art-blockheader">
+            <h3 class="t">
+        Main Menu</h3>
+        </div>
+                <div class="art-box art-blockcontent">
+            <div class="art-box-body art-blockcontent-body">
+        
+        <ul class="menu"><li class="item63"><a href="/advertise.html"><span>Advertise</span></a></li><li id="current" class="active item69"><a href="/contact-us.html"><span>Contact Us</span></a></li><li class="item75"><a href="/hipinc.html"><span>Hip Inc.</span></a></li></ul>
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+        
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        
+
+  <div class="cleared"></div>
+</div>
+<div class="art-layout-cell art-content">
+
+<div class="art-box art-post">
+    <div class="art-box-body art-post-body">
+<div class="art-post-inner">
+<div class="art-postcontent">
+<div id="component-contact">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="contentpaneopen">
+<tr>
+	<td width="100%" class="contentheading">
+		Support	</td>
+</tr>
+<tr>
+	<td>
+		<table border="0" width="100%">
+		<tr>
+			<td></td>
+			<td rowspan="2" align="right" valign="top">
+						</td>
+		</tr>
+		<tr>
+			<td>
+				<br />
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td></td>
+</tr>
+<tr>
+	<td colspan="2">
+<!--	<br /><br />  -->
+	<form action="/contact-us.html" method="post" name="emailForm" id="emailForm" class="form-validate">
+		<div class="contact_email">
+			<label for="contact_name">
+				&nbsp;Enter your Name:
+			</label>
+			<br />
+			<input type="text" name="name" id="contact_name" size="30" class="inputbox" value="" />
+			<br />
+			<label id="contact_emailmsg" for="contact_email">
+				&nbsp;E-mail address:
+			</label>
+			<br />
+			<input type="text" id="contact_email" name="email" size="30" value="" class="inputbox required validate-email" maxlength="100" />
+			<br />
+			<label for="contact_subject">
+				&nbsp;Message Subject:
+			</label>
+			<br />
+			<input type="text" name="subject" id="contact_subject" size="30" class="inputbox" value="" />
+			<br /><br />
+			<label id="contact_textmsg" for="contact_text">
+				&nbsp;Enter your Message:
+			</label>
+			<br />
+			<textarea cols="50" rows="10" name="text" id="contact_text" class="inputbox required"></textarea>
+						<br />
+				<input type="checkbox" name="email_copy" id="contact_email_copy" value="1"  />
+				<label for="contact_email_copy">
+					E-mail a copy of this message to your own address.				</label>
+						<br />
+			<br />
+			<span class="art-button-wrapper"><span class="art-button-l"> </span><span class="art-button-r"> </span><button class="button validate art-button" type="submit">Send</button></span>
+		</div>
+
+	<input type="hidden" name="option" value="com_contact" />
+	<input type="hidden" name="view" value="contact" />
+	<input type="hidden" name="id" value="1" />
+	<input type="hidden" name="task" value="submit" />
+	<input type="hidden" name="e9a91fcdec9d0fe4f3d984c9bd10608d" value="1" />	</form>
+	<br />
+	</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="cleared"></div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+  <div class="cleared"></div>
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="cleared"></div>
+
+
+<div class="art-footer">
+    <div class="art-footer-body">
+                        <div class="art-footer-text">
+                                        <p><a href="http://www.hippy.com">Hippy.com</a> | <a href="http://www.hipforums.com">Hip Forums</a></p><p>Copyright © 2011, Hip Inc. All Rights Reserved.</p>
+
+                                                        </div>
+        <div class="cleared"></div>
+    </div>
+</div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>
+<p class="art-page-footer"><a href="http://www.artisteer.com/?p=joomla_templates" target="_blank">Joomla template</a> created with Artisteer.</p>
+
+    <div class="cleared"></div>
+</div>
+
+</body>
+</html>

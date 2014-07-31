@@ -1,0 +1,146 @@
+<body bgcolor="#0E3259" text="#000000" link="0000ff"><center><table border=1 width=750 cellspacing=1 cellpadding=7><tr><td valign=top background="http://www.hipforums.com/tealmarble.jpg"><center><font size=4><b>How to Place Your Ad on Our Sites</b></font><table border=0 cellpadding=0 cellspacing=0 width="100%">
+
+<TR>
+
+<td> 
+
+<table cellpadding=0 cellspacing=0 border=0 width="100%" align="center" width=20%>
+
+<tr> 
+
+<TD colspan="2" height="8">	 
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr> 
+
+<td height="1"><center><table border=1 bgcolor="beige" cellpadding=1><tr><td valign=top><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><center><b>The Hip Websites</b></center>
+
+	<img src="images/open.gif"> <a href="http://www.hipforums.com" target="_blank">Hip Forums</a><br>
+
+<img src="images/open.gif"> <a href="http://www.hipplanet.com" target="_blank">Hip Planet</a><br>
+
+<img src="images/open.gif"> <a href="http://www.hippy.com" target="_blank">Hippyland</a><br>
+
+<img src="images/open.gif"> <a href="http://www.hipmarket.com" target="_blank">Hip Market</a><br>
+
+<img src="images/open.gif"> <a href="http://www.hiptravelguide.com" target="_blank">Hip Travel Guide</a><br>
+<img src="images/open.gif"> <a href="http://www.hipgallery.com" target="_blank">Hip Gallery</a><br>
+<img src="images/open.gif"> <a href="http://www.mjguide.com" target="_blank">MJ Guide</a><br>
+
+
+
+<img src="images/tline.gif"><img src="images/open.gif"> <a href="http://www.hipmarket.com/vendors.php?action=info">Ad Buy System</a></font></td></tr></table></td>
+
+</table>
+
+ </td></tr></table>
+
+</font></td>
+
+<center>
+
+</table>Here are the options available to advertise on our sites. This form will expedite your request and your banner campaign should become active within 24 hours of payment.  Please follow the instructions and <a href="http://www.hipmarket.com/contact-us.html">contact us</a> if you run into any problems or have a special request.<p>Notes: We do not allow popups, popunders or other intrusive or obnoxious ads.  All ads subject to our approval.  Non-profits are eligible for a substantial discount, please <a href="http://www.hipmarket.com/contact-us.html">contact us</a>.<p>
+
+	<center><font size="" face=""><b>Choose the site you wish to advertise on:</b><br>
+
+<form action="http://www.hipmarket.com/vendors.php?action=confirm" method="post">
+
+<select name="website" value="">
+
+<option value="" selected>Select Website
+
+<option value="HipWebsites" >Hip Forums
+
+<option value="hippy.com" >Hippyland
+
+<option value="hipmarket.com" >Hip Market
+
+<option value="hipplanet.com" >Hip Planet
+
+<option value="hiptravelguides.com" >Hip Travel Guides 
+
+<option value="hipgallery.com" >Hip Gallery
+
+<option value="mjguide.com" >MJ Guide
+
+</select><font size=3><p>
+
+
+
+		<b>Choose The Plan:<br>Either Plan will generate millions of impressions!</b><br><TABLE border=1 bgcolor=beige>
+<TR>
+	<TD style="padding:15px;width:50%;vertical-align:text-top;"><h3 align=center valign=top>Standard Package</h3><li>One run-of-site banner with unlimited impressions & clickthrus</li><li>Will appear on nearly every page of forums, in rotation with other banners.</li><li>Two Banner Locations:<br> &nbsp; Top-of-Page (max size:600x70) or<br> &nbsp; Column Banner (max size:180x200)</li><hr size=1><li><B>Plus!</B> A link in our Business Directory for as long as your ad runs.<br><br><center>Choose Standard Ad Campaign:<br><input type="radio" name="plan" value="a"><B>$300 for 3 months<br><input type="radio" name="plan" value="b">$500 for 6 months</B></center></TD>
+
+	<TD style="padding:15px;vertical-align:text-top;"><h3 align=center valign=top>Forum Sponsor Package</h3><li>One run-of-site banner with unlimited impressions & clickthrus</li><li>Will appear on nearly every page of forums in rotation with other banners.</li><li>Two Banner Locations:<br> &nbsp; Top-of-Page (max size:728x90 Leaderboard) or<br> &nbsp; Column Banner (max size:180x200)</li><hr size=1><li><B>Plus!</B> One Exclusive Forum Sponsorship! Your ad will appear at top of sponsored forum page. No rotation with other banners.</li><li><B>Plus!</B> A link in our Business Directory for as long as your ad runs.</li><li><B>Plus!</B> A sticky thread or announcement in the sponsored forum.</li><br><br><center>Choose Sponsor Ad Campaign:<br><input type="radio" name="plan" value="c"><B>$500 for 3 months<br><input type="radio" name="plan" value="d">$900 for 6 months</B></center></TD>
+</TR>
+</TABLE>
+
+
+
+			<p><b>Choose the type of Ad you wish to place:</b><br>
+
+			<select name="size" value="">
+
+			<option value="top">Top of Page Banner (no larger than 600w x 70h)
+
+			<option value="column">Column Ad (no larger than 180w x 200h)
+
+			<option value="leaderboard">Leaderboard Ad (no larger than 728w x 90h - Forum Sponsors Only)
+
+
+
+			</select>
+
+
+			<p><b>Image to use:</b><br>
+
+				Please enter the URL of the banner image you wish to use.  The image must reside on an Internet server somewhere and must be linkable from our site.<br>
+
+				<input type="text" name="image" value="" size=40 maxlength=120>
+
+
+			<p><b>Page to link to:</b><br>
+
+				Please enter the URL of the page you wish to send people when they click on your banner.<br>
+
+				<input type="text" name="url" value="" size=40 maxlength=120>
+
+
+			<p><b>Contact Name or Company Name:</b><br>
+
+				<input type="text" name="contact" value="" size=40 maxlength=60>
+
+
+			<p><b>Contact Email Address:</b><br>
+
+				<input type="text" name="email" value="" size=40 maxlength=60>
+
+		
+
+						<p><!-- Begin Official PayPal Seal -->
+
+<a href="https://www.paypal.com/verified/pal=skip%40hipplanet.com" target="_blank"><img src="http://images.paypal.com/images/verification_seal.gif" border="0" alt="Official PayPal Seal" align=right></A>
+
+<!-- End Official PayPal Seal -->
+
+			<b>Payment Options:</b>						
+
+			<select name="paytype" value="paytype">
+
+			<option value="">Select Method
+
+			<option value="paypal">PayPal
+
+			<option value="check">Check
+
+			<option value="mo">Money Order
+
+			<option value="cash">Cash
+
+			</select><p><b>Review Your Order:</b><br>
+
+				Click here to review your order before making payment.<br>
+				<input type="hidden" name="s" value="">
+				<input type="hidden" name="securitytoken" value="">
+				<input type="SUBMIT" name="submit" value="Review Order"></td></tr></table>

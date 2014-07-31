@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>UrlTrends</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="UrlTrends is a service that helps you track your marketing, perform competitive intelligence and get the data you need to make better domain purchases." />
+	<meta name="ROBOTS" content="NOODP" />
+	<link href="http://www.urltrends.com/static/css.css" rel="stylesheet" type="text/css" />
+	<link href="http://www.urltrends.com/support/support.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="http://www.urltrends.com/static/favicon.ico" type="image/x-icon" />
+	<script language="javascript" type="text/javascript" src="http://www.urltrends.com/static/js/autocomplete.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.urltrends.com/static/js/misc.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.urltrends.com/static/myurltrends/tablesort_v2.js"></script>
+	<script language="javascript" type="text/javascript" src="http://www.urltrends.com/static/js/xml_http_request.js"></script>
+	
+</head>
+<body >
+<div id="nofocus"></div>
+<div id="div_pleasewait"></div>
+
+<div class="monitoringtext">&nbsp;</div>
+<div class="logotop">
+<div class="logo_main_login">
+	<div class="logo_main_login_fields">
+		<div style="float: right"><img src="http://www.urltrends.com/static/images/logo_main_right.gif" width="8" height="40" border="0" alt="" /></div>
+		<form method="post" action="/myurltrends/login.php">
+		<div class="logo_login_field"><input type="submit" value="LOGIN" class="logo_login_submit" tabindex="5" /></div>
+		<div class="logo_login_field"><div class="logo_login_field_bg"><input type="password" class="logo_login_text logo_login_text_password" name="password" tabindex="4" onfocus='this.className="logo_login_text"' /></div></div>
+		<div class="logo_login_field"><div class="logo_login_field_bg"><input type="text" class="logo_login_text logo_login_text_username" name="username" tabindex="3" onfocus='this.className="logo_login_text"' /></div></div>
+		</form>
+		
+	</div>
+	<div class="logo_main_login_links"><a href="https://www.urltrends.com/myurltrends/register.php">Register Free</a> | <a href="/myurltrends/forgotpassword.php">Retrieve Password</a> | <a href="/myurltrends/resendactivation.php">Resend Activation Email</a></div>
+</div>
+<a href="http://www.urltrends.com/"><img src="http://www.urltrends.com/static/images/logo_main.gif" width="165" height="40" border="0" alt="" /></a>
+
+
+
+</div>
+<div class="orangebar">
+<div class="ob_left"><img src="http://www.urltrends.com/static/images/ob_left.gif" /></div>
+<div class="ob_right"><img src="http://www.urltrends.com/static/images/ob_right.gif" /></div>
+
+<div id="obdiv">
+
+
+
+
+<div style="padding: 10px 0px 0px 25px; font-size: 25px; color: #fff; line-height: 40px">UrlTrends Help System</div>
+</div>
+<div class="obloading" id="obloading">&nbsp;</div>
+</div>
+<div class="main" id="main"> 
+<div class="maincontent">
+
+<h2>UrlTrends - FAQ</h2>
+<div class="contentpadding">
+<br/>
+<h3>My Invoices</h3>
+<ul>
+<li><a href="http://www.urltrends.com/faq/faq-what-payments-do-you-accept.php">What payments do you accept?</a></li>
+</ul>
+<h3>Working with URLs</h3>
+<ul>
+<li><a href="http://www.urltrends.com/faq/faq-how-do-i-delete-a-url-from-my-watchlist.php">How do I delete a URL from my Watchlist? </a></li>
+<li><a href="http://www.urltrends.com/faq/faq-how-do-i-move-a-url-to-another-folder.php">How do I move a URL to another folder?</a></li>
+<li><a href="http://www.urltrends.com/faq/i-get-this-error.php">I get this error "This url may be deleted from our database soon...", but my website is fine! Why is this?</a></li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="tools">
+		<div style="float: right"><img src="http://www.urltrends.com/static/images/leftmenu_top_right.gif" /></div>
+		<div style="float: left"><img src="http://www.urltrends.com/static/images/leftmenu_top_left.gif" /></div>
+		<div class="clear"></div>
+		<div class="trmenu_header">UrlTrends Tools</div>
+		<div class="menupadding">
+			<ol>
+				<li><a href="/myurltrends/login.php">My UrlTrends</a></li>
+				<li><a href="/seo-report/">SEO Report</a></li>
+				<li><a href="/keyword-report/">Keyword Report</a></li>
+				<li><a href="/competition-report/">Competition Report</a></li>
+				<li><a href="/comparetrend.php">Trend Comparison Tool</a></li>
+				<li><a href="/reversekeywordlookup.php">Reverse Keyword Lookup Tool</a></li>
+				<li><a href="/install-pagerank-button.php">PageRank&trade; buttons</a></li>
+			</ol>
+		</div>
+		<div class="clear"></div>
+		<div style="float: right"><img src="http://www.urltrends.com/static/images/leftmenu_bot_right.gif" /></div>
+		<div style="float: left"><img src="http://www.urltrends.com/static/images/leftmenu_bot_left.gif" /></div>
+	</div>
+	<div class="news">
+			<img src="http://www.urltrends.com/static/images/leftmenu_ttl_news.gif" alt="UrlTrends News" width="207" height="32" />
+		<div class="menupadding">
+		<div>August 18, 2010 - <a href="http://www.urltrends.com/news.php">New features - Keyword Monitor now support countries other than US...</a></div>
+		
+		<div>September 2, 2008 - <a href="http://www.urltrends.com/news.php">We are Live! After two years of work, the New UrlTrends site is fi...</a></div>
+		
+		<div>March 16, 2008 - <a href="http://www.urltrends.com/news.php">AT&T had issues with one of their routers causing some of our syst...</a></div>
+		
+		</div>
+		<img src="http://www.urltrends.com/static/images/leftmenu_bot_news.gif" alt="" width="207" height="19" style="margin-bottom: -5px" /><br />
+	</div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+	<div style="float: left"><img src="http://www.urltrends.com/static/images/footer_bg_left.gif" /></div>
+	<div style="float: right"><img src="http://www.urltrends.com/static/images/footer_bg_right.gif" /></div>
+	<div class="footerpadding">
+		<div class="footerleftcolumn">
+			<a href="http://www.urltrends.com/aboutus.php">About UrlTrends</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://www.urltrends.com/partners.php">Our Partners</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://www.urltrends.com/policies.php">Terms of Service</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://www.urltrends.com/policies.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://www.urltrends.com/help.php">Help</a><br />
+			Copyright &copy; 2004
+<script language="JavaScript">
+var d=new Date();
+yr=d.getFullYear();
+if (yr!=2004)
+document.write("- "+yr);
+</script>&nbsp;&nbsp; UrlTrends.com
+		</div>
+		<div class="footermiddlecolumn"></div>
+		<div class="footerrightcolumn">
+			The use of automated query tools will result in your IP being banned from this website.<br />
+		
+		</div>
+	</div>
+</div>
+<div id="PushDown"></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-195882-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

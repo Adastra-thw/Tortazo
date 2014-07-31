@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Émile Armand | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   id="current"
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="emile-armand">Émile Armand</h3>
+<ol>
+
+  <li>
+   <a href="/library/emile-armand-the-anarchism-of-emile-armand">
+   The Anarchism of Émile Armand
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-anarchist-individualism-and-amorous-comradeship">
+   Anarchist Individualism and Amorous Comradeship
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-articles-from-machete-1">
+   Articles from “Machete” #1
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-the-friends-of-e-armand">
+   The Friends of E. Armand
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-the-great-debacle">
+   The Great Debacle
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-the-individual-and-dictatorship">
+   The Individual and Dictatorship
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-is-the-illegalist-anarchist-our-comrade">
+   Is the Illegalist Anarchist our Comrade?
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-letter-from-orleans-france">
+   Letter from Orleans, France
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/america-scarfo-emile-armand-letter-of-america-scarfo-to-emile-armand">
+   Letter of América Scarfó to Émile Armand
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-mini-manual-of-individualist-anarchism">
+   Mini-Manual of Individualist Anarchism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-on-sexual-liberty">
+   On Sexual Liberty
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-our-demands-as-individualist-anarchists">
+   Our demands as Individualist Anarchists
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-our-rule-of-ideological-conduct-manifesto-of-the-journal-l-en-dehors">
+   Our Rule of Ideological Conduct: Manifesto of the journal L’En-Dehors
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-principal-tendencies-and-theses-of-the-l-unique-center">
+   Principal Tendencies and Theses of the “L’Unique” Center
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-revolutionary-nudism">
+   Revolutionary Nudism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-the-gulf">
+   The Gulf
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-to-feel-alive">
+   To Feel Alive
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-variations-on-voluptuousness">
+   Variations on Voluptuousness
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/alain-sergent-a-visit-to-l-anarchie">
+   A visit to L’anarchie
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-what-is-an-anarchist">
+   What is an Anarchist?
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-what-we-have-been-we-still-remain">
+   What We Have Been, We Still Remain
+   </a>
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

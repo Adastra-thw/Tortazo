@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     social ecology | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="social-ecology">social ecology</h3>
+<ol>
+
+  <li>
+   <a href="/library/philip-richlin-10-rules-for-a-non-violent-society">
+   10 Rules for a Non Violent Society
+   </a>
+  
+  
+      
+          (<a href="/authors/philip-richlin">Philip Richlin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/colin-wright-anarchism-feminism-and-the-individual">
+   Anarchism, Feminism and the Individual
+   </a>
+  
+  
+      
+          (<a href="/authors/colin-wright">Colin Wright</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/paul-messersmith-glavin-between-social-ecology-and-deep-ecology-gary-snyder-s-ecological-philos">
+   Between Social Ecology and Deep Ecology: Gary Snyder’s Ecological Philosophy
+   </a>
+  
+  
+      
+          (<a href="/authors/paul-messersmith-glavin">Paul Messersmith-Glavin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-comments-on-the-international-social-ecology-network-gathering-and-the-deep-soc">
+   Comments on the International Social Ecology Network Gathering and the “Deep Social Ecology” of John Clark
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-the-crisis-in-the-ecology-movement">
+   The Crisis in the Ecology Movement
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-deep-ecology-anarchism">
+   Deep Ecology &amp; Anarchism
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/brian-morris">Brian Morris</a>, <a href="/authors/chris-wilbert">Chris Wilbert</a>, <a href="/authors/graham-purchase">Graham Purchase</a>, <a href="/authors/murray-bookchin">Murray Bookchin</a>, <a href="/authors/robert-hart">Robert Hart</a>, <a href="/authors/rodney-aitchtey">Rodney Aitchtey</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-and-dave-foreman-defending-the-earth-a-debate">
+   Defending the Earth: A Debate
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/dave-foreman">Dave Foreman</a>, <a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/prasanta-chakravarty-an-eco-anarchist-manifesto-municipalizing-nature">
+   An Eco-Anarchist Manifesto: Municipalizing Nature
+   </a>
+  
+  
+      
+          (<a href="/authors/prasanta-chakravarty">Prasanta Chakravarty</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/janet-biehl-and-peter-staudenmaier-ecofascism-lessons-from-the-german-experience">
+   Ecofascism: Lessons from the German Experience
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/janet-biehl">Janet Biehl</a>, <a href="/authors/peter-staudenmaier">Peter Staudenmaier</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-orten-ecofascism-what-is-it">
+   Ecofascism: What is It?
+   </a>
+  
+  
+      
+          (<a href="/authors/david-orten">David Orten</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/brian-morris-ecology-and-its-recuperation-by-capitalists">
+   Ecology and its recuperation by capitalists
+   </a>
+  
+  
+      
+          (<a href="/authors/brian-morris">Brian Morris</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lewis-herber-murray-bookchin-ecology-and-revolutionary-thought">
+   Ecology and Revolutionary Thought
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-environmental-anarchism-in-vermont-anne-petermann-of-global-justice-ecology-project">
+   Environmental Anarchism in Vermont: Anne Petermann of Global Justice Ecology Project
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-freedom-and-necessity-in-nature-a-problem-in-ecological-ethics">
+   Freedom and Necessity in Nature: A Problem in Ecological Ethics
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/tara-specter-hope-against-hope-why-progressivism-is-as-useless-as-leftism">
+   Hope Against Hope: Why Progressivism is as Useless as Leftism
+   </a>
+  
+  
+      
+          (<a href="/authors/tara-specter">Tara Specter</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-the-meaning-of-confederalism">
+   The Meaning of Confederalism
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/massimo-passamani-more-much-more-and-other-writings">
+   “More, Much More” and other writings
+   </a>
+  
+  
+      
+          (<a href="/authors/massimo-passamani">Massimo Passamani</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-clark-municipal-dreams-social-ecological-critique-of-bookchin-s-politics">
+   Municipal Dreams: Social Ecological Critique of Bookchin’s Politics
+   </a>
+  
+  
+      
+          (<a href="/authors/john-clark">John Clark</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/charlie-crute-murray-bookchin-in-london">
+   Murray Bookchin in London
+   </a>
+  
+  
+      
+          (<a href="/authors/charlie-crute">Charlie Crute</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-on-spontaneity-and-organisation">
+   On Spontaneity and Organisation
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-the-population-myth">
+   The Population Myth
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-and-jeremy-brecher-post-affluence-anarchy-a-dialogue">
+   Post-Affluence Anarchy: A Dialogue
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/jeremy-brecher">Jeremy Brecher</a>, <a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/jeff-shantz-toronto-nefac-radical-ecology-and-class-struggle-a-re-consideration">
+   Radical Ecology and Class Struggle: A Re-Consideration
+   </a>
+  
+  
+      
+          (<a href="/authors/jeff-shantz">Jeff Shantz</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/e-colin-ruggero-radical-green-populism-climate-change-social-change-and-the-power-of-everyday-p">
+   Radical Green Populism: Climate Change, Social Change and the Power of Everyday Practices
+   </a>
+  
+  
+      
+          (<a href="/authors/e-colin-ruggero">E. Colin Ruggero</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/aragorn-review-riding-the-wind-by-peter-marshall">
+   Review: Riding the Wind by Peter Marshall
+   </a>
+  
+  
+      
+          (<a href="/authors/aragorn">Aragorn!</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-clark-a-social-ecology">
+   A Social Ecology
+   </a>
+  
+  
+      
+          (<a href="/authors/john-clark">John Clark</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-social-ecology-versus-deep-ecology-a-challenge-for-the-ecology-movement">
+   Social Ecology versus Deep Ecology: A Challenge for the Ecology Movement
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-society-and-ecology">
+   Society and Ecology
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/philip-richlin-the-socioeconomic-guardians-of-scarcity">
+   The Socioeconomic Guardians of Scarcity
+   </a>
+  
+  
+      
+          (<a href="/authors/philip-richlin">Philip Richlin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/janet-biehl-theses-on-social-ecology-and-deep-ecology">
+   Theses on Social Ecology and Deep Ecology
+   </a>
+  
+  
+      
+          (<a href="/authors/janet-biehl">Janet Biehl</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

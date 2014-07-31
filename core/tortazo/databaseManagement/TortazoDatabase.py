@@ -26,6 +26,7 @@ from config import databasePlugins
 from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
 from datetime import datetime
 import sys
+import zlib
 
 
 class TortazoDatabase:
@@ -240,7 +241,7 @@ class TortazoDatabase:
                 pageParentId = self.searchPageByUrl(pageParent['url'])
             else:
                 pageParentId = self.insertPage(pageParent)
-        data = (title, url, pageParentId, body, str(headers))
+        data = (title, url, pageParentId, buffer(zlib.compress(body)), str(headers))
         self.cursor.execute(databasePlugins.insertCrawlerPluginPage, data )
         linkId = self.cursor.lastrowid
         self.connection.commit()
@@ -274,7 +275,7 @@ class TortazoDatabase:
                 formId = self.cursor.lastrowid
                 for control in page['forms'][formName]:
                     (controlName, controlType, controlValue) = control
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControl, (formId, controlName, controlType, controlValue, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControl, (formId, buffer(zlib.compress(controlName)), buffer(zlib.compress(controlType)), buffer(zlib.compress(controlValue)), ) )
         self.connection.commit()
 
     def existsPageByUrl(self, url):

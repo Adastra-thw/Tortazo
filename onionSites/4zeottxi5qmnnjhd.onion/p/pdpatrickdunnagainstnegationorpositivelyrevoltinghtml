@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Against Negation Or, Positively Revolting</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Against Negation Or, Positively Revolting
+	</p>
+	
+	<p id="textsubtitle"><strong>Subtitle:</strong>
+	  Has anarchy trapped itself in a vortex of negativity, or can a call for love rescue it from itself?
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-patrick-dunn">Patrick Dunn</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  Spring, 2012
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-anarchism">anarchism</a>
+	  	  <a href="../../topics.html#library-index-fifth-estate">Fifth Estate</a>
+	  	  <a href="../../topics.html#library-index-fifth-estate-386">Fifth Estate #386</a>
+	  	  <a href="../../topics.html#library-index-ideas">ideas</a>
+	  	  <a href="../../topics.html#library-index-theory">theory</a>
+	  
+	</p>
+		
+	<strong>Source:</strong>
+	FIFTH ESTATE #386, Spring, 2012, Vol. 47, No. 1, page 24
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="patrick-dunn-against-negation-or-positively-revolting.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Patrick Dunn</h2>
+	
+	<h1 id="textttitleh">Against Negation Or, Positively Revolting</h1>
+	
+	<h2>Has anarchy trapped itself in a vortex of negativity, or can a call for love rescue it from itself?</h2>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>By its own lights, the history of modernity has been a history of resentment, despair, and annihilation. God is dead, and nothing is permitted. The echo, in every cell of our dark prison, is a resounding “No!” Hegel, an early and influential theorist of modernity, found a starting point for modern philosophy in the spirit of absolute negation. This negative path, he averred, was necessitated by the very form of modern subjectivity. Through a series of dialectical movements, thought could bring itself into reconciliation with the positive order of the day. But the task of relentlessly overcoming its alienation by seeking to fill the void inherent in self-consciousness could not be ignored by the modern subject.
+</p><p>When the social world fails to satisfy this essential need for disalienation, modernity’s path of negation turns revolutionary. This is what happened in the revolutionary thought of the nineteenth- and twentieth-centuries — but the same impulse had already found expression in the Radical Reformation, and then again in the thought of Rousseau and his Romantic contemporaries.
+</p><p>Unlike many of these earlier critics of modernity, however, the secular revolutionaries of the nineteenth century, including Marx and Bakunin, regarded the absolute negation of present reality as the only possible path to collective liberation. In this way, the theoretical and eschatological discourses of earlier ages were replaced by a revolutionary rhetoric that was explicitly historical and practical.
+</p><p>In the aftermath of this revolutionary project, it has become increasingly clear that the alienating form of life Marx set out to negate — what he called Capital — has no external boundaries. Indeed, as the globalizing terrors of the past two hundred years have run their course, we have learned that the only kind of negation adequate to the task of confronting modern alienation is total negation.
+</p><p>In short, the negativity at the core of the modern subject, when invested in a radical critique of society, opposes itself to anything and everything that appears as a mediated object. The revolutionary spirit of modernity finally culminates in the nihilistic refrain sung by Groucho Marx (as Quincy Adams Wagstaff) in Horse Feathers: “Whatever it is, I’m against it!”
+</p><p>Whether the “I” in this statement is taken to signify an individual, a class, or a species, the result is the same. That is, the subject of modern thought is not defined by reference to any empirical identity, but by the negative impulse itself — and by the unity of the objective totality to which it is opposed.
+</p><p>As pure negativity, the subject is, perhaps first of all, against itself, against any identification with a determinate object or agency. But it is also against the objects themselves; insofar as any object exists, it implies mediation, heteronomy, unfreedom.
+</p><p>This absolute revolt against objective reality expresses a drive for liberation that suppresses all relationship to otherness; whatever appears as a thinkable object must necessarily be annihilated.
+</p><p>This is, at bottom, a philosophical ideal of pure freedom, estrangement from which constitutes the basis for the modern revolutionary logic of totality and negation. It is from the reactive standpoint of this ideal that the revolutionary scene of confrontation between subject and object is held in thought.
+</p><p>Like Marxism and millenarianism before it, anarchism is an ideology that seeks to fulfill this logic on the plane of historical practice. Throughout the twentieth century, anarchists have extended the critique of alienation/domination to seemingly insurmountable regimes of social mediation — including such basic institutions as time; language, symbolic thought, and domestication. To this extent, anarchism has emerged as the most resolute embodiment of the modern logic of revolutionary negation. In its most dialectical forms, anarchism constitutes an attempt to actualize the spirit of total negation through a sustained path of collective action.
+</p><p>The problem with anarchism is not, as others have claimed, that it is insincere, that it partakes of absurdities, or that it leads to performative self-contradictions. On the contrary, anarchism suffers from too much sincerity. Or rather, it takes too seriously, and is too willing to believe in, the liberatory promises of eighteenth- and nineteenth-century Enlightenment rationality. For it is a quintessentially modern gesture that defines the anarchist project of revolution: the purely negative subject standing in absolute moral judgment against the alien totality.
+</p><p>The logic of this gesture — the logic of subjectivity, which oscillates between absolute negation and affirmation — corresponds to no possible experience of freedom, or even of alienation. Its only service is to the abstract order of dialectical thought itself.
+</p><p>The origin of this movement of abstraction is fundamentally reactive; dialectical negation begins as a repression, or denial, of forces and potentials that life has set into motion.
+</p><p>Blinded by the gaze of its own totalizing logic, the modern subject closes itself off from the subtle play of connections that exceed its human, all too human categories.
+</p><p>The resulting discourse is the rationality of mass society, the dialectic of global, blank humanity, turned to face itself in a final, impotent roar of self-hatred and annihilation.
+</p><p>It is the rationality of estrangement and separation, which sucks the blood from its earthen body until it is left with nothing but the frozen image of its own distended corpse.
+</p><p>Anarchism attempts to politicize this abstract negativity through a radical assault on social institutions, but the total negation of established reality is not a course of action that can be rationally undertaken. The members of society cannot gather together and decide to do away with the totality, no matter how anarchist their ideology. Such a decision simply is not available within the order of conscious agency, let alone the order of existing democracy.
+</p><p>But the framework of modern rationality never was anything more than an illusion: the double-illusion of a free and pure subject mirroring a unified, knowable order of reality. It is no surprise, then, that the myth of modern freedom finds its fulfillment in humanity’s willingness to think itself into an incapacitated condition in which no action is possible.
+</p><p>What this condition reveals is the true nature of the modern, revolutionary subject — its true desire and raison d’etre. This subjectivity, incessantly repeating its empty gesture of total negation, is not moved by an instinct for freedom, or a will to transform relations of power. Rather, its nauseating logic of self-negation satisfies only the modern impulse towards death and destruction — the impulse of final surrender that underlies the entire Death-Machine that is modern civilization.
+</p><p>In the insurrectionist and nihilist strains of anarchism, which in recent years have gained prominence, this desire begins to make itself explicit. The destruction conceived by these insurrectionists is rampant and largely indiscriminate. No particular social institutions are targeted for criticism; no specific strategies of action are articulated or carried out.
+</p><p>One is tempted to find in this generalized will to rebellion the purest distillation of the modern spirit of negativity. But then one wonders why the rebels do not go all the way down the path of destruction and join the advocates of voluntary human extinction in granting the death-impulse its rightful stench of defeat.
+</p><p>Then again, what other options do we have left? Those who have been following the latest stages of the human death-march will undoubtedly want an answer to this question. Near as we are to the apocalyptic endgame of mass society, what choice is there but to confront the global order on its own turf? This would mean conjuring a voice as universal, as anonymous, as devoid of substance as the voice of the global spectacle itself.
+</p><p>But it is my key contention that this voice, which we identify as the voice of an oppressive totality, is already our own creation.
+</p><p>We hear this voice only because we are constantly listening for it, constantly tuned in for its latest News Reports, fixed in rapt attention to receive the “present order’s uninterrupted discourse about itself.”
+</p><p>But this discourse is a lie, and so is the myth of its total negation — a lie that makes the true believers among us accomplices in our own imprisonment. Perhaps it is time that we unplug from this thought-vacuum and scatter our attentions and curiosities elsewhere. We are free to do so — perhaps even, as we may find, once we have learned to transmit new voices, and communicate through new channels of energy, freer than we think.
+</p><p>To put the point in slightly more metaphysical terms, the totality exists only as the abstract object of the thought that wishes for its negation. By adopting this standpoint of abstraction, anarchism confines itself to the level of ideology.
+</p><p>Ideology, by its very nature, is rooted in hatred. It binds itself to an abstract other, enslaves itself to its own self-constitution, simply in order to have something to be against.
+</p><p>Love, by contrast, is an attractive force; it opens up new fields of rebirth where once there was only barren desert. If ever there was a time when we needed to find our way out of the desert, my friends, we have reached that crossroads.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+
