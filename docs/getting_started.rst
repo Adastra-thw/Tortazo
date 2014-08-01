@@ -26,15 +26,13 @@ However, if you want to use the development version located in the GIT repositor
 * Fabric: http://docs.fabfile.org/en/1.8/
 * Requests: https://pypi.python.org/pypi/requests
 * IPython: http://ipython.org/
-* PrettyTable: https://pypi.python.org/pypi/PrettyTable
-* pynessus-rest: https://github.com/Adastra-thw/pynessus-rest
+* PyNessus-rest: https://github.com/Adastra-thw/pynessus-rest
 * PySNMP: http://pysnmp.sourceforge.net/
 * topia.termextract: https://pypi.python.org/pypi/topia.termextract/
 * Jinja2: http://jinja.pocoo.org/docs/intro/
 * BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
 * Scrapy: http://scrapy.org/
-* Simpy:  https://pypi.python.org/pysi/simpy/
-* PyFiglet:  https://github.com/pwaller/pyfiglet
+* PyFiglet: https://github.com/pwaller/pyfiglet
 
 =================
 Other Dependencies    

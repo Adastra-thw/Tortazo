@@ -33,6 +33,7 @@ from config import config
 import os
 import random
 from plugins.bruteforce.bruterPlugin import bruterPlugin
+import cookielib
 
 class HiddenSiteSpider(CrawlSpider):
 
@@ -42,6 +43,7 @@ class HiddenSiteSpider(CrawlSpider):
         self.localTunnel = localTunnel
         self.start_urls=[localTunnel]
         self.visitedLinks=[]
+        self.deepLinks = None
         #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
         self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), follow=True, callback=self.parse),]
 
@@ -59,6 +61,9 @@ class HiddenSiteSpider(CrawlSpider):
 
     def setUserAgents(self, userAgents):
         self.userAgents = userAgents
+
+    def setDeepLinks(self, deepLinks):
+        self.deepLinks = deepLinks
 
     def parse(self, response):
         if response.url in self.visitedLinks:
@@ -80,13 +85,15 @@ class HiddenSiteSpider(CrawlSpider):
             indexResource = onion.rfind('/')
             dirStructure = onion[:indexResource]
             resource = onion[indexResource:].replace('/','')
-
-            if os.path.exists(config.deepWebCrawlerOutdir+dirStructure) == False:
-                os.makedirs(config.deepWebCrawlerOutdir+dirStructure)
-            if resource == '':
-                open(config.deepWebCrawlerOutdir+dirStructure+"/index.html", 'wb').write(response.body)
-            else:
-                open(config.deepWebCrawlerOutdir+dirStructure+resource, 'wb').write(response.body)
+            try:
+                if os.path.exists(config.deepWebCrawlerOutdir+dirStructure) == False:
+                    os.makedirs(config.deepWebCrawlerOutdir+dirStructure)
+                if resource == '':
+                    open(config.deepWebCrawlerOutdir+dirStructure+"/index.html", 'wb').write(response.body)
+                else:
+                    open(config.deepWebCrawlerOutdir+dirStructure+resource, 'wb').write(response.body)
+            except:
+                pass
 
         if response.headers['Content-Type'].find('text/') <= -1:
             return
@@ -111,11 +118,16 @@ class HiddenSiteSpider(CrawlSpider):
             if len(selector.xpath('//form').extract()) > 0:
                 browser = mechanize.Browser()
                 browser.open(response.url)
+                cj = cookielib.LWPCookieJar()
+                browser.set_cookiejar(cj)
+                #some browser options.
+                browser.set_handle_equiv(True)
+                browser.set_handle_gzip(True)
+                browser.set_handle_redirect(True)
+                browser.set_handle_referer(True)
                 browser.set_handle_robots(False)
-
-                browser.set_handle_equiv(False)
-                userAgent = random.choice(self.userAgents)
-                browser.addheaders = [('User-agent', userAgent), ('Accept', '*/*')]
+                # User-Agent
+                browser.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
                 try:
                     pageForms = {}
                     formId = 0
@@ -147,7 +159,7 @@ class HiddenSiteSpider(CrawlSpider):
             parent = response.meta.get('item')
             item['pageParent'] = parent
 
-        if self.links:
+        if self.links and self.deepLinks is None:
             linksFound = response.xpath('//a/@href').extract()
             for url in linksFound:
                 if len(self.userAgents) > 0:
@@ -157,4 +169,20 @@ class HiddenSiteSpider(CrawlSpider):
                     yield newRequest
                 else:
                     yield Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
+
+
+        if self.links and self.deepLinks is not None:
+            linksFound = response.xpath('//a/@href').extract()
+            for url in linksFound:
+                if self.deepLinks > 0:
+                    if len(self.userAgents) > 0:
+                        userAgent = random.choice(self.userAgents)
+                        newRequest = Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
+                        newRequest.headers.setdefault('User-Agent', userAgent)
+                        yield newRequest
+                    else:
+                        yield Request(urljoin(response.url, url), callback=self.parse,errback=lambda _: item,meta=dict(item=item))
+                    self.deepLinks = self.deepLinks-1
+                else:
+                    break
         yield item

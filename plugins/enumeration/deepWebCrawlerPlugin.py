@@ -21,7 +21,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from prettytable import PrettyTable
+from plugins.texttable import Texttable
 import os
 import difflib
 import signal
@@ -65,48 +65,85 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.crawlRulesImages = crawlRulesImages
 
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
-        #CHECK THIS: https://docs.python.org/2/library/difflib.html#module-difflib
-        responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        if hiddenWebSite.startswith('http://') == False:
+            hiddenWebSite = "http://"+hiddenWebSite
+        if webSite.startswith('http://') == False:
+            webSite = "http://"+webSite
+        try:
+            responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        except Exception as exc:
+            print "[-] Exception connecting to the hidden service. Is the hidden service up and running? "+str(exc.message)
+            return
+
+        ratio = 0
+
         if responseHidden.status_code == 200:
-            responseRelay = self.serviceConnector.performHTTPConnection('http://'+webSite, method="GET")
-            if responseRelay.status_code == 200:
-                print "[+] Executing the matcher tool against the responses."
-                ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
-                print "[+] Match ration between the web sites: %s " %(str(ratio))
-            else:
-                print "[-] The website returned an non HTTP 200 code. %s " %(str(responseRelay.status_code))
+            try:
+                responseRelay = self.serviceConnector.performHTTPConnection(webSite, method="GET")
+                if responseRelay.status_code == 200:
+                    print "[+] Executing the matcher tool against the responses."
+                    ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
+                    print "[+] Match ration between the web sites: %s " %(str(ratio))
+                else:
+                    print "[-] The website returned an non HTTP 200 code. %s " %(str(responseRelay.status_code))
+            except Exception as exc:
+                print "[-] Exception connecting to the web service. Is the web service up and running? "+str(exc.message)
+                return
+
         else:
             print "[-] The Hidden website returned an non HTTP 200 code. %s " %(str(responseHidden.status_code))
 
+        print "[+] The percentage of equivalence between the contents of web sites found in the relays and hidden services are: \n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+
+        elements = [ ["Hidden Service", "WebSite", "Percentage"] ]
+        elements.append( [ hiddenWebSite, webSite, str(ratio)  ] )
+        table.add_rows( elements )
+        print table.draw() + "\\n"
+
 
     def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
-        #CHECK THIS: https://docs.python.org/2/library/difflib.html#module-difflib
-        responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        if hiddenWebSite.startswith('http://') == False:
+            hiddenWebSite = "http://"+hiddenWebSite
+        try:
+            responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
+        except Exception as exc:
+            print "[-] Exception connecting to the hidden service. Is the hidden service up and running? "+str(exc.message)
+            return
+        ratios={}
         for node in self.torNodes:
             if responseHidden.status_code == 200:
-                responseRelay = self.serviceConnector.performHTTPConnection('http://'+node.host, method="GET")
-                if responseRelay.status_code == 200:
-                    ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
-                    print str(ratio)
-    
-    def crawlImagesHiddenWebSite(self, hiddenWebSite, outputDir='./', storeBD=False):
-        from bs4 import BeautifulSoup
-        from PIL import Image
-        from StringIO import StringIO
+                try:
+                    responseRelay = self.serviceConnector.performHTTPConnection('http://'+node.host, method="GET")
+                    if responseRelay.status_code == 200:
+                        print "[+] Executing the matcher tool against the responses."
+                        ratio = difflib.SequenceMatcher(None,responseHidden.content,responseRelay.content).ratio()
+                        ratios[node.host] = str(ratio)
+                except:
+                    continue
+        print "[+] The percentage of equivalence between the contents of web sites found in the relays and hidden services are: \n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
 
-        response = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite)
-        rootSite = BeautifulSoup(response.content)
-        images = rootSite.find_all("img")
-        for image in images:
-            responseImage = self.onionHttpGetRequest(images.src)
-            i = Image.open(StringIO(responseImage.content))
+        elements = [ ["Hidden Service", "Relay", "Percentage"]]
+        for key in ratios.keys():
+            elements.append( [ hiddenWebSite, str(key), str(ratios[key])  ] )
+
+        table.add_rows( elements )
+        print table.draw() + "\\n"
+
 
 
     def crawlOnionWebSite(self, hiddenWebSite, hiddenWebSitePort=80,
                          socatTcpListenPort=8765,
-                         crawlImages=True, crawlLinks=True,
-                         crawlContents=True, crawlFormData=True,
-                         useRandomUserAgents=True):
+                         crawlImages=False, crawlLinks=True,
+                         crawlContents=True, crawlFormData=False,
+                         useRandomUserAgents=True, deepLinks=None):
         onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         onionSocket.settimeout(1)
         result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
@@ -131,7 +168,7 @@ class deepWebCrawlerPlugin(BasePlugin):
             self.__crawl(hiddenWebSite, socatTcpListenPort,
                          extraPath=extraPath, crawlImages=crawlImages,
                          crawlLinks=crawlLinks, crawlContents=crawlContents,
-                         crawlFormData=crawlFormData, useRandomUserAgents=useRandomUserAgents)
+                         crawlFormData=crawlFormData, useRandomUserAgents=useRandomUserAgents, deepLinks=deepLinks)
             os.killpg(socatProcess.pid, signal.SIGTERM)
             print "[+] Socat process killed."
         except Exception as exce:
@@ -141,7 +178,7 @@ class deepWebCrawlerPlugin(BasePlugin):
             os.killpg(socatProcess.pid, signal.SIGTERM)
             sleep(5)
 
-    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True, useRandomUserAgents=True):
+    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True, useRandomUserAgents=True, deepLinks=None):
         def catch_item(sender, item, **kwargs):
             item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort)+extraPath, hiddenWebSite)
             print "[+] Processing URL %s ...  " %(item['url'])
@@ -172,6 +209,8 @@ class deepWebCrawlerPlugin(BasePlugin):
         spider.setLinks(crawlLinks)
         spider.setContents(crawlContents)
         spider.setForms(crawlFormData)
+        spider.setDeepLinks(deepLinks)
+
         if useRandomUserAgents:
             spider.setUserAgents(self.fuzzDBReader.getUserAgentsFromFuzzDB())
 
@@ -200,16 +239,19 @@ class deepWebCrawlerPlugin(BasePlugin):
 
         
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['setExtractorRulesAllow', 'Sets the XPATH rules to specify the allowed pages to visit and analyze. This value will be passed to the "allow" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor".', "self.setExtractorRulesAllow('index\.php| index\.jsp')"])
-        tableHelp.add_row(['setExtractorRulesDeny', 'Sets the XPATH rules to specify the disallowed pages to visit and analyze. This value will be passed to the "deny" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor"', "self.setExtractorRulesDeny('index\.php| index\.jsp')"])
-        tableHelp.add_row(['setCrawlRulesLinks', 'Sets the XPath rules to extract links from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//a/@href"', "self.setCrawlRulesLinks('//a[contains(@href, 'confidential')]/@href')"])
-        tableHelp.add_row(['setCrawlRulesImages', 'Sets the XPath rules to extract images from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//img/@src"', "self.setCrawlRulesImages('//a[contains(@href, 'image')]/@href')" ])
-        tableHelp.add_row(['compareWebSiteWithHiddenWebSite', 'This function compares the contents of a website in clear web with the contents of a web site in TOR deep web. The return value will be a percent of correlation and similitude between both sites.', 'self.compareWebSiteWithHiddenWebSite("http://exit-relay-found.com/", "http://gai12dase4sw3f5a.onion/")'])
-        tableHelp.add_row(['compareRelaysWithHiddenWebSite', 'This function will perform an HTTP connection against every relay found and if the response is a HTTP 200 status code, performs an HTTP connection against the hidden service specified and compares the contents of both responses.  The return value will be a percent of correlation and similitude between both sites.', 'self.compareRelaysWithHiddenWebSite("http://gai12dase4sw3f5a.onion/")'])
-        tableHelp.add_row(['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value: True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found.  crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/") -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False) -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)'])
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        print tableHelp
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ["setExtractorRulesAllow", 'Sets the XPATH rules to specify the allowed pages to visit and analyze. This value will be passed to the "allow" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor".', "self.setExtractorRulesAllow('index\.php| index\.jsp')"],
+                         ['setExtractorRulesDeny', 'Sets the XPATH rules to specify the disallowed pages to visit and analyze. This value will be passed to the "deny" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor"', "self.setExtractorRulesDeny('index\.php| index\.jsp')"],
+                         ['setCrawlRulesLinks', 'Sets the XPath rules to extract links from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//a/@href"', "self.setCrawlRulesLinks('//a[contains(@href, 'confidential')]/@href')"],
+                         ['setCrawlRulesImages', 'Sets the XPath rules to extract images from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//img/@src"', "self.setCrawlRulesImages('//a[contains(@href, 'image')]/@href')" ],
+                         ['compareWebSiteWithHiddenWebSite', 'This function compares the contents of a website in clear web with the contents of a web site in TOR deep web. The return value will be a percent of correlation and similitude between both sites.', 'self.compareWebSiteWithHiddenWebSite("http://exit-relay-found.com/", "http://gai12dase4sw3f5a.onion/")'],
+                         ['compareRelaysWithHiddenWebSite', 'This function will perform an HTTP connection against every relay found and if the response is a HTTP 200 status code, performs an HTTP connection against the hidden service specified and compares the contents of both responses.  The return value will be a percent of correlation and similitude between both sites.', 'self.compareRelaysWithHiddenWebSite("http://gai12dase4sw3f5a.onion/")'],
+                         ['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value: True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found.  crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/") -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False) -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)']
+                        ])
+        print table.draw() + "\\n"
