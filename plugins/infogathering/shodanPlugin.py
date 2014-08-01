@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from prettytable import PrettyTable
+from plugins.texttable import Texttable
 import shodan
 
 class shodanPlugin(BasePlugin):
@@ -124,15 +124,19 @@ class shodanPlugin(BasePlugin):
             print "[*] Shodan API key not set. This is mandatory to perform searches using Shodan"
 
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['setApiKey', 'Sets the API Key string.', 'self.setApiKey("XXXXXXXXXXXX")'])
-        tableHelp.add_row(['setApiKeyFile', 'Sets the API Key file. Reads the first line of the file and then sets the API Key string.', 'self.setApiKeyFile("/home/apiKeyFile")'])
-        tableHelp.add_row(['basicSearchQuery', 'Performs a basic search with Shodan. By default prints the 10 first results', 'self.basicSearchQuery("OpenSSL 1.0.1", 15)'])
-        tableHelp.add_row(['basicSearchAllRelays', 'Performs a basic search with Shodan against all TOR relays. Uses the "net" filter.', 'self.basicSearchAllRelays("OpenSSL 1.0.1")'])
-        tableHelp.add_row(['basicSearchByRelay', 'Performs a basic search with Shodan against the specified TOR relay.', 'self.basicSearchByRelay("OpenSSL 1.0.1", "80.80.80.80")'])
-        tableHelp.add_row(['basicSearchByNickname', 'Performs a basic search with Shodan against the specified TOR NickName.', 'self.basicSearchByNickname("OpenSSL 1.0.1", "TORNickName")'])
-        print tableHelp
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                         ['setApiKey', 'Sets the API Key string.', 'self.setApiKey("XXXXXXXXXXXX")'],
+                         ['setApiKeyFile', 'Sets the API Key file. Reads the first line of the file and then sets the API Key string.', 'self.setApiKeyFile("/home/apiKeyFile")'],
+                         ['basicSearchQuery', 'Performs a basic search with Shodan. By default prints the 10 first results', 'self.basicSearchQuery("OpenSSL 1.0.1", 15)'],
+                         ['basicSearchAllRelays', 'Performs a basic search with Shodan against all TOR relays. Uses the "net" filter.', 'self.basicSearchAllRelays("OpenSSL 1.0.1")'],
+                         ['basicSearchByRelay', 'Performs a basic search with Shodan against the specified TOR relay.', 'self.basicSearchByRelay("OpenSSL 1.0.1", "80.80.80.80")'],
+                         ['basicSearchByNickname', 'Performs a basic search with Shodan against the specified TOR NickName.', 'self.basicSearchByNickname("OpenSSL 1.0.1", "TORNickName")']
+                        ])
+        print table.draw() + "\\n"

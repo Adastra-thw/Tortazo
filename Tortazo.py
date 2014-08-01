@@ -56,14 +56,11 @@ from pyfiglet import Figlet
 #
 #   TODO IN V1.1:
 #   - Report issues to the administrator of the exitnode.
-#   - Gather information about SNMP Devices.
 #   - Upload and execute files to the compromised machines using SFTP and FTP.
 #   - Check subterfuge: http://code.google.com/p/subterfuge/
-#   - Allow 'windows', 'linux', 'bsd', and other filters. (Also, allow any type of OS.)
 #   - Check what do bannergrab:  http://sourceforge.net/projects/bannergrab/
 #   - GeoLocation, for example using: http://www.melissadata.com/lookups/iplocation.asp?ipaddress=46.17.138.212
 #   - Use PyInstaller to generate an executable for Linux and Windows.
-#   - Banner ArtAscii
 #   - Plugin Arguments. Socks Settings, Start TOR Instance, etc.
 #   - Develop unit tests using Python unittest.
 #   - Plugin for Metasploit Framework.

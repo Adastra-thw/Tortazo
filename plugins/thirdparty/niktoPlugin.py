@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from prettytable import PrettyTable
+from plugins.texttable import Texttable
 import subprocess
 
 class niktoPlugin(BasePlugin):
@@ -99,14 +99,18 @@ class niktoPlugin(BasePlugin):
                     pass
 
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['executeAll', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'])
-        tableHelp.add_row(['executeAllOnPort', 'Execute Nikto against all TOR relays found on the specified port.', 'self.executeAllOnPort(8080, "nikto_switches")'])
-        tableHelp.add_row(['executeByNickname', 'Execute Nikto against the relay specified by NickName (by default, against port 80)', "self.executeByNickname('TorNodeNickName','nikto_switches')"])
-        tableHelp.add_row(['executeByIP', 'Execute Nikto against the relay specified by Ip Address (by default, against port 80)', "self.executeByIP('80.80.80.80','nikto_switches')"])
-        tableHelp.add_row(['executeByIPOnPort', 'Execute Nikto against the relay specified by Ip Address on the specified port', "self.executeByIPOnPort('80.80.80.80', 8080, 'nikto_switches')"])
-        print tableHelp
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                         ['executeAll', 'Execute Nikto against all TOR relays found (by default, against port 80)', 'self.executeAll("nikto_switches")'],
+                         ['executeAllOnPort', 'Execute Nikto against all TOR relays found on the specified port.', 'self.executeAllOnPort(8080, "nikto_switches")'],
+                         ['executeByNickname', 'Execute Nikto against the relay specified by NickName (by default, against port 80)', "self.executeByNickname('TorNodeNickName','nikto_switches')"],
+                         ['executeByIP', 'Execute Nikto against the relay specified by Ip Address (by default, against port 80)', "self.executeByIP('80.80.80.80','nikto_switches')"],
+                         ['executeByIPOnPort', 'Execute Nikto against the relay specified by Ip Address on the specified port', "self.executeByIPOnPort('80.80.80.80', 8080, 'nikto_switches')"]
+                        ])
+        print table.draw() + "\\n"

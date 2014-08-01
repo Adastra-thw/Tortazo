@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
 from plugins.attack.utils.exploit32745 import HeartBleedExploit
+from plugins.texttable import Texttable
 
 class heartBleedPlugin(BasePlugin):
     '''
@@ -60,13 +61,16 @@ class heartBleedPlugin(BasePlugin):
 
     def help(self):
         print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['setTarget', 'Set the relay for the HeartBleed attack. Check the targets using the function "printRelaysFound". Default port: 443.', 'self.setTarget("1.2.3.4")'])
-        tableHelp.add_row(['setTargetWithPort', 'Set the relay and port for the HeartBleed attack. Check the targets using the function "printRelaysFound". ', 'self.setTarget("1.2.3.4", "8443")'])
-        tableHelp.add_row(['startAttack', 'Starts the HeartBleed attack against the specified target. ', 'self.startAttack()'])
-        tableHelp.add_row(['startAttackAllRelays', 'Starts the HeartBleed attack against all relays loaded in the plugin. Default port: 443 ', 'self.startAttackAllRelays()'])
-        print tableHelp
+                table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                         ['setTarget', 'Set the relay for the HeartBleed attack. Check the targets using the function "printRelaysFound". Default port: 443.', 'self.setTarget("1.2.3.4")'],
+                         ['setTargetWithPort', 'Set the relay and port for the HeartBleed attack. Check the targets using the function "printRelaysFound". ', 'self.setTarget("1.2.3.4", "8443")'],
+                         ['startAttack', 'Starts the HeartBleed attack against the specified target. ', 'self.startAttack()'],
+                         ['startAttackAllRelays', 'Starts the HeartBleed attack against all relays loaded in the plugin. Default port: 443 ', 'self.startAttackAllRelays()']
+                        ])
+        print table.draw() + "\\n"

@@ -26,6 +26,7 @@ from requests.exceptions import ConnectionError
 from requests.exceptions import Timeout
 from requests.exceptions import InvalidURL
 import os
+from plugins.texttable import Texttable
 
 class deepWebDirBruterPlugin(BasePlugin):
 
@@ -111,3 +112,18 @@ class deepWebDirBruterPlugin(BasePlugin):
 
     def dirBruterOnHiddenService(self, hiddenService, dictFile=''):
         self.dirBruterOnRelay(hiddenService, dictFile=dictFile, proxy=True)
+
+
+    def help(self):
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ["dirBruterOnRelay", 'Try to discover web resources in the relay specified. If the dictionary is not specified, Tortazo will use FuzzDB.', "self.dirBruterOnRelay('89.34.51.116', dictFile='/home/user/dictFile.txt')"],
+                         ['dirBruterOnAllRelays', 'Try to discover web resources in the relays stored in database. If the dictionary is not specified, Tortazo will use FuzzDB.', "self.dirBruterOnAllRelays(port=8080,dictFile='/home/user/dictFile.txt')"],
+                         ['dirBruterOnHiddenService', 'Try to discover web resources in the specified hidden service. If the dictionary is not specified, Tortazo will use FuzzDB.', 'self.dirBruterOnHiddenService("http://awjrc4y7j9po3ke3.onion")']
+                        ])
+        print table.draw() + "\\n"

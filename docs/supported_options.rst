@@ -19,6 +19,7 @@ The following is a list of single switches which doesn’t receive any value. Th
 * **-C  /  --clean-database**: Deletes every record stored in the database.
 * **-L / --list-plugins**: List of plugins loaded in Tortazo. Shows author, description, version, etc.
 * **-U  / --use-localinstance**: Tortazo can start a new instance of TOR automatically using the switch “-T  /  --tor-localinstance”. Use the switch “-U  /  --use-localinstance” and if you want to use the socks proxy and other settings defined in the instance started by Tortazo.
+* **-R  / --onion-repository**: Start Tortazo in Onion Repository Mode.
 
 =================
 Valued Switches.
@@ -36,3 +37,5 @@ Valued Switches.
 * **-P <plugin_name>  /  --use-plugin <plugin_name>**: Loads the interpreter for the specified plugin. The plugins have a different section and a develop reference that you should check it. The name of the plugin must be registered in Tortazo. The interpreter loaded will contain the functions and elements available in the plugin. This elements will allows the interaction with the plugin and are easily accessible by IPython interpreter.
 * **-T <path_to_torrc>  /  --tor-localinstance <path_to_torrc>**: Start a new local TOR instance with the "torrc" file specified. Usually, the user will specify the switch “-U  /  --use-localinstance” too.
 * **-S  <scan_identifier>  /  --scan-identifier <scan_identifier>**: Specify the scan identifier in the Scan table. Tortazo will use the relays related with the scan identifier specified with this switch. This switch should be used with the switch “-D  /  --use-database”.
+* **-W <Number of workers> / --workers-repository <Number of workers>**: Number of threads used to process the ONION addresses generated.
+* **-V <chars>  /   --validchars-repository <chars>**: Valid characters to use in the generation process of onion addresses. Default: All characters between a-z and digits between 2-7

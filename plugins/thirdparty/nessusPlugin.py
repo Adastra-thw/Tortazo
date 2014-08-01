@@ -25,7 +25,7 @@ from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from config import config
 from pynessus.rest.client.NessusClient import NessusClient
 from pynessus.rest.data.NessusStructure import NessusConverter
-from prettytable import PrettyTable
+from plugins.texttable import Texttable
 import sys
 
 class nessusPlugin(BasePlugin):
@@ -655,53 +655,52 @@ class nessusPlugin(BasePlugin):
         print tableReport
 
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['feed', 'Return the Nessus Feed', 'self.feed()'])
-        tableHelp.add_row(['serverSecureSettingsList', 'List of Server Secure Settings', 'self.serverSecureSettingsList()'])
-        tableHelp.add_row(['serverRegister', 'Registers the Nessus server with Tenable Network Security', "self.serverRegister('FEED_CODE')"])
-        tableHelp.add_row(['serverLoad', 'Server Load and Platform Type', "self.serverLoad()"])
-        tableHelp.add_row(['serverUuid', 'Server UUID', "self.serverUuid()"])
-        tableHelp.add_row(['userAdd', 'Create a new user', "self.userAdd('adastra','adastra',0)"])
-        tableHelp.add_row(['userEdit', 'Edit the user specified', "self.userEdit('adastra','new_password',1)"])
-        tableHelp.add_row(['userDelete', 'Delete the user specified', "self.userDelete('adastra')"])
-        tableHelp.add_row(['userChpasswd', 'Change the password for the user specified', "self.userChpasswd('adastra','new_password')"])
-        tableHelp.add_row(['usersList', 'List of users.', "self.usersList()"])
-        tableHelp.add_row(['pluginsList', 'List of plugins.', "self.pluginsList()"])
-        tableHelp.add_row(['pluginAttributesList', 'List of plugins attributes for plugin filtering.', "self.pluginListsFamily('AIX Local Security Checks')"])
-        tableHelp.add_row(['pluginDescription', 'Returns the entire description of a given plugin.', "self.pluginDescription('ping_host.nasl')"])
-        tableHelp.add_row(['pluginsAttributesFamilySearch', 'Filters against the family of plugins.', "self.pluginsAttributesFamilySearch('match','or','modicon','description')"])
-        tableHelp.add_row(['pluginsAttributesPluginSearch', 'Returns the plugins in a family that match a given filter criteria.', "self.pluginsAttributesPluginSearch('match','or','modicon','description','FTP')"])
-        tableHelp.add_row(['pluginsMd5', 'List of plugin file names and corresponding MD5 hashes.', "self.pluginsMd5()"])
-        tableHelp.add_row(['policyList', 'List of available policies, policy settings and default values.', "self.policyList()"])
-        tableHelp.add_row(['policyDelete', 'Delete the policy specified.', "self.policyDelete(POLICY_ID)"])
-        tableHelp.add_row(['policyCopy', 'Copies an existing policy to a new policy.', "self.policyCopy(POLICY_ID)"])
-        tableHelp.add_row(['policyDownload', 'Download the policy from the server to the local system.', "self.policyDownload(POLICY_ID, /home/user/policy.nessus)"])
-        tableHelp.add_row(['scanAllRelays', 'Create a new scan with all relays loaded.', "self.scanAllRelays(<POLICY_ID>, 'newScan')"])
-        tableHelp.add_row(['scanByRelay', 'Create a new scan with the specified relay.', "self.scanAllRelays(<POLICY_ID>, 'newScan', <IP_OR_NICKNAME>)"])
-        tableHelp.add_row(['scanStop', 'Stops the specified started scan.', "self.scanStop(<SCAN_UUID>)"])
-        tableHelp.add_row(['scanResume', 'Resumes the specified paused scan.', "self.scanResume(<SCAN_UUID>)"])
-        tableHelp.add_row(['scanPause', 'Pauses the specified actived scan.', "self.scanPause(<SCAN_UUID>)"])
-        tableHelp.add_row(['scanList', 'List of scans.', "self.scanList()"])
-        tableHelp.add_row(['scanTemplateAllRelays', 'Create a new scan template (scheduled) with all relays loaded.', "self.scanTemplateAllRelays(<POLICY_ID>,<TEMPLATE_NAME>)"])
-        tableHelp.add_row(['scanTemplateByRelay', 'Create a new scan template (scheduled) with the specified relay.', "self.scanTemplateByRelay(<POLICY_ID>,<TEMPLATE_NEW_NAME>,<IP_OR_NICKNAME>)"])
-        tableHelp.add_row(['scanTemplateEditAllRelays', 'Edit the scan template specified with all relays loaded.', "self.scanTemplateEditAllRelays(<POLICY_ID>,<TEMPLATE_NEW_NAME>)"])
-        tableHelp.add_row(['scanTemplateEditByRelay', 'Edit the scan template specified with the specified relay.', "self.scanTemplateEditByRelay(<TEMPLATE_UUID>,<TEMPLATE_NEW_NAME>,<POLICY_ID>,<IP_OR_NICKNAME>)"])
-        tableHelp.add_row(['scanTemplateDelete', 'Delete the scan template specified.', "self.scanTemplateDelete(<TEMPLATE_UUID>)"])
-        tableHelp.add_row(['scanTemplateLaunch', 'Launch the scan template specified.', "self.scanTemplateLaunch(<TEMPLATE_UUID>)"])
-        tableHelp.add_row(['reportList', 'List of available scan reports.', "self.reportList()"])
-        tableHelp.add_row(['reportDelete', 'Delete the specified report.', "self.reportDelete(<REPORT_UUID>)"])
-        tableHelp.add_row(['reportHosts', 'List of hosts contained in a specified report.', "self.reportHosts(<REPORT_UUID>)"])
-        tableHelp.add_row(['reportPorts', 'List of ports and the number of findings on each port.', "self.reportPorts(<REPORT_UUID>,<HOSTNAME>)"])
-        tableHelp.add_row(['reportDetails', 'Details of a scan for a given host.', "self.reportDetails(<REPORT_UUID>,<HOSTNAME>,<PORT>,<PROTOCOL>)"])
-        tableHelp.add_row(['reportTags', 'Tags of a scan for a given host.', "self.reportTags(<REPORT_UUID>, <HOSTNAME>)"])
-        tableHelp.add_row(['reportAttributesList', 'List of filter attributes associated with a given report.', "self.reportAttributesList(<REPORT_UUID>)"])
-
-
-        tableHelp.align["Function"] = "l"
-        tableHelp.align["Description"] = "l"
-        tableHelp.align["Example"] = "l"
-        print tableHelp
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                         ['feed', 'Return the Nessus Feed', 'self.feed()'],
+                         ['serverSecureSettingsList', 'List of Server Secure Settings', 'self.serverSecureSettingsList()'],
+                         ['serverRegister', 'Registers the Nessus server with Tenable Network Security', "self.serverRegister('FEED_CODE')"],
+                         ['serverLoad', 'Server Load and Platform Type', "self.serverLoad()"],
+                         ['serverUuid', 'Server UUID', "self.serverUuid()"],
+                         ['userAdd', 'Create a new user', "self.userAdd('adastra','adastra',0)"],
+                         ['userEdit', 'Edit the user specified', "self.userEdit('adastra','new_password',1)"],
+                         ['userDelete', 'Delete the user specified', "self.userDelete('adastra')"],
+                         ['userChpasswd', 'Change the password for the user specified', "self.userChpasswd('adastra','new_password')"],
+                         ['usersList', 'List of users.', "self.usersList()"],
+                         ['pluginsList', 'List of plugins.', "self.pluginsList()"],
+                         ['pluginAttributesList', 'List of plugins attributes for plugin filtering.', "self.pluginListsFamily('AIX Local Security Checks')"],
+                         ['pluginDescription', 'Returns the entire description of a given plugin.', "self.pluginDescription('ping_host.nasl')"],
+                         ['pluginsAttributesFamilySearch', 'Filters against the family of plugins.', "self.pluginsAttributesFamilySearch('match','or','modicon','description')"],
+                         ['pluginsAttributesPluginSearch', 'Returns the plugins in a family that match a given filter criteria.', "self.pluginsAttributesPluginSearch('match','or','modicon','description','FTP')"],
+                         ['pluginsMd5', 'List of plugin file names and corresponding MD5 hashes.', "self.pluginsMd5()"],
+                         ['policyList', 'List of available policies, policy settings and default values.', "self.policyList()"],
+                         ['policyDelete', 'Delete the policy specified.', "self.policyDelete(POLICY_ID)"],
+                         ['policyCopy', 'Copies an existing policy to a new policy.', "self.policyCopy(POLICY_ID)"],
+                         ['policyDownload', 'Download the policy from the server to the local system.', "self.policyDownload(POLICY_ID, /home/user/policy.nessus)"],
+                         ['scanAllRelays', 'Create a new scan with all relays loaded.', "self.scanAllRelays(<POLICY_ID>, 'newScan')"],
+                         ['scanByRelay', 'Create a new scan with the specified relay.', "self.scanAllRelays(<POLICY_ID>, 'newScan', <IP_OR_NICKNAME>)"],
+                         ['scanStop', 'Stops the specified started scan.', "self.scanStop(<SCAN_UUID>)"],
+                         ['scanResume', 'Resumes the specified paused scan.', "self.scanResume(<SCAN_UUID>)"],
+                         ['scanPause', 'Pauses the specified actived scan.', "self.scanPause(<SCAN_UUID>)"],
+                         ['scanList', 'List of scans.', "self.scanList()"],
+                         ['scanTemplateAllRelays', 'Create a new scan template (scheduled) with all relays loaded.', "self.scanTemplateAllRelays(<POLICY_ID>,<TEMPLATE_NAME>)"],
+                         ['scanTemplateByRelay', 'Create a new scan template (scheduled) with the specified relay.', "self.scanTemplateByRelay(<POLICY_ID>,<TEMPLATE_NEW_NAME>,<IP_OR_NICKNAME>)"],
+                         ['scanTemplateEditAllRelays', 'Edit the scan template specified with all relays loaded.', "self.scanTemplateEditAllRelays(<POLICY_ID>,<TEMPLATE_NEW_NAME>)"],
+                         ['scanTemplateEditByRelay', 'Edit the scan template specified with the specified relay.', "self.scanTemplateEditByRelay(<TEMPLATE_UUID>,<TEMPLATE_NEW_NAME>,<POLICY_ID>,<IP_OR_NICKNAME>)"],
+                         ['scanTemplateDelete', 'Delete the scan template specified.', "self.scanTemplateDelete(<TEMPLATE_UUID>)"],
+                         ['scanTemplateLaunch', 'Launch the scan template specified.', "self.scanTemplateLaunch(<TEMPLATE_UUID>)"],
+                         ['reportList', 'List of available scan reports.', "self.reportList()"],
+                         ['reportDelete', 'Delete the specified report.', "self.reportDelete(<REPORT_UUID>)"],
+                         ['reportHosts', 'List of hosts contained in a specified report.', "self.reportHosts(<REPORT_UUID>)"],
+                         ['reportPorts', 'List of ports and the number of findings on each port.', "self.reportPorts(<REPORT_UUID>,<HOSTNAME>)"],
+                         ['reportDetails', 'Details of a scan for a given host.', "self.reportDetails(<REPORT_UUID>,<HOSTNAME>,<PORT>,<PROTOCOL>)"],
+                         ['reportTags', 'Tags of a scan for a given host.', "self.reportTags(<REPORT_UUID>, <HOSTNAME>)"],
+                         ['reportAttributesList', 'List of filter attributes associated with a given report.', "self.reportAttributesList(<REPORT_UUID>)"]
+                        ])
+        print table.draw() + "\\n"

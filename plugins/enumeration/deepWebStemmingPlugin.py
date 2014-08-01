@@ -25,6 +25,7 @@ from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from prettytable import PrettyTable
 from collections import Counter
 from config import config
+from plugins.texttable import Texttable
 
 class deepWebStemmingPlugin(BasePlugin):
     '''
@@ -97,11 +98,15 @@ class deepWebStemmingPlugin(BasePlugin):
 
 
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
-        tableHelp = PrettyTable(["Function", "Description", "Example"])
-        tableHelp.padding_width = 1
-        tableHelp.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelp.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelp.add_row(['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugins. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer")'])
-        tableHelp.add_row(['stemmingHiddenService', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")'])
-        print tableHelp
+        print "[*] Functions availaible available in the Plugin...\n"
+        table = Texttable()
+        table.set_cols_align(["l", "l", "c"])
+        table.set_cols_valign(["m", "m", "m"])
+        table.set_cols_width([40,55,55])
+        table.add_rows([ ["Function", "Description", "Example"],
+                         ['help', 'Help Banner', 'self.help()'],
+                         ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                         ['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugins. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer hitman")'],
+                         ['stemmingHiddenService', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")']
+                        ])
+        print table.draw() + "\\n"

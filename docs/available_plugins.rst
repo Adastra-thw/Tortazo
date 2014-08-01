@@ -92,6 +92,7 @@ crawlOnionWebSite                      This function executes a crawler against 
                                        contents of every page found. 
                                        crawlFormData: Search the forms in every page and store 
                                        that structure in database.
+                                       deepLinks: Number of Links that the crawler will visit in deep. 
                                        useRandomUserAgents: Use a random list of User-Agents 
                                        in every HTTP connection performed by the crawler. 
                                        FuzzDB project is used to get a list of User-Agents reading the file 

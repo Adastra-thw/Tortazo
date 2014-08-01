@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from w3af.core.data.parsers.url import URL as URL_KLASS
-from prettytable import PrettyTable
+from plugins.texttable import Texttable
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from w3af.core.controllers.w3afCore import w3afCore
 from w3af.core.data.options.option_list import OptionList
@@ -320,64 +320,93 @@ class w3afPlugin(BasePlugin):
         print "[*] Exploit vulnerability finished."
 
     def help(self):
-        print "[*] Functions availaible in the Plugin..."
+        print "[*] Functions availaible in the Plugin...\n"
         print "[*] Plugin Management Functions"
-        tableHelpPlugins = PrettyTable(["Function", "Description", "Example"])
-        tableHelpPlugins.padding_width = 1
-        tableHelpPlugins.add_row(['help', 'Help Banner', 'self.help()'])
-        tableHelpPlugins.add_row(['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'])
-        tableHelpPlugins.add_row(['showPluginsByType', 'List of available plugins filtered by type.', 'self.showPluginsByType("audit")'])
-        tableHelpPlugins.add_row(['showPluginTypes', 'List of available plugin types.', 'self.showPluginTypes()'])
-        tableHelpPlugins.add_row(['getEnabledPluginsByType', 'Enabled plugins by types.', 'self.getEnabledPluginsByType("audit")'])
-        tableHelpPlugins.add_row(['getPluginTypeDescription', 'Description for the plugin type specified.', 'self.getPluginTypeDescription("audit")'])
-        tableHelpPlugins.add_row(['getAllEnabledPlugins', 'List of enabled plugins.', 'self.getAllEnabledPlugins()'])
-        tableHelpPlugins.add_row(['enablePlugin', 'Enable a plugin.', 'self.enablePlugin("blind_sqli","audit")'])
-        tableHelpPlugins.add_row(['disablePlugin', 'Disable a plugin.', 'self.disablePlugin("blind_sqli","audit")'])
-        tableHelpPlugins.add_row(['enableAllPlugins', 'Enable all plugins.', 'self.enableAllPlugins("audit")'])
-        tableHelpPlugins.add_row(['disableAllPlugins', 'Disable all plugins.', 'self.disableAllPlugins("audit")'])
-        tableHelpPlugins.add_row(['getPluginOptions', 'Get Options for the plugin specified.', 'self.getPluginOptions("audit","blind_sqli")'])
-        tableHelpPlugins.add_row(['setPluginOptions', 'Set Options for the plugin specified.', 'self.setPluginOptions("audit","eval","boolean","use_time_delay","False")'])
-        tableHelpPlugins.add_row(['getPluginStatus', 'Check if the specified plugin is enabled.', 'self.getPluginStatus("audit","eval")'])
-        print tableHelpPlugins
+        tablePlugins = Texttable()
+        tablePlugins.set_cols_align(["l", "l", "c"])
+        tablePlugins.set_cols_valign(["m", "m", "m"])
+        tablePlugins.set_cols_width([40,55,55])
+        tablePlugins.add_rows([ ["Function", "Description", "Example"],
+                                ['help', 'Help Banner', 'self.help()'],
+                                ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
+                                ['showPluginsByType', 'List of available plugins filtered by type.', 'self.showPluginsByType("audit")'],
+                                ['showPluginTypes', 'List of available plugin types.', 'self.showPluginTypes()'],
+                                ['getEnabledPluginsByType', 'Enabled plugins by types.', 'self.getEnabledPluginsByType("audit")'],
+                                ['getPluginTypeDescription', 'Description for the plugin type specified.', 'self.getPluginTypeDescription("audit")'],
+                                ['getAllEnabledPlugins', 'List of enabled plugins.', 'self.getAllEnabledPlugins()'],
+                                ['enablePlugin', 'Enable a plugin.', 'self.enablePlugin("blind_sqli","audit")'],
+                                ['disablePlugin', 'Disable a plugin.', 'self.disablePlugin("blind_sqli","audit")'],
+                                ['enableAllPlugins', 'Enable all plugins.', 'self.enableAllPlugins("audit")'],
+                                ['disableAllPlugins', 'Disable all plugins.', 'self.disableAllPlugins("audit")'],
+                                ['getPluginOptions', 'Get Options for the plugin specified.', 'self.getPluginOptions("audit","blind_sqli")'],
+                                ['setPluginOptions', 'Set Options for the plugin specified.', 'self.setPluginOptions("audit","eval","boolean","use_time_delay","False")'],
+                                ['getPluginStatus', 'Check if the specified plugin is enabled.', 'self.getPluginStatus("audit","eval")']                                
+                              ])
+        
+        print tablePlugins.draw() + "\\n"
 
-        print "\n"
-        print "[*] Attack Functions"
-        tableHelpAttack = PrettyTable(["Function", "Description", "Example"])
-        tableHelpAttack.add_row(['setTarget', 'Sets the target for the attack (clear web)', 'self.setTarget("http://www.target.com")'])
-        tableHelpAttack.add_row(['setTargetDeepWeb', 'Sets the target in the DeepWeb of TOR.', 'self.setTarget("http://torlongonionpath.onion")'])
-        tableHelpAttack.add_row(['startAttack', 'Starts the attack.', 'self.startAttack()'])
-        print tableHelpAttack
+        print "[*] Attack Functions..."
+        tableAttack = Texttable()
+        tableAttack.set_cols_align(["l", "l", "c"])
+        tableAttack.set_cols_valign(["m", "m", "m"])
+        tableAttack.set_cols_width([40,55,55])
+        tableAttack.add_rows([ ["Function", "Description", "Example"],
+                               ['setTarget', 'Sets the target for the attack (clear web)', 'self.setTarget("http://www.target.com")'],
+                               ['setTargetDeepWeb', 'Sets the target in the DeepWeb of TOR.', 'self.setTarget("http://torlongonionpath.onion")'],
+                               ['startAttack', 'Starts the attack.', 'self.startAttack()']
+                              ])
+        
+        print tableAttack.draw() + "\\n"
 
-        print "\n"
-        print "[*] Misc Settings Functions"
-        tableHelpMiscSettings = PrettyTable(["Function", "Description", "Example"])
-        tableHelpMiscSettings.add_row(['listMiscConfigs', 'List of Misc Settings', 'self.listMiscConfigs()'])
-        tableHelpMiscSettings.add_row(['setMiscConfig', 'Sets a Misc Settings', 'self.setMiscConfig("msf_location","/opt/msf")'])
-        print tableHelpMiscSettings
+        print "[*] Misc Settings Functions..."
+        tableMisc = Texttable()
+        tableMisc.set_cols_align(["l", "l", "c"])
+        tableMisc.set_cols_valign(["m", "m", "m"])
+        tableMisc.set_cols_width([40,55,55])
+        tableMisc.add_rows([ ["Function", "Description", "Example"],
+                               ['listMiscConfigs', 'List of Misc Settings', 'self.listMiscConfigs()'],
+                               ['setMiscConfig', 'Sets a Misc Settings', 'self.setMiscConfig("msf_location","/opt/msf")']                             
+                              ])
+        
+        print tableMisc.draw() + "\\n"
 
-        print "\n"
         print "[*] Profile Management Functions"
-        tableHelpMiscSettings = PrettyTable(["Function", "Description", "Example"])
-        tableHelpMiscSettings.add_row(['listProfiles', 'List of Profiles', 'self.listProfiles()'])
-        tableHelpMiscSettings.add_row(['useProfile', 'Use a Profile', 'self.useProfile("profileName")'])
-        tableHelpMiscSettings.add_row(['createProfileWithCurrentConfig', 'Creates a new Profile with the current settings', 'self.createProfileWithCurrentConfig("profileName", "Profile Description")'])
-        tableHelpMiscSettings.add_row(['modifyProfileWithCurrentConfig', 'Modifies an existing profile with the current settings', 'self.modifyProfileWithCurrentConfig("profileName", "Profile Description")'])
-        tableHelpMiscSettings.add_row(['removeProfile', 'Removes an existing profile', 'self.removeProfile("profileName")'])
-        print tableHelpMiscSettings
+        tableProfile = Texttable()
+        tableProfile.set_cols_align(["l", "l", "c"])
+        tableProfile.set_cols_valign(["m", "m", "m"])
+        tableProfile.set_cols_width([40,55,55])
+        tableProfile.add_rows([["Function", "Description", "Example"],
+                               ['listProfiles', 'List of Profiles', 'self.listProfiles()'],
+                               ['useProfile', 'Use a Profile', 'self.useProfile("profileName")'],
+                               ['createProfileWithCurrentConfig', 'Creates a new Profile with the current settings', 'self.createProfileWithCurrentConfig("profileName", "Profile Description")'],
+                               ['modifyProfileWithCurrentConfig', 'Modifies an existing profile with the current settings', 'self.modifyProfileWithCurrentConfig("profileName", "Profile Description")'],
+                               ['removeProfile', 'Removes an existing profile', 'self.removeProfile("profileName")']
+                              ])
+        
+        print tableProfile.draw() + "\\n"
 
-        print "\n"
         print "[*] Shell Management Functions"
-        tableHelpShells = PrettyTable(["Function", "Description", "Example"])
-        tableHelpShells.add_row(['listShells', 'List of Shells', 'self.listShells()'])
-        tableHelpShells.add_row(['executeCommand', 'Executes a command in the specified shell', 'self.executeCommand(1,"lsp")'])
-        print tableHelpShells
+        tableShell = Texttable()
+        tableShell.set_cols_align(["l", "l", "c"])
+        tableShell.set_cols_valign(["m", "m", "m"])
+        tableShell.set_cols_width([40,55,55])
+        tableShell.add_rows([   ["Function", "Description", "Example"],
+                                ['listShells', 'List of Shells', 'self.listShells()'],
+                                ['executeCommand', 'Executes a command in the specified shell', 'self.executeCommand(1,"lsp")']                                
+                              ])
+        print tableShell.draw() + "\\n"
 
-        print "\n"
         print "[*] Vulns and Info Management Functions"
-        tableHelpShells = PrettyTable(["Function", "Description", "Example"])
-        tableHelpShells.add_row(['listAttackPlugins', 'List of attack plugins.', 'self.listAttackPlugins()'])
-        tableHelpShells.add_row(['listInfos', 'List of Infos in the Knowledge Base of W3AF', 'self.listInfos()'])
-        tableHelpShells.add_row(['listVulnerabilities', 'List of Vulns in the Knowledge Base of W3AF', 'self.listVulnerabilities()'])
-        tableHelpShells.add_row(['exploitAllVulns', 'Exploits all vulns in the Knowledge Base of W3AF', 'self.exploitVulns("sqli")'])
-        tableHelpShells.add_row(['exploitVuln', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)'])
-        print tableHelpShells
+        tableVulns = Texttable()
+        tableVulns.set_cols_align(["l", "l", "c"])
+        tableVulns.set_cols_valign(["m", "m", "m"])
+        tableVulns.set_cols_width([40,55,55])
+        tableVulns.add_rows([   ["Function", "Description", "Example"],
+                                ['listAttackPlugins', 'List of attack plugins.', 'self.listAttackPlugins()'],
+                                ['executeCommand', 'Executes a command in the specified shell', 'self.executeCommand(1,"lsp")'],
+                                ['listInfos', 'List of Infos in the Knowledge Base of W3AF', 'self.listInfos()'],
+                                ['listVulnerabilities', 'List of Vulns in the Knowledge Base of W3AF', 'self.listVulnerabilities()'],
+                                ['exploitAllVulns', 'Exploits all vulns in the Knowledge Base of W3AF', 'self.exploitVulns("sqli")'],
+                                ['exploitVuln', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)']
+                              ])
+        print tableVulns.draw() + "\\n"    
