@@ -97,6 +97,8 @@ crawlOnionWebSite                      This function executes a crawler against 
                                        in every HTTP connection performed by the crawler. 
                                        FuzzDB project is used to get a list of User-Agents reading the file 
                                        fuzzdb/attack-payloads/http-protocol/user-agents.txt
+                                       bruterOnProtectedResource: If true, when the spider found an HTTP protected res,
+                                       tries to execute an bruteforce attack using the specified dict file or FuzzDB.
 
 ====================================   ==========================================================================     ==========================================================================================================
 

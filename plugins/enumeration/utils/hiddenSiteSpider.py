@@ -46,6 +46,11 @@ class HiddenSiteSpider(CrawlSpider):
         self.deepLinks = None
         #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
         self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), follow=True, callback=self.parse),]
+        self.crawlRulesLinks = "//a/@href"
+        self.crawlRulesImages = '//img/@src'
+        self.dictFile = None
+
+
 
     def setImages(self, images):
         self.images = images
@@ -65,13 +70,31 @@ class HiddenSiteSpider(CrawlSpider):
     def setDeepLinks(self, deepLinks):
         self.deepLinks = deepLinks
 
+    def setCrawlRulesLinks(self, crawlRulesLinks):
+        self.crawlRulesLinks = crawlRulesLinks
+
+    def setCrawlRulesImages(self, crawlRulesImages):
+        self.crawlRulesImages = crawlRulesImages
+
+    def setDictForBruter(self, dictFile):
+        self.dictFile = dictFile
+
+
+    def setBruterOnProtectedResource(self, bruterOnProtectedResource):
+        self.bruterOnProtectedResource = bruterOnProtectedResource
+
     def parse(self, response):
         if response.url in self.visitedLinks:
             return
         else:
             self.visitedLinks.append(response.url)
-        #if response.status == 401:
+        if response.status == 401:
             #Request authentication.
+            bruter = bruterPlugin(torNodes=[])
+            if response.url.contains('.onion') and self.bruterOnProtectedResource:
+                print "[+] HTTP Protected resource found. As you've indicated, we're gonna start an HTTP Dictionary Attack."
+                bruter.httpBruterOnHiddenService(response.url, dictFile=self.dictFile)
+
 
         item = HiddenSitePage()
         if self.contents:
@@ -113,7 +136,7 @@ class HiddenSiteSpider(CrawlSpider):
             headers = str(header)+" : "+str(value)+"\n"+headers
         item['headers']  =  headers
         if self.images:
-            item['imagesSrc'] = selector.xpath('//img/@src').extract()
+            item['imagesSrc'] = selector.xpath(self.crawlRulesImages).extract()
         if self.forms:
             if len(selector.xpath('//form').extract()) > 0:
                 browser = mechanize.Browser()
@@ -160,7 +183,7 @@ class HiddenSiteSpider(CrawlSpider):
             item['pageParent'] = parent
 
         if self.links and self.deepLinks is None:
-            linksFound = response.xpath('//a/@href').extract()
+            linksFound = response.xpath(self.crawlRulesLinks).extract()
             for url in linksFound:
                 if len(self.userAgents) > 0:
                     userAgent = random.choice(self.userAgents)
@@ -172,7 +195,7 @@ class HiddenSiteSpider(CrawlSpider):
 
 
         if self.links and self.deepLinks is not None:
-            linksFound = response.xpath('//a/@href').extract()
+            linksFound = response.xpath(self.crawlRulesLinks).extract()
             for url in linksFound:
                 if self.deepLinks > 0:
                     if len(self.userAgents) > 0:

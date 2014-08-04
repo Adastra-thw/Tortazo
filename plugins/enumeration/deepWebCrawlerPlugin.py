@@ -47,22 +47,31 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.extractorRulesDeny=['']
         self.crawlRulesLinks = '//a/@href'
         self.crawlRulesImages = '//img/@src'
+        self.dictFile = None
 
     def __del__(self):
         if len(self.torNodes) > 0:
             self.debug("[*] DeepWebPlugin Destroyed!")
 
     def setExtractorRulesAllow(self, extractorRulesAllow):
+        print "[+] Setting allow rules ... %s " %(extractorRulesAllow)
         self.extractorRulesAllow = extractorRulesAllow
 
     def setExtractorRulesDeny(self, extractorRulesDeny):
+        print "[+] Setting deny rules ... %s " %(extractorRulesDeny)
         self.extractorRulesDeny = extractorRulesDeny
 
     def setCrawlRulesLinks(self, crawlRulesLinks):
+        print "[+] Setting rules for the links extractor... %s " %(crawlRulesLinks)
         self.crawlRulesLinks = crawlRulesLinks
 
     def setCrawlRulesImages(self, crawlRulesImages):
+        print "[+] Setting rules for the images extractor... %s " %(crawlRulesImages)
         self.crawlRulesImages = crawlRulesImages
+
+    def setDictForBruter(self, dictFile):
+        print "[+] Setting Dictionary File ... %s " %(dictFile)
+        self.dictFile = dictFile
 
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
         if hiddenWebSite.startswith('http://') == False:
@@ -143,7 +152,8 @@ class deepWebCrawlerPlugin(BasePlugin):
                          socatTcpListenPort=8765,
                          crawlImages=False, crawlLinks=True,
                          crawlContents=True, crawlFormData=False,
-                         useRandomUserAgents=True, deepLinks=None):
+                         useRandomUserAgents=True, deepLinks=None,
+                         bruterOnProtectedResource=False):
         onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         onionSocket.settimeout(1)
         result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
@@ -168,7 +178,7 @@ class deepWebCrawlerPlugin(BasePlugin):
             self.__crawl(hiddenWebSite, socatTcpListenPort,
                          extraPath=extraPath, crawlImages=crawlImages,
                          crawlLinks=crawlLinks, crawlContents=crawlContents,
-                         crawlFormData=crawlFormData, useRandomUserAgents=useRandomUserAgents, deepLinks=deepLinks)
+                         crawlFormData=crawlFormData, useRandomUserAgents=useRandomUserAgents, deepLinks=deepLinks, bruterOnProtectedResource=bruterOnProtectedResource)
             os.killpg(socatProcess.pid, signal.SIGTERM)
             print "[+] Socat process killed."
         except Exception as exce:
@@ -178,7 +188,7 @@ class deepWebCrawlerPlugin(BasePlugin):
             os.killpg(socatProcess.pid, signal.SIGTERM)
             sleep(5)
 
-    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True, useRandomUserAgents=True, deepLinks=None):
+    def __crawl(self, hiddenWebSite, localPort, extraPath='', crawlImages=True, crawlLinks=True,crawlContents=True, crawlFormData=True, useRandomUserAgents=True, deepLinks=None, bruterOnProtectedResource=False):
         def catch_item(sender, item, **kwargs):
             item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort)+extraPath, hiddenWebSite)
             print "[+] Processing URL %s ...  " %(item['url'])
@@ -210,6 +220,16 @@ class deepWebCrawlerPlugin(BasePlugin):
         spider.setContents(crawlContents)
         spider.setForms(crawlFormData)
         spider.setDeepLinks(deepLinks)
+        if self.crawlRulesLinks != None:
+            spider.setCrawlRulesLinks(self.crawlRulesLinks)
+        if self.crawlRulesImages != None:
+            spider.setCrawlRulesImages(self.crawlRulesImages)
+        if self.dictFile != None:
+            spider.setDictForBruter(self.dictFile)
+
+
+        spider.setBruterOnProtectedResource(bruterOnProtectedResource)
+
 
         if useRandomUserAgents:
             spider.setUserAgents(self.fuzzDBReader.getUserAgentsFromFuzzDB())
@@ -250,8 +270,9 @@ class deepWebCrawlerPlugin(BasePlugin):
                          ['setExtractorRulesDeny', 'Sets the XPATH rules to specify the disallowed pages to visit and analyze. This value will be passed to the "deny" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor"', "self.setExtractorRulesDeny('index\.php| index\.jsp')"],
                          ['setCrawlRulesLinks', 'Sets the XPath rules to extract links from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//a/@href"', "self.setCrawlRulesLinks('//a[contains(@href, 'confidential')]/@href')"],
                          ['setCrawlRulesImages', 'Sets the XPath rules to extract images from every webpage analyzed. Default value should be enough to almost every case, however you can use this function to overwrite this value. Default: "//img/@src"', "self.setCrawlRulesImages('//a[contains(@href, 'image')]/@href')" ],
+                         ['setDictForBruter', 'Sets the Dictionary file for HTTP Bruteforce attacks on protected resources.', 'self.setDictForBruter("/home/user/dictFile.txt")'],
                          ['compareWebSiteWithHiddenWebSite', 'This function compares the contents of a website in clear web with the contents of a web site in TOR deep web. The return value will be a percent of correlation and similitude between both sites.', 'self.compareWebSiteWithHiddenWebSite("http://exit-relay-found.com/", "http://gai12dase4sw3f5a.onion/")'],
                          ['compareRelaysWithHiddenWebSite', 'This function will perform an HTTP connection against every relay found and if the response is a HTTP 200 status code, performs an HTTP connection against the hidden service specified and compares the contents of both responses.  The return value will be a percent of correlation and similitude between both sites.', 'self.compareRelaysWithHiddenWebSite("http://gai12dase4sw3f5a.onion/")'],
-                         ['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value: True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found. deepLinks: Number of Links that the crawler will visit in deep. crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/") -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False) -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)']
+                         ['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value is True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found. deepLinks: Number of Links that the crawler will visit in deep. bruterOnProtectedResource: If true, when the spider found an HTTP protected resource, tries to execute an bruteforce attack using the specified dict file or FuzzDB. crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/") -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False) -	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)']
                         ])
         print table.draw() + "\\n"
