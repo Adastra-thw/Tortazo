@@ -156,10 +156,10 @@ class TortazoDatabase:
             print "Unexpected error:", sys.exc_info()[0]
 
 
-    def insertOnionRepositoryResult(self, onionAddress, responseCode, responseHeaders ):
+    def insertOnionRepositoryResult(self, onionAddress, responseCode, responseHeaders, onionDescription):
         if self.cursor is None:
             self.initDatabase()
-        responseHiddenService = (onionAddress, responseCode, responseHeaders)
+        responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription)
         self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
         self.connection.commit()
 
@@ -192,7 +192,6 @@ class TortazoDatabase:
         else:
             self.cursor.execute(database.insertOnionRepositoryProgress, (onionAddress, validChars, datetime.now(), endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet))
         self.connection.commit()
-
 
 
 

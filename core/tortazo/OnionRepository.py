@@ -52,8 +52,8 @@ class RepositoryGenerator:
         self.finishedScan = False
 
 
-    def __createProcess(self, onion):
-        process = multiprocessing.Process(target=self.process.onionQueue.put, args=(onion,))
+    def __createProcess(self, onion,onionDescription=None):
+        process = multiprocessing.Process(target=self.process.onionQueue.put, args=((onion,onionDescription)))
         process.daemon=True
         process.start()
         process.join()
@@ -190,20 +190,22 @@ class RepositoryGenerator:
                 self.__loopFromFirstQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
 
 
-    def startGenerator(self):
+    def startGenerator(self,loadKnownAddresses):
         try:
             self.process.startProcess()
+            if loadKnownAddresses:
+                knownAddresses = open('db/knownOnionAddresses.txt', 'r')
+                for knownAddress in knownAddresses.readlines():
+                    address, serviceDescription = knownAddress.split(',')
+                    self.__createProcess(address)
+                self.process.onionQueue.join()                    
+                
+            
             if self.partialOnionAddress.lower() == 'random':
                 self.addressesGeneratorRandom()
             else:
                 self.addressesGeneratorIncremental()
         finally:
-            print "Process stoped... The indexes are: "
-            print "Partial Address"+ self.partialOnionAddress
-            print "First "+str(self.progressFirstQuartet)
-            print "Second "+str(self.progressSecondQuartet)
-            print "Thrid "+str(self.progressThirdQuartet)
-            print "Fourth "+str(self.progressFourthQuartet)
             self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
 
 
@@ -244,7 +246,7 @@ class RepositoryProcess:
 
     def processOnionUrl(self):
         while True:
-            onionUrl = self.onionQueue.get()
+            onionUrl,onionDescription = self.onionQueue.get()
             #HEAD REQUEST TO THE ONION SITE!!!
             #http://twistedmatrix.com/documents/current/web/howto/client.html
             #http://pythonquirks.blogspot.com.es/2011/04/twisted-asynchronous-http-request.html
@@ -256,7 +258,7 @@ class RepositoryProcess:
                 print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
                 print response.status_code
                 if response.status_code not in range(400,499):
-                    self.onionQueueResponses.put(response)
+                    self.onionQueueResponses.put((response,onionDescription))
                     self.onionQueueResponses.join()
             except Exception as exc:
                 if exc.message == 'connection timeout':
@@ -269,7 +271,7 @@ class RepositoryProcess:
 
     def saveAddressDetails(self):
         while True:
-            response = self.onionQueueResponses.get()
+            response,onionDescription = self.onionQueueResponses.get()
             print "[+] Saving in database Onion Address discovered..."
             #Save address details in database.
             #Table: OnionRepositoryProgess.        PartialOnionAddress, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet
@@ -278,5 +280,5 @@ class RepositoryProcess:
             for key in response.headers.keys():
                 headers = headers + key +' : '+ response.headers[key] +'\n'
 
-            self.repositoryGenerator.databaseConnection.insertOnionRepositoryResult(response.url, response.status_code, headers)
+            self.repositoryGenerator.databaseConnection.insertOnionRepositoryResult(response.url, response.status_code, headers, onionDescription)
             self.onionQueueResponses.task_done()

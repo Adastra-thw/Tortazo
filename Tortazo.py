@@ -290,7 +290,7 @@ class Cli(cli.Application):
 
                 self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
-                repository.startGenerator()
+                repository.startGenerator(tortazoConfiguration.)
                 self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 return
 
