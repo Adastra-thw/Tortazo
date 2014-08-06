@@ -238,7 +238,7 @@ class Cli(cli.Application):
         print "\n\n"
         print bannerTortazo.renderText('Tortazo v %s.%s' %(tortazoConfiguration.tortazo_majorversion,tortazoConfiguration.tortazo_minorversion) )
 
-        bannerAuthor = Figlet(font='threepoint')
+        bannerAuthor = Figlet(font='small')
         print "\n\n"
         print bannerAuthor.renderText('By Adastra ' )
         print bannerAuthor.renderText('@jdaanial \n' )
@@ -266,6 +266,8 @@ class Cli(cli.Application):
             try:
                 serviceConnector = ServiceConnector(self)
                 self.logger.info(term.format("[+] Entering in Onion Repository Mode. This process could take a lot of time depending what you know of the hidden service to discover...", term.Color.YELLOW))
+                if tortazoConfiguration.loadKnownOnionSites:
+                    self.logger.info(term.format("[+] Reading the file of known hidden services located in 'db/knwonOnionSites.txt'. Tortazo will try to feed the local database with that information. If you want to avoid this behavior, set to False the property: 'loadKnownOnionSites' in the 'config/config.py' configuration file ...", term.Color.YELLOW))
                 if self.onionRepositoryMode.lower() == 'random':
                     self.logger.info(term.format("[+] Random address generator selected ...", term.Color.YELLOW))
                 else:
@@ -290,7 +292,7 @@ class Cli(cli.Application):
 
                 self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
-                repository.startGenerator(tortazoConfiguration.)
+                repository.startGenerator(tortazoConfiguration.loadKnownOnionSites)
                 self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 return
 

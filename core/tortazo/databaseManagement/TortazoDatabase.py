@@ -159,9 +159,12 @@ class TortazoDatabase:
     def insertOnionRepositoryResult(self, onionAddress, responseCode, responseHeaders, onionDescription):
         if self.cursor is None:
             self.initDatabase()
-        responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription)
-        self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
-        self.connection.commit()
+        try:
+            responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription)
+            self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
+            self.connection.commit()
+        except:
+            pass
 
     def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
         if self.cursor is None:

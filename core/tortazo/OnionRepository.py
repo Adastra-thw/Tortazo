@@ -53,7 +53,7 @@ class RepositoryGenerator:
 
 
     def __createProcess(self, onion,onionDescription=None):
-        process = multiprocessing.Process(target=self.process.onionQueue.put, args=((onion,onionDescription)))
+        process = multiprocessing.Process(target=self.process.onionQueue.put, args=((onion,onionDescription),))
         process.daemon=True
         process.start()
         process.join()
@@ -194,19 +194,24 @@ class RepositoryGenerator:
         try:
             self.process.startProcess()
             if loadKnownAddresses:
-                knownAddresses = open('db/knownOnionAddresses.txt', 'r')
+                knownAddresses = open('db/knownOnionSites.txt', 'r')
                 for knownAddress in knownAddresses.readlines():
-                    address, serviceDescription = knownAddress.split(',')
-                    self.__createProcess(address)
-                self.process.onionQueue.join()                    
-                
-            
+                    knownAddress=knownAddress.replace('\n','')
+                    if knownAddress.startswith('#') == False and knownAddress != '':
+                        address = knownAddress.split(',')
+                        #self.process.httpConnectionHiddenSite(address[0],address[1])
+                        self.__createProcess(address[0],address[1])
+                self.process.onionQueue.join()
+
+
             if self.partialOnionAddress.lower() == 'random':
                 self.addressesGeneratorRandom()
             else:
                 self.addressesGeneratorIncremental()
         finally:
-            self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
+            if self.partialOnionAddress.lower() != 'random':
+                #Save incremental progress.
+                self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
 
 
 
@@ -247,26 +252,27 @@ class RepositoryProcess:
     def processOnionUrl(self):
         while True:
             onionUrl,onionDescription = self.onionQueue.get()
-            #HEAD REQUEST TO THE ONION SITE!!!
-            #http://twistedmatrix.com/documents/current/web/howto/client.html
-            #http://pythonquirks.blogspot.com.es/2011/04/twisted-asynchronous-http-request.html
-
-            httpAddress = "http://"+(''.join(onionUrl))+"/"
-
-            try:
-                response = self.repositoryGenerator.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
-                print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
-                print response.status_code
-                if response.status_code not in range(400,499):
-                    self.onionQueueResponses.put((response,onionDescription))
-                    self.onionQueueResponses.join()
-            except Exception as exc:
-                if exc.message == 'connection timeout':
-                    print httpAddress
-
-
-            #time.sleep(5)
+            print onionUrl,onionDescription
+            if onionDescription != None:
+                #Onion address known. Reading the file knownOnionSites.txt
+                httpAddress = onionUrl
+            else:
+                httpAddress = "http://"+(''.join(onionUrl))+"/"
+            self.httpConnectionHiddenSite(httpAddress,onionDescription)
             self.onionQueue.task_done()
+
+    def httpConnectionHiddenSite(self,httpAddress,onionDescription):
+        try:
+            response = self.repositoryGenerator.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
+            print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
+            print response.status_code
+            if response.status_code not in range(400,499):
+                self.onionQueueResponses.put((response,onionDescription))
+                self.onionQueueResponses.join()
+        except Exception as exc:
+            if exc.message == 'connection timeout':
+                print "[-] Connection Timeout to: "+httpAddress
+                pass
 
 
     def saveAddressDetails(self):
