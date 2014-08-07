@@ -143,11 +143,11 @@ class TortazoDatabase:
             self.cursor.execute(database.truncateOnionRepositoryResponses)
 
             #DeepWebPlugin tables.
-            self.cursor.execute(database.truncateCrawlerPluginFormControl)
-            self.cursor.execute(database.truncateCrawlerPluginForm)
-            self.cursor.execute(database.truncateCrawlerPluginPageImage)
-            self.cursor.execute(database.truncateCrawlerPluginImage)
-            self.cursor.execute(database.truncateCrawlerPluginPage)
+            self.cursor.execute(databasePlugins.truncateCrawlerPluginFormControl)
+            self.cursor.execute(databasePlugins.truncateCrawlerPluginForm)
+            self.cursor.execute(databasePlugins.truncateCrawlerPluginPageImage)
+            self.cursor.execute(databasePlugins.truncateCrawlerPluginImage)
+            self.cursor.execute(databasePlugins.truncateCrawlerPluginPage)
 
             self.connection.commit()
         except Exception, e:
@@ -163,8 +163,8 @@ class TortazoDatabase:
             responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription)
             self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
             self.connection.commit()
-        except:
-            pass
+        except Exception as e:
+            print e
 
     def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
         if self.cursor is None:

@@ -1,0 +1,9 @@
+Oracle JDBC Driver
+------------------
+Version:    11.1.0.7.0.
+Files:      ojdbc6.jar, orai18n.jar
+
+Oracle XML Developer's Kit (XDK)
+--------------------------------
+Version:    11.2
+Files:      xdb.jar, xmlparserv2.jar

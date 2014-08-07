@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keybindings name="TOAD" parent="$default$" active="false">
+  <bind>
+    <key>pressed F9</key>
+    <action-id>execute-asis-command</action-id>
+  </bind>
+  <bind>
+    <key>pressed F5</key>
+    <action-id>execute-command</action-id>
+  </bind>
+  <bind>
+    <key>shift pressed F9</key>
+    <action-id>execute-current-command</action-id>
+  </bind>
+</keybindings>
+

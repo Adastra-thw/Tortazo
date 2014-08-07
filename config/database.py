@@ -10,9 +10,9 @@
 ################################################################################################################################################
 
 databaseName="db/tortazo.db"
-createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer)"
-createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer)"
 createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer)"
+createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer, FOREIGN KEY (scanId) REFERENCES Scan(scanId))"
+createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(torNodeId))"
 createTableOnionRepositoryProgress="create table if not exists OnionRepositoryProgress (id integer primary key autoincrement, partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATETIME not null, endDate DATETIME, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponses="create table if not exists OnionRepositoryResponses (id integer primary key autoincrement, onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, UNIQUE(onionAddress))"
 

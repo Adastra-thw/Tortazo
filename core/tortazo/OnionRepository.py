@@ -77,6 +77,7 @@ class RepositoryGenerator:
             self.progressFirstQuartet = self.progressFirstQuartet + (first+1)
             self.progressSecondQuartet = 0
         self.process.onionQueue.join()
+        self.process.onionQueueResponses.join()
         self.finishedScan = True
 
     def __loopFromSecondQuartet(self, partialAddress, addressSecondQuartet):
@@ -90,6 +91,7 @@ class RepositoryGenerator:
             self.progressSecondQuartet = self.progressSecondQuartet + (second+1)
             self.progressThirdQuartet = 0
         self.process.onionQueue.join()
+        self.process.onionQueueResponses.join()
         self.finishedScan = True
 
     def __loopFromThirdQuartet(self, partialAddress, addressThirdQuartet):
@@ -100,6 +102,7 @@ class RepositoryGenerator:
             self.progressThirdQuartet = self.progressThirdQuartet + (thrid +1)
             self.progressFourthQuartet = 0
         self.process.onionQueue.join()
+        self.process.onionQueueResponses.join()
         self.finishedScan = True
 
 
@@ -108,6 +111,7 @@ class RepositoryGenerator:
             self.__createProcess(partialAddress+(''.join(onion4Quartet))+'.onion')
             self.progressFourthQuartet = self.progressFourthQuartet+1
         self.process.onionQueue.join()
+        self.process.onionQueueResponses.join()
         self.finishedScan = True
 
     def addressesGeneratorRandom(self):
@@ -119,6 +123,7 @@ class RepositoryGenerator:
         for address in addresses:
             self.__createProcess(address)'''
         self.process.onionQueue.join()
+        self.process.onionQueueResponses.join()
 
 
 
@@ -141,6 +146,7 @@ class RepositoryGenerator:
                     print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
                     if response.status_code not in range(400,499):
                         self.process.onionQueueResponses.put(response)
+                    self.process.onionQueueResponses.join()
                 except requests.exceptions.Timeout as timeout:
                     print timeout
                 except Exception as exc:
@@ -202,6 +208,7 @@ class RepositoryGenerator:
                         #self.process.httpConnectionHiddenSite(address[0],address[1])
                         self.__createProcess(address[0],address[1])
                 self.process.onionQueue.join()
+                self.process.onionQueueResponses.join()
 
 
             if self.partialOnionAddress.lower() == 'random':
@@ -260,15 +267,14 @@ class RepositoryProcess:
                 httpAddress = "http://"+(''.join(onionUrl))+"/"
             self.httpConnectionHiddenSite(httpAddress,onionDescription)
             self.onionQueue.task_done()
+        self.onionQueueResponses.join()
 
     def httpConnectionHiddenSite(self,httpAddress,onionDescription):
         try:
             response = self.repositoryGenerator.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
             print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
-            print response.status_code
             if response.status_code not in range(400,499):
                 self.onionQueueResponses.put((response,onionDescription))
-                self.onionQueueResponses.join()
         except Exception as exc:
             if exc.message == 'connection timeout':
                 print "[-] Connection Timeout to: "+httpAddress

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keybindings name="SQL Query Analyzer" parent="$default$" active="false">
+  <bind>
+    <key>shift pressed F5</key>
+    <action-id>execute-asis-command</action-id>
+  </bind>
+  <bind>
+    <key>pressed F5</key>
+    <action-id>execute-command</action-id>
+  </bind>
+</keybindings>
+

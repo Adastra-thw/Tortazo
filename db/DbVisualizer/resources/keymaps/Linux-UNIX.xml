@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keybindings name="Linux-UNIX" parent="$default$" active="false">
+   <bind>
+      <action-id>editor-select-all-command</action-id>
+      <key>NULL</key>
+   </bind>
+   <bind>
+      <action-id>delete-command</action-id>
+      <key>ctrl pressed DELETE</key>
+   </bind>
+   <bind>
+      <action-id>paste-command</action-id>
+      <key>ctrl pressed V</key>
+   </bind>
+   <bind>
+      <action-id>paste-command</action-id>
+      <key>ctrl pressed Y</key>
+   </bind>
+   <bind>
+      <action-id>paste-command</action-id>
+      <key>shift pressed INSERT</key>
+   </bind>
+   <bind>
+      <action-id>paste-command</action-id>
+      <key>pressed PASTE</key>
+   </bind>
+   <bind>
+      <action-id>undo-command</action-id>
+      <key>ctrl pressed Z</key>
+   </bind>
+   <bind>
+      <action-id>undo-command</action-id>
+      <key>shift ctrl pressed MINUS</key>
+   </bind>
+
+   <bind>
+      <action-id>close-command</action-id>
+      <key>ctrl pressed W</key>
+   </bind>
+   <bind>
+      <action-id>docking-frame-close-command</action-id>
+      <key>ctrl pressed W</key>
+   </bind>
+   <bind>
+      <action-id>docking-frame-close2-command</action-id>
+      <key>ctrl alt pressed W</key>
+   </bind>
+
+   <bind>
+      <action-id>nb.caret-end-line</action-id>
+      <key>ctrl pressed E</key>
+   </bind>
+   <bind>
+      <action-id>nb.caret-end-line</action-id>
+      <key>END</key>
+   </bind>
+   <!--
+  <bind>
+    <action-id>nb.caret-end-word</action-id>
+    <key>NULL</key>
+  </bind>
+  -->
+   <bind>
+      <action-id>nb.caret-line-first-column</action-id>
+      <key>ctrl pressed A</key>
+   </bind>
+   <bind>
+      <action-id>nb.caret-next-word</action-id>
+      <key>alt pressed F</key>
+   </bind>
+   <bind>
+      <action-id>nb.caret-previous-word</action-id>
+      <key>alt pressed B</key>
+   </bind>
+   <bind>
+      <action-id>nb.delete-next</action-id>
+      <key>ctrl pressed D</key>
+   </bind>
+   <bind>
+      <action-id>nb.delete-next</action-id>
+      <key>DELETE</key>
+   </bind>
+   <bind>
+      <action-id>nb.remove-line</action-id>
+      <key>NULL</key>
+   </bind>
+   <bind>
+      <action-id>nb.remove-line-end</action-id>
+      <key>ctrl pressed K</key>
+   </bind>
+   <bind>
+      <action-id>nb.remove-word</action-id>
+      <key>NULL</key>
+   </bind>
+   <bind>
+      <action-id>nb.remove-word-next</action-id>
+      <key>alt pressed D</key>
+   </bind>
+   <bind>
+      <action-id>nb.selection-begin</action-id>
+      <key>shift ctrl pressed HOME</key>
+   </bind>
+   <bind>
+      <action-id>nb.selection-begin</action-id>
+      <key>ctrl pressed LESS</key>
+   </bind>
+   <bind>
+      <action-id>nb.selection-end</action-id>
+      <key>shift ctrl pressed END</key>
+   </bind>
+   <bind>
+      <action-id>nb.selection-end</action-id>
+      <key>shift ctrl pressed LESS</key>
+   </bind>
+</keybindings>
+

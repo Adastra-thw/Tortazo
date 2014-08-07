@@ -1,0 +1,8 @@
+NuoDB JDBC Driver
+-----------------
+Version:    1.0
+Files:      nuodbjdbc.jar
+Reference:  http://www.nuodb.com
+
+"NuoDB, Inc. grants DbVis Software AB the right to bundle
+the NuoDB JDBC driver with DbVisualizer."
