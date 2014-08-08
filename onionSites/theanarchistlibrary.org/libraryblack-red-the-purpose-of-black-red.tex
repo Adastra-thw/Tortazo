@@ -1,0 +1,773 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Black \& Red  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+The Purpose of Black \& Red
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+If you don’t like it, make your own.
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+November, 1968
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\page[yes,right]
+
+{\bf What is Black \& Red?}
+
+
+Black \& Red is not a capitalist activity. It is anti-capitalist in its organization and its aims.
+
+
+Black \& Red is a subversive action, and in this it is not Liberal.
+
+
+Its present field of action is the student milieu, but Black \& Red is not a new intellectual current, a new “cultural trend” within the Capitalist University.
+
+
+Black \& Red is a new front in the world anti-capitalist struggle.
+
+
+It is an organic link between the theory-action of the world revolutionary movement and the action-theory of the new revolutionary front.
+
+
+Its aim is: “To create at long last a situation which goes beyond the point of no return” (International Situationists).
+
+
+{\bf Black \& Red is an anti-capitalist activity}
+
+
+The production of Black \& Red is not capitalist production.
+
+
+It is not the production of a commodity, nor a social relation between capitalists-owners and workers-producers, and it is not done for profit. Black \& Red has this in common with other media of the “underground press,” but not with Monthly Review or Ramparts, for example. Monthly Review, Maspero in France, Feltrinelli in Italy, are capitalist activities. They’re businesses which publish left-wing books. The underground presses are struggles. They don’t create profits. Frequently they don’t even reproduce the variable capital-the wages of the militants who produce them. As a result, these activities cannot sustain their producers. The time, the money, the energy of the militants who create these presses have to be LIBERATED out of capitalism in order to make the presses exist, in order to create these instruments of struggle.
+
+
+Not all the social relations within the existing society are necessarily capitalist relations. There are PRE-capitalist relations, for example family relations, where there is no commodity production, labor is not alienated from worker to capitalist, and production is not for profit. There are also NON-capitalist relations, for example, “revolutionary” political parties, which may exist for 50 years within capitalist society; religious organization; or hippies. These relations COEXIST with capitalist relations. They are all a part of capitalist “culture”; they do not destroy the capitalist relations.
+
+
+But the SOCIAL RELATIONS CREATED FOR THE PRODUCTION of Black \& Red are not, in principle, integrable within capitalist society. These relations DO NOT COEXIST with capitalist social relations. “Underground presses” cannot survive within capitalist society; in fact, they do not even have continuity within capitalist society; they have to be re-created from one issue to the next, from one meeting to the next; they are created only IN ORDER TO DESTROY capitalist relations. When people spend working-days engaged in production, and are not paid, either the activity stops, or capitalist society stops. They either make a revolution, or they become transformed into capitalist activities, like Monthly Review, which starts by paying wages, and then, why not make a profit as well, so as to invest, in order to make the operation grow? Some “underground presses” don’t even pay for their “constant capital,” for the equipment and material they use up. They don’t create any of their conditions for reproduction: they don’t reproduce themselves. They are created by revolutionary energy-they represent a struggle which is the same as the struggle of the movement itself: revolutionary activity demands the working-time and leisure-time of militants, WITHOUT PROVIDING THE MEANS OF LIFE which capitalist working-activity provides.
+
+
+This is why the “underground press” either DESTROYS capitalist society, or it is destroyed. IT’S EITHER REVOLUTION OR DEATH.
+
+
+{\bf Black \& Red is subversive, not liberal}
+
+
+Violence is the expression, the manifestation of the existence of irreconcilable contradictions in the capitalist system (class struggle, anti-imperialist struggle, struggle against alienation, i.e., for life). It is the expression of the consciousness of two antagonistic forces (Exploiter and Exploited; Colonizer-Colonized; World Capitalist System-World Revolutionary Movement), i.e., force A and force non-A, one of which is dominant, the other of which seeks to destroy the first
+
+
+The non-radical (we call him a Liberal) is situated in the dominant force, A, and denies the existence of non-A.
+
+
+He is an integral part of the dominant system; his motivation is moral. His moral attitude is the product of the capitalist ideology of PEACE, an ideology which completely contradicts IMPERIALIST PRACTICE. Imperialist practice destroys all the forces which are radically opposed to it The Liberal does not question working for the capitalist system and its consequence: IMPERIALIST VIOLENCE. What bothers him are only the MORAL consequences of his work within the system.
+
+
+This is why he wants VIOLENCE to end. But he can’t stop EITHER the Americans OR the Vietnamese; he can’t stop either the racists or the blacks. Since he’s “liberal,” since he agrees with the “aspirations” of the Vietnamese, of the blacks, he tells THEM to stop the violence. But as soon as THEY stop, the dominant system wins: America wins, Racism wins. The victim is not liberated: he’s forced to negotiate with his oppressor.
+
+
+The Liberal is an integral part of the dominant system. That is why his attitude aims to “change” (i.e., to interpret) the system from the inside, not to destroy (i.e., transform) it. When he presents himself as a radical, it is to create a new ideological current, a new group, sometimes even a group inspired by Marx’s analysis.
+
+
+Analysis, even “Marxist” analysis, without revolutionary practice, means CONVERSION to anew idea. Such analysis makes it possible for the Liberal to tell the revolutionary: Look at my accomplishments. I’ve created consciousness (i.e., “culture”). This is the way to change society. You activists want to go too fast It’s not yet time for action. If you want to act, if you want to fight right now, we will be clubbed and beaten. You are calling for repression. The consciousness (i.e., “culture”) we have created will be destroyed.
+
+
+The “consciousness” which the Liberal creates is consistent with PROFITS. All of his “revolutionary” activities have one thing in common: THEY ALL COEXIST WITH CAPITALISM. (We are not asking if the Capitalist System is better or worse with these things). Capitalism can survive with the type of “Critical Analysis” created by the Liberal.
+
+
+The Liberal talks about “critical consciousness,” but what he defends is the Capitalist University, Corporate-Military Research, Textbooks, Classrooms. These are the Liberal’s VALUES. The revolutionary who says that these are the Liberal’s instruments of oppression and repression, and that only a violent struggle against these instruments, these values, can destroy the system, is called an Extremist, a Dangerous Agitator. The Liberal calls him VIOLENT. And while calling him violent, THE LIBERAL CALLS THE POLICE.
+
+
+The Liberal knows that the society is sick with contradictions which spread in it like tumors. The Liberal submits to this sickness. He knows that the tumors have to be removed. The following analogy by B.R. Rafferty * shows that ACTION is the cutting-edge that separates the revolutionary from the Liberal. The first is the surgeon; the second runs in to prevent the operation.
+
+
+“Don’t operate! shouts the Liberal. What will you put in the place of the tumor?
+
+
+The surgeon answers: Nothing!”
+
+
+It’s the same as the question: What kind of exploitation will replace capitalist exploitation: What kind of alienation will replace capitalist alienation?
+
+
+The Liberal wants the surgeon to JUSTIFY the operation INSTEAD of carrying it out. The Liberal calls for an “alternative tumor,” are structured capitalist society. This gives the Liberal a basis for saying: at least we offer something positive, whereas all you do is offer something negative and destructive. The Liberal makes pictures of the “future society”- pictures of a restructured capitalism, or even pictures of a future “socialist” or “communist” society. And these pictures coexist with capitalist society; they are completely consistent with capitalist production relations. The revolutionary does not make pictures; he does not coexist with capitalist society; his aim is not to make pictures of society after the revolution, but to make revolutionary action. The Liberal has no conception of revolutionary action; for the Liberal, revolutionary action is destructive; it is just Violence.
+
+
+For the revolutionary, the problem is not VIOLENCE versus NON-VIOLENCE. Violence ALREADY EXISTS. Violence is the relation between the oppressor and the oppressed. Non-violence does not eliminate the relation between oppressor and oppressed. Neutrality does not eliminate violence. For the oppressed there is no neutrality. In the struggle of the oppressed to liberate themselves, one who does not act against oppression is an oppressor.
+
+
+The GI against whom the Vietnamese struggles is an oppressor, even if this GI is actually a worker who is exploited and oppressed, like the Vietnamese, by the capitalist system. It is up to the GI to decide. And GIs are in fact deciding. The growing number of deserters, the growing consciousness in the U.S., show that this is the problem which is being posed, by GIs, by black people, by students.
+
+
+The only choice is to take part in the struggle to eliminate the relation of oppressor-oppressed, colonizer-colonized. The only choice is to struggle against the capitalist system and its manifestations: imperialism for the Vietnamese, racism for black people, brainwashing for students. THIS IS THE CHOICE OF THE REVOLUTIONARY. Black \& Red makes this choice: this is what makes it subversive. Black \& Red is part of the struggle of the Vietnamese, of black militants in the U.S., of French and other revolutionary students. The violence of the revolutionary is the violence of all the oppressed against the violence of the dominant class. The violence of the revolutionary does not aim to transform the oppressed into a new oppressor, nor to restore the economic and social relations of exploitation, but to build a society without classes, without alienation, and thus without violence.
+
+
+{\bf Black \& Red is a new revolutionary front}
+
+
+Black \& Red is a new front in the world anti-capitalist struggle. Its geographical milieu is Kalamazoo: the high schools and universities. Its social milieu is students. Its activity is radical action against the University, against its stunting of creativity and its brainwashing. Its action is based on analysis which defines the University as an integral part of a larger whole: the world capitalist system.
+
+
+Black \& Red is an addition to the anti-capitalist struggle already being waged on other fronts:
+
+
+Its action parallels that of black revolutionaries struggling in ghettos against racism-racism which is the direct outgrowth of a world system of exploitation.
+
+
+Its action parallels that of Dodge revolutionary workers struggling against racism and against capitalist exploitation.
+
+
+Its action parallels that of European revolutionary workers at Citroen, Renault, Fiat, against the union bureaucracy and the capitalist owners.
+
+
+Its action parallels that of Bolivian revolutionaries and peasants struggling against landlords in the Andes-Bolivian revolutionaries who have expressed their understanding that they are not engaged in a local struggle, but in a struggle against the entire imperialist system.
+
+
+“Create One, Two, Three, Many Vietnams”-this is how Che Guevara expressed the need to struggle on all the fronts.
+
+
+The fact that the action of Black \& Red is situated in a student milieu is not a self-restriction; it is the definition of a specific front which is part of a larger struggle.
+
+
+The May revolutionary movement in France spread from the University to the factories. The University was transformed into a center of revolutionary coordination and diffusion for workers and students. This role had been played by worker-occupied factories in Russia in 1917.
+
+
+American workers are not a social category who will be “reached,” “organized,” or “led” by the students. They are situated in what is, potentially, one of the main fronts of the world anti-capitalist struggle. Up to now, they have been had by capitalist ideology, and they’ve been used against the oppressed. Until now, American workers have been brainwashed and have collaborated with their exploiters; this has not prevented colonized Algerians and Vietnamese, racially oppressed blacks, brainwashed students, French workers, Czech and Yugoslav students and workers, from starting to struggle on their own fronts. Each new front pushes the world anti-capitalist struggle closer to the point of no return. When American workers begin their own struggle within their factories, they will join the revolutionaries who have already begun struggling on other fronts.
+
+
+Thus Black \& Red is not addressed particularly to students, but to all revolutionaries engaged in the same struggle, to all people who are attempting to build a critique of their situation and a revolutionary movement within the structure which oppresses them.
+
+
+Black \& Red is the means of expression, action and analysis of an active minority. It is the expression of the practice of a specific group on a specific front. PRACTICE which is not communicated is not practice but merely isolated action; COMMUNICATION which is not followed by an extension of practice to a larger group is merely analysis of an action.
+
+
+Black \& Red is an attempt TO COMMUNICATE PRACTICE. The communication of practice extends over time and over space. Past practice of the world revolutionary movement is the basis for present action on a given front; present practice on any single front is a further extension of the practice of the entire world movement.
+
+
+Black \& Red is in a world context because the capitalist system is a unified world system, a world market. All opposition to it is a part of the same struggle. Thus Black \& Red is in solidarity with all other revolutionaries fighting on all fronts, and attempts to bring into the actions of Kalamazoo the analysis and experience of revolutionary students in Mexico, Berlin, Yugoslavia, Columbia, The analysis and experience of workers and students in France and Czechoslovakia.
+
+
+At the same time, the experience in Kalamazoo which is based on critical analysis of the entire world movement, is communicated (i.e., extended) to other fronts. This experience includes a systematic critique of capitalist ideology carried out in classrooms (modeled on actions of the German SDS), self-critiques of militants engaged in actions, critiques of pseudo-revolutionary “actions.” The purpose of the critiques and self-critiques is to push potential revolutionaries to self-analyses and reevaluations of the relation of forces, and to stimulate among potential revolutionaries the ABILITY TO ANALYZE ACTIONS and to realize that NOT EVERY dangerous action or provocation is a REVOLUTIONARY ACTION.
+
+
+Thus Black \& Red does not represent a new current of thought or a new method of analysis. It is not a new REVIEW, but the analytic and theoretical element of an action, addressed to people who are not interested in a cultural critique, but who have potential for action, and for the extension of revolutionary practice to a new front
+
+
+In this spirit, a formal critique of the contents or method of Black \& Red has no relevance unless it is an action-critique which bases its analysis on a specific action. To say that A NEW FRONT is ineffectual implies the capacity to CREATE ANOTHER FRONT. The interest of Black \& Red is not to be THE front, but A front. The very content of its purpose and practice is TO BE SURPASSED. Its interest is precisely the CREATION OF OTHER FRONTS.
+
+
+Black \& Red is not an INSTITUTION which defends its own existence against the pressure of history and even against the very revolution it aims for. If a larger revolutionary front can be created in Kalamazoo, Black \& Red will become part of it-either as Black \& Red, or as a group of revolutionaries. If a larger revolutionary front is not created, then Black \& Red intends to grow, to engage all revolutionary groups and individuals within actions and analyses. To participate in the actions of Black \& Red means to modify these actions, to make them more effective, more critical, i.e., to enlarge the revolutionary front created by Black \& Red.
+
+
+Black \& Red claims NO MONOPOLY OF ACTION OR ANALYSIS. It invites every critique which is a new front “IF YOU DON’T LIKE IT, MAKE YOUR OWN!”
+
+
+1968
+
+
+{\bf Note}
+
+
+- One of the professors who, last year, was not rehired (i.e., was fired) by Western Michigan University.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Black \& Red
+
+
+
+The Purpose of Black \& Red
+
+
+
+If you don’t like it, make your own.
+
+
+
+
+November, 1968
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Scanned from original. Capitalization and punctuation as in original.
+
+
+
+Black \& Red, no. 3 (November 1968), pp. 64–71
+
+
+\stopalignment
+
+\stoptext
+
+

@@ -1,0 +1,216 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/How-are-respondents-able-to-skip-required-questions","l":"zh_TW","id":"kA030000000hhMmCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>&#25105;&#30340;&#35519;&#26597;&#21839;&#21367;&#20013;&#26377;&#24517;&#22635;&#21839;&#38988;&#12290;&#21463;&#35370;&#32773;&#35201;&#22914;&#20309;&#36339;&#36942;&#36889;&#20123;&#21839;&#38988;&#65311;</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/How-are-respondents-able-to-skip-required-questions" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">我的調查問卷中有必填問題。受訪者要如何跳過這些問題？
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><p>
+	在受訪者填寫調查問卷時，受訪者每次按一下 [下一頁] 按鈕前進到調查問卷的新頁面，我們都會記錄其回覆。我們會記錄受訪者跳過調查問卷 [分析結果] 區段時未回答的所有問題。</p>
+<p>
+	即使您<a href="http://help.surveymonkey.com/articles/zh_TW/kb/How-can-I-make-survey-questions-mandatory" target="_blank">將問題設定為必填</a>，仍可在分析結果時看到受訪者已跳過該問題。導致這種情況的原因可能包括：</p>
+<h3>
+	離開調查問卷</h3>
+<p>
+	如果受訪者先離開調查問卷，然後才按一下 [完成] 按鈕，則可能永遠無法到達您的某些必填問題。</p>
+<h3>
+	跳過邏輯</h3>
+<p>
+	如果您在調查問卷設計中包含<a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-is-Skip-Logic" target="_blank">跳過邏輯</a>，則可能會讓受訪者跳過必填問題。</p>
+<h3>
+	其他作為備註欄位</h3>
+<p>
+	如果您將 [其他] 新增為問題的答案，請確定在編輯問題時，選擇包含該問題以作為<strong>選項</strong>。如果您將之顯示為<strong>備註欄位</strong>，則會顯示為跳過的回覆，因為不會將任何選項套用到受訪者。</p>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-is-Random-Assignment" class="relatedLink">A/B &#29256;&#26412;&#36984;&#38917; (&#38568;&#27231;&#25351;&#23450;)</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Why-are-respondents-having-trouble-accessing-the-survey-from-the-link" class="relatedLink">&#21463;&#35370;&#32773;&#28961;&#27861;&#23436;&#25104;&#25105;&#30340;&#35519;&#26597;&#21839;&#21367;&#12290;&#25105;&#35442;&#22914;&#20309;&#34389;&#29702;&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-edit-the-survey-s-page-and-question-numbering" class="relatedLink">&#25105;&#35201;&#22914;&#20309;&#32232;&#36655;&#35519;&#26597;&#21839;&#21367;&#30340;&#38913;&#38754;&#21644;&#21839;&#38988;&#32232;&#34399;&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-send-a-survey-through-SurveyMonkey-s-Email-Invitation-Collector" class="relatedLink">&#22914;&#20309;&#36879;&#36942; SurveyMonkey &#30340;&#38651;&#23376;&#37109;&#20214;&#36992;&#35531;&#20989;&#25910;&#38598;&#22120;&#20659;&#36865;&#35519;&#26597;&#21839;&#21367;&#65311;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/How-are-respondents-able-to-skip-required-questions';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, '我的調查問卷中有必填問題。受訪者要如何跳過這些問題？', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

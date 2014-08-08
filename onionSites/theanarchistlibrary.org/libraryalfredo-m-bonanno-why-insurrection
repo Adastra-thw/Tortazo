@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Why Insurrection? (Alfredo M. Bonanno) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/alfredo-m-bonanno-why-insurrection?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=alfredo-m-bonanno-why-insurrection">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Why Insurrection?
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1982
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anarchist">anarchist</a>
+        <a href="/topics/anarchist-movement">anarchist movement</a>
+        <a href="/topics/insurrection">insurrection</a>
+        <a href="/topics/insurrectionist">insurrectionist</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Translated and first published in English in Insurrection 1982.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    <a href="http://pantagruel-provocazione.blogspot.com/search/label/Why%20Insurrection">pantagruel-provocazione.blogspot.com</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="alfredo-m-bonanno-why-insurrection.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="alfredo-m-bonanno-why-insurrection.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="alfredo-m-bonanno-why-insurrection.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="alfredo-m-bonanno-why-insurrection.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="alfredo-m-bonanno-why-insurrection?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="alfredo-m-bonanno-why-insurrection.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="alfredo-m-bonanno-why-insurrection.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Alfredo M. Bonanno</h2>
+	
+	<h1 id="textttitleh">Why Insurrection?</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>Our task as anarchists, our main preoccupation and greatest desire, is that of seeing the social revolution realized: terrible upheaval of men and institutions which finally succeeds in putting an end to exploitation and establishing the reign of justice.
+For we anarchists the revolution is our guide, our constant point of reference, no matter what we are doing or what problem we are concerned with. The anarchy we want will not be possible without the painful revolutionary break. If we want to avoid turning this into simply a dream we must struggle to destroy the State and exploiters through revolution.
+</p><p>But the revolution is not a myth simply to be used as a point of reference. Precisely because it is a concrete event, it must be built daily through more modest attempts which do not have all the liberating characteristics of the social revolution in the true sense. These more modest attempts are insurrections. In them the uprising of the most exploited of the masses and the most politically sensitized minority, opens the way to the possible involvement of increasingly wider strata of exploited in a flux of rebellion which could lead to the revolution but could also end up in the establishment of a new power or a bloody confirmation of the old one. In the case of the latter, although the insurrection begins as a liberating uprising it concludes bitterly with the re-establishment of State and private dominion. That is the natural way of things. Insurrection is the indispensable element of the revolution without which, without a long and painful series of which, there will be no revolution and power will reign undisturbed in the fullness of its might. We are not to be discouraged. Once again, obtusely, we are preparing and struggling for the insurrection that will come about, a small part of the great future mosaic of the revolution.
+</p><p>Certainly, capitalism contains deep contradictions that push it towards processes of adjustment and evolution aimed at avoiding the periodic crises that afflict it; but we cannot cradle ourselves in waiting for these crises. When they happen they will be welcomed if they respond to the requirements for accelerating the elements of the insurrectional process. In the meantime, for our part, we are preparing ourselves and the exploited masses for insurrection.
+</p><p>In this sense we consider the time is always ripe for the next insurrection. Better a failed insurrection than a hundred vacillations which cause the failure of a hundred occasions from which it might have been possible for the final revolution to break out. We are therefore against those who say that the recent defeat of the revolutionary movement should make us reflect and conclude that we should be more prudent. We consider that the time for insurrection has come precisely because it is always time to fight, whereas procrastinating is useful only capital.
+</p><p>To prepare for insurrection means to prepare the subjective conditions (personal and material) that consent a specific anarchist minority to create the indispensable circumstances for the development of the insurrectional process. Although insurrection is a mass phenomenon, and would risk aborting immediately if it were not, its beginning is always the result of the action of a decided minority, a handful of brave ones capable of attacking the nerve centres of the partial objective to be reached.
+</p><p>We must be very clear on this point. The tasks of the anarchist struggle against power can be extremely varied, but all — in our opinion — must be coherently directed towards preparing the insurrection. Some comrades may want to dedicate themselves to theoretical clarification, economic analyses, philosophy or historical research but all this must be immediately functional to the preparation of that minority capable of realizing the insurrection, acting in such a way that the masses participate as widely as possible or that at least that they do not hinder it.
+</p><p>Some comrades might consider the insurrection realizable in the near future (not put off to infinity), others that it can be realized right away: this can determine a division of tasks, in the sense that the former will be inclined to interest themselves more in the problems of revolutionary culture, but their final aim must be the same. Otherwise the rebel forces, who need precisely clarity to organize action and not chatter to put it off, would be lulled to sleep.
+The minority’s task of preparation is therefore twofold: on the one hand that of being sensitized to problems at the level of the class struggle that are not only military and political but principally of a social and economic nature. Following that, concrete, specific and detailed preparation with the insurrection in view.
+</p><p>Once again, we insist: the preparation of the wide masses can in no way be one of the preconditions of the revolution. If we were to wait for all the masses to be prepared for this grandiose task we would never do anything. We are convinced that the preparation of the great masses will more than anything be a consequence of the revolution, and perhaps not the most immediate one. On the contrary, the revolutionary anarchist minority must be prepared for the historical task awaiting them.
+Let us also eliminate the argument of “purity”. We do not only participate in insurrections led by anarchists but also in all the other insurrections that have the characteristics of the people in revolt, even if for some reason it is our future enemies, the stalinists, that are leading them. In that case we should try to conquer a better place for ourselves in the struggle itself, during the events, defending as far as possible our program of total liberation which we shall counterpose to the banally economic ones of the authoritarians. It will be the insurrection itself to verify the rest.
+</p><p>The insurrection is a task to be accomplished right away. But with what concrete means? We have seen that the specific minority must take charge of the initial attack, surprising power and determining a situation of confusion which could put the forces of repression into difficulty and make the exploited masses reflect upon whether to intervene or not. But what do we mean by specific minority? Perhaps the revolutionary movement in the wide sense? These questions require a clear answer.
+</p><p>Let us begin with the widest hypothesis. From the point of view we are interested in, the revolutionary movement as a whole cannot be considered a specific minority capable of realizing the insurrection together. It presents a whole series of contradictions, which in turn mirror the contradictions of the society we are living in. To the ideological model corresponds organisational groupings that end up putting theoretical prejudice before the immediate interests of liberation. Moreover, the analytical formula of a large part of the revolutionary movement are of an authoritarian character, therefore envisage the conquest of the State and not its immediate destruction. They foresee its claimed use in an anti-bourgeois sense and not its disappearance. This part of the revolutionary movement, therefore, clearly have no interest in preparing for insurrection right away as they delude themselves that time is on their side, crumbling away the supporting base of capitalism and preparing the revolutionary situation without the dangerous anti-chamber of the insurrection. We would thus find this section of the revolutionary movement to take an anti-insurrectional position, going as far (as we have seen in many cases recently) as attacking and denouncing the anarchist comrades who support the opposite thesis. We conclude at this point that it is not possible to widen the concept of the specific minority. Hypo-thetically, when the stalinists unleash their insurrectional process, either because they are convinced that the revolutionary conditions are ripe or because they are drawn by the solicitations of the base who are not interested in ideological refinements, then our task will be that of participating in the insurrection with all our forces, to fight in the concrete field of struggle and find there the necessary space for our ideas. In the case of the contrary where it is we who are the initiators and proposers of the insurrection, we might quite. possibly find this part of the revolutionary movement to be in an opposite position or, at best, in the position of waiting.
+</p><p>Let us now see if the anarchist movement as a whole can be considered a specific minority capable of eventually realizing insurrection. The conclusion is negative yet again. The contradictions within the movement are immense and mainly due to the fears and restraints which a restricted group of pinchbecks have carefully disseminated within it. The movement today resembles an old coat covered in patches, which only with a great deal of good will remembers its past splendours. The flight towards hypothetical forms of elitist interventions such as the attempt to impose pre-constituted analyses or catechisms ready for use, or when it claimed to supply the whole movement with the final analysis to be put into practice right away, has proved a failure. The same flight backwards towards anarcho-syndicalism which could not fail to leave both the exploited as a whole and the revolutionary comrades disappointed. And then the wider and ascertained politics of the ostrich, of hiding behind the fear of provocation in order to do nothing, only to intervene after the event, always with the scales ready to weigh, judge and condemn those few comrades who were doing anything at all, even if circumscribed and limited. From this part of the movement there remains but the name, the symbol, a few old comrades, a few young comrades old before their time, a few optimists who never lose hope, parchment mummies in their little shop. The great number of active comrades who form the revolutionary part of the anarchist movement and who are ready to begin the struggle must not be discouraged by Cassandras and birds of ill omen. Action is the measure for distinguishing beyond symbols and declarations of principle.
+It is precisely the comrades that are available for action who make up the specific minority. They will be the ones to prepare and realize the insurrection in the ways and forms which the experience of the revolutionary struggle as a whole has transmitted to us, taking into consideration the recent modifications of the State and the bosses. The method cannot fail to take account of minimal organizational forms of the base which will have to solve the various problems that will arise during the insurrectional preparation. In these organizational forms the responsibility for the work to be done must obviously fall on the revolutionary anarchist comrades and cannot be left to goodwill or improvisation. At this stage the very rules of survival impose the indispensable conditions of security and caution. The urgency of action puts an end to pointless chatter.
+</p><p>There is more to be said of the actions carried out in minimal structures of intervention by the specific minority as just identified. These actions cannot be considered purely from the point of view of “propaganda by the deed”. Their aim, in fact, is not that of giving an example or of influencing a wide range of sympathizers. Certainly this empirical aspect also exists, bearing in mind that the maximum alliance that will guarantee the success of future plans is that of the masses in revolt, but this aspect is easily recuperated by the mechanisms of capitalist information which transform it into merchandise, retailing it through the newspapers, television, cinema, books, etc. The truth is that the specific minority themselves, through realizing action, have the possibility of making something clear to others if they understand something themselves in the moment of the action itself. Action therefore means education through action, and education of oneself and others. If we think that we know everything and put our trust exclusively in our own knowledge at the moment of action, we are putting a repetitive mechanism into the hands of capitalism, one that inserts itself perfectly within the generalized mechanism of capitalist production which, above all else, is repetition to infinity.
+The action of the specific minority must therefore consist not of an interruption of learning at one’s own cost what the reality of the struggle is, but a gradual and complete transformation of one’s own learning in showing others how one learns to understand the reality of the struggle. If the action of the specific minority gives an example of anything it gives the example of how one learns to single out and strike the enemy, and not how one teaches. The right action at the right time becomes the substance of the individual and specific attack and symbol of all the possible future attacks, and this unfurling of a moment which has not yet reached maturity is the maximum level of intervention which the minority reaches operating in the reality of the struggle. The class struggle characterizes the conflict in act and is the element that allows the concrete action of the specific minority. Within it action is continually transforming itself from attempt to understand to attempt to teach. By cancelling the first moment everything drowns in repitition, by cancelling the second, everything drowns in indecision.
+</p><p>In the continual flux of the class struggle one finds everything, teachers and pupils. In it everything finds its right place within the relationships of strength. Whoever has not learned from their own mistakes can demonstrate nothing to others, and an eminent way of not learning is precisely by ceasing to learn, of thinking that the time has come to teach and that is all. Through the filter of the class struggle the memory of the revolution unfolds slowly, becoming something which can be handed down. In action this memory is handed down concretely and becomes perceptible to others at the moment in which it is reflection and criticism for the person who carries out the action himself.
+</p><p>Each individual minimal structure of intervention that acts within the specific minority runs the risk of placing itself in contrast with the revolutionary movement as a whole and sometimes with the whole mass of the exploited, if the sense of one’s action is not posed correctly. Taking ourselves as an isolated part in the face of so many references we convince ourselves that the whole movement and the exploited, their sort and the sort of the revolution, depends on us; we expect who knows what from what we are doing; we remain frustrated by the superficiality of the response and the general incomprehension. The revolutionary struggle is like a stormy sea against which to struggle would be vain folly, it is necessary to adapt ourselves to the direction of the waves, to swim sometimes strongly and sometimes lightly, to grasp the impetus of life which the sea hides within it to reach the desired goal. It is in this difficult art of swimming that the political meaning of minority action is hidden. The latter puts emphasis on its class significance, exploding suddenly as a fruit of the revolutionary memory and as indication for the struggle now in act.
+</p><p>We think, therefore, that if they are correctly chosen the action of these minimal structures are indispensable for the preparation of the whole insurrectional process, which we consider to be the immediate task of all anarchists and which cannot be postponed. Far from there being a contrast between the two things — as some have tried to point out to us — we consider that they are complementary and indissociable. The basic task of the minimal structure of intervention sums up all the work of an organisational and general nature of the specific minority as a whole. Once again the insurrection will be the acid test, both cause and effect, of the changing of the power relationship that leads to the opening of the doors of the revolution.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

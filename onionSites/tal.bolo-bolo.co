@@ -1,0 +1,437 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!--
+••••••••••••••••••••••••
+
+Powered by Type & Grids™
+www.typeandgrids.com
+
+••••••••••••••••••••••••
+-->
+
+<title>A Biblioteca Anarquista | The Anarchist Library</title>
+<meta name="description" content="A Biblioteca Anarquista">
+<meta name="author" content="Rafael Reinehr e Bruno Freitas - BR version">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================================================================= -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/themes/type_04.css">
+<link rel="stylesheet" href="css/themes/color_13.css">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Favicons
+================================================================================================= -->
+<link rel="shortcut icon" href="images/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+
+<!-- JS
+================================================================================================= -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.8.3.min.js"></script>
+<script src="js/libs/jquery.easing.1.3.min.js"></script>
+<script src="js/libs/jquery.fitvids.js"></script>
+<script src="js/script.js"></script>
+
+</head>
+<body>
+
+<!-- Write preloader to page - this allows the site to load for users with JS disabled -->
+<script type="text/javascript">
+	document.write("<div id='sitePreloader'><div id='preloaderImage'><img src='images/site_preloader.gif' alt='Preloader' /></div></div>");
+</script>
+
+<div class="container">
+	
+	<!-- Header begins ========================================================================== -->
+	<header class="sixteen columns">
+		<div id="logo">
+			<h1>A BIBLIOTECA ANARQUISTA</h1>
+			<h2>espelho BR da The Anarchist Library</h2>
+			<!--
+			<img src="images/logo.png" width="275" height="35" alt="Logo" />
+			-->
+		</div>
+		<nav>
+			<ul>
+				<li>
+				  <button id="workPage">Arquivos</button></li>
+				<li><button id="aboutPage">Sobre</button></li>
+				<!--<li><a href="http://wordpress.org" target="_blank">Blog</a></li>-->
+			</ul>
+		</nav>
+		<hr />
+	</header>
+	<!-- Header ends ============================================================================ -->
+	
+	<!-- Work page begins ======================================================================= -->
+	<div id="work">
+	
+		<div id="overview" class="sixteen columns">
+			<h3>Sincronizada de hora em hora, A Biblioteca Anarquista é o maior repositório de textos anarquistas e libertários da atualidade.</h3>
+			<hr />
+		</div>
+		
+		<div class="eight columns" id="col1">
+		
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>The Anarchist Library</h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					
+					<img src="images/projects/Anaquismo.jpg" alt="The Anarchist Library" class="thumbnailImage" />
+				</div>
+				
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/en/titles.html">The Anarchist Library</a></h4>
+				  <div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						theanarchistlibrary.org é um arquivo que foca em anarquismo, textos anarquistas e textos de interesse para anarquistas.<br> O foco do nosso uso do termo "anarquismo" tem sido bem amplo, mas amplo não signifca infinito e basicamente pode ser simplificado como uma série de ideias contra o Estado e o Capital. Isso imediatamente exclui os assim chamados "anarco-capitalismo", "anarco-nacionalismo" e outras bobagens similares.
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./en/authors.html" target="_new">por autor</a> | <a href="./en/titles.html" target="_new">por título</a> | <a href="./en/topics.html" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> http://theanarchistlibrary.org/</li>
+						<li><strong>Língua:</strong> inglês</li>
+						<li><strong>Arquivos:</strong> circa 2150</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Tabula rasa</h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/anarquia-realismo-p.jpg" alt="Tabula rasa" class="thumbnailImage" />
+				</div>
+				
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/atr/index.html">Tabula Rasa</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					
+					<p>
+						Tabula rasa é uma compilação independente de textos anarquistas e libertários em várias línguas. Objetiva ser um arsenal de textos anti-autoritários e anarquistas onde se pode encontrar reflexões e ideias para afiar nossos próprios pensamentos e aprofundar nossas lutas. Nosso desejo é que este arsenal possa contribuir para descobrir afinidades além de fronteiras.
+					</p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./atr/index.html" target="_new">por título</a> </li>
+						<li><strong>Link:</strong> http://atabularasa.org/</li>
+						<li><strong>Linguas:</strong> principalmente francês, inglês, italiano, alemão e holandês</li>
+						<li><strong>Arquivos:</strong> circa 216</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Biblioteca Anarquista</h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/anarquia-governo.jpg" alt="Biblioteca Anarquista" class="thumbnailImage" />
+				</div>
+					
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/es/titles.html">Biblioteca Anarquista</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Compilação de textos libertários e anarquistas em língua espanhola, associada à The Anarchist Library
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./es/authors.html" target="_new">por autor</a> | <a href="./es/titles.html" target="_new">por título</a> | <a href="./es/topics.html" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> http://es.theanarchistlibrary.org/</li>
+						<li><strong>Língua:</strong> espanhol</li>
+						<li><strong>Arquivos:</strong> circa 223</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Anarhisticka Biblioteka</h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/anarquia_cao.jpg" alt="Anarhisticka Biblioteka" class="thumbnailImage" />
+				</div>
+					
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/yu/titles.html">Anarhisticka Biblioteka</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Uma compilação de textos anarquistas e antiautoritários em bósnio.
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./yu/authors.html" target="_new">por autor</a> | <a href="./yu/titles.html" target="_new">por título</a> | <a href="./yu/topics.html" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> http://anarhisticka-biblioteka.net/</li>
+						<li><strong>Língua:</strong> bósnio</li>
+						<li><strong>Arquivos:</strong> circa 343</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Anarkistinen kirjasto</h4>
+					</div>
+					<img src="images/projects/Anarca.jpg" alt="Anarkistinen kirjasto" class="thumbnailImage" />
+				</div>
+				
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/fi/titles.html" target="_new">Anarkistinen kirjasto</a></h4>
+				  <div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Biblioteca anarquista em língua finlandesa.</p>
+					<ul>
+						<li><strong>Pesquisa:</strong> <a href="./fi/authors.html" target="_new">por autor</a> | <a href="./fi/titles.html" target="_new">por título</a> | <a href="./fi/topics.html" target="_new">por assunto</a></li>
+                        <li><strong>Link:</strong> http://fi.theanarchistlibrary.org/</li>
+						<li><strong>Lingua:</strong> finlandês</li>
+						<li><strong>Arquivos:</strong> circa 119</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Библиотека Анархизма </h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/revolucao_anarquia2.jpg" alt="Библиотека Анархизма" class="thumbnailImage" />
+				</div>
+					
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/ru/titles.html">Библиотека Анархизма</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Arquivos anarquistas e anti-autoritários em russo.
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./ru/authors.html" target="_new">por autor</a> | <a href="./ru/titles.html" target="_new">por título</a> | <a href="./ru/topics.html" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> http://tal.bolo-bolo.co/ru/titles.html</li>
+						<li><strong>Língua:</strong> russo</li>
+						<li><strong>Arquivos:</strong>circa 149</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+            
+            <!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Анархистичка библиотека </h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/shield_bloc.jpg" alt="Анархистичка библиотека" class="thumbnailImage" />
+				</div>
+					
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/mk/titles.html">Анархистичка библиотека</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Arquivos anarquistas e anti-autoritários em macedônico.
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="./mk/authors.html" target="_new">por autor</a> | <a href="./mk/titles.html" target="_new">por título</a> | <a href="./mk/topics.html" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> http://tal.bolo-bolo.co/mk/titles.html</li>
+						<li><strong>Língua:</strong> macedônico</li>
+						<li><strong>Arquivos:</strong> circa 50</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+            
+            <!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>A Biblioteca Anarquista </h4>
+						<h5>Clique para acessar</h5>
+					</div>
+					<img src="images/projects/black-bloc-rio.jpg" alt="A Biblioteca Anarquista" class="thumbnailImage" />
+				</div>
+					
+				<div class="projectInfo">
+					<h4><a href="http://tal.bolo-bolo.co/pt-br/titles.html">A Biblioteca Anarquista</a></h4>
+					<div class="projectNavCounter"></div>
+					<div class="projectNav">
+						<!--<div class="projectNavEnlarge"><button class="enlargeButton" onClick="window.location.href='projects/project_01/index.html'">View full-size</button></div>-->
+						<div class="projectNavClose"><button class="closeButton">Fechar</button></div>
+						<div class="projectNavButtons"><button class="prev"></button><button class="next"></button></div>
+					</div>
+					<p>
+						Arquivos anarquistas e anti-autoritários em português. Estamos em construção. EM BREVE!
+			    </p>
+					<ul>
+                    <li><strong>Pesquisa:</strong> <a href="" target="_new">por autor</a> | <a href="" target="_new">por título</a> | <a href="" target="_new">por assunto</a></li>
+						<li><strong>Link:</strong> Em Breve!</li>
+						<li><strong>Língua:</strong> português</li>
+						<li><strong>Arquivos:</strong>em construção</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- Project ends =================================================================== -->
+			
+		</div><!-- col1 -->
+		
+		<!-- Even numbered projects are dynamically moved into this second column via JS -->
+		<div class="eight columns" id="col2">
+		</div>
+	
+	</div>
+	<!-- Work page ends ========================================================================= -->
+	
+	<!-- About page begins ====================================================================== -->
+	<div id="about">
+		
+		<!-- Column 1 begins ==================================================================== -->
+		<div class="eight columns">
+			
+			<h3>Sobre a versão em português</h3>
+			<p>
+			Sentimo-nos honrados em hospedar a versão em língua portuguesa da <a href="http://theanarchistlibrary.org/" target="_blank">The Anarchist Library</a>. Acreditamos que o pensamento libertário deve estar presente de forma tão distribuída e profunda quanto possível.</p>
+			
+			<h4>Um Outro Mundo é Possível</h4>
+			<p>
+				A Grande Transição já começou. A derrocada do Capitalismo é algo inevitável, mas podemos acelerar o processo e comemorar ainda nesta geração.<br>
+		  </p>
+			<p>Alguns dos textos aqui presentes nos dão uma ideia clara de como fazê-lo. Se quiser participar de um grupo que pensa uma nova sociedade, economia e políticas a sério, usando o viés libertário, conheça a <a href="http://net.coolmeia.org">Coolmeia</a>.</p>
+			
+		  <h4>Alguns dos parceiros que estão ajudando a manter a Biblioteca Anarquista no ar:</h4>
+			<p>&nbsp;</p>
+			
+			<ul class="disc">
+				<li><a href="http://brainscooperation.org">The Brains Cooperation</a></li>
+				<li><a href="http://coolmeia.org">Coolmeia</a></li>
+				<li><a href="http://bolo-bolo.com">Bolo-bolo</a></li>
+				<li><a href="http://cehla.bolo-bolo.co">CEHLA</a></li>
+				<li><a href="http://antieditora.net">AntiEditora</a></li>
+				<li>Saber Social</li>
+			</ul>
+			
+	    <h4>Seja um parceiro</h4>
+			<p>Tem vontade de ajudar a manter a Biblioteca Anarquista e ampliar nosso acervo? Entre em contato: <a href="tal@bolo-bolo.co">tal@bolo-bolo.co</a>. </p>
+			
+			<blockquote><em>"Por espirito anarquista eu quero dizer daquele profundo  sentimento humano, que busca o bem de todos, liberdade e justiça para  todos, solidariedade e amor entre as pessoas; o que não é uma  característica exclusiva apenas de anarquistas auto-declarados, mas  inspira todas as pessoas que têm um coração generoso e uma mente aberta"</em>			<cite>Errico Malatesta, Umanita Nova, 13 de abril de 1922</cite>		</blockquote>
+		</div>
+		<!-- Column 1 ends ====================================================================== -->
+		
+		<!-- Column 2 begins ==================================================================== -->
+		<div class="eight columns">
+			
+			<img src="images/anarquia_verde_baixa.jpg" alt="Sobre" />
+			
+			<ul class="linedList">
+				<li><strong>Imagem:</strong> Anarquismo Verde</li>
+				<li><strong>Email:</strong> <a href="mailto:hello@ivandesignostrom.com">tal@bolo-bolo.co</a></li>
+				<li><strong>Contatos:</strong> Bruno Freitas e <a href="http://reinehr.org">harmonia</a></li>
+				<li><strong>Agradecimentos:</strong> <a href="http://bookshelf.theanarchistlibrary.org/marco" target="_blank">marco</a></li>
+			</ul>
+			
+		</div>
+		<!-- Column 2 ends ====================================================================== -->
+		
+	</div>
+	<!-- About page ends ======================================================================== -->
+	
+	<!-- Footer begins ========================================================================== -->
+	<footer class="sixteen columns">
+		<hr />
+		<ul id="footerLinks">
+			<li>Copyleft 2013-14 A Biblioteca Anarquista</li>
+			<li><a href="mailto:tal@bolo-bolo.co">tal@bolo-bolo.co</a></li>
+			
+			<li>Oferecimento: <a href="http://bolo-bolo.co" target="_blank">bolobolo</a> <a href="http://net.coolmeia.org" target="_blank">coolmeia</a> <a href="http://brainscooperation.org" target="_blank">brains cooperation</a> <a href="http://cehla.bolo-bolo.co" target="_blank">cehla</a> saber social</li> 
+		</ul>
+	</footer>
+	<!-- Footer ends ============================================================================ -->
+		
+</div><!-- container -->
+</body>
+</html>

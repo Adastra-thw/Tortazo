@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-CA" xml:lang="fr-CA">
+<head>
+	<script type="text/javascript">var page_start = new Date();</script>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="kewfPZRKi6SaOAaeUDSQw9AawbOKWiyEOyp2-lMxXBQ" />
+			    <title>LinkedIn Yardım Merkezi - Kimlik Doğrulama</title>
+        
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://yardim.linkedin.com/euf/rightnow/optimized/1406595550/themes/linkedin/'></base>
+<link href='/euf/rightnow/optimized/1406595550/pages/utils/auth.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+
+	<link rel="shortcut icon" type="image/ico" href="/euf/assets/images/favicons/v1/favicon.ico">
+	<script type="text/javascript">	document.cookie = "realreferrer="+encodeURIComponent(document.referrer)+"; path=/";
+	</script>
+</head>
+<body>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<script>
+var api_callback = 'http://yardim.linkedin.com/app/answers/detail/a_id/1392/related/1';
+var api_key = 'uq9789xsg6uf';
+</script>
+<div class="loading center">
+	<span id="message"></span>
+</div>
+<div id="passthrough_link" class="center">
+	Hedefinize otomatik olarak yönlendirileceksiniz. Eğer çok uzun sürüyorsa, devam etmek için lütfen <a href="/app/utils/log_error/et/0/ec/7/callback/http%3A%2F%2Fyardim.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1392%2Frelated%2F1%2Ffrom_auth%2Ftrue"> linkini tıklayın.</a></div>
+<noscript>
+	<div class="noscript center">
+		Üzgünüz fakat, yardım merkezi için javascript gerekiyor.<br><meta http-equiv="refresh" content="5; url=/app/utils/log_error/et/0/ec/6/callback/http%3A%2F%2Fyardim.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1392%2Frelated%2F1%2Ffrom_auth%2Ftrue">5 saniye içinde otomatik olarak hedefinize yönlendirileceksiniz veya devam etmek için <a href="/app/utils/log_error/et/0/ec/5/callback/http%3A%2F%2Fyardim.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1392%2Frelated%2F1%2Ffrom_auth%2Ftrue">here</a> linkini tıklayın.	</div>
+</noscript>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22Konu%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22Durum%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22En+Son+G%5Cu00fcncelleme%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22En+Son+G%5Cu00fcncelleme%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22Kapanan%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22A%5Cu00e7%5Cu0131k%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22%5Cu00dcyede+Bekliyor%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22Kayda+Ge%5Cu00e7irilen+Sorun%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22Kayda+Ge%5Cu00e7irilen+Geri+%5Cu0130leti%22%2C%22CP_AUTH_JS_LOADING_CONNECT_LIBRARY%22%3A%22ba%5Cu011flant%5Cu0131+k%5Cu00fct%5Cu00fcphanesi+y%5Cu00fckleniyor...%22%2C%22CP_AUTH_JS_CHECKING_ACCOUNT_STATUS%22%3A%22hesap+durumu+kontrol+ediliyor...%22%2C%22CP_AUTH_JS_FETCHING_PROFILE_INFORMATION%22%3A%22profil+bilgileri+getiriliyor...%22%2C%22CP_AUTH_JS_LOADING_THE_HELP_CENTER%22%3A%22yard%5Cu0131m+merkezi+y%5Cu00fckleniyor...%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22Thread%22%2C%22CP_REQUIRED%22%3A%22Zorunlu%22%2C%22CP_INVALID%22%3A%22Ge%5Cu00e7ersiz%22%2C%22CP_UPLOADING%22%3A%22Y%5Cu00fckleniyor%22%2C%22CP_SUBMITTING%22%3A%22G%5Cu00f6nderiyor%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22Bu+form+sona+ermek+%5Cu00fczeredir.+L%5Cu00fctfen+doldurmaya+devam+etmek+istedi%5Cu011finizi+do%5Cu011frulay%5Cu0131n.%22%7D';
+</script>
+<span id="rn_RightNowLogo_1" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"Avertissement","INFORMATION_LBL":"Bilgiler","HELP_LBL":"Aide","ERROR_REQUEST_ACTION_COMPLETED_MSG":"\u0130ste\u011finiz ile ilgili bir sorun olu\u015ftu ve eylem tamamlanamad\u0131.","OK_LBL":"OK","DIALOG_LBL":"bo\u00eete de dialogue","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialogue, veuillez lire le texte ci-dessous pour le message de dialogue","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"D\u00e9but du dialogue, veuillez rompre le dialogue avant de poursuivre.","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Fin du dialogue, veuillez rompre le dialogue avant de poursuivre.","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"Une erreur s\u2019est produite en soumettant le formulaire en raison d\u2019une entr\u00e9e non valide.","ERR_SUBMITTING_SEARCH_MSG":"Il y a eu un probl\u00e8me avec votre requ\u00eate.  Veuillez modifier vos termes de recherche et essayer de nouveau.","CLOSE_CMD":"Fermer","BACK_LBL":"Geri"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"yardim.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"Vc3UOg_l","uh":"9ed5a915","uc":"yardim.linkedin.com\/app\/utils\/auth","b":"ca34356","i":"linkedin:linkedin_tr","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/get-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/json-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Auth.js'></script>
+</body>
+</html>

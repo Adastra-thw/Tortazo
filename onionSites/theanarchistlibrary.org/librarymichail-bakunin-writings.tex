@@ -1,0 +1,1268 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Michail Bakunin  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Writings
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+1867–1871
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+\chapter{Chapter 1: The Policy of the Council (1869)
+}
+
+The Council of Action does not ask any worker if he is of a religious or atheistic turn of mind. She does not ask if he belongs to this or that or no political party. She simply says: Are you a worker? If not, do you feel necessity of devoting yourself wholly to the interests of the working class, and of avoiding all movements that are opposed to it? Do you feel at one with the workers? And have you the strength in you that is requisite if you would be loyal to their cause? Are you aware that the workers who create all wealth who have made civilization and fought for liberty — and domed to live in misery, ignorance, and slavery? Do you understand that the main root of all the evils that the workers experience, is poverty? And that poverty — which is the common lot of the workers in all parts of the world — is a consequence of the present economic organization of society, and especially of the enslavement of labor — i.e. the proletariat — under the yoke of capitalism — i.e. the bourgeoisie.
+
+
+Do you know that between the proletariat and the bourgeoisie there exists a deadly antagonism which is the logical consequence of the economic positions of the two classes? Do you know that the wealth of the bourgeoisie is incompatible with the comfort and liberty of the workers, because their excessive wealth is, and can only be, built upon the robbing and enslavement of the workers? Do you understand that, for the same reason, the prosperity and dignity of the laboring masses inevitably demands the entire abolition of the bourgeoisie? Do you realize that no single worker, however intelligent and energetic he may be, can fight successfully against the excellently organized forces of the bourgeoisie — a fore which is upheld mainly by the organization of the State — all States.
+
+
+Do you not see that, in order to become a power, you must unite — not with the bourgeoisie, which would be a folly and a crime, since all the bourgeoisie, so far as they belong to their class, are our deadly enemies? — Nor with such workers as have deserted their own cause and have lowered themselves to beg for the benevolence of the governing classes? But with the honest men, who are moving, in all sincerity, towards the same goal as you? Do you understand, against the powerful combinations, formed by the privileged classes the capitalists or possessors of the means and instruments of production and distribution, the divided or sectarian associations of labor, can ever triumph? Do you not realize that, in order to fight and to vanquish this capitalist combination, nothing less than the amalgamation, in council and action, of all local, and national labor associations — federating into an international associations of the workers of all lands, — is required.
+
+
+If you know and comprehend all this, come into our camp whatever else your political or religious convictions are. But if you are at one with us, and so long as you are at one with us, you will wish to pledge the whole of your being, by your every action as well as by your words, to the common cause, as a spontaneous and whole-hearted expression of that fervor of loyalty that will inevitably take possession of you. You will have to promise:
+
+
+
+\startitemize[N]\relax
+\item[] To subordinate your personal and even your family interest, as well as political and religious bias and would be activities, to the highest interest of our association, namely the struggle of labor against Capital, the economic fight of the Proletariat against the Bourgeoisie
+
+
+
+
+ \item[] Never, in your personal interests, to compromise with the bourgeoisie.
+
+
+
+
+ \item[] Never try to attempt to secure a position above your fellow workers, whereby you would become at once a bourgeois and an enemy of the proletariat: for the only difference between capitalists and workers is this: the former seek their welfare outside, and at the expense of, the welfare of the community whilst the welfare of the latter is dependent on the solidarity of these who are robbed on the industrial field.
+
+
+
+
+ \item[] To remain ever and always to this principle of the solidarity of labor: for the smallest betrayal of this principle, the slightest deviation from this solidarity, is, in the eyes of the International, the greatest crime and shame with which a worker can soil himself.
+
+
+
+
+ 
+\stopitemize
+The pioneers of the Councils of Action act wisely in refusing to make philosophic or political principles the basis of their association, and preferring to have the exclusively economic struggle of Labor against Capital as the sole foundation. They are convinced that the moment a worker realizes the class struggle, the moment he — trusting to his right and the numerical strength of his class — enters the arena against capitalist robbery: that very moment, the for of circumstances and the evolution of the struggle, will oblige him to recognize all the political, socialistic, and philosophic principles of the class-struggle. These principles are nothing more or less than the real expression of the aims and objects of the working-class. The necessary and inevitable conclusion of these aims, their one underlying and supreme purpose, is the abolition — from the political as well as from the social viewpoint of:
+
+
+
+\startitemize[N]\relax
+\item[] The class-divisions existent in society, especially of these divisions imposed on society by, and in the economic interests of the bourgeoisie.
+
+
+
+
+ \item[] All Territorial States,Political Fatherlands and Nations, and on the top of the historic ruins of this old word order, the establishment of the great international federation of all local and national productive groups.
+
+
+
+
+ 
+\stopitemize
+From the philosophic point of view, the aims of the working class are nothing less than the realization of the eternal ideas of humanity, the welfare of man, the reign of equality, justice, and liberty on earth, making unnecessary all belief in heaven and all hopes for a better hereafter.
+
+
+The great mass of the workers, crushed by their daily toil, live in ignorance and misery. Whatever the political and religious prejudices in which they have been reared individually may be, this mass is unconsciously Socialistic: instinctively, and, through the pinch of hunger and their position, more earnestly and truly Socialistic than all the “scientific” and “bourgeois Socialists” put together. The mass are Socialists through all the circumstances of reasoning; and, in reality, the necessities of life have a greater influence over these of pure reasoning, because reasoning (or thought) is only the reflex of the continually developing life — force and not its basis.
+
+
+The workers do not lack reality, the zeal for Socialist endeavor, but only the Socialist idea. Every worker, from the bottom of his heart, is longing for a really human existence, i.e. material comfort and mental development founded on justice, i.e., equality and liberty for each and every man in work. This cannot be realized in the existing political and social organization, which is founded on injustice and bare-faced robbery of the laboring masses. Consequently, every reflective worker becomes a revolutionary Socialist, since he is forced to realize that his emancipation can only be accomplished by the complete overthrow of present day society. Either this organization of injustice with its entire machine of oppressive laws and privileged institutions, must disappear, or else the proletariat is condemned to eternal slavery.
+
+
+This is the quintessence of the Socialist idea, whose germs can be found in the instinct of every serious thinking worker. Our object, therefore, is to make him conscious of what he wants, to awaken in him a clear idea that corresponds to his instincts: for the moment the class consciousness of the proletariat has lifted itself up to the level of their instinctive feeling, their intention will have developed into determination, and their power will be irresistible.
+
+
+What prevents the quicker development of this idea of salvation amongst the Proletariat? Its ignorance; and, to a great extent, the political and religious prejudices with which the governing classes are trying to befog the consciousness and the natural intelligence of the people. How can you disperse this ignorance and destroy these strange prejudices? “The liberation of the Proletariat must be the work of the Proletariat itself;” says the preface to the general statute of the (First) International. And it is a thousand times true! This is the main foundation of our great association. But the working class is still very ignorant. It lacks completely every theory. There is only one way out therefore, namely — Proletarian liberation through action. And what will this action be that will bring the masses to Socialism? It is the economic struggle of the Proletariat against the governing class carried out in solidarity. It is the Industrial Organization of the workers — the Council of Action.
+
+
+\chapter{Chapter 2: The Organization of the International (1869)
+}
+
+The masses are the social power, or, at least, the essence of that power. But they lack two things in order to free themselves from the hateful conditions which oppress them: education, and organization. These two things represent: today, the real foundations of power of all government.
+
+
+To abolish the military and governing power of the State, the proletariat must organize. But since organization cannot exist without knowledge, it is necessary to spread among the masses real social education.
+
+
+To spread this real social education is the aim of the International. Consequently, the day on which the international succeeds in uniting in its ranks a half, a fourth, or even a tenth part of the workers of Europe, the State or States will cease to exist. The organization of the International will be altogether different from the organization of the State, since its aim is not to create new States but to destroy all existing government systems. The more artificial, brutal, and authoritarian is the power of the State, the more indifferent and hostile it is to the natural developments, interests and desires of the people, the freer and more natural must be the organization of the International. It must try all the more to accommodate itself to the natural instincts and ideals of the people.
+
+
+But what do we mean by the natural organization of the masses? We mean the organization which is founded upon the experience and results of their everyday life and the difference of their occupations, i.e., their industrial organization. The moment all branches of industry are represented in their International, the organization of the masses will be complete.
+
+
+But it might be said that, since we exist, the International, organized influence over the masses: we are aiming at new power equally with the politicians of the old State systems. This change is a great mistake. The influences of the International over the masses differs from all government power in that, it is no more than a natural, unofficial influence of ordinary ideas, without authority.
+
+
+The State is the authority, the rule, and organized power of the possessing class, and the make-believe experts over the life and liberty of masses. The State does not want anything other than the servility of the masses. At once it demands their submission.
+
+
+The International, on the other hand, has no other object then the absolute freedom of the masses. Consequently, it appeals to the rebel instinct. In order that this rebel instinct should be strong and powerful enough to overthrow the rule of the State and the privileged class, the International must organize.
+
+
+To realize this goal, it has to employ two quite just weapons:
+
+
+
+\startitemize[N]\relax
+\item[] The propagation of its ideas.
+
+
+
+
+ \item[] The natural organization of its power or authority, through the influence of its adherents on the masses.
+
+
+
+
+ 
+\stopitemize
+A person who can assert that, organized activity is an attack on tine freedom of the masses, or an attempt to create a new rule, is either a sophist or a fool. It is sad enough for these who don’t know the rules of human solidarity, to think that complete individual independence is possible, or desirable. Such a condition would mean the dissolution of all human society, since the entire social existence of man depends on the interdependence of individuals and the masses. Every person, even the cleverest and strongest — nay, especially the clever and strong — are at all times, the creatures as also the creators of this influence. The freedom of each individual is the direct outcome of these material mental and moral influences, of all individuals surrounding him in that society in which he lives, develops, and dies. A person who seeks to free himself from that influence in the name of a metaphysical, superhuman, and perfectly egotistical “freedom” aims at his own extermination as a human being. And these who refuse to use that influence on others, withdraw from all activity of social life, and by not passing on their thoughts and feelings, work for their own destruction. Therefore, this so-called “independence,” which is preached so often by the idealists and metaphysicians: this so-called individual liberty is only the destruction of existence.
+
+
+In nature, as well as in human society, which is never anything else than part of that same nature, every creature exists on condition that he tries, as much as his individuality will permit, to influence the lives of others. The destruction of that indirect influence would mean death. And when we desire the freedom of the masses, we by no means want to destroy this natural influence, which individuals or groups of individuals, create through their own contract.
+
+
+What we seek is the abolition of the artificial, privileged, lawful, and official influence. If the Church and State wore private institutions, we should be, even then, I suppose their opponents. We should not have protested against their right to exist. True, in a sense, they are, today, private institutions, as they exit exclusively to conserve the interests of the privileged classes. Still, we oppose them, because they use all the power of the masses to force their rule upon the latter in an authoritarian, official, and brutal manner. If the International could have organized itself in the State manner, we, its most enthusiastic friends, would have become its bitterest enemies. But it cannot possibly organize itself in such a form. The International cannot recognize limits to human fellowship and, whilst the State cannot exist unless it limits, by territorial pretensions, such fellowship and equality, History has shown us that the realization of a league of all the States of the world, about which all the despots have dreamt, is impossible. Hence these who speak of the State, necessarily think and speak of a world divided into different States, who are internally oppressors and outwardly despoilers, i.e., enemies to each other. The State, since it involves this division, oppression, and despoliation of humanity, must represent the negation of humanity and the destruction of human society.
+
+
+There would not have been any sense in the organization of the workers at al!, if they had not aimed at the overthrow of the State. The International organizes the masses with this object in view, to the end that they might recall this goal. And how does it organize them?
+
+
+Not from the top to the bottom, by imposing a seeming unity and order on human society, as the state attempts, without regards to the differences of interest arising from differences of occupation. On the contrary, the International organizes the masses from the bottom up wards, taking the social life of the masses, their real aspirations as a starting point, and encouraging them to unite in groups according to their real interests in society. The International evolves a unity of purpose and creates a real equilibrium of aim and well-being out of their natural difference in life and occupation.
+
+
+Just because the International is organized in this way, it develops a real power. Hence it is essential that every member of every group should be acquainted thoroughly with all its principles. Only by these means will he make a good propagandist in time of peace and real revolutionist in time of war.
+
+
+We all know that our program is just. It expresses in a few noble words the just and humane demands of the proletariat. Just because it is an absolutely humane program, it contains all the symptoms of the social revolution. It proclaims the destruction of the old and the creation of the new world.
+
+
+This is the main point which we must explain to all members of the International. This program substitutes a new science, a new philosophy for the old religion. And it defines a new international policy, in place of the old diplomacy. It has no other object than the overthrow of the States.
+
+
+In order that the members of the International scientifically fill their posts, as revolutionary propagandists, it is necessary for every one to be imbued with the new science, philosophy, and policy: the new spirit of the International. It is not enough to declare that we want the economic freedom of the workers, a full return for our labor, the abolition of classes, the end of political slavery, the realization of nil human rights, equal duties and justice for all: in a phrase, the unity of humanity. All this, is, without a doubt, very good and just. But when the workers of the International simply go on repeating these phrases, without grasping their truth and meaning. they have to face the danger of reducing their just claims to empty words, cant which is nothing without understanding.
+
+
+It might be answered that not all workers, even when they are members of the International, can be educated. It is not enough, then, that there are in the organization, a group of people, who — as far as possible — re acquainted with the science, philosophy, and policy of Socialism? Cannot the wide mass follow their “brotherly advice “not to turn from the right path, that leads ultimately to the freedom of the proletariat?
+
+
+The authoritarian Communists in the International often make use of these arguments, although they have wanted the courage to state them so freely and so clearly. They have sought to hide their real opinion under demagogic compliments about the cleverness and all powerfulness of the people. We were always the bitterest enemies of this opinion. And we are convinced, that, if the International split into two groups — a big majority, and small minority of ton, twenty or more people — in such a way, that the majority were convinced blindly of the theoretical and practical sense of the minority, the result would be the reduction of the International to an oligarchy — the worst form of State. The educated and capable minority would, together with its responsibilities, demand the rights of a governing body. And this governing body would prove more despotic than an avowed autocracy, because it would be hidden beneath a show of servile respect for the will of the people. The minority would rule through the medium of resolutions, imposed upon the people, and after. wards called “the will, of the people.” In this way, the educated minority would develop Into a government, which, like all other governments, would grow every day more despotic and reactionary.
+
+
+The International only then can become a weapon for liberating the people, when it frees itself; when it does not permit itself to be divided into two groups — a big majority, the blind tool of an educated minority. That is why its first duty is to imprint upon the minds of its members the science, philosophy, and policy of Socialism.
+
+
+\chapter{Chapter 3: The Workers and the Sphinx (1867)
+}
+
+
+\startitemize[N]\relax
+\item[] The Council of Action claims for each the full product of his labor: meaning by that his complete and equal right to enjoy, in common with his fellow workers, the full amenities of life and happiness that the collective labor of the people creates. The Council declares that it is wrong for these who produce nothing at all to be able to maintain their insolent riches, since they do so only by the work of others. Like the Apostle Paul, the Council maintains, that, if any would not work, neither should he eat.
+
+
+The Council of Action avers that the right to the noble namo of labor belongs exclusively to productive labor. Some years ago, the young King of Portugal paid a visit to his august father-in-law. He was presented to a gathering of the Working Men’s Association at Turin: and there, surrounded by workers, he uttered these memorable words: “Gentlemen, the present country is the country of labor. We all labor. I, too, labor for the good of my people.
+
+
+However flattering this likening of royal labor to working-class labor may appear, we cannot accept it. We must recognize that royal labor is a labor of absorption and not of production. Capitalists, proprietors, contractors also labor: but all such labor is parasitic, since it has no other object than to transfer the real products of labor from the hands of the workers, whose toil creates them, into the possession of these who do not create them, to serve the purpose of further gain and exploitation. Such labor cannot be considered productive labor. In this sense, thieves and brigand labor also. Roughly, they risk every day their liberty and their life. But they do not work.
+
+
+The Council of Action recognizes intellectual labor — that of men of science — as productive labor. It places the application of science to industry, and the activity of the organizers and administrators of industrial and commercial affairs, in the category of useful or productive labor. But it demands for all men a participation as much in manual labor as in the labor of the mind. The question of how much manual and how much mental labor a person shall contribute to the community must be decided not by the privileges of birth of social status, but by suitability to the natural capacities of each, developed by equal opportunity of education and instruction.
+
+
+Only thus can class distinctions and privileges disappear and the cant phrase, “the intelligent and working masses” be relegated to deserved oblivion.
+
+
+
+
+ \item[] The Council of Action declares that, so long as the working masses are plunged in the misery of economic servitude, all so-called reforms and even so-called political revolutions of a seeming proletarian character, will avail them nothing. They are condemned to live in a forced ignorance and to accept a slave status by the economic organization of wage-slave society.
+
+
+
+
+ \item[] Consequently, the Council of Action urges the workers in their own interests, material as well as moral, — and moral because so completely and thoroughly and equally material for each and all — to subordinate all seeming political questions to definite economic issues. The material means of an education and of an existence really human, are for the proletariat, the first condition of liberty, morality and humanity.
+
+
+
+
+ \item[] The Council of Action declares that the record of past countries, the class legacy of exploitation, as well as contemporary experience, should have convinced the workers that they can expect no social amelioration of their lot from the generosity of the privileged classes. There is no justice in class society, since justice can exist only in equality; and equality means the abolition of class and privilege (Monopoly) There never has been and there never will be a generous or just ruling class. The classes and orders existing in present day — society — clergy, bureaucracy, plutocracy, nobility, bourgeoisie-dispute for power only to consolidate their own strength and to increase their profits within the system. The Council of Action exists to express the truth that, henceforth, the proletariat must take the direction of its own affairs into its own hands.
+
+
+
+
+ \item[] Once the proletariat clearly understands itself, its solidarity will find expression in the Council of action, or Federated Councils of Action. Then there will remain no power in the world that can resist the workers.
+
+
+
+
+ \item[] To this end, the Council of Action affirms that the proletariat ought to tend, not to the establishment of a new rule or of a new class for its alleged profit as a class, but to the definite abolition of all rule, of every class. Dictatorship, political sectarianism, all spell power, exploitation, and injustice. The proletariat, through their Council of Action organization, must express the organization of justice liberty, without distinction of race, color, nationality, or faith — all to fully exercise the same duties and enjoy the same rights.
+
+
+
+
+ \item[] The cause of the working class of the entire world is one, is solidarity, across and in spite of all State frontiers. Expressing that common purpose, that complete proletarian identity of interest, the Council of Action proclaims the International oneness of the workers’ cause. It pioneers the definite International Association of the Workers of the World in a chain of Industrial Associations. The cause of the workers is International because, pushed by an inevitable law which is inherent in it, bourgeois capital in its threefold employment — in industry, commerce and in banking speculations — has boon tending, since the beginning of the nineteenth century, towards an organization more and more International and complete, enlarging each day more, and simultaneous in all centuries, the abyss which separates the working world from the bourgeois world. From this fact, it results that, for every worker endowed with intelligence and heart, for every proletariat who has vision and affection for his companions in misery and servitude; who is conscious of the situation of himself and his class and of his actual interest: the real century is henceforth the International Camp of Labor. And the true local organization of that camp is the Council of Action.
+
+
+To every worker, truly worthy of the name, the workers of so-called foreign centuries, who suffer and are oppressed as he is oppressed, are infinitely nearer and of more immediate kin than the bourgeoisie of his own country, who enrich themselves to his detriment. Because of this the Council of Action will replace the geographical unit of false democracy, the National State.
+
+
+
+
+ \item[] The deliverance of the proletariat from the oppression and exploitation which it endures in all centuries alike, must be International. In these lands which are bound by means of credit, industry, and commerce, the economic and social emancipation of the proletariat must be achieved almost simultaneously by a common struggle ending in a triumphant challenge to the existing political constitution of the world. The economic emancipation of the proletariat is the foundation of the political emancipation of the world. Realizing this, the Council of Action preaches the proletarian duty and message of fraternity.
+
+
+By the duty of fraternity, as well as by the call of enlightened self interest, the workers are called upon to establish, organize, and exercise the greatest practical solidarity, industrial, communal, provincial, national and International: beginning in their workshop, their home, their tenement, their street their political group and extending it to all their trade societies, to all their trade propaganda federations a close industrial solidarity They ought to observe this solidarity scrupulously, and practice it in all the developments catastrophes, and incidents of the in incessant daily struggle of the labor of the worker against the stolen capital of the bourgeois; all these demands and claims of hours and wages, strikes, and every question that relates to the existence, whether material or moral, of the working people.
+
+
+
+
+ 
+\stopitemize
+The revolt of the workers and the spontaneous organization of human solidarity through the free but involuntary and inevitable federation of all working-class groups into the Council of Action! This, then, is the answer to the enigma which the Capitalist Sphinx forces us today to solve, threatening to devour us if we do not solve it.
+
+
+\chapter{Chapter 4: Solidarity in Liberty: The Workers’ Path to Freedom (1867)
+}
+
+From this truth of practical solidarity or fraternity of struggle that I have laid down as the first Principe of the Council of Action flows a theoretical consequence of equal importance. The workers are able to unite as a class for class economic action, because all religious philosophies, and systems of morality which prevail in any given order of society are always the ideal expression of its real, material situation. Theologies, philosophies and ethics define, first of all, the economic organization of society; and secondly, the political organization, which is itself nothing but the legal and violent consecration of the economic order. Consequently, there are not several religions of the ruling class; there is one, the religion of property. And there are not several religions of the working class: there is one, the piety of struggle, the vision of emancipation, penetrating the fog of every mysticism, and finding utterance in a thousand prayers. Workers of all creeds, like workers of all’ lands, have but one faith, hope, and charity; one common purpose overleaps the barriers of seeming hatreds of race and creed. The workers are one class, and therefore one race, one faith, one nation. This is the Theoretical truth to be induced from the practical fraternal solidarity of the Council of Action organization. Church and State are liquidated in the vital organization of the working class, the genius of free humanity.
+
+
+It has been stated that Protestantism established liberty in Europe. This is a great error. It is the economic, material emancipation of the bourgeois class which, in spite of Protestantism, has created that exclusively political and legal liberty, which is too easily confounded with the grand, universal, human liberty, which only the proletariat can create. The necessary accompaniment of bourgeois legal and political liberty, appearances to the contrary notwithstanding, is the intellectual, anti-Christian, and anti-religious emancipation of the bourgeoisie. The capitalist ruling class has no religion, no ideals, and no illusion. It is cynical and unbelieving because it denies the real base e of human society, the complete emancipation of the working class. Bourgeois society, by its very nature of interested professionalism, must maintain centers of authority and exploitation, called States. The laborers, by their very economic needs, trust challenge such centers of oppression.
+
+
+The inherent principles of human existence are summed up in the single law of solidarity. This is the golden rule of humanity and may be formulated this: no person can recognize or realize his or her own humanity except by recognizing it in others and so cooperating for its realization by each and all No man can emancipate himself save by emancipating with him all the men about him.
+
+
+My liberty is the liberty of everybody. I cannot be free in idea until I am free in fact. To be free in idea and not free fact is to be revolt. To be free in fact is to have my liberty and my right, find their confirmation, and sanction in the liberty and right of all mankind. I am free only when all men are my equals (first and foremost economically.)
+
+
+What all other men are is of the greatest importance to me. However independent I may imagine myself to be, however far removed I may appear from mundane considerations by my social status, I am enslaved to the misery of the meanest member of society. The outcast is my daily menace. Whether I am Pope, Czar, Emperor, or even Prime Minister, I am always the creature of their circumstance, the conscious product of their ignorance, want and clamoring. They are in slavery, and I, the superior one, am enslaved in consequence.
+
+
+For example if such is the case, I am enlightened or intelligent man. But I an foolish with the folly of the people, my wisdom stunned by their needs, my mind palsied. I an a brave man, but I am the coward of the peoples’ fear. Their misery appalls me, and every day I shrink from the struggle of life. My career becomes an evasion of living. A rich man, I tremble before their poverty, because it threatens to engulf me. I discover I have no riches in myself, no wealth but that stolen from the common life of the common people. As privileged man, I turn pale before the people’s demand for justice. I feel a menace in that demand. The cry is ominous and I am threatened. It is the feeling of the malefactor dreading, yet waiting for inevitable arrest. My life is privileged and furtive. But it is not mine. I lack freedom and contentment. In short, wishing to be free, though I am wise, brave, rich, and privileged, I cannot be free because my immediate associates do not wish men to be free; and the mass, from whom all wisdom, bravery, riches, and privileges ascend, do not know how to secure their freedom. The slavery of the common people make them the instruments of my oppression. For me to be free, they must be free. We must conquer bread and Freudian in common.
+
+
+The true, human liberty of a single individual implies the emancipation of all: because, thanks to the law of solidarity, which is the natural basis of all human society, I cannot be, feel, and know myself really, completely free, if I an not surrounded by men as free as myself. The slavery of each is my slavery.
+
+
+It follows that the question of individual liberty is not a personal but a social economic question that depends on the deliverance of the proletariat for its realization. That in turn, involves the spontaneous organization and capacity for economic and social action through the voluntary and free grouping of all workers’ organizations into the Council of Action. The Red Association of these who toil!
+
+
+\chapter{Chapter 5: The Red Association (1870)
+}
+
+Political Freedom without economic equality is a pretense, a fraud, a lie; and the workers want no lying.
+
+
+The workers necessarily strive after a fundamental transformation of society, the result of which must be the abolition of classes, equally in economic as in political respects: after a system of society in which all men will enter the world under special conditions, will be able to unfold and develop themselves, work and enjoy the good things of life. These are the demands of justice.
+
+
+But how can we from the abyss of ignorance, of misery and slavery, in which the workers on the land and in the cities are sunk, arrive at that paradise, the realization of justice and manhood? For this the workers have one means: the Association of Councils.
+
+
+Through the Association they brace themselves up, they mutually improve each other and, through their own efforts, make an end of that dangerous ignorance which is the main support of their slavery. By means of the Association, they learn to help, and mutually support one another. Thereby they will recall, finally, a power which will prove more powerful than all confederated bourgeois capital and political powers put together.
+
+
+The Council must become {\em the} Association in the mind of every worker. It must become the password of every political and agitation organization of the workers, the password of every group, in every industry throughout all lands. Undoubtedly the Council; is the weightiest and most hopeful sign of the proletarian struggle an infallible omen of the coming complete emancipation of the workers.
+
+
+Experience has proved that the isolated associations are not more powerful than are the isolated workers. Even the Association of all Workers’ Associations of a single country would not be sufficiently powerful to stand up in conflict with the International combination of all profit making world capital. Economic science establishes the fact that the emancipation of the worker is no national question. No country, no matter how wealthy, mighty, and well-served it may be, can undertake — without ruining itself and surrendering its inhabitants to misery — a fundamental alteration in the relations between capital and labor, if this alteration is not accomplished, at the same time, at least, in the greatest part of the industrial countries of the world. Consequently, the question of the emancipation of the worker from the yoke of capital and its representatives, the bourgeois capitalists, is, above all, an International question. Its solution, therefore, is only possible through an International Movement.
+
+
+Is this International Movement a secret idea, a conspiracy? Not in the least. The International Movement, the Council Association, does not dictate from above or prescribe in secret. It federates from below and will from a thousand quarters. It speaks in every group of workers and embraces the combined decision of all factions. The Council is living democracy: and whenever the Association formulates plans, it does it openly, and speaks to all who will listen. Its word is the voice of labor recruiting its energies for the overthrow of capitalist oppression.
+
+
+What does the Council say? What is the demand it makes through every association of these who toil and think, in every factory, in every country? What does it request? Justice! The strictest justice and the rights of humanity: the right of manhood, womanhood, childhood, irrespective of all distinctions of birth, race, or creed. The right to live and the obligation to work to maintain that right. Service from each to all and from all to each. If this idea appears appalling and prodigious to the existent bourgeois society, so much the worse for this Society. Is the Council of Action a revolutionary enterprise? Yes and no.
+
+
+The Council of Action is revolutionary in the sense that it will replace a society based upon injustice, exploitation, privilege, laziness, and authority, by one which is founded upon justice and freedom for all mankind. In a word, it wills an economic, political, and social organization, in which each person, without prejudice to his natural and personal idiosyncrasies, will find it equally possible to develop himself, to learn, to think, to work, to be active, and to enjoy life honorably. Yes, this it desires; and we repeat, once more, if this is incompatible with the existing organization of society, so much the worse for this society.
+
+
+Is the Council of Action revolutionary in the sense of barricades and of violent uprising or demonstration? No; the Council concerns itself but little with this kind of polities; or, rather, one should say that the Council takes no part in it whatever. The bourgeois revolutionaries, anxious for some change of power, and police agents finding occupation in passing explosions of sound and fury, are annoyed greatly with the Council of Action on account of the Council’s indifference towards their activities and schemes of provocation.
+
+
+The Council of Action, the Red Association of these who want and toil, comprehended, long since, that each bourgeois politic — no matter how red and revolutionary it might appear — served not the emancipation of the workers, but the tightening of their slavery. Even if the Council had not comprehended this fact, the miserable game, which, at times, the bourgeois republican and even the bourgeois Socialist plays, would have opened the workers’ eyes.
+
+
+The Council of Action, ever evolving more completely into the International Workers’ Movement, holds itself severely aloof from the dismal political intrigues, and knows to-day only one policy: to each group and to each worker: his propaganda, its extension and organization into struggle and action. On the day when the great proportion of the world’s workers have associated themselves through Council of Actions, and so firmly organized through Council of Actions, and so firmly organized through their divisions into one common solidarity of movement, no revolution, in the sense of violent insurrection, will be necessary. From this it will be seen that anarchists do not stand for abortive violence which its enemies attribute to it. Without violence, justice will triumph. Oppression will be liquidated by the direct power of the workers through association. And if that day, there are impatient pleads, and some suffering, this will be the guilt of the bourgeoisie refusing to recognize what has happened, through their machination. To the triumph of the social revolution itself violence will be unnecessary.
+
+
+\chapter{Chapter 6: The Class War (1870)
+}
+
+Except, Proudhon and M. Louis Blanc almost all the historians of the revolution of 1848 and of the coup d’etat of December, 1851, as well as the greatest writers of bourgeois radicalism, the Victor Hugos, the Quinots, etc. have commented at great length on the crime and the criminals of December; but they have never deigned to touch upon the crime and the criminals of June. And yet it is so evident that December was nothing but the fatal consequence of June and its repetition on a large scale.
+
+
+Why this silence about June? Is it because the criminals of June are bourgeois republicans of whom the above named writers have been, morally, more or less accomplices? Accomplices in their principles and therefore indirectly accomplices to their acts. This reason is probable, but there is yet another which is contain. The crime of June struck workers only, revolutionary socialists, consequently strangers to the class and natural enemies of the principle that all these honorable writers represent. The crime of December attacked and deported thousands of bourgeois republicans, the social brothers of those honorable writers and their political co-religionists. Besides, they themselves have been its victims. Hence their extreme sensibilities to the December crimes, and their indifference to those of June.
+
+
+A general rule: A bourgeois, however red a republican he be, will be much more keenly affected, aroused and smitten by a mishap to another bourgeois wore this bourgeois even a mad imperialist than by the misfortune of a worker, of a man of the people. There is undoubtedly a great injustice in this difference, but the injustice is not premeditated. It is instinctive. It arises onto of the conditions and habits of life which exercise a much greater influence over men than their ideas and political convictions. Conditions and habits, their special manner of existing, developing, thinking and acting; all their social relationships so manifold and various, and yet se regularly convergent towards the same aim; all this diversity of interest expressing common social ambition and constituting the life of the bourgeois world, establishes between these who belong to this world a solidarity infinitely more real, deeper, and unquestionably more sincere than any that might arise between a section of the bourgeoisie and the workers. No difference of political opinions is sufficient to overcome the bourgeois community of interests. No seeming agreement of political opinions is sufficient to overcome the antagonism of interests that divide the bourgeoisie from the workers. Community of convictions and ideas are and must ever be subsidiary to a community of class interests and prejudices
+
+
+Life dominates thought and determines the will. This is a truth that should never be lost sight of when we wish to understand anything about social and political phenomena. If we wish to establish a sincere and complete community of thought and will between men, we must found it on similar conditions of life, or on a community of interests. And as there is, by the very conditions of their respective existence, an abyss between the bourgeois word and the world of the worker, — the one being the exploiting world, the other the world of the victimized and exploited I conclude that if a man born and brought up in the bourgeois environment wishes to become sincerely and unreservedly the friend and brother of the workers he must renounce all the conditions of his past existence and outgrow all his bourgeois habits He must break off his relations of sentiment with the bourgeois world, its vanity and ambition. He must turn his back upon it and become its enemy; proclaim irreconcilable war; and threw himself wholeheartedly into the world and cause of the worker.
+
+
+If his passion for justice is too weak to inspire him to such resolution and audacity, let him not deceive himself and let him not deceive the workers. He can never become their friend and at every crisis must prove their enemy. His abstract thoughts, his dreams of justice will easily influence him in hours of calm reflection when nothing stirs in the exploited world. But let the moment of Struggle come when the armed truce gives place to the irreconcilable conflict, his interests will compel him to serve in the camp of the exploiters. This has happened to our one-time friends in the past. It will happen again to many good republicans and socialists who have not lost their attachment to the bourgeois world.
+
+
+Social hatreds are like religious hatreds. They are intense and deep. They are not shallow like political hatred. This fact explains the indulgence shown by the bourgeois democrats for the Bonapartists. It explains also their excessive severity against the socialist revolutionaries. They detest the former much less than the latter because of the pressure of economic interests. Consequently they unite with the Bonapartists to form a common reaction against the oppressed masses.
+
+
+\chapter{Chapter 7: The German Crisis (1870)
+}
+
+Whosoever mentions the State, implies force, oppression, exploitation, injustice — all these brought together as a system are the main condition of present-day society. The State has never had, and never can have, a morality. Its only morality and justice is its own interest, its existence, and its omnipotence at any price; and before its interest, all interest of Humanity must stand in the background. The State is the negation of Humanity. It is this in two ways: the opposite of human freedom and human justice (internally), as well as the forcible disruption of the common solidarity of mankind (externally). The Universal State, repeatedly attempted, has always proved an impossibility, so that, as long as {\em the State }exists, {\em State} will exist — and since every State regards itself as absolute, and proclaims the adoration of its power as the highest law, to which all other laws must be subordinated, it therefore follows that as long as State exist wars cannot cease Every State must conquer, or be conquered. Every State must build its power on the weakness or, if it can do it without danger to itself, on the destruction, of other States.
+
+
+To strive for International justice, liberty, and perpetual peace and at the same time to uphold the State, is contradictory and naive. It is impossible to alter the nature of the State, because it is just this nature that constitutes the State; and States cannot change their nature without ceasing to exist. It thus follows that there cannot be a good. just, virtuous State. All States are bad in that sense, that they, by their nature, by their principle by their very foundation and the highest ideal of their existence, are the opponents of human liberty, morality and justice. And in this regard there is, one may say; what one likes, no great difference between the barbaric Russian Empire and the civilized States of Europe. Wherein lies the only difference? Russian Tsardom does openly what the others do under the mask of hypocrisy. Tsardom with its undisguised political method, and its contempt for humanity, is the only goal to which all statesmen of Europe secretly but envyingly aspire. All States of Europe do the same as Russia, as far as public opinion, and especially as far as the reawakened but very powerful solidarity of the people allow them — a public opinion and solidarity which contain in themselves the gems of the destruction of States. There is no “good” State with the possible exception of the se that are powerless. And even they are quite criminal enough in their dreams. He who wants freedom, justice, and peace, he who wants the entire (economic and political) liberation of the masses, must strive for the destruction of the States, and the establishment of a universal federation of free groups for Production.
+
+
+As long as the German workers strive for the establishment of a national State — however popular and free they may imagine this State (and there is a far stop from imagination to realization, especially when there is the fraternization of two diametrically opposed principles, the State and the liberty of the people, involved)-so long as they sacrifice the liberty of the people to the might of the State, Socialism to politics, International justice and fraternity to patriotism. It is clear that their own economic liberation will remain a beautiful dream, looming in the distant future.
+
+
+It is impossible to reach two opposite poles simultaneously. Socialism, the Social Revolution, presupposes the abolition of the State; it is therefor clear that he who is in favor of the State must give up Socialism, and sacrifice the economic liberation of the workers to the political power of some privileged party.
+
+
+The German Social Democratic Party is forced to sacrifice the economic liberation of the proletariat, and consequently also their political liberation — or, bettor expressed, their liberation from politics — to the self-seeking and triumph of the bourgeois Democracy. This follows unquestionably from Articles 2 and 3 of their program. The first three paragraphs of Article 2 are quite in accord with the Socialist principles of the international, whose program they copy nearly literally. But the fourth paragraph of the same article, which declares that political liberty is the forerunner of economic liberty, entirely destroys the practical value of the recognition of our principles. It can mean nothing else than this:-“Proletarians, you are saves, the victims of private property and capitalism. You want to liberate your-selves from this yoke. This is good, and your demands are quite just. But in order to realize them, you must help us to accomplish the political revolution. Afterwards we will help you to accomplish the Social Revolution. Let us, therefore, through the might of your arms establish the Democratic State, and then — and then we will create a commonwealth for you similar to the one the Swiss workers enjoy.
+
+
+In order to convince oneself that this preposterous delusion expresses entirely the spirit and tendency of the German Social Democratic Party — i.e., their program, not the natural aspirations of the German workers of whom the party consists one need only study the third article of this program, wherein all the initial demands, which shall be brought about by the peaceful and legal agitation of the party are elaborated. All these demands, with the exception of the tenth, which had not even been proposed by the authors of the program, but had been added later — during the discussion, by a member of the Eisenach Congress — all these demands are of an entirely political character. All these points which are recommended as the main object of the immediate practical activity of the party consist of nothing else but the well-known program of bourgeois democracy; universal suffrage, with direct legislator by the people, abolition of all political privilege; a citizen army; separation of Church and State, and school and State; free and compulsory education; liberty of the Press, assembly, and combination; conversion of all indirect taxation into a direct, progressive, and universal income-tax.
+
+
+These are the true objects, the real goal of the party ! An exclusively political reform of the State, the institutions and laws, of the State. Am I not, therefore, entitled to assert that this program is in reality a purely political and bourgeois affair, which looks upon Socialism only as a dream for a far distant future? Have 1 not likewise a right to assort that if one would judge the Social Democratic Party of the German workers by their program — of which I will beware, because I know that the real aspirations of the German working class go infinitely fur ther than this, program — then one would have a right to believe that the creation of this party had no other purpose than the exploitation of the mass of the proletariat as blind and sacrificed tools towards the realization of the political plans of the German bourgeois Democracy.
+
+
+\chapter{Chapter 8: On the Social Upheaval (1870)
+}
+
+{\em Le Beveil du Peuple} for September and October, 1870, published an important summary of an article by Michael Bakunin on the question of the social upheaval. Bakunin denounces all forms of reformist activity as being inimical to the emancipation of the working class, and proceeds to attack: these who advocate a more political revolution, brought about according to the constitutional forms of capitalist society, and through the medium of its, parliamentary machine, in opposition to a direct social revolutionary change effected by the workers through the medium of their own political industrial organization,
+
+
+Bakunin argues that the fact that wages practically never rise above the bare level of subsistence renders it impossible for the workers to secure increased well-being under bourgeois society. With the progress of capitalist civilization, the gulf between the two classes gapes wider and wider.
+
+
+It follows from this, also, that in the most democratic and free centuries, such as England, Belgium, Switzerland, and the U.S.A., the freedom and political rights which the workers enjoy ostensibly are merely fictitious. They, who are slaves to their masters in the social sense are slaves also in the political sense. They have neither the education, nor the leisure, nor the independence which are so absolutely necessary for the free and thoughtful exercise of their rights of citizenship. In the most democratic countries, these in which there is universal suffrage, they have one day of mastery, or rather of Saturnalia, Election day. Once this day, the bourgeoisie, their daily oppressors and exploiters, come before them, hat in hand and talk of equality, brotherhood, and call them a sovereign people, whose very humble servants and representatives they wish to be. Once this day is passed, fraternity and equality disperse like smoke; the bourgeoisie become once more the bourgeoisie; and the proletariat, the sovereign people, continuo in their slavery. This is why the system of representative democracy is so much applauded by the radical bourgeoisie, even when in a popular direction, it is improved, completed, and developed through the referendum and the direct legislation of the people, in which form it is so strenuously advocated by a certain school of Germans, who strongly call themselves Socialists.
+
+
+For, so long as the people remain slaves economically, they will also remain slaves politically, express their sentiments as such, and subordinate themselves to the bourgeoisie, who rely upon the continuance of the vote system for the preservation of their authority.
+
+
+Does that mean that we revolutionary Socialists are opposed to universal suffrage, and prefer limited suffrage or the despotism of an individual? By no means. What we assert is, that, universal suffrage in itself, based as it on economic and social inequality, will never be for the people anything but a bait, and that from the side of democratic bourgeoisedom, it will never be ought but a shameful lie, the surest implement for strengthening, with a make-believe of liberalism and justice, the eternal domination of the exploiting and owing classes, and so suppressing the freedom and interests of the people.
+
+
+“Consequently we deny that the universal franchise in itself is a means in the hands of the people for the achievement of economic and social equality.”
+
+
+“On this ground we assort that the so-called Social, Democrats, who, in these countries, whore universal suffrage does not exist yet, exert themselves to persuade the people that they must achieve this before all else — as today the leaders of the Social Democratic Party are doing when they tell the people that political freedom is a necessary condition to the attainment of economic freedom — are themselves either the victims of a fatal error or they are charlatans. Do they really not know, or do they pretend not to know, that this preceding political freedom i.e., that which necessarily exists without economic and social equality, since it should have to precede these two fundamental equalities, will be essentially bourgeois freedom, i.e.,founded on the economic dependence of the people, and consequently incapable of brining forth its opposition, the economic and social, and creating such economic freedom as leads to the exclusive freedom of only the bourgeoisie?”
+
+
+“Are these peculiar Social Democrats victims to a fallacy or are they betrayers? That is a very delicate question, which I prefer not to examine toe closely. To me it is certain, that there are no worse enemies of the people than these who try to turn them away from the social upheaval, the only change that can give them real freedom, justice, and well being in order to draw them again into the treacherous path of reforms, or of revolutions of an exclusively political character whose tool, victim and deputy the social democracy always has been.”
+
+
+Bakunin then precedes to point out that the social upheaval does not exclude the political one. It only means that the political institutions shall alter neither before nor after, but together with the economic institutions.
+
+
+“The political upheaval, simultaneously with and really inseparable from the social upheaval, whose negative expression or negative manifestation it will, so to speak, be, will no longer be a reformation, but a grandiose liquidation.”
+
+
+“The people are instinctively mistrustful of every government. when you promise them nice things, they say: — ‘You talk so because you are not yet at the rudder.’ A letter from John Bright to his electors, when he became minister, says: — ‘The voters should not expect him to act according to what he used to say: it is somewhat different speaking in opposition and different acting as a minister.’ Similarly spoke a member of the International, a very honest Socialist, when in September, 1870, he became the perfect of a very republican minded department. He ‘retains his old views, but now he is compelled to act in opposition to them.”
+
+
+Bakunin assorts that both are quite right. Therefore it does not avail to change the personnel of the government. He proceeds to treat of the inevitable corruption that follows from authority, and insists that everyone who attains to power must succumb to such corruption since he must serve and conserve ruling-class economic rights.
+
+
+\chapter{Chapter 9: God or Labor: The Two Camps
+}
+
+You taunt us with disbelieving in God. We charge you with believing in him. We do not condemn you for this We do not even indict you. We pity you. For the time of illusions is past. We cannot be deceived any longer.
+
+
+Whom do we find under God’s banner? Emperor, kings, the official and the officious world; our lords and our nobles; all the privileged poisons of Europe whose names are recorded in the Almana de Gotha; all the guinea pigs of the industrial, commercial and banking world; the patented professors of our universities; the civil service servants; the low and high police officers; the gendarmes; the gaolers; the headsman or hangman, not forgetting the priests, who are now the black police enslaving our souls to the State; the glorious generals, defenders of the public order; and lastly, the writers of the reptile Press.
+
+
+This is God’s army!
+
+
+Whom do we find in the camp opposite? The army of revolt; the audacious donors of God and repudiators of all divine and authoritarian principles! These who are therefore, the believers in humanity, the asserters of human liberty.
+
+
+You reproach us with being Atheists. We do not complain of this. We have no apology to offer. We admit we are. With what pride is allowed to frail individuals-who, like passing waves, rise only to disappear again in the universal ocean of the collective life — we pride ourselves on being Atheists. Atheism is Truth — or, rather the real basis of all Truths.
+
+
+We do not stoop to consider practical consequences. We want Truth above everything. Truth for all!
+
+
+We believe in spite of all the apparent contradictions in spite of the wavering political wisdom of the Parliamentarians — and of the skepticism of the times — that truth only can make for the practical happiness of the people. This is our first article of faith.
+
+
+It appears as if you were not satisfied in recording our Atheism. You jump to the conclusion that we can have neither love nor respect for mankind, informing that all these great ideas or emotions which, in all ages, have set heart s throbbing are dead letters to us. Trailing at hazard our miserable existence’s — crawling, rather than walking, as you wish to imagine us — you assume that we cannot know of other feelings than the satisfaction of our coarse and sensual desires.
+
+
+Do you want to know to what an extent we love the beautiful things that you revere? Know then that we love them so much that we are both angry and tired at seeing them hanging, out of reach, from your idealistic sky. We feel sorrow to see them stolen from our mother earth, transmuted into symbols without life, or into distant premises never to be realized. No longer are we satisfied with the fiction of things. We want them in their full reality. This is our second article of faith.
+
+
+By hurling at us the epithet of materialists, you believe you have driven us to the wall. But you are greatly mistaken. Do you know the origin of your error?
+
+
+What you and we call matter are two things totally different. Your matter is a fiction. In this it resembles your God, your Satan, and your immortal soul. Your matter is nothing beyond coarse lowliness, brutal lifelessness. It is an impossible entity, as impossible as your pure spirit — “immaterial,” “absolute”?
+
+
+The first thinkers of mankind wore necessarily theologians and metaphysicians. Our earthly mind is so constituted that it begins to rise slowly — through a maze of ignorance — by errors and mistakes — to the possession of a minute parcel of Truth. This fact does not recommend “the glorious conditions of the past.” But our theologians and metaphysicians, owing to their ignorance, took all that to them appeared to constitute power, movement, life, intelligence; and, by a sweeping generalization, called it, spirit! To the lifeless and shapeless residue they thought remained after such preliminary selection — unconsciously evolved from the whole world of reality — they gave the namo of matter! They wore then surprised to see that this matter — which, like their spirit existed only in their imagination — appeared to be so lifeless and stupid when compared to their god, the eternal’ spirit! To be candid, we de not knew this God. We de not recognize this matter.
+
+
+By the words matter and material, we understand the totality of things, the whole gradation of phenomenal reality as We know it, from the most simple inorganic bodies to the complex functions of the mind of a man of genius; the most beautiful sentiments, the highest thoughts; the most heroic deeds; the actions of sacrifice and devotion; the duties and the rights, the abnegation and the egoism of our social life. The manifestations of organic life, the properties and qualities of simple bodies; electricity, light, heat, and molecular attraction, are all to cur mind but so many different evolution’s of that totality of things that we call matter. These evolution’s are characterized by a close solidarity, a unity of motive power.
+
+
+We de not look upon this totality of being and of forms as an eternal and absolute substance, as Pantheist do. But we look upon it as the result, always changed and always changing, of a variety of actions and reactions, and of the continuous working of real beings that are born and live in its very midst. Against the creed of the theologians I set these propositions:
+
+
+
+\startitemize[N]\relax
+\item[] That if there wore a God who created it the world could never have existed.
+
+
+
+
+ \item[] That if God were,or had been, the ruler of nature, natural, physical, and social law could never have existed, it would have presented a spectacle of complete chaos. Ruled from above, downwards, it would have resembled the calculated and designed disorder of the political State.
+
+
+
+
+ \item[] That moral law is a moral, logical and real law, only in so far as it emanates from the needs of human society.
+
+
+
+
+ \item[] That the idea of God is not necessary to the existence and working of the moral law. Far from this, it is a disturbing and socially demoralizing factor.
+
+
+
+
+ \item[] That all gods, past and present, have owed their existence to a human imagination unfired from the fetters of its primordial animality
+
+
+
+
+ \item[] That any and every god, once established on his throne becomes the curse of humanity, and the natural ally of all tyrants, social charlatans, and exploiters of humanity.
+
+
+
+
+ \item[] That the routing of God will be a necessary consequence of the triumph of mankind. The abolition of the idea of God will be a fateful result of the proletarian emancipation.
+
+
+
+
+ 
+\stopitemize
+From the moral point of view, Socialism is the advent of self respect to mankind. It will mean the passing of degradation and Divinity.
+
+
+From the practical viewpoint,Socialism is the final acceptance of a great principle that is leavening society more and more every day. It is making itself more and more by the public conscience. It has become the basis of scientific investigations and progress, and of the proletariat. It is making its way everywhere. Briefly, this principle is as follows:
+
+
+As in what we call the material world, the inorganic matter — mechanical, physical, and chemical — is the determinant basis of the organic matter — vegetable, animal intellectual — in like matter in the social world, the development of economical questions has been, and is the basis that determines our religious, philosophical, political, and social developments. On this subject Bakunin agrees with Marx.
+
+
+This principle audaciously destroys all religious ideas and metaphysical beliefs. It is a rebellion far greater than that which, born during the Renaissance and the seventeenth century, leveled down all scholastic doctrine — once the powerful rampart of the Church, of the absolute monarchy, and of the feudal nobility — and brought about the dogmatic culture of the so-called pure reason, so favorable to our latter-day rulers the bourgeois classes. We therefore, say, through the International : The economical enslavement of the workers — to these who control the necessities of life and the instruments of labor, tools and machinery — is the solo and original cause of the present slavery in all its forms. To it are attributable mantel degeneration and political submission. The economic emancipation of the workers, therefore, is the aim to which any political movement must subordinate its being, merely as a means to that end. This briefly is the central idea of the International.
+
+
+\chapter{Chapter 10: Politics and the State (1871)
+}
+
+We have repelled energetically every alliance with bourgeois politics, even of the most radical nature. It has been pretended, foolishly and slanderously, that we repudiated all such Political connivance because we wore indifferent to the great question of Liberty, and considered only the economic or material side of the problem. It has been declared that, consequently, we placed ourselves in the ranks of the reaction. A German delegate at the Congress of Basle gave classic expression to this view, when he dared to state that, who ever did not recognize, with the German Socialists Democracy, “that the conquest of political rights (power) was the preliminary condition of social emancipation,” was, consciously or unconsciously an ally, of the Caesars!
+
+
+These critics greatly deceive themselves and, “consciously or unconsciously,” endeavor to deceive the public concerning us. We love liberty much more than they do. We love it to the point of wishing it complete and entire. We wish the reality and not the fiction. Hence we repel every bourgeois alliance, since we are convinced that all liberty conquered by the aid of the bourgeoisie, their political means and weapons, or by an alliance with their political dupes, will prove profitable for Messrs. the bourgeois, but never anything more than a fiction for the workers.
+
+
+Messrs. the bourgeois of all parties, including the most advanced, however cosmopolitan they are, when it is a question of gaining money by a more and more extensive exploitation of the labor of the people, are all equally fervent and fanatical in their patriotic attachment to the state. Patriotism is in reality, nothing but the passion for and cult of the national State, as M. Thiers, the very illustrious assassin of the Parisian proletariat, and the present savior of France, has said recently. But whoever says “State” says domination; and whoever says “domination” says exploitation. Which proves that the popular or “folk’s” State, now become and unhappily remaining today the catchword of the German Socialist Democracy, is a ridiculous contradiction, a fiction, a falsehood, unconscious on the part of those who extol it, doubtlessly, but, for the proletariat, a very dangerous trap.
+
+
+The State, however popular may be the form it assumes, will always be an institution of domination and exploitation, and consequently a permanent source of poverty and enslavement for the populace. There is no other way, then, of emancipating the people economically and politically, of giving them liberty and well-being at one and the same time than by abolishing the State, all States, and, by so doing, killing, once and for all time, what, up to now, has been called “Politics,” i. e., {\em precisely nothing else than the functioning or} {\em manifestation both internal and external of State action, that is to} {\em say, the practice, or art and science of dominating and exploiting the masses in favor of the privileged classes.}
+
+
+It is not true then to say that we treat politics abstractly. We make no abstraction of it, since we wish positively to kill it. And here is the essential point upon which we separate ourselves absolutely from politicians and radical bourgeois Socialists (now functioning as social or radical democracy which is only a facade for capitalistic democracy,). Their policy consists in the transformation of State politics, their use and reform. Our policy, the only policy we admit, consists in the total abolition of the State, and of politics, which is its necessary manifestation.
+
+
+It is only because we wish frankly to this abolition of the State that we believe that we have the right to call ourselves Internationalists and Revolutionary Socialists; for whoever wishes to deal with polities otherwise than how we do; whoever does not, like us, wish the total abo lition of politics, must necessarily participate in the politics of a patriotic and bourgeois State. In other words, he renounces, by that very fact, in the name of his great or little national State, the human solidarity of all peoples, as well as the economic and social emancipation of the masses at home.
+
+
+\chapter{Chapter 11: The Commune, the Church and the State
+}
+
+I am a passionate seeker for truth and just as strong an opponent of the corrupting lies, through which the party of order — this privileged, official, and interested representative of all religions, philosophical, political, legal economical, and social outrage in the past and present — has tried to keep the world in ignorance. I love freedom with all my heart. It is the only condition under which the intelligence, the manliness, and happiness of the people, can develop and expand. By freedom, however, I naturally understand not its more form, forced down as from above, measured and controlled by the state, this eternal lie which, in reality, is noting bit the privilege of the few founded upon the slavery of all. Nor do I mean that “individualistic,” selfish, petty, and {\em mock}freedom, which is propagated by J.J. Rousseau and all other schools of bourgeois liberalism. The mock freedom which is limited by the supposed right of all, and defended by the state, and leads inevitably to the destruction of the rights of the individual. No: I mean the only true freedom, that worthy of the name; the liberty which consists therein for everyone to develop all the material, intellectual, and moral faculties which lie dormant in him; the liberty which knows and recognizes no limitations beyond these which nature decrees. In this sense, there are no limitations, for the laws of our own nature are not forced upon us by a law-giver who, beside or above us, sits on a throne. They are iii us, the real basis of our bodily and intellectual existence. Instead of limiting them, we must know that they are the real condition and first cause of our liberty.
+
+
+I mean that liberty of each which is not limited or restrained or curtailed by the liberty of another, but is strengthened and enlarged through it: the unlimited liberty of each through the liberty of all, liberty through solidarity, liberty in equality, (Political, economical and social.) The liberty which has conquered brute force and vanquished the principle of authority, which is, always, only the expression of that force. The liberty, which will abolish all heavenly and earthly idols, and erect a new world of fellowship and human solidarity on the ruins of all states and churches.
+
+
+I am a confirmed disciple of {\em economic and social equality}. Outside of this, I know, freedom, justice, manliness, morality, and the welfare of the individual as well as that of the community, can only be a hollow lie, an empty phrase. This equality must realize itself through the free organization of labor and the voluntary cooperative ownership of the means of production, through the combination of the productive workers into freely organized communes, and the free federation of the communes. There must be no controlling intervention of the state.
+
+
+This is the point which separates, especially, the revolutionary socialists from the authoritarian i. e. marxian socialists. Both work for the same end. Both are out to create a new society. Both agree that the only basis of this new society shall be: the organization of labor which each and all Will have to perform under equal economic conditions, following the demands of nature; and the common ownership of, everything that is necessary to perform that labor, lands, tools, machinery, etc. But, where as, the revolutionary socialists believe in the direct initiative of the workers themselves through their industrial combinations, this is anarchist stand point in contradiction to marxian or as it claims to be scientific. The authoritarians believe in the direct initiative of the state. They imagine they can reach their goal with the help of the radical parties (new it should be understood as communist) through the development and organization of the political power of the working-class, especially the proletariat of the big towns, due to concentration of large industries employing large mass of proletariat. But the revolutionary socialist oppose all these compromising and confusing alliances. They are convinced that the goal of a free society can only be reached through the development and organization of the non-political, but social power of the working class of both town and country, with the fusion of forces of all these members of the upper class who are willing to declass themselves and ready to break with the past, and to combine together for the same demands. The revolutionary socialists are opposed, therefore, to all politics.
+
+
+Thus we have two methods:
+
+
+
+\startitemize[N]\relax
+\item[] The organization of the representative or political strength of the proletariat for the purpose of capturing political power in the state in order to transform society.
+
+
+
+
+ \item[] The organization of the direct strength, the social and industrial solidarity of the proletariat for the purpose of abolishing all political power and the state.
+
+
+
+
+ 
+\stopitemize
+The advocates of both methods believe in science, which is out to slay superstition, and which shall take the place of religious church belief. But the former propose to force it into humanity, whilst the latter seek to convince the people of its truth, to educate them everywhere, so that they shall voluntarily organize and combine — freely, from the bottom upwards through individual initiative and according to their true interests, but never according to a plan drawn up before hand for the “ignorant masses” by a few intellectually superior persons.
+
+
+Revolutionary — new known as libertarian socialists believe that in the instinctive yearnings and true wants of the masses, is to be found much sound reason and logic than in the deep wisdom of all the doctors, servants, and teachers of humanity who, after many disastrous attempts, still dabble in the problem of making the people happy. Humanity, think they, has been ruled and governed much toe long and so they think this state of the affairs should continue. Indeed the search of people’s trouble, lies not in this or that form of government, but in the existence and manifestation of Government itself, whatever form it may assume.
+
+
+This is the historical difference between the authoritarian communist ideas, scientifically developed through the German Marxist school and partly adopted by English and American Socialists, on one hand and the Anarchist ideas of Joseph Pierre Proudhon which have educated the proletariat of the Latin countries and led them intellectually to the last consequences of Proudhon’s teachings. This latter revolutionary or libertarian socialism has now for the first time, attempted to put its ideas into practice in the Paris Commune.
+
+
+I am a follower of the Paris Commune, which, though dastardly murdered and drowned in blood by the assassins of the clerical and monarchical reaction, yet lives, more than ever, in the imagination and hearts of the European proletariat. I am its follower, especially because of the fact that it was a courageous, determined, negation of the state. It is a fact of enormous significance, that this should have happened in France, hitherto the land of strongest political centralization; that it was Paris, the head and creator of this great centralization, which made the start — thus destroying itself and proclaiming with joy its fail, in order to give life to France, to Europe, to the whole world; thus revealing to all enslaved people — and who are the people who are not slaves — the only way to liberty and happiness; delivering a deathly stroke against the political traditions of bourgeois liberalism, and giving a sound has-is to revolutionary socialism.
+
+
+Paris thus earned for itself the curses of the reactionaries of France and Europe. It inaugurated the new era, that of the final and entire liberation of the people, and their truly realized solidarity, above and in spite of all limitations of the State. Proclaimed the religion of humanity. Made manifest its humanism and atheism, and substituted the great truths of social life and science for godly lies. Paris, heroic, sane, unflinching, assorted its strong belief in the future of humanity. It substituted liberty, justice, and fraternity for the falsehood and injustice of religious and political morality. Paris, evoked in the blood of its children, symbolized humanity crucified by the International united reaction of Europe at the direct inspiration of the churches and the high priests (Politicians) of injustice. The next International upheaval of humanity will be the resurrection of Paris.
+
+
+Such is the true meaning and the beneficial and immeasurably important results of the two-months’ existence and memorable fall of the Paris Commune. It lasted only a short time. It was hampered too much by the deadly war it had to wage against the Versailles reaction and Holy Alliance. Consequently, it was unable to work out its Socialist program, even theoretically, much less practically. The majority of the members of the Commune, even, were not Socialists in the real sense of the word. And if they acted as Socialists, it was only because they were irresistibly carried away by the nature of their surroundings, the necessity of their position, and not by their own innermost convictions. The Socialists, led by our friend Varlin, formed in the Commune only a disparagingly small minority, say fourteen or fifteen members. The rest consisted of Jacobins. But we must discriminate between Jacobins and Jacobins.
+
+
+There are doctrinaire Jacobins like Gambotta whose, oppressing lust for power and formal republicanism has lost the old revolutionary fire, and preserved only a respect for centralized unity and authority. This was the Jaeobinism that betrayed the France of the people to the Prussian conquerors, and then to the native re action. But there were honest revolutionary Jacobins also, the last heroic descendants of the democratic impulse of 1793, men and women who could sacrifice their centralized unity and well-armed authority to the needs of the revolution, rather than bend their condolence before the obnoxious reaction. In the vanguard of these great-hearted Jacobins we see Delecluse, a great and noble figure. Before everything he desired the triumph of the revolution; and as, without the people, no revolution is possible as the people are Sociallsticallv inclined, and could not be wen for any other revolution than á social or economic one, Delecluse and his fellow honest Jacobins allowed themselves to be carried away by the logic of the revolutionary movement. Without desiring it, they became revolutionary Socialists, and signed proclamations and appeals whose general spirit was of a decidedly Socialist nature.
+
+
+But, in spite of their honesty and goodwill, their Socialism was the product of external circumstances rather than inner conviction. They had neither the time nor the ability to overcome bourgeois prejudices diametrically opposed to their newly acquired Socialism. This internal conflict of opinion weakened them in action. They never got beyond fundamental theories, and were unable to come to decisive conclusions such as would have severed their :connection with bourgeois society once and for all.
+
+
+This was a great calamity for the Commune and for the men themselves. It paralyzed thorn, and they paralyzed the Commune. But we must not reproach them on that account. Man does not change in a day, and we cannot change our natures and customs overnight. The Jacobins of the commune have shown their honesty by suffering themselves to be murdered for it. Who expect more of them?
+
+
+Even the people of Paris, under whose influence they thought and acted, were Socialists more by instinct than by well-balanced conviction. All their yearnings were in the highest degree entirely Socialistic But their thoughts were expressed in traditional forms for removed from this height. Among the proletariat of the French towns, and even of Paris, many Jacobins prejudices still remain. Many false ideas about the necessity of dictatorship and government still flourish. The worship of authority — the inevitable result of religious education, that eternal source of all evil, all degradation, all enslavement of peoples — has not yet been entirely removed from its midst. So much is this the case that even the most intelligent son’s of the people, the self-conscious Socialists of that time, have not yet been able to free themselves from this superstition. Were one to dissect their minds, one would find the Jacobin, the believer in government, huddled together in a little corner, forsaken and almost lifeless, but not quite dead.
+
+
+Besides, the position of the small minority of class conscious and revolutionary Socialists in the Commune was very difficult. They felt that they lacked the support of the mass of the Paris population. The organization of the International Workers’ Association was very imperfect, and it only had a few thousand members. With this backing, they had to fight daily against a Jacobin majority. And under what circumstances! Daily they had to find work and bread for several hundred thousand workers, to organize and arm them, and to guard against reactionary conspiracies. All in a town like Paris, beleaguered, menaced with starvation, and exposed to all underhand attacks of the reaction which had established itself in Versailles by kind permission of the Prussian Conqueror. They were forced to create a revolutionary government and army in order to oppose Versailles government and army. They had to forget and violate the first principles of revolutionary Socialism, and organize themselves as a Jacobin reaction, in order to fight the monarchical and clerical reaction.
+
+
+It is obvious that, under these circumstances, the Jacobins were the stronger party. They were in a majority and possessed superior political cunning. Their traditions and greater experience in the organization of government gave them a gigantic advantage over the few genuine Socialists. But the Jacobins took little advantage of this fact; they did not strive to give to the uprising of Paris a distinctive Jacobin character, but allowed themselves to drift into a social revolution.
+
+
+Many Socialists, very consequential in their theory, reproach our Paris comrades with not having acted sufficiently Socialistic, whilst the barkers of the bourgeois forces accused them of having been toe loyal to the Socialist program. We will leave the latter gentry on one side now, and endeavor to convince the storm theorists of the liberation of labor that they are unjust to our Paris brethren. Between the best theories and their practical realization is a gigantic difference, which cannot be covered in a few days. These of us who knew for, our friend Varlin — to mention only him whose death was certain — how strong, well considered, and deep-rooted were the convictions of Socialism in him and his friends. They were men whose enthusiasm, honesty, and self-sacrifice nobody could doubt. Their very honesty make them suspicious of themselves, and they under-estimated their strength and character in face of the titanic labor to which they were consecrating their life and thought. Besides, they had the right conviction that, in the social revolution — which in this, as in every other respect, is the direct opposite of political revolution — the deeds of the single leading personality nearly disappear, and the independent, direct action of the masses count as everything. The only thing which the more advanced can de is to work out, spread, and ex. plain the ideas which suit the requirements and ideas of the people, and contribute to the national strength of the latter by waking untiringly on the task of revolutionary organization — nothing more. Everything else can and must be accomplished by the people themselves. Otherwise we would arrive at political dictatorship; that is, a re-instatement of the State, privilege, inequality, prosecution; a re-establishment, by a long and roundabout way, of political, social, and economic slavery.
+
+
+Varlin and all his friends; like all true Socialists, and like the average worker who is born and bred amongst the people, experienced in highest degree this well-justified fear of the continued initiative of the same men, this distrust of the of distinguished personalities. Their uprightness caused them to turn this fear and suspicion as much against themselves as against others.
+
+
+In opposition to the, in my opinion, entirely erroneous idea of State Socialists, that a dictatorship or a constitutional assembly — that has emerged from a political revolution — can proclaim and organize the social revolution by laws and degrees, our Paris friends were convinced that it could only be brought about and developed through the independent and unceasing efforts of the masses and the groups. They were a thousand times right. Where is the head, however genial, or — if one speaks of the collective dictatorship of an elected assembly, even if it consists of several hundred uncommonly well educated people — where is the brain that is mighty and grasping enough to grasp the unending number and multitude of true interests, yearnings, wills, and requirements, the sum total of which constitute the collective will of the people? And who could invent a social organization which would satisfy every man? Such an organization would be nothing less than a torture-chamber, into which the more or less aggressive State would put unhappy society. This has always happened up to now. But the social revolution must make an end of this antiquated system of organization. It must give back to the masses, the groups, communes, societies, even to every man and woman, their full and unrestricted liberty. It must abolish, once and for all, political power. The State must go. With its fail must disappear all legal rights, all the lies of various religions. For law and religion were always only the forced justification for privileged outrages and established aggression.
+
+
+It is clear that liberty can only be restored to mankind, and that the true interests of society, of all groups, all local organizations, as well as every single, being can be entirely satisfied entirely only when {\em all }States have been abolished. All the so-called “common interests of society” who are supposed to be represented by the State, are in reality nothing else than the entire and continued suppression of the true interests of the districts, communes, societies, and individuals which are subservient to the State. They are an imagination, an abstract idea, a lie. Under the guise of this idea of representing common interests, the State becomes a vast slaughter house or cemetery, where-in is slain all the living energy of the people.
+
+
+But an abstract idea can never exist for itself and through itself. It has no feet with which to walk, no arms with which to work, no stomach in which to digest its slaughtered victims. The religious idea, God, represents in reality, the self-evident and real interests of a privileged class, the clergy, who represent the earthly half of the God idea. The State, the political abstraction, represents as real and self-evident interests of the bourgeoisie. Today, that class is the most important and practically only exploiting class, which is threatening to swallow up all other classes. Priesthood is developing gradually into a very rich and mighty minority, but is rather relegated and with poor majority. The same is true of the bourgeoisie. Its political and social organizations are every day making for a real ruling oligarchy, to whom a majority of more or less conceited and impoverished bourgeois creatures who are obliged to serve the almighty oligarchy as blind tools. This majority lives in a continues illusion, and is, through the irresistible power of economic development, unavoidably and ever more pulled down to the ranks of the proletariat.
+
+
+The abolition of Church and State must be the first and essential condition for the true liberation of society.
+
+
+Only afterwards can and must society organize itself on a new basis. But not from the top downwards, after a more or less beautiful plan of a few exports or theorists, or on the strength of decrees of a ruling power, or through a universal-suffrage-elected Parliament. Such a proceeding would load inevitably to the creation of a new ruling aristocracy, {\em i.e., }a class who have nothing in common with the people. This class would exploit and bleed the people under the pretense of the common welfare, or in order to preserve the new State.
+
+
+The organization of the society of the future must and can be accomplished only from the bottom upwards, through the free federation and union of the workers into groups, unions, and societies, which will unite again into districts, communes, national communes, and finally form a great International federation. Only thus can be evolved the true vital order of liberty and happiness for all, the order which is not opposed to the interests of the individual or of society, but on the contrary strengthens the same and brings them into harmony.
+
+
+It is said that the harmony and the solidarity between the interests of the individual and society can never be affected, because of an inherent antagonism. But if these interests never and nowhere did harmonize, up to now, it has been the fault of the State in sacrificing the interests of the majority of the people to the gain of the small privileged minority. This oft-mentioned opposition of personal and social interests is only a swindle and political lie, which originated through the religious and theological lie of the Fall — a dogma which was invented to degrade man and destroy his consciousness of his own value. Support was lent to this false idea of antagonism of interests by the speculation of the metaphysical philosophies. These are closely related to theology. Metaphysics over-look the fact that man is a social animal, however, and view society as a mechanical and wholly artificial conglomeration of individuals, who suddenly organize themselves on the basis of a secret or sacred compact out of their free will, or at the dictation of a higher power. Before coming together in this fashion, these individuals had boasted an eternal soul and lived in alleged unlimited liberty!
+
+
+But when the metaphysicians, especially these who believe in the immortality of the soul, assort that men, outside society, are free beings, they maintain that men can enter into society only by denying their freedom and natural independence, and sacrificing both their personal and local interests. This denial and sacrifice of the ego becomes greater the more developed the society and the more complicated its organization. From this viewpoint the State becomes the expression of individual sacrifice which all have to bring to its altar. In the name of the abstract and outrageous lie called “the common good,” and “law and order” it imperils increasingly all personal liberty, in the interests of the governing class it exclusively represents. Hence the State appears to us as an inevitable negation and destruction of all liberty, all personal, individual, and common interests.
+
+
+Everything in the metaphysical and theological system follows and solves itself, Therefore the upholders of these systems are obliged to exploit the masses through the medium of Church and State. Whilst filling their pockets and satisfying all their filthy desires, they toil themselves that they work for the honor of God, the triumph of civilization, and the eternal welfare of the proletariat.
+
+
+But we revolutionary Socialists, who believe neither in God, nor yet in (absolute or unqualified) free will, nor yet in the immortality of the soul, we say that liberty, in its fullest sense, must be the goal of human progress.
+
+
+Our idealistic opponents, the theologians and metaphysicians, take the abstract “liberty,” as the foundation of their theories. It is then quite easy for them to draw the conclusion that slavery is the ‘indisputable condition of human existence. We, who are in our empirical scientific theory, materialists, strive’ in practice for the triumph of a sane and noble idealism. We are convinced that the ‘whole’ wealth of the intellectual, moral and material development of humanity, as well as its seeming independence, is due to the fact that man lives in society. Outside of society man would not only would not have been free. He would not even have been capable of becoming a man, i.e., a self-conscious being, capable of thought and speech. Thinking and waking together lifted man out of his animal condition. We are absolutely convinced that the whole life of man is a social product. His interests, yearnings, needs, dreams, and even his foolishness, as we’ll as his brutality, injustice, and actions, depending, seemingly, on free will, are only the inevitable results of forces at work in our social life. Men are not independent of each other, but each influences the other. We are all in continual co-relation with our neighbors and surrounding nature.
+
+
+In nature itself this wonderful co-working and fitting together of events does not take place without a struggle On the contrary, the harmony of the elements is but the result of this continual struggle, which is the condition of all life and of movement. Both in nature and society order without struggle is the equivalent of death.
+
+
+Order is possible and natural in world system only when the latter is a previously thought out arrangement imposed upon mankind from above. The Jewish religious imagination of a godly law-giver makes for unparalleled nonsense, and the negation not only of all order, but of nature itself. “The laws of nature” relate only to the goal of nature itself. The phrase is not true if used to mean laws decreed by an outside’ authority. For these “laws” are nothing else ‘than the continual adaptation which is part of the evolution of things, of the waking together of vastly different passing but real facts. The sum total of all action and interaction is what we call “nature”.’ The thoughts and science of man observe these phenomena, controlled and experimented with them and finally united them into a system, the single parts of which are called “laws.” But nature itself knows no laws. Nature acts unconsciously. In itself it demonstrates the unending difference of its necessarily appearing and self repeating phenomena. This is how, thanks to the inevitableness of activity, the common order can and does exist.
+
+
+So with human society, which apparently develops against nature, but in reality goes hand in hand with the natural and inevitable development of things. one the superiority of man over the rest of the animals and his highly developed thinking ability brought a special feature into his evolution — also, by the way, quite natural since man, like everything else, is the material result of the waking together and union of natural forces. This special feature is the calculating, thinking ability, the power of induction and abstraction. Through this man has been able to carry his thoughts outside himself, and so observe and criticize himself as a thing apart, some strange or foreign object. And as he, in his thoughts, lifts himself out of himself and the surrounding world, he arrives at the idea of the entire abstraction, the pure nothingness, the absolute. But this represent noting beyond man’s own ability to abstract thought, who looks down on all that is and finds peace in the entire negation of all that is. This is the very limit of the highest abstraction of thought: this is God.
+
+
+Herein is to be found the spirit and historical proof of every theological and religious doctrine. Man did not understand nature and the material foundation of his own thoughts. He was unconscious of the natural circumstances and powers which were characteristic of them. So he failed to realize that his abstract ideas only expressed his own ability to abstract thought. Therefore, he carne to regard the abstract idea as something really existing — something before which even nature sank into insignificance. And does he worshipped and honored in every conceivable fashion this unreality of his imagination. But it became necessary to imagine more clearly and to make understood somehow this God, this supreme nothingness which seemed to contain all things in essence but not in fact. So primitive man enlarged his idea of God. Gradually he bestowed on the deity all the powers which existed in human society, good and bad, virtuous and vicious. Such was the beginning of all religions, such their evolution from fetish worship to Christianity. We will not stop to analyze the history of religious, theological, and metaphysical nonsense, nor speak about the ever occurring godly incarnations and visions which have happened during centuries of human ignorance. Everyone knows that these superstitions occasioned terrible suffering, and their progress was accompanied by rivers of blood and much mourning. All these terrible horrors of poor humanity were inevitable in the evolution of society. They were the necessary effect, the natural consequence of that all powerful idea that the universe is governed and conditioned by a supernatural power and will. Century succeeds century. Man becomes more and more used to this belief. Finally it seeks to crush and to kill every effort towards higher development.
+
+
+The mad desire to rule or to govern, first on the part of a few men, then of a certain class, demandd that slavery and conquest should be accepted as the underlying principles of society. This, more than anything else, strengthened the terrible belief in a God above. Consequently, no social order could exist without being founded on the Church and State. All doctrinaires defend both of these outrageous institutions.
+
+
+With their development increased the power of the ruling class, of the priests and aristocrats. Their first concern was to inoculate the enslaved peoples with the idea of the necessity, the benefit, and the sacredness of Church and State. And the purpose of all this was to change brutal and violent slavery into legal, divinely preordained and sanctified slavery.
+
+
+Did the priests and really and truly believe in these institutions which they were endeavoring to uphold with all their power, and to their own benefit? Or were they only lairs and hypocrites? In my opinion they were honest believers and dishonest deceivers simultaneously.
+
+
+They themselves believed,since they participated, naturally, in the horrors of the masses. Only later, at the time the old world declined — that is, in the Middle Ages, did they become unbelievers and shameless lairs. The founders of states can be regarded also as honest men Man readily believes that which he desires and that which is not detrimental to his own interests. It makes no difference if he is intelligent and educated. Through his egotism and his desire to live with his neighbors and to profit by their estimation he will believe always only in that which is useful and desirable to him. I am convinced, for instance, that Thiers and the Versailles government were trying to convince themselves, violently, that they were saving France by murdering several thousand men, women, and children.
+
+
+Even if the priests, prophets, aristocrats, and bourgeois of all times were honest believers, in spite of all, they were parasites. One cannot suppose that they believed every bit of nonsense in religion and polities which they taught the masses. I will not go so far back as to the time when two Augurs in Rome were unable to look into each others face without smiling. It is hard to believe that even in the time of mental darkness and superstition the inventors of miracles were convinced of their truth. The same may be Raid of polities, where the motto is: “One must understand how to govern and rob a people so that they do not complain too much or forget to be subservient, so that they get no chance to think of resentment and revolt.”
+
+
+How can one possibly believe after this that the men who make a business out of polities, and whose goal is injustice, violence, lies, treason, single, and wholesale murder, honestly believe that the wisdom and art of ruling the State make for the common weal? In spite of all their brutality they are not so stupid as to think this. Church and State were in all times the schools of vice. History testifies to their crimes. Ever and always were priest and politician the conscious, systematic, unyielding, bloodthirsty enemies and executioners of the people. But how can we reconcile two se seemingly opposed things like cheater and cheated, liar and believer? In thought it looks difficult, but in life we find the two often together.
+
+
+The great bulk of mankind live in a continual quarrel and apathetic misunderstanding with themselves. They remain unconscious of this, as a rule, until some uncommon occurrence wakes them up out of their sleep, and forces them to reflect on themselves and their surroundings.
+
+
+In politics, as well as in religion, man is only a machine in the hands of his oppress ors. But robber and robbed, oppressor and oppressed live side by side, ruled by a handful of people, in whom one recognizes the real oppressors. It is always the same type of men, who, free of all political and religion prejudice, consciously torture and oppress the rest of the people. In the l7th and l8th centuries, until the advent of the great revolution, they ruled Europe and did as they liked. They do the same to-day. But we have reason to hope that their rule will be over soon.
+
+
+History teaches us that the chief priests of Church and State or also the sworn servants and creatures of these damnable institutions. Whilst consciously deceiving the people and leading them into disaster, these persons are concerned to uphold zealously the sanctity and unapproachability of both establishments. The Church, on the authority of all priests and most politicians, is essential to the proper care of the people’s sons; and the State is indispensable, in their opinion, for the proper maintenance of peace, order, and justice. And the doctrinaires of all schools exclaim in chorus: “Without Church or Government, progress and civilization is impossible.”
+
+
+We make no comment on the heavenly hereafter, since we do not believe in an immortal soul. But we are convinced that nothing offers a greater menace to truth and the progress of humanity than the Church. How else could it be? Is it not the task of the Church to chloroform the women and children? Does she not kill all sound reason and science with her dogmas, and degrade the self-respect of man by confusing his ideas of right and justice? Does she not preach eternal slavery to the masses in the interest of the ruling and oppressing class? And is she not determined to perpetuate the present reign of darkness, ignorance, misery, and crime? {\em For the progress of our age not to be an empty dream, it must first sweep the Church out of its path.}
+
+
+\chapter{Chapter 12: Where I Stand
+}
+
+I am a passionate seeker after truth (and no less embittered enemy of evil doing fictions) which the party of order, this official, privileged and interested representative of all the past and present religions, metaphysical, political, juridical and “social” atrociousness claim to employ even today only to make the world stupid and enslave it, I am a fanatical lover of truth and freedom which I consider the only surroundings in which intelligence, consciousness and happiness develop and increase.
+
+
+I do not mean the completely formal freedom which the State imposes, judges and regulates, this eternal lie which in reality consists always of the privileges of a few based upon the slavery of all — not even the individualist, egotistical, narrow and fictitious freedom which the school of J.J. Rousseau and all other systems of property moralists, middle class bourgeoisism and liberalism recommend — according to which the so called rights of individuals which the State “represents” has the limit in the right of all, whereby the rights of every individual are necessarily, always reduced to nil. No, I consider only that as freedom worthy and real as its name should imply, which consists in the complete development of all material, intellectual and spiritual powers which are in a potential state in everyone, the freedom which knows no other limits than those prescribed by the laws of our own nature, so that there be really no limits — for these laws are not enforced upon us by external legislators who are around and over us, these laws are innate in us, clinging to us and form the real basis of our material, intellectual and moral being; instead of therefore seeing in them a limitation, we must look upon them as the real condition and the actual cause of our freedom.
+
+
+\section{Unconditional Freedom
+}
+
+I mean that freedom of the individual which, instead of stopping far from the freedom of others as before a frontier, sees on the contrary the extending and the expansion into the infinity of its own free will, the unlimited freedom of the individual through the, freedom of all; freedom through solidarity, freedom in equality; the freedom which triumphs over brute force and over the principle of authoritarianism, the ideal expression of that force which, after the destruction of all terrestrial and heavenly idols, will find and organize a new world of undivided mankind upon the ruins of all churches and States. I am a convinced partisan of economic and social equality, for I know that outside this equality, freedom, justice, human dignity and moral and spiritual well-being of mankind and the prosperity of nation, and individuals will always remain a lie only. But as an unconditional partisan of freedom, this first condition of humanity, I believe the equality must be established through the spontaneous organization of voluntary cooperation of work freely organized, and into communes federated, by productive associations and through the equally spontaneous federation of communes — not through and by supreme supervising action of the State. This point separates above all others the revolutionary socialists or collectivists from the authoritarian “communists”, the adherents of the absolute initivaitve necessity of and by the State. The communists imagine that condition of freedom and socialism (i.e., the administration of the society’s affairs by the self-government of the society itself without the medium and pressure of the State) can be achieved by the development and organization of the political power of the working class, chiefly of the proletariat of the towns with the help of bourgeois radicalism, while the revolutionary (who are otherwise, known as libertarian) socialists, enemies of every double-edged allies and alliance believe, on the very contrary that the aim can be realised and materialized only through the development and organization not of the political but of the social and economic, and therefore anti-political forces of the working masses of the town and country, including all well disposed people of the upper classes who are ready to break away from their past and join them openly and accept their programme unconditionally.
+
+
+\section{Two Methods
+}
+
+From the difference named, there arise two different methods. The “Communists” pretend to organize the working classes in order to “capture the political power of the State”. The revolutionary socialists organize people with the object of the liquidation of the States altogether whatever be their form. The first are the partisans of authoritiveness in theory and practice, the socialists have confidence only in freedom to develop the initiative of peoples in order to liberate themselves. The communist authoritarians wish to force class “science” upon others, the social libertarians propagate empirical science among them so that human groups and aggregations infused with conviction in and understanding of it, spontaneously, freely and voluntarily, from bottom up wards, organize themselves by their own motion and in the measure of their strength — not according to a plan sketched out in advance and dictated to them, a plan which is attempted to be imposed by a few “highly intelligent, honest and all that” upon the so-called ignorant masses from above. The revolutionary social libertarians think that there is much more practical reason and common, sense in the aspirations and the of the people than in the “deep” intelligence of all the learned, men and tutors of mankind who want to add to the many disastrous attempts “to make humanity happy” a still newer attempt. We are on the contrary of the conviction that humankind has allowed itself too long enough to be governed and legislated for and that the origin of its misery is not to be looked for in this or that form of government and man-established State, but in the very nature and existence of every ruling leadership, of whatever kind and in whatever name this may be. The best friends of the ignorant people are those who free them from the thraldom of leadership and let people alone to work among themselves with one another on the basis of equal comradeship.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Michail Bakunin
+
+
+
+Writings
+
+
+
+
+
+
+1867–1871
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Publisher: Modern Publishers, Indore Kraus Reprint Co. New York, 1947; Transcribed/HTML Markup: Natasha Morse.
+
+
+
+Retrieved on February 23\high{rd}, 2009 from \goto{www.marxists.org}[url(http://www.marxists.org/reference/archive/bakunin/works/writings/index.htm)]
+
+
+\stopalignment
+
+\stoptext
+
+

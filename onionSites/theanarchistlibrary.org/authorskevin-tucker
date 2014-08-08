@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Kevin Tucker | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   id="current"
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="kevin-tucker">Kevin Tucker</h3>
+<ol>
+
+  <li>
+   <a href="/library/kevin-tucker-against-cultivation-and-in-defense-of-wildness">
+   Against Cultivation and in defense of wildness
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-agents-of-change-primal-war-and-the-collapse-of-global-civilization">
+   Agents of Change: Primal War and the Collapse of Global Civilization
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-class-struggle-commodification-and-modernized-society">
+   Class Struggle, Commodification and Modernized Society
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-the-creation-of-disaster">
+   The Creation of Disaster
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-the-disgust-of-daily-life">
+   The Disgust of Daily Life
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-egocide">
+   Egocide
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-essays-from-species-traitor">
+   Essays from Species Traitor
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-everywhere-and-nowhere">
+   Everywhere and Nowhere
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-the-failure-of-revolution">
+   The Failure of Revolution
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-i-am-complicit">
+   I am complicit.
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-if-you-want-to-destroy-his-sweater-beef-with-derrick-unraveled">
+   If you want to destroy his sweater... Beef with Derrick, unraveled.
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-interviews-with-kevin-tucker">
+   Interviews with Kevin Tucker
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-revolt-of-the-savages-primitive-revolts-against-civilization">
+   Revolt of the Savages: Primitive Revolts Against Civilization
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-revolution-and-or-insurrection-some-thoughts-on-tearing-this-muthafucka-down">
+   Revolution And/Or Insurrection: Some Thoughts on Tearing this Muthafucka Down
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-spectacle-of-the-symbolic">
+   Spectacle of the Symbolic
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-to-produce-or-not-to-produce">
+   To Produce or Not to Produce
+   </a>
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

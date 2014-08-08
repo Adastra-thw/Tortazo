@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+        
+<head>
+    <title>Holdings: José Ester Borrás Papers</title>
+<link rel="alternate" type="application/rdf+xml" title="RDF Representation" href="http://search.socialhistory.org/Record/ARCH02428/RDF" />
+    <link rel="search" type="application/opensearchdescription+xml" title="Library Catalog Search"
+          href="http://search.socialhistory.org/Search/OpenSearch?method=describe" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://search.socialhistory.org/interface/themes/default/css/styles.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://search.socialhistory.org/interface/themes/default/css/iish.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://search.socialhistory.org/interface/themes/default/css/shopping_cart.css" />
+<link rel="stylesheet" type="text/css" media="print" href="http://search.socialhistory.org/interface/themes/default/css/print.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript">
+        path = 'http://search.socialhistory.org';
+    </script>
+
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/yui/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/yui/connection-min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/yui/datasource-min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/yui/autocomplete-min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/yui/dragdrop-min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/scripts.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/js/rc4.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/ajax.yui.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop/example/resources/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop/example/resources/js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop/example/resources/js/simpleCart.min.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop_custom/delivery.locale.en.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop_custom/delivery.locale.nl.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/delivery_shop/delivery_shop.js"></script>
+
+
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28229038-1']);
+_gaq.push(['_trackPageview']);
+
+(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+                var openCloseWrapper = function () {
+                    if (simpleCart.quantity() > 0) {
+                        $("#delivery_cart_wrapper").show();
+                    } else {
+                        $("#delivery_cart_wrapper").hide();
+                    }
+                    
+                };
+                initDelivery({ 
+                    host:      "delivery.socialhistory.org",
+                    language:  "en",
+                    max_items: 3,
+                    cart_div:  "#delivery_cart",
+                    onLoad: openCloseWrapper,
+                    onUpdate: openCloseWrapper
+                });
+});
+</script>
+
+</head>
+
+<body>
+    <div id="delivery_cart_wrapper">
+<h3>Your List of Requests</h3>
+<span>Maximum 3 items per list</span>
+<div id="delivery_cart">
+</div>
+</div>
+<a href="http://socialhistory.org/en" target="_blank">
+    <div style="text-align:center;background-color:#ffffff;">
+        <img border="0" src="http://search.socialhistory.org/images/iish/en-logo.png" style="margin:15px;"/>
+    </div>
+</a>
+
+<div id="lightboxLoading" style="display: none;">Loading...</div>
+<div id="lightboxError" style="display: none;">Error: Cannot Load Popup Box</div>
+<div id="lightbox" onClick="hideLightbox(); return false;"></div>
+<div id="popupbox" class="popupBox"><b class="btop"><b></b></b></div>
+
+<div class="searchheader">
+    <div class="searchcontent">
+        <div class="alignright" style="text-align:right;">
+                                <form method="post" name="langForm" action="">
+                <div class="hiddenLabel"><label for="mylang">Language:</label></div>
+                <select id="mylang" name="mylang" onChange="document.langForm.submit();">
+                                            <option value="en"                                selected>English</option>
+                                            <option value="nl">Nederlands</option>
+                                    </select>
+                <noscript><input type="submit" value="Set"/></noscript>
+            </form>
+                </div>
+
+                                        <div class="searchform yui-skin-sam">
+      <form method="GET" action="http://search.socialhistory.org/Search/Results" name="searchForm" id="searchForm" class="search">
+            <div class="hiddenLabel"><label for="lookfor">Search For:</label></div>
+              <div id="autoCompleteContainer">
+          <input id="lookfor" type="text" name="lookfor" size="30" value="">
+          <div id="suggestions"></div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+          initAutocomplete("lookfor", "suggestions", "type");
+        </script>
+            <div class="hiddenLabel"><label for="type">in:</label></div>
+      <select id="type" name="type">
+              <option value="AllFields">All Fields</option>
+              <option value="Title">Title</option>
+              <option value="Author">Author</option>
+              <option value="Subject">Subject</option>
+              <option value="CallNumber">Call Number</option>
+              <option value="ISN">ISBN/ISSN</option>
+              <option value="Collector">Collector</option>
+            </select>
+      <input type="submit" name="submit" value="Find">
+      <a href="http://search.socialhistory.org/Search/Advanced" class="small">Advanced search</a>
+
+                                  </form>
+  </div>
+
+<script language="JavaScript" type="text/javascript">
+    document.searchForm.lookfor.focus();
+</script>                        
+        <br clear="all" />
+    </div>
+</div>
+
+<div class="breadcrumbs">
+    <div class="breadcrumbinner">
+        <a href="http://search.socialhistory.org">Home</a> <span>&gt;</span>
+    <em>José Ester Borrás Papers</em> <span>&gt;</span>
+<em>Holdings</em> 
+    </div>
+</div>
+
+<div id="doc2" class="yui-t4"> 
+
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/ajax_common.js"></script>
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/record.js"></script>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js?pub=ra-4e1dea443dc6954a"></script>
+
+<div id="bd">
+  <div id="yui-main" class="content">
+    <div class="yui-b first">
+      <b class="btop"><b></b></b>
+        <div class="toolbar">
+        <ul>
+                        <li><a href="http://search.socialhistory.org/Record/ARCH02428/Cite" class="cite" onClick="getLightbox('Record', 'Cite', 'ARCH02428', null, 'Cite this'); return false;">Cite this</a></li>
+            <li><a href="http://search.socialhistory.org/Record/ARCH02428/Email" class="mail" onClick="getLightbox('Record', 'Email', 'ARCH02428', null, 'Email this'); return false;">Email this</a></li>
+                          <li>
+                <a href="http://search.socialhistory.org/Record/ARCH02428/Export?style=RefWorks" class="export" onClick="toggleMenu('exportMenu'); return false;">Export Record</a><br />
+                <ul class="menu" id="exportMenu">
+                                      <li>
+                        <a target="RefWorksMain" href="http://search.socialhistory.org/Record/ARCH02428/Export?style=RefWorks">Export to  RefWorks</a>                    </li>
+                                      <li>
+                        <a href="http://search.socialhistory.org/Record/ARCH02428/Export?style=EndNote">Export to  EndNote</a>                    </li>
+                                      <li>
+                        <a href="http://search.socialhistory.org/Record/ARCH02428/Export?style=MARC">Export to  MARC</a>                    </li>
+                                      <li>
+                        <a target="_blank" href="http://api.socialhistoryservices.org/solr/all/oai?verb=GetRecord&identifier=oai:socialhistoryservices.org:10622/ARCH02428&metadataPrefix=marcxml">Export to  MARCXML</a>
+                                            </li>
+                                      <li>
+                        <a target="_blank" href="http://api.socialhistoryservices.org/solr/all/oai?verb=GetRecord&identifier=oai:socialhistoryservices.org:10622/ARCH02428&metadataPrefix=ead">Export to  EAD</a>
+                                            </li>
+                                      <li>
+                        <a target="_blank" href="http://search.socialhistory.org/pdf/426c796e33a4903ea34219fce618993e.pdf">Export to  PDF</a>
+                                            </li>
+                                  </ul>
+              </li>
+                                                        <li><a class="fav" href="http://search.socialhistory.org/Search/History">Search History</a></li>
+                        <li id="addThis"><a class="addThis addthis_button"" href="https://www.addthis.com/bookmark.php?v=250&amp;pub=ra-4e1dea443dc6954a">Share</a></li>
+                        <li><a href="#"  class="bookmarkRecord favorite" title="Bookmark" onclick="javascript:addFavorite('http://the resolver/', 'José Ester Borrás Papers');return false;">Bookmark</a></li>          </ul>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+          function redrawSaveStatus() {
+              getSaveStatus('ARCH02428', 'saveLink');
+          }
+                  </script>
+
+        <script language="JavaScript" type="text/javascript">
+        /*http://stackoverflow.com/questions/5828965/bookmark-on-click-using-jquery*/
+function addFavorite(handle, title) {
+
+    if (window.sidebar) { // firefox
+        window.sidebar.addPanel(title, handle, "");
+}
+    else if (window.opera && window.print) { // opera
+        var elem = document.createElement('a');
+        elem.setAttribute('href', handle);
+        elem.setAttribute('title', title);
+        elem.setAttribute('rel', 'sidebar');
+        elem.click();
+    } else if (document.all) {// ie
+        window.external.AddFavorite(handle, title);
+    }
+}
+</script>
+
+        <div class="record">
+
+          
+          
+          
+<script type="text/javascript" src="http://search.socialhistory.org/interface/themes/default/js/visual-mets/js/en.lang.js"></script>
+
+<h1 style="margin: 1em 0 0 1em">José Ester Borrás Papers</h1><div id="tabnav"><ul><li class="active"><a href="/Record/ARCH02428/ArchiveCollectionSummary" class="first"><span> </span>Collection Summary</a></li><li><a href="/Record/ARCH02428/ArchiveContentList" class="first"><span> </span>Content List</a></li><li><a href="/Record/ARCH02428/ArchiveContentAndStructure" class="first"><span> </span>Content and Context</a></li><li><a href="/Record/ARCH02428/ArchiveSubjects" class="first"><span> </span>Subjects</a></li><li><a href="/Record/ARCH02428/ArchiveAccessAndUse" class="first"><span> </span>Access and Use</a></li><li><a href="/Record/ARCH02428/ArchiveAppendices" class="first"><span> </span>Appendices</a></li></ul></div><div id="arch"><table><tr><th>Creator</th><td><ul><li> Ester Borrás, José </li></ul></td></tr><tr><th>Secondary Creator</th><td><ul><li> Ester-Kervorc'h, Odette. </li><li> Federación
+		Española de Deportados e Internados Politicos (Paris) </li></ul></td></tr><tr><th>Abstract</th><td> Personal correspondence 1937, 1939-1952, 1957-1961; identity cards and other personal documents 1931, 1937, 1945-1947, 1952 and n.d.; typescript of 'Recuerdos y Reflejos', first chapter of his autobiography 1942; documents on the French resistance and the liberation of Paris 1941, 1945-1946, 1948, 1959<a href="/Record/ARCH02428/ArchiveContentAndStructure"><br/>(continue reading...)</a></td></tr><tr><th>Period</th><td>1925-1980 (-1993)
+                    (
+                    Inclusive
+                    )
+                </td></tr><tr><th/><td>1925-1980
+                    (
+                    Bulk
+                    )
+                </td></tr><tr><th>Extent</th><td><ul><li> 2.87 m. </li></ul></td></tr><tr><th>Access</th><td><a href="/Record/ARCH02428/ArchiveAccessAndUse"> Not restricted </a></td></tr><tr><th>Language of Material</th><td><ul><li>Spanish</li><li>French</li></ul></td></tr><tr><th>Collection ID</th><td>ARCH02428</td></tr><tr><th>Repository</th><td> International Institute of Social History </td></tr><tr><th>Permanent Link</th><td><a href="http://hdl.handle.net/10622/ARCH02428" target="_blank">http://hdl.handle.net/10622/ARCH02428</a></td></tr></table></div>
+
+
+
+<script type='text/javascript'>
+    $('.m').each(function () {
+        var metsId = $(this).attr('title');
+        var a = $('<a href="' + $(this).attr('title') + '">' + $(this).text() + '<\/a>');
+        $(a).click(function (event) {
+	    event.preventDefault();
+            var parent = $(this).parent();
+            var div = $(parent).next();
+            if ($(div).hasClass('mets-embedded'))
+                $(div).remove();
+            else {
+                $('div .mets-embedded').remove();
+                $('<div class="mets-embedded">' +
+                        '<div class="mets-container mets-hide"></div>' +
+                        '</div>')
+                        .insertAfter(parent).find(">:first-child").mets2Viewer({
+                            template: 'http://visualmets.socialhistory.org/rest/template.handler.html?callback=?',
+                            layout : 'thumbnailIISG',
+                            layoutConfig : {
+                                toFullScreen : {
+                                    'thumbnailIISG' : 'pageFullScreen',
+                                    'page'      : 'pageFullScreen'
+                                },
+                                toDefaultScreen   : {
+                                    'thumbnailFullScreen' : 'thumbnailIISG',
+                                    'pageFullScreen'      : 'page'
+                                },
+                                toStart : {
+                                    fullScreen    : {
+                                        'pageFullScreen' : 'thumbnailFullScreen'
+                                    },
+                                    defaultScreen : {
+                                        'page' : 'thumbnailIISG'
+                                    }
+                                }
+                            },
+                            initialize: {
+                                'metsId': metsId,
+                                'defaults': true,
+				                'height':'550px',
+                                'url': 'http://visualmets.socialhistory.org/rest/document?',
+                                'pager': {
+                                    'start': 0,
+                                    'rows': -1
+                                }
+                            }
+                        });
+            }
+        });
+
+        $(a).insertAfter(this);
+        $(this).remove();
+    })
+</script>
+
+        
+        </div>
+                    
+                    
+
+            
+          <span class="Z3988" title="ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rfr_id=info%3Asid%2Fvufind.svn.sourceforge.net%3Agenerator&amp;rft.title=Jos%C3%A9+Ester+Borr%C3%A1s+Papers&amp;rft.date=&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.creator=Ester+Borr%C3%A1s%2C+Jos%C3%A9&amp;rft.pub=Internationaal+Instituut+voor+Sociale+Geschiedenis&amp;rft.format=Archives&amp;rft.language=Spanish"></span>
+
+      <b class="bbot"><b></b></b>
+
+
+    </div>
+    </div>
+ 
+      
+  <div class="yui-b">
+    <div class="sidegroup">
+      <h4>Similar Items</h4>
+            <ul class="similar">
+                <li>
+                      <span class="archives">
+                    <a href="http://search.socialhistory.org/Record/ARCH02727">Antonia Fontanillas Borras Papers</a>
+          </span>
+          <span style="font-size: 80%">
+          <br>By: Fontanillas Borras, Antonia                    </span>
+        </li>
+                <li>
+                      <span class="archives">
+                    <a href="http://search.socialhistory.org/Record/ARCH01001">Max Nettlau Papers</a>
+          </span>
+          <span style="font-size: 80%">
+          <br>By: Nettlau, Max                    </span>
+        </li>
+                <li>
+                      <span class="archives">
+                    <a href="http://search.socialhistory.org/Record/ARCH00004">Diego Abad de Santillán Papers</a>
+          </span>
+          <span style="font-size: 80%">
+          <br>By: Abad de Santillán, Diego                    </span>
+        </li>
+                <li>
+                      <span class="archives">
+                    <a href="http://search.socialhistory.org/Record/ARCH00293">CNT (España) Archives</a>
+          </span>
+          <span style="font-size: 80%">
+                              </span>
+        </li>
+                <li>
+                      <span class="archives">
+                    <a href="http://search.socialhistory.org/Record/ARCH00393">Federación Anarquista Ibérica Archives</a>
+          </span>
+          <span style="font-size: 80%">
+                              </span>
+        </li>
+              </ul>
+          </div>
+
+    
+  </div>
+</div>
+ 
+<script src="http://books.google.com/books?jscmd=viewapi&amp;bibkeys=&amp;callback=ProcessGBSBookInfo" type="text/javascript"></script>
+<script src="http://openlibrary.org/api/books?bibkeys=&amp;callback=ProcessOLBookInfo" type="text/javascript"></script>
+
+    <div id="ft">
+    <div><p><strong>Search Options</strong></p>
+    <ul>
+        <li><a href="http://search.socialhistory.org/Search/History">Search History</a></li>
+        <li><a href="http://search.socialhistory.org/Search/Advanced">Advanced Search</a></li>
+    </ul>
+</div>
+<div><p><strong>Find More</strong></p>
+    <ul>
+        <li><a href="http://search.socialhistory.org/Browse/Home">Browse the Catalog</a></li>
+        <li><a href="http://search.socialhistory.org/AlphaBrowse/Home">Browse Alphabetically</a></li>
+    </ul>
+</div>
+<div><p><strong>Need Help?</strong></p>
+    <ul>
+        <li><a target="_blank" href="http://socialhistory.org/en/services/request">How to Request</a></li>
+        <li><a href="http://search.socialhistory.org/Help/Home?topic=search"
+               onClick="window.open('http://search.socialhistory.org/Help/Home?topic=search', 'Help', 'width=625, height=510'); return false;">Search Tips</a>
+        </li>
+        <li><a href="http://search.socialhistory.org/Iish/About" onClick="window.open('http://search.socialhistory.org/Iish/About', 'About this website', 'width=625, height=510'); return false;">About this website</a></li>
+        <li><a href="http://search.socialhistory.org/Iish/Databases" onClick="window.open('http://search.socialhistory.org/Iish/Databases', 'Databases', 'width=625, height=510'); return false;">Databases</a></li>
+        <li><a target="_blank" href="http://socialhistory.org/en/contact">Ask a Librarian</a></li>
+        <li><a target="_blank" href="http://socialhistory.org/en/services/faq">FAQs</a></li>
+    </ul>
+</div>
+<div><p><strong>More Information</strong></p>
+    <ul>
+        <li><a href="http://socialhistory.org/en">IISG</a></li>
+        <li><a href="http://neha.nl/">NEHA</a></li>
+        <li><a href="http://www.persmuseum.nl/">Persmuseum</a></li>
+    </ul>
+</div>
+<div><p><strong>See Also</strong></p>
+    <ul>
+        <li><a href="http://www.socialhistoryportal.org/collections" title="Digital collections on social history and the history of the labour movement">Social History Portal</a></li>
+	<li><a href="http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22International+Institute+of+Social+History%22&qf=PROVIDER%3A%22HOPE+-+Heritage+of+the+People%27s+Europe%22" title="European cultural heritage portal">Europeana</a></li>
+	<li><a href="http://www.worldcat.org/" title="World's largest network of library content and services">WorldCat</a></li>
+    </ul>
+</div>
+
+<br clear="all" />    </div> 
+</div> 
+</body>
+</html>

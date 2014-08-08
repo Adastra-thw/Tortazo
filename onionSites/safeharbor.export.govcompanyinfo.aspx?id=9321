@@ -1,0 +1,140 @@
+
+<link rel="stylesheet" type="text/css" href="CSS/SH_Styles_Print.css" media="print"  /> 
+<link rel="stylesheet" type="text/css" href="CSS/sh_stylesheet.css" /> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Safe Harbor - Organization Information
+</title></head>
+<body>
+    <form name="form1" method="post" action="companyinfo.aspx?id=9321" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="nujsFB1Urski2v+NpdvnKFX8xta0WwP70bygTCvckpMeNXeJ9LLzw/eQ20YYxebd8ekv0VIro+Ab/Wra9uXjDvwxLsIwbbmcxyuCYVp/07PVJMGFbjUcHZD1Qhk=" />
+</div>
+        <div style="text-align:right;">
+            <input type="submit" name="ctl01" value="Print" onclick="window.print();" class="donotshow" />
+            
+        </div>
+      
+        <span id="lblContent1" class="heading">Organization Information:</span>
+        <br/>
+        <img src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+
+        <span id="lblOrgName" style="display:inline-block;border-width:0px;">3LZ International Corporation</span><br />
+        <span id="lbladdress" title="4475 S. Pecos Road" style="display:inline-block;border-width:0px;">4475 S. Pecos Road</span><br />
+        <span id="lblcity" style="display:inline-block;border-width:0px;">Las Vegas</span>,
+        <span id="lblstate" style="display:inline-block;border-width:0px;">Nevada</span>-
+        <span id="lblzip" style="display:inline-block;border-width:0px;">89121</span><br />        
+        Phone: <span id="lblPhone" style="display:inline-block;border-width:0px;">800-561-1507</span><br />
+        Fax: <span id="lblFax" style="display:inline-block;border-width:0px;">702-732-8383</span><br />
+        <a id="hplinkwebsite" href="http://www.speedyquid.co.uk" target="_blank">www.speedyquid.co.uk</a>
+        <br /><br />
+        <span id="lblContent2" class="heading">Organization Contact:</span>        
+        <br />
+        <img id="Image1" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcontactoff">Contact Office:</span>
+        <span id="lblcontactoff1">3LZ International Corporation</span><br />
+        <span id="lblcontactname">Name:</span>
+        <span id="lblcontactname1">Darrin Landau</span>
+        , <span id="lblcontacttitle1">Compliance Officer</span><br />
+        <span id="lblcontactphone">Phone:</span>
+        <span id="lblcontactphone1">416-786-6777</span><br />
+        <span id="lblcontactfax">Fax:</span>
+        <span id="lblcontactfax1">702-732-8383</span><br />
+        <span id="lblcontactemail">Email:</span>
+        <span id="lblcontactemail1">darriin@speedyquid.co.uk</span><br />
+        <br/>
+        <span id="lblContent3" class="heading">Corporate Officer:</span>
+        <br />
+        <img id="Image2" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcorpoffname">Corporate Officer:</span>
+        <span id="lblcorpoffname1">Darrin Landau</span>
+        , <span id="lblcorpofftitle1">President</span><br />
+        <span id="lblcorpoffphone">Phone:</span>
+        <span id="lblcorpoffphone1">800-561-1507</span><br />
+        <span id="lblcorpofffax">Fax:</span>
+        <span id="lblcorpofffax1">702-732-8383</span><br />
+        <span id="lblcorpoffemail">Email:</span>
+        <span id="lblcorpoffemail1">darrin@speedyquid.co.uk</span>
+        
+        <br /><br />
+        <span id="lblContent4" class="heading">Safe Harbor Information:</span>
+        <br />
+        <img id="Image3" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br /><br />
+        
+        <span id="lblContent5_13">Certification Status: </span>    
+        <span id="lblCertificationStatus" style="color:Red;">Not Current</span>     
+        <br />                   
+        <span id="lblsignup">Original Certification: </span>
+        <span id="lblsignupdate">5/17/2010</span>
+        <br />
+        <span id="Label1">Next Certification: </span>
+        <span id="lblnextcertification">5/17/2011</span>
+        <br /><br />
+        <span id="lblContent4_1">Personal Information Received from the EU/EEA and/or Switzerland:</span><br />
+        <span id="lblactivities" style="display:inline-block;border-style:None;width:780px;">Personal Information is processed and stored securely for the purpose of providing short term financing.</span>
+        <br />
+        <span id="lblContent5_1">Privacy Policy Effective: </span>        
+        <span id="lblppdate">7/15/2009</span>        
+        <br />                                                                                                      
+        <span id="lblContent5_2">Location: </span>        
+        
+        <span id="lblPPLoc"><a href ='http://speedyquid.com/privacy' target=_blank>http://speedyquid.com/privacy</a> </span>
+        
+        <br />                
+        
+                          
+        <br />
+        <span id="lblContent5_4">Regulated By: </span>
+        <span id="lblstatutorybody">Federal Trade Commission</span>
+        
+        <br /><br />
+        <span id="lblContent5_5">Privacy Programs: </span>
+        <br />
+        <span id="lblprivacyprograms" style="display:inline-block;border-style:None;width:780px;">None</span>
+        <br /><br />
+        <span id="lblContent5_6">Verification: </span>
+        <span id="lblorgverification">Third Party</span>
+        <br /><br />
+        <span id="lblContent5_7">Dispute Resolution: </span>
+        <br />        
+        <span id="lblrecoursemech" style="display:inline-block;border-style:None;width:780px;">BBB EU Safe Harbor Program</span>
+        <br /><br />
+        <span id="lblContent5_8">Personal Data Covered: </span>                
+        <span id="lblpersonaldata">online</span>
+        <br />
+        <span id="lblContent5_9">Organization Human Resource Data Covered: </span>        
+        <span id="lblhrdata">No</span>        
+        <br />
+        <span id="lblContent5_10">Agrees to Cooperate and Comply with the EU and/or Swiss Data Protection Authorities: </span>        
+        <span id="lbleuprotection">Yes</span>                
+        <br /><br />
+        <span id="lblContent5_11">Relevant Countries from which Personal Information is Received: </span>        
+        <br />
+        <span id="lbleucountries">United Kingdom</span>
+        <br /><br />
+        <span id="lblContent5_12">Industry Sectors: </span><br />
+        <span id="lblindustrysector">Financial Services - (FNS)<br /></span>        
+        <br />
+                
+                        
+
+        
+    </form>
+</body>
+</html>
+
+
+

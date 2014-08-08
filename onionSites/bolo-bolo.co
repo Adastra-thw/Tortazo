@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="pt-BR">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="pt-BR">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="pt-BR">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="pt-BR">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<title>bolo&#039;bolo | infoshop anarquista &amp; cafeteria</title>
+			
+	
+	<link rel="pingback" href="http://bolo-bolo.co/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<link rel="alternate" type="application/rss+xml" title="Feed de bolo&#039;bolo &raquo;" href="http://bolo-bolo.co/feed/" />
+<link rel="alternate" type="application/rss+xml" title="bolo&#039;bolo &raquo;  Feed de comentários" href="http://bolo-bolo.co/comments/feed/" />
+<meta content="Origin v.2.0" name="generator"/><link rel='stylesheet' id='origin-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,800italic,400,300,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='origin-style-css'  href='http://bolo-bolo.co/wp-content/themes/Origin/style.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='http://bolo-bolo.co/wp-content/themes/Origin/epanel/shortcodes/css/shortcodes.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='http://bolo-bolo.co/wp-content/themes/Origin/epanel/shortcodes/css/shortcodes_responsive.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://bolo-bolo.co/wp-content/themes/Origin/epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.css?ver=1.3.4' type='text/css' media='screen' />
+<link rel='stylesheet' id='et_page_templates-css'  href='http://bolo-bolo.co/wp-content/themes/Origin/epanel/page_templates/page_templates.css?ver=1.8' type='text/css' media='screen' />
+<script type='text/javascript' src='http://bolo-bolo.co/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://bolo-bolo.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bolo-bolo.co/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bolo-bolo.co/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6.1" />
+		<style>
+			#info-bg, #main-wrap:before { background: #6ab3b2; }
+			#top-menu a:hover .link_text, .current-menu-item > a, #top-menu .current-menu-item > a:hover, #top-menu .current-menu-item > a:hover .link_bg, .et_active_dropdown > li a, #top-menu .et_clicked, #mobile-nav { color: #6ab3b2; }
+
+			@media only screen and (max-width: 1023px){
+				#info-area { background: #6ab3b2; }
+			}
+
+			.widget, #top-menu a, #mobile-nav, #info-area, #info-bg, #top-menu { border-color: #5EA5A4; }
+
+			.current-menu-item > a, .et_active_dropdown > li a, #top-menu .et_clicked, #mobile-nav, #top-menu a:hover .link_bg, #top-menu .current-menu-item > a:hover, #top-menu .current-menu-item > a:hover .link_bg { background: #ffffff; }
+
+			#top-menu ul ul a:hover .link_bg { background: #f8f8f8; }
+
+				</style>
+	<link rel="shortcut icon" href="http://bolo-bolo.co/wp-content/uploads/2013/10/ibu2.gif" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+	<!--[if lt IE 9]>
+		<script src="http://bolo-bolo.co/wp-content/themes/Origin/js/html5.js" type="text/javascript"></script>
+		<script src="http://bolo-bolo.co/wp-content/themes/Origin/js/respond.min.js" type="text/javascript"></script>
+	<![endif]-->
+</head>
+<body class="home blog et_color_scheme_red safari et_includes_sidebar">
+	<div id="main-wrap" class="clearfix">
+		
+		<div id="info-bg"></div>
+
+		<div id="info-area">
+			<div id="logo-area">
+								<a href="http://bolo-bolo.co/"><img src="http://bolo-bolo.co/wp-content/uploads/2013/10/ibu1.gif" alt="bolo&#039;bolo" id="logo"/></a>
+			</div> <!-- #logo-area -->
+
+			
+			<span id="mobile-nav">Navigation Menu<span>+</span></span>
+
+			<nav id="top-menu">
+										<ul class="nav">
+															<li class="current_page_item"><a href="http://bolo-bolo.co/">Home</a></li>
+							
+							<li class="page_item page-item-2"><a href="http://bolo-bolo.co/compas/">Compas</a></li>
+								<li class="cat-item cat-item-1"><a href="http://bolo-bolo.co/category/sem-categoria/" title="Ver todos os posts arquivados em Sem categoria">Sem categoria</a>
+</li>
+						</ul>
+							</nav>
+
+				<div id="sidebar">
+		<div id="search-2" class="widget widget_search"><h4 class="widgettitle"> </h4><form role="search" method="get" id="searchform" class="searchform" action="http://bolo-bolo.co/">
+				<div>
+					<label class="screen-reader-text" for="s">Pesquisar por:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Pesquisar" />
+				</div>
+			</form></div> <!-- end .widget -->		<div id="recent-posts-2" class="widget widget_recent_entries">		<h4 class="widgettitle">Tópicos recentes</h4>		<ul>
+					<li>
+				<a href="http://bolo-bolo.co/ola-mundo/" title="Olá, mundo!">Olá, mundo!</a>
+						</li>
+					<li>
+				<a href="http://bolo-bolo.co/about-us/" title="About us">About us</a>
+						</li>
+				</ul>
+		</div> <!-- end .widget --><div id="recent-comments-2" class="widget widget_recent_comments"><h4 class="widgettitle">Comentários</h4><ul id="recentcomments"><li class="recentcomments"><a href='http://wordpress.org/' rel='external nofollow' class='url'>Sr. WordPress</a> em <a href="http://bolo-bolo.co/ola-mundo/#comment-1">Olá, mundo!</a></li></ul></div> <!-- end .widget --><div id="archives-2" class="widget widget_archive"><h4 class="widgettitle">Arquivos</h4>		<ul>
+			<li><a href='http://bolo-bolo.co/2013/10/' title='outubro 2013'>outubro 2013</a></li>
+		</ul>
+</div> <!-- end .widget --><div id="categories-2" class="widget widget_categories"><h4 class="widgettitle">Categorias</h4>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://bolo-bolo.co/category/sem-categoria/" title="Ver todos os posts arquivados em Sem categoria">Sem categoria</a>
+</li>
+		</ul>
+</div> <!-- end .widget --><div id="meta-2" class="widget widget_meta"><h4 class="widgettitle">Meta</h4>			<ul>
+						<li><a href="http://bolo-bolo.co/wp-login.php">Login</a></li>
+			<li><a href="http://bolo-bolo.co/feed/" title="Assinar este site usando RSS 2.0">Posts <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://bolo-bolo.co/comments/feed/" title="Os comentários mais recentes de todos os posts em RSS"><abbr title="em inglês: Really Simple Syndication">RSS</abbr> dos comentários</a></li>
+			<li><a href="http://br.wordpress.org/" title="Powered by WordPress, uma plataforma semântica de vanguarda para publicação pessoal.">WordPress.org</a></li>						</ul>
+</div> <!-- end .widget -->	</div> <!-- end #sidebar -->
+		</div> <!-- #info-area -->
+
+		<div id="main">
+			<div id="wrapper">
+				<article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-sem-categoria entry-image">
+			<img src="http://bolo-bolo.co/wp-content/uploads/2013/10/acao-direta.png" alt='Olá, mundo!' width='640' height='480' />			<div class="image-info">
+				<a href="http://bolo-bolo.co/ola-mundo/" class="image-link">Read more</a>
+				<div class="title">
+					<h2><a href="http://bolo-bolo.co/ola-mundo/">Olá, mundo!</a></h2>
+				<p class="meta-info"> out 6, 2013 by <a href="http://bolo-bolo.co/author/ibu/" title="Posts by ibu" rel="author">ibu</a></p>				</div> <!-- .title -->
+				<div class="description">
+					<p>Bem-vindo ao WordPress. Esse é o seu primeiro post. Edite-o ou...</p>
+				</div> <!-- .description -->
+				<a href="http://bolo-bolo.co/ola-mundo/" class="readmore">Read more<span></span></a>
+			</div> <!-- .image-info -->
+		</article> <!-- .entry-image -->
+				<article id="post-11" class="post-11 post type-post status-publish format-standard hentry category-sem-categoria entry-image">
+			<img src="http://bolo-bolo.co/wp-content/uploads/2013/10/desobediencia-300x300.png" alt='About us' width='640' height='480' />			<div class="image-info">
+				<a href="http://bolo-bolo.co/about-us/" class="image-link">Read more</a>
+				<div class="title">
+					<h2><a href="http://bolo-bolo.co/about-us/">About us</a></h2>
+				<p class="meta-info"> out 6, 2013 by <a href="http://bolo-bolo.co/author/ibu/" title="Posts by ibu" rel="author">ibu</a></p>				</div> <!-- .title -->
+				<div class="description">
+					<p>Bolo’bolo is a collectively run anarchist infoshop, coffee...</p>
+				</div> <!-- .description -->
+				<a href="http://bolo-bolo.co/about-us/" class="readmore">Read more<span></span></a>
+			</div> <!-- .image-info -->
+		</article> <!-- .entry-image -->
+	
+	<div class="pagination clearfix">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+			</div> <!-- #wrapper -->
+		</div> <!-- #main -->
+	</div> <!-- #main-wrap -->
+
+	<script type='text/javascript' src='http://bolo-bolo.co/wp-content/themes/Origin/js/jquery.infinitescroll.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_origin_strings = {"load_posts":"Loading new posts...","no_posts":"No more posts to load"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bolo-bolo.co/wp-content/themes/Origin/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='http://bolo-bolo.co/wp-content/themes/Origin/epanel/page_templates/js/fancybox/jquery.easing-1.3.pack.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://bolo-bolo.co/wp-content/themes/Origin/epanel/page_templates/js/fancybox/jquery.fancybox-1.3.4.pack.js?ver=1.3.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_ptemplates_strings = {"captcha":"Captcha","fill":"Fill","field":"field","invalid":"Invalid email"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bolo-bolo.co/wp-content/themes/Origin/epanel/page_templates/js/et-ptemplates-frontend.js?ver=1.1'></script>
+
+</body>
+</html>

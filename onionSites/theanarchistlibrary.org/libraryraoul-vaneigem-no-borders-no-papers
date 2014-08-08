@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     No borders no papers (Raoul Vaneigem) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/raoul-vaneigem-no-borders-no-papers?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=raoul-vaneigem-no-borders-no-papers">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    No borders no papers
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/raoul-vaneigem">Raoul Vaneigem</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/albert-libertad">Albert Libertad</a>
+        <a href="/topics/borders">borders</a>
+        <a href="/topics/immigration">immigration</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on January 10, 2011 from <a href="http://www.noborderbxl.eu.org/spip.php?article282">www.noborderbxl.eu.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="raoul-vaneigem-no-borders-no-papers.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="raoul-vaneigem-no-borders-no-papers.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="raoul-vaneigem-no-borders-no-papers.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="raoul-vaneigem-no-borders-no-papers.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="raoul-vaneigem-no-borders-no-papers?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="raoul-vaneigem-no-borders-no-papers.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="raoul-vaneigem-no-borders-no-papers.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Raoul Vaneigem</h2>
+	
+	<h1 id="textttitleh">No borders no papers</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>There was a time when the anarchist Albert Libertad, having a premonition of the kafkaesque bureaucracy and the paper dictatorship, invited citizens to burn their ID papers and to become humans again, refusing to let themselves be reduced to a number, duly filed in the statistic state inventories of slaves.
+</p><p>Our beings today seems so impregnated by numbers that define bank payments, wages, social security, unemployment benefits and old age pensions that living without papers seems as impossible and unpractical as the recommendation of Libertad to finish this degrading and controlling labelling of the social livestock.
+</p><p>In this way we are confronted with a double and paradoxical existence : on the one hand, everybody — no matter what his or her ethnical belonging, social status, or character — has to have the right to access this bureaucratic jungle that our society has become; on the other hand, it is unacceptable that the fate of humans is so divided by a gargantuan calculator, of which the inhumane character is incompatible with the right for a free and beautiful life.
+</p><p>If we add to this a process of state collapse because of financial forces. States who in their turn are threatened by a worldwide monetary collapse. States have lost the privilege — that they arrogantly claimed-, to look after the public goods. Yesterday still, they took their levies from the citizens by fierce taxes and fines, but in return they took care of public services — education, health care, postal services, transportations, unemployment benefits, old age pensions. What has happened to this now ? States have become the valets of banks and multinational enterprises. These banks and enterprises however, are confronted with the fiasco of insane money, a whirlwind of billions of investments in financial speculations, where money flies around, instead of working on the progress of primary industries or other sectors with a social use. Billions forming a bubble bound to implode and to provoke a great monetary crash..
+</p><p>We are the prey of managers of bankruptcy, eager to reap their last short term profits overexploiting citizens, the same citizens that a demented austerity policy invites to sacrifice themselves, to fill the bottomless deficit gap, dug by monetary embezzlement. Not only can the state no longer fulfill its obligations as seen in the old social contract, the state even cuts the budget of public services. Burying everything that guaranteed, if not a real life, at least survival. And the reason given for this is a great swindle called public debt. The state has folded itself back upon the only function that reminds itself of its reason to exists : police repression. The only lifeguard of the state is spreading fear and despair. The state accomplishes this rather efficiently by spreading an apocalyptic worldview. It spreads the rumor that tomorrow will be worse than today. Wisdom consist according to this view in consuming, spending before going bankrupt, make profitable everything that can be made profitable, even ruining its own existence and the whole planet, as to make this great swindle last forever. The fight supporting undocumented migrants should take into account such a context, in several ways.
+</p><p>a)The state takes attention away from the way in which public goods are rerouted, the state installs fear and discouragement, and entertains it, so to fulfill its role as a security police. And, as always is the case in such conditions, it uses the old tactics of scapegoating. For citizens, frightened by the rise of unemployment, the lowering of purchasing power, the rise of precarity, it names some ‘dangerous’ groups that will serve to reroute the anger and aggression, that would otherwise be directed against the corrupt exploiters that govern us. Everything is good to keep up the smokescreen that masks the real problems.. While in Belgium Walloons and Flemish are both as much victims of the mishandling of the state at the fringe of a financial gap, there is a criminal nationalism that tries to put one group against the others. A shifty xenophobia aims to identify people of Arab descent as Islamic terrorists, it turns into anti-Semitism the grounded opposition to the anti-Palestinian politics of the Israeli government, it works to oppose unemployed workers and undocumented migrants, it does not blink to resemble the nazi’s in the way they despise and treat gypsies (Rom and other travelers). We have to take into account that the corrupted state does everything to hinder a true solidarity between have-nots struck by precarity, and those who still enjoy a little bit of good existence, bur who’ll lose this security if they do not accept the fate that awaits them. It is this solidarity that we need to restore, and it is to this solidarity to which we appeal when we defend undocumented migrants, unemployed, but also workers who fight their exploitation, organisations preparing the autodetermination and the abolishment of money, movements that fight the cuts in public transportations, education, health care, postal services, primary industries and agriculture. We will defend the poetry of life against the laws of profit that degrade life.
+</p><p>b)answering the repressive politics of a corrupt government, does not mean using the same violence against the state, the answer is going beyond their humiliating dictates, it’s propagating civil disobedience.. How ? By interfering to restore a quality of life that the state has ruined under the pressure of maffia bankers. We are all left-behinds, sacrificed for the morbid interests of an absurd system. We do not have another choice than to bet on ourselves to get out of this mayhem. There is, within most women and men a poetic richness and a creativity capable of installing in all domains more humane conditions. Many people, pacified by routine, ignore this still. But it is often the only source that those people, scapegoated and marginalised by the politics of corrupt democrats, have.
+</p><p>In stead of trying to bring someone down, we should valorise the human and creative aspects of someone. Is it not an awful shame to fear and chase gypsies, instead of developing their artisanal and musical resources so that every passage they make turn into a joyous event. Instead of trying to re-integrate unemployed in a labour market upset by the multiplication of enterprises shutting down, why not let structures develop where each ones potential and imagination can develop fully ? The struggle for undocumented migrants slides too often into a desperate, even suicidal defence. But offense is the best defence. Not an aggressive answer, like a police intervention remote-controlled by a functionary who calls for austerity with those that he ruins. It can be an offensive who installs everywhere spaces liberated form profits, market and commerce. Spaces where the right to live, to be happy, to create, spaces for beauty, for enjoyment reject the rights of barbary, commerce and survival of the richest. We will have to fill up the gaps that the state lets, as it furthers away form the demands of citizens. It is up to us to prepare ourselves starting now if we do not want anymore that taxes serve as gapfilling for banking mistakes and speculation on the stock market. Our main task, is restoring poetry in a society where the taste for profit and power have removed all poetry. In a blindly aggressive world, drawing, reinventing, giving priority to human values, like generosity, creativity, enjoyment, an autonomous life.. Becoming human means denying the slavehood of labour and the power to proclaim your right to be happy creating good conditions for the benefit of all.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

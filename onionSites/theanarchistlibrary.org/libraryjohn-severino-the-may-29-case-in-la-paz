@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The May 29 Case in La Paz (John Severino) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/john-severino-the-may-29-case-in-la-paz?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=john-severino-the-may-29-case-in-la-paz">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The May 29 Case in La Paz
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/john-severino">John Severino</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    March 28, 2013
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/bolivia">Bolivia</a>
+        <a href="/topics/fai">FAI</a>
+        <a href="/topics/repression">repression</a>
+        <a href="/topics/rumorology">rumorology</a>
+        <a href="/topics/snitches">snitches</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on June 23, 2013 from https://chileboliviawalmapu.wordpress.com/2013/03/28/the-may-29-case-in-la-paz/
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="john-severino-the-may-29-case-in-la-paz.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="john-severino-the-may-29-case-in-la-paz.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="john-severino-the-may-29-case-in-la-paz.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="john-severino-the-may-29-case-in-la-paz.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="john-severino-the-may-29-case-in-la-paz?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="john-severino-the-may-29-case-in-la-paz.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="john-severino-the-may-29-case-in-la-paz.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>John Severino</h2>
+	
+	<h1 id="textttitleh">The May 29 Case in La Paz</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>On May 29, 2012, 13 people were arrested in La Paz, Bolivia, as part of an antiterrorism witch hunt directed against anarchists in response to a series of arsons, bombings, and sabotage claimed by the FAI-FRI and related to government plans to build a highway through TIPNIS, a protected rainforest. Subsequently, most of those arrested have been released, in some cases after snitching to prosecutors. Two people remain locked up. This article is an attempt to cut through the pervasive misinformation surrounding the case, and facilitate solidarity for those who deserve it. It is also an attempt to learn certain practices of communication in anarchist circles that aid repression and hinder solidarity.
+</p><p>Together with comrades in La Paz we have convoked an international day of solidarity for May 29, 2013. We intend this article to lend clarity and background to that convocation.
+</p><p><strong>TIPNIS and the FAI-FRI</strong>
+</p><p>Since its inauguration in 2006, the progressive government of Evo Morales has championed a neoliberal development project typical of the rightwing and military regimes it sets itself in opposition to. The project is a mega-highway that would cross Bolivia from Brazil to Peru and Chile, uniting ports on the Atlantic and Pacific and “connecting markets,” in their rhetoric. The project is wrapped up in an extremely patriotic discourse of “reclaiming” its access to the sea, lost during a war with Chile in 1880, and in a capitalist rhetoric of “development”. Some accuse the Morales government of blackmailing affected populations by promising that hospitals will follow in the wake of the highway, as though healthcare depended on automobiles.<a href="http://chileboliviawalmapu.wordpress.com/2010/12/22/evos-highway/">http://chileboliviawalmapu.wordpress.com/2010/12/22/evos-highway/</a>
+</p><p>The route of the highway will go through TIPNIS, or Territorio Indígena y Parque Nacional Isiboro Sécure, a protected rainforest that is also the home of several indigenous nations that won their right to remain in their traditional territories, despite the usually human-exclusive “natural park” designation, after years of struggle against the earlier rightwing and military governments.
+</p><p>Around 2009, Bolivian anarchists began acting in solidarity with indigenous and other people struggling to protect TIPNIS. Through September and October of 2011, the 8<sup>th</sup> Indigenous March in defense of TIPNIS was heavily repressed by police, to a tune of hundreds of arrests and 280 injured. <a href="http://eju.tv/2012/07/tipnis-la-consulta-de-evo-se-impone-a-las-muertes-y-a-las-caminatas/">http://eju.tv/2012/07/tipnis-la-consulta-de-evo-se-impone-a-las-muertes-y-a-las-caminatas/</a> The march lasted 130 days and covered 1,200 kilometers, from Trinidad to La Paz. President Morales accused the indigenous organizers of the march of being puppets of the US government.
+</p><p>After the repression against the 8<sup>th</sup> March, a string of arsons, bombings, and sabotage struck a variety of targets, primarily in La Paz, from September 20 to May 24, 2012. The actions include an alleged bombing of the Vice Ministry of Environment, eight arsons against banks machines, sabotage against three Chilean companies, the bombing of an automobile company and a bank, two arsons against Burger King and another fast food restaurant, an arson against an office connected to the prison bureaucracy, and the sabotage of a supermarket and eight businesses associated with the animal exploitation industry. Several of the attacks included in the police report are less than clear, as some of the banks in question deny any attacks having taken place, and some evidence suggests that the attack on the Vice Ministry was either a smoke bomb or an accidental electrical fire. In any case it was definitely not the “attempted murder” of the Vice Minister of which the comrades are accused. On the other hand, photographic evidence exists of completely destroyed bank machines or burned out businesses, showing that in at least some cases bombs and incendiary devices were most definitely used.
+</p><p>Internet communiqués signed by the FAI-FRI (Informal Anarchist Federation-International Revolutionary Front) claim the actions. In general these communiqués place the attacks within the constellation of revolt standard to FAI and CCF discourse (“from Indonesia to Chile…”) and claim them in the name of the usual litany of killed, injured, and imprisoned comrades. A couple communiqués, however, mentions events in Bolivia and relate the attacks to the struggle to protect TIPNIS.
+</p><p><a href="http://vivalaanarquia.espivblogs.net/?p=10323">http://vivalaanarquia.espivblogs.net/?p=10323</a>
+</p><p><a href="http://vivalaanarquia.espivblogs.net/?p=10316">http://vivalaanarquia.espivblogs.net/?p=10316</a> <a href="https://vivalaanarquia.wordpress.com/2011/09/20/bolivia-acciones-de-la-fai-fri-en-solidaridad-con-luciano-pitronello/">https://vivalaanarquia.wordpress.com/2011/09/20/bolivia-acciones-de-la-fai-fri-en-solidaridad-con-luciano-pitronello/</a>
+</p><p><strong>The Arrests and Imprisonment</strong>
+</p><p>On May 29, 2012, 13 people were arrested in La Paz and charged with attempted murder (of the Vice Minister) and terrorism. Most of them were brought to declare the same day, some of them were released and called to declare in early June. It seems that the police were either engaging in a fishing operation or arresting a list of people facilitated to them by a hypothetical informant marginally involved in the campaign to defend TIPNIS. The arrested include several members of OARS, (the Anarchist Organization for Social Revolution) or from the aboveground libertarian environmentalist group Red Verde (Green Network); several people from the anarcho-punk, animal liberation, and anarcha-feminist scenes; one person from the group CJAC (Anarcho-Communist Youth Collective); and even a couple people from the animal liberation wing of the Hare Krishnas. In a couple cases, the police did not know the addresses of their suspects, and either raided the parents’ houses or a neighbor’s house.
+</p><p>Only one detainee, Henry, refused to make a statement to the police. All the other detainees gave declarations, though half of these did not give any incriminating information, either out of ignorance or solidarity. The police generally asked about membership in OARS, Red Verde, and the FAI; about participation in an animal liberation gathering in 2010 which they allege as the moment when the FAI was formed in Bolivia; about any connections with foreigners (there is an extremely xenophobic bent to the investigation); about solidarity for Tortuga or the defendants in the Bombs Case in Chile. They ask the detainees to draw maps showing the location of their houses or the houses of other people. They ask the detainees to identify people pictured in photos, primarily from punk shows and protests. Two photos, however, show the partially covered face of a woman, taken from surveillance photos at the time of two different attacks. It should be noted that all the other photos were taken by police from the facebook accounts of the detainees. In the investigation, the police also include complete lists of phone calls and locations from the cellphones of all the defendants.
+</p><p>Aside from the declarations of the snitches and the two surveillance photos, the government has absolutely no evidence.
+</p><p>Two people were sent to prison the same day, May 29: Henry, and Nina. A third person was imprisoned after being called back in to declare on June 5, Krudo. Two people were given house arrest, Renato (of OARS) and Victor (of OARS and Red Verde). The other people were released unconditionally and are no longer facing charges. However, we cannot in good faith call for solidarity for all five of the people implicated.
+</p><p><strong>The Snitches</strong>
+</p><p>Multiple people related to the case decided to snitch, giving incriminating information to the police. In some cases it was to save their skin, and in other cases the motive seems to be an ideological opposition to any illegalist practice. Subsequently, people on the outside, many of them self-proclaimed anarchists, have decided to support the snitches, politically justify their snitching, and even do some snitching of their own. These people have names and addresses.
+</p><p>Because of the huge amount of false accusations, rumors, and infighting that has circulated among those involved in this case, there have been some accusations of snitching or support for snitching that may not be justified. The information we are sharing here is only that which could be confirmed in the most certain terms. We have gone into greater length on how we checked our facts in the final section. For the moment, suffice it to say that while some rumors were spread by the snitches themselves to cover their own asses, others whom we still consider comrades also engaged in rumor-spreading that has proven to be a major obstacle to solidarity.
+</p><p><em>Renato Vincenti Campos</em>: Snitch. In his declaration on the 29<sup>th</sup> of May, Renato, OARS member, gives the names, addresses, and telephone numbers of other OARS members, says that Henry belongs to the FAI-FRI and is anti-organization and insurrectionist, claims that the insurrectionists’ “leaders are professionals” who run bomb-making workshops. Claims the group consists of 8–9 people, mostly foreigners. He says he knows Henry belongs to the FAI because he hangs out with those who dress in black with beards and moustaches. “They are terrorists, they ruin the work we are doing, they receive money from the outside,” he bemoans. He also includes Krudo and Luisa (another detainee, who gave no incriminating information in her declaration, claimed pacifism, and was released) among the bad anarchists. He names all the people he knows in the photos the police show him, also describing their politics. When identifying his friends, he says “they don’t have those politics.” He associates Krudo with foreigners, says Henry was brainwashed by the Chileans, says Luisa also had contact with Chileans, and makes xenophobic comments. He identifies Nina and Luisa as the women in the surveillance photos. It’s also worth noting that all the OARS, CJAC, and Red Verde members were pretty dismissive of women comrades in their declarations, often not knowing the names of women comrades (even in their own organizations) and frequently referring to them as “the girlfriend of” rather than by name.
+</p><p><em>Victor Hugo Gironda Alarcón</em>: Snitch. In his declaration on May 29, he gives very little information (and in fact the police hardly ask him any questions). He claims to be completely uninvolved and ignorant of any of the groups in question (he is a member of OARS and Red Verde). The next day, he requests to give an amplifying declaration. In his May 30 declaration, he says that OARS and Red Verde (groups he claimed the day before not to know) were opposed to the FAI-FRI which is terrorist. He describes an event and debate in a social space in La Paz, mentions foreign “extremists” who were present, and gives a physical description of some Chileans who were present.
+</p><p><em>Jeffer Vincenti Campos</em> (brother of Renato): Snitch. In his declaration on June 4, he identifies himself as an OARS member, makes xenophobic comments, gives information about friendships and connections between people identified in the facebook photos, and says Henry and Luisa had connections with Chileans. He claims the woman in one of the surveillance photos is Nina.
+</p><p><em>Daniel Gerardo Caceres Neirot</em>: Snitch. In his declaration on the 5<sup>th</sup> of June, Daniel, a participant of OARS and CJAC, identifies the other members of OARS, claims that Henry belongs to the FAI, identifies Victor as a member of OARS and Red Verde, talks about 2 unknown Chileans who passed through, talks shit on Krudo for being dirty, says Krudo had contact with Chileans, and identifies another foreign anarchist who had visited a couple years earlier.
+</p><p><em>OARS</em>: Snitches. After the snitching of multiple of their members, OARS as an organization repeatedly justifies and even celebrates the collaboration, and they continue to condemn Henry, Nina, and Krudo. They continue to be active as an anarchist organization, holding events and trying to recruit new members. Renato and Victor are rewarded for their snitching with house arrest, and even that seems to be symbolic as they are frequently seen in public, with no reaction by the police. OARS is on the internet at:
+</p><p><a href="http://oarsbolivia.blogspot.com/">http://oarsbolivia.blogspot.com/</a> and <a href="mailto:oars_lp%20at%20hotmail%20dot%20com">oars_lp at hotmail dot com</a>
+</p><p><em>Nina Maria Mancilla Cortez</em>: Snitch and volunteer cop. In her first declaration on May 29, Nina gives no incriminating information, claiming innocence, claiming to have left the social movements behind years earlier to dedicate herself to raising her child. She is sent to prison. Already on the 5<sup>th</sup> of June, she requests that the court allow her to make an amplifying declaration. This does not happen until June 29, although it does not become public knowledge until months later, which is why initial solidarity efforts were for “Henry and Nina”.
+</p><p>In her second declaration, Nina: 1) provides solid alibis for the 13<sup>th</sup> of October and the 21<sup>st</sup> of December (the date of the Vice Ministry sabotage and another bombing of which she is specifically accused). She subsequently provides solid proof of being at work and out of La Paz, respectively, on those two dates. In other words, the only negative consequence she was saving herself from by snitching was the possibility of waiting in prison a little longer before winning her release.
+</p><p>2) Says she only knows Henry, Krudo, and Renato from punk bands (she had previously played in the punk band Niñas Dinamiteras) and that she has bad relations with Krudo and Renato.
+</p><p>3)That a Trotskyist group from Argentina funded OARS, and Trotskyist lawyers supported them. She names Renato as participating in a political talk.
+</p><p>4) She names herself and others as the organizers of a libertarian gathering that was disrupted by two foreign jugglers (an Argentine and a Chilean) who were kicked out. She identifies them and claims that one subsequently stabbed someone, left the country, then returned to organize a punk concert with Krudo. She says she recognizes their writing style in the FAI-FRI communiqués that were distributed at the concert.
+</p><p>5) When asked about foreigners in the TIPNIS mobilization she names an NGO activist and also identifies a “conflictive” Chilean who participates with OARS, which is financed by LOR CI (the Argentine Trotskyists). She says that Henry has contact with foreigners, and names the other people in his band.
+</p><p>6) When asked if any new information has come to her attention since being arrested, she identifies a comrade, X, as the woman in the surveillance footage. She says that X was nervous and crying the day of the arrests, that a friend remarked that she looked like the person in the surveillance image circulated by the press, and that X subsequently disappeared. She gives the full name and address of X, and also names her boyfriend, and the facebook pages of both. Then she identifies another comrade, Y, as the probable author of the FAI-FRI communiqués published on Liberación Total. She gives his telephone number and tells the police where they can find other writings by him, in order to compare writing styles. She also says where on her facebook page to find a photo of X, so that the police can make a biometric comparison between X and the person captured in surveillance footage. She says Henry and Krudo have connections with X and Y. Nina also drew a map of the house of X and another comrade whose name had come up in the investigation.
+</p><p>In subsequent paperwork, Nina goes even further. She submits a petition asking the government to subpoena information from the web server that hosts the anarchist site Liberación Total. Giving the police step by step instructions, she provides the address of the company that owns the server, describes the process for requesting the IPs of those who have uploaded articles to Liberación Total, and explains how the government can apprehend the guilty parties by identifying those who posted the FAI communiqués on the internet.
+</p><p>One month after her second declaration, Nina requests her release and a day later is given house arrest. When her snitching is revealed, the vast majority of the anarcha-feminist milieu in La Paz and Cochabamba support her, justifying her snitching, glorifying her as a mother, and in some cases even trying to help the authorities track down the fugitives. Thanks to their collective snitching, there is more of a case against Henry and Krudo, and there are people who have to live on the run. Nina’s crew have tried to monopolize the solidarity efforts for the detainees, carrying out events proclaiming the innocence of Henry and Nina (in the beginning, both OARS and Nina’s crew denied solidarity to Krudo, both for reasons that are probably classist and because they were accusing him of being the snitch, even when they had already snitched). When Henry demanded a complete separation between solidarity with himself and solidarity with Nina, they denounced him as authoritarian and sexist. In other moments, they used the typical stereotype portraying those who used violence or more radical analysis as “daddy’s boys” or spoiled, which is ironic since Nina is the daughter of the former Bolivian ambassador to Mexico, and multiple people told us that Nina’s parents even contacted their friend the Vice President to try to get her released.  Nina’s crew also called for the “guilty parties” to turn themselves in so Nina could go free, and claimed it would be a credit to their ideology if they assumed responsibility for the bombings. In this vein, we also have to name:
+</p><p><em>Virginia Ayllón Soria</em>: Snitch. Although “Vicky” is not implicated in the case, this academic and supposed anarcha-feminist has directly helped Nina get information on X and Y, and participated in the effort to track down the guilty ones. In addition to authoring various texts in support of Nina’s snitching, and accusing Krudo of being a snitch or police agent at the same time as she and Nina were in the process of snitching behind everyone’s back, Vicky helped organize and try to dominate a “diverse” solidarity assembly in support of both Henry or Nina, and accused Henry of being authoritarian and sexist for refusing this space. Vicky, who works for the government, also organized–according to multiple people who told us the same thing independently, a libertarian gathering in Cochabamba, with the participation of older libertarian fixtures like Carlos Crespo as well as pro-MAS anarchists, at which it was not allowed to talk about the situation of the anarchist prisoners. Courageously, a tiny handful of true comrades in Cochabamba organized a parallel libertarian gathering in protest of this.
+</p><p><strong>Henry</strong>
+</p><p>Henry is the only defendant who never made a statement. He is an anarchist who believes in total liberation, and he is against prisons. In legal petitions filed on June 14 and July 9, he declared his innocence of the charges but throughout the solidarity campaign he has opposed a discourse of innocence and refused to legitimize the logic of the courts and the prisons.
+</p><p>Henry is being held in San Pedro prison in the center of La Paz. He has to pay for his cell and his food (he is vegan, which makes things harder, but Bolivian prisoners in general have to pay their own room and board), which, in addition to legal costs, means he needs a lot of support. He also has a child to support. Nonetheless, he is in good spirits, and continues to write and be active on the inside. He is currently seeking to be released into house arrest, but has already had 12 audiences suspended. The Bolivian state may hold him up to three years without trial.
+</p><p>To help him win his release and show the world he is not alone, we are calling for an international day of solidarity on May 29, at which point he will have spent one year behind bars.
+</p><p><a href="https://chileboliviawalmapu.wordpress.com/2013/03/28/international-day-of-solidarity-for-the-may-29-case/">Absolution for the May 29 defendants! No highway! Freedom for all prisoners!</a>
+</p><p><strong>Krudo</strong>
+</p><p>On May 29, Krudo’s mother’s house was raided by police. Later in the day, Krudo was arrested and served a notice to appear on June 4. On June 5, he made a statement to the police. In his declaration, he names Renato and Jeffer as members of OARS. When asked about foreigners, he names several, but only in relation to travelling jugglers and punk musicians. He says that aside from this he does not really know or have the confidence of foreigners. He says that when foreigners get in touch with him, it is probably because Henry gave them his phone number to organize a concert. He says that Henry probably organized the animal liberation gathering in Yungas via the group Red Verde. He says Victor belongs to Red Verde and connects Henry with Victor and Luisa. He said that at a protest Henry asked him to hand out flyers about the 14 “Bombs Case” prisoners in Chile. He identifies Henry and another comrade in a photo of a protest for the 14 Chilean prisoners (in the photo, the two are standing next to him, and he also identifies himself). Other than this, he tends to only identify people in photos of non-political events (punk shows) and always when he is also in the photo (Krudo told us that initially he denied knowing anyone, but the police beat him and showed photographs featuring Krudo next to the people in question: subsequently he only identified people who were photographed alongside him). He also draws two maps for the police, one of his mother’s house and one of a friend’s house (though in the second case he claims he was only copying a map the police already had, as per police instructions).
+</p><p>Krudo is subsequently sent to a youth detention facility, where he is still locked up.
+</p><p>Krudo does not give any information about the FAI or about illegal activities. However, he does give information that hurts Henry, linking Henry to foreigners, to the animal liberation gathering, and to solidarity for the Chilean “Bombs Case” prisoners. He subsequently claims that the police beat him (his family members confirm this), that the police twisted his words or put down things he never said, that his lawyer did not help him during the interrogation and then made him sign the declaration. He says he read the declaration on the computer screen, but pressured by his lawyer did not read it again when the police printed it out later. It is this copy he claims was altered.
+</p><p>After studying the declaration intensively, as well as Krudo’s writing, it is our opinion that some of the words belong to Krudo, and others to the police. In particular, we think that the sentence that identifies Henry as a member of Red Verde and an organizer of the animal liberation gathering was inserted by police. The language stands out starkly, the identical phrase appears in two different places, and Henry did not belong to Red Verde (a mistake the police could have made, but not Krudo).
+</p><p>Throughout all the declarations, it is clear that the police conducted the transcription of the interrogation in a disorganized manner, and that the transcripts do not accurately reflect the interrogations. For example, we know that with other detainees, the police asked leading questions (e.g. is this Nina in the photo?) whereas the transcript does not reflect this (e.g. Q: Who is this in the photo? A: It looks like Nina). Nonetheless, we believe that Krudo did identify Henry in relation to the Chile solidarity protest and in relation to having contacts with foreigners. Krudo admits the latter in one of his communiqués, although he says that he told police during the interrogation that he was the one who organized the “Bombs Case” solidarity protest and wrote the flyers.
+</p><p>Additionally, we think that Krudo’s declaration shows a clear intention not to incriminate anybody, and we feel that anyone who reads the declaration with an open mind would come to the same conclusion.
+</p><p>There is one more important point. Krudo identifies people who appear in photos that the police already have in their possession. We ask: what is the greater form of collaboration, naming people who appear clearly in a photo of a protest, people whom the police already have in custody, or putting those photos on the internet in the first place? We say this not to excuse Krudo because we think his mistake was a grave one, but to criticize the posture of self-righteousness that some other comrades have taken in denouncing Krudo. After all, every single one of the detainees kept Facebook pages that provided photos and information to the police, so on this count, no one stayed silent.
+</p><p>Far more important than our opinion, though, are a number of facts. Krudo signed the declaration. Whether or not they were his words, that was a big mistake, and it legally hurt another comrade. It is also true that during the stress of a police interrogation, one can make mistakes. However, to uphold solidarity, it is necessary to take responsibility for those mistakes and do what we can to mitigate their consequences for other comrades.It is also a fact that Krudo has let ten months go by, at this point, without correcting that error.
+</p><p>After several months of showing solidarity with Krudo, Henry has decided to label Krudo a police collaborator, in the face of his failure to retract his declaration or take full responsibility for his mistake.
+</p><p>To complicate matters further, from early on many rumors regarding Krudo were circulating among the anarchist scene, signaling him as someone unworthy of solidarity, and even as a police informant. We have found some of these rumors to be false, and the others to be lacking proof (they may or may not be true, we simply cannot tell, nor are those who circulate them able to substantiate). On the other hand, those supporting Krudo have tended to minimize the extent of his collaboration or the damage it has done to Henry.
+</p><p>Because Krudo could probably win himself house arrest by giving more information to the police, but has instead taken a stand against the repression and continues to be locked up, we have decided to take the following position: he made a serious mistake by signing the declaration, regardless of what he did or did not say to police, and he has not yet taken full responsibility for his mistake. To show to comrades everywhere that he is still a part of our struggle and that he still upholds the principle of solidarity, he should officially retract his first declaration in its entirety.
+</p><p>We were able to meet with Krudo in Qalauma prison outside La Paz and ask him to take this step. We tried to facilitate legal information about how he could go about this, since (perhaps unforgiveably) nine months later he was still in the dark. He assured us he would do so, and we have since received word that he and his supporter have already begun the process. We are awaiting confirmation.
+</p><p>Because he did not give any information regarding illegal activities or participation in clandestine groups, we do not consider Krudo’s form of collaboration to constitute snitching. However, we also respect the reasoning behind Henry’s position, and recognize that this is a grey area. We do not ask people to stop supporting Krudo, or to demand that he be supported. Everyone should make up their own mind, based on the facts, about whether he deserves support or not. This is made extremely difficult by the multiple anarchist counterinformation sites, in South America and in Europe, that have been spreading false information about Krudo or about the case in general.
+</p><p><strong>The Supporters, the Rumors, the Facts</strong>
+</p><p>The repressive strike in La Paz revealed a grave weakness in the Bolivian anarchist movement. A lack of security practice, excessive use of facebook and cellphones, tolerance and even active support for snitching, and a culture of communication characterized by mud-slinging, rumor-spreading, the fabrication of false and malicious rumors, the acceptance of accusations at face value as long as they came from one’s own side, and the publication of rumors and infighting on the internet.
+</p><p>Because so much of this infighting has already been published on the internet, and because it has constituted a major element of the repression, we want to write a little about it in this article,obviously without repeating any details.
+</p><p>In a case of repression that involves snitches and support for snitches, serious accusations and harsh criticisms are necessary and inevitable. Avoiding infighting has nothing to do with suppressing criticisms and accusations. To confront repression requires building a broad base of support that surpasses state efforts of isolation. But seeking a broad base does not mean we accept anyone’s support. Asking to exclude those who support snitching is completely reasonable, and not evidence of “authoritarianism,” as Nina’s supporters have claimed.
+</p><p>On the other hand, the simple fact that someone is a prisoner does not mean they are infallible. Prisoners must be held to critique just like any other comrade. They need to be supported, but not glorified or turned into heroes. Because repression affects us all, the prisoner should not be the undisputed director of the solidarity campaign. If people disagree with Henry about supporting Krudo, this does not mean they have broken solidarity unless it can be proven that Krudo is a snitch, or if their form of support is uncritical of Krudo’s mistake and therefore encourages or minimizes collaboration. On the other hand, some comrades have claimed that we have to believe Krudo when he says his declaration was falsified, because we should always believe a comrade instead of the police. This argument does not hold. Sometimes comrades make mistakes, sometimes comrades lie, and sometimes comrades become snitches. We always need to use our own judgment to determine which is which.
+</p><p>Instead of using their judgment, people throughout the anarchist scene in Bolivia have accepted whatever rumors their friends happened to spread. Some of these rumors were true, others were false or exaggerated, and some were even fabricated maliciously. We have found almost no examples of people trying to ascertain whether the rumors were true or false. Instead they chose the most comfortable option, breaking into bands and believing everything that came from their side. This also applies to those who were spreading accusations. In almost every single case we encountered, the people spreading a serious accusation against other comrades (and we are talking about accusations against the two prisoners or against the few people on the outside supporting them) had taken zero steps to provide proof backing up their accusation. Time and time again, we had to ask people to show us proof. Sometimes they did, sometimes they did not bother to, and in a few cases it was not possible. And when we saw the proof, sometimes it turned out the accusation was true, other times we were able to prove it was false, and most often it was somewhere in between, with different people having different and often exaggerated interpretations of the same events.
+</p><p>We are not trying to suggest that everyone was equally to blame for these problems. Some of the accusations being tossed around were absolutely necessary, and absolutely true. The point is, comrades who hear accusations must make a practice of making sure there is proof. Comrades who make accusations must provide proof.
+</p><p>This was not at all the norm in Bolivia, and the greater part of the anarchist comrades themselves did far more damage than the police. Their practice of uncritically believing and spreading rumors (and in a few cases maliciously inventing them) or making accusations without providing proof, constituted an important part of the repression.
+</p><p>Although we are making a harsh criticism, it applies by no means only to the Bolivian comrades. Similar practices abound elsewhere, and a number of comrades from other countries who came to support the detainees did a great deal of damage by uncritically joining one band or the other and spreading rumors of their own.
+</p><p><strong>Our Approach</strong>
+</p><p>Our approach in facilitating support for the imprisoned comrades was the following: we spoke with everyone we could, unless it could be proven that they were a snitch or supported snitches. For every accusation or rumor, we asked for proof. We did not join one side or another, but we also did not stay neutral. Our position was not to adhere to cliques, but to orient ourselves to the liberation of all prisoners, the ostracism of all snitches, the open and even-handed criticism of all comrades who made serious mistakes, and the continuation of the anarchist struggle.
+</p><p>In most cases we could not confirm or dismiss the various accusations that were circulating. Usually, either comrades could not provide proof of their accusations, or their proof did not demonstrate as extreme an error as they were alleging. As a rule, every individual had a different version of the same event.
+</p><p>To deal with this situation, we took to writing down what every single person said, and comparing notes. In this way, we were able to identify a few false rumors, but by this time the lines are so firmly drawn that some people insisted on believing their version even when we could confirm it had no basis. As usual, comrades on the other side of some line were presented as greater enemies than those who had snitched.
+</p><p>Most of what we could solidly prove came from the declarations and pretrial documents, which we read extensively. Every bit of information we present in this article as fact can be confirmed in these or other documents. The description of what information each defendant gave comes from their own signed declarations and can be taken as objective fact. Hopefully, this can conclusively dismiss some of the rumors regarding Krudo, as well as the attempts by Nina and OARS to minimize their own snitching.
+</p><p>For legal reasons, the pretrial documents cannot be put on the internet at this time. Various comrades have seen them, and can hopefully help to spread a clearer picture of the case. We are publishing this article on <a href="https://chileboliviawalmapu.wordpress.com/2013/03/28/the-may-29-case-in-la-paz/chileboliviawalmapu.wordpress.com">chileboliviawalmapu.wordpress.com</a> because the site is already known to a number of comrades internationally and can be taken as a trusted source of information.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

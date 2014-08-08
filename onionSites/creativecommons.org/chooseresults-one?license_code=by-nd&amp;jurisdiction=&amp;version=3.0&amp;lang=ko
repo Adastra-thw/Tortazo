@@ -1,0 +1,453 @@
+<!doctype html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Choose a License</title>
+
+  <link href="/wp-content/themes/creativecommons.org/favicon.ico" title="Icon" type="image/x-icon" rel="icon" />
+
+  <link rel="stylesheet" href="/wp-content/themes/creativecommons.org/css/style.css" />
+  <link rel="stylesheet" href="/wp-content/themes/creativecommons.org/engine.css" />
+
+  
+
+  <script src="/wp-content/themes/creativecommons.org/js/libs/modernizr-2.0.6.min.js"></script>
+
+  <script type="text/javascript"
+          src="/includes/license-results.js" >
+  </script>
+
+
+<style>
+ @media screen and (max-width: 770px) {
+   #email-signup-2014 form * { text-align: center;}
+   #email-signup-2014 label { font-size: 14px !important; width: auto; height: auto !important;}
+   #email-signup-2014 input { width: 100%; padding-top: 5px;}
+ }
+
+ @media screen and (min-width: 771px) {
+   #email-signup-2014 {height: 58px;}
+   #email-signup-2014 label { font-size: 18px; margin: 0px 0px 0.75em; color: #000; width: auto; padding-right: 20px; text-align: left; font-weight: normal !important;}
+ }
+
+ @media screen and (min-width: 940px) {
+   #email-signup-2014 label { font-size: 28px; margin: 0px 0px 0.75em; color: #000; width: 540px; text-align: left; font-weight: normal !important;}
+ }
+</style>
+
+  
+  <style>
+    #beta h4 {
+      margin-bottom: 0.25em;
+      margin-top: 0.5em;
+      padding-left: 0;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css"
+        href="/includes/zero.css" />
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <div class="topbar">
+        <div class="topbar-inner">
+          <div class="container">
+            <a id="skip-navigation" href="#start-content"
+               title="Skip Navigation">Skip Navigation</a>
+            <a href="/" title="Home">
+              <span id="home-link">Home</span>
+              <span id="home-button"></span>
+            </a>
+            <div id="logo"><span>Creative Commons</span></div>
+            <ul id="short-menu" class="nav">
+              <li class="dropdown">
+                <a href="#about" class="dropdown-toggle">Menu</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/licenses/">Licenses</a></li>
+                  <li><a href="/publicdomain/">Public Domain</a></li>
+                  <li><a href="https://donate.creativecommons.org/">Support CC</a></li>
+                  <li><a href="/culture">Projects</a></li>
+                  <li><a href="/weblog">News</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul id="wide-menu" class="nav">
+              <li class="dropdown">
+                <a href="/about" class="dropdown-toggle">About</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/about">Our Mission</a></li>
+                  <li><a href="/about/history">History</a></li>
+
+                  <li class="divider"></li>
+                  <li><a href="/who-uses-cc">Who Uses CC?</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Case_Studies">Case Studies</a></li>
+                  <li><a href="/videos/">Videos about CC</a></li>
+
+                  <li class="divider"></li>
+                  <li><strong><span>The Team</span></strong></li>
+                  <li><a href="/board">Board of Directors</a></li>
+                  <li><a href="/staff">Staff</a></li>
+                  <li><a href="http://wiki.creativecommons.org/CC_Affiliate_Network">Affiliate Network</a>
+                  </li><li><a href="/opportunities">Job Opportunities</a></li>
+
+                  <li class="divider"></li>
+                  <li><a href="http://wiki.creativecommons.org/FAQ">Frequently Asked Questions</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="/licenses/" class="dropdown-toggle">Licenses</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/licenses/">About the Licenses</a></li>
+                  <li><a href="/choose/">Choose a License</a></li>
+                  <li><a href="http://search.creativecommons.org/">Find licensed content</a></li>
+
+                  <li class="divider"></li>
+                  <li><span>Licensors</span></li>
+                  <li><a href="http://wiki.creativecommons.org/Before_Licensing">Things to know before licensing</a></li>
+                  <li><a href="http://wiki.creativecommons.org/FAQ#Do_I_need_to_sign_something_or_register_to_obtain_a_Creative_Commons_license.3F">Do I need to register my work?</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Marking">Marking my work</a></li>
+
+                  <li class="divider"></li>
+                  <li><span>Licensees</span></li>
+                  <li><a href="http://wiki.creativecommons.org/FAQ#How_do_I_properly_attribute_a_Creative_Commons_licensed_work.3F">Attributing a work properly</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Marking/Users">Marking a CC-licensed work</a></li>
+                  <li><a href="http://wiki.creativecommons.org/FAQ#Will_Creative_Commons_give_me_permission_to_use_a_work.3F">Getting permission</a></li>
+                  <li class="divider"></li>
+                  <li><span>Developers</span></li>
+                  <li><a href="http://wiki.creativecommons.org/Integrate">App Integration</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Developer_Challenges">Developer Challenges</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Translate">Translation</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="/publicdomain/" class="dropdown-toggle">Public Domain</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/publicdomain/">Our Public Domain Tools</a></li>
+
+                  <li class="divider"></li>
+                  <li><a href="/about/cc0">About CC0 Public Domain Dedication</a></li>
+                  <li><a href="/choose/zero/">Choose CC0 Public Domain Dedication </a></li>
+
+                  <li class="divider"></li>
+                  <li><a href="/about/pdm">About Public Domain Mark</a></li>
+                  <li><a href="/choose/mark/">Use Public Domain Mark</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="https://donate.creativecommons.org" class="dropdown-toggle">Support CC</a>
+                <ul class="menu-dropdown">
+                  <li><a href="https://donate.creativecommons.org">Donate to Creative Commons</a></li>
+                  <li><a href="http://store.creativecommons.org/">Buy CC Merchandise</a></li>
+                  <li><a href="/supporters">Our Supporters</a></li>
+                  <li><a href="https://creativecommons.net/testimonials/">Testimonials</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="/culture" class="dropdown-toggle">Projects</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/culture">Culture</a></li>
+                  <li><a href="/education">Education</a></li>
+                  <li><a href="/science">Science</a></li>
+                  <li><a href="/government">Government</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/taa-grant-program">Gates OPEN</a></li>
+                  <li><a href="http://wiki.creativecommons.org/LRMI">Learning Resource Metadata Initiative (LRMI) </a></li>
+		          <li><a href="/music-communities">Music Communities</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Open_Policy_Network">Open Policy Network</a></li>
+		          <li><a href="/record-labels">Record Labels</a></li>
+		          <li><a href="http://schoolofopen.org">School of Open</a></li>
+                  <li><a href="http://wiki.creativecommons.org/4.0">Versioning the license suite</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="/weblog" class="dropdown-toggle">News</a>
+                <ul class="menu-dropdown">
+                  <li><a href="/weblog">Blog</a></li>
+                  <li><a href="http://planet.creativecommons.org/">Affiliate News</a></li>
+
+                  <li class="divider"></li>
+                  <li><a href="/interviews">Interviews</a></li>
+                  <li><a href="http://wiki.creativecommons.org/Events">Events</a></li>
+                  <li><a href="/newsletters">Newsletters</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/about/press">Press Room</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form action="/" id="search_form">
+              <input type="hidden" name="stype" value="site" id="find_site" />
+              <input type="text" name="q" placeholder="Site Search" />
+              <input type="submit" id="glass" title="Search" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+<div id="email-signup-2014" class="sixteen columns" style="background: #fefefe; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1); padding: 14px; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box">
+<form style="margin: 0; padding: 0;" id="Edit" action="https://donate.creativecommons.org/civicrm/profile/create?gid=29&amp;reset=1" method="post" name="Edit">
+<div><label for="email-Primary">Get Creative Commons updates</label> <input id="email-Primary" class="form-control input-lg" maxlength="64" name="email-Primary" size="30" placeholder="mattl@example.com" type="email"> &nbsp; <input class="btn btn-success" id="_qf_Edit_next" accesskey="S" name="_qf_Edit_next" type="submit" value="Subscribe"><input name="postURL" type="hidden" value="https://creativecommons.org/thank-you"><input name="cancelURL" type="hidden" value="https://creativecommons.org/newsletter"><input name="group[121]" type="hidden" value="1"><input name="_qf_default" type="hidden" value="Edit:cancel"></div>
+</form>
+</div>
+</div>
+
+    <div dir="ltr" style="text-align: left" 
+         id="main" role="main">
+      <div class="container">
+
+        <div class="sixteen columns">
+          <div class="first row">
+            <div id="title">
+              <h1 dir="ltr" style="text-align: left"></h1>
+            </div>
+          </div> <!--! end of "first row" -->
+          
+          <div class="row">
+
+            
+              <div class="twelve columns alpha">
+            
+
+            <div dir="ltr" style="text-align: left"
+                 id="content">
+               
+  <p>
+    귀하의 웹페이지에 넣고자하는 버튼의 스타일을 선택하십시오:
+  </p>
+  
+  <div class="licensebox">
+    <div style="margin-top:10px;" align="center">
+      <table dir="ltr">
+        <tr>
+          <td style="text-align:center">
+            <a href="http://creativecommons.org/licenses/by-nd/3.0/">
+              <img id="licensebutton"
+                   alt="Creative Commons License"
+                   src="https://i.creativecommons.org/l/by-nd/3.0/88x31.png"
+                   style="margin-right:10px;margin-bottom:4px; border: 0;" />
+            </a>
+            <br/>
+            <input type="radio" name="button"
+                   checked="checked" onclick="swapbutton('https://i.creativecommons.org/l/by-nd/3.0/88x31.png')" />
+          </td>
+          
+            <td style="text-align:center" valign="bottom">
+              <a href="http://creativecommons.org/licenses/by-nd/3.0/">
+                <img id="licensebutton_slim"
+                     alt="Creative Commons License"
+                     src="https://i.creativecommons.org/l/by-nd/3.0/80x15.png"
+                     style="margin-right:10px;margin-bottom:4px; border: 0;" /></a>
+              <br/>
+              <input type="radio" name="button"
+                     onclick="swapbutton('https://i.creativecommons.org/l/by-nd/3.0/80x15.png')"/>
+            </td>
+          
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    라이선스가 웹사이트에 어떻게 표시되는지 미리보기
+  </div>
+  
+  <div class="preview" id="results-preview"><a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/3.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/">크리에이티브 커먼즈 저작자표시-변경금지 3.0 Unported 라이선스</a>에 따라 이용할 수 있습니다.</div>
+  
+  <div style="margin-top:20px;margin-bottom:30px;">
+    <h4>개인 웹사이트가 있습니까?</h4>
+
+    <p>
+      자신의 저작물에 어떠한 라이선스가 적용되었는지 방문자가 알 수 있도록 아래 문구를 웹사이트에 복사하세요.
+    </p>
+
+    <form action="">
+      <div>
+        <textarea id="codetocopy" name="html" onclick="this.select()" readonly="true" 
+                  style="width:99%;height:150px;resize:vertical" rows="8" cols="20">&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nd/3.0/&#34;&gt;&lt;img alt=&#34;크리에이티브 커먼즈 라이선스&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nd/3.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;이 저작물은 &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nd/3.0/&#34;&gt;크리에이티브 커먼즈 저작자표시-변경금지 3.0 Unported 라이선스&lt;/a&gt;에 따라 이용할 수 있습니다.</textarea>
+      </div>
+    </form>
+
+    <p>
+      <span>
+        위의 상자 안에 있는 내용을 복사하거나 <a href="/license/work-html-popup?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=ko" onclick="window.open('work-html-popup?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=ko', 'html_help', 'width=400,height=350,scrollbars=yes,resizable=yes,toolbar=no,directories=no,location=yes,menubar=no,status=yes');return false;">자신의 이메일로 전송</a>합니다.
+      </span>
+      <strong>
+        도움이 필요하세요? <a href="http://wiki.creativecommons.org/Website/Publish">지침을 참조하세요</a>.
+      </strong>
+    </p>
+
+    <div id="chooserDonate">
+      <div>
+        <a href="https://creativecommons.net/donate/"><img src="/images/support/2010/cc-support.png" alt="Donate" title="Donate" border="0"/></a></div>
+        <p>
+          크리에이티브 커먼즈는 비영리 단체입니다.<br /> 위와 같은 도구를 지속적으로 제공하기 위해서는 여러분의 도움이 필요합니다.<br /> <a href="https://creativecommons.net/donate/">기부하기</a>
+       </p>
+    </div>
+  </div>
+  <!-- <div metal:use-macro="here/license_macros/macros/languages">
+       language box
+       </div>
+  -->
+
+            </div>
+
+            
+              </div> <!--! end of "twelve columns alpha" -->
+              <div class="four columns omega">
+                <div dir="ltr" style="text-align: left">
+                  
+  <p>
+    크리에이티브 커먼즈 라이선스 적용 기능을 지원하는 커뮤니티에서 저작물을 공유해보세요.
+  </p>
+  
+  <p>
+    귀하의 <a href="http://wiki.creativecommons.org/Publish/Images">이미지</a>, <a href="http://wiki.creativecommons.org/Publish/Audio">오디오</a>, <a href="http://wiki.creativecommons.org/Publish/Video">동영상</a>, <a href="http://wiki.creativecommons.org/Publish/Text#Blog">블로그</a> 등의 <a href="http://wiki.creativecommons.org/Publish/Text">글</a>을 어디에 <a href="http://wiki.creativecommons.org/Publish">게시할 수 있는지</a> 알아보세요.
+  </p>
+
+  <h4>오프라인 저작물이란?</h4>
+
+  <ul class="unstyled">
+    <li>
+      <span>
+        오프라인 문서에 라이선스를 표시하려면 해당 저작물에 <a href="non-web-popup?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=ko" onclick="window.open('non-web-popup?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=ko', 'html_help', 'width=400,height=350,scrollbars=yes,resizable=yes,toolbar=no,directories=no,location=yes,menubar=no,status=yes');return false;">이 텍스트를 삽입</a>하십시오.
+      </span>
+    </li>
+    <li>
+      <a href="http://wiki.creativecommons.org/XMP">XMP를 지원하는</a> 문서를 위한 <a href="/choose/metadata.xmp?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=ko">메타데이터</a>가 제공됩니다.
+    </li>
+    <li>
+      <a href="http://creativecommons.org/about/downloads/">
+        라이선스 로고의 고해상도 버전과 벡터 버전
+      </a>
+    </li>
+    <li>
+      <a href="http://wiki.creativecommons.org/Marking/Creators#Marking_Specific_Media">
+        동영상 및 다른 형태의 저작물에 표시하는 방법 
+      </a>
+    </li>
+  </ul>
+
+                </div> <!--! end of sidebar -->
+              </div> <!--! end of "four columns omega" -->
+            
+          </div> <!-- end of "row" -->
+        </div> <!--! end of "sixteen columns" -->
+      </div><!--! end of .container -->
+    </div><!--! end of #main -->
+
+    <footer>
+      <div class="container">
+        <div id="globe"></div>
+        <div id="colophon">
+          <div class="sixteen columns">
+            <div class="first row">
+              <div class="five columns">
+                <div class="bucket">
+                  <a href="http://www.facebook.com/creativecommons"
+                     title="Creative Commons on Facebook"
+                     ><img src="/wp-content/themes/creativecommons.org/img/facebook.png"
+                           alt="Creative Commons on Facebook"/></a>
+                  <a href="http://twitter.com/creativecommons"
+                     title="Creative Commons on Twitter"
+                     ><img src="/wp-content/themes/creativecommons.org/img/twitter.png"
+                           alt="Creative Commons on Twitter"/></a>
+                  <a href="http://identi.ca/creativecommons"
+                     title="Creative Commons on Identi.ca"
+                     ><img src="/wp-content/themes/creativecommons.org/img/identica.png"
+                           alt="Creative Commons on Identi.ca"/></a>
+                </div>
+              </div>
+              <div class="four offset-by-six columns">
+                <div class="bucket">
+                  <p>
+                    <a rel = "license"
+		       href="//creativecommons.org/licenses/by/4.0/"
+                       title="Creative Commons Attribution 4.0 International license"
+                       ><img src="//i.creativecommons.org/l/by/4.0/88x31.png"
+                             alt="License"/></a>
+                  </p>
+                  <div style="display: inline;" xmlns:cc="/ns#"
+                       about="http://creativecommons.org">
+                    <p>
+                      <small>
+                        Except where otherwise
+                        <a class="subfoot" href="/policies#license">noted</a>,
+                        content on
+			<span 
+			   href="http://creativecommons.org" 
+			   property="cc:attributionName" 
+			   rel="cc:attributionURL">this site</span> 
+			is licensed under a 
+			<a rel="license" 
+			   href="//creativecommons.org/licenses/by/4.0/"
+			   class="subfoot">
+			  Creative Commons Attribution 4.0 International license</a>.
+                      </small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sixteen columns">
+            <div class="row">
+              <div class="six columns">
+                <ul class="nav">
+                  <li>
+                    <a href="/policies">Policies</a>
+                  </li>
+                  <li>
+                    <a href="/privacy">Privacy</a>
+                  </li>
+                  <li>
+                    <a href="/terms">Terms of Use</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact CC</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div><!--! end of #container -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script type="text/javascript">
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!! dirty hack !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+j = $;
+  </script>
+  <script defer src="/wp-content/themes/creativecommons.org/js/plugins.js"></script>
+  <script defer src="/wp-content/themes/creativecommons.org/js/script.js"></script>
+  <!-- end scripts -->
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2010376-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+
+  
+</body>
+</html>

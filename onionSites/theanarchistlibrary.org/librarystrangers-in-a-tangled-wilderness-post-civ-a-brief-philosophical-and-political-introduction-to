@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Post-Civ!: A Brief Philosophical and Political Introduction to the Concept of Post-civilization (Strangers In a Tangled Wilderness) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Post-Civ!: A Brief Philosophical and Political Introduction to the Concept of Post-civilization
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/strangers-in-a-tangled-wilderness">Strangers In a Tangled Wilderness</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2008
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-civ">anti-civ</a>
+        <a href="/topics/anti-work">anti-work</a>
+        <a href="/topics/post-civ">post-civ</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Published by <em>Strangers In a Tangled Wilderness</em>, Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on July 26, 2009 from <a href="http://www.tangledwilderness.org/?p=55">www.tangledwilderness.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="strangers-in-a-tangled-wilderness-post-civ-a-brief-philosophical-and-political-introduction-to.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Strangers In a Tangled Wilderness</h2>
+	
+	<h1 id="textttitleh">Post-Civ!: A Brief Philosophical and Political Introduction to the Concept of Post-civilization</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Post-civilized thought is based on three simple premises:
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Premise 1: We Hate Civilization
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Premise 2: We’re Not Primitivists
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">Premise 3: What We’re For
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Definitions
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Post-civilization is about scavenging the ruins, physical and cultural. Post-civilization is about taking what is appropriate from all of history and pre-history. It’s about an organic method of growth, where we can apply philosophies and structures and technologies and cultures as best suits any given situation.
+</p><p>It’s about the anarchist urban hunter-gatherer squatting the ruins of the city living side-by-side with the micro-hydro engineer who has rigged the water running through the sewers to power her gristmill. It’s about the permaculturalist who collects camera lenses to build solar cookers. It’s about the living food-forests that we’ll turn our towns into.
+</p><p>It’s about never laboring again. (In this case, we are defining labor as “unnecessary, un-enjoyable work”). Frankly, it’s about destroying civilization and saving the world and living a life of adventure and fulfillment.
+</p><p>We don’t need a hell of a lot of political theory. Here’s a stab at it regardless.
+</p><h4 id="toc1">Post-civilized thought is based on three simple premises:
+</h4>
+
+<ol>
+<li><p>This civilization is, from its foundation, unsustainable. It probably cannot be salvaged, and, what’s more, it would be undesirable to do so.
+</p>
+</li>
+<li><p>It is neither possible, nor desirable, to return to a pre-civilized state of being.
+</p>
+</li>
+<li><p>It is therefore desirable to imagine and enact a post-civilized culture.
+</p>
+</li>
+
+</ol>
+<h4 id="toc2">Premise 1: We Hate Civilization
+</h4>
+<p>When we’re discussing civilization, we’re discussing the entirety of the modern world’s organizational structures and approaches to culture. We’re talking about the legal and societal codes that dictate “proper” behavior. We’re talking about the centralizing and expanding urges of political and economic empire. (If you’re the type who likes definitions, we’ve got a specific one for you in the back.)
+</p><h4 id="toc3">Premise 2: We’re Not Primitivists
+</h4>
+<p>We’re not primitivists: primitivists reject technology. We reject the inappropriate use of technology. Primitivists reject agriculture: we’re not afraid of <em>horticulture</em>, but we reject <em>monoculture</em> (and other stupid methods of feeding ourselves, like setting 6 billion people loose in the woods to hunt and gather). Primitivists reject science. We just refuse to worship it.
+</p><p>Primitivists have done a good job of exploring the problems with civilization, and for this we commend them. But on the whole, their critique is un-nuanced.
+</p><p>What’s more, the societal structure they envision, tribalism, can be quite socially conservative: what many tribes lacked in codified law they made up for in rigid “customs,” and one generation is born into the near-exact way of life as their predecessors.
+</p><p>We cannot, en masse, return to a pre-civilized way of life. And honestly, many of us don’t want to. We refuse to blanketly reject everything that civilization has brought us. Let us look forward, not backwards.
+</p><h4 id="toc4">Premise 3: What We’re For
+</h4>
+<p>It’s like recycling, but for everything! Bottles and houses and ideas alike! We are for the present, the thrashing endgame of civilization, as one of the most invigorating and worthwhile times to be alive. We cannot help but look forward to civilization’s end, whether it be slow and withering or quick and catastrophic. We look forward to rebuilding and repairing some houses and we look forward to razing others. We are for incorporating some models of organization and abandoning others, reacting to our circumstances.
+</p><p>In the here and now, we learn survival skills: skinning and tanning and wire-stripping, archery and gunpowder-making. Herbalism, acupuncture, yes, but we also study the application of antibiotics (used with restraint!). We permaculture and we rewild and we scavenge the urban and rural landscapes alike, learning what it is to be sustainable in a dying world. We tear up our lawns and leave only gardens. One day, we’re going to tear up the pavement (that cement will make nice fill for new structures!) and leave only bike paths.
+</p><p>And, you know what? We’re not afraid of a little specialization. Skills like food growing and distribution are shared, but it’s a <em>good</em> thing that some people study lens grinding while others study wheelchair repair.
+</p><p>There are enough <em>things</em> already made to enable a non-growth-based economy to last for a pretty long time. There are plenty of bike frames and tin roofs and shoes and chairs and ball bearings: we’ll never need a factory-line again. The metal is already mined... we just need to dig it out of the junkyards and junkfood stores and put it to more creative use.
+</p><p>We are for an ecologically-focused green anarchism and we are for mutual aid, free association, and self-determination.
+</p><h4 id="toc5">Definitions
+</h4>
+<h6><strong>Civilization</strong>
+</h6>
+<p>My dictionary defines <em>civilization</em> as “the stage of human social development and organization that is considered most advanced.” Clearly, this is bullshit. Derrick Jensen, anti-civilization theorist, has proposed a more useful definition of civilization: “a culture — that is, a complex of stories, institutions, and artifacts — that both leads to and emerges from the growth of cities (civilization, see <em>civil</em>: from <em>civis</em>, meaning citizen, from Latin <em>civitatis</em>, meaning city-state).” Another working definition can be derived from Wikipedia: “a society defined as a complex society characterized by the practice of agriculture and settlement in cities ... Compared with less complex structures, members of a civilization are organized into a diverse division of labor and an intricate social hierarchy.”
+</p><h6><strong>City</strong>
+</h6>
+<p>Derrick Jensen has defined <em>city</em> as: “people living more or less permanently in one place in densities high enough to require the routine importation of food and other necessities of life.” My dictionary says: “a large town”. Great. Flip to <em>town</em>: “an urban area that has a name, defined boundaries, and local government...”
+</p><p>Either way sounds pretty crap to me.
+</p><h6><strong>Anarchism</strong>
+</h6>
+<p>Dictionary says: “belief in the abolition of all government and the organization of society on a voluntary, cooperative basis without recourse to force or compulsion.” Most of us anarchists are talking about the destruction of coercive authority and seek to create societies built on consensus decision-making. I like to describe anarchism as the marriage of responsibility and freedom.
+</p><h6><strong>Green Anarchism</strong>
+</h6>
+<p>Ecologically-focused anarchism. Concerned as much with environmental sustainability as it is with the overthrow of Capitalism and the State.
+</p><h6><strong>Primitivism</strong>
+</h6>
+<p>Belief in a reversion to the pre-civilized state of being. Most often, primitivists reject technology that has developed since the stone age and reject all forms of agriculture. Many primitivists carry their critique as far as to include language and art as oppressive, mediating forces.
+</p><h6><strong>Tribalism</strong>
+</h6>
+<p>Dictionary says: “the state or fact of being organized in a tribe or tribes.”
+</p><h6><strong>Tribe</strong>
+</h6>
+<p>Dictionary says: “a social division in a traditional society consisting of families or communities linked by social, economic, religious, or blood ties, with a common culture and dialect.” Most of the time, we’re talking about a group of heredity inclusion that is reasonably small, of (very roughly) 20–150 individuals. Wikipedia says: “Due to the small size of tribes, it is a relatively simple structure with few (if any) significant social distinctions between individuals ... Almost universally associated with ethnocentrism.” (The tendendancy to look at the world primarily from the perspective of one’s own culture, that one’s culture and people are superior to all others).
+</p><h6><strong>Mutual Aid</strong>
+</h6>
+<p>From Wikipedia: “The economic concept of voluntary reciprocal exchange of resources and services for mutual benefit.” It has also been described by Kropotkin as being an alternate force in the evolution of species than that of competition. Mutual Aid stands in direct opposition to Capitalism, in which resources are held as a form of currency (or, let’s be honest, ransom: “I won’t give you this food that you need unless you give me...”)
+</p><h6><strong>Free Association</strong>
+</h6>
+<p>Basically, the idea that you don’t have to associate with someone if you don’t want to. It means that you don’t have to be part of a specific culture or group if you don’t want to. It means that, rather than trying to reach a worldwide consensus, people with different opinions can go their own ways.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

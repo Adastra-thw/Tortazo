@@ -322,7 +322,6 @@ class Cli(cli.Application):
             return
 
         if self.torLocalInstance:
-            self.logger.info(term.format("[+] Starting TOR Local instance with the following options: ", term.Color.YELLOW))
             import os.path
             if os.path.exists(self.torLocalInstance) and os.path.isfile(self.torLocalInstance):
                 torrcFile = open(self.torLocalInstance,'r')
@@ -334,9 +333,10 @@ class Cli(cli.Application):
                             torOptionValue = line[len(torOptionName)+1 : ]
                         torConfig[torOptionName] = torOptionValue
                 try:
+                    self.logger.info(term.format("[+] Starting TOR Local instance with the following options: ", term.Color.YELLOW))
                     for config in torConfig.keys():
                         self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
-                    self.torProcess = stem.process.launch_tor_with_config(config = torConfig, init_msg_handler=self.logsTorInstance)
+                    self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.logsTorInstance)
                     if self.torProcess > 0:
                         #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
                         self.logger.debug(term.format("[+] TOR Process created. PID %s " %(self.torProcess.pid),  term.Color.GREEN))
@@ -357,6 +357,8 @@ class Cli(cli.Application):
                     self.logger.warn(term.format("Type: %s " %(str(exc_type)), term.Color.RED))
                     self.logger.warn(term.format("Value: %s " %(str(exc_value)), term.Color.RED))
                     self.logger.warn(term.format("Traceback: %s " %(str(exc_traceback)), term.Color.RED))
+            else:
+                self.logger.warn(term.format("The specified torrc file is not valid: %s " %(str(self.torLocalInstance)), term.Color.RED))
 
 
         if self.zombieMode is None and self.useDatabase is False and self.mode is None:

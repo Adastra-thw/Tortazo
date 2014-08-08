@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2014 LinkedIn -->
+<!--[if lt IE 7]> <html lang="et-EE" class="ie ie6 lte9 lte8 lte7 os-win"> <![endif]-->
+<!--[if IE 7]> <html lang="et-EE" class="ie ie7 lte9 lte8 lte7 os-win"> <![endif]-->
+<!--[if IE 8]> <html lang="et-EE" class="ie ie8 lte9 lte8 os-win"> <![endif]-->
+<!--[if IE 9]> <html lang="et-EE" class="ie ie9 lte9 os-win"> <![endif]-->
+<!--[if gt IE 9]> <html lang="et-EE" class="os-win"> <![endif]-->
+<!--[if !IE]><!--> <html lang="et-EE" class="os-other"> <!--<![endif]-->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  	<meta name="google-site-verification" content="Sqd4FjL57LycYv5wXyqPskyNooVAVsMSdF1wlFRv60s" />
+	<title>LinkedIn Help Center</title>
+	    <link rel="canonical" href="http://tulong.linkedin.com/app/answers/list">
+  	<link rel="search" type="application/opensearchdescription+xml" title="LinkedIn Help Center Search" href="/ci/browserSearch/desc/http%3A%2F%2Ftulong.linkedin.com%2Fapp%2Fanswers%2Flist%2Fkw%2F%7BsearchTerms%7D/LinkedIn+Help+Center+Search/LinkedIn+Help+Center+Search/%2Feuf%2Fassets%2Fimages%2Ffavicons%2Fv1%2Ffavicon.ico"/>
+	
+				<link type="text/css" rel="stylesheet" href="/euf/assets/themes/linkedin/style.css" />
+					
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://tulong.linkedin.com/euf/rightnow/optimized/1406595536/themes/linkedin/' />
+<link href='/euf/rightnow/optimized/1406595536/templates/linkedin.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+.rn_ResultInfo2{overflow:hidden;padding-bottom:6px;}
+.rn_ResultInfo2 .rn_Results{float:right;}
+.rn_ResultInfo2 .rn_Suggestion, .rn_ResultInfo2 .rn_Spell{float:left;}
+.rn_ResultInfo2 .rn_NoResults{clear:both;}
+.rn_ResultInfo2 .rn_NoResults ul{padding-left:2em;}
+.rn_ResultInfo2 .rn_NoResults ul li{list-style:disc;margin:4px;}
+.rn_ResultInfo2 .rn_Results .rn_Strike{font-weight: normal;text-decoration: line-through;}
+</style>
+<meta name="robots" content="noindex"/>    <meta name="description" content="LinkedIn Help Center - Kailangan ng tulong sa paggamit ng LinkedIn? Masasagot ng LinkedIn Help Center ang mga tanong mo.">
+  
+	<link rel="apple-touch-icon-precomposed" href="/euf/assets/images/icons/apple-touch-icon.png">
+	<!--[if lte IE 8]>
+  		<link rel="shortcut icon" href="/euf/assets/images/favicons/v1/16x16/favicon.ico" type="image/x-icon">
+	<![endif]-->
+	<!--[if IE 9]>
+  		<link rel="shortcut icon" href="/euf/assets/images/favicons/v1/favicon.ico" type="image/x-icon">
+	<![endif]-->
+	<link rel="icon" href="/euf/assets/images/favicons/v1/favicon.ico" type="image/x-icon">
+	<meta name="msapplication-TileImage" content="/euf/assets/images/logos/linkedin/logo-in-win8-tile-144_v1.png">
+	<meta name="msapplication-TileColor" content="#0077B5"/>
+	<meta name="application-name" content="LinkedIn"/>
+</head>
+<body class="yui-skin-sam hc tl ab_rand ab_8 ab_100 _78"><form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<div id=""></div>
+<script type="text/javascript">document.getElementsByTagName('body')[0].className+=' js'</script>
+<div id="rn_Container" class="chrome-v4">
+	 <div id="rn_SkipNav"><a href="#rn_MainContent">I-skip ang Navigation</a></div> 	<div id="header" class="global-nav member" role="banner">
+		<div class="top-nav">
+			<div class="wrapper">
+				<ul class="util" role="navigation">
+					<li class="tab">
+													<a class="tab-name signin" href="https://www.linkedin.com/uas/login?session_redirect=http%3A%2F%2Ftulong.linkedin.com%2Fapp%2Fanswers%2Flist%2Fsearch%2F1%2Fpage%2F7%2Freauth%2Ftrue">Mag-sign In</a>
+											</li>
+					<li class="tab">
+						<a href="/app/lang/callback/%2Fapp%2Fanswers%2Flist%2Fsearch%2F1%2Fpage%2F7" class="tab-name username">
+							Wika <span class="menu-indicator"></span>
+						</a>
+						<ul class="menu">
+							<li class="username-cont">
+								<a href="/app/lang/callback/%2Fapp%2Fanswers%2Flist%2Fsearch%2F1%2Fpage%2F7" class="tab-name username">
+									Wika <span class="menu-indicator"></span>
+								</a>
+							</li>
+                                                <li><a class="lang-link" href="#" data-li-href="//in.bantuan.linkedin.com/app/answers/list/search/1/page/7">
+                    Bahasa Indonesia                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ms.bantuan.linkedin.com/app/answers/list/search/1/page/7">
+                    Bahasa Malaysia                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//napoveda.linkedin.com/app/answers/list/search/1/page/7">
+                    Čeština                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjaelp.linkedin.com/app/answers/list/search/1/page/7">
+                    Dansk                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hilfe.linkedin.com/app/answers/list/search/1/page/7">
+                    Deutsch                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//help.linkedin.com/app/answers/list/search/1/page/7">
+                    English                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ayuda.linkedin.com/app/answers/list/search/1/page/7">
+                    Español                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//zh-tw.help.linkedin.com/app/answers/list/search/1/page/7">
+                    中文 (正體)                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//aide.linkedin.com/app/answers/list/search/1/page/7">
+                    Français                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ko.help.linkedin.com/app/answers/list/search/1/page/7">
+                    한국어                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//guida.linkedin.com/app/answers/list/search/1/page/7">
+                    Italiano                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//zh-cn.help.linkedin.com/app/answers/list/search/1/page/7">
+                    中文 (简体)                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hulp.linkedin.com/app/answers/list/search/1/page/7">
+                    Nederlands                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ja.help.linkedin.com/app/answers/list/search/1/page/7">
+                    日本語                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjelp.linkedin.com/app/answers/list/search/1/page/7">
+                    Norsk                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//pomoc.linkedin.com/app/answers/list/search/1/page/7">
+                    Polski                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ajuda.linkedin.com/app/answers/list/search/1/page/7">
+                    Português                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//asistenta.linkedin.com/app/answers/list/search/1/page/7">
+                    Română                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ru.help.linkedin.com/app/answers/list/search/1/page/7">
+                    Русский                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjalp.linkedin.com/app/answers/list/search/1/page/7">
+                    Svenska                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//tulong.linkedin.com/app/answers/list/search/1/page/7">
+                    Tagalog                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//th-th.help.linkedin.com/app/answers/list/search/1/page/7">
+                    ภาษาไทย                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//yardim.linkedin.com/app/answers/list/search/1/page/7">
+                    Türkçe                  </a></li>
+                              						</ul>
+					</li>
+					<li class="add-connection-cont">
+						<a href="//www.linkedin.com" class="add-conx">Pumunta sa Linkedin.com</a>
+					</li>
+				</ul>
+				<h2 class="logo">
+					<a title="Home" href="//www.linkedin.com/">&nbsp;</a>
+				</h2>
+				<h2 class="head-title">
+					<a title="Support Home" href="/">
+						Help Center					</a>
+				</h2>
+			</div>
+		</div>
+		<div class="bottom-nav">
+			<div class="wrapper">
+				<ul class="nav" role="navigation">
+					<li class="tab selected" id="nav-primary-home">
+						<a href="/app/home" class="tab-name"><span>Support Home</span></a>
+					</li>
+																<li class="tab " id="nav-primary-home">
+							<a href="/app/safety/home" class="tab-name"><span>Safety Center</span></a>
+						</li>
+																					<li class="tab " id="nav-primary-contact-us">
+							<a href="/app/ask" class="tab-name"><span>Kontakin Kami</span></a>
+						</li>
+									</ul>
+			</div>
+		</div>
+	</div>
+	<div id="body">
+    		<div class="noscript">
+			<noscript>
+			<div class="alert error">
+				<span class="icon" data-davinci="icon"></span><b>kailangang paganahin ang Javascript para sa Help Center</b> Hindi mo magagamit ang  Help Center dahil sa iyong kasalukuyang browser settings. Alamin kung paano <a href="/app/answers/global/id/4641/ft/eng">paganahin ang iyong JavaScript settings</a>.			</div>
+			 				 					<div class="content_overlay"></div>
+														</noscript>
+		</div>
+									<div id="content_v2" role="main">
+																												<div class="main">
+																				<div class="page_content search_content no_header">
+							<div class="top_search">
+								<h2 class="rn_ScreenReaderOnly">Maghanap</h2>
+								<form method="post" autocomplete="off" action="/app/answers/list" id="top_search_form">
+									<input type="text" name="kw" maxlength="255" placeholder="Ilagay ang tanong o paksa" value="">
+									<input type="submit" class="blue large" value="Maghanap">
+								</form>
+							</div>
+						</div>
+																		<div class="page_content no_header">
+					<a name="rn_MainContent" id="rn_MainContent"></a>					
+	
+<div class="answer_list">
+	<div class="wrapper">
+		<h2 class="rn_ScreenReaderOnly">Maghanap</h2>
+					<div class="answergroup">
+				<h2 class="title">Mga resulta					<span class="x_of_x">
+						<span>49</span> - <span>56</span> ng <span>692</span>					</span>
+				</h2>
+				<div class="answers">
+						<div id="rn_Multiline2_1" class="rn_Multiline2">
+    <div id="rn_Multiline2_1_Alert" role="alert" class="rn_ScreenReaderOnly"></div>
+    <div id="rn_Multiline2_1_Loading"></div>
+    <div id="rn_Multiline2_1_Content">
+                            <ol start="49" >
+                            <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/38457">Company Page Administrators - Overview</a></span>
+                                <br/>
+                                <span class="rn_Element3">Puwedeng mag-edit ang company administrators ng Company Pages at magtalaga ng ibang admins. Kung isa kang Company Page administrator, may makikita kang asul na button na...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/24/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/40931">Ang Pinagkukunan ng Impormasyon sa Suweldo sa mga Resulta ng Job Search</a></span>
+                                <br/>
+                                <span class="rn_Element3">Ibinibigay ng PayScale (isang third party) ang impormasyon sa suweldo, at batay ito sa mga katangian ng trabaho, tulad ng industriya, titulo, lokasyon, at iba pang bagay...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/10/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/38444">Pag-upload ng Contacts mula sa Outlook</a></span>
+                                <br/>
+                                <span class="rn_Element3">Pwede kang mag-import ng Outlook contacts mula sa pahina na Magdagdag ng mga koneksyon I-click ang Magdagdag ng mga koneksyon na icon sa kanang taas ng LinkedIn homepage...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">10/06/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/41371">Pag-aaccess sa LinkedIn sa Pamamagitan ng Microsoft Outlook</a></span>
+                                <br/>
+                                <span class="rn_Element3">Puwede kang mag-download ng LinkedIn Outlook Connector o alamin pa ang tungkol dito sa pamamagitan ng pagki-click sa Tools na nasa ibaba ng iyong home page. Pinapayagan ka ng...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/25/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/40933">Posibleng Mapanlinlang na Email o Phishing</a></span>
+                                <br/>
+                                <span class="rn_Element3">Gumagamit ang mga manloloko ng paraan na tinatawag na phising para makakuha ng sensitibong data kagaya ng usernames, passwords, at credit card information. Nagpapanggap...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/18/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/41228">agdadagdag ng Suffix o mga Certifications sa Pangalan sa iyong Profile</a></span>
+                                <br/>
+                                <span class="rn_Element3">Walang suffix field ang mga profiles sa LinkedIn. Para magawa pa rin ito, puwede mong ipakita ang iyong credentials sa pamamagitan ng pag-eedit ng iyong profile at...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/20/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/40672">LinkedIn for Salesforce - Pinakamahuhusay na Practices</a></span>
+                                <br/>
+                                <span class="rn_Element3">Nakatutulong ang LinkedIn for Salesforce na makagawa ng deals mula sa wala pang linaw na prospect information. Pinapahintulutan ka nito na: Makalikom ng impormasyon: Mabilis...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">09/18/2013 </span><br/>
+                            </li>
+                    <li>
+                 <span class="rn_Element1"></span>
+                                <span class="rn_Element2"><a href="/app/answers/global/a_id/38520">Mga Presyo para sa LinkedIn Ads Campaign - Overview</a></span>
+                                <br/>
+                                <span class="rn_Element3">Puwede mong ma-control ang halaga ng iyong Ads campaign sa pamamagitan ng bidding at pagtatakda ng budget. Mayroong dalawang opsyon para sa pagbabayad: ang pay-per-click...</span><br/>
+                                                                            <span class="rn_ElementsHeader">Huling binago:  </span>
+                                        <span class="rn_ElementsData">08/25/2013 </span><br/>
+                            </li>
+                            </ol>
+                    </div>
+</div>
+				</div>
+				<div class="noresults">
+																			</div>
+            <div id="paginator">
+      <div class="rn_Paginator">
+                  <a href="/app/answers/list/search/1/page/6">Nakaraan</a>
+                <span class="rn_PageLinks">
+                                              <a href="/app/answers/list/search/1/page/2">2</a>
+                                                <a href="/app/answers/list/search/1/page/3">3</a>
+                                                <a href="/app/answers/list/search/1/page/4">4</a>
+                                                <a href="/app/answers/list/search/1/page/5">5</a>
+                                                <a href="/app/answers/list/search/1/page/6">6</a>
+                                                <span class="rn_CurrentPage">7</span>
+                                                <a href="/app/answers/list/search/1/page/8">8</a>
+                                                <a href="/app/answers/list/search/1/page/9">9</a>
+                                                <a href="/app/answers/list/search/1/page/10">10</a>
+                                                <a href="/app/answers/list/search/1/page/11">11</a>
+                              </span>
+              <a href="/app/answers/list/search/1/page/8">Susunod</a>
+            </div>
+    </div>
+    			</div>
+			</div>
+</div>
+				</div>
+			</div>
+						 				<div class="sidebar" role="navigation">
+																										<div class="block popular_answers" id="popular_answers">
+							<h3>Mga sikat na sagot</h3>
+              							<div id="rn_Multiline2_3" class="rn_Multiline2">
+    <div id="rn_Multiline2_3_Alert" role="alert" class="rn_ScreenReaderOnly"></div>
+    <div id="rn_Multiline2_3_Loading"></div>
+    <div id="rn_Multiline2_3_Content">
+            </div>
+</div>
+						</div>
+															<div class="block previous_answers">
+		<h3>Kamakailang tiningnan</h3>
+		<div id="rn_PreviousAnswers2_4" class="rn_PreviousAnswers2">
+		    <ul>
+		    		        <li><a href="/app/answers/global/a_id/44699" target="_self" >Paglampas ng Ads sa Arawang Budget</a></li>
+		    		        <li><a href="/app/answers/global/a_id/1399" target="_self" >Exceeding Ads Daily Budget</a></li>
+		    		        <li><a href="/app/answers/global/a_id/1392" target="_self" >Defining CPC and CPM</a></li>
+		    		    </ul>
+		</div>
+	</div>
+									</div>
+			 		</div>
+			</div>
+	<div id="footer">
+		<div class="wrapper">
+			<ul class="nav-footer">
+				<li><a href="http://press.linkedin.com">Tungkol Sa</a></li>				<li><a href="http://blog.linkedin.com">Blog</a></li>								<li><a href="http://talent.linkedin.com">Recruiting Solutions</a></li>				<li><a href="//www.linkedin.com/static?key=tools">Tools</a></li>
+				<li><a href="//touch.www.linkedin.com/mobile.html">Mobile</a></li>
+				<li><a href="//developer.linkedin.com">Mga Developers</a></li>
+				<li id="nav-utility-lang">
+					<a class="link" href="/app/lang/callback/%2Fapp%2Fanswers%2Flist%2Fsearch%2F1%2Fpage%2F7">Wika</a>
+					<ul>
+                                          <li><a class="lang-link" href="#" data-li-href="//in.bantuan.linkedin.com/app/answers/list/search/1/page/7">
+                  Bahasa Indonesia                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ms.bantuan.linkedin.com/app/answers/list/search/1/page/7">
+                  Bahasa Malaysia                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//napoveda.linkedin.com/app/answers/list/search/1/page/7">
+                  Čeština                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjaelp.linkedin.com/app/answers/list/search/1/page/7">
+                  Dansk                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hilfe.linkedin.com/app/answers/list/search/1/page/7">
+                  Deutsch                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//help.linkedin.com/app/answers/list/search/1/page/7">
+                  English                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ayuda.linkedin.com/app/answers/list/search/1/page/7">
+                  Español                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//zh-tw.help.linkedin.com/app/answers/list/search/1/page/7">
+                  中文 (正體)                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//aide.linkedin.com/app/answers/list/search/1/page/7">
+                  Français                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ko.help.linkedin.com/app/answers/list/search/1/page/7">
+                  한국어                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//guida.linkedin.com/app/answers/list/search/1/page/7">
+                  Italiano                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//zh-cn.help.linkedin.com/app/answers/list/search/1/page/7">
+                  中文 (简体)                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hulp.linkedin.com/app/answers/list/search/1/page/7">
+                  Nederlands                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ja.help.linkedin.com/app/answers/list/search/1/page/7">
+                  日本語                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjelp.linkedin.com/app/answers/list/search/1/page/7">
+                  Norsk                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//pomoc.linkedin.com/app/answers/list/search/1/page/7">
+                  Polski                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ajuda.linkedin.com/app/answers/list/search/1/page/7">
+                  Português                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//asistenta.linkedin.com/app/answers/list/search/1/page/7">
+                  Română                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ru.help.linkedin.com/app/answers/list/search/1/page/7">
+                  Русский                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjalp.linkedin.com/app/answers/list/search/1/page/7">
+                  Svenska                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//tulong.linkedin.com/app/answers/list/search/1/page/7">
+                  Tagalog                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//th-th.help.linkedin.com/app/answers/list/search/1/page/7">
+                  ภาษาไทย                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//yardim.linkedin.com/app/answers/list/search/1/page/7">
+                  Türkçe                </a></li>
+                          					</ul>
+				</li>
+				<li class="last"><a href="//www.linkedin.com/secure/purchase?displayProducts=&_ra=sub&_pt=sub"><b>I-upgrade ang Account</b></a></li>
+			</ul>
+			<ul id="nav-legal">
+				<li><p id="copyright">LinkedIn Corporation &copy; 2014</p></li>
+								<li><a href="//www.linkedin.com/static?key=user_agreement">Kasunduan sa User</a></li>
+				<li><a href="//www.linkedin.com/static?key=privacy_policy">Patakaran sa Privacy</a></li>
+				<li><a href="//www.linkedin.com/static?key=copyright_policy">Patakaran sa Copyright</a></li>
+                  <li class="last"><a href="https://twitter.com/linkedin">Sundan kami sa Twitter</a></li>
+        			</ul>
+		</div>
+		<div class="rnfooterlogo">
+			<span id="rn_RightNowLogo_5" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+		</div>
+			</div>
+</div>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22Paksa%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22Status%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22Huling+binago%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22Huling+binago%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22Sarado%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22Bukas%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22Hinihintay+ang+miyembro%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22Nai-file+na+issue%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22Nai-file+na+feedback%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22Thread%22%2C%22CP_REQUIRED%22%3A%22Kailangan%22%2C%22CP_INVALID%22%3A%22Invalid%22%2C%22CP_UPLOADING%22%3A%22Naga-upload%22%2C%22CP_SUBMITTING%22%3A%22Nag-susubmit%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22Malapit+nang+mag-expire+ang+form+na+ito.+I-confirm+na+gusto+mo+pa+ring+gamitin+ito.%22%2C%22CP_ANS_LIST_SUGGESTIONS%22%3A%22Gusto+mo+bang+%3Ca+href%3D%5C%22http%3A%5C%2F%5C%2Fwww.linkedin.com%5C%2Fsearch%5C%2Ffpsearch%3Fkeywords%3D%21%21kw%21%21%26trk%3Dhelp_center%5C%22%3Ehanapin+ang+%27%21kw%21%27%3C%5C%2Fa%3E+sa+LinkedIn.com+site%3F%22%2C%22CP_ANS_LIST_FEATURED_ANSWER%22%3A%22Nai-feature+na+sagot%22%7D';
+</script>
+<script type="text/javascript">
+	function readCookie(name) {
+		 var nameEQ = name + "=";
+		 var ca = document.cookie.split(";");
+		 for(var i=0;i < ca.length;i++) {
+			  var c = ca[i];
+			  while (c.charAt(0)==" ") c = c.substring(1,c.length);
+			  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		 }
+		 return "";
+	}
+	var realreferrer = decodeURIComponent(readCookie("realreferrer"));
+	document.cookie = "realreferrer=; path=/";
+	var li_loc = decodeURIComponent(readCookie("li_loc"));
+	document.cookie = "li_loc=; path=/";
+	var li_trk = decodeURIComponent(readCookie("li_trk"));
+	document.cookie = "li_trk=; path=/";
+	var realurl = realurl || '';
+	var domain = domain || 'linkedin.com';
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-11775227-2']);
+	_gaq.push(['_setDomainName', domain]);
+	_gaq.push(['_setAllowHash', 'false']);
+	_gaq.push(['_setSiteSpeedSampleRate', 20]);
+	if (realreferrer.length > 0) {
+		 _gaq.push(['_setReferrerOverride',realreferrer]);
+	}
+	if (li_loc.length > 0) {
+		_gaq.push(['_setCustomVar', 4, 'Location', li_loc ]);
+	}
+	if (li_trk.length > 0) {
+		_gaq.push(['_setCustomVar', 5, 'Pagekey', li_trk ]);
+	}
+	if (realurl.length > 0) {
+		_gaq.push(['_trackPageview',realurl]);
+	} else {
+		_gaq.push(['_trackPageview']);
+	}
+		_gaq.push(['_setVar','guest']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var scripts = document.getElementsByTagName('script');
+		var s = scripts[scripts.length - 1]; s.parentNode.insertBefore(ga, s.nextSibling);
+	})();
+</script>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1406595536/templates/linkedin.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1406595536/pages/answers/list.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"NB!","INFORMATION_LBL":"Teave","HELP_LBL":"Spikker","ERROR_REQUEST_ACTION_COMPLETED_MSG":"P\u00e4ringul tekkis t\u00f5rge ja tegevust ei \u00f5nnestunud l\u00f5petada.","OK_LBL":"OK","DIALOG_LBL":"dialoog","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialoog, dialoogi s\u00f5numi vaatamiseks lugege \u00fclalolevat teksti","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Dialoogi algus, palun l\u00f5petage dialoog enne j\u00e4tkamist.","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Dialoogi l\u00f5pp, palun l\u00f5petage dialoog enne j\u00e4tkamist","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"Vormi edastamisel tekkis sobimatu sisestuse t\u00f5ttu t\u00f5rge","ERR_SUBMITTING_SEARCH_MSG":"Teie p\u00e4ringuga oli probleem.  Muutke oma otsingutermineid ja proovige uuesti.","CLOSE_CMD":"Sule","BACK_LBL":"Tagasi"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"tulong.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+var W = RightNow.Widget,
+c = 'createWidgetInstance';
+W[c]({"i":{"c":"Multiline2","n":"Multiline2_1","w":1},"a":{"per_page":8,"report_id":105440,"truncate_size":175,"max_wordbreak_trunc":null,"highlight":true,"label_screen_reader_search_success_alert":"Kumpleto na ang iyong paghahanap","label_screen_reader_search_no_results_alert":"Walang resulta ang iyong paghahanap","add_params_to_url":"kw","hide_when_no_results":false,"date_format":"short"},"j":{"filters":{"recordKeywordSearch":true,"per_page":8,"searchType":{"filters":{"rnSearchType":"searchType","fltr_id":4,"data":4,"oper_id":1,"report_id":105440},"type":"searchType"},"keyword":{"filters":{"rnSearchType":"keyword","data":"","report_id":105440},"type":"keyword"},"page":7,"search":"1","p":{"filters":{"fltr_id":null,"oper_id":null,"optlist_id":null,"report_id":105440,"rnSearchType":"menufilter","data":[null]},"type":null,"report_default":null},"c":{"filters":{"fltr_id":null,"oper_id":null,"optlist_id":null,"report_id":105440,"rnSearchType":"menufilter","data":[null]},"type":null,"report_default":null}},"format":{"truncate_size":175,"max_wordbreak_trunc":null,"emphasisHighlight":true,"dateFormat":"short","urlParms":"","tabindex":null},"r_tok":"Yp1ulWqXaAd0nXCXfJ94kUSXQJdMkUiVVJvOlcKf7CcpIzc1Iy0XQQcnB5_f"}},'Multiline2_1','custom/Multiline2','Multiline2','1');
+W[c]({"i":{"c":"ResultInfo2c","n":"ResultInfo2c_2","w":2},"a":{"report_id":105440,"per_page":0,"label_suggestion":"Muud soovitatavad otsingud","label_dictionary":"Seda s\u00f5na ei leitud.","label_spell":"Kas m\u00f5tlesite:","label_no_results":"Tulemeid ei leitud.","label_no_results_suggestions":"Soovitused:<ul><li>Veenduge, et k\u00f5ik s\u00f5nad oleksid \u00f5igesti kirjutatud<\/li><li>Kasutage erinevaid samat\u00e4henduslikke s\u00f5nu<\/li><\/ul>","label_common":"See s\u00f5na on liiga levinud ja eemaldati otsingust.","label_results":"Tulemid <span>%d<\/span> - <span>%d<\/span>\/<span>%d<\/span>","label_results_search_query":"Tulemid <span>%d<\/span> - <span>%d<\/span>\/<span>%d<\/span> %s puhul","add_params_to_url":"","display_results":true,"combined_results":"","display_knowledgebase_results":true},"j":{"linkUrl":"\/app\/answers\/list\/search\/1\/kw\/","totalResults":692,"lastResult":56,"firstResult":49,"searchTerm":"","combinedResults":0,"prunedAnswers":null,"social":null,"intent":null}},'ResultInfo2c_2','standard/reports/ResultInfo2','ResultInfo2','2');
+W[c]({"i":{"c":"Multiline2","n":"Multiline2_3","w":3},"a":{"per_page":5,"report_id":105441,"truncate_size":200,"max_wordbreak_trunc":null,"highlight":false,"label_screen_reader_search_success_alert":"Kumpleto na ang iyong paghahanap","label_screen_reader_search_no_results_alert":"Walang resulta ang iyong paghahanap","add_params_to_url":"kw","hide_when_no_results":false,"date_format":"short"},"j":{"filters":{"recordKeywordSearch":true,"per_page":5,"searchType":{"filters":{"rnSearchType":"searchType","fltr_id":null,"data":null,"oper_id":null,"report_id":105441},"type":"searchType"},"keyword":{"filters":{"rnSearchType":"keyword","data":"","report_id":105441},"type":"keyword"},"page":1,"search":"1","p":{"filters":{"fltr_id":null,"oper_id":null,"optlist_id":null,"report_id":105441,"rnSearchType":"menufilter","data":[null]},"type":null,"report_default":null},"c":{"filters":{"fltr_id":null,"oper_id":null,"optlist_id":null,"report_id":105441,"rnSearchType":"menufilter","data":[null]},"type":null,"report_default":null}},"format":{"truncate_size":200,"max_wordbreak_trunc":null,"emphasisHighlight":false,"dateFormat":"short","urlParms":"","tabindex":null},"r_tok":"Yp1ulWiXaAd0nXCXfJ94kUSXQJdMkUiVVJvOk8Kf7CcpIzc1Iy0XQQcnB5_f"}},'Multiline2_3','custom/Multiline2','Multiline2','3');
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"pl4UOg_l","uh":"ee5ee0a6","uc":"tulong.linkedin.com\/app\/answers\/list\/search\/1\/page\/7","b":"ca34356","i":"linkedin:linkedin_tl","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/Libraries.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Common.js?1363721921'></script>
+</body>
+</html>

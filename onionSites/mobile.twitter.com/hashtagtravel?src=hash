@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="HandheldFriendly" content="True"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="twitter-redirect-srcs" content="{&quot;pwreset-iphone&quot;:true,&quot;android&quot;:true,&quot;email&quot;:true}">
+<meta name="twitter-redirect-url" content="twitter://search?query=#travel">
+    <link href="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/ic_favicon.png" rel="icon" type="image/png" />
+    
+    <title>Search Twitter - #travel</title>
+    <style type="text/css" style_name="a" id="style_a" media="all">
+            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,menu,input,textarea{margin:0;padding:0;border:0;vertical-align:baseline;font:inherit;font-size:100%}table{border-collapse:collapse;border-spacing:0;table-layout:fixed}s{text-decoration:none}ol,ul{list-style:none}hr{border:0;height:1px;color:#ccc;background-color:#ccc}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.813em;line-height:1em;color:#333;background-color:#e8e8e8;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}.hidden{display:none}.nojs .js-visible{visibility:hidden!important}a:link,a:active,a:visited{color:#2477b3;text-decoration:none}.button-link{border:0 none;background-color:inherit;cursor:pointer}strong{font-weight:bold}#container{margin:0;padding:0;width:100%;background-color:#eee}#main_content{background-color:#fff}.section{margin-top:.563em}.section-first{margin-top:0}h1{line-height:1.5em;font-weight:bold}h2{font-weight:bold;padding:.75em;border-bottom:1px solid #e8e8e8}button{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.tweet-text a span{color:#65a0ca}.fullname{color:#333}.username{color:#999}.username span{color:#ccc}.confirm_actions{white-space:nowrap;text-align:right;padding:.5em .75em}.confirm_actions .w-button-cancel{margin-right:.375em}.m2-auth-token{margin:0;padding:0;display:inline}#brand_bar{background-color:#50a7e6;line-height:28px;padding:0 .75em;_width:100%}#brand_bar table,#brand_bar td,#brand_bar tr,#brand_bar span,#brand_bar img,#brand_bar a{vertical-align:top;_vertical-align:middle}#brand_bar table{width:100%}#brand_bar td{min-height:28px}#brand_bar span{color:#fff}#brand_bar .signup{font-weight:bold;color:#ffcd45}#brand_bar .divider{width:2px;margin-left:.375em}#brand_bar .left,#brand_bar .modal-left{font-weight:bold}#brand_bar .right,#brand_bar .modal-right{text-align:right}#brand_bar .left{width:30%}#brand_bar .right{width:70%}#brand_bar .modal-left:not(#welcome-modal-left){width:70%}#brand_bar .modal-right:not(#welcome-modal-right){width:30%}#brand_bar .right a,#brand_bar .modal-right a{padding-left:.375em}#brand_bar .brandmark{margin-right:.375em}#brand_bar .brandmark,#brand_bar .title{font-weight:bold}.images #brand_bar .close,.images #brand_bar .brandmark,.images #brand_bar .search,.images #brand_bar .title,.images #brand_bar .divider,.images #brand_bar .pager-chevron{height:28px;display:inline-block;line-height:28px}.toast{padding:.313em .75em;background-color:#fee091;color:#000;text-shadow:#fff 0 1px 0;word-wrap:break-word}.toast td{line-height:1.75em}.toast .message{vertical-align:middle;width:100%}.toast .form-hint{padding:.313em 0}.toast form .pin_verify{margin-top:.625em}.toast form .text-input-wrapper{padding:6px .25em;border:1px solid #ccc;background-color:#fff}.toast form .text-input-wrapper input{border:0 none;margin:0;padding:0;border:0;display:block;width:100%;height:1.188em}.toast form .text-input-wrapper input:focus{outline:0}.toast form .inline>div{display:inline-block;margin:.313em 0}.toast-error{background-color:#ede0df;color:#b03a32;text-shadow:#fff 0 1px 0}.client-prompt{text-shadow:none}.client-prompt table{width:100%}.client-prompt td{vertical-align:middle}.client-prompt .left{width:94%}.client-prompt .close{width:6%;text-align:right}.client-prompt .close input{color:#65a0ca;background-color:#fee091;font-size:125%;font-family:HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;cursor:pointer;vertical-align:middle}#global_nav{width:100%;background-color:#333}#global_nav td{height:44px;white-space:nowrap;vertical-align:middle;width:20%;text-align:center}#global_nav a{color:#fff;text-decoration:none;font-weight:bold;vertical-align:middle;display:inline-block;height:44px;line-height:44px}#global_nav a:active,#global_nav a:visited{text-decoration:none;color:#fff}#global_nav .selected{background-color:#000}#global_nav .mentions,#global_nav .discover{font-size:130%}#global_nav .glow{position:relative;top:-26px;margin:0 9px;display:block}#footer{padding:.75em;_width:100%}#footer .global-actions{margin-top:.75em;width:100%;border:1px solid #ccc}#footer .global-actions a,#footer .global-actions a:active,#footer .global-actions a:visited,#footer .global-actions .button-link{display:block;line-height:1.875em;color:#333;text-decoration:none;font-size:1em;width:100%}#footer .global-actions td{width:33%;background-color:#eee;text-align:center;vertical-align:middle;border:1px solid #ccc}#footer .global-actions .w-button{padding:0;border:0}#footer .global-actions .w-button input{width:100%;font-weight:normal}#footer .view-actions,#footer .copyright,#footer .zero{text-align:center;color:#999}#footer .view-actions{margin-top:.938em;color:#999}#footer .view-actions a{padding:0 .5em}#footer .signup{margin:1em 0;text-align:center;font-weight:bold}.timeline td{vertical-align:top}.timeline .tweet,.timeline .titlebar,.timeline .activity{width:100%}.timeline .titlebar{border-bottom:1px solid #e8e8e8;font-weight:bold}.timeline .titlebar td{vertical-align:middle;padding:.5em 7px}.timeline .titlebar td.right{text-align:right}.timeline .avatar-spacer{width:39px}.timeline .tweet-social-context{padding-left:.5em}.timeline .context{font-size:85%}.timeline .avatar{padding:.5em 0;border-bottom:1px solid #e8e8e8;width:39px}.timeline .avatar img{width:32px;margin-left:7px}.timeline .avatar .activity-icon{margin-top:-3px;margin-left:23px}.timeline .avatar .activity-icon img{margin-left:2px;width:16px}.timeline .tweet-social-context,.timeline .user-info,.timeline .timestamp{padding-top:.375em}.timeline .user-info .fullname{white-space:nowrap}.timeline .user-info .username{padding-left:5px;white-space:normal}.timeline .user-info strong{margin-left:.5em}.timeline .username{font-size:85%}.timeline .timestamp,.timeline .timestamp-spacer{width:45px;padding-right:.5em;font-size:.75em;white-space:nowrap;text-align:right;color:#999}.timeline .timestamp a,.timeline .timestamp-spacer a{color:#999;text-decoration:none}.timeline .activity strong{margin-left:0}.timeline .activity .user-info .user{margin-left:.5em;white-space:normal}.timeline .activity .timestamp{width:15%}.timeline .activity .tweet-text-truncate{color:#aaa;margin:0;width:90%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-left:.5em}.timeline .activity .metadata{margin-left:0 0 0 .5em}.timeline .activity .last{border-bottom:1px solid #e8e8e8;height:.438em}.timeline .tweet-content div.tweet-text,.timeline .tweet-content div.context{margin:0 .5em;word-wrap:break-word}.timeline .context{color:#999}.timeline .meta-and-actions{border-bottom:1px solid #e8e8e8;padding-top:.25em;padding-bottom:.438em;line-height:85%}.timeline .metadata{margin-left:.6em;font-size:85%;color:#999}.timeline .metadata .middot{padding-left:.188em}.timeline .metadata .icon_detail{display:none}.timeline .tweet-actions{font-size:85%;padding-left:.188em;text-align:left}.timeline .tweet-actions a{padding:0 .188em}.timeline .tweet-actions .first{padding-left:0}.timeline .empty-index{padding:.75em}.timeline .card-photo,.timeline .card-summary{margin-left:.5em;margin-top:.5em;line-height:1.2em}.timeline .card-photo .description,.timeline .card-summary .description{font-size:85%}.timeline .card-photo .title,.timeline .card-summary .title{font-weight:bold}.timeline .card-photo .attribution,.timeline .card-summary .attribution{font-size:85%}.timeline .card-photo .attribution img,.timeline .card-summary .attribution img{width:1.2em;height:1.2em;vertical-align:text-top}.timeline .promo .dismiss{margin-left:.625em}.timeline .promo .dismiss span,.timeline .promo .dismiss img{vertical-align:baseline}.timeline .conversation-tweet{background:#f1f5f8}.timeline .conversation-tweet .conversation-replies-count{padding:.5em .5em .7em}.timeline .conversation-tweet-not-last .avatar{border-color:#f1f5f8}.timeline .conversation-tweet-not-last .meta-and-actions{border-color:#f1f5f8}.replies .tweet,.inreplytos .tweet,.more-actions .tweet{background-color:#f5f5f5}.tweet-text a span{color:#65a0ca}.tweet-media img{display:block;margin-top:.25em;margin-bottom:.438em;line-height:85%}.timeline .tweet-media img.large-story-media{height:78px}.tweet-detail .main-tweet,.tweet-gallery .main-tweet{width:100%}.tweet-detail .main-tweet td,.tweet-gallery .main-tweet td{vertical-align:middle}.tweet-detail .main-tweet .inreplyto,.tweet-gallery .main-tweet .inreplyto{padding:.375em .75em .125em .375em;font-size:.75em;color:#999}.tweet-detail .main-tweet .avatar-spacer,.tweet-gallery .main-tweet .avatar-spacer{width:55px}.tweet-detail .main-tweet .context,.tweet-gallery .main-tweet .context{font-size:85%;margin-left:.5em}.tweet-detail .main-tweet .avatar,.tweet-gallery .main-tweet .avatar{padding-top:.5em;width:55px}.tweet-detail .main-tweet .avatar img,.tweet-gallery .main-tweet .avatar img{width:48px;margin-left:7px}.tweet-detail .main-tweet .user-info,.tweet-gallery .main-tweet .user-info{padding:.875em .75em 0 .625em;width:100%}.tweet-detail .main-tweet .fullname,.tweet-detail .main-tweet .username,.tweet-gallery .main-tweet .fullname,.tweet-gallery .main-tweet .username{display:inline}.tweet-detail .main-tweet .fullname,.tweet-gallery .main-tweet .fullname{font-weight:bold}.tweet-detail .main-tweet .username,.tweet-gallery .main-tweet .username{font-size:85%}.tweet-detail .main-tweet .tweet-content,.tweet-gallery .main-tweet .tweet-content{padding:.375em .375em .375em .375em;width:auto}.tweet-detail .main-tweet .metadata,.tweet-detail .main-tweet .attribution,.tweet-gallery .main-tweet .metadata,.tweet-gallery .main-tweet .attribution{padding:.375em 0 .375em 0;color:#999;font-size:85%}.tweet-detail .main-tweet .attribution .attr-fullname,.tweet-detail .main-tweet .attribution .attr-username,.tweet-gallery .main-tweet .attribution .attr-fullname,.tweet-gallery .main-tweet .attribution .attr-username{margin-left:.25em}.tweet-detail .main-tweet .attribution .attr-fullname,.tweet-gallery .main-tweet .attribution .attr-fullname{font-weight:bold}.tweet-detail .main-tweet .attribution img,.tweet-gallery .main-tweet .attribution img{vertical-align:bottom}.tweet-detail .main-tweet .attribution .cap,.tweet-gallery .main-tweet .attribution .cap{text-transform:capitalize}.tweet-detail .main-tweet .metadata a:link,.tweet-detail .main-tweet .metadata a:visited,.tweet-detail .main-tweet .metadata a:active,.tweet-detail .main-tweet .attribution a:link,.tweet-detail .main-tweet .attribution a:visited,.tweet-detail .main-tweet .attribution a:active,.tweet-gallery .main-tweet .metadata a:link,.tweet-gallery .main-tweet .metadata a:visited,.tweet-gallery .main-tweet .metadata a:active,.tweet-gallery .main-tweet .attribution a:link,.tweet-gallery .main-tweet .attribution a:visited,.tweet-gallery .main-tweet .attribution a:active{color:#999}.tweet-detail .main-tweet .card-summary,.tweet-gallery .main-tweet .card-summary{border-top:1px solid #e8e8e8;padding-top:.5em}.tweet-detail .main-tweet .title,.tweet-gallery .main-tweet .title{font-weight:bold;padding-bottom:.25em}.tweet-detail .main-tweet .description,.tweet-gallery .main-tweet .description{font-size:90%;padding-right:.25em}.tweet-detail .main-tweet .media img,.tweet-gallery .main-tweet .media img{width:100%;padding:.875em 0}.tweet-detail .main-tweet .optional-section,.tweet-gallery .main-tweet .optional-section{padding:0 .375em}.tweet-detail .main-tweet .last-section,.tweet-gallery .main-tweet .last-section{border-bottom:thin solid #e8e8e8}.tweet-detail .tweet-stats,.tweet-gallery .tweet-stats{width:100%;margin:0 auto}.tweet-detail .tweet-stats .nb,.tweet-gallery .tweet-stats .nb{white-space:nowrap;display:inline-block}.tweet-detail .tweet-stats .stat,.tweet-gallery .tweet-stats .stat{padding:1em .75em 1em 0;border-top:1px solid #e8e8e8}.tweet-detail .tweet-stats .statlabel,.tweet-detail .tweet-stats .statnum,.tweet-gallery .tweet-stats .statlabel,.tweet-gallery .tweet-stats .statnum{font-size:90%}.tweet-detail .tweet-stats .statnum,.tweet-gallery .tweet-stats .statnum{font-weight:bold}.tweet-detail .tweet-stats .statlabel,.tweet-gallery .tweet-stats .statlabel{padding-right:1em;color:#999;text-transform:uppercase}.tweet-detail .main-tweet-actions,.tweet-gallery .main-tweet-actions{width:100%;text-align:center;margin:0 auto}.tweet-detail .main-tweet-actions td,.tweet-gallery .main-tweet-actions td{padding:0 .75em;border-top:thin solid #e8e8e8;height:3em;vertical-align:middle}.tweet-detail .main-tweet-actions td span,.tweet-gallery .main-tweet-actions td span{color:#2477b3}.tweet-detail .main-tweet-actions td .undo,.tweet-gallery .main-tweet-actions td .undo{color:#588d25;font-weight:bold}.tweet-detail .main-tweet-actions .three .action,.tweet-gallery .main-tweet-actions .three .action{width:33%}.tweet-detail .main-tweet-actions .action-last,.tweet-gallery .main-tweet-actions .action-last{border-right:0}.tweet-detail .follow-button-container,.tweet-gallery .follow-button-container{width:100px;vertical-align:top;text-align:right;padding-right:.438em}.tweet-detail .follow-button-container .w-button,.tweet-detail .follow-button-container .w-button-default,.tweet-gallery .follow-button-container .w-button,.tweet-gallery .follow-button-container .w-button-default{margin:6px 6px 6px 0}.related-tweets{background-color:#f5f5f5}.more-link{padding:.5em}.images .tweet-detail .main-tweet .fullname{display:block}.images .tweet-detail .main-tweet .fullname a strong{color:#333}.images .tweet-detail .main-tweet .username{display:block}.images .tweet-detail .main-tweet .user-info{padding:.125em .75em 0 .625em}.images .tweet-gallery .main-tweet .user-info,.images .tweet-gallery .main-tweet .timestamp{padding:.375em .75em 0 .5em}.tweet-gallery{background:#000}.tweet-gallery .tweet{color:#fff;margin-bottom:.375em;width:100%}.tweet-gallery .main-tweet .media img{width:100%;padding:0}.tweet-gallery .main-tweet .tweet-content{padding:.375em .375em .375em .5em;width:auto}.tweet-gallery .main-tweet .user-info{width:80%}.tweet-gallery .main-tweet .fullname{color:#fff}.tweet-gallery .main-tweet .timestamp{text-align:right}.tweet-gallery .main-tweet .timestamp a{color:#fff;text-decoration:none}.tweet-gallery .tweet-stats .stat{border-top:solid thin #333}.tweet-gallery .tweet-stats .statnum{color:#fff;font-weight:normal}.tweet-gallery .main-tweet-actions td{border-top:solid thin #333}.confirm .confirm_title,.confirm .confirm_description,.confirm .confirm_footer{padding:.5em .375em}.confirm .metadata,.confirm .tweet-actions{visibility:hidden}.confirm .confirm_description{color:#999}.confirm .confirm_footer{border-top:1px solid #e8e8e8}.timeline-follow-suggestions-header{padding:.75em;border-bottom:1px solid #e8e8e8}.timeline-follow-suggestions-header .label{font-size:1.125em}.timeline-follow-suggestions-header .hint{color:#777}.timeline-follow-suggestions-actions{padding:.375em}.timeline-follow-suggestions-actions table{width:100%}.timeline-follow-suggestions-actions table a,.timeline-follow-suggestions-actions table a:active,.timeline-follow-suggestions-actions table a:visited,.timeline-follow-suggestions-actions table .button-link{display:block;line-height:1.875em;color:#333;text-decoration:none;font-size:1em;width:100%}.timeline-follow-suggestions-actions table td{align:center;padding:.375em}.timeline-follow-suggestions-actions table td div{padding:.25em 0;background-color:#f5f5f5;text-align:center;vertical-align:middle;border:1px solid #999}.timeline-follow-suggestions-actions table td.left{padding-right:.75em}.timeline-follow-suggestions-actions table td.right{padding-left:.75em}.empty-connect{color:#999}.empty-connect .empty-connect-notice{padding:.75em;border-bottom:1px solid #e8e8e8}.empty-connect .activity td{padding:.75em 0;border-bottom:1px solid #e8e8e8}.empty-connect .tweet .avatar,.empty-connect .tweet .tweet-content{border-bottom:1px solid #e8e8e8}.empty-connect .tweet .user-info{padding:.375em 0}.empty-connect .tweet .tweet-content{padding-bottom:.75em}#find-friends{padding:.75em}#find-friends table{width:100%}#find-friends td{background-color:#eee;text-align:center;vertical-align:middle;border:1px solid #ccc}#find-friends a,#find-friends a:active,#find-friends a:visited,#find-friends .button-link{display:block;line-height:1.875em;color:#333;text-decoration:none;font-size:1em;font-weight:bold}#compose_folded{-o-mini-fold:folded}.tweet-detail .main-tweet .quoted-tweet,.timeline .tweet .quoted-tweet{border-left:3px solid #f4f4f4;margin:.2em .5em .1em;padding:.2em 0 .2em .6em;font-size:85%}.tweet-detail .main-tweet .quoted-tweet .fullname,.timeline .tweet .quoted-tweet .fullname{font-weight:normal;display:inline-block}.tweet-detail .main-tweet .quoted-tweet .username,.timeline .tweet .quoted-tweet .username{font-size:11px;display:inline-block}.tweet-detail .main-tweet .quoted-tweet .timestamp,.timeline .tweet .quoted-tweet .timestamp{color:#999;display:inline-block;text-align:left;font-size:11px}.tweet-detail .main-tweet .quoted-tweet .tweet-text,.timeline .tweet .quoted-tweet .tweet-text{margin-left:0}.messages{background:#fff}.messages .empty_inbox{text-align:center;padding:.75em}.messages .empty_inbox .no_messages{font-weight:bold}.messages .empty_inbox .tooltip{text-align:center;margin-top:.625em;color:#777}.messages .timeline .timestamp{padding-right:0}.messages .timeline .middot{padding-left:0}.messages .timeline .avatar{width:54px}.messages .timeline .avatar img{margin-left:16px}.messages .timeline .read-state{position:absolute;margin-top:16px;margin-left:3px}.tweetsheet{padding:.625em .75em;border-bottom:1px solid #ccc}.tweetsheet .tweettable{width:100%;table-layout:auto}.tweetsheet .tweetform{margin-top:.375em;width:99%}.tweetsheet .tweet_box{border:1px solid #ccc;padding:.5em .5em;background:#fff}.tweetsheet .tweet_box .tweetbox{width:100%;height:4.688em;outline:0;border:0;margin:0;padding:0}.tweetsheet .tweet-btn-container,.tweetsheet .counter{padding-top:.375em}.tweetsheet .tweet-btn-container{width:1%}.tweetsheet .counter{padding-right:.625em;color:#999;text-align:right;width:99%}.tweetsheet .counter.warn{color:#5c0002}.tweetsheet .counter.error{color:#d40d12}.tweetsheet .camera{display:none;vertical-align:middle}.tweetsheet .camera .w-button{position:relative;padding:.375em;width:20px;height:16px}.tweetsheet .camera .w-button .imgsprite_tweet_camera_gif{position:absolute;top:.375em;left:.375em;z-index:1}.tweetsheet .camera .w-button input{position:absolute;top:.375em;left:.375em;z-index:2;-webkit-appearance:none;-moz-appearance:none;opacity:0;width:20px;height:16px;overflow:hidden}.tweetsheet .camera.images_on .w-button{width:auto}.tweetsheet .camera.images_on .w-button span{white-space:nowrap}.tweetsheet .camera.images_on .w-button input{width:100%}.tweetsheet .camera.active{display:table-cell}.tweetsheet .posted_tweet{margin-top:.875em;color:#777;word-wrap:break-word}.tweetsheet .posted_tweet .text_overflow{color:#b03a32;text-decoration:line-through}.has-footer.tweetsheet{padding-bottom:1.875em;border-bottom:1px solid #ccc}.sms-container{text-align:center;position:relative;top:-7px}.sms-container .sms-upsell{background:#fff;padding:0 10px}.messages .tweetsheet{background-color:#eee}.messages .tweetsheet .recipient_box{margin-bottom:.5em;border:1px solid #ccc;height:1.313em;padding:.313em .438em;background-color:#fff}.messages .tweetsheet .recipient_box .dm_recipient{width:99%;height:99%;border:0;outline:0}.search-fields .title{padding-bottom:.75em;color:#999}.search-fields table{width:100%;layout:auto}.search-fields input,.search-fields td,.search-fields div{vertical-align:middle}.search-fields .value{width:80%}.search-fields .value div{padding:6px .25em;border:1px solid #ccc;background-color:#fff}.search-fields .value div input{border:0 none;margin:0;padding:0;border:0;display:block;width:100%;height:1.188em}.search-fields .value div input:focus{outline:0}.search-fields .button{width:43px;text-align:right}.searches .searches-header{padding:.75em;border-bottom:1px solid #e8e8e8;background:#f5f5f5}.searches .searches-header table{width:100%;layout:auto}.searches .searches-header .r{text-align:right}.searches .searches-header span{font-weight:bold}.searches .fields{border-bottom:1px solid #e8e8e8}.searches .twitter-hit-highlight{font-weight:bold}.searches .fields{_width:100%;padding:.5em;background-color:#eee}.searches .empty{height:1.25em}.searches .timeline .w-mediaonebox,.searches .timeline .user-list,.searches .timeline .user-list-more{background-color:#eee;border-bottom:1px solid #e8e8e8;overflow:hidden}.searches .timeline .tweets-more,.searches .timeline .user-list-more{padding:.5em}.searches .timeline .tweets-more{border-bottom:3px solid #e8e8e8}.searches .timeline .suggestions{padding:.5em;background-color:#eee;border-bottom:1px solid #e8e8e8}.searches .timeline .suggestions h4,.searches .timeline .suggestions b{color:#333;font-weight:bold}.searches .timeline .suggestions h4{margin-bottom:.25em}.searches .search-toggle{border-top:1px solid #ccc;background:#f5f5f5;width:100%}.searches .search-toggle td{padding:.75em;width:30%;font-weight:bold;text-align:center;border-left:1px solid #e8e8e8;border-right:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;vertical-align:middle}.searches .search-toggle td.active{background:#fff;border-bottom:1px solid #fff}.searches .search-toggle td.right-spacer{width:.75em;padding:0;border-left:0;border-right:0}.searches .search-toggle td.r{text-align:right;width:auto;border-left:0;border-right:0;padding-right:0}.searches .search-toggle td.r a{font-weight:normal;font-size:85%}.searches .onebox{padding:0 .75em .75em .75em;background-color:#eee}.searches .onebox .inner{border:1px solid #ccc;background-color:#fff;width:100%;padding:.75em 0}.searches .onebox .user-item{border:0;border:0 none}.searches .type,.searches .news-item{padding:0 .75em}.searches b{font-weight:normal;color:#999}.searches .event-item{width:100%;margin:.375em 0;border:0}.searches .event-item .title{font-weight:bold}.searches .event-item .summary{font-size:85%}.searches .event-item .image-container{width:100px;vertical-align:middle;padding-right:.75em;text-align:right}.searches .event-item .image-container img{width:48px;height:48px}.searches .noresults{padding:.625em .5em;text-align:center}.searches .related{padding-left:.375em}.searches .user-list .promo,.searches .event-list .promo{margin-left:.375em;font-size:85%;vertical-align:baseline;color:#999}.searches .user-list .promo span,.searches .user-list .promo img,.searches .event-list .promo span,.searches .event-list .promo img{vertical-align:baseline;margin-bottom:-0.125em}.topics-list li,.categories-list li{border-bottom:1px solid #e8e8e8}.topics-list a,.categories-list a{display:block;padding:.75em}.topics-list a .topic{display:block}.categories-list a .category{display:block}.events table{width:100%;layout:auto}.events .empty{height:1.25em}.events .noresults{padding-left:.625em}.events .event-detail{_width:100%;padding:0;background-color:#eee}.events .event-detail .text-container{padding-left:.75em;padding-right:.75em}.events .event-detail .text-container.first{padding-top:.875em;padding-bottom:.375em}.events .event-detail .text-container.last{padding-bottom:.75em}.events .event-detail .image-container{width:100px;height:64px;vertical-align:middle;padding-right:1.875em;text-align:right}.events .event-detail .image-container img{height:64px;width:64px}.events .event-toggle{border-top:1px solid #ccc;background:#f5f5f5;width:100%}.events .event-toggle td{padding:.75em;width:30%;font-weight:bold;text-align:center;border-left:1px solid #e8e8e8;border-right:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;vertical-align:middle}.events .event-toggle td.active{background:#fff;border-bottom:1px solid #fff}.events .event-toggle td.right-spacer{width:.75em;padding:0;border-left:0;border-right:0}.events .event-toggle td.r{text-align:right;width:auto;border-left:0;border-right:0;padding-right:0}.events .event-toggle td.r a{font-weight:normal;font-size:85%}.user-item{width:100%;border-bottom:1px solid #e8e8e8}.user-item .fullname,.user-item .username{margin-left:.5em}.user-item .badge{font-style:italic;font-size:.75em}.user-item .imgsprite_verified_gif{vertical-align:middle}.user-item .avatar{padding:.5em 0;border-bottom:1px solid #e8e8e8;width:39px;vertical-align:top;text-align:left}.user-item .avatar img{width:32px;margin-left:7px}.user-item .avatar-spacer{width:39px}.user-item .tweet-social-context{padding-top:.625em;padding-left:.875em;color:#999}.user-item .screenname{padding-top:.375em}.user-item .info{padding-left:.375em}.user-item .description{padding-left:.875em;padding-bottom:.375em}.user-item .follow-button-container,.user-item .notifications-button-container{width:100px;vertical-align:middle;padding-right:.75em;text-align:right}.user-item .request-actions-container{vertical-align:middle;padding-right:.75em;text-align:right}.user-item .request-actions-container form{display:inline}.user-list .empty-list{padding:.75em;text-align:center}.user-header{_width:100%;padding:.625em .75em;border-bottom:1px solid #e8e8e8;background-color:#f5f5f5}.user-header table{width:100%}.user-header .avatar{width:48px}.user-header .avatar img{width:40px;vertical-align:top}.user-header .user-info{padding-left:.375em;padding-bottom:.375em}.user-header .count{font-weight:bold;padding-right:.313em}.user-header .info{vertical-align:baseline}.user-header .info span{vertical-align:baseline}.user-header .info a{text-decoration:none;font-weight:bold;color:#333}.user-header .username{margin-left:.375em}.profile .profile-details{width:100%}.profile .profile-details td{vertical-align:top}.profile .profile-details .avatar{width:55px}.profile .profile-details .avatar img{margin:.438em 0 0 .438em;width:48px}.profile .profile-details .user-info{padding:.438em;line-height:1.375em}.profile .profile-details .user-info .fullname,.profile .profile-details .user-info .username{display:inline}.profile .profile-details .user-info .fullname{margin-right:.375em;font-weight:bold;font-size:1.125em}.profile .profile-details .user-info .badge{font-style:italic;font-size:.75em}.profile .profile-details .user-info .location,.profile .profile-details .user-info .username{color:#999;font-size:1em}.profile .profile-details .user-info .username{color:#777}.profile .profile-details .user-info .username span{color:#ccc}.profile .profile-details .user-info .username .screen-name{color:#777;padding-right:.375em}.profile .profile-details .user-info .username .follows-you{text-transform:uppercase}.profile .profile-details .user-info .follow-status{font-size:10px;line-height:16px;vertical-align:text-bottom;color:#777;padding:0 3px;background-color:#eee}.profile .profile-details .details{padding:.625em;line-height:1.125em}.profile .profile-details .details .bio{font-size:1em;color:#777}.profile .profile-details .details .url{font-size:1em;margin-top:.125em}.profile .profile-stats{width:100%}.profile .profile-stats .stat{width:33%;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;border-right:1px solid #e8e8e8;padding:.625em .75em}.profile .profile-stats .stat a{color:#333}.profile .profile-stats .stat-last{border-right:0}.profile .profile-stats .statnum{font-weight:bold}.profile .profile-stats .statlabel{font-size:.625em;color:#999;text-transform:uppercase}.profile .profile-actions{border-bottom:1px solid #e8e8e8;background-color:#eee;padding:.375em}.profile .profile-actions form{display:inline}.profile .profile-actions form .messages{padding-right:4px}.profile .profile-actions form .messages input{padding-right:6px}.profile .profile-actions form .messages .unread-count{color:white;background:#50a7e6;padding:3px 4px 2px 3px;position:relative;top:2px}.profile .protected{padding:.375em;background-color:#fff}.images .profile .profile-details .fullname,.images .profile .profile-details .username{display:block}.images .profile .profile-details .badge{margin-left:.375em}.users-page .w-mediaonebox{background:#eee;border-bottom:1px solid #e8e8e8}.users-page .w-mediaonebox table td{text-align:left}.users-page .w-mediaonebox .see-more{border-top:1px solid #e8e8e8}.users-page .w-mediaonebox .see-more a{color:#000}.disco .disco-header{background:#f5f5f5;border-bottom:1px solid #e8e8e8;padding:.75em}.disco .disco-header span{font-weight:bold}.disco .disco-header span.middot{font-weight:normal}.disco h2{background:#f5f5f5;padding:.75em}.disco .unavailable-message{padding:.75em;text-align:center}.disco .section{margin-top:0}.disco .search-title{color:#999;padding:.75em}.disco .fields{padding:0 .75em;_width:100%}.disco .topics-list .tagline{color:#999}.disco .topics-list .promo,.disco .topics-list .tagline{margin-left:.375em;font-size:85%;vertical-align:baseline}.disco .topics-list .promo span,.disco .topics-list .promo img,.disco .topics-list .tagline span,.disco .topics-list .tagline img{vertical-align:baseline;margin-bottom:-0.125em}.disco .timeline .user-list,.disco .timeline .user-list-more{background-color:#eee;border-bottom:1px solid #e8e8e8;overflow:hidden}.disco .timeline .user-list-more{padding:.5em}.disco .timeline .suggestions{padding:.5em;background-color:#eee;border-bottom:1px solid #e8e8e8}.disco .timeline .suggestions h4,.disco .timeline .suggestions b{color:#333;font-weight:bold}.disco .timeline .suggestions h4{margin-bottom:.25em}.disco .all-suggestions{padding:.75em;display:block;border-bottom:1px solid #e8e8e8;text-align:right;font-size:85%}.disco .user-list .promo{margin-left:.375em;font-size:85%;vertical-align:baseline;color:#999}.disco .user-list .promo span,.disco .user-list .promo img{vertical-align:baseline;margin-bottom:-0.125em}.discovery-trends-page .buttons{padding-bottom:1px}.discovery-trends-page .buttons .w-button-common{display:block;margin:.375em;text-align:center;text-align:center;width:100% input;width-text-align:center;width-width:100%}.discovery-trend-locations-page .empty-message{text-align:center;color:#999;padding:.75em}.discovery-trend-locations-page .search-fields{padding:.375em}.discovery-trend-locations-page .selected_country{padding:.75em;background:#eee}.discovery-trend-locations-page ul.countries li,.discovery-trend-locations-page ul.locations li{padding:.75em;border-bottom:1px solid #ccc}.discovery-trend-locations-page .buttons{padding:.375em;text-align:right}.discovery-trend-locations-page h2{border-bottom:0}.discovery-trend-locations-page p{padding:0 .75em .75em;border-bottom:1px solid #e8e8e8}#follow-all-contacts{border-bottom:1px solid #e8e8e8;padding:.75em}#follow-all-contacts table{width:100%}#follow-all-contacts td{background-color:#eee;text-align:center;vertical-align:middle;border:1px solid #ccc}#follow-all-contacts input[type="submit"]{background:0;line-height:1.875em;font-size:1em;font-weight:bold;width:100%}.settings{background-color:#fff}.settings .settings-section{padding:.75em;border-bottom:1px solid #e8e8e8}.settings .settings-section h2{padding:0;border:0;display:inline}.settings .settings-section .setting{padding-top:.75em}.settings .settings-section .setting h3{font-weight:bold}.settings .settings-section .setting .setting-value{color:#777}.settings .settings-section .setting .fullname,.settings .settings-section .setting .url,.settings .settings-section .setting .location,.settings .settings-section .setting .description{width:98%;border:1px solid #ccc;padding:.625em .125em}.settings .settings-section .setting .screen_name{width:98%;border:1px solid #ccc;padding:.625em .125em;width:93%}.settings .settings-section .setting .help-text{padding-top:.625em;color:#999}.settings .settings-section .setting .setting-checkbox-label{display:block;padding-left:15px;text-indent:-15px}.settings .settings-section .setting .setting-checkbox-label .setting-checkbox{width:13px;height:13px;padding:0;margin:0;vertical-align:bottom;position:relative;top:-1px;*overflow:hidden}.account-settings{background-color:#eee}.confirm-password{padding:.938em .75em;border-bottom:1px solid #e8e8e8}.confirm-password input{width:98%;border:1px solid #ccc;padding:.625em .125em}.application-accept-data-page .carrier{margin-top:.75em;text-align:center}.application-accept-data-page .text{margin-top:.75em}.settings-section.error{color:#b03a32}.settings-section.error input{background-color:#ede0df;color:#b03a32}.notifications-settings h2{background-color:#eee}.notifications-settings .setting{border-bottom:1px solid #e8e8e8;padding:.5em 9px;line-height:1.25em}.notifications-settings .setting h3{font-weight:bold;margin-bottom:.375em}.notifications-settings .setting form{display:inline-block}.notifications-settings .setting input{background-color:white;color:#2477b3}.notifications-settings .searchtitle h3{margin-bottom:0}.notifications-settings .search{background-color:#eee}.notifications-settings .search p{margin-bottom:.375em}.admin{background:#eee;padding:6px}.admin dt{font-weight:bold}.admin dd{font-style:italic}.w-button-common,a.w-button-common:link,a.w-button-common:active,a.w-button-common:visited{text-align:center;font-weight:bold;display:inline-block;padding:0 .75em;vertical-align:middle;color:#333}.w-button-common input,a.w-button-common:link input,a.w-button-common:active input,a.w-button-common:visited input{line-height:2em;_line-height:1.75em;vertical-align:middle;font-weight:bold;border-width:0;border-style:none}.w-button{background-color:#eee;border:1px solid #ccc}.w-button input{color:#333;background-color:#eee}.w-button-default,a.w-button-default:link,a.w-button-default:active,a.w-button-default:visited{background-color:#57a7e6;border:1px solid #2477b3;line-height:2em;color:#fff}.w-button-default input,a.w-button-default:link input,a.w-button-default:active input,a.w-button-default:visited input{background-color:#57a7e6;color:#fff}.w-button-default.w-button-disabled{background-color:#eee;border:1px solid #ccc}.w-button-default.w-button-disabled input{background-color:#eee;color:#aaa}.w-button-delete{background-color:#c43c35;border:1px solid #bd001c;color:#fff}.w-button-delete input{background-color:#c43c35;color:#fff}.w-button-cancel{line-height:2em;background-color:#eee;border:1px solid #ccc}.w-button-bright,a.w-button-bright:link,a.w-button-bright:active,a.w-button-bright:visited{background-color:#f7be0f;border:1px solid #f3a418;color:#000}.w-button-bright input,a.w-button-bright:link input,a.w-button-bright:active input,a.w-button-bright:visited input{background-color:#f7be0f}.w-button-follow{background:#eee;border:1px solid #ccc;padding:.375em .5em}.w-button-follow input{background:#eee;vertical-align:baseline}.w-button-unfollow{background:#50a7e6;border:1px solid #4786b3;padding:.375em .5em}.w-button-unfollow input{background:#50a7e6;vertical-align:baseline}.w-button-more{text-align:center;padding:.75em 0;border-bottom:1px solid #e8e8e8}.w-button-more a,.w-button-more input{border:1px solid #aaa;color:#333;background-color:#eee;display:inline-block;height:2em;padding:0 2em;line-height:2em}.w-mediaonebox{background-color:black;color:white}.w-mediaonebox .see-more{padding:.75em;font-weight:bold}.w-mediaonebox .see-more a{color:white}.w-mediaonebox table{width:100%;border-collapse:separate;border-spacing:5px;height:78px}.w-mediaonebox table td{text-align:left}.w-mediaonebox .images_ok{color:gray;padding-top:40px;text-align:center}.w-mediaonebox .images_ok a{color:gray}.welcome-page-container #brand_bar input{color:#fff;font-weight:bold;background-color:#50a7e6;border:solid 1px;border-color:#50a7e6}.welcome-page-container #brand_bar #welcome-modal-left{width:60%}.welcome-page-container #brand_bar #welcome-modal-right{width:40%}.welcome-page-container h2{border-bottom:0;display:inline-block;padding:0;margin-right:.75em}.welcome-page-container .hint{color:#999}.welcome-page-container table.grid{width:100%}.welcome-page-container td.right{text-align:right}.welcome-page-container td.fifty{width:50%}.welcome-page-container .section{padding:.75em;border-bottom:1px solid #ddd;margin-top:0}.welcome-page-container .header{background-color:#eee;padding:.75em;border-bottom:1px solid #ddd}.welcome-page-container .searches .fields{padding:0}.welcome-page-container .categories tr{border-bottom:1px solid #ddd}.welcome-page-container .categories td{padding:.75em}.welcome-page-container .w-button-common{display:block}.welcome-page-container .w-button-common input{width:100%}.welcome-page-container .follow-button-container .w-button-follow,.welcome-page-container .follow-button-container .w-button-unfollow{display:inline-block}.welcome-page-container #hidden-search-submit-button{width:0}.welcome-guest-timeline-page .intro-steps,.welcome-intro-page .intro-steps{background:#333;color:#fff}.welcome-guest-timeline-page .intro-steps ol,.welcome-intro-page .intro-steps ol{list-style-type:decimal;margin:0 30px;padding:8px 0}.welcome-guest-timeline-page .intro-steps ol li,.welcome-intro-page .intro-steps ol li{padding:4px 0}.welcome-guest-timeline-page .intro-actions,.welcome-intro-page .intro-actions{padding:.375em}.welcome-guest-timeline-page .intro-actions table,.welcome-intro-page .intro-actions table{width:100%}.welcome-guest-timeline-page .intro-actions table td,.welcome-intro-page .intro-actions table td{padding:.375em}.welcome-guest-timeline-page .intro-actions table td.left,.welcome-intro-page .intro-actions table td.left{padding-right:.75em}.welcome-guest-timeline-page .intro-actions table td.right,.welcome-intro-page .intro-actions table td.right{padding-left:.75em}.welcome-guest-timeline-page .intro-actions table td div,.welcome-intro-page .intro-actions table td div{padding:.25em 0;background-color:#f5f5f5;text-align:center;vertical-align:middle;border:1px solid #999}.welcome-guest-timeline-page .intro-actions table td div.w-button-default,.welcome-intro-page .intro-actions table td div.w-button-default{background-color:#57a7e6;color:white;border-color:#2377b3}.welcome-guest-timeline-page .intro-actions table td div.w-button-default a,.welcome-intro-page .intro-actions table td div.w-button-default a{color:#fff}.welcome-guest-timeline-page .intro-actions table td div a,.welcome-intro-page .intro-actions table td div a{display:block;line-height:1.875em;color:#333;text-decoration:none;font-size:1em;width:100%;font-weight:bold}.welcome-guest-timeline-page .intro-search-container,.welcome-intro-page .intro-search-container{padding:.75em;background:#f5f5f5}.tweets-index-page .empty-index{line-height:20px;padding:.75em}.tweets-index-page .disco-wtf #who-to-follow{border-top:1px solid #e8e8e8}.tweets-index-page #footer .title{line-height:20px}.signup-link{background:#f5f5f5;padding:.1em 0;border-bottom:1px solid #e8e8e8}.signup-link a.w-button-common{margin:1em;line-height:2em;display:block}.welcome-guest-timeline-page .wtf-header{background:#f5f5f5}.welcome-guest-timeline-page .user-item .bio{margin-left:.5em;padding:.5em 0;font-size:12px;color:#999}.who-to-follow .who-to-follow-header{padding:.75em;border-bottom:1px solid #e8e8e8}.who-to-follow .who-to-follow-header .label{font-size:1.125em;font-weight:bold}.more-actions .user-list{background-color:#f5f5f5}.more-actions input[type="submit"]{background-color:white;color:#2477b3;text-align:left}.more-actions .action{background-color:#fff;font-weight:bold;border-bottom:1px solid #e8e8e8;padding:.938em}.more-actions .action .warn{color:#d40d12}.add-phone{padding:.625em}.add-phone .help-text{font-weight:bold;text-align:center;padding:.313em 0 1.25em}.add-phone .phone-input{text-align:left}.add-phone .title{padding-bottom:.75em;color:#999}.add-phone table{width:100%;layout:auto}.add-phone input,.add-phone td,.add-phone div{vertical-align:middle}.add-phone .value div{padding:6px .25em;border:1px solid #ccc;background-color:#fff;padding:6px .5em}.add-phone .value div input{border:0 none;margin:0;padding:0;border:0;display:block;width:100%;height:1.188em}.add-phone .value div input:focus{outline:0}.add-phone .button{margin-top:.75em}.add-phone .button div{padding:6px .25em;border:1px solid #ccc;background-color:#fff;text-align:center;font-weight:bold;background-color:#f7be0f;border:1px solid #f3a418}.add-phone .button div input{border:0 none;margin:0;padding:0;border:0;display:block;width:100%;height:1.188em}.add-phone .button div input:focus{outline:0}.add-phone input{background-color:inherit}.add-phone .label{padding-bottom:.313em}.add-phone .sublabel{padding-top:.313em;color:#999}.add-phone .invalid-input .label{font-weight:bold}.add-phone .invalid-input .label,.add-phone .invalid-input .sublabel,.add-phone .invalid-input .text-input{color:#b03a32}.add-phone .invalid-input .value div{background-color:inherit;border:1px solid #d40d12}.add-phone .invalid-input .text-input{background-color:#ede0df}.add-phone .invalid-input .text-input input{color:#b03a32}.promptbird{background:#eee;border-bottom:1px solid #e8e8e8;position:relative}.promptbird .dismiss{position:absolute;top:9px;right:9px}.promptbird .content{padding:.625em}.promptbird .content h1{font-weight:bold}.promptbird .content table{width:100%}.promptbird .content table td.image{width:60px}.promptbird .content h1,.promptbird .content .help-text{margin-bottom:.313em}.promptbird .content .button{padding:6px .25em;border:1px solid #ccc;background-color:#fff;display:block;color:#000;margin-top:.75em;text-align:center;font-weight:bold;background-color:#f7be0f;border:1px solid #f3a418}.promptbird .content .button input{border:0 none;margin:0;padding:0;border:0;display:block;width:100%;height:1.188em}.promptbird .content .button input:focus{outline:0}#pager_bar{background-color:#000;line-height:28px;_width:100%}#pager_bar table,#pager_bar td,#pager_bar tr,#pager_bar span,#pager_bar img,#pager_bar a{vertical-align:top;_vertical-align:middle}#pager_bar table{width:100%}#pager_bar td{min-height:28px}#pager_bar span{color:#999}#pager_bar a,#pager_bar a:active,#pager_bar a:visited{color:#999}#pager_bar .left,#pager_bar .modal-left{font-weight:bold}#pager_bar .right,#pager_bar .modal-right{text-align:right}#pager_bar .left{width:30%}#pager_bar .right{width:70%}#pager_bar .right a,#pager_bar .modal-right a{padding-left:.375em}#pager_bar .pager-chevron{font-weight:bold;padding-left:.375em;padding-right:.375em}#pager_bar .backdrop{height:20em;background:#000}.images #brand_bar .pager-chevron,.images #pager_bar .pager-chevron{height:28px;display:inline-block;line-height:28px}.images #brand_bar .no-chevron,.images #pager_bar .no-chevron{width:1em;display:inline-block}.images #pager_bar .pager-chevron{background:#262626}body.vivo-br .toast.client_prompt{color:#fff;font-weight:bold;background-color:#609}body.vivo-br .toast.client_prompt .close input{color:#fff;background-color:#609}body.in-vodafone .toast.client_prompt{color:#fff;background-color:#e60000}body.in-vodafone .toast.client_prompt a:link,body.in-vodafone .toast.client_prompt a:active,body.in-vodafone .toast.client_prompt a:visited{color:#fff;font-weight:bold}body.in-vodafone .toast.client_prompt .close input{color:#fff;background-color:#e60000}body.tim-br .toast.client_prompt{color:#fff;background-color:#039}body.tim-br .toast.client_prompt a:link,body.tim-br .toast.client_prompt a:active,body.tim-br .toast.client_prompt a:visited{color:#fff;font-weight:bold}body.tim-br .toast.client_prompt .close input{color:#fff;background-color:#039}body.mtn-botswana .toast.client_prompt{color:#333;background-color:#ff0}body.mtn-botswana .toast.client_prompt a:link,body.mtn-botswana .toast.client_prompt a:active,body.mtn-botswana .toast.client_prompt a:visited{color:#333;font-weight:bold}body.mtn-botswana .toast.client_prompt .close input{color:#333;background-color:#ff0}body.np-ncell .toast.client_prompt{color:#fff;background-color:#652d86}body.np-ncell .toast.client_prompt a:link,body.np-ncell .toast.client_prompt a:active,body.np-ncell .toast.client_prompt a:visited{color:#fff;font-weight:bold}body.np-ncell .toast.client_prompt .close input{color:#fff;background-color:#652d86}.zerorate h2{border-bottom:0}.accept-data{background-color:#e8e8e8}.accept-data h2,.accept-data p{padding:.75em}.accept-data form{display:inline}.accept-data h2{border-bottom:0}.accept-data .confirm_actions{border-top:1px solid #ccc}.accept-data a.w-button-cancel{color:black}.dir-rtl{direction:rtl;text-align:right;unicode-bidi:embed}.screen-name,.username,.dir-ltr{direction:ltr;text-align:left;unicode-bidi:embed}@-ms-viewport{width:device-width}input[type=submit],input[type=image],button{-webkit-appearance:none}@media only screen and (min-width:768px){body{font-size:.875em;line-height:1.25em;text-align:center}#container{margin:0 auto;width:520px;height:100%;border-width:0 1px 1px 1px;border-color:#ddd;border-style:solid;text-align:left}.timeline .tweet-social-context,.timeline .user-info,.timeline .timestamp{padding-top:.625em}.timeline .titlebar td{padding:.5em 12px}.timeline .avatar-spacer{width:60px}.timeline .avatar{padding-top:12px;width:60px}.timeline .avatar img{width:48px;margin-left:12px}.timeline .avatar .activity-icon{margin-top:-3px;margin-left:42px}.timeline .avatar .activity-icon img{margin-left:2px;width:16px}.timeline .timestamp{padding-right:.75em}.timeline .meta-and-actions{padding-bottom:.75em}.user-list .user-item .avatar{padding-top:12px;width:60px}.user-list .user-item .avatar .fullname,.user-list .user-item .avatar .username,.user-list .user-item .avatar .tweet-social-context{margin-left:.625em}.user-list .user-item .avatar img{width:48px;margin-left:12px}.user-list .user-item .screenname{padding-top:.625em}.user-list .user-item .avatar-spacer{width:60px}.user-list .user-item .tweet-social-context{padding-top:.625em}.user-list .user-item .info{padding-top:.625em}.searches .timeline .tweets-more,.searches .timeline .user-list-more{padding:.75em}.searches .timeline .suggestions{padding:.75em}.searches .fields{padding:.75em}.messages .timeline .avatar{width:69px}.messages .timeline .read-state{margin-top:28px}.images .timeline .icon_detail{display:inline}.more-link{padding:.75em}.tweet-stats .statlabel,.tweet-stats .statnum{font-size:85%}} </style>
+    <script type="text/javascript">
+//<![CDATA[
+if (window.top !== window.self) {document.write = "";window.top.location = window.self.location; setTimeout(function(){document.body.innerHTML='';},1);window.self.onload=function(evt){document.body.innerHTML='';};}
+
+//]]>
+</script>
+    <meta name="google-site-verification" content="V0yIS0Ec_o3Ii9KThrCoMCkwTYMMJ_JYx_RSaGhFYvw" />
+  </head>
+  <body class="images nojs searches-page searches-show-hashtag-page">
+    <div id="container">
+<div id="brand_bar">
+  <table id="top">
+    <tr>
+      <td class="left">
+        <a href="https://mobile.twitter.com/" class="brandmark">
+          <img alt="Twitter" height="28" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/larry_28px.gif" />
+          
+        </a>
+      </td>
+      <td class="right">
+          <img alt="|" class="divider" height="28" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/brandbar_divider.gif" />
+          <a class="search" href="#search">
+            <img alt="Search" height="28" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/search_28px.gif" />
+            
+          </a>
+          <img alt="|" class="divider" height="28" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/brandbar_divider.gif" />
+          <a class="signin" href="/session/new"><span>Sign in</span></a>
+          <img alt="|" class="divider" height="28" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/brandbar_divider.gif" />
+          <a href="/signup"><span class="signup">Sign up</span></a>
+      </td>
+    </tr>
+  </table>
+</div>
+      <div id="main_content">
+        <div class="searches">
+    <div class="searches-header">
+      <table>
+      <tr>
+        <td>
+            <span class="label">Search </span>
+        </td>
+
+        <td class="r">
+            <a href="/search?prev_cursor=TWEET-497447849211486209-497491661723680768-BD1UO2FFu9QAAAAAAAAETAAAAAcAAAASAkQBEAEAYAAAFAAAKIAAAAwEwBAQMAAEAIAEQADAAQAEACAgSggJCAGAAAAAQGDBAEIgAIBABAYQAAUAAEBAIAAQAYAAAILgRCBAEYEQgAWAEwwQAJwSBQAABAAAAApQCAEBQEAgQAABEAAWQAAAAAKAAAEABAAQQCEACAABAAAEQGIAQE5CAwAAAAAAAAQQ&amp;q=%23travel">Refresh</a>
+        </td>
+      </tr>
+      </table>
+    </div>
+
+  <div class="fields"><div class="search-fields">
+    <form action="/search" class="search-input" method="get">
+    <table>
+      <tr>
+        <td class="value" id="search"><div><input id="q" name="q" type="text" value="#travel"/></div></td>
+        <td class="button">
+          <input type="hidden" name="s" value="typd" />
+          <input type="image" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/magnifying_glass.gif" alt="Search"/>
+        </td>
+      </tr>
+    </table>
+    </form>
+</div>
+</div>
+
+    <div class="timeline">
+<table class="tweet  "
+       href="/sobore/status/497491661723680768?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/sobore?p=i"><img alt="sobore" src="https://pbs.twimg.com/profile_images/237487189/Steve_Avatar_normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/sobore?p=s">
+          <strong class="fullname">sobore</strong>
+          <span class="username">
+            <span>@</span>sobore
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497491661723680768" href="/sobore/status/497491661723680768?p=p">20m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497491661723680768"><div class="dir-ltr" dir="ltr">The fields of purple blooms along the Lavender Route in Provence, France <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> <a href="http://t.co/WevZquK1GT" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497491654065287169" data-expanded-path="/sobore/status/497491661723680768/photo/1" data-tco-id="WevZquK1GT" data-url="http://twitter.com/sobore/status/497491661723680768/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/WevZquK1GT</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/sobore/status/497491661723680768?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/sobore/reply/497491661723680768" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497491661723680768/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497491661723680768/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/sobore/status/497491661723680768/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/GaiamTV/status/497489946840944641?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/GaiamTV?p=i"><img alt="Gaiam TV" src="https://pbs.twimg.com/profile_images/378800000698879916/02c6e63ff945b96ca7da7f4aeb4861bd_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/GaiamTV?p=s">
+          <strong class="fullname">Gaiam TV</strong>
+          <span class="username">
+            <span>@</span>GaiamTV
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497489946840944641" href="/GaiamTV/status/497489946840944641?p=p">27m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497489946840944641"><div class="dir-ltr" dir="ltr"><span class="twitter-hit-highlight">#Travel</span> is awesome, but it can aggravate your vata; <a href="/VibrantYogaLife" class="twitter-atreply dir-ltr" data-screenname="VibrantYogaLife" dir="ltr">@VibrantYogaLife</a> has 3 simple things to travel w/ a settled soul: <a href="http://t.co/9cCRoBjVza" class="twitter_external_link dir-ltr tco-link" data-url="http://bit.ly/1kM7lBa" dir="ltr" rel="nofollow" target="_blank">bit.ly/1kM7lBa</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/GaiamTV/status/497489946840944641?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/GaiamTV/reply/497489946840944641" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497489946840944641/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497489946840944641/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/GaiamTV/status/497489946840944641/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/anaantic79/status/497488708510052352?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/anaantic79?p=i"><img alt="Ana Antić" src="https://pbs.twimg.com/profile_images/494911952359931904/K1867W69_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/anaantic79?p=s">
+          <strong class="fullname">Ana Antić</strong>
+          <span class="username">
+            <span>@</span>anaantic79
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497488708510052352" href="/anaantic79/status/497488708510052352?p=p">32m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497488708510052352"><div class="dir-ltr" dir="ltr">Beautiful <a href="/search?q=hotel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#hotel</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> 
+The Oberoi, India
+Staying in this gorgeous hotel will make you feel like royalty <a href="http://t.co/tOYoJzjDAn" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497488703959220224" data-expanded-path="/anaantic79/status/497488708510052352/photo/1" data-tco-id="tOYoJzjDAn" data-url="http://twitter.com/anaantic79/status/497488708510052352/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/tOYoJzjDAn</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/anaantic79/status/497488708510052352?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/anaantic79/reply/497488708510052352" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497488708510052352/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497488708510052352/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/anaantic79/status/497488708510052352/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/JeromeShaw/status/497485342409117696?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/JeromeShaw?p=i"><img alt="Travel Writer Photog" src="https://pbs.twimg.com/profile_images/429347006276833280/ETZNMFmz_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/JeromeShaw?p=s">
+          <strong class="fullname">Travel Writer Photog</strong>
+          <span class="username">
+            <span>@</span>JeromeShaw
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497485342409117696" href="/JeromeShaw/status/497485342409117696?p=p">46m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497485342409117696"><div class="dir-ltr" dir="ltr">"She was standing there when I emerged from customs, all in white" <a href="http://t.co/HH0iEiCGrb" class="twitter_external_link dir-ltr tco-link" data-url="http://buff.ly/NhdghH" dir="ltr" rel="nofollow" target="_blank">buff.ly/NhdghH</a> From my <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> journal <a href="/search?q=Brazil&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Brazil</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/JeromeShaw/status/497485342409117696?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/JeromeShaw/reply/497485342409117696" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497485342409117696/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497485342409117696/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/JeromeShaw/status/497485342409117696/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+  <div class="w-mediaonebox">
+      <table>
+        <tr>
+          <td style="width: 78px;">
+            <a href="/search/grid?idx=0&amp;q=%23travel"><img src="https://pbs.twimg.com/media/BucJHMpCYAEptLR.png:small" width="78" height="78"/></a>
+          </td>
+          <td style="width: 58px;">
+            <a href="/search/grid?idx=1&amp;q=%23travel"><img src="https://pbs.twimg.com/media/BjNDe9-CIAAiBlT.jpg:small" width="58" height="78"/></a>
+          </td>
+          <td style="width: 58px;">
+            <a href="/search/grid?idx=2&amp;q=%23travel"><img src="https://pbs.twimg.com/media/BjNDe9-CIAAiBlT.jpg:small" width="58" height="78"/></a>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+  </div>
+<table class="tweet  "
+       href="/IISuperwomanII/status/497427896026562560?p=v">
+  <tr class="tweet-content ">
+      <td class="avatar-spacer"></td>
+      <td class="tweet-social-context">
+        <span class="context">Top Tweet</span>
+      </td>
+      <td class="timestamp-spacer"></td>
+  </tr>
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/IISuperwomanII?p=i"><img alt="Lilly Singh" src="https://pbs.twimg.com/profile_images/484852567751417856/lQ-zC_Np_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/IISuperwomanII?p=s">
+          <strong class="fullname">Lilly Singh</strong>
+          <span class="username">
+            <span>@</span>IISuperwomanII
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497427896026562560" href="/IISuperwomanII/status/497427896026562560?p=p">5h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497427896026562560"><div class="dir-ltr" dir="ltr">Photo: A black and white picture means I’m sophisticated | Nice, France | <a href="/search?q=superwoman&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#superwoman</a> <span class="twitter-hit-highlight">#travel</span> <a href="/search?q=france&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#france</a> | 📷:... <a href="http://t.co/XGZbAMGCYO" class="twitter_external_link dir-ltr tco-link" data-url="http://tmblr.co/ZSxBow1NdSQjg" dir="ltr" rel="nofollow" target="_blank">tmblr.co/ZSxBow1NdSQjg</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/IISuperwomanII/status/497427896026562560?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/IISuperwomanII/reply/497427896026562560" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497427896026562560/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497427896026562560/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/IISuperwomanII/status/497427896026562560/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/MrScottEddy/status/497483408986374146?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/MrScottEddy?p=i"><img alt="Scott Eddy " src="https://pbs.twimg.com/profile_images/473030410268450817/LLUjuWLd_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/MrScottEddy?p=s">
+          <strong class="fullname">Scott Eddy </strong>
+          <span class="username">
+            <span>@</span>MrScottEddy
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497483408986374146" href="/MrScottEddy/status/497483408986374146?p=p">53m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497483408986374146"><div class="dir-ltr" dir="ltr">Your guide to the BEST restaurants in the world! Let's eat! <a href="http://t.co/d5fz864YvR" class="twitter_external_link dir-ltr tco-link" data-url="http://dld.bz/dvt53" dir="ltr" rel="nofollow" target="_blank">dld.bz/dvt53</a> <a href="/search?q=Travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Travel</a> <a href="/search?q=Foodie&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Foodie</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/MrScottEddy/status/497483408986374146?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/MrScottEddy/reply/497483408986374146" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497483408986374146/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497483408986374146/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/MrScottEddy/status/497483408986374146/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/traveldudes/status/497482417348022272?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/traveldudes?p=i"><img alt="Melvin" src="https://pbs.twimg.com/profile_images/1805972440/SocialMediaProfilePic__Medium__normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/traveldudes?p=s">
+          <strong class="fullname">Melvin</strong>
+          <span class="username">
+            <span>@</span>traveldudes
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497482417348022272" href="/traveldudes/status/497482417348022272?p=p">57m</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497482417348022272"><div class="dir-ltr" dir="ltr">NEW: Trekking Friends: Appreciating the Wonders of Peru: <a href="http://t.co/szwmnbOEpz" class="twitter_external_link dir-ltr tco-link" data-url="http://www.traveldudes.org/node/63599/fullscreen" dir="ltr" rel="nofollow" target="_blank">traveldudes.org/node/63599/ful…</a> via <a href="/Intrepid_Travel" class="twitter-atreply dir-ltr" data-screenname="Intrepid_Travel" dir="ltr">@Intrepid_Travel</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> <a href="/search?q=Peru&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Peru</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/traveldudes/status/497482417348022272?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/traveldudes/reply/497482417348022272" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497482417348022272/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497482417348022272/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/traveldudes/status/497482417348022272/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/FlutterbyVoyage/status/497481220222357504?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/FlutterbyVoyage?p=i"><img alt="Clare Laming" src="https://pbs.twimg.com/profile_images/452269466752000001/Dm8AsbI8_normal.png" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/FlutterbyVoyage?p=s">
+          <strong class="fullname">Clare Laming</strong>
+          <span class="username">
+            <span>@</span>FlutterbyVoyage
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497481220222357504" href="/FlutterbyVoyage/status/497481220222357504?p=p">1h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497481220222357504"><div class="dir-ltr" dir="ltr">New: The king of trains and the train of kings.” The day I got on the original Orient Express <a href="http://t.co/H8C0bz2lVP" class="twitter_external_link dir-ltr tco-link" data-url="http://wp.me/p39snf-hP" dir="ltr" rel="nofollow" target="_blank">wp.me/p39snf-hP</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/FlutterbyVoyage/status/497481220222357504?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/FlutterbyVoyage/reply/497481220222357504" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497481220222357504/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497481220222357504/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/FlutterbyVoyage/status/497481220222357504/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/PuertoRicoPUR/status/497478722312994816?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/PuertoRicoPUR?p=i"><img alt="Puerto Rico" src="https://pbs.twimg.com/profile_images/1400229658/tw_8900727_1307723295_normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/PuertoRicoPUR?p=s">
+          <strong class="fullname">Puerto Rico</strong>
+          <span class="username">
+            <span>@</span>PuertoRicoPUR
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497478722312994816" href="/PuertoRicoPUR/status/497478722312994816?p=p">1h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497478722312994816"><div class="dir-ltr" dir="ltr">Perfection Awaits in Puerto Rico <a href="http://t.co/7MGixnlqiL" class="twitter_external_link dir-ltr tco-link" data-url="http://is.gd/JCI2je" dir="ltr" rel="nofollow" target="_blank">is.gd/JCI2je</a> by <a href="/SamanthaBrown" class="twitter-atreply dir-ltr" data-screenname="SamanthaBrown" dir="ltr">@SamanthaBrown</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> <a href="http://t.co/v7rt3W672v" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497478721247264769" data-expanded-path="/PuertoRicoPUR/status/497478722312994816/photo/1" data-tco-id="v7rt3W672v" data-url="http://twitter.com/PuertoRicoPUR/status/497478722312994816/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/v7rt3W672v</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/PuertoRicoPUR/status/497478722312994816?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/PuertoRicoPUR/reply/497478722312994816" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497478722312994816/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497478722312994816/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/PuertoRicoPUR/status/497478722312994816/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/MapMoment/status/497478618314858497?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/MapMoment?p=i"><img alt="MapMoment" src="https://pbs.twimg.com/profile_images/431716356061290496/PgF1oARo_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/MapMoment?p=s">
+          <strong class="fullname">MapMoment</strong>
+          <span class="username">
+            <span>@</span>MapMoment
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497478618314858497" href="/MapMoment/status/497478618314858497?p=p">1h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497478618314858497"><div class="dir-ltr" dir="ltr"><span class="twitter-hit-highlight">#Travel</span> <a href="/search?q=ttot&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#ttot</a> Relais Villa Vittoria - Lake Como, Italy
+Enjoying a tranquil...: Relais Villa Vittoria - Lake Co... <a href="http://t.co/a5wVlgX0K8" class="twitter_external_link dir-ltr tco-link" data-url="http://bit.ly/1sCa80y" dir="ltr" rel="nofollow" target="_blank">bit.ly/1sCa80y</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/MapMoment/status/497478618314858497?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/MapMoment/reply/497478618314858497" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497478618314858497/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497478618314858497/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/MapMoment/status/497478618314858497/actions" class="last"></a>
+      </span>
+
+<div class="card-photo">
+    <div class="media"><img src="https://o.twimg.com/1/proxy.jpg?t=FQQVAhhgaHR0cDovLzMxLm1lZGlhLnR1bWJsci5jb20vZGVkMzhhZWJlYWUwN2UyNzczODdiNmJiN2U3NTc0ZmQvdHVtYmxyX245eHZwOWd3Y0gxcjJkb2UwbzEwXzEyODAuanBnFAIWABIA&amp;s=mz-er3ZqqOqZ2w6GkpcJSoMakGgl7andsgdejooXPs8" width="200" height="132"/></div>
+   
+    <div class="title"><a href="http://t.co/a5wVlgX0K8" target="_blank"></a></div>
+  <div class="description"> Relais Villa Vittoria - Lake Como, Italy Enjoying a tranquil location on the postcard perfect shores of Lake Como, Relais Villa Vittoria gets visitors into a “dolce vita” state of mind from the...  </div>
+  <div class="attribution">
+    <a href="/LuxAcc" class="profile-link">
+        <img alt="LuxuryAccommodations" height="20" src="https://pbs.twimg.com/profile_images/378800000408620098/1b0e160df246b2d0145d1bb003d6a409_normal.png" width="20" />
+      <span class="attr-fullname">LuxuryAccommodations</span>
+      <span class="attr-username">@LuxAcc</span>
+    </a>
+  </div>
+</div>
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/1SupremeGoddess/status/497478177363853314?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/1SupremeGoddess?p=i"><img alt="The Supreme" src="https://pbs.twimg.com/profile_images/478831005805985792/Ij5sU5NU_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/1SupremeGoddess?p=s">
+          <strong class="fullname">The Supreme</strong>
+          <span class="username">
+            <span>@</span>1SupremeGoddess
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497478177363853314" href="/1SupremeGoddess/status/497478177363853314?p=p">1h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497478177363853314"><div class="dir-ltr" dir="ltr">Now THIS is MY idea of GOING GALT! ....
+
+RT <a href="/niume_official" class="twitter-atreply dir-ltr" data-screenname="niume_official" dir="ltr">@niume_official</a>: ... <a href="http://t.co/Jla52gxzQR" class="twitter_external_link dir-ltr tco-link" data-url="http://bit.ly/niumearchitecture" dir="ltr" rel="nofollow" target="_blank">bit.ly/niumearchitect…</a> <span class="twitter-hit-highlight">#travel</span> <a href="/search?q=luxury&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#luxury</a> <a href="http://t.co/a3VIKx2Onx" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497336762817970176" data-expanded-path="/DanielGennaoui/status/497336764697415680/photo/1" data-tco-id="a3VIKx2Onx" data-url="http://twitter.com/DanielGennaoui/status/497336764697415680/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/a3VIKx2Onx</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/1SupremeGoddess/status/497478177363853314?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/1SupremeGoddess/reply/497478177363853314" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497478177363853314/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497478177363853314/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/1SupremeGoddess/status/497478177363853314/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/PuertoRicoPUR/status/497475067337781249?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/PuertoRicoPUR?p=i"><img alt="Puerto Rico" src="https://pbs.twimg.com/profile_images/1400229658/tw_8900727_1307723295_normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/PuertoRicoPUR?p=s">
+          <strong class="fullname">Puerto Rico</strong>
+          <span class="username">
+            <span>@</span>PuertoRicoPUR
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497475067337781249" href="/PuertoRicoPUR/status/497475067337781249?p=p">1h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497475067337781249"><div class="dir-ltr" dir="ltr">Puerto Rico Tip-Off Bracket Announced <a href="http://t.co/OYy1KyS4U9" class="twitter_external_link dir-ltr tco-link" data-url="http://is.gd/gPbs7j" dir="ltr" rel="nofollow" target="_blank">is.gd/gPbs7j</a> <a href="/search?q=sports&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#sports</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/PuertoRicoPUR/status/497475067337781249?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/PuertoRicoPUR/reply/497475067337781249" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497475067337781249/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497475067337781249/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/PuertoRicoPUR/status/497475067337781249/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/MarshaCollier/status/497473005506027520?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/MarshaCollier?p=i"><img alt="Marsha Collier" src="https://pbs.twimg.com/profile_images/378800000408075166/eb9c7a8b91a8c8ebba2903de3652004a_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/MarshaCollier?p=s">
+          <strong class="fullname">Marsha Collier</strong>
+          <span class="username">
+            <span>@</span>MarshaCollier
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497473005506027520" href="/MarshaCollier/status/497473005506027520?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497473005506027520"><div class="dir-ltr" dir="ltr">Guide to Round-the-World Tickets --&gt; buy one for $3,623 and less via <a href="/WSJ" class="twitter-atreply dir-ltr" data-screenname="WSJ" dir="ltr">@WSJ</a> <a href="http://t.co/r4PouRmZjP" class="twitter_external_link dir-ltr tco-link" data-url="http://on.wsj.com/1ouzFm8" dir="ltr" rel="nofollow" target="_blank">on.wsj.com/1ouzFm8</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> <a href="http://t.co/Qxf48j9q30" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497473005283725312" data-expanded-path="/MarshaCollier/status/497473005506027520/photo/1" data-tco-id="Qxf48j9q30" data-url="http://twitter.com/MarshaCollier/status/497473005506027520/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/Qxf48j9q30</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/MarshaCollier/status/497473005506027520?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/MarshaCollier/reply/497473005506027520" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497473005506027520/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497473005506027520/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/MarshaCollier/status/497473005506027520/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/dolceluxe/status/497472898928357377?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/dolceluxe?p=i"><img alt="dolce luxe design" src="https://pbs.twimg.com/profile_images/444732766073008128/V8q_aVZZ_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/dolceluxe?p=s">
+          <strong class="fullname">dolce luxe design</strong>
+          <span class="username">
+            <span>@</span>dolceluxe
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497472898928357377" href="/dolceluxe/status/497472898928357377?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497472898928357377"><div class="dir-ltr" dir="ltr">I need this now: hotel room in Bora Bora with windows on the floor RT <a href="/EarthPix" class="twitter-atreply dir-ltr" data-screenname="EarthPix" dir="ltr">@EarthPix</a> <a href="http://t.co/wId9be9IuG" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497432845204594688" data-expanded-path="/EarthPix/status/497432845380780033/photo/1" data-tco-id="wId9be9IuG" data-url="http://twitter.com/EarthPix/status/497432845380780033/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/wId9be9IuG</a>" <a href="/search?q=ttot&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#ttot</a> <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/dolceluxe/status/497472898928357377?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/dolceluxe/reply/497472898928357377" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497472898928357377/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497472898928357377/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/dolceluxe/status/497472898928357377/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/1backpackerlife/status/497472398997069824?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/1backpackerlife?p=i"><img alt="Stu J Brown" src="https://pbs.twimg.com/profile_images/496402550824783872/SGJUh_ho_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/1backpackerlife?p=s">
+          <strong class="fullname">Stu J Brown</strong>
+          <span class="username">
+            <span>@</span>1backpackerlife
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497472398997069824" href="/1backpackerlife/status/497472398997069824?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497472398997069824"><div class="dir-ltr" dir="ltr">The moment when worries are a distant memory and you're just grateful for everything... <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> <a href="http://t.co/siRowLxnhR" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497472397767737344" data-expanded-path="/1backpackerlife/status/497472398997069824/photo/1" data-tco-id="siRowLxnhR" data-url="http://twitter.com/1backpackerlife/status/497472398997069824/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/siRowLxnhR</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/1backpackerlife/status/497472398997069824?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/1backpackerlife/reply/497472398997069824" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497472398997069824/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497472398997069824/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/1backpackerlife/status/497472398997069824/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/Just1WayTicket/status/497470994689576960?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/Just1WayTicket?p=i"><img alt="Just One Way Ticket" src="https://pbs.twimg.com/profile_images/3023732824/fc1cd7c093a083e2f7aaec04a54443de_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/Just1WayTicket?p=s">
+          <strong class="fullname">Just One Way Ticket</strong>
+          <span class="username">
+            <span>@</span>Just1WayTicket
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497470994689576960" href="/Just1WayTicket/status/497470994689576960?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497470994689576960"><div class="dir-ltr" dir="ltr">Want to know what 1 year of full-time travel looks like? 365 days of world <span class="twitter-hit-highlight">#travel</span> in photos: <a href="http://t.co/xEeYiBIVjI" class="twitter_external_link dir-ltr tco-link" data-url="http://ow.ly/A52jP" dir="ltr" rel="nofollow" target="_blank">ow.ly/A52jP</a> via <a href="/ACruisingCouple" class="twitter-atreply dir-ltr" data-screenname="ACruisingCouple" dir="ltr">@ACruisingCouple</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/Just1WayTicket/status/497470994689576960?p=v">View summary</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/Just1WayTicket/reply/497470994689576960" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497470994689576960/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497470994689576960/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/Just1WayTicket/status/497470994689576960/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/LuxTravelBible/status/497463734236094464?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/LuxTravelBible?p=i"><img alt="Luxury Travel Bible" src="https://pbs.twimg.com/profile_images/1205256063/fe734413-5116-4c29-820c-dbe7a068b3a5_normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/LuxTravelBible?p=s">
+          <strong class="fullname">Luxury Travel Bible</strong>
+          <span class="username">
+            <span>@</span>LuxTravelBible
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497463734236094464" href="/LuxTravelBible/status/497463734236094464?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497463734236094464"><div class="dir-ltr" dir="ltr">Is this a sign of too much <span class="twitter-hit-highlight">#travel</span>? Five currencies, one wallet! <a href="http://t.co/rMSwWLBvcx" class="twitter_external_link dir-ltr tco-link" data-url="http://Instagram.com/p/ooXU05k0Td" dir="ltr" rel="nofollow" target="_blank">instagram.com/p/ooXU05k0Td</a> <a href="/search?q=luxury&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#luxury</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/LuxTravelBible/status/497463734236094464?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/LuxTravelBible/reply/497463734236094464" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497463734236094464/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497463734236094464/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/LuxTravelBible/status/497463734236094464/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/ericfisher/status/497462988304289794?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/ericfisher?p=i"><img alt="Eric Fisher" src="https://pbs.twimg.com/profile_images/464944099724763136/Jwhtu2PQ_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/ericfisher?p=s">
+          <strong class="fullname">Eric Fisher</strong>
+          <span class="username">
+            <span>@</span>ericfisher
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497462988304289794" href="/ericfisher/status/497462988304289794?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497462988304289794"><div class="dir-ltr" dir="ltr">This storm has been dumping pea-sized hail...about to make <a href="/search?q=travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#travel</a> a mess 495/95 interchange. <a href="http://t.co/NTTMN5ZNRt" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497462987855499264" data-expanded-path="/ericfisher/status/497462988304289794/photo/1" data-tco-id="NTTMN5ZNRt" data-url="http://twitter.com/ericfisher/status/497462988304289794/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/NTTMN5ZNRt</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/ericfisher/status/497462988304289794?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/ericfisher/reply/497462988304289794" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497462988304289794/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497462988304289794/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/ericfisher/status/497462988304289794/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/EFtours/status/497461920530984960?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/EFtours?p=i"><img alt="EF Educational Tours" src="https://pbs.twimg.com/profile_images/487610379795582976/TuUJ9pk8_normal.png" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/EFtours?p=s">
+          <strong class="fullname">EF Educational Tours</strong>
+          <span class="username">
+            <span>@</span>EFtours
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497461920530984960" href="/EFtours/status/497461920530984960?p=p">2h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497461920530984960"><div class="dir-ltr" dir="ltr">See teachers + students <span class="twitter-hit-highlight">#travel</span> to Berlin and explore the city’s history + modern day culture <a href="http://t.co/OTdlWBoCtl" class="twitter_external_link dir-ltr tco-link" data-url="http://eftri.ps/1u2opFR" dir="ltr" rel="nofollow" target="_blank">eftri.ps/1u2opFR</a> <a href="http://t.co/ud1MOGL7tW" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497461919809155072" data-expanded-path="/EFtours/status/497461920530984960/photo/1" data-tco-id="ud1MOGL7tW" data-url="http://twitter.com/EFtours/status/497461920530984960/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/ud1MOGL7tW</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/EFtours/status/497461920530984960?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/EFtours/reply/497461920530984960" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497461920530984960/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497461920530984960/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/EFtours/status/497461920530984960/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/ItalyTravel/status/497453296307933184?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/ItalyTravel?p=i"><img alt="Italy Travel" src="https://pbs.twimg.com/profile_images/116644382/Motorino_Man_normal.jpg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/ItalyTravel?p=s">
+          <strong class="fullname">Italy Travel</strong>
+          <span class="username">
+            <span>@</span>ItalyTravel
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497453296307933184" href="/ItalyTravel/status/497453296307933184?p=p">3h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497453296307933184"><div class="dir-ltr" dir="ltr">Basilicata frescoes in first Christian churches by rupestric &amp; cenobitic monks: <a href="http://t.co/IverwyrtPR" class="twitter_external_link dir-ltr tco-link" data-url="http://bit.ly/rupestral-church" dir="ltr" rel="nofollow" target="_blank">bit.ly/rupestral-chur…</a> <a href="/search?q=art&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#art</a> <a href="/search?q=Travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Travel</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/ItalyTravel/status/497453296307933184?p=v">View details</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/ItalyTravel/reply/497453296307933184" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497453296307933184/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497453296307933184/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/ItalyTravel/status/497453296307933184/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+<table class="tweet  "
+       href="/MrScottEddy/status/497447849211486209?p=v">
+
+  <tr class="tweet-header ">
+        <td class="avatar" rowspan="3">
+          <a href="/MrScottEddy?p=i"><img alt="Scott Eddy " src="https://pbs.twimg.com/profile_images/473030410268450817/LLUjuWLd_normal.jpeg" /></a>
+        </td>
+      <td class="user-info">
+        <a href="/MrScottEddy?p=s">
+          <strong class="fullname">Scott Eddy </strong>
+          <span class="username">
+            <span>@</span>MrScottEddy
+          </span>
+          
+        </a>
+      </td>
+    <td class="timestamp">
+      <a name="tweet_497447849211486209" href="/MrScottEddy/status/497447849211486209?p=p">3h</a>
+    </td>
+
+  </tr>
+  <tr class="tweet-container">
+    <td colspan="2" class="tweet-content">
+      <div class="tweet-text" data-id="497447849211486209"><div class="dir-ltr" dir="ltr">I got to give a HUGE shoutout to <a href="/HoteldoChiado" class="twitter-atreply dir-ltr" data-screenname="HoteldoChiado" dir="ltr">@HoteldoChiado</a>, I do a few tweets &amp; the GM comes to buy us a drink. <a href="/search?q=Lisbon&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Lisbon</a> <a href="/search?q=Travel&s=hash" class="twitter-hashtag dir-ltr" dir="ltr">#Travel</a> <a href="http://t.co/tR5SWM0d17" class="twitter_external_link dir-ltr tco-link has-expanded-path" data-entity-id="497447835655487488" data-expanded-path="/MrScottEddy/status/497447849211486209/photo/1" data-tco-id="tR5SWM0d17" data-url="http://twitter.com/MrScottEddy/status/497447849211486209/photo/1" dir="ltr" rel="nofollow" target="_top">pic.twitter.com/tR5SWM0d17</a></div></div>
+
+
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="meta-and-actions">
+      <span class="metadata">
+        <a href="/MrScottEddy/status/497447849211486209?p=v">View photo</a>
+        <span class="middot">&middot;</span>
+      </span>
+      <span class="tweet-actions">
+        <a href="/MrScottEddy/reply/497447849211486209" class="first"><img alt="Reply" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_reply.gif" /></a>
+          <a href="/statuses/497447849211486209/retweet">
+              <img alt="Retweet" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_rt.gif" />
+          </a>
+        <a href="/statuses/497447849211486209/favorite?authenticity_token=2df97dda93f678562733" class="favorite">
+            <img alt="Favorite" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/tweet_fav.gif" />
+        </a>
+        <a href="/MrScottEddy/status/497447849211486209/actions" class="last"></a>
+      </span>
+
+
+    </td>
+  </tr>
+
+</table>
+          <div class='user-list'>
+<table class="user-item" data-scribe-item="" data-scribe-element="user">
+
+  <tr>
+    <td rowspan="2" class="avatar"><img alt="World Travel" src="https://pbs.twimg.com/profile_images/378800000130169379/716039c94501afa1744a479ed7342a86_normal.jpeg" /></td>
+    <td class="info fifty screenname">
+      <a name="travel"/>
+        <a href="/travel?p=s" data-scribe-action="profile_click" ><strong class="fullname">World Travel</strong></a>
+    </td>
+    <td class="follow-button-container right fifty" rowspan="2">
+  <form action="/travel/follow" method="post">
+    <span class="m2-auth-token"><input name="authenticity_token" type="hidden" value="2df97dda93f678562733" /></span>
+    
+      <span class="w-button-common w-button-follow"><input alt="Follow" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/followplus.gif" type="image" /></span>
+    <input type="hidden" name="scribe_item" value="" />
+  </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="info">
+        <a href="/travel?p=s"><span class="username"><span>@</span>travel</span></a>
+
+    </td>
+  </tr>
+
+
+</table>
+<table class="user-item" data-scribe-item="" data-scribe-element="user">
+
+  <tr>
+    <td rowspan="2" class="avatar"><img alt="Travel + Leisure" src="https://pbs.twimg.com/profile_images/3704055283/7830ca91dc1c7e34a27100568e628a93_normal.png" /></td>
+    <td class="info fifty screenname">
+      <a name="TravlandLeisure"/>
+        <a href="/TravlandLeisure?p=s" data-scribe-action="profile_click" ><strong class="fullname">Travel + Leisure</strong></a>
+        <img alt="Verified Account" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/verified.gif" />
+        
+    </td>
+    <td class="follow-button-container right fifty" rowspan="2">
+  <form action="/TravlandLeisure/follow" method="post">
+    <span class="m2-auth-token"><input name="authenticity_token" type="hidden" value="2df97dda93f678562733" /></span>
+    
+      <span class="w-button-common w-button-follow"><input alt="Follow" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/followplus.gif" type="image" /></span>
+    <input type="hidden" name="scribe_item" value="" />
+  </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="info">
+        <a href="/TravlandLeisure?p=s"><span class="username"><span>@</span>TravlandLeisure</span></a>
+
+    </td>
+  </tr>
+
+
+</table>
+<table class="user-item" data-scribe-item="" data-scribe-element="user">
+
+  <tr>
+    <td rowspan="2" class="avatar"><img alt="Condé Nast Traveler" src="https://pbs.twimg.com/profile_images/432921572165181440/ip0gggj__normal.png" /></td>
+    <td class="info fifty screenname">
+      <a name="CNTraveler"/>
+        <a href="/CNTraveler?p=s" data-scribe-action="profile_click" ><strong class="fullname">Condé Nast Traveler</strong></a>
+        <img alt="Verified Account" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/verified.gif" />
+        
+    </td>
+    <td class="follow-button-container right fifty" rowspan="2">
+  <form action="/CNTraveler/follow" method="post">
+    <span class="m2-auth-token"><input name="authenticity_token" type="hidden" value="2df97dda93f678562733" /></span>
+    
+      <span class="w-button-common w-button-follow"><input alt="Follow" src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/images/sprites/followplus.gif" type="image" /></span>
+    <input type="hidden" name="scribe_item" value="" />
+  </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="info">
+        <a href="/CNTraveler?p=s"><span class="username"><span>@</span>CNTraveler</span></a>
+
+    </td>
+  </tr>
+
+
+</table>
+          </div>
+          <div class='user-list-more'>
+            <a href="/search/users?q=%23travel">View more people</a>
+          </div>
+        <div class="suggestions">
+          <h4>Related searches</h4> <a href="/search?q=%23ttot&s=rela">#ttot</a>
+        </div>
+    </div>
+      <div class="w-button-more">
+        <a href="/search?next_cursor=TWEET-497447849211486209-497491661723680768-BD1UO2FFu9QAAAAAAAAETAAAAAcAAAASAkQBEAEAYAAAFAAAKIAAAAwEwBAQMAAEAIAEQADAAQAEACAgSggJCAGAAAAAQGDBAEIgAIBABAYQAAUAAEBAIAAQAYAAAILgRCBAEYEQgAWAEwwQAJwSBQAABAAAAApQCAEBQEAgQAABEAAWQAAAAAKAAAEABAAQQCEACAABAAAEQGIAQE5CAwAAAAAAAAQQ&amp;q=%23travel">Load older Tweets</a>
+      </div>
+</div>
+
+      </div>
+<div id="footer">
+    <form action="/session/destroy" method="post">
+      <span class="m2-auth-token"><input name="authenticity_token" type="hidden" value="2df97dda93f678562733" /></span>
+      <table class="global-actions">
+        <tr>
+          <td><a href="/settings">Settings</a></td>
+          <td><a href="http://support.twitter.com/"> Help</a></td>
+        </tr>
+      </table>
+    </form>
+    <div class="view-actions"><a href="#top">Back to top</a> &middot; <a href="/settings/profile_images?return_to=%2Fhashtag%2Ftravel%3Fsrc%3Dhash">Turn images off</a></div>
+</div>
+    </div>
+    <script id="scribe-configuration" type="application/json">{"page":"search"}</script>
+    <script id="ddg_buckets" type="application/json">{}</script>
+    <script src="https://ma.twimg.com/twitter-mobile/b88bb4e3b844cc3b584cd8d5cf805b35b3deed36/assets/m2_tweets.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,666 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Cricket  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+For the Civilized to Leave Civilization: Some thoughts on choice, coercion, and negotiation
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+2009
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+In line at a grocery store, a friend and I begin talking about camping gear: sleeping bags, tents, warm clothes, and knives. This friend was in the midst of preparations for departing an intensely urbanized area in search of deeper connections with wild geographies, and I was helping this departure. As our conversation progressed, we inevitably mentioned the term “anarcho-primitivism” out loud. The customer in front of us (surely eavesdropping) suddenly interrupted us to ask, “What’s primitivism?” As my friend began to provide some basics of an anarcho-primitivist perspective (the critique of domestication, mass society, etc), the customer sarcastically broke in: “Oh, so that’s why you’re buying your camping gear from REI?” Before my friend or I could respond, the person moved away from us to the next available cashier.
+
+
+The reasoning on this person’s part probably went something like this: if someone buys warm clothes from the capitalist marketplace and shops at grocery stores, they don’t have a valid stand-point from which to critique this society. They are thus hypocrites. This argument has been raised in a number of ways. For instance, an article about dumpster diving published last year in the {\em New York Times} noted the following about freegans: “Not buying any new manufactured products while living in the United States is, of course, basically impossible\unknown{}These contradictions and others have led some people to suggest that freegans are hypocritical, making use of the capitalist system even as they rail against it.”\footnote{“Not buying it,” Steven Kurutz, June 21\high{st} 2007} The assumptions are as follows: 1) it’s impossible to live without “manufactured products” (which we could read in a larger sense as “civilization”) and 2) anyone who attempts to doso while also simultaneously relying on manufactured products is thus a hypocrite. An unstated conclusion is perhaps 3) People cannot break their reliance on the United States economy.
+
+
+An anti-civilization critique necessitates at least two basic conclusions: 1) bring down civilization (dismantle and/or destroy the physical and psychological infrastructure that blocks wild nature from thriving); 2) for those of us within its grasp, live beyond, or perhaps selfishly, leave it. Some may consider these conclusions in an ordinal manner: i.e. first bring civilization down and then live beyond it (or vice versa). Others may consider these conclusions concurrently: simultaneously attack infrastructure and learn to live beyond it. I do not wish to argue for one option over another. However, I would like to focus on the second conclusion because most of us reading these words are likely caught within civilization’s grip. And what remains irrefutable is that to escape, we must learn a set of skills we have lived without for large portions of our lives. Many of us are choosing sooner rather than later to learn these skills, and it is the complicated dimensions of this choice that I would like to reflect upon.
+
+
+Consider these following generalizations about subsistence or nature-based peoples (bands, tribes, or communities): The skills required for basic survival are integrated into the practices of daily life. From day one, children might be taught to light fires, to forage, hunt or grow food, to heal themselves, and keep themselves warm and sheltered. Socially, they are immersed within an environment that promotes healthy relationships with both the humyn and other-than-humyn world. Such a world is not ‘perfect’ or all benevolent. Yet cooperation with one another takes on a greater importance, because it is more directly connected for a humyn’s ability to survive and thrive in the world. By the time such children reach adulthood, they have at their disposal a considerable skill set that has been practiced from the earliest periods of their lives.
+
+
+Conversely, for those who inhabit civilized societies, the most basic survival skills are nowhere to be found in the midst of our everyday lives. While childhood is a phase of life in which we are necessarily dependent upon our parental figures, within civilization we never move beyond these dependencies, even as we “grow up.” We quickly move from the mother’s breast to the bottle to the grocery store. We learn that to survive we must work. We learn that our bodily health is best maintained by placing it in the hands of experts who offer us a cavalcade of pills for our problems. We learn that fire comes from matches and our clothing from corporations; that protection comes from the state. We also learn and often internalize social hierarchies: age, race, gender, class, and ability. And finally, this insidious, infantilizing social process comes to feel ‘natural,’ supported by an ideological knowledge that ridicules any alternative as backward or naïve. While those with enough social mobility can maintain illusions of “independence” in the midst of civilized life, this is highly contingent upon an abstract set of variables that have minimal connection to the natural world.
+
+
+Decade upon decade, some may unreflectively walk through this social environment in a malaise, never comprehending the (anti)relationships involved in maintaining such a fragile reality. Others, however, make a different choice: to begin to make a qualitative break from civilization by any means possible.
+
+
+While we may conceptualize this break from civilization, the practice itself is far more process-oriented. This choice to leave is most immediately conditioned by the necessities of our biological existence: food, shelter, water, clothing, health, etc. Without experience with these skills, we are unable to break our dependencies on civilization. It is also equally important to consider the social repercussions of leaving. The recent film “Into The Wild” portrayed such a dilemma. The climax showed the main character’s revelation that “Happiness is best shared.” This catalyzed his (unsuccessful) attempt to leave the wilds of Alaska and return to civilization to heal the wounds between him and his family. However, for most of us, the reverse is likely true: Moments of shared happiness and a deep fear of loneliness and isolation from intimate relationships are undoubtedly reasons we choose to remain within the confines of civilization.
+
+
+When critics of anarcho-primitivism suggest we are “hypocrites,” they often make the hidden assumption that we are all autonomous individuals situated within a society that places no constraints on our ability to survive. The insinuation is that we can ‘love it or leave it’ and simply walk away. This is simply not the case. First, this ignores the fact that civilized institutions and the individuals who run them have been actively destroying alternative lifeways for thousands of years. Second, and related, if our choices are to work or die, many understandably choose the former. If our choices are to pay the rent or be homeless, many understandably choose the former. Wavering between two awful options is not unfettered choice. Rather, this choice is always mired in points of coercion. And the point between choice and coercion implies ‘negotiation.’
+
+
+Negotiation implies the anarchist principles of choice, autonomy, and personal responsibility while simultaneously acknowledging the coercive barriers that condition our lives. It is only through vigilantly scrutinizing and sensitizing ourselves to these barriers that we can move from experiencing ourselves as passive victims of civilization’s processes to active participants in negotiation for our exit. Two definitions of the term “negotiation” can be directly applied to our struggle within civilization: “To find a way through, round, or over (an obstacle, a difficult path, etc.”); “To succeed in dealing with in the way desired; to manage or bring about successfully”\footnote{Oxford English Dictionary}. We are finding our way through and out of the coercive barriers of civilization that impel us to stay; we (albeit with great difficulty) are successfully grappling exit that we desire.
+
+
+\section{Privilege
+}
+
+Importantly, not all coercive obstacles are similar. They may be literal barriers — in the sense of the four walls of a prisoners’ cell — or based upon the degrees of social stratification each person experiences. These factors include one’s class/economic status, “race,” or gender, sexual identity, geographical location, and physical ability (which is certainly a most under discussed topic within the primitive skills community). These coercive barriers necessitate a more nuanced discussion regarding privilege.
+
+
+Writers from both the Left and anarchist/radical press alike have consistently avoided these discussions. Instead, they usually gravitate into three general areas. First, someone may judge a certain attitude or viewpoint as “privileged,” when other factors may also provide more exact, complex, or constructive explanations. For instance, “race” mediates interactions between humans within civilized societies, but is not always the primary point of mediation in every form of human interaction. To label someone an “anti-Semite” or “anti-queer” due to basic misunderstandings between people (say, being a lousy housemate or asshole) does not promote an atmosphere of accountability. Instead, it either freezes potentially culpable individuals in a place of inaction or promotes motivation via a politics of guilt. This can leave such individuals confused about how to take appropriate responsibility for their role in a given conflict.
+
+
+A second and related approach to privilege is especially endemic within the Left. Diverse numbers of individuals are clustered into social groupings such as “Black,” “woman” “White,” etc. Their experiences and viewpoints are then homogenized to point that a given individual from either within or outside that social grouping will speak and theorize for “them.” For example, in a discussion I had about racial politics in the U.S., a White person once told me, “It’s time for us to listen to them” (implying Black people). I answered: Which ‘them’? Condoleeza Rice? Barack Obama? Do these people speak for the Black ‘community’ or experience? This Leftist move of essentializing an entire group of people into a ‘them’ is a directly authoritarian move. Just because one identifies (or is socially viewed) as female, queer, disabled, black, or anarchist does not make one’s viewpoint inherently similar or even worth listening to, or acting upon. Nor does it mean that one person ever speaks for an entire group or community. Not to mention, this move obviates the question of what connects these social groups besides shared victimhood, which does not necessarily equate to shared struggle.
+
+
+A third and distinct approach has been common within some anarchist circles: Any mention of privilege is quickly dismissed by someone as ‘identity politics,’ with a simplistic reasoning that amounts to ‘identity politics = authoritarian.’ Discussions of race, class, gender, ability, etc, are quickly dismissed as being subservient to the larger (and ‘more important’) oppression of ‘civilization.’ During the 2007 BASTARD conference, Lawrence Jarach scoffed at the mention of racism or sexism within anarchist milieus, answering “What is this, choose your favorite oppression?” This move is a common theme throughout the early history of the New Left, and it is unfortunate to see anarchists repeating the same mistakes cloaked in a different language. While anarcho-primitivists agree that there are universal characteristics of civilization (domestication, mass society, division of labor, et al) that describe and explain a broad number of social oppressions, how individuals experience these coercive elements is highly diverse. Nevertheless, the social fact of being a woman, black, looking queer, disabled, etc, has real, material repercussions that cannot be ignored by anti-civilization anarchists.
+
+
+The effect of each of the above approaches is largely impractical. They offer little insight about the specifics of coercion, or how it affects us in a differential manner, conditioning our lives and available options to leave civilization. The discourse of privilege could instead function as a lens with which we expose these facts. One person’s choice to leave might involve reading a few pages of a plant-identification guide at night between a full time job and intense familial commitments. Another’s might look like attending primitive skills events and leveraging every possible chance to inhabit wild spaces. Another’s might look like writing books and treatises that catalyze further ‘momentum’ against civilization.
+
+
+Such discussions could promote an atmosphere of affinity and resistance between persons in the fight to both bring down and leave civilization. They could move us away from conceptualizing ourselves as always-passive victims at the hands of civilization and toward a perspective that shows us actively negotiating this mess, always maintaining some degree of responsibility and choice. This could ultimately allow us to have greater sensitivity to the social reality each of us experience. Such steps may be labeled ‘small,’ but small steps do not necessarily equate to a reformist approach.
+
+
+ 
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Cricket
+
+
+
+For the Civilized to Leave Civilization: Some thoughts on choice, coercion, and negotiation
+
+
+
+
+
+
+2009
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Originally published in {\em Bloodlust: a feminist journal against civilization} \#1, August, 2009
+
+
+
+Retrieved on August 14, 2009 from \goto{zinelibrary.info}[url(http://zinelibrary.info/bloodlust-feminist-journal-against-civilization)]
+
+
+\stopalignment
+
+\stoptext
+
+

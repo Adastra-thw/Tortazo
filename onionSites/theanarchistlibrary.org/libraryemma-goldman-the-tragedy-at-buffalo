@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The Tragedy at Buffalo (Emma Goldman) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/emma-goldman-the-tragedy-at-buffalo?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=emma-goldman-the-tragedy-at-buffalo">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The Tragedy at Buffalo
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/emma-goldman">Emma Goldman</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1901
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/leon-czolgosz">Leon Czolgosz</a>
+        <a href="/topics/propaganda-of-the-deed">propaganda of the deed</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Published in the <em>Free Society</em>, October 1901 as a defence of Leon Czolgosz, the assassin of William McKinley.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on March 20, 2012 from <a href="http://en.wikisource.org/wiki/The_Tragedy_at_Buffalo">en.wikisource.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="emma-goldman-the-tragedy-at-buffalo.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="emma-goldman-the-tragedy-at-buffalo.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="emma-goldman-the-tragedy-at-buffalo.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="emma-goldman-the-tragedy-at-buffalo.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="emma-goldman-the-tragedy-at-buffalo?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="emma-goldman-the-tragedy-at-buffalo.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="emma-goldman-the-tragedy-at-buffalo.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Emma Goldman</h2>
+	
+	<h1 id="textttitleh">The Tragedy at Buffalo</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<pre class="verse">
+For they starve the little frightened child
+   Till it weeps both night and day:
+And they scourge the weak, and flog the fool,
+   And gibe the old and gray,
+And some grow mad, and all grow bad,
+   And none a word may say.
+
+                      —Oscar Wilde.
+</pre>
+<p>Never before in the history of governments has the sound of a pistol shot so startled, terrorized, and horrified the self-satisfied, indifferent, contented, and indolent public, as has the one fired by Leon Czolgosz when he struck down William McKinley, president of the money kings and trust magnates of this country.
+</p><p>Not that this modern Caesar was the first to die at the hands of a Brutus. Oh, no! Since man has trampled upon the rights of his fellow men, rebellious spirits have been afloat in the atmosphere. Not that William McKinley was a greater man than those who throned upon the fettered form of Liberty. He did not compare either in intellect, ability, personality, or force of character with those who had to pay the penalty of their power. Nor will history be able to record his extraordinary kindness, generosity, and sympathy with those whom ignorance and greed have condemned to a life of misery, hopelessness, and despair.
+</p><p>Why, then, were the mighty and powerful thrown into such consternation by the deed of September 6? Why this howl of a hired press? Why such blood-thirsty and violent utterances from the clergy, whose usual business it is to preach “peace on earth and good will to all”? Why the mad ravings of the mob, the demand for rigid laws to curtail freedom of press and speech?
+</p><p>For more than thirty years a small band of parasites have robbed the American people, and trampled upon the fundamental principles laid down by the forefathers of this country, guaranteeing to every man, woman and child, “Life, liberty, and the pursuit of happiness.” For thirty years they have been increasing their wealth and power at the expense of the vast mass of workers, thereby enlarging the army of the unemployed, the hungry, homeless, and friendless portion of humanity, tramping the country from east to west and north to south, in a vain search for work. For many years the home has been left to the care of the little ones, while the parents are working their life and strength away for a small pittance. For thirty years the sturdy sons of America were sacrificed on the battlefield of industrial war, and the daughters outraged in corrupt factory surroundings. For long and weary years this process of undermining the nation’s health, vigor, and pride, without much protest from the disinherited and oppressed, has been going on. Maddened by success and victory, the money-powers of this “free land of ours” became more and more audacious in their heartless, cruel efforts to compete with rotten and decayed European tyrannies in supremacy of power.
+</p><p>With the minds of the young poisoned with a perverted conception of patriotism, and the fallacious notion that all are equal and that each one has the same opportunity to become a millionaire (provided he can steal the first hundred thousand dollars), it was an easy matter indeed to check the discontent of the people; one is therefore not surprised when one hears Americans say, “We can understand why the poor Russians kill their czar, or the Italians their king, for think of the conditions that prevail there; but he who lives in a republic, where each one has the opportunity to become President of the United States (provided he has a powerful party back of him), why should he attempt such acts? We are the people, and acts of violence in this country are impossible.”
+</p><p>And now that the impossible has happened, that even America has given birth to the man who struck down the king of the republic, they have lost their heads, and are shouting vengeance upon those who for years have shown that the conditions here were beginning to be alarming, and unless a halt be called, despotism would set its heavy foot on the hitherto relatively free limbs of the people.
+</p><p>In vain have the mouthpieces of wealth denounced Leon Czolgosz as a foreigner; in vain they are making the world believe that he is the product of European conditions, and influenced by European ideas. This time the “assassin” happens to be the child of Columbia, who lulled him to sleep with
+</p><pre class="verse">
+“My country, ’tis of thee,
+Sweet land of liberty,”
+</pre>
+<p>and who held out the hope to him that he, too, could become President of the country. Who can tell how many times this American child has gloried in the celebration of the 4<sup>th</sup> of July, or on Decoration Day, when he faithfully honored the nation’s dead? Who knows but what he, too, was willing to “fight for his country and die for her liberty”; until it dawned upon him that those he belonged to have no country, because they have been robbed of all that they have produced; until he saw that all the liberty and independence of his youthful dreams are but a farce. Perhaps he also learned that it is nonsense to talk of equality between those who have all and those who have nothing, hence he rebelled.
+</p><p>“But his act was mad and cowardly,” says the ruling class. “It was foolish and impractical,” echo all petty reformers, Socialists, and even some Anarchists.
+</p><p>What absurdity! As if an act of this kind can be measured by its usefulness, expediency, or practicability. We might as well ask ourselves of the usefulness of a cyclone, tornado, a violent thunderstorm, or the ceaseless fall of the Niagara water. All these forces are the natural results of natural causes, which we may not yet have been able to explain, but which are nevertheless a part of nature, just as force is natural and part of man and beast, developed or checked, according to the pressure of conditions and man’s understanding. An act of violence is therefore not only the result of conditions, but also of man’s psychical and physical nature, and his susceptibility to the world surrounding him.
+</p><p>Does not the summer fight against the winter, does it not resist, mourn, and weep oceans of tears in its eager attempt to shield its children from the icy grip of frost? And does not the winter enshroud Mother Earth with a white, hard cover, lest the warm spring sunshine should melt the heart of the hardened old gentleman? And does he not gather his last forces for a bitter and fierce battle for supremacy, until the burning rays of the sun disperse his ranks?
+</p><p>Resistance against force is a fact all through nature. Man being part of nature, he, too, is swayed by the same force to defend himself against invasion. Force will continue to be a natural factor just so long as economic slavery, social superiority, inequality, exploitation, and war continue to destroy all that is good and noble in man.
+</p><p>That the economic and political conditions of this country have been pregnant with the embryo of greed and despotism, no one who thinks and has closely watched events can deny. It was, therefore, but a question of time for the first signs of labor pains to begin. And they began when McKinley, more than any other President, had betrayed the trust of the people, and became the tool of the moneyed kings. They began when he and his class had stained the memory of the men who produced the Declaration of Independence, by the blood of the massacred Filipinos. They grew more violent at the recollection of Hazelton, Virden, Idaho, and other places, where capital has waged war on labor; until on the 6<sup>th</sup> of September the child begotten, nourished and reared by violence, was born.
+</p><p>That violence is not the result of conditions only, but also largely depends upon man’s inner nature, is best proven by the fact that while thousands loath tyranny, but one will strike down a tyrant. What is it that drives him to commit the act, while others pass quietly by? It is because the one is of such a sensitive nature that he will feel a wrong more keenly and with greater intensity than others.
+</p><p>It is, therefore, not cruelty, or a thirst for blood, or any other criminal tendency, that induces such a man to strike a blow at organized power. On the contrary, it is mostly because of a strong social instinct, because of an abundance of love and an overflow of sympathy with the pain and sorrow around us, a love which seeks refuge in the embrace of mankind, a love so strong that it shrinks before no consequence, a love so broad that it can never be wrapped up in one object, as long as thousands perish, a love so all-absorbing that it can neither calculate, reason, investigate, hut only dare at all costs.
+</p><p>It is generally believed that men prompted to put the dagger or bullet in the cowardly heart of government, were men conceited enough to think that they will thereby liberate the world from the fetters of despotism. As far as I have studied the psychology of an act of violence, I find that nothing could be further away from the thought of such a man than that if the king were dead, the mob will cease to shout “Long live the king!”
+</p><p>The cause for such an act lies deeper far too deep for the shallow multitude to comprehend. It lies in the fact that the world within the individual, and the world around him, are two antagonistic forces, and, therefore, must clash.
+</p><p>Do I say that Czolgosz is made of that material? No. Neither can I say that he was not. Nor am I in a position to say whether or not he is an Anarchist; I did not know the man; no one as far as I am aware seems to have known him, but from his attitude and behavior so far (I hope that no reader of “Free Society” has believed the newspaper lies), I feel that he was a soul in pain, a soul that could find no abode in this cruel world of ours, a soul “impractical,” inexpedient, lacking in caution (according to the dictum of the wise); but daring just the same, and I cannot help but bow in reverent silence before the power of such a soul, that has broken the narrow walls of its prison, and has taken a daring leap into the unknown.
+</p><p>Having shown that violence is not the result of personal influence, or one particular ideal, I deem it unnecessary to go into a lengthy theoretical discussion as to whether Anarchism contains the element of force or not. The question has been discussed time and again, and it is proven that Anarchism and violence are as far apart from each other as liberty and tyranny. I care not what the rabble says; but to those who are still capable of understanding I would say that Anarchism, being, a philosophy of life, aims to establish a state of society in which man’s inner make-up and the conditions around him, can blend harmoniously, so that he will be able to utilize all the forces to enlarge and beautify the life about him. To those I would also say that I do not advocate violence; government does this, and force begets force. It is a fact which cannot be done away with through the prosecution of a few men and women, or by more stringent laws-this only tends to increase it.
+</p><p>Violence will die a natural death when man will learn to understand that each unit has its place in the universe, and while being closely linked together, it must remain free to grow and expand.
+</p><p>Some people have hastily said that Czolgosz’s act was foolish and will check the growth of progress. Those worthy people are wrong in forming hasty conclusions. What results the act of September 6 will have no one can say; one thing, however, is certain: he has wounded government in its most vital spot. As to stopping the wheel of progress, that is absurd. Ideas cannot be retarded by restraint. And as to petty police persecution, what matter?
+</p><p>As I write this, my thoughts wander to the death-cell at Auburn, to the young man with the girlish face, about to be put to death by the coarse, brutal hands of the law, walking up and down the narrow cell, with cold, cruel eyes following him,
+</p><pre class="verse">
+Who watch him when he tries to weep,
+   And when he tries to pray;
+Who watch him lest himself should rob
+   The prison of its prey.
+</pre>
+<p>And my heart goes out to him in deep sympathy, and to all the victims of a system of inequality, and the many who will die the forerunners of a better, nobler, grander life.
+</p><div class="right"><p><em>Emma Goldman</em>
+</p></div>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

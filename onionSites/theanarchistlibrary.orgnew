@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+   <link rel="stylesheet" type="text/css"
+	 href="http://theanarchistlibrary.org/css/smoothness/jquery-ui-1.8.18.custom.css" />
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery-ui-1.8.18.custom.min.js">
+   </script>
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/ckeditor/ckeditor.js">
+   </script>
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/ckeditor/adapters/jquery.js">
+   </script>
+   <script type="text/javascript" 
+	   src="http://theanarchistlibrary.org/js/jquery.validate.js">
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Upload a new text | The Anarchist Library
+        </title>
+   
+   <meta name="robots" content="noindex,nofollow" />
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   id="current"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div>Before creating a new page, please run a search to see if the page
+already exists.</div>
+
+<input type="text" name="query" id="query"
+       maxlength="250"
+       size="50"
+       value="" />
+<input type="submit" name="submit" id="driver" value="full text search" />
+<div id="mysearchresults"></div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+	$("#driver").click(function(event){
+	    var name = $("#query").val();
+	    $("#mysearchresults").load('/search #searchresults', {"query":name} );
+	});
+    });
+</script>
+
+<div>Nothing? Ok, please go on.</div>
+
+<div>
+  <strong>Please do not upload your own blog posts. If you think your
+  blog post should have a place here,
+  please <a href="/special/about">contact us</a> first. </strong>
+</div>
+
+<hr />
+
+<script type="text/javascript">
+    $(document).ready(function() {
+	var availableTags = ["15 M","15M","1848","1907","1936","1936–1939","1937","1938","1939","1950s","1968","1969","1970s","1980s","1984","2008","2011","9/11","Abele Ferrari","ableism","abortion","abuse","academia","academic","academy","accountability","activism","activist","ADCS 2010.1","Adesso","Adrian Blackwell","affinity groups","Afghanistan","Africa","after the revolution","age","agriculture","AJODA","AJODA #23","AJODA #33","AJODA #34","AJODA #35","AJODA #36","AJODA #37","AJODA #38","AJODA #39","AJODA #40","AJODA #42","AJODA #48","AJODA #51","AJODA #52","AJODA #54","AJODA #57","AJODA #58","AJODA #59","AJODA #60","AJODA #61","AJODA #62","AJODA #63","AJODA #64","AJODA #65","AJODA #66","AJODA #67","AJODA #68–69","AJODA #72","AJODA #73","AJODA #74","AK Press","Alain C.","Alasdair MacIntyre","Albert Libertad","Alexandre Skirda","Alexis","Alex Jones","ALF","Alfredo M. Bonanno","Algeria","alienation","Ali Tonak","alternative media","Amauta","american situationists","Americas","amnesia","Amsterdam","A Murder of Crows","analysis","An Anarchist FAQ","anarcha-feminism","anarchism","anarchism without adjectives","anarchist","anarchist analysis","Anarchist Black Cross","anarchist business","Anarchist Encyclopedia","Anarchist Federation","Anarchist Federation (France)","anarchist international","Anarchist intervention","anarchist movement","anarchist opposition","anarchist projects","anarchist publications","anarchists","anarcho-communism","anarcho-communist","anarcho-transhumanism","anarchy","anarkismo","andre masson","Andrew Flood","Andrew X","angry apes","Angry Brigade","Angry People","animal liberation","animal rights","animist","Anne Petermann","anonymity","anthropology","anti-anarchy","anti-art","anti-capitalist","anti-capitalist movement","anti-christian","anti-civ","anti-civilisation","anti-civilization","anti-clerical","anti-economy","anti-egoist","anti-fascism","anti-fascist","anti-globalization","anti-globalization movement","anti-ideology","anti-imperialism","anti-judicialism","anti-left","anti-militarism","anti-militarist","anti-nationalism","anti-nuke","anti-Olympics","anti-oppression","anti-organization","anti-pacisfism","anti-politics","anti-poverty","anti-racist","anti-racist action","anti-religion","anti-road","anti-school","anti-social","anti-state","anti-syndicalist","anti-technology","anti-terrorism","anti-voting","anti-war","anti-work","Antonio Negri","apartheid","appropriate technology","A Problem of Memory","Arab Spring","architecture","Argentina","Arias Correa","armed struggle","art","Arts and Crafts","Ashanti Alston","Asia","assemblies","atheist","Atlanta","attack","austerity","Australia","Austria","authoritarian left","authority","autobiographical","autobiography","automation","Autonomous Marxism","autonomy","avant-garde","Bakunin","Barcelona","barricades","Basque","Beaubourg","beauty","Belarus","Belgium","Benito Mussolini","Benjamin Franks","Benjamin Tucker","Berkman","Berneri","bibliography","bicycles","Biófilo Panclasta","biography","biology","birth control","Black &amp; Red","Black &amp; Red Number 2","black anarchism","Black and Red","black bloc","Black Flag","Black Liberation Army","black nationalism","Black Panther Party","Black Panthers","Black Seed","Bob Black","bolchevism","Bolivarian","Bolivia","bombs case","Bonanno","Bonnot Gang","Bookchin","book review","borders","bosses","Branch Davidians","Brandon Darby","Brazil","Breton","Britain","Broken Windows theory","Bruce Lee","B. Traven","buddhism","Buenaventura Durruti","Bulgaria","Bull-Fighting","bureaucracy","Bush","Camatte","Camus","Canada","Canenero","capital","capitalism","car culture","Caribbean","casseur","CCF","Central America","chaos theory","character","Charles Baudelaire","Charles Eisenstein","Charles Fourier","Chaz Bufe","Chiapas","Chicago","childhood","children","Chile","China","Chris Dixon","Chris Hedges","Christ","Christian","Christianity","Christmas","Christopher","Christopher Columbus","Church of the SubGenius","cinema","cities","citizenism","city","civil disobedience","civilization","civil rights","Civlization","Clamshell Alliance","clandestinity","class","classical","classism","class struggle","class struggle anarchism","class war","Class War Federation","CNT","coercion","cold war","Colin Ward","collectives","college","Colombia","colonialism","colonization","Columbia University","commodification","Common Ground","commoning","communes","communication","communism","communist","community","community organizing","compassion","competition","complexity theory","computers","confederation","congress","connection","consensus","consent","conspiracy","constitution","Contrainfo.espiv.net","counterculture","country life","Creating Anarchy","creativity","crime","CrimethInc.","crisis","critical theory","criticism","critique","Cuba","cultural geograpy","culture","culture industry","Dada","Daniel Guérin","David Graeber","David Solnit","David Thoreau Wieck","D. Caboret","death","decentralization","decivilizing","deconstruction","deep ecology","Deep Green Resistance","degrowth","Deleuze","democracy","Democratic Convention","Demolition Derby","Derrick Jensen","Derrida","Descartes","deschooling","desire","Destruction","Detroit","development","Diavolo in corpo","direct action","discordian","diversity","diversity of tactics","Dolgoff","domestication","Don LaCoss","Do or Die","Do or Die #19","Dorset","drugs","dual organizationalism","Durruti","Dwight Macdonald","Dyer D. Lum","dystopia","Earth First!","Earth First! UK","eco action","ecologist","ecology","economic alternatives","economics","economy","editorial","education","ego-anarchism","egoism","egoist","Egypt","elections","ELF","Elisée Reclus","elitism","El Libertario","Émile Armand","Emile Henry","Emma Goldman","Empire","enclosure","England","environment","Environmental activism","environmental restoration","Epistemology","equality","Eric McDavid","Ernest Coeuderoy","Ernesto Che Guevara","erotic","Errico Malatesta","escalation","Esperanto","essays","essentialism","ethics","EU","Europe","event","Everyday life","Evo Morales","exclusion","execution","exile","expropriation","EZLN","factory occupation","FAI","failure","fallout","family","fantasy","FAQ","fascism","FBI","federalism","feeling","feminism","feminist","Feral Faun","fiction","Fifth Estate","Fifth Estate #303","Fifth Estate #304","Fifth Estate #350","Fifth Estate #352","Fifth Estate #358","Fifth Estate #359","Fifth Estate #360","Fifth Estate #364","Fifth Estate #365","Fifth Estate #378","Fifth Estate #381","Fifth Estate #382","Fifth Estate #383","Fifth Estate 384","Fifth Estate #386","Fifth Estate #389","film review","Film Script","film theory","first international","food","Food Not Bombs","foraging","fordism","Foucault","France","France 1968","Francisco Ferrer","Fredy Perlman","free association","Freedom","Freedom Press","free love","French","French revolution","frere dupont","Friedrich Nietzsche","FTAA","fukushima","futilitarianism","futurist","g20","games","gatherer-hunters","gender","gender roles","genealogy","general strike","Genetic Engineering","Genetic Modification","Genoa 2001","gentrification","Geography","George Fontenis","George H. Smith","Georges Bataille","Georges Palante","Georges Sorel","Germany","Gery Elkin","gift economy","Glasgow","GLBT","globalisation","global warming","Godwin","Gómez","government","grand jury","graphics","Great Britain","Greece","green","green anarchism","Green Anarchist","Green Anarchist #68–69","Green Anarchist #70","green anarchy","Green Anarchy #18","Green Anarchy #19","Green Anarchy #20","Green Anarchy #21","Green Anarchy #24","Green Anarchy #25","Green Anarchy #6","Green Anarchy #8","Green Anarchy #9","green mountain","green mountain anarchist collective","green scare","green syndicalism","green syndicalist","grief","group","guerrilla theater","guilt","guns","Gustav Landauer","gustavo rodriguez","Guy Aldred","Guy Debord","hacking","Haiti","Hakim Bey","Han Ryner","hardcore","Haymarket","healing","health","Hegel","Herbert Spencer","hierarchy","highway construction","hippies","historical","history","Home Colony","Honduras","housing","Huey Newton","Hugo Chavez","humanism","human rights","human strike","Hurricane Katrina","Iain McKay","ID","Ida Mett","ideas","identity","ideology","illegalism","Il Libertario","Il Silvestre","Il Viaggio","imagination","Immigrants","immigration","imperialism","India","indigenous","indigenous solidarity","Indignado Movement","individualism","individualist","individualist anarchism","industrial civilisation","industry","informant","infoshops","infrastructure","injusttice","Institute for Anarchist Studies","Institute for Experimental Freedom","instruction","Insurgency Culture Collective","insurrection","insurrectionary","insurrectionist","intellectuals","international","internationalism","intersectionality","interview","intimate relationships","introduction","introductory","Iraq","Ireland","Islam","Israel","Israel/Palestine","Italian Immigrants","Italy","IWW","Jacques Camatte","James Hutchings","Janet Biehl","Jan Wacław Machajsk","Japan","jargon","Jason McQuinn","Jennifer Whitney","Jiddu Krishnamurti","J. Kellstadt","jobs","Jo Freeman","Johann Most","John Clark","John Connor","John Filiss","John Jordan","John Moore","John Zerzan","Joseph Labadie","journalist","Judi Bari","justice","Kalamazoo","Kate Austin","Kenneth Rexroth","Kevin Tucker","Killing King Abacus","Killing the Artist","Kleomenis Savanidis","Korea","Kropotkin","Kurdistan","Kurds","La Banquise","labor","labor organizing","labor struggle","labour","L’anarchie","land struggles","language","L’arrembaggio","Latin America","Laurance Labadie","Laureano","law","Lawrence Jarach","leaders","leftism","legalization","legal system","L’En-Dehors","Leninism","Leon Czolgosz","Leo Tolstoy","letter","letters","Letters of Insurgents","Leval","Lev Chernyi","Lev Tolstoy","liberal","liberalism","liberals","Libertarian Communism","libertarian socialism","libertarian socialist","Libya","life","literature","logic","london","Loose Cannons","Lorenzo Komboa Ervin","Lorraine Perlman","Los Angeles","love","Lucy E. Parsons","Luddites","Ludlow Massacre","Luigi Galleani","Lybia","Lysander Spooner","M-15","Macedonia","Madrid","magic","Malatesta","Malcolm X","manifesto","Manolo Gonzalez","Maoist","Mapuche","Marcus Graham","Marie Louise Berneri","Marie Mason","marijuana","marriage","Marx","marxism","marxist","Mary Wollstonecraft","mass","mass society","materialism","Mauricio Morales","Max Anger","Max Nomad","Max Stirner","May","May 1968","McKinley","media","medical team","metal","metaphysics","Mexico","Michael Bakunin","Michael Hardt","Michael Schirru","Michail Bakunin","Michel Foucault","middle class","Middle East","militarism","military","Millard Berry","miners strike","misanthropy","modernity","modern school movement","Mohandas Gandhi","monarchy","money","Montreal","morality","Morris","Mother Earth","MOVE","movement","Mr. Blobby","Mujeres Libres","municipalism","Murray Bookchin","Murray Rothbard","music","Mutual aid","mutualist","myth","Naomi Klein","nationalism","national liberation","Native Youth Movement","NATO","natural law","nature","Necrotic State","NEFAC","negation","neighborhood assemblies","Neno Vasco","neo-liberal","neoliberalism","neo-luddism","Nestor Makhno","Netherlands","New Model Army","New Orleans","New York","New York City","NGO","Nicholson","Nietzsche","nihilism","nihilist","NIMBY","Noam Chomsky","no-compromise","non-cooperation","Non Fides","non-monogamy","non-violence","nonviolence","North America","North Korea","nostalgia","not anarchist","nuclear","nudism","NY","Oakland","Oaxaca","obituary","occupation","Occupied London","Occupy","Occupy Wall Street","Oceania","October Revolution","ontology","Operation Ardire","opposition","oppression","Oregon","organization","Os Cangaceiros","Oscar Wilde","oxymoron","pacifism","pacifist","paedophilia","Palacio Uribe","Palestine","Palmer Raids","panarchy","Papua","Papua New Guinea","Paris","Paris Commune","Parliament","Passion Fruit","Paterson","patriarchy","Patricio McCabe","Patrick Lincoln","Paul Feyeraband","Paul Goodman","peace","peak oil","peasants","pedagogy","Peirats","permaculture","personalities","Personal revolt","Perspectives on Anarchist Theory","Peru","pessimism","Peter Gelderloos","Peter Joseph","Peter Lamborn Wilson","Peter Marshall","Petersburg","Peter Staudenmaier","Peter Werbe","Pëtr Kropotkin","P. Garrone","philosophy","Pierre-Joseph Proudhon","piracy","pirates","Plan B","platform","platformism","platformist","play","plays","pleasure","pluralism","poetic terrorism","poetry","Poland","police","police brutality","policing","political parties","political philosophy","political repression","Politics","Politics is Not a Banana","polyamory","population","populism","pornography","post-anarchism","post-civ","poster","post-industrial","post-left","post-leftism","postmodernity","post-scarcity","post-structuralist","post-world war II","power","practical anarchism","practice","praxis","prefiguration","prefigurative politics","prehistory","preparation","presence","primativism","primer","primitivism","primitivist","prison","prisoners","prisoner support","privilege","progress","projectuality","promiscuity","propaganda","propaganda by the deed","propaganda of the deed","property","proprietarians","protest","psychological","psychology","public space","publishing","Puente","Puget Sound","punishment","punk","Pyotr Arshinov","Quakers","quantum physics","queer","race","racism","radicalism","radicals","Ralph Waldo Emerson","Rami Sirianos","Raoul Vaneigem","rape","rape culture","rationalism","Ravachol","realism","reality","recruitment","recuperation","reformism","rejection","relationships","relativism","religion","Renzo Novatore","reportback","repression","reproduction","research","resistance","resistance mass society","responsibility","restorative justice","review","revolt","revolution","revolutionary anarchism","revolutionary women","rewilding","Ricardo Flores Magón","Richard Hunt","Richards","right libertarian","right libertarianism","riot","riots","RNC 2008","robbery","Robert Anton Wilson","Robert Minor","Robinson","Rob los Ricos","Rocker","Rodríguez Triana","Roger Gregoire","Rooum","Ross Winn","Rudolf Rocker","rumorology","rural","rural life","Russia","Russian Revolution","sabotage","Sacco and Vanzetti","sailing","Samuel Edward Konkin III","Sansom","sasha k","satire","Saul Newman","savage","scarcity","Scarlet Letter Archive","school","science","scientific method","scientism","Scotland","SDS","Seattle","second wave","secularism","security","self-defense","self-determination","self-improvement","self-organization","self-propulsion","self-Reliance","self-theory","Serbia","Severino Di Giovanni","sex","sexism","sexuality","sex work","short stories","Sibilla Vane","Silvio Gesell","simple living","single issue","situationist","situationist international","situationists","skepticism","slavery","Snap Dragon","snitches","Social Anarchism","Social Anarchism #19","Social Anarchism #20","Social Anarchism #25","social centres","social commentary","social control","social democracy","social ecology","Social Forum","socialism","social revolution","social sciences","social war","society","solidarity","song","Souchy Dantillan","South Africa","South America","sovereignty","space","Spain","Spain 1936","Spain ’36","Spanish Revolution","Species Traitor","spectacle","speech","spirituality","spontaneity","squatters","squatting","Starhawk","state capitalism","state power","State socialism","statist ideology","Stephen Booth","stories","strategy","strike","Structural Violence","student movement","students","students for a democratic society","subjectivity","subversion","suffering","Süreyyya Evren","surrealism","surrealist","surveillance","Surveillance Camera Players","survival","survivalism","sustainability","Sweden","Switzerland","Sydney libertarianism","symbols","syndicalism","syndicalist","synthesis anarchism","systems theory","Tadzio Müller","Taoism","Tarnac 9","taxes","TAZ","teargas","technology","Ted Kaczynski","teleology","terrorism","The Alarm","theater","the coming insurrection","the commons","The Dispossessed","theft","the Institute for Anarchist Studies","the Internet","the left","The Matrix","theory","theory and practice","The Rag","The Raven","The Sad Truth","the State","third world","time","Tim Simons","TIPNIS","Tiqqun","tokenism","topology","town children","tracking","trade","trade unions","training","transfeminism","transformation","transition","translation","transport","travel","trial","tribute","Trotskyism","truth","Turkey","Turner","UK","UK Anarchist Federation","Ukraine","Umanita Nova","Unabomber","underground press","unemployment","union of egoists","unions","United Kingdom","United States","universalism","universities","Up against the wall/Motherfucker","urbanism","Urban Revolt","urban riot","Uri Gordon","Ursula K. Le Guin","USA","US foreign interventions","utilitarianism","Utopia","utopian socialism","vagrancy","Vaillant","Valerio Evangelisti","Vancouver","vanguard","veganism","Venezuela","vermont","vermont republic","V for Vendetta","Victor Serge","Vietnam war","village children","violence","virtue ethics","Voltairine de Cleyre","voluntary servitude","voyage","Waclaw Machajski","wage labor","war","Ward","Ward Churchill","wayfinding","Wildcat Inside Story","wildness","Wilhelm Reich","Willful Disobedience","Willfull Disobedience","William Godwin","Wills","Wilson","witches","Wiwa Wewo","Wobblies","Wolfi Landstreicher","women","work","workers","workers’ control","workers solidarity movement","working class","World Social Forum","World War I","World War II","Yiddish","yippies","youth","Youth International Party","Yugoslavia","Zabalaza","Zapatistas","Zeitgeist","Zen","Zero Magazine","zionism","Zo d’Axa"];;
+	function split( val ) {
+	    return val.split( /[;,]\s*/ );
+	}
+	function extractLast( term ) {
+	    return split( term ).pop();
+	}
+
+	$( "#SORTtopics" )
+	    .bind( "keydown", function( event ) {
+		if ( event.keyCode === $.ui.keyCode.TAB &&
+		     $( this ).data( "autocomplete" ).menu.active ) {
+		    event.preventDefault();
+		}
+	    })
+	    .autocomplete({
+		minLength: 0,
+		source: function( request, response ) {
+		    // delegate back to autocomplete, but extract the last term
+		    response( $.ui.autocomplete.filter(
+			availableTags, extractLast( request.term ) ) );
+		},
+		focus: function() {
+		    return false;
+		},
+		select: function( event, ui ) {
+		    var terms = split( this.value );
+		    terms.pop();
+		    terms.push( ui.item.value );
+		    terms.push( "" );
+		    this.value = terms.join( ", " );
+		    return false;
+		}
+	    });
+    });
+    $(document).ready(function() {
+	var availableTags = ["325 Magazine","Aaron Leaf","Abbie Hoffman","Abdul Kadar El Janaby","Abraham DeLeon","ACME Collective","Adam Bregman","Adeline Champney","Adonide","Adreba Solneman","Affinity Project","A friend of Ludd","A.G.C.","A. G. Schwarz","A.J. Baker","A. J. P. Taylor","A. Kent MacDougall","Alain C.","Alain Pengam","Alain Sergent","Alan Franklin","Alan MacSimoin","A. Lapayre","Alardo Prats","Alaric Malgraith","ALARM","Albert Camus","Albert Lévy","Albert Libertad","Albert Meltzer","Alden Wood","Al-Djouhall","Aldo Perego","Alejandro de Acosta","Alessio L.","Alexander Berkman","Alexander Brener","Alexandra David-Néel","Alex Comfort","Alexei Borovoy","Alex Gorrion","Alexis Buss","Alexis Passadakis","Alex Trotter","Alfredo M. Bonanno","Ali Moosaavi","Ali Tonak","Alkis","Allan Antliff","All London Anarchist Revolutionary Mob","Alternative Libertaire","Amadeo Clavijo Rarmírez","A. Mary Pranxter","a.m.b.","amberraekelly","Amédée Dunois","Amelie Lanier","América Scarfó","A. Morefus","Amorey Gethin","Amos Keppler","Amy Rothstein","An anarchist without the habit of deconstruction","Anarchismo Collective","Anarchist Archives Group from Athens","Anarchist Federation","Anarchist individualities from Lucca","Anarchist International","Anarchists","anarchists at the Caracas Alternative Social Forum (2006)","Anarchist Studies Network","Anarcho","Anarcotico","Andie Nordgren","Andrea Dworkin","Andreas-Dimitris Bourzoukos","Andreas Tsavdaridis","André Breton","Andrej Grubacic","Andre Lorulot","André Veidaux","Andrew C. Kennis","Andrew Dobbs","Andrew Flood","Andrew Hedden","Andrew X","Andrzej Tymowski","Andy Robinson","Angela Beallor","Angry People","Angustia Celeste","Anil Vem","Anna Lee Preyapongpisan","Anna Propos","Ann Hansen","Ann Howe","Annie LeBrun","anon.","Anonymous","An Organizer","Anselme Bellegarrigue","Anselm Ruest","Antagonism","Anthony Arrabalr","Anti-Fascist Action","Anti-Racist Action","Anti-System Cores","Antonio Budini","Anu Bonobo","Aragorn!","Armando Diluvi","Armand Robin","Arne Næss","Arsenal","Arthur J. Miller","Arthur Ranc","artnoose","Arvip Peschel","ASAN","A. Shapiro","Ashen Ruins","Asher","Athens-Thessaloniki Solidarity Collaboration","Attila Kotányi","Aufheben","Auguste Vaillant","August Gérard","Augustin Souchy","August Spies","Avraham Yassour","Babis Tsilianidis","Babs Raeside","baedan","Ba Jin","Balkan Anarchists of Northern Europe","Barbara Schurz","Barocchio Occupato","Bartolomeo Vanzetti","Batko Group","Bay of Rage","Becky","Beggar","bell hooks","Ben D.","Benedetto Gallucci","Benjamin Péret","Benjamin Tucker","Ben Lear","Ben L. Reitman","Ben Satterfield","Bernard Lazare","Bernard Marszalek","Bertrand Russell","Beyond Civil Disobedience","Bill Christopher","Bill Wood","Biófilo Panclasta","Black Action Movement","Black &amp; Red","Black &amp; Red correspondents","Black Flag","Black Maria","Black Powder","Bleu Marin","Bob Black","Bob Brubaker","Bobby Whittenberg-James","Bob Maier","Boston Anarchist Drinking Brigade","Boston Anarchists Against Militarism (BAAM)","Boston NEFAC","Brady McGarry","Bratach Dubh","Brent Ladd","Brian A. Dominick","Brian Amesly","Brian Kane","Brian McCarvill","Brian Morris","Brian Oliver Sheppard","B. Rosales de la Rosa","Bruno","Bruno Filippi","Butch Lee","Cahiers de L’Humanisme Libertaire","Caitlin Hewitt-White","Camille","Camillo Berneri","Canenero","Carl Einstein","Carl Nold","Carol Ehrlich","Carol Mazer","Carrie Feldman","Cast","Castoriadis","Cathy Kauflin","Cathy Levine","C. E. Hayes","Cesare Lombroso","C.G.","Charlatan Stew","Charles Jacquier","Charles Lutwidge","Charles Malato","Charles Reeve","Charles Thorpe","Charlie Baird Snr","Charlie Crute","Chaz Bufe","Chekov Feeney","Chellis Glendinning","Chris Cararra","Chris Crass","Chris Dixon","Chris Dugan","Chris Kortright","Chris Pollina","Chris Sitka (Napaltjarri)","Christian Becker","Christopher Wellbrook","Chris Wilbert","Chris Wilson","Chuck Morse","Chuck Munson","Cindy Milstein","C. Inza DeBoise","Claire Fontaine","Class War Federation","Clayton Dewey","Clément Duval","Clive Porabou","C. L. James","Coatixnundi","Colin Ward","Colin Wright","Collective Inventions","Columbia Anarchist League","comité invisible","Commie00","Committee on Higher Education (C.H.E.)","Common Cause Ottawa","Conor McLoughlin","Consent Withdrawn","Conspiracy of Cells of Fire","Cornelius (trans. David Ames Curtis)","Coy McKinney","Craig Evarts","Craig Marshall","Craig Rosebraugh","Cricket","CrimethInc.","Crisso and Odoteo","Cristoph Lang","Crn Blok","Crocus Behemoth","C.T. Butler","Curious George Brigade","Daibhidh","Dale Allen Pfeiffer","Dan Georgakas","(d)anger","Daniel Cohn-Bendit","Daniel Colson","Daniel Guérin","Darren Jones","Dave","Dave Antagonism","Dave Foreman","Dave Hanson","Dave Neal","Dave Negation","Dave Strano","David Berry","David Broder","David Carr","David Graeber","David Orten","David Orton","David Porter","David Solnit","David Thoreau Wieck","david van deusen","David Watson","David Wieck","D. Caboret","Deirdre Hogan","Dennis Fox","Deric Shannon","Dermot Streeran","Derrick Jensen","Des Réfractaires","Diego Abad de Santillan","Diego Rios","Dielo Truda","Dimitris Dimtsiadis","Dimitris Fessas","Dina Fisher","Diva Agostinelli","D. J. Ivison","Dominique Karamazov","Dominique Misein","Donald Rooum","Don LaCoss","Do or Die","Doris and Lanphear","dot matrix","Doug Bolling","Doug Imrie","Duncan Campbell","Duwan Tyson","Dwight Macdonald","Dyer D. Lum","E.B. Maple","Echanges et Mouvement","Echo","E. Colin Ruggero","Edgar Bauer","Edgar Rodrigues","editor","Ed Stamm","Edward Abbey","Edward Avery-Natale","Edward Carpenter","Edward Conlon","Edwin J. Kuh","E. Kerr","Elaine Leeder","Elbert Hubbard","Eli Maybell","Elisée Reclus","El Libertario","El Libertario editorial collective","El Paso","El Paso Occupato","Émile Armand","Émile Henry","Émile Pouget","Émile Zola","Emma Goldman","E. Moraletat","Endangered Phoenix","Enrique de San Martin","Enzo Martucci","Eric French","Eric Geislinger","Erich Mühsam","Erick Heroux","Eric McDavid","Erik Buelinckx","Erinne Vivani","Errico Malatesta","Escalating Identity","Étienne De La Boétie","Eugene V. Debs","Ewa Jasiewicz","Ewen Chardronnet","Ezra Heywood","Fabian Tompsett","Fadil Abas Hadi","Farid Lariby","F. A. Ridley","Faroq El Juridy","Federica Montseny","Federico Arcos","Federico Buono","Feral Faun","Fifth Estate","Fillion","Fire Cells Conspiracy","flesh machine//ego te provoco//comrades","Flint Jones","Flint (NEFAC)","Flor do Asfalto squat","For Ourselves","Francesco S. Nitti","Francisco Ferrer","Francis Ronsin","François Martin","Frank Fernández","Frank Harris","Franklin Rosemont","Fredy Perlman","Freedom (ed.)","Freedom Press (ed.)","Frére Dupont","Friedrich Nietzsche","Fundi","Gabriel Kuhn","Gabriel Pombo Da Silva","Gaetano Manfredonia","Gary Elkin","Gary Snyder","Gaston Leval","Gavin","g.c.","Gene Ray","Geoff Hall","Geoffrey Ostergaard","George Barrett","George Cairncross","George Mathias Paraf-Javal","George Molnar","George Nicholson","George Orwell","Georges Bataille","George Sessions","Georges Palante","George T. Yu","George Woodcock","Ghazi Younis","Gilles Dauvé","Gina Lynn","Giovanna Berneri","Giuseppe Ciancabilla","G. L. Doebler","Glenn Parton","Gonzalo Buenahora","Graham Burnett","Graham Purchase","Green Anarchist","Green Anarchist International Association","Green Mountain Anarchist Collective","Greenrevolutionary","Gregory Knapp","Griffin","Grigori Petrovitch Maximov","Grimalkin","Guerra Sociale","Guerre au Paradis","Gustav Landauer","Gustavo Rodriguez","Guy A. Aldred","Guy Debord","G. Yvetot","Hakim Bey","Hamilton","Han Ryner","Hans Niemeyer","Haris Hatzimichelakis","Harold H. Thompson","Harriet Witt","Harry Baecker","Harry Cleaver","Heatwave Communist-Anarchist Federation","H.E. Kaminski","Héme","Henry David Thoreau","Henry O’Mad","Herbert Read","High Priest Wombat","Hippolyte Havel","Holley Cantine","Homo Ludens!","Horst Fantazzini","Howard Besser","Howard J. Ehrlich","Howard Zinn","H.T.","Hugh Owen Pentecost","Hugo Ball","Hutchins Hapgood","I-AFD","Iain MacSaorsa","Iain McKay","Ian Mayes","Ian Welsh","Iconoclasta for Creative Individualist Anarchism","Ida Mett","I.E. Igariwey","ifinsiturcon","Ihar Alinevich","Ilan Shalif","Ilias Nikolau","Il Pugnale","Individualists Tending toward the Wild","Indubio Pro Reo","Industrial Workers of the World","Insurgent-S","Isa","Isaac Puente","Isabell Eberhardt","Ivan","Iván Darío Alvarez","Jack Robinson","Jacob McKean","Jacqueline V.","Jacques Camatte","James Barnes","James G. Huneker","James Guillaume","James Herod","James Horrox","James Hutchings","James L. Walker","James Pendlebury","James W. Cain","Jamie Heckert","Jamrat Mason","Jan D. Matthews","Jane Meyerding","Jane Talisman","Janet Biehl","Jan Wacław Machajski","J.A. Osorio Lizarazo","Jason Adams","Jason Godesky","Jason Justice","Jason McQuinn","Jason Slade","Jay Amrod","Jay Fox","J. Clancy","J. Clover","J.E.","Jeanette Winterson","Jean-Pierre Voyer","Jean Weir","Jeff Ferrell","Jeffrey Luers","Jeff Shantz","jenny","Jeremy Brecher","Jeremy R. Main","Jerome Marcantel","Jesse Cohn","Jessica Moran","Jim Feast","Jim Jones","Jimmy Raeside","J. Kellstadt","Joanne Lauck","Joaquin Cienfuegos","Joe Hill","Joe King","Joey Stalin","Joff","Johannes Paul Schul Meyer","Johann Kaspar","Johann Most","John Badcock Jr.","John Beverley Robinson","John Bowden","John Brinker","John Bruning","John Cage","John Clark","John Connor","John Crump","John Filiss","John Henry Mackay","John Hill","John Jordan","John M. Hart","John Moore","John P. Altgeld","John Severino","John Taylor Caldwell","John Zerzan","Jonathan A. Christiansen","Jon Horelick","José Antonio Gutiérrez D.","Joseph Déjacque","Joseph Jablonski","Joseph Jean-Marie Tortelier","Joseph Labadie","Joseph M. Smith","Joseph Wagner","Jose Pierats","Josh","Josh Fattal","Josh Harper","Joshua Finnell","J. Rogue","Juancarlos Gamboa Martínez","Juan el Cruzado","Judi Bari","Jules Rivet","Julia May Courtney","Julie Belmas","Julieta Paredes","Julius Lester","j.w.","Kanno Sugako","Kan San","Kasimere Bran","Kate Austin","Keith Sorel","Kellen Kass","Ken Knabb","Kenneth C. Wenzer","Kenneth Maddock","Kenneth Rexroth","Kerry Thornley","Kevin Tucker","Khaled Satour","Kharlanchuck Dzmitry","King Mob","Kingsley Widmer","Kostas Gournas","Kristian Williams","Kronstadt Editions","Krysti Guest","Kuwasi Balagoon","Kytha Kurin","L","Lance Klafeta","Lane","Larry Gambone","Larry Law","Larry Weiss","Larry W. Giddings","Laure Akai","Laurel Luddite","Law","Lawrence Jarach","Layla AbdelRahim","Lee Paxton","Lee Robert Blackstone","Lee Yu See","Le Garcon Dupont","Leif Fredrickson","L’Encyclopedie des Nuisances","Leonard Williams","Leopold Roc","Leo Tolstoy","Leslie James Pickering","Lev Chernyi","Lewis Call","Lewis Mumford","Lia","Liam Sionnach","Liana Doctrine","Libertarian Socialist Organisation","Lilith","Linda","Linda Lanphear","Lindsay Parme","Lisa Berger","Lisiunia (Lisa) A.","Lola Ridge","Lope Vargas","Lore Axe","Lorenzo Kom’boa Ervin","Lorna McLaughlin","Lorraine Perlman","Lost Children’s School of Cartography","Louis Adeane","Louise Bryant","Louise Michel","Louis Léveillé","Louis Lingg","Louis Michelson","L. Susan Brown","Luca Tornatore","Luciano “Tortuga” Pitronello","Lucia Sanchez Saornil","Lucien van der Walt","Luci Williams","Lucy E. Parsons","Luigi Fabbri","Luigi Galleani","Luis A. Fajardo Sánchez","LydiettCarrión","Lynne Farrow","Lysander Spooner","Machete","Mae Bee","M. Annette Jaimes","Manolo Gonzalez","Manuel Devaldès","Marc L. Sherman","Marco Beaco","Marco Camenish","Marcus Graham","Mare Almani","Margaret Killjoy","Marian Leighton","Marianne Enckell","Marieke Bivar","Marie Louise Berneri","Marie Louise Berneri Memorial Committee","Marie Mason","Marilyn Werbe","Mario Cutajar","Marius Jacob","MaRK","Mark Kosman","Mark R. Seely","Marlow","Maroin Dib","Martin Wright","Massimo Passamani","Matches","m(A)tt","Matt","Matt Hern","Matthias Schmelzer","Maurizio De Simone","Max Anger","Max Baginski","Maxime Leroy","Max Lieberman","Max Nettlau","Max Nomad","Max Sartin","Max Stirner","MaxZine Weinstein","Maynard Whitlow","Mazen Kamalmaz","M. Dashar","M.D.P.","Meir Turniansky","Melancholic Troglodytes","Melbourne Food Not Bombs","Melvin W. Jackson","Mendel-Gleeson","Meteor","Mia X. Kursions","Michael Albert","Michael &amp; Anne Carlson","Michael Becker","Michael E. Coughlin","Michael Gurnow","Michael Löwy","Michael Schmidt","Michael William","Michail Bakunin","Micheal William","Michel Donnegan","Michele Pontolillo","Michel Onfray","Midnight Notes","Miguel Xolotl","Mike Andrew","Mike Gilliland","Mike Long","Mikhail Tsovma","Mikko Virtanen","Millard Berry","Mitchell Halberstadt","M. J. Essex","M. Megaceros","Moebius Cube","Mohamed Jean Veneuse","Mollie Baird","Molly Steimer","Monsieur Dupont","Moorish Orthodox Radio Crusade","Moxie Marlinspike","M. Sartin","Murray Bookchin","Mustapha Khayati","Mu Xidi","Nachie","Nancy Krieger","Natasha Verco","Nathan Jun","Native Youth Movement Communications","Neal Keating","NEFAC","Neo Bonobo","Nestor Makhno","Nicholas Lazarevitch","Nick DiSpoldo","Nick Heath","Nicolas Barricada Collective","Nicolas Phebus","Nicolas Walter","Nihilo Zero","Nikos Maziotis","Nikos Romanos","Noam Chomsky","No Compromise","Noir et Rouge","Non Fides","Noose Papier","Nora Butler Burke","Norman Abraham","Nornan Lewis","Nutmeg Brown","Octave Garnier","Octave Mirbeau","Octavio Alberola","Olivier and Dan","Omnipresence Collective","Organise!","Orlando Villanueva Martínez","Os Cangaceiros","Oscar Wilde","Osvaldo Bayer","Otto Rühle","o.v.","Paolo","Patricia Freund","Patricio McCabe","Patrick Dunn","Patrick Lincoln","Patrizia","Paul Avrich","Paula Zerzan","Paul Barbot","Paul Beiter","Paul Berthelot","Paul Comeau","Paul Cudenec","Paul Goodman","Paul Lafargue","Paul Messersmith-Glavin","Paul Petard","Paul Rabin","Paul Reclus","Paul Shepard","Paul Z. Simons","Peggy Kornegger","Pendleton Vandiver","Penelope Nin","Penelope Rosemont","Penny Rimbaud","Percival Goodman","Peter Gelderloos","Peter Lamborn","Peter Lamborn Wilson","Peter Principle","Peter Sabatini","Peter S. Barker","Peter Staudenmaier","Peter Werbe","Petey Schnell","Pëtr Kropotkin","P. Garrone","Philip","Philip Richlin","Philip Sansom","Phillip Sansom","Phoenix Class War Council","Phoenix Insurgent","Pierleone Porcu","Pierre Clastres","Pierre-Joseph Proudhon","Pierre Ramus","Pjotr Arshinov","P. Milstein","P. Murtaugh","Pola Roupa","Porfido","Prasanta Chakravarty","Praxedis G. Guerrero","Prole Cat","P. Turner","Q. Libet","Rafael Gómez Picón","Rafael Uzcategui","Raffaele Schiavina","Ralph Franklin","Rami Syrianos","Randolph Bourne","Ran Prieur","Ransu","Raoul Odin","Raoul Vaneigem","Ravachol","Ravage Editions","RB","R.D.B.","Rebecca DeWitt","rebelaze","Red Robbie","Red Rosia","Red Sonja","RedWolfReturns","Reginald Reynolds","Renán Vega Cantor","Renzo Novatore","Research &amp; Destroy","Research and Destroy","Ret Marut","Revolutionary Anti-Authoritarians of Color","Revolutionary Committee of Public Health","Ricardo Flores Magón","Richard Ades","Richard Boyle","Richard Heinberg","Richard Hunt","Richard Wieske","Rick London","Rita Katrina-Andrews","Ritmomaquia","Robby Barnes","Robert Anton Wilson","Robert A. Pinkerton","Robert Brothers","Robert Graham","Robert Hart","Robert Louzon","Robert Paul Wolff","Robert P. Helms","Robert Scalapino","Robert W. Zeuner","Rob los Ricos","Rob Sparrow","R.O. CCF","Rochester Red and Black","Rocktown Rebel","Rodney Aitchtey","Roger Gregoire","rogue element","Roman Ervantian","Romanienko","Ron","Ron Leighton","Ron Sakolsky","Rory McGowan","Rose Pesotta","Ross Winn","Roxanne Dunbar-Ortiz","Ruby Flick","Rudolf Rocker","Rudy Perkins","Russell Blackwell","Russell “Maroon”","Russell Means","Rusty Nail","Saint Schmidt","Sakolsky","Sal Insieme","Sally Darity","Salomo Friedlaender","Salvatore Salerno","Sam Dolgoff","Sam FantoSamotnaf","Sam Mbah","Sam Moss","Sammy Scams","Sam Thompson","Sandra Jeppesen","Sandy Krolick","Saoud Salem","Sarah White","sasha k","Saul Newman","Saura Agni","Sava Devurić","Savage State","Saverio Merlino","Schwartz","Scott of the Insurgency Culture Collective","Scott Rittenhouse","Sean R. Day","Sébastien Faure","Seeds for Change","Selby Semela","Senya Fleshin","Sergei Stepniak","Sergey Nechayev","Sever","Severino","Shannon R. Keith","Sharon Presley","Shawn Hattingh","Shawn P. Wilbur","Shirley F. Fredericks","Shoats","Shūsui Kōtoku","Sidney E. Parker","Silas Crane","silver","Simon Choat","Simon Critchley","Situationist International","Sky","S.L. Lowndes","Snorky the Sea Elf","Sobol","Socrates Tzifkas","Sofia Hildsdotter","Solidarity Federation","Some Roveretan anarchists","Sophia Fagin","Sphinx","Spyro","Staudenmaier","Stephanie McMillan","Stephen Booth","Stephen Daniels","Stephen Jay Gould","Stephen Pearl Andrews","Stephen T. Byington","Stine Gry Jonassen","Strangers In a Tangled Wilderness","Stuart Christie","Students for the Destruction of the State","Subversion","subversive energy","Süreyyya Evren","Susan Song","Svein Olav Nyberg","Sylvie Deneuve","Sylvie Kashdan","Tadzio Müller","Tannie Nyboe","Tanya Z. Solomon","Ta Paidia Tis Galarias","Tara Specter","Tasos Theofilou","Tatanka","Taylor Andrew Loy","Ted Kaczynski","Tegan Eanelli","Teoman Gee","Terms of Endearment Research Syndicate","Terra Selvaggia","Terry Downs","Terry S","T. Fulano","The Anarchist FAQ Editorial Collective","The Anarchosyndicalists Group","The Angry Brigade","The artist formerly known as Nestor Makhno","The Brilliant","The Class War Federation","The Green Anarchy Collective","The Honorable Reverend Black A. Hole","The Leveller","The Litost","Theofilos Mavropoulos","The Red Menace","The Red Sunshine Gang","Theresa Kintz","The Scoffer","Thomas A. Riley","Thomas Nail","Thomas Swann","Thom Metzger","Tim Simons","Tiqqun","Tom Cook","Tom Goyens","Tom Mann","Tom McLaughlin","Tom Smith","Tom Wetzel","Tony Gibson","TPTG","Twin Cities Eco-Prisoner Support Committee","Two Members of the March 22nd Movement","Two Toronto Members","Ulli Diemer","U.N.E.F. Strasbourg","Up Against the Wall Motherfuckers","Uri Gordon","Ursula K. Le Guin","Usul of the Blackfoot","Val Basilio","Vanguard of the Apocalypse","Various Authors","Venona Q.","Vernon Richards","Victoria","Victor Serge","Victor Yarros","Virgilia D’Andrea","Void Network","Voline","Voltairine de Cleyre","Wage Slave X","Walker","Walker Lane","Ward Churchill","W. Awry","Wayne Price","Wayne Spencer","W. Curtis Swabey","Wendy McElroy","Western Wildlife Unit of the Animal Liberation Front","W.G. Thompson","Wildcat","Wildcat Inside Story","Wildroots","Willem Larsen","Will Firth","Willful Disobedience","William C. Owen","William D. P. Bliss","William Gillis","William Godwin","William Manson","William Morris","William M. van der Weyde","Wilson","Windy Hart","Witch Hazel","Wolfi Landstreicher","Workers Solidarity Alliance","Workers’ Solidarity Federation","Workers’ Solidarity Movement","Wu Man","Xavier Oliveras González","XSilent","xYosefx","Yakoub Islam","YearZero","Yiannis Dimitrakis","Yu Shuet","Zo d’Axa"];;
+	function split( val ) {
+	    return val.split( /[;,]\s*/ );
+	}
+	function extractLast( term ) {
+	    return split( term ).pop();
+	}
+
+	$( "#author, #SORTauthors" )
+	    .bind( "keydown", function( event ) {
+		if ( event.keyCode === $.ui.keyCode.TAB &&
+		     $( this ).data( "autocomplete" ).menu.active ) {
+		    event.preventDefault();
+		}
+	    })
+	    .autocomplete({
+		minLength: 0,
+		source: function( request, response ) {
+		    // delegate back to autocomplete, but extract the last term
+		    response( $.ui.autocomplete.filter(
+			availableTags, extractLast( request.term ) ) );
+		},
+		focus: function() {
+		    return false;
+		},
+		select: function( event, ui ) {
+		    var terms = split( this.value );
+		    terms.pop();
+		    terms.push( ui.item.value );
+		    terms.push( "" );
+		    this.value = terms.join( ", " );
+		    return false;
+		}
+	    });
+    });
+</script>
+
+
+<form id="ckform" action="/new" method="post"
+      enctype="multipart/form-data">
+  <fieldset>
+    <p><label><em>Author</em> (for display):<br />
+      <input type="text" name="author" id="author"
+	     maxlength="100" class="required"
+	     size="30"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Authors</em> (for indexing, semi-colon or <em>comma separated list</em>):<br />
+      <input id="SORTauthors"
+	     size="50"
+	     maxlength="250"
+	     name="SORTauthors"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Title</em> (mandatory):<br />
+      <input type="text" name="title"  class="required"
+	     maxlength="100"
+	     size="30"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Subtitle</em> (optional):<br />
+      <input type="text" name="subtitle"
+	     maxlength="100"
+	     size="30"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Title for sorting</em> (you may want to strip the leading "A",
+      "An", "The", and so on; optional)<br />
+      <input type="text" name="LISTtitle"
+	     maxlength="100" size="30"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Topics</em> (mandatory, topics are very important 
+      to browse the library — <em>comma or semicolon separated list</em><br />
+      <input id="SORTtopics"  class="required"
+	     size="50"
+	     maxlength="250"
+	     name="SORTtopics"
+	     value="" />
+    </label></p>
+        
+    <p><label><em>Date</em> of the original publication:
+      (optional, but do your best to find it)<br />
+      <input id="date"
+	     size="50"
+	     maxlength="250"
+	     name="date"
+	     value="" />
+    </label></p>
+    
+    <p><label><em>Source</em> (mandatory) (For texts from the internet use:
+      Retrieved on May 29, 2009 from URL. For texts freshly scanned
+      you may want to use “Scanned from original” or something like
+      that) <br />
+      <input id="source" size="50" maxlength="250"  class="required"
+	     name="source" value="" />
+    </label></p>
+    <p>
+    <label>The <em>language</em> of the text (english, I suppose).<br />
+    <select name="lang">
+      <option
+	 selected="selected"
+	 value="en">
+	English
+      </option>
+      <option 
+	 value="ru">
+	Russian
+      </option>
+    </select>
+    </label>
+    </p>
+    <p><em>The text</em>: please note that you may want to paste
+      from a Word/OpenOffice/LibreOffice/HTML document using the “paste
+      from word” button. This is supposed to preserve the markup. <br />
+      This is a WYSIWYG editor. If you prefer to use
+      the wiki-like syntax leave it as is, fill the required fields
+      above and postpone the editing to the next step.<br />  Image
+      uploading may be done on the next step, when you can review
+      and preview the upload.<br />  Keep in mind that unusually
+      complex formatting will be stripped. Is it possible to add
+      tables and images only on the next step.<br />
+    <textarea id="maineditor" name="maineditor" cols="80" rows="20">&lt;p&gt;Your text here...&lt;/p&gt;    </textarea>
+    </p>
+    <p><label>
+	<em>Notes</em>: Put additional information here (original
+	title, translators, credits, etc). Footnotes go in the
+	body.<br />
+      <textarea id="notes" name="notes" cols="80" rows="5"></textarea>
+    </label></p>
+    <script type="text/javascript">
+      $('#maineditor').ckeditor();
+    </script>
+    
+    <p><label>Keep in mind that I'm cleaning the text and give it back to
+      you in the markup used on this site. It's up to you to check it
+      and finally upload it. Some rarely used markup will be lost in
+      the process. Please check the preview on the next step, where
+      you can also insert images. <br />
+      <input type="submit"
+	     name="go" value="Prepare this text for the archiving"
+	     class="submit" />
+    </label></p>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#ckform").validate();
+      });
+  </script>
+
+  </fieldset>
+</form>
+
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

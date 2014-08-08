@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Anarchism Versus Civilization (Margaret Killjoy) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/margaret-killjoy-anarchism-versus-civilization?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=margaret-killjoy-anarchism-versus-civilization">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Anarchism Versus Civilization
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/margaret-killjoy">Margaret Killjoy</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2010
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anthropology">anthropology</a>
+        <a href="/topics/anti-civ">anti-civ</a>
+        <a href="/topics/post-civ">post-civ</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on 24 August 2010 from <a href="http://www.postcivilized.net/2010/08/anarchism-versus-civilization/">www.postcivilized.net</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="margaret-killjoy-anarchism-versus-civilization.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="margaret-killjoy-anarchism-versus-civilization.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="margaret-killjoy-anarchism-versus-civilization.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="margaret-killjoy-anarchism-versus-civilization.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="margaret-killjoy-anarchism-versus-civilization?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="margaret-killjoy-anarchism-versus-civilization.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="margaret-killjoy-anarchism-versus-civilization.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Margaret Killjoy</h2>
+	
+	<h1 id="textttitleh">Anarchism Versus Civilization</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>In his 2003 polemic <em>Anarchism versus Primitivism</em>, Brian Oliver Sheppard makes the case that primitivism is inherently in contradiction with anarchism.
+</p><p>Much can be inferred from his tone, which is openly mocking. He makes references to how “[u]nfortunately for anarchists, plunging into the primitivist miasma has become necessary,” openly condescending to engage the primitivists at all. But his arguments are mired in absurdities: he mocks primitivists as hypocrites for engaging in technological practices while ignoring the fact that nearly every anarchist of any stripe in capitalist and statist society is not living as she or he preaches.
+</p><p>The core of his argument is that primitivism is authoritarian and therefore irreconcilable with anarchism. But the anarchism he promotes is rather clearly a simplistic and “classical” one, a red anarchism that argues for worker control of a stateless society. He argues that primitivists are stuck in an illusory past that cannot be supported by evidence, yet never acknowledges his complicity in the same behavior; here is a man arguing that anarchism has always been about worker control and communistic ideas, completely ignoring the heterogeneous past and present of anarchism. The individualists, the anarchists-without-adjectives, the mutualists... these people simply never existed, if one is to infer from Brian’s<a href="#fn1" class="footnote" id="fn_back1">[1]</a> piece.
+</p><p>Well-reasoned critiques of primitivism exist, but they are rarely distributed. Instead, self-defeating and remarkably sectarian missives are the norm. But this basic idea, that anarcho-primitivism is no more anarchist than the largely dismissed ideas of “anarcho”-capitalists and “anarcho”-nationalists, is a curious one.
+</p><p>For the sake of argument, I make the opposite case: anarchism is and always has been anti-civilization, and that civilization and anarchism are completely irreconcilable. Anyone who claims to be for civilization and anarchism both is deluding themselves.<a href="#fn2" class="footnote" id="fn_back2">[2]</a>
+</p><p>An anthropologist named Elman Service<a href="#fn3" class="footnote" id="fn_back3">[3]</a> suggested a widely-used system of classification for human cultures that contains four rough categories. Firstly, there are gatherer-hunter bands, which are generally egalitarian; secondly there are tribal societies that are larger, slightly more formal, and have bits of social ranking; third are chiefdoms, which continue down the path of social stratification; and finally there are civilizations, which are anthropologically understood by their complex social hierarchies and organized, institutional governments.
+</p><p>The rejection of complex social hierarchies and government means, therefore, the rejection of civilization. If an anarchist society were to develop, it would be by definition a non-civilized society.
+</p><p>Sure, an argument can be made that “classical” anarchists<a href="#fn4" class="footnote" id="fn_back4">[4]</a> are in opposition to the concept of the State rather than the idea of government per say, but the overwhelming majority of contemporary anarchist thought and dialogue speaks to the rejection of government as something that is inherently tied to the stateform.
+</p><p>So an anarchist society would necessitate either a return to the gatherer-hunter bands or it would — and I consider this option much more likely and much preferable, personally — mean developing something entirely new. I would personally like to call it the post-civilization, but I don’t believe we <em>need</em> to call it that. We simply need to understand it as anarchism.
+</p><p>Elman understood his four-part typology to be illustrative of a linear loss of autonomy. In a band, an individual had liberty. In a civilization, an individual ceded or lost this liberty. Now, Elman was an integration theorist; he believed that citizens in early civilizations gave up their autonomy willingly — in essence, that they signed the social contract, ceding their liberty so as to allow for a more complex society. The opposing theory is conflict theory: that states have, from the beginning, sought to consolidate power into the hands of the few for the benefit of those few.
+</p><p>But no one is arguing that the development from band to civilization hasn’t resulted in hierarchy and a lack of autonomy. This has, historically, been quite simple and linear: the further a society “advances” along these lines towards civilization, the more that liberty has waned.
+</p><p>Anarchism argues for a classless, egalitarian society devoid of coercive authority and therefore argues — and always has — against some of the primary, distinguishing traits that define civilization. To argue in favor of civilization is as absurd as to argue in favor of the state.
+</p><p>Very few modern anarchists would argue against anarcha-feminism. Anarcha-feminism is not understood as a separate thing, alien to anarchism as a whole, but rather as an essential component to the struggle against domination. It is generally understood that there are those who identify more strongly with anarcha-feminism than others. There are those who use it as their personal lens with which to address the world, who lay down important theory and practical organizing to address and overcome patriarchy.
+</p><p>And this, I would argue, is the role of the anti-civilized, the anarcho-primitivists. Anti-civilization thought has greatly deepened our understandings of oppression, with its critique of the division of labor and of linear concepts of progress.
+</p><p>It is as much of a mistake to reject all anarcho-primitivists as genocidal hypocrites as it is to reject all communist anarchists as technophiles who want the enslavement of nature in service of the almighty Worker<a href="#fn5" class="footnote" id="fn_back5">[5]</a>.
+</p><p>Patriarchy, government, capitalism, nationalism, racism, civilization... none of it has a place in the society we envision. And more importantly, none of it has a place in our struggles, here and now.
+</p><p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> It is, of course, the norm to refer to a writer by their last name rather than their first name. This applies much more often to men than women; compare Kropotkin and Bakunin with Voltairine DeCleyre and Emma Goldman.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Or simply use different semantic set and tend to define things differently than I, or this article, do.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> Elman Service, by the way, for some red-anarcho cred, was an American volunteer in the Abraham Lincoln Brigade of the Spanish Civil War, fighting against Franco and the fascists.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> The word “classical” is getting the quotes treatment in this article because I personally disapprove of this oversimplification of “what anarchists have always wanted” that is presented to us by Brian Sheppard as much as I disapprove of the oversimplification of what “primitive people were like” that indeed many primitivists are guilty of.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> Of course, it would be easier for me to not make this mistake myself if I didn’t personally know more than few people who fit these rude stereotypes...
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW">
+<head>
+	<script type="text/javascript">var page_start = new Date();</script>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="kewfPZRKi6SaOAaeUDSQw9AawbOKWiyEOyp2-lMxXBQ" />
+			    <title>LinkedIn 說明中心 － 帳戶驗證</title>
+        
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://zh-tw.help.linkedin.com/euf/rightnow/optimized/1406595580/themes/linkedin/'></base>
+<link href='/euf/rightnow/optimized/1406595580/pages/utils/auth.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+<style type='text/css'>#rn_History_Iframe{position:absolute;top:0;left:0;width:1px;height:1px;visibility:hidden}</style>
+
+	<link rel="shortcut icon" type="image/ico" href="/euf/assets/images/favicons/v1/favicon.ico">
+	<script type="text/javascript">	document.cookie = "realreferrer="+encodeURIComponent(document.referrer)+"; path=/";
+	</script>
+</head>
+<body>
+<iframe id='rn_History_Iframe' title='空歷史記錄監視' src='/euf/rightnow/images/whitePixel.png'>&nbsp;</iframe>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<script>
+var api_callback = 'http://zh-tw.help.linkedin.com/app/answers/detail/a_id/41247';
+var api_key = 'uq9789xsg6uf';
+</script>
+<div class="loading center">
+	<span id="message"></span>
+</div>
+<div id="passthrough_link" class="center">
+	系統會自動將您導向到目標頁面。您也可以按一下<a href="/app/utils/log_error/et/0/ec/7/callback/http%3A%2F%2Fzh-tw.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F41247%2Ffrom_auth%2Ftrue">這裡</a>直接前往。</div>
+<noscript>
+	<div class="noscript center">
+		很抱歉，您需安裝 Javascript 才可使用說明中心。<br><meta http-equiv="refresh" content="5; url=/app/utils/log_error/et/0/ec/6/callback/http%3A%2F%2Fzh-tw.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F41247%2Ffrom_auth%2Ftrue">系統會在 5 秒後將您導向到目標頁面，您也可以按一下<a href="/app/utils/log_error/et/0/ec/5/callback/http%3A%2F%2Fzh-tw.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F41247%2Ffrom_auth%2Ftrue">這裡</a>直接前往。	</div>
+</noscript>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22%5Cu4e3b%5Cu65e8%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22%5Cu72c0%5Cu614b%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22%5Cu6700%5Cu5f8c%5Cu66f4%5Cu65b0%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22%5Cu6700%5Cu5f8c%5Cu66f4%5Cu65b0%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22%5Cu95dc%5Cu9589%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22%5Cu958b%5Cu555f%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22%5Cu7b49%5Cu5f85%5Cu6703%5Cu54e1%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22%5Cu554f%5Cu984c%5Cu5df2%5Cu56de%5Cu5831%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22%5Cu610f%5Cu898b%5Cu53cd%5Cu6620%5Cu5df2%5Cu50b3%5Cu9001%22%2C%22CP_AUTH_JS_LOADING_CONNECT_LIBRARY%22%3A%22%5Cu8f09%5Cu5165%5Cu4e2d......%22%2C%22CP_AUTH_JS_CHECKING_ACCOUNT_STATUS%22%3A%22%5Cu6b63%5Cu5728%5Cu6aa2%5Cu67e5%5Cu5e33%5Cu6236%5Cu72c0%5Cu614b......%22%2C%22CP_AUTH_JS_FETCHING_PROFILE_INFORMATION%22%3A%22%5Cu6b63%5Cu5728%5Cu8b80%5Cu53d6%5Cu6a94%5Cu6848%5Cu8cc7%5Cu6599......%22%2C%22CP_AUTH_JS_LOADING_THE_HELP_CENTER%22%3A%22%5Cu6b63%5Cu5728%5Cu8f09%5Cu5165%5Cu8aaa%5Cu660e%5Cu4e2d%5Cu5fc3......%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22%5Cu57f7%5Cu884c%5Cu6a94%22%2C%22CP_REQUIRED%22%3A%22%5Cu5fc5%5Cu586b%5Cu6b04%5Cu4f4d%22%2C%22CP_INVALID%22%3A%22%5Cu7121%5Cu6548%22%2C%22CP_UPLOADING%22%3A%22%5Cu4e0a%5Cu50b3%5Cu4e2d%22%2C%22CP_SUBMITTING%22%3A%22%5Cu50b3%5Cu9001%5Cu4e2d%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22%5Cu8868%5Cu683c%5Cu5373%5Cu5c07%5Cu5230%5Cu671f%5Cuff0c%5Cu662f%5Cu5426%5Cu7e7c%5Cu7e8c%5Cu7de8%5Cu8f2f%5Cuff1f%22%7D';
+</script>
+<span id="rn_RightNowLogo_1" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"\u8b66\u544a","INFORMATION_LBL":"\u8cc7\u8a0a","HELP_LBL":"\u8aaa\u660e","ERROR_REQUEST_ACTION_COMPLETED_MSG":"\u8981\u6c42\u767c\u751f\u932f\u8aa4\uff0c\u7121\u6cd5\u5b8c\u6210\u52d5\u4f5c\u3002","OK_LBL":"\u78ba\u5b9a","DIALOG_LBL":"\u5c0d\u8a71\u65b9\u584a","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"\u5c0d\u8a71\u65b9\u584a\uff0c\u8acb\u95b1\u8b80\u4ee5\u4e0a\u6587\u5b57\u4ee5\u53d6\u5f97\u5c0d\u8a71\u65b9\u584a\u8a0a\u606f","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u5c0d\u8a71\u65b9\u584a\u7684\u958b\u982d\uff0c\u8acb\u5148\u5ffd\u7565\u5c0d\u8a71\u65b9\u584a\uff0c\u7136\u5f8c\u7e7c\u7e8c","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u5c0d\u8a71\u65b9\u584a\u7684\u7d50\u5c3e\uff0c\u8acb\u5148\u5ffd\u7565\u5c0d\u8a71\u65b9\u584a\uff0c\u7136\u5f8c\u7e7c\u7e8c","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"\u7531\u65bc\u8f38\u5165\u7121\u6548\uff0c\u5728\u9001\u51fa\u8868\u683c\u6642\u767c\u751f\u932f\u8aa4","ERR_SUBMITTING_SEARCH_MSG":"\u60a8\u7684\u8981\u6c42\u4e2d\u6709\u554f\u984c\u3002  \u8acb\u8b8a\u66f4\u641c\u5c0b\u5b57\u8a5e\uff0c\u7136\u5f8c\u91cd\u8a66\u3002","CLOSE_CMD":"\u95dc\u9589","BACK_LBL":"\u80cc\u9762"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"zh-tw.help.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"Au1DOg_l","uh":"b5d6e2e8","uc":"zh-tw.help.linkedin.com\/app\/utils\/auth","b":"ca34356","i":"linkedin:linkedin_zh","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/get-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/json-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Auth.js'></script>
+<script type='text/javascript'> if (top !== self){try {YAHOO.util.Event.onDOMReady = function(type, args, scope){YAHOO.util.Event.addListener(window, 'load', type, args, scope);};} catch(e){}}</script>
+</body>
+</html>

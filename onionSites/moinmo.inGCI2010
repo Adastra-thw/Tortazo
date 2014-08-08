@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta name="verify-v1" content="0WyQ+hn2OtHJ8nIJUihkSAkxCHyVcRg+RXh9VxId8jU=">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+    t.parentNode.insertBefore(s, t);
+})();
+/* ]]> */
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>GCI2010 - MoinMoin</title>
+<script type="text/javascript" src="/moin_static19/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+<script type="text/javascript">
+<!-- // GUI edit link and i18n
+var gui_editor_link_href = "/action/edit/GCI2010?action=edit&editor=gui";
+var gui_editor_link_text = "Edit (GUI)";
+//-->
+</script>
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/moin_static19/modernized/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/moin_static19/modernized/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/moin_static19/modernized/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="MoinMoin: GCI2010" href="/action/rss_rc/GCI2010?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=GCI2010&amp;ddiffs=1" type="application/rss+xml">
+<link rel="alternate" type="application/wiki" title="Edit" href="/action/edit/GCI2010?action=edit">
+
+<link rel="Start" href="/MoinMoinWiki">
+<link rel="Alternate" title="Wiki Markup" href="/action/raw/GCI2010?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/action/print/GCI2010?action=print">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="/GCI2010">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/MoinMoinWiki"><img src="/moin_static19/common/moinmoin.png" alt="MoinMoin Logo"></a></div>
+<div id="username"><a href="/action/login/GCI2010?action=login" id="login" rel="nofollow">Login</a></div>
+<h1 id="locationline">
+<span id="interwiki"><a href="/MoinMoinWiki" rel="nofollow">MoinMoin</a><span class="sep">: </span></span>
+<span id="pagelocation"><a href="/GCI2010">GCI2010</a></span>
+</h1>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/GCI2010">GCI2010</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><a href="/action/edit/GCI2010?action=edit&amp;editor=text" name="texteditlink" rel="nofollow">Edit (Text)</a></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GCI2010?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GCI2010?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GCI2010">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Google_Code-In_2010_and_MoinMoin">Google Code-In 2010 and MoinMoin</h1>
+<span class="anchor" id="line-2"></span><p class="line867"><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><div style="float: right"><span class="anchor" id="line-5"></span><p class="line867"><img alt="http://code.google.com/opensource/gci/2010-11/images/gcilogo.jpg" class="external_image" src="http://code.google.com/opensource/gci/2010-11/images/gcilogo.jpg" title="http://code.google.com/opensource/gci/2010-11/images/gcilogo.jpg" /> <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span></div><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867">
+<h2 id="Resumee">Resumee</h2>
+<span class="anchor" id="line-11"></span><p class="line862">As the work submission deadline has passed for Google Code-In 2010, we can happily announce that there were over 70 tasks completed for MoinMoin Wiki project. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line874">For moin2, lots of coding tasks have been done, some research has been done, tests/code have been fixed, user interface been improved, the documentation has been improved and the translation system got its initial testing. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line874">For moin 1.9, translations and system pages for some languages were significantly updated, completed or cleaned up and also some work was done on the code. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line874">The moin developers wish to thank all students who contributed and welcome them as new developers and maintainers! <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867">
+<h2 id="Announcement">Announcement</h2>
+<span class="anchor" id="line-20"></span><p class="line867"><a href="/MoinMoin">MoinMoin</a> is participating in <a class="http" href="http://code.google.com/intl/de/opensource/gci/2010-11/index.html">Google Code-In 2010</a> which is an <strong>international contest</strong> for <strong>highschool students</strong> (i.e. we are looking forward to people who are visiting a school <strong>in almost any country in the world</strong>). <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line867"><img alt="(!)" height="16" src="/moin_static19/modernized/img/idea.png" title="(!)" width="16" /> There will be all sorts of tasks (not only coding tasks), most tasks will be related to the current development of moin2 (see <a href="/MoinMoin2.0">MoinMoin2.0</a> for details). <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line862">See <a href="/EasyToDo">EasyToDo</a> (and read the disclaimers there) for some brain storming about potential student task. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line867"><img alt="(!)" height="16" src="/moin_static19/modernized/img/idea.png" title="(!)" width="16" /> There is still a lot of work to do with defining / refining / discussing these tasks, help NOW is welcome. We have to finish the tasks until 2010-11-21. <img alt="/!\" height="16" src="/moin_static19/modernized/img/alert.png" title="/!\" width="16" /> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line862">If you are interested in GCI (as a participating student or as a mentor, helping students to get into Open Source / Free Software development), please join us early on <a href="/MoinMoinChat">MoinMoinChat</a>. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867">
+<h2 id="Links">Links</h2>
+<span class="anchor" id="line-31"></span><ul><li><p class="line891"><a class="http" href="http://0-8-20110320.socghop.appspot.com/gci/org/show/google/gci2010/moinmoin">MoinMoin GCI page</a> <span class="anchor" id="line-32"></span></li><li><p class="line891"><a class="http" href="http://www.google-melange.com/document/show/gci_program/google/gci2010/faqs">FAQ - please read it!</a> <span class="anchor" id="line-33"></span></li><li><p class="line891"><a class="http" href="http://www.google-melange.com/document/show/gci_program/google/gci2010/rules">GCI rules - please read them!</a> <span class="anchor" id="line-34"></span></li><li><p class="line891"><a class="http" href="http://www.google-melange.com/gci/mentor/request/google/gci2010/moinmoin">Become a mentor for MoinMoin for GCI (please talk to us on IRC first)</a> <span class="anchor" id="line-35"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">MoinMoin: GCI2010  (last edited 2011-09-04 10:00:14 by <span title="ReimarBauer @ port-92-204-15-46.dynamic.qsc.de[92.204.15.46]"><a href="/ReimarBauer" title="ReimarBauer @ port-92-204-15-46.dynamic.qsc.de[92.204.15.46]">ReimarBauer</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><a href="/action/edit/GCI2010?action=edit&amp;editor=text" name="texteditlink" rel="nofollow">Edit (Text)</a></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GCI2010?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GCI2010?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GCI2010">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="refresh">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

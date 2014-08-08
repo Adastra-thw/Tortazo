@@ -1,0 +1,253 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/Why-are-respondents-having-trouble-accessing-the-survey-from-the-link","l":"zh_TW","id":"kA030000000hq1TCAQ"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>&#21463;&#35370;&#32773;&#28961;&#27861;&#23436;&#25104;&#25105;&#30340;&#35519;&#26597;&#21839;&#21367;&#12290;&#25105;&#35442;&#22914;&#20309;&#34389;&#29702;&#65311;</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/Why-are-respondents-having-trouble-accessing-the-survey-from-the-link" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">受訪者無法完成我的調查問卷。我該如何處理？
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><p>
+	首先，請確定您傳出的調查問卷連結正確無誤。連結由字元組成，而且會區分大小寫，所以如果出現多餘的空格或以小寫字母取代大寫字母，可能會導致連結毀損。</p>
+<ul><li>
+		如果您使用的是 Web 連結收集器，請從調查問卷的 [收集回覆] 區段中按一下其暱稱 - 正確的連結會出現在頁面頂端。</li><li>
+		如果您使用的是電子郵件收集器，則當您傳送訊息時，便會自動傳送正確且唯一的連結。將測試訊息傳送給您自己，或是<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-use-HTML-in-the-survey-or-Email-Invitation-message" target="_self">使用訊息中的 HTML</a>，確保安全無虞。</li></ul>
+<p>
+	<br>	請從下面選取一個問題，以取得詳細資訊：</p>
+<div class="zipall">
+	<div class="zip" id="zip_1">
+		受訪者看到「感謝」頁面，而不是我的調查問卷</div>
+	<div class="zap" id="zap_1">
+		<ul><li>
+				檢查以瞭解您的收集器是否允許<a href="http://help.surveymonkey.com/articles/zh_TW/kb/What-settings-allow-multiple-responses-from-one-computer" target="_blank">每台電腦提供一個或多個回覆</a>。可讓使用同一台電腦的一些受訪者完成調查問卷。您必須允許每台電腦提供多個回覆以說明此功能。</li><li>
+				檢查以瞭解您<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-a-survey-be-saved-halfway-and-finished-later" target="_blank">是否允許編輯回覆</a>。可能的情況是受訪者已經送出調查問卷並嘗試進行編輯。</li><li>
+				如果您使用的是電子郵件收集器，可能會將來自某人的連結轉寄給受訪者。電子郵件收集器只會針對每個電子郵件地址記錄一個回覆，因此您必須新增收件人。</li></ul>
+		<p>
+			如果您對收集器進行編輯，受訪者只需按一下您已經傳送的連結，就能存取調查問卷。URL     不會變更，所以您不需要傳送新連結。</p>
+	</div>
+	<div class="zip" id="zip_2">
+		受訪者需要登入 SurveyMonkey</div>
+	<div class="zap" id="zap_2">
+		<p>
+			檢查以瞭解您的收集器是否允許<a href="http://help.surveymonkey.com/articles/zh_TW/kb/What-settings-allow-multiple-responses-from-one-computer" target="_blank">每台電腦提供一或多個回覆</a>。如果您只允許每台電腦提供一個回覆，當受訪者嘗試再次存取您的調查問卷時，則可能會將他們傳送到  SurveyMonkey     網頁。此頁面會感謝受訪者填寫調查問卷，並提供網站的相關資訊。如果受訪者按一下連結以建立調查問卷或是填寫  <a href="https://contribute.surveymonkey.com/" target="_blank">SurveyMonkey     Contribute</a> 調查問卷，系統可能會請他們登入  SurveyMonkey。</p>
+	</div>
+	<div class="zip" id="zip_3">
+		受訪者看到其他的調查問卷，而不是我的調查問卷</div>
+	<div class="zap" id="zap_3">
+		<p>
+			如果受訪者提到被問到喝多少汽水、多久看一次電視、收入多寡或政治傾向，表示受訪者可能按下的是  <a href="https://contribute.surveymonkey.com/" target="_blank">Contribute</a> 方案的連結，受訪者可在這裡選擇是否要填寫調查問卷來做慈善。<br>		<br>		在下列情況中，受訪者可以看到  Contribute     廣告：</p>
+		<ul><li>
+				如果您的收集器只允許<a href="http://help.surveymonkey.com/articles/zh_TW/kb/What-settings-allow-multiple-responses-from-one-computer" target="_blank">每台電腦提供一個回覆</a>，而且受訪者已經填寫調查問卷。</li><li>
+				如果已經將來自某人電子郵件邀請函的連結轉寄給受訪者  -     電子郵件收集器只會針對每個電子郵件地址記錄一個回覆。</li></ul>
+		<p>
+			如果您擁有黃金型或白金型方案，則可以編輯<a href="http://help.surveymonkey.com/articles/zh_TW/kb/What-are-the-Survey-Completion-options" target="_blank">調查問卷完成設定</a>，在完成調查問卷之後將受訪者導向至任何  URL。這可防止將受訪者傳送至  Contribute     頁面。</p>
+		<p>
+			如果您擁有經濟型、黃金型或白金型方案，則可以建立  <a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-create-a-Thank-You-page" target="_blank">[感謝]     頁面</a>，讓受訪者知道您的調查問卷已完成。</p>
+	</div>
+	<div class="zip" id="zip_4">
+		受訪者無法在調查問卷中繼續前進</div>
+	<div class="zap" id="zap_4">
+		<p>
+			如果您在調查問卷設計中包含<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Troubleshooting-Conditional-Skip-Logic-Issues" target="_blank">跳過邏輯</a>，則問題或頁面上可能具有邏輯，以指引受訪者回到調查問卷中。您必須編輯調查問卷設計，才能修復問題。確保在調查問卷中僅往前跳過受訪者，或是可建立無盡循環。</p>
+		<p>
+			<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Am-I-able-to-edit-a-live-survey-and-does-this-change-the-link" target="_blank">編輯即時調查問卷設計</a>之後，在那時填寫調查問卷的受訪者可能會在調查問卷重新整理時回到調查問卷的開頭。但是，受訪者只需按一下您已經傳送的連結，就能存取更新的調查問卷。URL     不會變更，所以您不需要傳送新連結。</p>
+	</div>
+	<div class="zip" id="zip_5">
+		受訪者看到說明調查問卷已經關閉的訊息</div>
+	<div class="zap" id="zap_5">
+		<p>
+			檢查以查看您是否設定了<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-set-or-extend-a-cutoff-date-and-time-or-a-maximum-response-count" target="_self">截止日期與時間</a>或<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-set-a-limit-on-the-number-of-responses-on-a-survey-or-per-question" target="_self">最大回覆計數</a>。如果已經過了指定時間，或是已達到回覆計數，受訪者就無法存取您的調查問卷。如果您希望重新開啟調查問卷，則可以編輯這些設定。</p>
+	</div>
+</div>
+<br>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Respondents-say-they-submitted-the-survey-but-I-don-t-see-it" class="relatedLink">&#25105;&#36986;&#22833;&#35519;&#26597;&#21839;&#21367;&#22238;&#35206;&#12290;&#22238;&#35206;&#30340;&#20301;&#32622;&#22312;&#21738;&#35041;&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-are-respondents-able-to-skip-required-questions" class="relatedLink">&#25105;&#30340;&#35519;&#26597;&#21839;&#21367;&#20013;&#26377;&#24517;&#22635;&#21839;&#38988;&#12290;&#21463;&#35370;&#32773;&#35201;&#22914;&#20309;&#36339;&#36942;&#36889;&#20123;&#21839;&#38988;&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-a-survey-be-saved-halfway-and-finished-later" class="relatedLink">&#35519;&#26597;&#21839;&#21367;&#21487;&#20197;&#22312;&#36914;&#34892;&#21040;&#19968;&#21322;&#26178;&#20808;&#20786;&#23384;&#36215;&#20358;&#65292;&#31561;&#21040;&#20197;&#24460;&#20877;&#23436;&#25104;&#21966;&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Question-Skip-Logic" class="relatedLink">&#36339;&#38988;&#37007;&#36655;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/Why-are-respondents-having-trouble-accessing-the-survey-from-the-link';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, '受訪者無法完成我的調查問卷。我該如何處理？', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

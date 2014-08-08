@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Random Notes on “Call” (Anonymous) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/anonymous-random-notes-on-call?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=anonymous-random-notes-on-call">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Random Notes on “Call”
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/anonymous">Anonymous</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2009
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/critique">critique</a>
+        <a href="/topics/tarnac-9">Tarnac 9</a>
+        <a href="/topics/tiqqun">Tiqqun</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Published in ‘325’ #7, October 2009.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on January 3, 2011 from <a href="http://www.non-fides.fr/?Random-notes-on-Call">www.non-fides.fr</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="anonymous-random-notes-on-call.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="anonymous-random-notes-on-call.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="anonymous-random-notes-on-call.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="anonymous-random-notes-on-call.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="anonymous-random-notes-on-call?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="anonymous-random-notes-on-call.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="anonymous-random-notes-on-call.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Anonymous</h2>
+	
+	<h1 id="textttitleh">Random Notes on “Call”</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>My first impression after reading <em>Call</em> was that it really did not say anything to me. Since the beginning of their booklet the authors use quite an abstract language, which is perhaps intended to go beyond the banal words that are employed in every day conversations and by the media, but which fails to achieve its purpose. So they talk about ‘evident’ and ‘worlds’ but me, quite a humble reader, do not catch what they mean nor do they further explain these exotic concepts.
+</p><p>Their <em>Proposition I</em> states: «<em>Faced with the evidence of catastrophe there are those who get indignant and those who take note, those who denounce and those who get organised. We are among those who get organised</em>».
+</p><p>They do not mention another category: those who struggle and attack by deeds and by words. They do not mention hundreds of comrades all over the world who attack and sometimes are imprisoned but still continue to attack. They do mention the Black Panthers, the German <em>Autonomen</em>, the Italian Autonomists, the British neoluddites, radical feminists, the 2<sup>nd</sup> June movement but they seem not to be aware of recent facts, from the struggle against the immigration detention centres and the world that produces them to the solidarity that expresses itself by all possible ways every time repression hits hard.
+</p><p>It has to be seen, then, what kind of organisation the authors of this booklet are into. They declare that «<em>to get organised means: to start from the situation and not to dismiss it. The name we give to the situation that we are in is world civil war</em>».
+</p><p>First of all I wonder why they say world civil war instead of calling it social war, then I still don’t understand what they mean for starting from the situation and not dismissing it.
+</p><p>The answer is maybe what they later call ‘secession’, secession from the capitalist valorisations and secession from the left identified with Tute Bianche, Attac, social forums and other species of activists.
+</p><p>I wonder once again why they talk about «<em>secession</em>» and not about «<em>refuse</em>». Refusing the capitalist valorisations and the world of the leftist activists (which is a product of the latter) means to act according to a revolutionary project.  «<em>Secession</em>» implies the negation of any revolutionary break. The authors simply constitute themselves as an «<em>autonomous material force within the world civil war</em>» and as such they «<em>set out the conditions</em>» of their call. What is this autonomous material force intended to do? And does not this ‘setting out the conditions’ sound vanguardist? It does, in my opinion, and I found other statements in <em>Call</em> that seems to be imposed from above.
+</p><p>If on the one hand their analysis of the present catastrophe and of the way various species of leftists try to cope with it is good, on the other hand the authors of <em>Call</em> do not propose anything concrete.
+</p><p>On the contrary they launch their «<em>call</em>» (from above of course): «<em>This is a call. That is to say it aims at those who can hear it. The question is not to demonstrate, to argue, to convince. We will go straight to the evident</em>». Here are some people who propose themselves as those who know the truth (what they call «<em>the evident</em>») and make a «<em>call</em>» at those who can hear it.
+</p><p>Furthermore throughout the booklet great emphasis is made on «<em>community</em>», «<em>sect</em>» and «<em>collective experience</em>». No mention is ever made of individual action. In fact the authors of <em>Call</em> say clearly that they prefer «<em>collectivity</em>» to the individual. In their <em>Call</em> the individual disappears under the predominance of the «<em>material collective force</em>».  The individual is only mentioned in a derogatory way, as the «<em>liberal individual</em>», the pacifist, the advocate of human rights. The existence of individuals animated by rebellious thoughts who act according to a revolutionary project either on their own or along with other individuals animated by the same rebellious thoughts is not at all contemplated. On the contrary the authors are convinced that «<em>the end of capitalism</em>» will come after a link is established between what one lives and what one thinks, and that this link is not an individual issue but it depends on «<em>the construction of shared worlds</em>». I find it hard to follow this reasoning as I think the desire to put an end to «<em>the catastrophe</em>» is entirely an individual issue. It starts from individual inner rage and its ability to find accomplices along the way. I don’t think that the starting point is organisation and «<em>shared worlds</em>»: this only leads to the production of abstract words, which can be seductive and glamorous but which will never end up in any really revolutionary transformation.
+</p><p>Finally, what on earth does it means: «<em>On the one hand, we want to live communism; on the other, to spread anarchy</em>»? The authors of <em>Call</em> suggest that communism is not a political or economic system, has no need of Marx and has never had anything to do with the USSR. They say that communism means to elaborate one’s relationship to the world, to the beings, to oneself, and that it starts from «<em>the experience of sharing</em>».
+</p><p>They go on: «<em>The practise of communism, as we live it, we call the Party. When we overcome an obstacle together or when we reach a higher level of sharing, we say that we are building the Party</em>». If this kind of communism needs the building of a party (exactly as Marxist communism) it cannot be associated with «<em>spreading anarchy</em>».
+</p><p>The authors of <em>Call</em> are very careful in depicting their «<em>Party</em>» as a captivating «<em>formation of a sensibility as a force</em>», in which everything is shared on equalitarian basis and in which formalisation is minimal. They almost succeed in presenting «<em>the Party</em>» as the only effective instrument of struggle against the system, as the most wonderful achievement of any antagonist movement, but still their association between «<em>anarchy</em>» and «<em>communism</em>» and its «<em>Party</em>» is unconceivable.
+</p><p>As far as I know anarchy does not need any Party. And if it can express itself also through collective activity (between two or more people) it cannot be disconnected from the individual. It is the individual desire for freedom, the individual disgust towards exploitation.
+</p><p>I wish the authors of <em>Call</em> all the best. May their call reach those who «<em>are building the Party elsewhere</em>», but certainly it will never reach my ears.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

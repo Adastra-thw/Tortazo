@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Thomas Paine’s Anarchism (William M. van der Weyde) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/william-m-van-der-weyde-thomas-paine-s-anarchism?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=william-m-van-der-weyde-thomas-paine-s-anarchism">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Thomas Paine’s Anarchism
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/william-m-van-der-weyde">William M. van der Weyde</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1910
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/mother-earth">Mother Earth</a>
+        <a href="/topics/united-states">United States</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Source: <em>Mother Earth</em>. July, 1910. 163–167.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on 27 March 2011 from <a href="http://corvusdistribution.org/index.php?title=Thomas_Paine%27s_Anarchism">corvusdistribution.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="william-m-van-der-weyde-thomas-paine-s-anarchism.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>William M. van der Weyde</h2>
+	
+	<h1 id="textttitleh">Thomas Paine’s Anarchism</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	
+<blockquote>
+<p>“Government, like dress, is the badge of lost innocence.”<br />
+— Thomas Paine.
+</p></blockquote>
+<p>Born with an unquenchable love for liberty, human progress, and the betterment of all mankind, Thomas Paine left an impress on the world that neither time nor the machinations of religious traducers can efface.
+</p><p>That matchless phrase, “The world is my country, to do good my religion,” would alone ensure its author imperishable renown. Paine’s whole life was a career of self-abnegation. He cared nothing for money and gave to the cause of the struggling colonists in America, suffering from the tyrannical oppressions of Great Britain, the copyrights on his works, then having an enormous sale.
+</p><p>Paine recognized, as did no other writer of his time, the evils of government. Much of his writing is exposure of existing governmental wrong. Paine was perhaps the very earliest apostle of what to-day we call
+Anarchism.
+</p><p>“Society in every state is a blessing,” he wrote in one of the earliest of his books, “Common Sense,” “but government, even in its best state, is but a necessary evil; in its worst state, an intolerable one.”
+</p><p>Never a believer in government, he wrote, “I am very decided in the opinion that the sum of necessary government is much less than is generally thought, and that we are not yet rid of the habit of excessive government... Excess of government only tends to incite to and create crimes which else had never existed.”
+</p><p>Paine realized the reasons government was supported with but few protestants. “Nations suffer so universally,” he says, “from the fatal custom of being ill-governed, and the human soul ‘cribbed, cabined, and confined’ through so many centuries, is so unaccustomed to light, that it may be doubted whether the faculty of distinguishing prismatic hues is yet fully developed within it.”
+</p><p>Paine hated war and fervently hoped for the day when universal peace would reign. He pleaded for a brotherhood of man, and urged that if government of any sort was insisted upon it should take the form of an universal republic — “the republic of the world,” he called it. “I have seen enough of the miseries of war,” Paine wrote, “to wish it might never more have existence in the world, and that some other mode might be found out to settle the differences that should occasionally arise in the neighborhood of nations.”
+</p><p>“The Rights of Man” by Thomas Paine is extremely Anarchistic in its teachings. He ridicules the idea of men of one generation promulgating, enforcing, and following the laws made by a previous generation. “Under how many subtilties or absurdities has the divine right to govern been imposed on the credulity of mankind?” he asks. “The circumstances of the world are continually changing, and the opinions of men change also; and as government is for the living, and not for the dead, it is the living only that have any right in it. That which may be thought right and found convenient in one age, may be thought wrong and found inconvenient in another. In such cases, who is to decide, the living or the dead?”
+</p><p>“When men are sore with the sense of oppressions,” Paine says, “and menaced with the prospects of new ones, is the calmness of philosophy or the palsy of insensibility to be looked for? ... Teach governments humanity; it is their sanguinary punishments which corrupt mankind.”
+</p><p>Again referring to government Paine says: “It is by distortedly exalting some men that others are distortedly debased, till the whole is out of nature. A vast mass of mankind are degradedly thrown into the background of the human picture, to bring forward with greater glare the puppet-show of state and aristocracy... To reason with governments, as they have existed for ages, is to argue with brutes.”
+</p><p>Paine says: “If any generation of men ever possessed the right of dictating the mode by which the world should be governed forever, it was the first generation that existed; and if that generation did it not, no succeeding generation can show any authority for doing it, nor can set any up. The illuminating and divine principle of the equal rights of man (for it has its origin from the Maker of men) relates not only to the living individuals, but to generations of men succeeding each other. Every generation is equal in rights to generations which preceded it, by the same rule that every individual is born equal in rights with his contemporary.”
+</p><p>“When I contemplate the natural dignity of man, when I feel for the honor and happiness of its character, I become irritated at the attempt to govern mankind by force and fraud, as if they were all knaves and fools, and can scarcely avoid disgust at those who are thus imposed upon... Man is not the enemy of man, but through the medium of a false system of government.”
+</p><p>Paine protested against the appropriation by governments of credit for any prosperity that came to a nation. “Almost everything,” he says, “appertaining to the circumstances of a nation, is absorbed and confounded under the general and mysterious word <em>government</em>. Though it avoids taking to its account the errors it commits and the mischiefs it occasions, it fails not to arrogate to itself whatever has the appearance of prosperity. It robs industry of its honors by pedantically making itself the cause of its effects; and purloins from the general character of man the merits that
+appertain to him as a social being.”
+</p><p>“There is a natural aptness in man, and more so in society, because it embraces a greater variety of abilities and resource, to accommodate itself to whatever situation it is in. The instant formal government is abolished, society begins to act; a general association takes place, and common
+interest produces common security.
+</p><p>“So far is it from being true, as has been pretended, that the abolition of any formal government is the dissolution of society, that it acts as a contrary impulse, and brings the latter the closer together... Formal government makes but a small part of civilized life; and when even the best that human wisdom can devise is established, it is a thing more in name and idea than in fact. It is to the great and fundamental principles of society and civilization — to the common usage universally consented to, and mutually and reciprocally maintained — to the unceasing circulation of interest, which, passing through its million channels, invigorates the whole mass of civilized man — it is to these things, infinitely more than to anything which even the best instituted government can perform, that the safety and prosperity of the individual and of the whole depends.”
+</p><p>Paine was an ardent believer in civilization and education. Were men but sufficiently civilized, they would have no need for government. “The more perfect civilization is,” he says in his “Rights of Man,” “the less occasion has it for government, because the more does it regulate its own affairs, and govern itself... It is but few general laws that civilized life requires, and those of such common usefulness, that whether they are enforced by the forms of government or not, the effect will be nearly the same.”
+</p><p>In the same work occur these striking paragraphs:
+</p><p>“When in countries that are called civilized, we see age going to the workhouse and youth to the gallows, something must be wrong in the system of government. It would seem by the exterior appearance of such countries that all was happiness, but there lies hidden from the eye of common observation a mass of wretchedness that has scarcely any other chance than to expire in poverty or infamy. Its entrance into life is marked with the presage of its fate; and until this is remedied it is in vain to punish... Why is it that scarcely any are executed but the poor? ... The millions that are superfluously wasted upon governments are more than sufficient to reform evils.
+</p><p>“Government ought to be as much open to improvement as anything which appertains to man, instead of which it has been monopolized from age to age by the most ignorant and vicious of the human race.
+</p><p>“When it shall be said in any country in the world, my poor are happy; neither ignorance nor distress is to be found among them; my jails are empty of prisoners, my streets of beggars; the aged are not in want, the taxes are not oppressive; the rational world is my friend, because I am the friend of its happiness; when these things can be said, then may that country boast its constitution and its government.”
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

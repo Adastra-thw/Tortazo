@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     fascism | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="fascism">fascism</h3>
+<ol>
+
+  <li>
+   <a href="/library/camillo-berneri-against-the-racist-delirium">
+   Against the Racist Delirium
+   </a>
+  
+  
+      
+          (<a href="/authors/camillo-berneri">Camillo Berneri</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/albert-meltzer-anarchism-arguments-for-and-against">
+   Anarchism: Arguments for and against
+   </a>
+  
+  
+      
+          (<a href="/authors/albert-meltzer">Albert Meltzer</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/janet-biehl-and-peter-staudenmaier-ecofascism-lessons-from-the-german-experience">
+   Ecofascism: Lessons from the German Experience
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/janet-biehl">Janet Biehl</a>, <a href="/authors/peter-staudenmaier">Peter Staudenmaier</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-orten-ecofascism-what-is-it">
+   Ecofascism: What is It?
+   </a>
+  
+  
+      
+          (<a href="/authors/david-orten">David Orten</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sava-devuric-history-of-organized-fascism-in-serbia">
+   History of Organized Fascism in Serbia
+   </a>
+  
+  
+      
+          (<a href="/authors/sava-devuric">Sava Devurić</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/george-orwell-homage-to-catalonia">
+   Homage to Catalonia
+   </a>
+  
+  
+      
+          (<a href="/authors/george-orwell">George Orwell</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-on-antifascism">
+   On antifascism
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-the-origins-of-primitivism-1977-1988">
+   The Origins of Primitivism (1977–1988)
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/bob-brubaker">Bob Brubaker</a>, <a href="/authors/chris-dugan">Chris Dugan</a>, <a href="/authors/david-watson">David Watson</a>, <a href="/authors/e-b-maple">E.B. Maple</a>, <a href="/authors/fifth-estate">Fifth Estate</a>, <a href="/authors/john-zerzan">John Zerzan</a>, <a href="/authors/paula-zerzan">Paula Zerzan</a>, <a href="/authors/peter-werbe">Peter Werbe</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/voline-red-fascism">
+   Red Fascism
+   </a>
+  
+  
+      
+          (<a href="/authors/voline">Voline</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/rocktown-rebel-retaliate-against-alex-jones-treacherous-psychological-warfare">
+   Retaliate Against Alex Jones’ Treacherous Psychological Warfare!
+   </a>
+  
+  
+      
+          (<a href="/authors/rocktown-rebel">Rocktown Rebel</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-watson-swamp-fever-primitivism-the-ideological-vortex-farewell-to-all-that">
+   Swamp Fever, Primitivism &amp; the “Ideological Vortex”: Farewell to All That
+   </a>
+  
+  
+      
+          (<a href="/authors/david-watson">David Watson</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/otto-ruhle-the-struggle-against-fascism-begins-with-the-struggle-against-bolshevism">
+   The Struggle Against Fascism Begins with the Struggle Against Bolshevism
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>, <a href="/authors/otto-ruhle">Otto Rühle</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alfredo-m-bonanno-what-can-we-do-with-anti-fascism">
+   What can we do with anti-fascism?
+   </a>
+  
+  
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/albert-meltzer-why-ex-kings-are-dangerous">
+   Why ex-Kings are dangerous
+   </a>
+  
+  
+      
+          (<a href="/authors/albert-meltzer">Albert Meltzer</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-yes-whither-earth-first">
+   Yes! — Whither Earth First?
+   </a>
+  
+  
+      
+          (<a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

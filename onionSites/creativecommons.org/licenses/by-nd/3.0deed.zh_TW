@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://creativecommons.org/ns#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:frbr="http://purl.org/vocab/frbr/core#"
+      xml:lang="zh_TW">
+  <head about="http://creativecommons.org/licenses/by-nd/3.0/">
+    <meta http-equiv="Content-Type" 
+	  content="application/xhtml+xml; charset=utf-8" />
+    <title>Creative Commons &mdash; 姓名標示-禁止改作 3.0 未本地化
+  &mdash; CC BY-ND 3.0 </title>
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="/includes/yahooapis/2.6.0/container.css"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="/includes/deed3.css"
+          media="screen" />
+    
+    <link rel="stylesheet" type="text/css" media="print"
+          href="/includes/deed3-print.css" />
+    <link rel="stylesheet" type="text/css"
+          href="/includes/jurisdictions.css"
+          media="screen" />
+
+    <!--[if lt IE 7]>
+      <link rel="stylesheet" type="text/css"
+            href="/includes/deed3-ie.css"
+            media="screen" />
+    <![endif]-->
+
+    <link rel="alternate" type="application/rdf+xml" href="rdf" />
+    <script type="text/javascript">
+function setCookie(name, value, expires, path, domain, secure) {
+    document.cookie= name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+}
+var expiry = new Date();
+expiry.setTime(expiry.getTime()+(5*365*24*60*60*1000));
+setCookie('lang','%s', expiry, '/');
+</script>
+
+    <script type="text/javascript" src="/includes/yahooapis/2.6.0/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="/includes/yahooapis/2.6.0/connection-min.js"></script>
+    <script type="text/javascript" src="/includes/yahooapis/2.6.0/json-min.js"></script>
+    <script type="text/javascript" src="/includes/yahooapis/2.6.0/container-min.js"></script>
+
+    <script type="text/javascript" src="//scraper.creativecommons.org/js/deed.js"></script>
+
+    <script type="text/javascript"
+            src="/includes/help.js">
+    </script>
+
+    
+  </head>
+
+  <body typeof="cc:License" about="http://creativecommons.org/licenses/by-nd/3.0/"
+        class="yui-skin-sam">
+
+    
+  <!-- RDF code here for backwards compatibility.  Please use the
+       license's RDFa instead. -->
+  <!-- <rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <License rdf:about="http://creativecommons.org/licenses/by-nd/3.0/">
+    <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+  </License>
+</rdf:RDF> -->
+
+
+    <div id="deed"
+         class="yellow"
+         dir="ltr"
+         style="text-align: left">
+
+      <div id="deed-head">
+        <div id="cc-logo">
+          <img src="/images/deed/cc-logo.jpg"
+               alt="cc logo" />
+        </div>
+        <div id="cc-link">
+          <a rel="dc:creator dct:creator" href="http://creativecommons.org/">
+            <span property="dc:title dct:title">Creative Commons</span>
+          </a>
+        </div>
+        <h1><span>Creative Commons License Deed</span></h1>
+
+        <div id="deed-license">
+          <h2>
+  <span property="dc:title dct:title"
+        style="display: inline;">姓名標示-禁止改作 3.0 未本地化</span>
+  <span style="display: inline-block; font-size: 14px; padding-left: 2px;">
+    (<span property="dc:identifier dct:identifier"
+           style="display: inline; font-size: 12px;">CC BY-ND 3.0</span>)
+  </span>
+</h2>
+        </div>
+      </div>
+
+      <div id="deed-main" dir="ltr" style="text-align: left">
+        <div id="legalcode-block">
+            
+              <!--- hidden disclaimer text -->
+            <div id="help_disclaimer_popup" class="help_panel">
+              <div class="hd">免責聲明</div>
+              
+                <div class="bd">
+                  <p>This deed highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.</p>
+
+                  <p>Creative Commons is not a law firm and does not provide legal services. Distributing, displaying, or linking to this deed or the license that it summarizes does not create a lawyer-client or any other relationship.</p>
+                </div>
+              
+            </div>
+  
+            <div id="deed-disclaimer">
+              
+                <div class="summary">
+                  這是一份易於了解的摘要 ( 並非<a href="legalcode" class="fulltext">授權條款</a>的替代內容 ) 。
+                </div>
+              
+  
+              <div class="disclaimer">
+                <a href="#" id="disclaimer_popup" class="helpLink">
+                  免責聲明
+                </a>
+              </div>
+            </div>
+          
+        </div>
+
+        <div id="deed-main-content" class="">
+          
+  
+
+  <div id="deed-rights"
+       dir="ltr" style="text-align: left">
+    
+
+    
+
+    <h3 resource="http://creativecommons.org/ns#Reproduction"
+        rel="cc:permits">你可自由：</h3>
+    <ul class="license-properties">
+      <li class="license share"
+          rel="cc:permits"
+          resource="http://creativecommons.org/ns#Distribution">
+        <strong>分享</strong> &mdash; 以任何媒介或格式重製及散布本素材
+      </li>
+
+      
+
+      
+        <li class="license commercial">
+          且為任何目的，包含商業性質之使用。
+        </li>
+      
+      <li id="more-container"
+          class="license-hidden">
+        <span id="devnations-container" />
+      </li>
+    </ul>
+
+    <ul id="license-freedoms-no-icons">
+      <li class="license">只要你遵守授權條款規定，授權人不能撤回你使用本素材的自由。</li>
+    </ul>
+
+  </div>
+  <div id="deed-conditions">
+    <h3>惟需遵照下列條件:</h3>
+
+    <ul dir="ltr" style="text-align: left"
+        class="license-properties">
+      
+      <li class="license by">
+          <p>
+            <strong>姓名標示</strong> &mdash; <span rel="cc:requires"
+          resource="http://creativecommons.org/ns#Attribution">你必須給予 <a href="#" id="appropriate_credit_popup" class="helpLink">適當表彰</a>、提供指向本授權條款的連結，以及 <span rel="cc:requires" resource="http://creativecommons.org/ns#Notice"><a href="#" id="indicate_changes_popup" class="helpLink">指出（本作品的原始版本）是否已被變更</a></span>。你可以任何合理方式為前述表彰，但不得以任何方式暗示授權人為你或你的使用方式背書。
+            <span id="by-more-container"></span>
+          </p>
+
+          <p id="work-attribution-container" style="display:none;">
+            <strong>
+              標示這份著作：
+            </strong>
+            <br/>
+            <input id="work-attribution" value="" type="text"
+                   readonly="readonly" onclick="this.select()"
+                   onfocus="document.getElementById('work-attribution').select();"/>
+            <input id="license-code" type="hidden"
+                   value="CC BY-ND 3.0" />
+            <input id="license-url" type="hidden"
+                   value="http://creativecommons.org/licenses/by-nd/3.0/" />
+            <a href="" id="attribution_help" class="helpLink">
+              <img src="/images/information.png"
+                   alt="資訊" />
+            </a>
+          </p>
+
+          <div id="help_attribution_help" class="help_panel">
+            <div class="hd">
+              所謂的「姓名標示」是什麼意思？
+            </div>
+            <div class="bd">
+              引領你前來此處的網頁中嵌入了含授權資訊的後設資料，包括原作者想以什麼方式為人表彰等。你可以使用此處提供的 HTML 來引用此作品、並表彰出處。這麼一來，你的網頁上也會有授權後設資料，方便他人尋得原始作品。
+            </div>
+          </div>
+        </li>
+      
+      
+      
+      <li class="license nd">
+          <p>
+            <strong>禁止改作</strong> &mdash; 若你<a href="#" id="some_kinds_of_mods_popup" class="helpLink">重混、轉換本素材，或依本素材建立新素材</a>，則你不得散布改作後的素材。
+            <span id="nd-more-container"></span>
+          </p>
+      </li>
+      
+      
+
+    </ul>
+  </div>
+
+  <ul id="deed-conditions-no-icons">
+    <li class="license">
+      <strong>不得增加額外限制</strong> &mdash; 你不能增設法律條款或<a href="#" id="technological_measures_popup" class="helpLink">科技措施</a>，來限制別人依授權條款本已許可的作為。
+    </li>
+  </ul>
+
+  <div id="deed-understanding">
+    <h3>
+      聲明
+    </h3>
+
+    <ul class="understanding license-properties">
+    
+
+      <li class="license">
+        當你使用本素材中屬於公眾領域的元素，或當法律有<a href="#" id="exception_or_limitation_popup" class="helpLink">例外或限制條款</a>允許你的使用，則你不需要遵守本授權條款。
+      </li>
+      <li class="license">
+        未提供保證。本授權條款未必能完全提供，你預期用途所需要的所有許可。例如：<a href="#" id="publicity_privacy_or_moral_rights_popup" class="helpLink">形象權，隱私權、著作人格權</a>等其他權利，可能限制你如何使用本素材。
+      </li>
+    </ul>
+
+    
+
+    <div id="help_mediation_and_arbitration_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>The applicable mediation rules will be designated in the copyright notice published with the work, or if none then in the request for mediation.  Unless otherwise designated in a copyright notice attached to the work, the UNCITRAL Arbitration Rules apply to any arbitration.</p>
+        <p><a href="http://wiki.creativecommons.org/Intergovernmental_Organizations#What_should_I_know_before_I_use_a_work_licensed_under_the_IGO_3.0_ported_licenses.3F">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_appropriate_credit_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>If supplied, you must provide the name of the creator and attribution parties, a copyright notice, a license notice, a disclaimer notice, and a link to the material. CC licenses prior to Version 4.0 also require you to provide the title of the material if supplied, and may have other slight differences.</p>
+        <p><a href="http://wiki.creativecommons.org/License_Versions#Detailed_attribution_comparison_chart">更多資訊</a>.</p>
+      </div>
+    </div>
+
+    <div id="help_indicate_changes_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>In 4.0, you must indicate if you modified the material and retain an indication of previous modifications. In 3.0 and earlier license versions, the indication of changes is only required if you create a derivative.</p>
+        <p><a href="http://wiki.creativecommons.org/Best_practices_for_attribution#This_is_a_good_attribution_for_material_you_modified_slightly">Marking guide</a>.</p>
+        <p><a href="http://wiki.creativecommons.org/License_Versions#Modifications_and_adaptations_must_be_marked_as_such ">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_same_license_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>You may also use a license listed as compatible at <a href="https://creativecommons.org/compatiblelicenses">https://creativecommons.org/compatiblelicenses</a></p>
+        <p><a href="http://wiki.creativecommons.org/FAQ#If_I_derive_or_adapt_material_offered_under_a_Creative_Commons_license.2C_which_CC_license.28s.29_can_I_use.3F">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_commercial_purposes_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>商業性使用是一種主要為了商業利益或金錢報酬的使用方式。</p>
+        <p><a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#Does_my_use_violate_the_NonCommercial_clause_of_the_licenses.3F">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_some_kinds_of_mods_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>僅改變格式不算是創作衍生作品。</p>
+        <p><a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#When_is_my_use_considered_an_adaptation.3F">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_technological_measures_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>The license prohibits application of effective technological measures, defined with reference to Article 11 of the WIPO Copyright Treaty.</p>
+        <p><a href="http://wiki.creativecommons.org/License_Versions#Application_of_effective_technological_measures_by_users_of_CC-licensed_works_prohibited">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_exception_or_limitation_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>The rights of users under exceptions and limitations, such as fair use and fair dealing, are not affected by the CC licenses.</p>
+        <p><a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#Do_Creative_Commons_licenses_affect_exceptions_and_limitations_to_copyright.2C_such_as_fair_dealing_and_fair_use.3F">更多資訊</a>.</p>
+      </div>
+    </div>
+    <div id="help_publicity_privacy_or_moral_rights_popup" class="help_panel">
+      <div class="hd">&nbsp;</div>
+      <div class="bd">
+        <p>You may need to get additional permissions before using the material as you intend.</p>
+        <p><a href="http://wiki.creativecommons.org/Considerations_for_licensors_and_licensees">更多資訊</a>.</p>
+      </div>
+    </div>
+
+  </div>
+  <span id="referrer-metadata-container" />
+
+        </div>
+      </div>
+
+    </div>
+    <div id="footer">
+      <p>
+        
+          
+            
+進一步了解<a href="http://wiki.creativecommons.org/FAQ">創用 CC 授權</a>，或<a id="get_this" href="/choose/results-one?license_code=by-nd&amp;amp;jurisdiction=&amp;amp;version=3.0&amp;amp;lang=zh_TW">使用此授權款</a>在你的素材上。
+          
+        
+      </p>
+      <div id="languages">
+  <span dir="ltr" style="text-align: left">
+    本頁面也有下列各語言的版本：
+  </span>
+  <br/>
+
+  
+    <a title="Castellano"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.es"
+       hreflang="es"
+       xml:lang="es">Castellano</a>
+  
+    <a title="Castellano (España)"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.es_ES"
+       hreflang="es_ES"
+       xml:lang="es_ES">Castellano (España)</a>
+  
+    <a title="Català"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ca"
+       hreflang="ca"
+       xml:lang="ca">Català</a>
+  
+    <a title="Dansk"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.da"
+       hreflang="da"
+       xml:lang="da">Dansk</a>
+  
+    <a title="Deutsch"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.de"
+       hreflang="de"
+       xml:lang="de">Deutsch</a>
+  
+    <a title="English"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.en"
+       hreflang="en"
+       xml:lang="en">English</a>
+  
+    <a title="Esperanto"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.eo"
+       hreflang="eo"
+       xml:lang="eo">Esperanto</a>
+  
+    <a title="français"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.fr"
+       hreflang="fr"
+       xml:lang="fr">français</a>
+  
+    <a title="Galego"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.gl"
+       hreflang="gl"
+       xml:lang="gl">Galego</a>
+  
+    <a title="hrvatski"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.hr"
+       hreflang="hr"
+       xml:lang="hr">hrvatski</a>
+  
+    <a title="Indonesia"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.id"
+       hreflang="id"
+       xml:lang="id">Indonesia</a>
+  
+    <a title="Italiano"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.it"
+       hreflang="it"
+       xml:lang="it">Italiano</a>
+  
+    <a title="Lietuvių"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.lt"
+       hreflang="lt"
+       xml:lang="lt">Lietuvių</a>
+  
+    <a title="Magyar"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.hu"
+       hreflang="hu"
+       xml:lang="hu">Magyar</a>
+  
+    <a title="Melayu"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ms"
+       hreflang="ms"
+       xml:lang="ms">Melayu</a>
+  
+    <a title="Nederlands"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.nl"
+       hreflang="nl"
+       xml:lang="nl">Nederlands</a>
+  
+    <a title="Norsk"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.no"
+       hreflang="no"
+       xml:lang="no">Norsk</a>
+  
+    <a title="polski"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.pl"
+       hreflang="pl"
+       xml:lang="pl">polski</a>
+  
+    <a title="Português"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.pt"
+       hreflang="pt"
+       xml:lang="pt">Português</a>
+  
+    <a title="Português (BR)"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.pt_BR"
+       hreflang="pt_BR"
+       xml:lang="pt_BR">Português (BR)</a>
+  
+    <a title="Suomeksi"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.fi"
+       hreflang="fi"
+       xml:lang="fi">Suomeksi</a>
+  
+    <a title="svenska"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.sv"
+       hreflang="sv"
+       xml:lang="sv">svenska</a>
+  
+    <a title="Türkçe"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.tr"
+       hreflang="tr"
+       xml:lang="tr">Türkçe</a>
+  
+    <a title="íslenska"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.is"
+       hreflang="is"
+       xml:lang="is">íslenska</a>
+  
+    <a title="česky"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.cs"
+       hreflang="cs"
+       xml:lang="cs">česky</a>
+  
+    <a title="Ελληνικά"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.el"
+       hreflang="el"
+       xml:lang="el">Ελληνικά</a>
+  
+    <a title="русский"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ru"
+       hreflang="ru"
+       xml:lang="ru">русский</a>
+  
+    <a title="українська"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.uk"
+       hreflang="uk"
+       xml:lang="uk">українська</a>
+  
+    <a title="العربية"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ar"
+       hreflang="ar"
+       xml:lang="ar">العربية</a>
+  
+    <a title="日本語"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ja"
+       hreflang="ja"
+       xml:lang="ja">日本語</a>
+  
+    <a title="華語 (台灣)"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.zh_TW"
+       hreflang="zh_TW"
+       xml:lang="zh_TW">華語 (台灣)</a>
+  
+    <a title="한국어"
+       rel="alternate nofollow frbr:translation" 
+       rev="frbr:translationOf"
+       href="./deed.ko"
+       hreflang="ko"
+       xml:lang="ko">한국어</a>
+  
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+//<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2010376-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+//]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+      document.write("<" + "script type='text/javascript' src='//scraper.creativecommons.org/apps/deed?url=" + encodeURIComponent(document.referrer) + "&amp;license_uri=" + encodeURIComponent(document.URL) + "&amp;callback=YAHOO.cc.success'" + "><" + "/script>");
+//]]>
+    </script>
+  </body>
+</html>

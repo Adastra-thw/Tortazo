@@ -1,0 +1,369 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/What-are-Quotas","l":"zh_TW","id":"kA030000000hhRCCAY"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>&#20351;&#29992;&#22238;&#35206;&#25976;&#38989;&#38480;&#21046;</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/What-are-Quotas" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'create'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id83"> 
+            <h1 id="titleBetaEnabled">使用回覆數額限制
+            </h1>
+            <div id="betaTabContainer">
+              <div class="betaTabs">
+                <ul>
+                  <li class="activeBetaTab" id="classicTabHeader">
+                    <span id="classictabtext">&#32147;&#20856;&#35373;&#35336;</span>
+                  </li>
+                  <li id="betaTabHeader">
+                    <span id="betatabtext">&#26032;&#35373;&#35336;</span>
+                  </li>
+                  <span class="tooltip-icon">?</span>
+                  <div class="tooltip-holder">
+                    <div class="tooltip">
+                      <h5>&#32147;&#20856;&#35373;&#35336;&#33287;&#26032;&#35373;&#35336;</h5>
+                      <span class="tooltip-x">D</span><br/><p>經典 Design 是原始的調查問卷設計工具。新型 Design 是新的調查問卷設計工具，目前尚在測試階段。<br/><br/><a href="/articles/zh_TW/kb/Classic-Design-and-New-Design" target="_blank">應該使用哪個版本？ »</a></p>
+                      <span class="tip"></span>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="betaTabsContent" data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text">
+                <div class="betaTabBody" id="classicBody" style="display:block"><p>
+	將回覆數額限制新增至調查問卷可協助您在達到合格受訪者上限時自動關閉調查問卷。例如，如果您正在進行客戶回饋調查問卷，而且想要確保只收到  50     位多次購買產品的客戶所提供的意見，您可以將這些參數新增至調查問卷中，以便調查問卷在達到條件時關閉。</p>
+<p>
+	回覆數額限制也可供研究人員取得佔分析人口一定比例的樣本。例如，研究人員想收到  25%     的大學部一、二、三、四年級學生的意見；另外，甚至可以將回覆率納入考量。這項功能可將深入探究的重要能力加入目標受訪者的回覆中，既精準又事半功倍。</p>
+<p>
+	我們的<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-features-are-available-in-the-GOLD-plan" target="_self">黃金型</a>與<a href="http://help2.surveymonkey.com/articles/es/SurveyMonkeyArticleType/What-is-a-CVV2-or-CID-code-for-a-credit-card" target="_self">白金型</a>方案提供此項功能。</p>
+<p>
+	<img alt="lightbulb" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPSAAY&amp;oid=00D30000001HuKJ"></img> 注意：使用回覆數額限制時，您將無法<a target="_self" href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-manually-input-responses-data-entry">手動新增回覆</a>或<a target="_self" href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-edit-a-survey-response">編輯現有回覆</a>。當您<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-copy-a-survey" target="_self">複製調查問卷</a>時，回覆數額限制也會結轉。</p>
+<p>
+	 </p>
+<h3>
+	如何將回覆數額限制套用於調查問卷</h3>
+<p>
+	您會想要先識別關鍵的人口統計學資訊，<span style="font-style: italic;">然後</span>再進行調查問卷。您會想要提出涵蓋目標各個部份的問題，以確實包含 1 至 3 個關注部份的封閉式問題。</p>
+<ol><li>
+		在調查問卷的本文建立封閉式問題，以確實掌握所需的人口統計學參數。
+		<ul><li>
+				封閉式問題可以是多選項單一答案或多重答案<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Available-question-types-and-formatting-options" target="_self">問題類型</a>。</li></ul>
+	</li><li>
+		按一下 [設計調查問卷] 頁面左側的 [<span style="font-weight: bold;">調查問卷選項</span>]<span style="font-weight: normal;"></span>。</li><li>
+		<span style="font-weight: normal;">向下捲動至  [將回覆數額限制新增至您的調查問卷]     標頭，並且按一下</span> [<span style="font-weight: bold;">新增回覆數額限制</span><span style="font-weight: normal;"><strong>]。</strong></span></li><li>
+		<span style="font-weight: normal;"><strong style="font-weight: normal;">按一下</strong> [<span style="font-weight: bold;">新增群組</span>]，<span style="font-weight: normal;">並選擇鎖定特定屬性的問題。對於您深入探究的問題，輸入標題以供您辨別。</span></span>您在此處輸入的標籤將成為建立回覆數額限制時<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-filter-by-quota" target="_self">自動建立的篩選條件</a>所用的標題。</li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;">在下一個下拉式功能表中，選擇鎖定的選項：</span></span>
+		<ul><li>
+				<span style="font-weight: normal;"><span style="font-weight: bold;">選擇單一選項：</span> <span style="font-weight: normal;">如果有獨立的選項符合您尋找的特徵，可以選擇單一答案。</span></span></li><li>
+				<span style="font-weight: normal;"><span style="font-weight: bold;">選擇多重選項：</span> <span style="font-weight: normal;">如果有多個選項適合目標受訪者，可以勾選多重選項的核取方塊。</span></span></li></ul>
+	</li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;">按一下</span> [<span style="font-weight: bold;">套用</span>]<span style="font-weight: normal;">，即可看見以指派的標籤標示的第一個群組，並且能夠新增其他群組 (視情況按一下</span> [<span style="font-weight: bold;">新增群組</span>]<span style="font-weight: normal;"></span><span style="font-weight: normal;">。在後續的範例中我們對於年級、性別和選課的各個問題建立群組。)</span></span></li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;">按一下</span> [<span style="font-weight: bold;">下一步</span><span style="font-weight: normal;">]<strong>，<span style="font-weight: normal;">然後在下拉式功能表中選擇與您選擇的選項相對應的標籤。</span></strong></span></span></li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;"><strong><span style="font-weight: normal;">在  [將回覆數額限制設定為...]     欄下，輸入所需的受訪者人數。請注意，這是上限而非下限。</span></strong></span></span><br>		<br>		請注意：如果在嘗試儲存回覆數額限制時收到「發生錯誤」訊息，請確定未選取由於現有<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-create-conditional-skip-logic" target="_self">跳過邏輯</a>組合或<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-create-a-consent-form-or-disqualify-respondents-from-a-survey" target="_self">不合格</a>組態而導致不切實可行的任何答案選擇組合。例如，如果第一個問題回答「否」，受訪者便會失去繼續進行調查問卷的資格，工具便不允許針對「否」的回覆所設定的回覆數額限制組合連結後續的調查問卷問題。</li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;"><strong><span style="font-weight: normal;">按一下</span> [<span style="font-weight: bold;">下一步</span><span style="font-weight: normal;">]，繼續進行  [自訂超過回覆數額限制]     頁面。</span></strong></span></span></li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;"><strong><span style="font-weight: normal;">選擇下列關於受訪者繼續進行調查問卷但已經超過回覆數額限制的選項：</span></strong></span></span>
+		<ul><li>
+				<span style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-weight: bold;">否，在受訪者超過回覆數額限制時不顯示超過回覆數額限制頁面：<span style="font-weight: normal;">受訪者將在選取特定回覆數額限制的答案後準備繼續進行時看見<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-create-a-Thank-You-page" target="_self">感謝</a>訊息，而且會重新導向至  SurveyMonkey     品牌的登陸頁面。</span></span></span></span></li><li>
+				<span style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-weight: bold;"><span style="font-weight: bold;">是，在受訪者超過回覆數額限制時顯示超過回覆數額限制頁面：<span style="font-weight: normal;">受訪者將看見預設的「感謝您參加調查問卷」訊息，您也可以在對話方塊中自訂超過回覆數額限制頁面的訊息。</span></span></span></span></span></li><li>
+				<span style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-weight: bold;"><span style="font-weight: bold;">受訪者超過回覆數額限制時，重新導向至您自己的網頁：</span> <span style="font-weight: normal;">受訪者送出與回覆數額限制已滿有關的選擇後準備繼續進行調查問卷時，將受訪者送到您選擇的網頁。</span></span></span></span></li><li>
+				<span style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-weight: bold;"><span style="font-weight: bold;">關閉視窗：</span> <span style="font-weight: normal;">如果受訪者嘗試在達到回覆數額限制之後繼續進行調查問卷，則可以讓瀏覽器視窗直接關閉。</span></span></span></span></li></ul>
+	</li><li>
+		<span style="font-weight: normal;"><span style="font-weight: normal;"><span style="font-weight: bold;"><span style="font-weight: normal;">按一下</span> [<span style="font-weight: bold;">儲存</span>]，<span style="font-weight: normal;">快顯視窗隨即關閉，然後按一下  [調查問卷選項]     頁面中的</span> [<span style="font-weight: bold;">儲存變更</span>]<span style="font-weight: normal;">。</span></span></span></span></li></ol>
+<br><h3>
+	合併回覆數額限制與單一問題回覆數額限制</h3>
+<p>
+	單一問題回覆數額限制最多可以有  6     組答案  (以美國為例，您可以分別為西北各州、西南各州、東北各州等建立群組，各個群組包含一些州的選項)。</p>
+<p>
+	組合回覆數額限制可使用多個問題的選項。您最多可以選取 3 個問題包含在組合回覆數額限制中。繼續以上一例說明，您可以為西北方的人按照性別和登記投票狀態建立合併回覆數額限制。各個問題最多可以使用 6 個群組，單一調查問卷總共可以有 24 個組合回覆數額限制值。<br>	 </p>
+<h3>
+	達到回覆數額限制時</h3>
+<p>
+	調查問卷達到回覆數額限制時，將自動關閉調查問卷，以避免收集其他過多的回覆。不過，您可以從 [分析回覆] 頁面<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-edit-a-quota-if-my-survey-is-collecting-responses" target="_self">編輯回覆數額限制</a>。目標受訪者符合回覆數額限制數，而且完成調查問卷 (到達最後一頁並且按一下 [完成]) 時，將視為達到回覆數額限制。<br>	 </p>
+<h3>
+	在分析中使用回覆數額限制</h3>
+<p>
+	調查問卷收集回覆之後，您就能在頁面頂端的  [分析結果]     區段中追蹤其進度。如需在分析中使用回覆數額限制的詳細資訊，請<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-filter-by-quota" target="_self">參閱此處的說明文章</a>。<br>	 </p>
+<h3>
+	在即時調查問卷上編輯回覆數額限制</h3>
+<p>
+	無論調查問卷是否正在收集回覆，您都能夠編輯已在<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-are-Quotas" target="_self">回覆數額限制</a>設定的參數。您可以增加或減少回覆數額限制的臨界值，也可以修改搜尋的字詞或屬性。不過，必須注意的是，無法將其他問題或參數新增至回覆數額限制，只能編輯先前設定的等式。</p>
+編輯回覆數額限制：
+<ol><li>
+		從 [設計調查問卷] 頁面中，按一下 [<span style="font-weight: bold;">調查問卷選項</span>]，並向下捲動按一下 [<span style="font-weight: bold;">編輯回覆數額限制]。</span></li><li>
+		<strong><span style="font-weight: normal;">[新增回覆數額限制 / 編輯回覆數額限制] 頁面開啟時，對於要修改的群組按一下</span><span style="font-weight: normal;"> [編輯]。</span></strong></li><li>
+		<strong><span style="font-weight: normal;">在步驟 1 進行必要的適度修改，然後向下捲動，按一下 [下一步]。</span></strong></li><li>
+		<strong><span style="font-weight: normal;">視情況修改步驟 2 和 3，並向下捲動，按一下 </span> [下一步] <span style="font-weight: normal;">和</span> [儲存]</strong>。</li></ol>
+<p>
+	編輯回覆數額限制時，有幾個重點必須注意：</p>
+<ul><li>
+		如果在收集程序期間新增回覆數額限制，會將現有回覆納入計算。因此，如果有 10 位男性受訪者，而您想將回覆數額限制提高到 15 位，只需要將回覆數額限制從 10 改為 15。您將看見回覆數額限制納入現有回覆，因此成為 10/15 的比例。</li><li>
+		這是因為許多調查問卷使用多個收集器，為了確保準確的收集器重新開啟，我們讓研究人員自行<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-open-a-survey-to-allow-it-to-collect-responses" target="_self">重新開啟收集器</a>。</li><li>
+		雖然無法新增回覆數額限制的其他等式，但是您可以提高或降低回覆數額限制。</li></ul>
+                </div>
+                <div class="betaTabBody" id="betaBody" style="display:block"><p>
+	當調查問卷達到合格回覆的特定比率時，回覆數額限制則可讓您自動關閉調查問卷。</p>
+<p>
+	您必須擁有黃金型或白金型方案或  Enterprise     訂閱，才能使用此功能。</p>
+<h3>
+	建立資格確認問題</h3>
+<p>
+	您應該先識別關鍵的人口統計學資訊，然後再啟動調查問卷。決定您希望填寫調查問卷的人員之後，再確定新增  1     到  3     個可涵蓋目標受訪者各個部份的封閉式問題。可讓受訪者從有限選項清單中選取答案的複選題型是最理想的題型。</p>
+<p>
+	您可從這些資格確認問題排除回覆數額限制。您將必須指定要用於決定區段以限制回覆來源的問題。對於簡單回覆數額限制，您只能挑選一個問題。對於合併回覆數額限制，您最多能挑選三個問題。</p>
+<p>
+	請注意，您一次只能在調查問卷上設定一個回覆數額限制，所以請確定完成新增所有問題和選項，然後再建立您的回覆數額限制。</p>
+<h3>
+	簡單回覆數額限制與合併回覆數額限制</h3>
+<ul><li>
+		<strong>簡單回覆數額限制</strong> - 將一個或多個答案的限制設定為<strong>單一問題</strong>。例如，如果  50     個受訪者回答他們都是男性，您的調查問卷可能會關閉。或是，如果  50     個受訪者回答他們都是男性且  20     個受訪者回答她們是女性，您的調查問卷可能會關閉。</li><li>
+		<strong>組合回覆數額限制</strong> - 將一個或多個答案的限制設定為<strong>多個問題</strong>。例如，如果您的  50     個受訪者回答他們都是男性<b>且</b>來自佛羅里達  (這是必須透過多個問題收集的合格資訊)，您的調查問卷可能會關閉。</li></ul>
+<h3>
+	套用回覆數額限制</h3>
+<p>
+	調查問卷設計完成之後，下一步就是套用回覆數額限制。</p>
+<p>
+	若要套用回覆數額限制：</p>
+<ol><li>
+		按一下  [<strong>設計調查問卷</strong>]     標籤。</li><li>
+		在左側側邊工具欄上，按一下  [<strong>邏輯</strong>]。</li><li>
+		按一下  [<strong>回覆數額限制</strong>]。</li><li>
+		在  [<strong>簡單回覆數額限制</strong>]     及  [<strong>合併回覆數額限制</strong>]     之間選擇。</li></ol>
+<div class="zip" id="zip_1">
+	簡單回覆數額限制</div>
+<div class="zap" id="zap_1">
+	<ol start="5"><li>
+			在  [回覆數額限制標籤]     欄位中，輸入代表您希望顯示的人口統計學資訊類型的名稱。例如，如果您希望在  50     個受訪者回答他們都是男性時關閉調查問卷，則可輸入「性別」作為「回覆數額限制標籤」。</li><li>
+			在  [選取問題]     欄位中，選取資格確認問題並按一下  [<strong>下一步</strong>]。</li><li>
+			在  [答案群組標籤]     欄位中，輸入代表您希望依回覆數額限制顯示的受訪者類型的名稱。例如，「男性」。</li><li>
+			在  [回覆數額限制]     欄位中，輸入您希望填寫調查問卷的合格受訪者數目  (達到該數目時便會關閉調查問卷)。</li><li>
+			選取您希望對其設定回覆數額限制的選項。例如，「男性」。</li><li>
+			按一下  [<strong>儲存</strong>]。</li></ol>
+</div>
+<div class="zip" id="zip_2">
+	合併回覆數額限制</div>
+<div class="zap" id="zap_2">
+	<ol start="5"><li>
+			在  [回覆數額限制標籤]     欄位中，輸入代表您希望顯示的人口統計學資訊類型的名稱。例如，如果您希望在  50     個受訪者回答他們都是男性<strong>且</strong>來自佛羅里達時關閉調查問卷，則可能要輸入「性別」及「位置」作為「回覆數額限制標籤」。</li><li>
+			從  [問題  1]     和  [問題  2]     功能表選取資格確認問題。您必須將最少  2     個問題  (最多  3     個問題)     新增到  [合併回覆數額限制]     中。</li><li>
+			按一下  [<strong>下一步</strong>]。</li><li>
+			在第一個資格確認問題的  [答案群組標籤]     欄位中，輸入代表您希望依部分回覆數額限制顯示的受訪者類型的名稱。例如，「男性」。</li><li>
+			在其下方，選取您希望對其設定回覆數額限制的選項。例如，「男性」。</li><li>
+			按一下  [<strong>儲存</strong>]。</li><li>
+			按一下第二個資格確認問題的  [<strong>+新增答案群組</strong>]。</li><li>
+			輸入  [答案群組標籤]     並選取您希望對其設定回覆數額限制的選項，然後按一下  [<strong>儲存</strong>]。</li><li>
+			完成新增答案群組時，按一下  [<strong>指定值</strong>]。</li><li>
+			選取您希望從下拉式功能表合併的答案群組。</li><li>
+			在  [<strong>回覆數額限制</strong>]     欄位中，輸入您希望填寫調查問卷的合格受訪者的數目。回覆必須符合兩個條件，才能計入回覆數額限制中。達到該數字後，調查問卷就會自動關閉。</li><li>
+			按一下  [<strong>儲存</strong>]。</li></ol>
+	<p>
+		 </p>
+</div>
+<p>
+	<strong>注意：</strong> 只能將回覆數額限制套用到尚未收集任何回覆的調查問卷。<br>	<br>	您可以在即時調查問卷上編輯回覆數額限制。但是，如果您的調查問卷因為達到回覆數額限制而關閉，則您必須在調整回覆數額限制之後，<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Opening-or-Closing-Surveys" target="_self">重新開啟收集器</a>。</p>
+<h3 id="answergroups">
+	答案群組</h3>
+<p>
+	當您設定簡單回覆數額限制和合併回覆數額限制的答案群組時，將會看到新增其他答案群組的選項。您可以將單一問題的多個選項結合到  [<b>答案群組</b>]，然後將回覆數額限制指派給該選項分組。在調查問卷達到那些限制的情況下，調查問卷便會在受訪者使用那些答案時自動關閉。</p>
+<h3>
+	設定等式</h3>
+<p>
+	此步驟僅會顯示「合併回覆數額限制」。這可讓您選取所指定之不同問題的多個答案群組，並將回覆數額限制值指定給該答案群組的組合。</p>
+<h3>
+	回覆數額限制選項</h3>
+<p>
+	您可以控制在達到答案群組或答案群組之組合的回覆數額限制之後，受訪者可看到的內容。您可選擇多個選項，以決定調查問卷如何處理使用那些已填寫答案的後續回覆。在預設情況下，我們將在受訪者按一下頁面上的  [下一步]     按鈕時關閉調查問卷，但您可以選取下列選項：</p>
+<ul><li>
+		<strong>結束調查問卷</strong> -     超過回覆數額限制的受訪者會前往至您在「收集器選項」中設定的「調查問卷完成」選項。</li><li>
+		<strong>顯示自訂訊息</strong> -     系統會提示您輸入自訂訊息。在提交超過回覆數額限制的答案時，超過回覆數額限制的受訪者便會看到該訊息。</li><li>
+		<strong>重新導向至您自己的網頁</strong> -     系統會提示您輸入  URL。在提交超過回覆數額限制的答案時，超過回覆數額限制的受訪者會被重新導向至該  URL。</li><li>
+		<strong>關閉視窗</strong> -     超過回覆數額限制之受訪者的瀏覽器視窗將會關閉。</li></ul>
+                </div>
+              </div>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/logic-options" class="relatedLink">&#26032;&#22411; Design&#65306;&#37007;&#36655;&#36984;&#38917;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/system-messages" class="relatedLink">&#35519;&#26597;&#21839;&#21367;&#35373;&#35336;&#31995;&#32113;&#35338;&#24687;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Are-there-limits-in-SurveyMonkey-such-as-survey-design-or-character-limits" class="relatedLink">SurveyMonkey &#26159;&#21542;&#23384;&#26377;&#20219;&#20309;&#38480;&#21046; (&#20363;&#22914;&#35519;&#26597;&#21839;&#21367;&#35373;&#35336;&#25110;&#23383;&#20803;&#38480;&#21046;)&#65311;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Is-there-a-limit-on-the-number-of-emails-I-can-send" class="relatedLink">&#25105;&#21487;&#20197;&#20659;&#36865;&#30340;&#38651;&#23376;&#37109;&#20214;&#25976;&#30446;&#26377;&#38480;&#21046;&#21966;&#65311;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/What-are-Quotas';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, '使用回覆數額限制', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

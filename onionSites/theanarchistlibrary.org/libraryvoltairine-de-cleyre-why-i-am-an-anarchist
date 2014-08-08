@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Why I Am an Anarchist (Voltairine de Cleyre) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/voltairine-de-cleyre-why-i-am-an-anarchist?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=voltairine-de-cleyre-why-i-am-an-anarchist">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Why I Am an Anarchist
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/voltairine-de-cleyre">Voltairine de Cleyre</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1897
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/introductory">introductory</a>
+        <a href="/topics/mother-earth">Mother Earth</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    <em>Mother Earth</em> 3 (March 1908).
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on July 16, 2011 from <a href="http://praxeology.net/VC-WIA.htm">praxeology.net</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="voltairine-de-cleyre-why-i-am-an-anarchist.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Voltairine de Cleyre</h2>
+	
+	<h1 id="textttitleh">Why I Am an Anarchist</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>It was suggested to me by those who were the means of securing me this opportunity of addressing you, that probably the most easy and natural way for me to explain Anarchism would be for me to give the reasons why I myself am an Anarchist. I am not sure that they were altogether right in the matter, because in giving the reasons why I am an Anarchist, I may perhaps infuse too much of my own personality into the subject, giving reasons sufficient unto myself, but which cool reflection might convince me were not particularly striking as reasons why other people should be Anarchists, which is, after all, the object of public speaking on this question.
+</p><p>Nevertheless, I have been guided by their judgment, thinking they are perhaps right in this, that one is apt to put much more feeling and freedom into personal reasons than in pure generalizations.
+</p><p>The question “Why I am an Anarchist” I could very summarily answer with “because I cannot help it,” I cannot be dishonest with myself; the conditions of life press upon me; I must do something with my brain. I cannot be content to regard the world as a mere jumble of happenings for me to wander my way through, as I would through the mazes of a department store, with no other thought than getting through it and getting out. Neither can I be contented to take anyone’s dictum on the subject; the thinking machine will not be quiet. It will not be satisfied with century-old repetitions; it perceives that new occasions bring new duties;  that things have changed, and an answer that fitted a question asked four thousand, two thousand, even one thousand years ago, will not fit any more. It wants something for today.
+</p><p>People of the mentally satisfied order, who are able to roost on one intellectual perch all their days, have never understood this characteristic of the mentally active. It was said of the Anarchists that they were peace-disturbers, wild, violent ignoramuses, who were jealous of the successful in life and fit only for prison or an asylum. They did not understand, for their sluggish temperaments did not assist them to perceive, that the peace was disturbed by certain elements, which men of greater mental activity had sought to seize and analyze. With habitual mental phlegm they took cause for effect, and mistook Anarchists, Socialists and economic reformers in general for the creators of that by which they were created.
+</p><p>The assumption that Anarchists were one and all ignoramuses was quite as gratuitously made. For years it was not considered worth while to find out whether they might not be mistaken. We who have been some years in the movement have watched the gradual change of impression in this respect, not over-patiently it is true; we are not in general a patient sort — till we have at length seen the public recognition of the fact that while many professed Anarchists are uneducated, some even unintelligent (though their number is few), the major portion are people of fair education and intense mental activity, going around setting interrogation points after things; and some, even, such as Elisée and Elie and Paul Reclus, Peter Kropotkin, Edward Carpenter, or the late Prof. Daniel G. Brinton,  of the University of Pennsylvania, men of scientific pre-eminence.
+</p><p>Mental activity alone, however, would not be sufficient; for minds may be active in many directions, and the course of the activity depends upon other elements in their composition.
+</p><p>The second reason, therefore, why I am an Anarchist, is because of the possession of a very large proportion of sentiment.
+</p><p>In this statement I may very likely not be recommending myself to my fellow Anarchists, who would perhaps prefer that I proceeded immediately to reasons. I am willing, however, to court their censure, because I think it has been the great mistake of our people, especially of our American Anarchists represented by Benj. R. Tucker, to disclaim sentiment. Humanity in the mass is nine parts feeling to one part thought; the so-called “philosophic Anarchists” have prided themselves on the exaggeration of the little tenth, and have chosen to speak rather contemptuously of the “submerged” nine parts. Those who have studied the psychology of man, however, realize this: that our feelings are the filtered and tested results of past efforts on the part of the intellect to compass the adaptation of the individual to its surroundings. The unconscious man is the vast reservoir which receives the final product of the efforts of the conscious — that brilliant, gleaming, illuminate point at which mental activity centers, but which, after all, is so small a part of the human being. So that if we are to despise feeling we must equally despise logical conviction, since the former is but the preservation of past struggles of the latter.
+</p><p>Now my feelings have ever revolted against repression in all forms, even when my intellect, instructed by my conservative teachers, told me repression was right. Even when my thinking part declared it was nobody’s fault that one man had so much he could neither swallow it down nor wear it out, while another had so little he must die of cold and hunger, my feelings would not be satisfied. They raised an unending protest against the heavenly administration that managed earth so badly. They could never be reconciled to the idea that any human being could be in existence merely through the benevolent toleration of another human being. The feeling always was that society ought to be in such a form that any one who was willing to work ought to be able to live in plenty, and nobody ought to have such “an awful lot” more than anybody else. Moreover, the instinct of liberty naturally revolted not only at economic servitude, but at the outcome of it, class-lines. Born of working parents (I am glad to be able to say it), brought up in one of those small villages where class differences are less felt than in cities, there was, nevertheless, a very keen perception that certain persons were considered better worth attentions, distinctions, and rewards than others, and that these certain persons were the daughters and sons of the well-to-do. Without any belief whatever that the possession of wealth to the exclusion of others was wrong, there was yet an instinctive decision that there was much injustice in educational opportunities being given to those who could scarcely make use of them, simply because their parents were wealthy; to quote the language of a little friend of mine, there was an inward protest against “the people with five hundred dollar brains getting five thousand dollar educations,” while the bright children of the poor had to be taken out of school and put to work. And so with other material concerns.
+</p><p>Beyond these, there was a wild craving after freedom from conventional dress, speech, and custom; an indignation at the repression of one’s real sentiments and the repetition of formal hypocrisies, which constitute the bulk of ordinary social intercourtse; a consciousness that what are termed “the amenities” were for the most oart goine through with as irksome forms, representing no real heartiness. Dress, too, — there was such an ever-present feeling that these ugly shapes with which we distort our bodes wer forced upon us by a stupid notion that we must conform to the anonymous everybody who wears a stock-collar in mid-summer and goes dé-colleté at Christmas, puts a bunch on its sleeves to-day and a hump on its back to-morrow, dresses its slim tall gentlemen in claw-hammers this season, and its fat little gentlemen in Prince Alberts the next, — in short, affords no opportunity for the individuality of the person to express itself in outward taste or selection of forms.
+</p><p>An eager wish, too, for something better in education than the set program of the grade-work, every child’s head measured by every other child’s head, regimentation, rule, arithmetic, forever and ever; nothing to develop originality of work among teachers; the perpetual dead level; the eternal average. Parallel with all these, there was a constant seeking for something new and fresh in literature, and unspeakable ennui at the presentation and re-presentation of the same old ideal in the novel, the play, the narrative, the history. A general disgust for the poor but virtuous fair-haired lady with blue eyes, who adored a dark-haired gentleman with black eyes and much money, and to whom, after many struggles with the jealous rival, she was happily married; a desire that there should be persons who should have some other purpose in appearing before us than to exhibit their lovesickness, people with some other motive in walking through a book than to get married at the end. A similar feeling in taking up an account of travels; a desire that the narrator would find something better worth recounting than his own astonishment at some particular form of dress he had never happened to see before, or a dish he had never eaten in his own country; a desire that he would tell us of the conditions, the aspirations, the activities of those strange peoples. Again the same unrest in reading a history, an overpowering sentiment of revolt at the spun-out details of the actions of generals, the movements of armies, the thronement and dethronement of kings, the intrigues of courtiers, the gracing or disgracing of favorites, the place-hunting of republics, the count of elections, the numbering of administrations! A never-ending query, “What were the common people doing all this time? What did they do who did not go to war? How did they associate, how did they feel, how did they dream? What had they, who paid for all these things, to say, to sing, to act?”
+</p><p>And when I found a novel like the “Story of An African Farm,” a drama like the “Enemy of the People” or “Ghosts,” a history like Green’s “History of the People of England,” I experienced a sensation of exaltation at leaping out from the old forms, the old prohibitions, the old narrowness of models and schools, at coming into the presence of something broad and growing.
+</p><p>So it was with contemplation of sculpture or drawing, — a steady dissatisfaction with the conventional poses, the conventional subjects, the fig-leafed embodiments of artistic cowardice; underneath was always the demand for freedom of movement, fertility of subject, and ease and <em>non-shame</em>. Above all, a disgust with the subordinated cramped circle prescribed for women in daily life, whether in the field of material production, or in domestic arrangement, or in educational work; or in the ideals held up to her in all these various screens whereon the ideal reflects itself; a bitter, passionate sense of personal injustice in this respect; an anger at the institutions set up by men, ostensibly to preserve female purity, really working out to make her a baby, an irresponsible doll of a creature into to be trusted outside her “doll’s house.” A sense of burning disgust that a mere legal form should be considered as the sanction for all manner of bestialities; that a woman should have no right to escape from the coarseness of a husband, or conversely, without calling down the attention, the scandal, the scorn of society. That in spite of all the hardship and torture of existence men and women should go on obeying the old Israelitish command, “Increase and multiply,”  merely because they have society’s permission to do so, without regard to the slaveries to be inflicted upon the unfortunate creatures of their passions.
+</p><p>All these feelings, these intense sympathies with suffering, these cravings for something earnest, purposeful, these longings to break away from old standards, jumbled about in the ego, produced a shocking war; they determined the bent to which mental activity turned; they demanded an answer, — an answer that should co-ordinate them all, give them direction, be the silver cord running through this mass of disorderly, half-articulate contentions of the soul.
+</p><p>The province for the operation of conscious reasoning was now outlined; all the mental energies were set to the finding of an ideal which would justify these clamors, allay these bitternesses. And first for the great question question which over-rides all others, the question of bread. It was easy to see that any proposition to remedy the sorrows of poverty along old lines could only be successful for a locality or a season, since they must depend upon the personal good-nature of individual employers, or the leniency of a creditor. The power to labor at will would be forever locked within the hands of a limited number.
+</p><p>The problem is not how to find a way to relieve temporary distress, not to make people dependent upon the kind ness of others, but to allow every one to be able to stand upon his own feet.
+</p><p>A study into history, — that is a history of the movements of people, — revealed that, while the struggles of the past have chiefly been political in their formulated objects, and have resulted principally in the disestablishment of one form of political administration by another, the causes of discontent have been chiefly economic — too great disparity in possessions between class and class. Even those uprisings centred around some religious leader were, in the last analysis, a revolt of the peasant against an oppressive landlord and tithe-taker — the Church.
+</p><p>It is extremely hard for an American, who has been nursed in the traditions of the revolution, to realize the fact that that revolution must be classed precisely with others, and its value weighed and measured by its results, just as they are. I am an American myself, and was at one time as firmly attached to those traditions as anyone can be; I believed that if there were any way to remedy the question of poverty the Constitution must necessarily afford the means to do it. It required long thought and many a dubious struggle between prejudice and reason before I was able to arrive at the conclusion that the political victory of America had been a barren thing: that a declaration of equal rights on paper, while an advance in human evolution in so far that at least it crystallized a vague ideal, was after all but an irony in the face of facts; that what people wanted to make them really free was the <em>right to things</em>; that a “free country” in which all the productive tenures were already appropriated was not free at all; that any man who must wait the complicated working of a mass of unseen powers before he may engage in the productive labor necessary to get his food is the last thing but a free man; that those who do command these various resources and powers, and therefore the motions of their fellow-men, command likewise the manner of their voting, and that hence the reputed great safeguard of individual liberties, the ballot box, become but an added instrument of oppression in the hands of the possessor; finally, that the principle of majority rule itself, even granting it could ever be practicalized — which it could not on any large scale: it is always a real minority that governs in place of the nominal majority — but even granting it realizable, the thing itself is essentially pernicious; that the only desirable condition of society is one in which no one is compelled to accept an arrangement to which he has not consented.
+</p><p>Since it was a settled thing that to be free one must have liberty of access to the sources and means of production, the question arose, just what are those sources and means, and how shall the common man, whose right to them is now denied, come at them. And here I found a mass of propositions, by one school or another; all however agreed upon one point, viz.: that the land and all that was in it was the natural heritage of all, and none had a right to pre-empt it, and parcel it out to their heirs, administrators, executors, and assigns. But the practical question of how the land could be worked, how homes could be built upon it, factories, etc., brought out a number of conflicting propositions. First, there were the Socialists (that is the branch of Socialism dominant in this country) claiming that the land should become the property of the State, its apportionment to be decided by committees representing the majority of any particular community directly concerned in such apportionment, the right to reapportion, however, remaining perpetually under the control of the State, and no one to receive any more advantage from an extra-fine locality than others, since the surplus in production of one spot over another would accrue to the State, and be expended in public benefits. To accomplish this, the Socialist proposed to use the political machinery now in existence — a machinery which he assures us is in every respect the political reflex of the economic of capitalism; his plan is the old, familiar one of voting your own men in; and when a sufficient number are in, then by legal enactment to dispossess the possessors, confiscate estates, and declare them the property of all.
+</p><p>Examination of this program, however, satisfied me that neither in the end nor the accomplishment was it desirable. For as to the end, it appeared perfectly clear that the individual would still be under the necessity of getting somebody’s permission to go to work; that he would be subject to the decisions of a mass of managers, to regulations and regimentations without end. That while, indeed, it was possible he might have more of material comforts, still he would be getting them from a bountiful dispenser, who assumed the knowledge of how to deal them out, and when, and where. He would still be working, not at what he chose himself, but at what others decided was the most necessary labor for society. And as to the manner of bringing into power this new dispenser of opportunities, the apparent ease of it disappeared upon examination. It sounds exceedingly simple — and Socialists are considered practical people because of that apparent simplicity — to say vote your men in and let them legalize expropriation. But ignoring the fact of the long process of securing a legislative majority, and the precarious holding when it is secured; ignoring the fact that meanwhile your men must either remain honest figure-heads or become compromising dealers with other politicians; ignoring the fact that officials once in office are exceedingly liable to insensible conversions (being like the boy, “anything to get that’ere pup”); supposing all this overcome, Socialists and all legislative reformers are bound to be brought face to face with this, — that in accepting the present constitutional methods, they will sooner or later come against the judicial power, as reforms of a far less sweeping character have very often done in the past. Now the judges, if they act strictly according to their constitutional powers, have no right to say on the bench whether in their personal opinion the enactment is good or bad; they have only to pass upon its constitutionality; and certainly a general enactment for the confiscation of land-holdings to the State would without doubt be pronounced unconstitutional. Then what is the end of all the practical, legal, constitutional effort? That you are left precisely where you were.
+</p><p>Another school of land reformers  presented itself; an ingenious affair, by which property in land is to be preserved in name, and abolished in reality. It is based on the theory of economic rent; — not the ordinary, everyday rent we are all uncomfortably conscious of, once a month or so, but a rent arising from the diverse nature of localities. Starting with the proposition that land values are created by the community, not by the individual, the logic goes as follows. The advantages created by all must not be monopolized by one; but as one certain spot can be devoted to one use only at a given time, then the person or business thereon located should pay to the State the difference between what he can get out of a good locality and a poor locality, the amount to be expended in public improvements. This plan of taxation, it was claimed, would compel speculators in land either to allow their idle lands to fall into the hands of the State, which would then be put up at public auction and knocked down to the highest bidder, or they would fall to and improve them, which would mean employment to the idle, enlivening of the market, stimulation of trade, etc. Out of much discussion among themselves, it resulted that they were convinced that the great unoccupied agricultural lands would become comparatively free, the scramble coming in over the rental of mines, water-powers, and — above all — corner lots in cities.
+</p><p>I did some considerable thinking over this proposition, and came to the conclusion it wouldn’t do. First, because it did not offer any chance to the man who could actually bid noting for the land, which was the very man I was after helping. Second, because the theory of economic rent itself seemed to me full of holes; for, while it is undeniable that some locations are superior to others for one purpose or another, still the discovery of the superiority of that location has generally been due to an individual. The location unfit for a brickyard may be very suitable for a celery plantation; but it takes the man with the discerning eye to see it;  therefore this economic rent appeared to me to be a very fluctuating affair, dependent quite as much on the individual as on the presence of the community; and for a fluctuating thing of that sort it appeared quite plain that the community would lose more by maintaining all the officials and offices of a State to collect it, than it would to let the economic rent go. Third, this public disposing of the land was still in the hands of officials, and I failed to understand why officials would be any less apt to favor their friends and cheat the general public then than now.
+</p><p>Lastly and mostly, the consideration of the statement that those who possessed large landholdings would be compelled to relinquish or improve them; and that this improvement would stimulate business and give employment to the idle, brought me to the realization that the land question could never be settled by itself; that it involved the settling of the problem of how the man who did not work directly upon the earth, but who transformed the raw material into the manufactured product, should get the fruit of his toil. There was nothing in this Single Tax arrangement for him but the same old program of selling himself to an employer. This was to be the relief afforded to the fellow who had no money to bid for the land. New factories would open, men would be in demand, wages would rise! Beautiful program. But the stubborn fact always came up that no man would employ another to work for him unless he could get more for his product than he had to pay for it, and that being the case, the inevitable course of exchange and re-exchange would be that the man <em>having received less than the full amount</em>, could buy back less than the full amount, so that eventually the unsold products must again accumulate in the capitalist’s hands; again the period of non-employment arrives, and my landless worker is no better off than he was before the Single Tax went into operation.  I perceived, therefore, that some settlement of the whole labor question was needed which would not split up the people again into land possessors and employed wage-earners. Furthermore, my soul was infinitely sickened by the everlasting discussion about the rent of the corner lot. I conceived that the reason there was such a scramble over the corner lot was because the people were jammed together in the cities, for want of the power to spread out over the country. It des not lie in me to believe that millions of people pack themselves like sardines, worry themselves into dens out of which they must emerge “walking backward,” so to speak, for want of pace to turn around, poison themselves with foul, smoke-laden, fever-impregnated air, condemn themselves to stone and brick above and below and around, if they just didn’t <em>have</em> to. 
+</p><p>How, then, to make it possible for the man who has nothing but his hands to get back upon the earth the earth and make use of his opportunity? There came a class of reformers  who said, “Lo, now, the thing all lies in the money question! The land being free wouldn’t make a grain of difference to the worker, unless he had the power to capitalize his credit and thus get the where-with to make use of the land. See, the trouble lies here: the possessors of one particular form of wealth, gold and silver, have the sole power to furnish the money used to effect exchanges. Let us abolish this gold and silver notion; let all forms of wealth be offered as security, and notes issued on such as are accepted, by a mutual bank, and then we shall have money enough to transact all our business without paying interest for the borrowed use of an expensive medium which had far better be used in the arts. And then the man who goes upon the land can buy the tools to work it.”
+</p><p>This sounded pretty plausible; but still I came back to the old question, how will the man who has nothing but his individual credit to offer, who has no wealth of any kind, how is he to be benefited by this bank?
+</p><p>And again about the tools: it is well enough to talk of his buying hand tools, or small machinery which can be moved about; but what about the gigantic machinery necessary to the operation of a mine, or a mill? It requires many to work it. If one owns it, will he not make the others pay tribute for using it? 
+</p><p>And so, at last, after many years of looking to this remedy and to that, I came to these conclusions:—
+</p><p>That the way to get freedom to use the land is by no tampering and indirection, but plainly by the going out and settling thereon, and using it; remembering always that every newcomer has as good a right to come and labor upon it, become one of the working community, as the first initiators of the movement. That in the arrangement and determination of the uses of locations, each community should be absolutely free to make its own regulations. That there should be no such nonsensical thing as an imaginary line drawn along the ground, within which boundary persons having no interests whatever in common and living hundreds of miles apart, occupied in different pursuits, living according to different customs, should be obliged to conform to interfering regulations made by one another; and while this stupid division binds together those in no way helped but troubled thereby, on the other hand cuts right through the middle of a community united by proximity, occupation, home, and social sympathies.
+</p><p>Second:— I concluded that as to the question of exchange and money, it was so exceedingly bewildering, so impossible of settlement among the professors themselves, as to the nature of value, and the representation of value, and the unit of value, and the numberless multiplications and divisions of the subject, that the best thing ordinary workingmen or women could do was to organize their industry so as to get rid of money altogether. I figured it this way: I’m not any more a fool than the rest of ordinary humanity; I’ve figured and figured away on this thing for years, and directly I thought myself middling straight, there came another money reformer and showed me the hole in that scheme, till, at last , it appears that between “bills of credit,” and “labor notes” and “time checks,” and “mutual bank issues,” and “the invariable unit of value,” none of them have any sense. How many thousands of years is it going to get this sort of thing into people’s heads by mere preaching of theories. Let it be this way: Let there be an end of the special monopoly on securities for money issues. Let every community go ahead and try some member’s money scheme if it wants; — let every individual try it if he pleases. But better for the working people let them all go. Let them produce together, co-operatively rather than as employer and employed; let them fraternize group by group, let each use what he needs of his own product, and deposit the rest in the storage-houses, and let those others who need goods have them as occasion arises. 
+</p><p>With our present crippled production, with less than half the people working, with all the conservatism of vested interest operating to prevent improvements in methods being adopted, we have more than enough to supply all the wants of the people if we could only get it distributed. There is, then, no fixed estimate to be put upon possibilities. If one man working now can produce ten times as much as he can by the most generous use dispose of for himself, what shall be said of the capacities of the free worker of the future? And why, then, all this calculating worry about the exact exchange of equivalents? If there is enough and to waste, why fret for fear some one will get a little more than he gives? We do not worry for fear some one will drink a little more water than we do, except it is in a case of shipwreck; because we know there is quite enough to go around. And since all these emasures for adjusting equivalent values have only resulted in establishing a perpetual means whereby the furnisher of money succeeds in abstracting a percentage if the product, would it not be better to risk the occasional loss in exchange of things, rater than to have this false adjuster of differences perpetually paying itself for a very doubtful service?
+</p><p>Third:— On the question of machinery I stopped for some time; it was easy enough to reason that the land which was produced by nobody belonged to nobody; comparatively easy to conclude that with abundance of product no money was needed. But the problem of machinery required a great deal of pro-ing and con-ing; it finally settled down so: Every machine of any complexity is the accumulation of the inventive genius of the ages; no one man conceived it; no one man can make it; no one man therefore has a right to the exclusive possession of the social inheritance from the dead; that which requires social genius to conceive and social action to operate, should be free of access to all those desiring to use it.
+</p><p>Fourth:— In the contemplation of the results to follow from the freeing of the land, the conclusion was inevitable that many small communities would grow out of the breaking up of the large communities; that people would realize then that the vast mass of this dragging products up and down the world, which is the great triumph of commercialism, is economic insanity; illustration: Paris butter carted to London, and London butter to Paris! A friend of mine in Philadelphia makes shoes; the factory adjoins the home property of a certain Senator whose wife orders her shoes off a Chicago firm; this firm orders of the self-same factory, which ships the order to Chicago. Chicago ships them back to the Senator’s wife; while any workman in the factory might have thrown them over her backyard fence! That, therefore, all this complicated system of freight transportation would disappear, and a far greater approach to simplicity be attained; and hence all the international bureaus of regulation, aimed at by the Socialists, would become as unnecessary as they are obnoxious. I conceived, in short, that, instead of the workingman’s planting his feet in the mud of the bottomless abyss of poverty, and seeing the trains of the earth go past his tantalized eyes, he carrying the whole thing as Atlas did the world, would calmly set his world down, climb up on it, and go gleefully spinning around it himself, becoming world-citizens indeed. Man, the emperor of products, not products the enslaver of man, became my dream.
+</p><p>At this point I broke off to inquire how much government was left; land titles all gone, stocks and bonds and guarantees of ownership in means of production gone too, what was left of the State? Nothing of its existence in relation to the worker: nothing buts its regulation of morals.
+</p><p>I had meanwhile come to the conclusion that the assumptions as to woman’s inferiority were all humbug; that given freedom of opportunity, women were just as responsive as men, just as capable of making their own way, producing as much for the social good as men. I observed that women who were financially independent at present, took very little to the notion that a marriage ceremony was sacred, unless it symbolized the inward reality of psychological and physiological mateship; that most of the who were unfortunate enough to make an original mistake, or to grow apart later, were quite able to take their freedom from a mischievous bond without appealing to the law. Hence, I concluded that the State had nothing left to do here; for it has never attempted to do more than solve the material difficulties, in a miserable, brutal way; and these economic independence would solve for itself. As to the heartaches and bitterness attendant upon disappointments of this nature in themselves, apart from third-party considerations, — they are entirely a mater of individual temperaments, not to be assuaged by any State or social system.
+</p><p>The offices of the State were now reduced to the disposition of criminals. An inquiry into the criminal question made plain that the great mass of crimes are crimes against property; even those crimes arising from jealousy are property crimes resulting from the notion of a right of property in flesh. Allowing property to be eradicated, both in practice and spirit, no crimes are left but such as are the acts of the mentally sick — cases of atavism, which might well be expected occasionally, for centuries to come, as the result of all the repression poor humanity has experienced these thousands of years. An enlightened people, a people living in something like sane and healthy conditions, would consider these criminals as subjects of scientific study and treatment; would not retaliate and exhibit themselves as more brutal than the criminal, as is the custom to-day, but would “use all gently.” 
+</p><p>The State had now disappeared from my conception of society; there remained only the application of Anarchism to those vague yearnings for the outpouring of new ideals in education, in literature, in art, in customs, social converse, and in ethical concepts. And now the way became easy; for all this talking up and down the question of wealth was foreign to my taste. But education! As long ago as I could remember I has dreamed of an education which should be a getting at the secrets of nature, not as reported through another’s eyes, but just the thing itself; I had dreamed of a teacher who should go out and attract his pupils around him as the Greeks did of old, and then go trooping out into the world, free monarchs, learning everywhere — learning nature, learning man, learning to know life in all its forms, and not to hug one little narrow spot and declare it the finest one on earth for the patriotic reason that they live there, And here I picked up Wm. Morris’ “News from Nowhere,” and found the same thing. And there were the new school artists in France and Germany, the literateurs, the scientists, the inventors, the poets, all breaking way from ancient forms. And there were Emerson and Channing and Thoreau in ethics, preaching the supremacy of individual conscience over the law, — indeed, all that mighty trend of Protestantism and Democracy, which every once in a while lifts up its head above the judgments of the commonplace in some single powerful personality. That indeed is the triumphant word of Anarchism: it comes as the logical conclusion of three hundred years of revolt against external temporal and spiritual authority — the word which has no compromise to offer, which holds before us the unswerving ideal of the Free Man.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

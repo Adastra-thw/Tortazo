@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Why Anti-Authoritarian? (Larry W. Giddings) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/larry-w-giddings-why-anti-authoritarian?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=larry-w-giddings-why-anti-authoritarian">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Why Anti-Authoritarian?
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/larry-w-giddings">Larry W. Giddings</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1990
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anarchist-black-cross">Anarchist Black Cross</a>
+        <a href="/topics/armed-struggle">armed struggle</a>
+        <a href="/topics/authority">authority</a>
+        <a href="/topics/feminism">feminism</a>
+        <a href="/topics/indigenous">indigenous</a>
+        <a href="/topics/internationalism">internationalism</a>
+        <a href="/topics/language">language</a>
+        <a href="/topics/prison">prison</a>
+        <a href="/topics/prisoners">prisoners</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on November 18, 2012 from print edition and http://www.spunk.org/texts/misc/sp000124.txt
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="larry-w-giddings-why-anti-authoritarian.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="larry-w-giddings-why-anti-authoritarian.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="larry-w-giddings-why-anti-authoritarian.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="larry-w-giddings-why-anti-authoritarian.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="larry-w-giddings-why-anti-authoritarian?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="larry-w-giddings-why-anti-authoritarian.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="larry-w-giddings-why-anti-authoritarian.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Larry W. Giddings</h2>
+	
+	<h1 id="textttitleh">Why Anti-Authoritarian?</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">The Anti-Authoritarian Movement &amp; Political Prisoners
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Why Anti-Authoritarian?
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">In Memory — August 21, 1971
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h4 id="toc1">The Anti-Authoritarian Movement &amp; Political Prisoners
+</h4>
+<p>When we mount a movement to challenge power we must expect and prepare for repression as a matter of course. The resurgence of anti-authoritarian organizations has paralleled a general increase in militancy among progressive forces in North America. The predictable state response to this militancy has been increased repression, including political imprisonment.
+</p><p>There are currently well over 100 political prisoners (PPs) and prisoners of war (POWs) held in North American prisons, representing many diverse political movements. Among these are Native Americans, Puerto Rican independentistas, Black/New Afrikan nationalists, white anti-imperialists and anti-nuclear activists. There are also anarchist/anti-authoritarian political prisoners — captured activists from our own movement.
+</p><p>The further development and defense of our movement requires building an effective and consistent response to the state’s repressive actions. Providing moral, political and material support for those on trial and for long imprisoned activists, aiding their families, learning how to protect ourselves from arrest: these are all things we as individuals and as a movement can and should be involved in.
+</p><p>Let us introduce you to one of our comrades, Larry Giddings, captured by state forces in 1979. Larry is imprisoned — but still actively participating in our movement — today.
+</p><p>Larry was born October 6, 1952, in Rosstal, Germany. His mother is Silesian/German and his father is of various European and North American extractions. Larry spent his early years and some teens in Germany. He spent approximately eight years attending school and living in Maryland, USA, until dropping out of high shcool.
+</p><p>Larry was wounded during a shoot-out and arms expropriation with four others on August 21, 1971, in Los Angeles, California. He was arrested at the scene. Larry’s legal/political defense focused on the need for armed struggle against the U.S. government and judicial system and the liberation of prisoners. Upon conviction, he received a 20 years to life sentence. New laws, and his status as a “first-time felon”, resulted in his parole after seven years. Larry spent more than a year on parole, working and living with a multi-cultural, political, food and prisoner support collective involved in progressive work in the San Fransisco Bay area. He later began clandestine activities.
+</p><p>On October 14, 1979, Larry was again wounded and captured along with Bill Dunne (an anti-authoritarian POW in Marion prison) during the liberation of a comrade from a Seattle, Washington jail. Convicted of aiding an escape, the shooting of a policeman, bank expropriations (used for funding their activities), and conspiracy, he received multiple sentences of life in prison and 75 years, all consecutive. He has no known parole opportunities.
+</p><p>Since his imprisonment, Larry’s anti-authoritarian commitment, non-nationalist political analysis and continuing activism, has resulted in police repression against himself and his friends. Imprisonment has not stopped Larry from making important contributions to the anarchist/anti-authoritarian movement. Larry continues to be active with Bulldozer/Prison News Service, Freedom Now and has been working with the Anarchist Black Cross (Toronto). Supplementing his activism, Larry completed B.A. degrees in Sociology and Psychology with the University of Kansas. He is presently working towards the completion of an M.A. degree in Sociology, in the key area of social movements.
+</p><p>In Larry’s view, anti-colonialism and anti-imperialism are integral to an anti-authoritarian analysius and practice. In Larry’s own words:
+</p>
+<blockquote>
+<p>I seek a world where people live without cultural, racial or national oppression. This can only happen in a non-state world, a world without borders. My most inspirational historical example is that of the Seminole struggles of the 1800’s, in Northern Florida, Oklahoma and finally in Northern Mexico and Texas. Indigenous People of various nations, Afrikans (both free-born and escaped from slavery), “renegade” Europeans, and Maroons (ship-wrecked sailors and rebels from around the world) united under the banner of the Seminole and resisted the imperial slavocracy of the U.S. for decades. Some of these Seminole People continue to struggle to this day. These “Seminole Wars”, as they are called, are filled with examples of non-authoritarian structures, multi-cultural developments and autonomy between a number of cultures united in struggle. It is from these roots that I believe a truly dynamic and successful movement for a socially and ecologically sound world will arise. A respect for the Indigenous People of the world and the environment is a primary step in creating this world.
+</p></blockquote>
+<p>Have we supported Larry or has Larry supported us? Sometimes it is hard to differentiate. Certainly we have learned a lot from Larry and are privileged to have worked with him. He remains unquestionably a part of our movement.
+</p><p>Support for political prisoners and prisoners of war in North America is minimal: their existence is all but unacknowledged. Recognition of and support for anarchist/anti-authoritarian prisoners is even more limited. For years people like Larry Giddings have received little or no support from anti-authoritarians. Indeed Larry’s existence is unknown to most of us even though he has contributed greatly to our movement both before and since his capture. There is a growing movement within North America to recognize, support and publicize the plight of PPs and POWs. We as anti-authoritarians have a responsibility to ensure that both captured comrades such as Larry, and anarchist/anti-authoritarian organizations on the outside are included as a force within this movement
+</p><p>Anarchist Black Cross (Toronto)
+</p>
+<blockquote>
+<p>The following statement was put out as a leaflet by the Anarchist Black Cross (Toronto) to help build support for Larry and other political prisoners/ prisoners of war in the latter part of 1990. From December 7–10, 1990 an “International Tribunal On The Human Rights Violations Of Political/POW Prisoners In The US” took place in New York City where the ABC (Toronto) distributed a slightly different version of this pamphlet. Since then the ABC (Toronto) has disbanded and this pamphlet has been out of print. We at Arm The Spirit have taken it upon ourselves to reprint “Why Anti-Authoritarian” with slight alterations and the addition of a short piece that Larry wrote called “In Memory — August 21, 1971”. We encourage others to copy and distribute it at will.
+</p><p>In Solidarity,
+Arm The Spirit (Hamilton)
+</p></blockquote>
+<h4 id="toc2">Why Anti-Authoritarian?
+</h4>
+<p>From within the primal ooze of social-political labelling I have, for a number of years, chosen “anti-authoritarian” as my own. Those that prefer specificity have argued that this term is not descriptive enough and does not declare a “particular” poltical evolution. Bandits, rebels, street gangs, “free speechers”, Jeffersonian constitutionalists, untutored and politically unsophisticated teenagers in rebellion, anti-communists, undiscplined rabble, counter-culturists, libertarian socialists, democratic socialists, social democrats, council communists, syndicalists, anarcho-syndicalists, anarcho-marxists, anarcho-communists, anarcho-feminists... and more, can all be considered “anti-authoritarian”. Oh, just so you think I forgot, anarchists, little ‘a’, and big ‘A’ are considered anti-authoritarians. “Why can’t I use one of the more ‘acceptable’ labels, one with a more distinctly ‘left’ connotation?”, they ask. 
+</p><p>Unfortunately, I found the term — anarchist — lacking as well. I’m not alone in this observation. The term “autonomist” has appeared in recent decades as a response to the perceived differences between “classical” anarchists, and younger more contemporary anti-authoritarian activists. In Europe, the original organizations of many thought to be extinct political ideologies are still alive. Small, they may be, but they are still around. So, younger anti-authoritarians/anarchists felt compelled to develop different organizational methods and their label. Similarly, having described myself as being part of the anarchist persuasion during the early ’70s, it has been a circuitous route to the term anti-authoritarian. 
+</p><p>“Anarchist”, is generally accepted to mean: without authority, or without ruler. In that sense, especially — without ruler — I am, most certainly, an anarchist. 
+</p><p>However, life isn’t nearly so simple, and, as with most other labels, the term — anarchist — has become “value laden”. Which means that when people read or use the term — anarchist — they readily identify it with particular ideological, social, historical images they have carefully or unconsciously filed in their brains. For the unconscious, the greatest majority of people, it represents everything from bearded bomb-throwing radicals, to pipe-smoking armchair idealists. For those with some political and historical knowledge, those who carefully file their definitions, an anarchist is someone that doesn’t believe state power is the object of struggle with the dominant social order but, a socially responsible and autonomous humanity — is — the object of struggle. 
+</p><p>At this point, the waters become rather murky. There are nearly as many definitions of anarchy as there are anarchists! Labourists and syndicalists view the General Strike as the jumping off point in the creation of a classless, racismless society; to others, a committment to the removal of technology, and anti-industrialism is the mark of a “true” anarchist. Any support for a national group or “nationalist” movement precludes one from being an anarchist, to others. Situationists, post-Situationists, social ecologists, social anarchists, anarcho-marxists, Christian anarchists, pagan anarchists, ____, ____, fill in the blanks. All definitions of “true” anarchists are based on good analysis. 
+</p><p>Excuse ----- me!!! As a poor, mostly self-educated, imprisoned, non-dues paying member of any organization, or adherent to a specific anarchist “program”, I conceded. O.K.!! Maybe I am not really an anarchist. Maybe, I should take a step backward and, dipping into the primordial ooze of labelling, find something not so insulting to true anarchists. So, I did. A friend, some years ago, suggested that I was an “eclectic” anarchist; since, I do believe that good ideas can come from most anywhere and good people even moreso. Then, there is the term “autonomous”. “Autonomous”, in the European sense, has been used to describe non-communist party dominated socialist and communist groups, as well as the ever more popular “autonomes” of Germany. The autonomes include many perspectives in its non-ranks. The term — autonomous — is still largely unknown in the u.s. Anti-authoritarian was the term that seemed to work best. 
+</p><p>Like most of us, my journey began as a “rebel”, pure and simple. Against family, against school, against “adults”, against most anything that got in my way of achieving some personal enjoyment and development in life. I left “home”, left school, and dropped-in to the world at a large, to find all the impediments multiplied. Firstly, I recognized “ageism” as a repressive cultural force. Secondly, I left the “family”, as an incubator of the state, was the most repressive institution. Thirdly, the state, the enforcer of economic disparity and manager of all other institutions, the inhibitor of change, was the target of my rebellion. 
+</p><p>Within the structure of the state, I swiftly recognized the police and “criminal justice” system as the immediate arm of state authority. I was very clear on this when I was 14, 15, 16 years old. I had read lots of history, been active in street actions in Germany and preparing for armed action in the u.s. from 16 to 17 years of age. There was no doubt in my mind that armed revolution was needed to affect any real change in this system. I had learned, all too well, as the son of a career army sergeant, that force was the only thing that the state understood. Living near Washington, D.C., Baltimore and Annapolis, I witnessed — all too often, the results of “peace demonstrations” and sit-ins, and civil rights marches, not to mention anti-war demos. Discussion was out of the question. I wasn’t willing to lay down and let the state, or anyone else, beat me bloody, attack me with its dogs and shoot me, without fighting back. 
+</p><p>My less than perfectly executed expropriation of arms, to pass out to liberated prisoners and a good number of 16–18 year olds, much like myself, in L.A., in 1971, landed me in prison for 7 years. I spent those years evaluating myself and my actions and my goals. I had recognized a youth movement, armed youth including Black Panthers, Brown Berets and American Indian Movement (A.I.M.) activists, and others, and headed in the same direction. But, I had not worked closely with any of them. Mistrust between groups of activists, separtism: political and cultural, active campaigns by various police agencies (including the F.B.I.‘s COINTELPRO program), served to support our already deeply taught “need” to function as separate communities. Except for fairly isolated events, such as the occupation of Wounded Knee, this idea of the necessity of racial/cultural separtism remained a dominant theme, especially in the armed revolutionary communities. Ideologically, I proclaimed anarchism as a goal. In practice, I operated nearly as separately as nationalists. Still, I rejected dictatorships of any kind. 
+</p><p>In prison, from ’71 to ’78, I read, like a lot of prisoners. Amongst that mass of printed words, I began to read “feminist” literature. It was easy to identify with many issues raised by feminists. As the oldest son of working parents, I had been responsible for the care and keeping of house and brothers. Don’t you know I hated being trapped, both as a servant and as a youth, with virtually no rights in this society. Children were, and still are, “property” of their parents, genetic parents or otherwise. The “law” treats them equally shabby. This study of women’s writings and political analysis led me to recognize “gender” as a special category of social/political relations, other than economic class and age. Likewise, feminists pointed out, correctly, that it had been women who have provided the backbone and sustenance of nearly all movements. In the anarchist community, ecological issues, childcare and education, healthcare, the anti-war/anti-nuclear movements, anti-racism and prison abolition have been issues fought for — daily — by women. As the numerically largest class of poor, single women with children — of all races — bare the brunt of the state’s oppression. They struggle with these issues, whether they are “popular” or not. While men often “struggle” for a short period of time, and then abscond, women, especially those with children, have no choice but to continue to confront the state in all its forms. Also the women’s movement of the ’60s and ’70s reaffirmed and expanded the concept of the “affinity group”, an anarchist form of organization, in which small groups of compatible people function in a largely egalitarian manner — without hierarchical “command” structures. 
+</p><p>In prison, I swiftly observed racial separation as a constant source of misunderstanding, and felt all such “separatism”, national, or otherwise, as divisive. We could not change this society, as anarchists, or anything else, while observing and participating in tacit agreement with social and cultural apartheid — u.s. style. It was in these years I rediscovered a favourite historical period of mine. Instead of just an isolated period of “history”, my experiences led me to realize the deeper social and political significance of the “Seminole Wars” of the early 1800s. This committment to a consciously multi-cultural, non-nationalist struggle, rather than an amorphous anarchism, propelled me to enter a collective that reflected that committment upon my parole in 1978. 
+</p><p>This collective held property in common, supported prison abolition and prisoners’ needs, women’s struggles, and members were from a variety of cultures and races. Study of revolutionary political material was a constant and reflected the various origins of those involved. Anarchists, Marxists and socialists of several varieties, lived, worked and struggled for individual growth and with each other, as well as against the state. It was an “eclectic” community. 
+</p><p>Twenty months after parole, I was captured in Seattle, for the attempted liberation of a prisoner. Once again — I was in prison. My time on the streets had gone much too fast. While recognizing other groups and struggles as necessary, I had focussed on a fairly narrow spectrum of activity. No strong alliances had a chance to grow in such a short time. The continuing destruction of the small armed “left” groups in this country and my personal experiences, caused me to look more closely at the relative isolation of many peoples and struggles. An anarchist, global revolution against the nation-state formation, must begin somewhere. It must survive to struggle. I began to re-evaluate my thoughts, actions and focus. Once again, I returned to the study of the Seminole formations. In doing so, I found a greater commitment to Indigenous, Native American, Indian struggles was necessary. 
+</p><p>Recognizing genocide, colonialism and ongoing destruction of Indigenous People and their ideas as a historical fact, is one thing, implementing that knowledge in a meaningful way — is another. Rather than just acknowledging that genocide and colonialism exist, we need to actively struggle against it, now. Many Native Americans may not call themselves “anarchist”, but many are, clearly, anti-authoritarian in views and practice. Instead of relying on European historical example, they rely on their long Indigenous history. Recognizing that much of what modern and 18<sup>th</sup> and 19<sup>th</sup> century activists call — anarchism — is in a large way a result of interaction between European intellectuals and Native American societies — is of paramount importance in this process. Closer interaction with and support of Native struggles clearly added “self-determination and autonomy” for Native people to my list of goals, along with the recognition that they have historical reasons for wishing to organize separately. 
+</p><p>Feminism, Women’s Studies, gender as a special category of oppression, led me to identify and accept struggle against other specific forms of oppression as <em>valid</em>. Recognition that Black/New Afrikan, Puerto Rican, Mexicano Peoples, and others also share specific and different historical, intellectual and social realities, swiftly followed. This recognition, in other than just an abstract way, is not “truly” anarchist, I have been informed on many occasions. 
+</p><p>However, I would hold that the Seminole struggles were anti-authoritarian in practice, and perhaps even anarchist in reality. Rather than a mere ideological/philosophical position of “globalism”, or a theoretical “anti-capitalism”, or “alternative economy”, or “utopian” multi-racial/multi-culturalism, — they actually practiced, lived, loved and fought with those principles in the real world. Unlike many European based anarchist, and anti-authoritarian movements and struggles, which attempted to deny their own cultural imperatives, those that struggled in the Seminole way acknowledged and accepted their own special relations and histories. Rather than a false — universalism — one which excluded those that sought autonomy within their own movement, they practiced a true one.
+</p><p>Rejecting a “romantic” view of Native American struggles is a requirement before learning the lives and struggles of People as real. If, we tear away the mythology and romantic view of “Indians living with nature”, we find a revolutionary movement in the Seminole. A movement evolving out of the “Red Stick” movement shortly preceding it, as well as the social political struggles of Europe in regard to wars, growing industrialism and the social theories and movements in England and France, there can be little doubt that the Seminole knew of these struggles. Seminoles had alliances with every class of people in the young united states, especially among the anti-slavery/abolitionist movements, allies in Europe, and the Caribbean. Furthermore, Florida was still a Spanish colony, though, in reality, the Spanish dominated only a few towns and some coastal areas. A number of Seminoles fought in battles and struggled with others as far north as Connecticut. Native Americans had been kept as slaves in Georgia and the Carolinas, at some points it was considered “illegal” to have Afrikans enslaved, but “legal” to enslave Indians. Their legal status shifted back and forth. But, the link between the “cimmarones” (Spanish for: wild and runaway), Maroon communities and others became stronger as they helped more and more people to escape from bondage and build a new society, one which might eventually be able to free territory in other areas, including Central America and Venezuela. Cimmarones became known as Seminoles. De-centralized, participatory communities, multi-cultural and separatist communities, autonomous decision making and plans of action, caused the Seminole allies to be an incredibly committed and versatile foe to the u.s. The u.s. government’s actions against this grouping was the most costly ever fought here, except for the Civil War of the 1860’s. Some bands, ones that refused to submit, still exist. Others fled to the islands, migrated and mixed in with local populations, or were removed to Oklahoma, as members of the Seminole People. Still others escaped the reservation and fled to Mexico, where they waged a running war with the u.s. for decades more. Some bands still live in Mexico. 
+</p><p>In my attempts to translate these events and my own experiences, I have observed the following: whether I recognize non-anarchist, nationalist, separatist struggles, or not, they are in existence. By ignoring their existence, because of some principle of — pre-agreement, a requirement that these struggles reflect my own notion of a non-nation-state future and multi- cultural struggle, I am ignoring history and the reality of their day to day lives. By ignoring their existence, and ignoring their struggle against what are most often our mutual oppressors, I ignore my own desire for a non-nation-state future. “Globalism”, de-centralized social and economic systems, non-nation-state formations, will only come about through struggle. Through struggling together, trust and confidence in our ability and commitment to our dreams, is communicated. “Globalism”, must come about through mutual understanding. It will not be imposed. A culture of anti-authoritarian struggle is necessary. 
+</p><p>Anarchism, as a body of literature and activity which opposes centralized state domination of social political life, is growing ever larger. In recognition of the vastness of the sea of material available and the swamp of views represented, I have used the label — anti-authoritarian — to keep the door, so to speak. There is every reason to allow people to grow and learn and make additions to anti-authoritarian theory and practice. If we narrow our movement to some narrowly defined “true” anarchism, we have excluded many of those we wish to, or claim to wish to, communicate with. Young people, in particular, are much more open to the need for a multi-cultural practice than those of my own generation, for instance. It matters less, to me, that young activists understand every nuance of the struggles between historical anarchism and marxism, in its intricacy and confusion, than their day to day practice of an anti-authoritarian nature. None of us, not one, were suddenly endowed with all of this information. To expect young, or old, activists, to suddenly understand what took many of us decades to compile, or even to agree with it, is ludicrous, to say the least. In fact, it is from this new generation of activists that a new language of global struggle will emerge. The assuredly “Euro-centric” language and practice of anti-authoritarian/anarchist theory, is in for a very healthy, and long-overdue, infusion of life. 
+</p><p>In effect, I would rather be called anti-authoritarian and spend my time and energy struggling to build a non-nation-state world, than to argue to infinity about the definition of a “true” anarchist. Either <em>anarchism</em> has the ability to retain an evolutionary approach to problems, analysis and struggle, or it will be rejected by yet another generation of activists, in favour of quick-fix, short-term, pseudo-democratic and authoritarian alternatives. Those that wish to trap themselves in an ideologically suicidal classicalism, may do so. I, for one, reject that crystalization of thought and practice, which would doom the fertile and living body of knowledge and experience we call anarchism, and, yes, anti-authoritarian. 
+</p><p>Let us practice globalism. Let us be real, sincere, and effective allies to each other. Whether active in anti-nuclear, ecology, anti-racism, squatting, prison abolition, anti- colonialism, cultural movements, women’s movements or others it is time to recognize each other. Practice the knowledge we have confidence in. Confidence. A lack of fear that contact with “others”, somehow — unlike ourselves, will destroy us, or take away our knowledge, change us. Confidence will build flexibility. False confidence and fear, create rigidity. Can we reaffirm anarchism’s roots by becoming anti-authoritarian? I hope so.
+</p><p><strong>Larry Giddings</strong> 
+</p><h4 id="toc3">In Memory — August 21, 1971
+</h4>
+<p>Sweltering heat, noxious exhaust fumes and endless tail-lights. Sundown in L.A. The sawed-off shotgun riding across my lap, hand on the stock, seems to make all the sounds of the city just a little sharper, the smells a little richer. Honking horns, changing gears, radio drifting in from other vehicles, drowning out our own. Cigarette smoke mixed with the growing sweat of pre-combat anxiety, as I sat in the back of the van. Just a few short minutes to go and we, my cohorts and myself, would arrive at our destination. We weren’t talking much. The radio filled the silences between last second details. The news bulletin just sort of slipped itself in-between rock &amp; roll on the radio. The sister up front turned up the volume. <em>“News Flash! Shootout and death at San Quentin!”</em>
+</p><p>There were no thoughts as the descriptions, in all of its confusion, came across the speakers. Guards killed, prisoners killed, <em>”...George Jackson dead in prison yard... attempting to escape.”</em> “Impossible!,” said the escapee, riding in the passenger seat up front. “No way would he be trying to escape where they claim.” We were fast approaching our destination. There was no time for discussion. Preparing to go, driving and the last minute details of taking an armed action, caused us to miss the earlier news. How many prisoners died? How would this effect us in L.A.? There was no time to discuss it. The van pulled over to the curb and we piled out, taking over the store and packing weapons to haul away. Workers and customers were left safe in the back as we attempted to flee, upon the arrival of the L.A. Sheriff’s and 20 other departments. Lots of shooting later, and four wounded.
+</p><p>Lying in a high-security hospital bed, chained to it, I realized we weren’t going to liberate a group of prisoners as previously planned. August 21, 1971 came and went with thoughts of prisons, struggle, revolution, liberations, sweat, blood and dreams. Jonathan Jackson dies attempting to liberate friends and soldiers of the BLA. A year and a few weeks later, George Jackson was gunned down for speaking and informing people of their rights as human beings, their right to live without racism and oppression of many kinds. George died, and many suffered. The FBI “COINTELPRO” program which worked so hard to destroy many nascent movements did kill George.
+</p><p>A decade or so later, George Jackson’s mother was awarded $1 in a civil case, proving that her son was murdered and that he was not trying to escape. Angela Davis is still teaching. Geronimo Pratt (Black Panther Party) is still in prison for a “crime” he did not commit. Assata Shakur (BLA) is alive and well in Cuba. Sundiata Acoli is in Leavenworth. Others are at Marion, and prisons all over the country. San Quentin still standds. Leonard Peltier (AIM), known to be innocent of the charges at Pine Ridge, is still in prison.
+</p><p>The prison system in the U.S. is now doubling in size every 5 years. The prison system is 8 time, or more, larger than it was in 1971. “COINTELPRO” still exists in many guises. Expansion of police powers is explosive. The Supreme Court and other civil bodies are as active as ever in decreasing the ability of citizens to express themselves artistically, socially, politically or otherwise.
+</p><p>Twenty years have passed. Every August 21<sup>st</sup>, I think of that August 21<sup>st</sup> in 1971. I relive that long ride through the streets of L.A., the news reports, the guns and bullets and the thoughts of why I was not there. The death of George Jackson was not just linked to L.A. George’s death has linked many people for decades. That long ride caused me to spend years in prison and learn more about George, from those who knew him. It has been twenty years. In that time, I have come to know that there are mnay George Jacksons. They still live in prison cells and they still struggle. August 21<sup>st</sup> is a good day to remember them and know it is only our vigilance that keeps them alive.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

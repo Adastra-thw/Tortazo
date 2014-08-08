@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     technology | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="technology">technology</h3>
+<ol>
+
+  <li>
+   <a href="/library/pierleone-porcu-against-technology">
+   Against technology
+   </a>
+  
+  
+      
+          (<a href="/authors/pierleone-porcu">Pierleone Porcu</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-zerzan-against-technology-a-talk-by-john-zerzan-april-23-1997">
+   Against Technology: A talk by John Zerzan (April 23, 1997)
+   </a>
+  
+  
+      
+          (<a href="/authors/john-zerzan">John Zerzan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-zerzan-agriculture">
+   Agriculture
+   </a>
+  
+  
+      
+          (<a href="/authors/john-zerzan">John Zerzan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-alienation-marvelous-pursuits-and-the-new-nomadic-sciences">
+   Alienation, Marvelous Pursuits and the New Nomadic Sciences
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-alternative-energy-technology-articles-from-green-anarchist">
+   Alternative Energy Technology?: Articles from “Green Anarchist”
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/green-anarchist">Green Anarchist</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/uri-gordon-anarchism-and-political-theory-contemporary-problems">
+   Anarchism and Political Theory: Contemporary Problems
+   </a>
+  
+  
+      
+          (<a href="/authors/uri-gordon">Uri Gordon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/uri-gordon-anarchism-and-the-politics-of-technology">
+   Anarchism and the Politics of Technology
+   </a>
+  
+  
+      
+          (<a href="/authors/uri-gordon">Uri Gordon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/michael-albert-anarchism-zerzan">
+   Anarchism = Zerzan?
+   </a>
+  
+  
+      
+          (<a href="/authors/michael-albert">Michael Albert</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-01-17">
+   An Anarchist FAQ (01/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-02-17">
+   An Anarchist FAQ (02/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-03-17">
+   An Anarchist FAQ (03/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-04-17">
+   An Anarchist FAQ (04/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-05-17">
+   An Anarchist FAQ (05/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-06-17">
+   An Anarchist FAQ (06/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-07-17">
+   An Anarchist FAQ (07/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-08-17">
+   An Anarchist FAQ (08/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-09-17">
+   An Anarchist FAQ (09/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-10-17">
+   An Anarchist FAQ (10/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-11-17">
+   An Anarchist FAQ (11/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-12-17">
+   An Anarchist FAQ (12/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-13-17">
+   An Anarchist FAQ (13/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-14-17">
+   An Anarchist FAQ (14/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-15-17">
+   An Anarchist FAQ (15/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-16-17">
+   An Anarchist FAQ (16/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-anarchist-faq-editorial-collective-an-anarchist-faq-17-17">
+   An Anarchist FAQ (17/17)
+   </a>
+  
+  
+      
+          (<a href="/authors/the-anarchist-faq-editorial-collective">The Anarchist FAQ Editorial Collective</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/graham-purchase-anarcho-syndicalism-technology-and-ecology">
+   Anarcho-Syndicalism, Technology and Ecology
+   </a>
+  
+  
+      
+          (<a href="/authors/graham-purchase">Graham Purchase</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-anarchy-after-leftism">
+   Anarchy after Leftism
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/bob-black">Bob Black</a>, <a href="/authors/jason-mcquinn">Jason McQuinn</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/taylor-andrew-loy-anarchy-in-critical-dystopias-an-anatomy-of-rebellion">
+   Anarchy in Critical Dystopias: An Anatomy of Rebellion
+   </a>
+  
+  
+      
+          (<a href="/authors/taylor-andrew-loy">Taylor Andrew Loy</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/duncan-campbell-anarchy-in-the-usa">
+   Anarchy In The USA
+   </a>
+  
+  
+      
+          (<a href="/authors/duncan-campbell">Duncan Campbell</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ted-kaczynski-answer-to-some-comments-made-in-green-anarchist">
+   Answer to Some Comments Made in Green Anarchist
+   </a>
+  
+  
+      
+          (<a href="/authors/ted-kaczynski">Ted Kaczynski</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alexander-brener-and-barbara-schurz-anti-technologies-of-resistance">
+   Anti-Technologies of Resistance
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/alexander-brener">Alexander Brener</a>, <a href="/authors/barbara-schurz">Barbara Schurz</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ricardo-flores-magon-the-anxieties-of-iron">
+   The Anxieties of Iron
+   </a>
+  
+  
+      
+          (<a href="/authors/ricardo-flores-magon">Ricardo Flores Magón</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/columbia-anarchist-league-as-we-see-it">
+   As We See It!
+   </a>
+  
+  
+      
+          (<a href="/authors/columbia-anarchist-league">Columbia Anarchist League</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lewis-mumford-authoritarian-and-democratic-technics">
+   Authoritarian and Democratic Technics
+   </a>
+  
+  
+      
+          (<a href="/authors/lewis-mumford">Lewis Mumford</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/layla-abdelrahim-avatar-an-anarcho-primitivist-picture-of-the-history-of-the-world">
+   Avatar: An Anarcho-Primitivist Picture of the History of the World
+   </a>
+  
+  
+      
+          (<a href="/authors/layla-abdelrahim">Layla AbdelRahim</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/peter-lamborn-wilson-back-to-1911">
+   Back to 1911
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/peter-lamborn">Peter Lamborn</a>, <a href="/authors/wilson">Wilson</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/charles-thorpe-and-ian-welsh-beyond-primitivism-toward-a-twenty-first-century-anarchist-theory">
+   Beyond Primitivism: Toward a Twenty-First Century Anarchist Theory and Praxis for Science
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/charles-thorpe">Charles Thorpe</a>, <a href="/authors/ian-welsh">Ian Welsh</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/layla-abdelrahim-beyond-the-symbolic-and-towards-the-collapse">
+   Beyond the Symbolic and towards the Collapse
+   </a>
+  
+  
+      
+          (<a href="/authors/layla-abdelrahim">Layla AbdelRahim</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/michael-william-bicycles-and-civilization">
+   Bicycles and Civilization
+   </a>
+  
+  
+      
+          (<a href="/authors/michael-william">Michael William</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/william-manson-biophilia-toward-re-humanization">
+   Biophilia: Toward Re-Humanization
+   </a>
+  
+  
+      
+          (<a href="/authors/william-manson">William Manson</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/j-e-hamilton-biting-the-apple-or-not">
+   Biting the Apple (or not)
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/hamilton">Hamilton</a>, <a href="/authors/j-e">J.E.</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/petr-kropotkin-brain-work-and-manual-work">
+   Brain Work and Manual Work
+   </a>
+  
+  
+      
+          (<a href="/authors/petr-kropotkin">Pëtr Kropotkin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/gustav-landauer-call-to-socialism">
+   Call to Socialism
+   </a>
+  
+  
+      
+          (<a href="/authors/gustav-landauer">Gustav Landauer</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wage-slave-x-capitalism-technology-and-the-environment">
+   Capitalism, Technology and the Environment
+   </a>
+  
+  
+      
+          (<a href="/authors/wage-slave-x">Wage Slave X</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/henry-o-mad-chemicals-are-good-for-you">
+   Chemicals are good for you
+   </a>
+  
+  
+      
+          (<a href="/authors/henry-o-mad">Henry O’Mad</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/aufheben-civilization-and-its-latest-discontents-a-review-of-against-his-story-against-leviatha">
+   Civilization and its latest discontents: A review of Against His-story! Against Leviathan!
+   </a>
+  
+  
+      
+          (<a href="/authors/aufheben">Aufheben</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-civilization-and-the-creative-urge">
+   Civilization and the Creative Urge
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ran-prieur-civilization-will-eat-itself">
+   Civilization Will Eat Itself
+   </a>
+  
+  
+      
+          (<a href="/authors/ran-prieur">Ran Prieur</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/individualists-tending-toward-the-wild-communiques">
+   Communiques of ITS
+   </a>
+  
+  
+      
+          (<a href="/authors/individualists-tending-toward-the-wild">Individualists Tending toward the Wild</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/paul-rabin-computers-and-anarchism">
+   Computers and Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/paul-rabin">Paul Rabin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/porfido-contributions-toward-the-resumption-of-hostilities">
+   Contributions Toward the Resumption of Hostilities
+   </a>
+  
+  
+      
+          (<a href="/authors/porfido">Porfido</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/os-cangaceiros-a-crime-called-freedom-the-writings-of-os-cangaceiros-volume-one">
+   A Crime Called Freedom: The Writings of Os Cangaceiros (Volume One)
+   </a>
+  
+  
+      
+          (<a href="/authors/os-cangaceiros">Os Cangaceiros</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/tiqqun-the-cybernetic-hypothesis">
+   The Cybernetic Hypothesis
+   </a>
+  
+  
+      
+          (<a href="/authors/tiqqun">Tiqqun</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/crimethinc-anonymous-deserting-the-digital-utopia">
+   Deserting the Digital Utopia
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/crimethinc">CrimethInc.</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/andrew-flood-do-you-want-geoengineering-with-your-climate-change">
+   Do you want Geoengineering with your climate change?
+   </a>
+  
+  
+      
+          (<a href="/authors/andrew-flood">Andrew Flood</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/mare-almani-the-end-of-the-world">
+   The End of the World
+   </a>
+  
+  
+      
+          (<a href="/authors/mare-almani">Mare Almani</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/workers-solidarity-federation-the-environment">
+   The Environment
+   </a>
+  
+  
+      
+          (<a href="/authors/workers-solidarity-federation">Workers’ Solidarity Federation</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/workers-solidarity-federation-the-environmental-crisis">
+   The Environmental Crisis
+   </a>
+  
+  
+      
+          (<a href="/authors/workers-solidarity-federation">Workers’ Solidarity Federation</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-essays-from-species-traitor">
+   Essays from Species Traitor
+   </a>
+  
+  
+      
+          (<a href="/authors/kevin-tucker">Kevin Tucker</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-essays-from-willful-disobedience-volume-1-2">
+   Essays from Willful Disobedience Volume 1–2
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/kevin-tucker-everywhere-and-nowhere">
+   Everywhere and Nowhere
+   </a>
+  
+  
+      
+          (<a href="/authors/kevin-tucker">Kevin Tucker</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-false-promise-of-green-technology">
+   The False Promise of Green Technology
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-feral-a-journal-towards-wildness">
+   Feral: a journal towards wildness
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/chris-kortright">Chris Kortright</a>, <a href="/authors/craig-evarts">Craig Evarts</a>, <a href="/authors/david-orton">David Orton</a>, <a href="/authors/james-barnes">James Barnes</a>, <a href="/authors/joanne-lauck">Joanne Lauck</a>, <a href="/authors/patricia-freund">Patricia Freund</a>, <a href="/authors/rob-los-ricos">Rob los Ricos</a>, <a href="/authors/wolfi-landstreicher">Wolfi Landstreicher</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/feral-faun-essays">
+   Feral Revolution
+   </a>
+  
+  
+      
+          (<a href="/authors/feral-faun">Feral Faun</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-forest-occupation-in-catalunya">
+   Forest Occupation in Catalunya
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alfredo-m-bonanno-from-riot-to-insurrection-analysis-for-an-anarchist-perspective-against-post">
+   From Riot to Insurrection: Analysis for an anarchist perspective against post-industrial capitalism
+   </a>
+  
+  
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wildcat-good-old-fashioned-trade-unionism">
+   Good Old-Fashioned Trade Unionism
+   </a>
+  
+  
+      
+          (<a href="/authors/wildcat">Wildcat</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lorraine-perlman-having-little-being-much-a-chronicle-of-fredy-perlman-s-fifty-years">
+   Having Little, Being Much: A Chronicle of Fredy Perlman’s Fifty Years
+   </a>
+  
+  
+      
+          (<a href="/authors/lorraine-perlman">Lorraine Perlman</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/fc-industrial-society-and-its-future">
+   Industrial Society and Its Future
+   </a>
+  
+  
+      
+          (<a href="/authors/ted-kaczynski">Ted Kaczynski</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alfredo-m-bonanno-the-insurrectional-project">
+   The Insurrectional Project
+   </a>
+  
+  
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/affinity-project-interview-with-peter-lamborn-wilson">
+   Interview with Peter Lamborn Wilson
+   </a>
+  
+  
+      
+          (<a href="/authors/affinity-project">Affinity Project</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/andrew-flood-is-primitivism-realistic-an-anarchist-reply-to-john-zerzan-and-others">
+   Is primitivism realistic? An anarchist reply to John Zerzan and others
+   </a>
+  
+  
+      
+          (<a href="/authors/andrew-flood">Andrew Flood</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/phoenix-insurgent-is-that-a-singularity-in-your-pocket-or-are-you-just-happy-to-see-me-enslaved">
+   Is that a singularity in your pocket or are you just happy to see me enslaved?: Transhumanism’s class problem
+   </a>
+  
+  
+      
+          (<a href="/authors/phoenix-insurgent">Phoenix Insurgent</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ted-kaczynski-letter-to-a-turkish-anarchist">
+   Letter to a Turkish anarchist
+   </a>
+  
+  
+      
+          (<a href="/authors/ted-kaczynski">Ted Kaczynski</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/eli-maybell-limitations-of-leftism">
+   Limitations of Leftism
+   </a>
+  
+  
+      
+          (<a href="/authors/eli-maybell">Eli Maybell</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sam-dolgoff-modern-technology-and-anarchism">
+   Modern Technology and Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/sam-dolgoff">Sam Dolgoff</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/massimo-passamani-more-much-more-and-other-writings">
+   “More, Much More” and other writings
+   </a>
+  
+  
+      
+          (<a href="/authors/massimo-passamani">Massimo Passamani</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/baedan-musings-on-nothingness">
+   Musings on Nothingness
+   </a>
+  
+  
+      
+          (<a href="/authors/baedan">baedan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wolfi-landstreicher-the-network-of-domination">
+   The Network of Domination
+   </a>
+  
+  
+      
+          (<a href="/authors/wolfi-landstreicher">Wolfi Landstreicher</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-zerzan-the-nihilist-s-dictionary">
+   The Nihilist’s Dictionary
+   </a>
+  
+  
+      
+          (<a href="/authors/john-zerzan">John Zerzan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-no-globalisation-and-a-good-few-no-s-when-it-comes-to-anti-globalisation-too">
+   No Globalisation... and a good few ‘no’s when it comes to anti-globalisation too!
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/chellis-glendinning-notes-toward-a-neo-luddite-manifesto">
+   Notes toward a Neo-Luddite Manifesto
+   </a>
+  
+  
+      
+          (<a href="/authors/chellis-glendinning">Chellis Glendinning</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-zerzan-numb-and-number">
+   Numb and Number
+   </a>
+  
+  
+      
+          (<a href="/authors/john-zerzan">John Zerzan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-an-open-letter-on-technology-and-mediation">
+   An Open Letter on Technology and Mediation
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/bob-black">Bob Black</a>, <a href="/authors/jason-mcquinn">Jason McQuinn</a>, <a href="/authors/john-connor">John Connor</a>, <a href="/authors/john-filiss">John Filiss</a>, <a href="/authors/john-moore">John Moore</a>, <a href="/authors/john-zerzan">John Zerzan</a>, <a href="/authors/lawrence-jarach">Lawrence Jarach</a>, <a href="/authors/leif-fredrickson">Leif Fredrickson</a>, <a href="/authors/ron-leighton">Ron Leighton</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-the-origins-of-primitivism-1977-1988">
+   The Origins of Primitivism (1977–1988)
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/bob-brubaker">Bob Brubaker</a>, <a href="/authors/chris-dugan">Chris Dugan</a>, <a href="/authors/david-watson">David Watson</a>, <a href="/authors/e-b-maple">E.B. Maple</a>, <a href="/authors/fifth-estate">Fifth Estate</a>, <a href="/authors/john-zerzan">John Zerzan</a>, <a href="/authors/paula-zerzan">Paula Zerzan</a>, <a href="/authors/peter-werbe">Peter Werbe</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/henry-david-thoreau-paradise-to-be-regained">
+   Paradise (to be) Regained
+   </a>
+  
+  
+      
+          (<a href="/authors/henry-david-thoreau">Henry David Thoreau</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-and-jeremy-brecher-post-affluence-anarchy-a-dialogue">
+   Post-Affluence Anarchy: A Dialogue
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/jeremy-brecher">Jeremy Brecher</a>, <a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/hakim-bey-primitives-and-extropians">
+   Primitives and Extropians
+   </a>
+  
+  
+      
+          (<a href="/authors/hakim-bey">Hakim Bey</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/andrew-flood-primitivism-anarcho-primitivism-and-anti-civilisationism-criticism">
+   Primitivism, anarcho-primitivism and anti-civilisationism: criticism
+   </a>
+  
+  
+      
+          (<a href="/authors/andrew-flood">Andrew Flood</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/nihilo-zero-a-primitivist-response-to-andrew-flood-s-question-is-primitivism-realistic">
+   A primitivist response to Andrew Flood’s question: Is primitivism realistic?
+   </a>
+  
+  
+      
+          (<a href="/authors/nihilo-zero">Nihilo Zero</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/fredy-perlman-progress-and-nuclear-power-the-destruction-of-the-continent-and-its-peoples">
+   Progress and Nuclear Power: The Destruction of the Continent and Its Peoples
+   </a>
+  
+  
+      
+          (<a href="/authors/fredy-perlman">Fredy Perlman</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/theresa-kintz-radical-archaeology-as-dissent">
+   Radical Archaeology as Dissent
+   </a>
+  
+  
+      
+          (<a href="/authors/theresa-kintz">Theresa Kintz</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/e-colin-ruggero-radical-green-populism-climate-change-social-change-and-the-power-of-everyday-p">
+   Radical Green Populism: Climate Change, Social Change and the Power of Everyday Practices
+   </a>
+  
+  
+      
+          (<a href="/authors/e-colin-ruggero">E. Colin Ruggero</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ran-prieur-ran-prieur-on-avatar">
+   Ran Prieur on Avatar
+   </a>
+  
+  
+      
+          (<a href="/authors/ran-prieur">Ran Prieur</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-reconsidering-primitivism-technology-the-wild">
+   Reconsidering Primitivism, Technology, &amp; the Wild
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/anu-bonobo">Anu Bonobo</a>, <a href="/authors/derrick-jensen">Derrick Jensen</a>, <a href="/authors/don-lacoss">Don LaCoss</a>, <a href="/authors/luci-williams">Luci Williams</a>, <a href="/authors/peter-lamborn-wilson">Peter Lamborn Wilson</a>, <a href="/authors/richard-heinberg">Richard Heinberg</a>, <a href="/authors/witch-hazel">Witch Hazel</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sam-dolgoff-the-relevance-of-anarchism-to-modern-society">
+   The Relevance of Anarchism to Modern Society
+   </a>
+  
+  
+      
+          (<a href="/authors/sam-dolgoff">Sam Dolgoff</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/henry-o-mad-renewable-energy-alternative-consumption-and-the-consumption-of-alternatives">
+   Renewable Energy: Alternative Consumption and the consumption of alternatives
+   </a>
+  
+  
+      
+          (<a href="/authors/henry-o-mad">Henry O’Mad</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-research-and-development-articles-on-surveillance-technologies-from-green-anarc">
+   Research and Development: Articles on Surveillance Technologies from “Green Anarchist”
+   </a>
+  
+  
+      
+      
+      
+      
+      
+          (<a href="/authors/green-anarchist">Green Anarchist</a>, <a href="/authors/grimalkin">Grimalkin</a>, <a href="/authors/terra-selvaggia">Terra Selvaggia</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-review-anarchism-marxism-and-the-future-of-the-left">
+   Review: Anarchism, Marxism and the Future of the Left
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-review-science-capital-radical-essays-on-science-technology">
+   Review: Science &amp; Capital — Radical Essays on Science &amp; Technology
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/peter-gelderloos-the-rise-of-hierarchy">
+   The Rise of Hierarchy
+   </a>
+  
+  
+      
+          (<a href="/authors/peter-gelderloos">Peter Gelderloos</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-zerzan-second-best-life-real-virtuality">
+   Second-Best Life: Real Virtuality
+   </a>
+  
+  
+      
+          (<a href="/authors/john-zerzan">John Zerzan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-honorable-reverend-black-a-hole-sermon-on-the-cyber-mount">
+   Sermon on the Cyber Mount
+   </a>
+  
+  
+      
+          (<a href="/authors/the-honorable-reverend-black-a-hole">The Honorable Reverend Black A. Hole</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-snap-of-a-twig">
+   The Snap of a Twig
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/c-e-hayes-a-specious-species">
+   A Specious Species
+   </a>
+  
+  
+      
+          (<a href="/authors/c-e-hayes">C. E. Hayes</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-connor-surveillance-and-domestication">
+   Surveillance and Domestication
+   </a>
+  
+  
+      
+          (<a href="/authors/john-connor">John Connor</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/nihilo-zero-the-system-currently-in-place">
+   The System Currently In Place
+   </a>
+  
+  
+      
+          (<a href="/authors/nihilo-zero">Nihilo Zero</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-filiss-technocracy">
+   Technocracy
+   </a>
+  
+  
+      
+          (<a href="/authors/john-filiss">John Filiss</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-technology-and-anarchism">
+   Technology And Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anarcho-technology-capitalism-and-anarchism">
+   Technology, Capitalism and Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/iain-mckay">Iain McKay</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/harry-baecker-technology-science-and-anarchism">
+   Technology, Science and Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/harry-baecker">Harry Baecker</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-technophilia-an-infantile-disorder">
+   Technophilia, An Infantile Disorder
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/antagonism-technoskeptic">
+   Technoskeptic
+   </a>
+  
+  
+      
+          (<a href="/authors/antagonism">Antagonism</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/jason-godesky-thirty-theses">
+   Thirty Theses
+   </a>
+  
+  
+      
+          (<a href="/authors/jason-godesky">Jason Godesky</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-undesirables">
+   The Undesirables
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-filiss-uploading">
+   Uploading
+   </a>
+  
+  
+      
+          (<a href="/authors/john-filiss">John Filiss</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-we-want-to-watch-shining-stars">
+   We Want to Watch Shining Stars...
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/marcus-graham-what-ought-to-be-the-anarchist-attitude-towards-the-machine">
+   What Ought to be the Anarchist Attitude Towards the Machine
+   </a>
+  
+  
+      
+          (<a href="/authors/marcus-graham">Marcus Graham</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ted-kaczynski-when-non-violence-is-suicide">
+   When Non-Violence is Suicide
+   </a>
+  
+  
+      
+          (<a href="/authors/ted-kaczynski">Ted Kaczynski</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-where-do-we-meet-face-to-face">
+   Where Do We Meet Face to Face
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lawrence-jarach-why-i-am-not-an-anti-primitivist">
+   Why I am not an Anti-Primitivist
+   </a>
+  
+  
+      
+          (<a href="/authors/lawrence-jarach">Lawrence Jarach</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-willful-disobedience-volume-2-number-6">
+   Willful Disobedience Volume 2, number 6
+   </a>
+  
+  
+      
+      
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/terra-selvaggia">Terra Selvaggia</a>, <a href="/authors/willful-disobedience">Willful Disobedience</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-willful-disobedience-volume-2-number-9">
+   Willful Disobedience Volume 2, number 9
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/massimo-passamani">Massimo Passamani</a>, <a href="/authors/patrizia">Patrizia</a>, <a href="/authors/willful-disobedience">Willful Disobedience</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-willful-disobedience-volume-3-number-2">
+   Willful Disobedience Volume 3, number 2
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/canenero">Canenero</a>, <a href="/authors/marco-camenish">Marco Camenish</a>, <a href="/authors/massimo-passamani">Massimo Passamani</a>, <a href="/authors/willful-disobedience">Willful Disobedience</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-willful-disobedience-volume-3-number-3">
+   Willful Disobedience Volume 3, number 3
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/massimo-passamani">Massimo Passamani</a>, <a href="/authors/terra-selvaggia">Terra Selvaggia</a>, <a href="/authors/willful-disobedience">Willful Disobedience</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-willful-disobedience-volume-4-number-3-4">
+   Willful Disobedience Volume 4, number 3–4
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>, <a href="/authors/giuseppe-ciancabilla">Giuseppe Ciancabilla</a>, <a href="/authors/il-pugnale">Il Pugnale</a>, <a href="/authors/massimo-passamani">Massimo Passamani</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ricardo-flores-magon-the-worker-and-the-machine">
+   The worker and the machine
+   </a>
+  
+  
+      
+          (<a href="/authors/ricardo-flores-magon">Ricardo Flores Magón</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sphinx-you-won-t-find-me-on-friendster">
+   You Won’t Find Me on Friendster
+   </a>
+  
+  
+      
+          (<a href="/authors/sphinx">Sphinx</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

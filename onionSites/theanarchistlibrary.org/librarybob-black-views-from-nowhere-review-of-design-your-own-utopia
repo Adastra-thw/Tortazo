@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Views From Nowhere: Review of “Design Your Own Utopia” (Bob Black) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/bob-black-views-from-nowhere-review-of-design-your-own-utopia?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=bob-black-views-from-nowhere-review-of-design-your-own-utopia">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Views From Nowhere: Review of “Design Your Own Utopia”
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/bob-black">Bob Black</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2004
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/chaz-bufe">Chaz Bufe</a>
+        <a href="/topics/review">review</a>
+        <a href="/topics/utopia">Utopia</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    from <em>Green Anarchist</em> #71
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on January 1, 2005 from <a href="http://www.greenanarchist.org">www.greenanarchist.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="bob-black-views-from-nowhere-review-of-design-your-own-utopia.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Bob Black</h2>
+	
+	<h1 id="textttitleh">Views From Nowhere: Review of “Design Your Own Utopia”</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	
+<blockquote>
+<p><em>Design Your Own Utopia</em>. by Chaz Bufe &amp; Doctress Neutopia. Tucson, AZ: see Sharp Press, 2002. 20 PP.
+</p></blockquote>
+
+<blockquote>
+<p>The intellect can betray man more easily than his conscience”
+</p><p>— Paolo Soleri
+</p></blockquote>
+<p>Chaz Bufe is an anarchist writer widely published by Chaz Bufe. His self-publishing history (as See Sharp Press) is ignominious.
+</p><p>In <em>Listen, Anarchist!</em> (1986) Bufe issued what the <em>Fifth Estate</em> called “a hysterical parody of authoritarian anarchism” — except that it was not a parody. In it he preached a literal Ten Commandments of moral rectitude to anarchists — at the same time that he defended <em>Processed World</em>, a violent crypto-Marxist cult, which conspicuously violated nearly all of his pious prescriptions.
+</p><p>Bufe, a simpleminded atheist, is a sucker for cults, and not just <em>Processed World</em>. In <em>A Future Worth Living: Thoughts on Getting There</em> (1998), he touted an authoritarian German cult commune, ZEGG, founded on the sexual exploitation of women. He repeats the endorsement here. I suspected that his nominal coauthor, “Doctress Neutopia,” was a German on detached service from ZEGG. But from ZEGG’s website it seems that her name is Libby Hubbard, although her being there does confirm the cult connection.  Bufe’s first foray into utopianism was thus an embarrassing failure. We shall now take a look at his latest attempt.
+</p><p>Unenlightened and undeterred, Bufe is back. This time, Bufe’s idea is that it would facilitate utopian thinking to publish a detailed questionnaire to help would-be utopians figure out exactly what they want. Although it’s a silly idea, it’s a better idea than I would expect from Bufe. And sure enough, he is copying somebody else.
+</p><p>As Lewis Mumford and Marie Louise Berneri have observed, the classical utopias were mostly closed, static, and authoritarian. Typically — Plato and St. Thomas More, for instance — they combined political authoritarianism with economic egalitarianism.  Now this combination is not really feasible, but the ideology, in distorted forms, is not greatly far removed from that of the Marxist-Leninist regimes which afflicted the 20<sup>th</sup> century and did so much to extinguish anarchist and utopian tendencies as historically effective.
+</p><p>As a self-important yet insecure pundit, Bufe feels the need to justify himself. Why design a utopia? There are “several reasons,” but Bufe can only think of one: “utopian thought is essential to social change.” Really? Is it assumed that social change is always for the better? Whose utopian thought was essential to the Industrial Revolution? Or the Neolithic Revolution, for that matter? The Highland clearances, the Tokugawa Revolution, the collectivization of Soviet agriculture, and 50 other phenomena — here were rapid, far-reaching social changes not informed by any thought that even Bufe would consider utopian. Or would he? For Bufe never defines utopia.
+</p><p>Bufe remarks, encouragingly, that “utopian thought does not have to be applied on a global scale to be of value,” if it inspires small-scale experiments — models — “which can and sometimes do become the triggers for the adoption of ideas which, except for the models, would never have been adopted wholesale.”  Perhaps they “sometimes do,” but I am not aware of a single example.  There may be utopian ideas which have won some general social acceptance, or had some influence. But Bufe is claiming much more, that their influence was mediated by exemplary intentional communities which successfully implemented those ideas. But I am being unfair to Bufe. I am taking what he says seriously as if he knows what he’s saying.
+</p><p>Bufe — a district attorney trapped in the body of a businessman — asks a lot of leading questions. To which I, a lawyer, say: “objection!”
+</p><p>II.3. Would individuals choose their own goals and values, or would their goals and values be those of your utopian ideology?
+</p><p>Right off the bat, Bufe just takes for granted a conflict and separation between individual and collective goals, although the very idea of a utopia is to transcend this dichotomy!  He also takes for granted the persistence of ideology, which is something else a utopia might strive to surpass.  And he takes for granted that the utopians are subject to “rights” and “duties” (III.4, 5) — in other words, law — which is something else that should be an open question, not a leading question.
+</p><p>For the lay reader: a leading question is a question which suggests to the witness what answer is desired. A really good leading question, if the judge lets you get away with it, practically forces the witness to say what you want to hear. Here are two examples:
+</p><p>V.2. What sort of social and political organization would your utopia have?
+</p><p>A. Would it be based on political authority, with some giving orders and others obeying them in a vertical hierarchical structure, as at present [emphasis added]?
+</p><p>B. Or would it be based on voluntary cooperation in a horizontal, noncoercive structure?
+</p><p>The lady or the tiger? Even a Platformist knows what he’s supposed to say. The “as at present” language alone is leading (and misleading), since it compels dissent from (A) and assent to (B). In effect, Bufe is asking utopians if they are utopians. How would — how could — great utopians like Plato or More answer these questions? They were communists who sought cooperation within and between functionally defined social orders providing complementary services. They would protest that the literal answers to these questions — indeed to most of Bufe’s questions — would not only distort their visions in details but suggest fragmentation where they sought harmonious unity.
+</p><p>The writing of Bufe, as of some other self-published writers, suffers from a lack of editing. Each question is riddled with redundancy. In (A), political authority is expressly equated with order-giving and order-taking.  But that implies “a vertical hierarchical structure,” surely? Besides, are there any horizontal hierarchical structures? I suppose ZEGG and <em>Processed World</em> might qualify. In (B), if “voluntary” is not synonymous with “noncoercive,” what’s the distinction? Is there one? Has Bufe devoted even a little thought to the meanings of these words? Even the use of the feel-good word “cooperation” in (B) is tendentious. Why not, in (A), to be fair, refer to hierarchic coercive cooperation, “as at present”?
+</p><p>Bufe rounds out (V), “Power &amp; Politics,” by asking what the utopia’s decision-making processes are, whether there is a constitution, and — “How would officials and coordinators be selected?” (V.3–5). Officials?  Bufe never asked if there would be officials. He takes authority for granted. Am I amiss in identifying these “officials” with the order-givers, the “political authority” already denied?  Bufe concludes the section: “How would you deal with abuse of <em>authority</em> by officials or coordinators?”  (V.6). Officials could not abuse authority unless they had it.
+</p><p>By omission and fiat, Bufe has already excluded from any possible utopian agenda the critique of ideology, the critique of law, and the critique of political authority. Naturally he next excludes the critique of work in the same way. He asks “How would work be compensated?” (VI3).  Work and pay are posited, not open to question. Is it equal compensation for all, or more compensation for those doing dangerous or unpleasant work, or even communism, to each according to his needs?
+</p><p>I was surprised that Bufe’s list even included the anarcho-communist option — after all, it’s a bit radical. But I was reassured that it was the same old goofy Bufe when he went on to ask a subquestion about this question (but not about the first two, the workaffirming questions, which presumably are not problematic): “If so, given present social conditioning, how would you prevent parasitism?”  (VI.3.C.a) In other words, how would you force slackers to work? The identification of the unemployed as “social parasites” derives from Stalinist rhetoric, but it’s cherished to this day by the worst of the leftist anarchists, including the worst of the petit bourgeois anarchists, Bufe and Woodworth.
+</p><p>Some critiques of work — mine, for instance — take issue with the institution of “jobs.” The lifetime restriction of a worker to one or sometimes two productive tasks has been denounced by utopians at least since Charles Fourier; and even by the young Marx, who was much more of an anarchist in the 1840s than Bufe is now. My point is not that utopians or anarchists are obligated to embrace a critique of work. My point is that a “Design Your Own Utopia” questionnaire should entertain, at the very least, a perspective which embraces a wellknown point of view with many past and present adherents. Indeed it was acted upon by numerous Fourierist American communes in the 1830s and 1840s. Zero-work was deeply implicated in the origins of American socialism.
+</p><p>But here’s Bufe: “How would people determine what jobs they do?” (VI.4).  What people? What jobs? Why jobs?  I suppose it is superfluous to quote questions like: “How many hours per day would your utopians work?”  (VI.8). When did you stop beating your wife? “Who would do economic planning?” (VI5) (!). “Would you set aside time for play and creative pursuits?” (VI.10) — certainly <em>not</em>, in my dreamworld, Mr. Gradgrind’s world, which, unlike all societies past and present, is all work and no play, and above all, no creativity! What a moronic question. Even Kim Il Jong would answer yes.
+</p><p>Bufe predictably bungles such topics as sex and sex roles (what with ZEGG’s bastardization of Wilhelm Reich), science and technology (somehow his communes would sustain a space program), religion, food, etc. I will spare my patient readers the details. They have endured much. In every area, the questions are loaded, and some crucial areas are not interrogated at all — such as the moralism which infuses this and all other Bufe productions. And Bufe has even forgotten to ask about the role of the market.
+</p><p>Whether any questionnaire could benefit utopians is in some doubt. The very form of the thing — analytic, atomistic, reductionist — militates against the totalizing, harmonizing spirit of most utopias. Lewis Mumford wrote that a virtue of utopian thought is that “the classical utopian works had all treated society as a whole, and had, in imagination at least, done justice to the interaction of work, people, and place, and to the interrelationship of functions and institutions and human purposes.”  Whereas our society, which is thoroughly anti-utopian, has “divided life into compartments: economics, politics, religion, war, education; and within these larger divisions efforts at reform and improvement, or at invention and creativity, went on in even smaller compartments, with all too little reference to the whole in which they played a part.” Bufe’s questionnaire is much better suited to fostering a society of specialization and alienation than a utopian community.  It is intrinsically anti-utopian.
+</p><p>I would be willing to see the questionnaire idea fairly and intelligently tried — but that would have to be done by somebody else. It could do no harm. But it’s hard to imagine that this ostensibly practical text would be of use to anybody except its author.  The tract is designed, not to assist the reader in clarifying her own ideas, but to induce her to embrace Bufe’s ideas, which are set forth explicitly toward the end of the pamphlet, “Our Vision.” These are mostly the ideas of the ZEGG commune/patriarchal sex cult (<a href="http://www.zegg.de">www.zegg.de</a> — see for yourself).
+</p><p>Amusingly, Bufe, in setting forth his “Vision,” does not even answer the questions he has pressed upon the rest of us — because “answers to all of the above questions would take up considerably more space than the questions themselves.” No doubt! But if that’s a good reason for Bufe not to answer his own questions, it’s an even better reason for everybody else not to answer them. It also suggests that he has something to hide. “We’d love to hear from those of you,” he says, “who have similar visions.” He doesn’t want to hear from those of us who don’t.
+</p><p>Bufe first sketches “A Small-Scale Utopia,” an intentional community identical to ZEGG. Although these pages are replete with laughs, I shall move on to the finale, “A Global Utopia,” “which would in many ways mirror our community utopia.” As the questionnaire has predetermined, Bufe’s global utopia, like his smallscale utopia, is not anarchist. It involves imposing on the whole world “democratic decision-making,” according to the “democratic, egalitarian system” set forth in Michael Albert’s <em>Looking Forward</em>. Even so oleaginous an opportunist as Michael Albert does not pretend that what he’s peddling is anarchist. In fact he polemicizes against anarchists.  Bufe’s tenderness toward Albert might have something to do with the fact that Albert’s <em>Z Magazine</em> published, according to Bufe himself, the only favorable review of his execrable <em>Heretic’s Handbook of Quotations</em> (1992, 2001).
+</p><p>Most modern utopians — not only anarchists, but various socialists and Marxists (except Murray Bookchin) — have called for the dispersal of urban agglomerations and the erasure of the difference between city and country.  Even Marx did. But not Bufe. “Our cities would be very different from those at present”: they will involve <em>more</em> “high-density living.” That doesn’t make them <em>very</em> different.
+</p><p>Here Bufe follows the quack urbanist Paolo Soleri, whose <em>Arcology</em> (1969) is a deservedly neglected masterpiece of 60s totalitarian mysticism. Soleri faults the modern city for not being crowded <em>enough</em>, since “lack of compactness is lack of efficiency.” He calls for what he ludicrously labels the “miniaturization” of the city, “an urban solid of superdense and human vitality.” Soleri suffers, one might say, from <em>claustrophilia</em>. His city would be a closed system, like a space station, although its “closest ancestor” is, he says, a passenger liner — hardly an anarchic or even a democratic model (recall the classstratified <em>Titanic</em> where the workingclass passengers in steerage drowned like rats).
+</p><p>The only thing Soleri says specifically about the political structure is in two murky paragraphs which seem to say that the political burden of the past will impede the “arcological” reconstruction of the city. No doubt! Let’s hope so! The governance of the arcological city will apparently take care of itself somehow. It’s the province of some sort of group mind, a “superorganism of a thousand minds that will ecologically cradle such persons.” I swear I’m not making this up! This is Bufe’s guru talking!
+</p><p>“The organization of man’s life,” quoth the seer, “subtly directed by the machine, which is organization, is going to reach forms unheard of.”  Jacques Ellul and John Zerzan never put it any better. Man “will submit in other words to a situation that carries coercion without a reason behind it, if one excludes the notion of randomness.” Soleri also espouses, in impenetrable gibberish, the cosmic evolutionary mysticism of the Jesuit Pierre Teilhard de Chardin, what Soleri calls “the estheticogenesis of matter.” It may not be true that all roads lead to Rome, but this one does: “Is there any difference between the aim of the city and the aim of the Roman (universal) Church? They are one and the same.”  Bufe the atheist is indeed “superdense” if this techno-Catholic Orwellian madness is his idea of utopia.
+</p><p>Exactly, or even inexactly, how Bufe’s “participatory democracy” is to be implemented in high-rise “highdensity” cities with millions of inhabitants, he does not say. (The best reallife approximation of Soleri’s high-rise city is the authoritarian city-state of Singapore, whose regime herded the entire population into high-rise apartments each of which receives, twice a year, a visit from a policeman taking a thorough survey.) Soleri, as we saw, is, as to politics, and much else, vacuous, incoherent and above all indifferent. Even Murray Bookchin noticed that there was a problem here, although his solution is preposterous. Bufe does not even seem to be aware that there is a problem.
+</p><p>This insoluble conundrum conclusively refutes Bufe’s notion that a regional, national or international society could be modeled, in most important respects, on a local commune. Higher levels of coordination must involve representation and/or bureaucracy. None of Bufe’s questions addresses extralocal representation. None of his answers do either.  Yet Bufe specifically calls for a resumed and expanded program of space exploration. That would require labor, resources and coercive coordination on an even wider scale than would the administration of major cities. Utopian? Maybe Ayn Rand or Robert Heinlein might have thought so.  But anarchist?  Impossible. What we have here is high-density dogma.
+</p><p>The arts and the media, Bufe says, would no longer be the province of corporations and the “gifted few.”  Bufe would naturally espouse this opinion, since nobody ever thought for a moment that Bufe was one of the gifted few. For him, the only options have always been self-publication or no publication. I think he is mixing up two different matters. One is a muddled mood of resentment of his intellectual and creative superiors.  The other is, maybe, a complaint about media concentration and monopoly. But even if they were decentralized, his mediocrity would persist.
+</p><p>In his previous pamphlet, Bufe observed that most people “don’t think very well.” In certain cases, such as his own, that’s an understatement. It is probably not just his density which makes it so regrettable that Bufe went in for radical publishing instead of something more suitable, like the Army or the ministry. (I almost added “tabloid journalism,” but then I recalled Karl Kraus’s definition of a journalist: “No ideas and the ability to express them.” Bufe lacks the ability to express them.) It is rather his combination of density with a near-pathological incapacity for irony and humor which leaves the thus doubly disabled Bufe bewildered by the world “as at present” and incapable of imagining alternatives. And so, for security, he clings to cults and gurus and ideologies to structure his confusion. He read the wrong books by Wilhelm Reich. The one for him, and about him, is <em>Listen, Little Man!</em>
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

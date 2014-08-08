@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Renzo Novatore | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   id="current"
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="renzo-novatore">Renzo Novatore</h3>
+<ol>
+
+  <li>
+   <a href="/library/renzo-novatore-black-flags">
+   Black Flags
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-black-roses">
+   Black Roses
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-cry-of-rebellion">
+   Cry of Rebellion
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-the-dream-of-my-adolescence">
+   The Dream of My Adolescence
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-the-expropriator">
+   The Expropriator
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-a-female">
+   A “Female”
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-i-am-also-a-nihilist">
+   I Am Also a Nihilist
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-intellectual-vagabonds">
+   Intellectual Vagabonds
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-in-the-reign-of-the-phantoms">
+   In The Reign of The Phantoms
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-a-life">
+   A Life
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-my-iconoclastic-individualism">
+   My Iconoclastic Individualism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-my-maxims-from-my-intimate-thoughts-notebook">
+   My Maxims (From My Intimate Thoughts Notebook)
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-noontime-songs">
+   Noontime Songs
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-of-individualism-and-rebellion">
+   Of Individualism and Rebellion
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-returning">
+   Returning
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-spiritual-perversity">
+   Spiritual Perversity
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-towards-the-hurricane">
+   Towards the Hurricane
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-toward-the-creative-nothing">
+   Toward the Creative Nothing
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-twilight-dance">
+   Twilight Dance
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-wild-flowers">
+   Wild Flowers
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/renzo-novatore-with-sincere-pity">
+   With Sincere Pity
+   </a>
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/tr/SurveyMonkeyArticleType/Can-I-redirect-respondents-to-a-different-website-upon-completion","l":"tr","id":"kA030000000hhIyCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"Başlarken"},{"subcats":[],"name":"creating-designing-surveys","label":"Anket Oluşturma ve Tasarlama"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"Anket Dağıtımı ve Yanıt Alma"},{"subcats":[],"name":"analyzing-results","label":"Analiz Sonuçları"},{"subcats":[],"name":"managing-account","label":"Hesabı Yönetme"},{"subcats":[],"name":"contact-us","label":"Destekle Bağlantı Kurun"}],"language":"tr"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term] için [num] sonuç';
+    var showingForLabel = '[term] için sonuçları görüyorsunuz.';
+    var loadingLabel = 'Yükleniyor...';
+    var dymLabel = '[term] Bunu mu demek istediniz?';
+    var stKey = 'gLEwJSaGsvvzoty8bUnk';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>Yan&#305;tlayanlar&#305; Ba&#351;ka Bir Web Sitesine Y&ouml;nlendirme</title>
+  <link href="http://help.surveymonkey.com/articles/tr/kb/Can-I-redirect-respondents-to-a-different-website-upon-completion" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'tr';
+ var cx = '001901995951362171896:ptx4xdztfiq';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"tr"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 tr"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 tr"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 tr"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 tr"><![endif]-->
+<!--[if gt IE 9]><body class="tr"><![endif]-->
+<body class="tr">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://tr.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">Oturum a&ccedil;&#305;n</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-tr" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Bu sitenin &ccedil;al&#305;&#351;mas&#305; i&ccedil;in Javascript gereklidir, l&uuml;tfen etkinle&#351;tirin.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">T&uuml;m&uuml;n&uuml; Daralt</div>
+  <div id="expandLabel" style="display:none">T&uuml;m&uuml;n&uuml; Geni&#351;let</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">Yanıtlayanları Başka Bir Web Sitesine Yönlendirme
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><p>
+	Varsayılan olarak yanıtlayanlar bir anketi tamamladıktan sonra bir SurveyMonkey web sayfasına gider. Bu sayfada anketi yanıtladıkları için teşekkür edilir ve site hakkında bilgi verilir. BASIC veya SELECT planınız varsa Anket Tamamlama seçeneğini düzenleyemezsiniz.</p>
+<p>
+	GOLD, PLATINUM veya eskiden kalan PRO veya Sınırsız planınız varsa bir Toplayıcının <a href="http://help.surveymonkey.com/articles/tr/kb/What-are-the-Survey-Completion-options" target="_blank">Anket Tamamlama seçeneğini düzenleyerek</a> yanıtlayanları anketi bitirdiklerinde kendi web sayfanıza yönlendirebilirsiniz.</p>
+<p>
+	Anketinizi <a href="http://help.surveymonkey.com/articles/tr/kb/How-do-I-embed-a-survey-or-have-it-open-in-a-popup-window-on-my-site" target="_blank">Web Sitesi Toplayıcısı</a> kullanarak katıştırdıysanız yanıtlayanlar zaten web sayfanızda olacakları için yönlendirme seçeneği kullanılmaz.</p>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>Daha fazla bilgi</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/tr/SurveyMonkeyArticleType/What-are-custom-variables-and-how-do-I-use-them" class="relatedLink">&Ouml;zel De&#287;i&#351;kenleri Kullanma</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/tr/SurveyMonkeyArticleType/How-do-I-embed-a-survey-or-have-it-open-in-a-popup-window-on-my-site" class="relatedLink">Anketi Kat&#305;&#351;t&#305;rma veya A&ccedil;&#305;l&#305;r Davet Pencereleri Kullanma</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/tr/SurveyMonkeyArticleType/How-do-I-create-a-consent-form-or-disqualify-respondents-from-a-survey" class="relatedLink">Bir Ankete Onay Formu veya Gizlilik &#304;lkesi Ekleme</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/tr/SurveyMonkeyArticleType/What-is-Skip-Logic" class="relatedLink">Atlama Mant&#305;&#287;&#305;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>Telefon Deste&#287;i</h4>
+			<p>
+				Telefon deste&#287;i gibi muhte&#351;em &ouml;zelliklere eri&#351;im sa&#287;lamak i&ccedil;in g&uuml;ncelleyin (yaln&#305;zca &#304;ngilizce)
+			</p>
+			<a class="upgrade-button-yellow" href="https://tr.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">Y&uuml;kselt</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">Diller:</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://tr.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://tr.surveymonkey.com/mp/aboutus/" target="_blank">SurveyMonkey Hakkinda</a></li>
+					<li><a href="https://tr.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">Gizlilik Ilkesi</a></li>
+					
+					
+					<li><a href="/contact-us">Bize Ula&#351;in</a></li>
+				</ul>
+				<span class="copy">Telif hakk&#305; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/tr\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/tr/kb/Can-I-redirect-respondents-to-a-different-website-upon-completion';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, 'Yanıtlayanları Başka Bir Web Sitesine Yönlendirme', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

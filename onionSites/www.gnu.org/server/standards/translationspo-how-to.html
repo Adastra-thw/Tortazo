@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<!-- start of server/head-include-1.html -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:webmasters@gnu.org" />
+<link rel="icon" type="image/png" href="/graphics/gnu-head-mini.png" />
+<meta name="ICBM" content="42.355469,-71.058627" />
+<meta name="DC.title" content="gnu.org" />
+<!-- end of server/head-include-1.html -->
+
+<!-- end of server/header.html -->
+
+<!-- Parent-Version: 1.77 -->
+<title>How to Translate Using PO Files
+- GNU Project - Free Software Foundation</title>
+<!-- begin /server/gnun/initial-translations-list.html -->
+<!-- HTML head: set a flag for further expansion in body-include*.html. -->
+<!-- end /server/gnun/initial-translations-list.html -->
+
+<!-- start of server/banner.html -->
+<!-- start of head-include-2.html -->
+
+<link rel="stylesheet" href="/combo.css" media="screen" />
+<link rel="stylesheet" href="/mini.css" media="handheld" />
+<link rel="stylesheet" href="/layout.css" media="screen" />
+
+<link rel="stylesheet" href="/print.css" media="print" />
+
+<!-- end of head-include-2.html -->
+
+</head>
+<body>
+<div class="inner">
+<!-- start of server/body-include-1.html -->
+
+<div id="toplinks">
+ <a href="#content">Skip to main text</a>
+</div> <!-- /toplinks -->
+
+<div id="searcher">
+ <form method="get" action="//www.gnu.org/cgi-bin/estseek.cgi">
+  <div>
+  <input name="phrase" id="phrase" type="text" size="18" accesskey="s"
+         value="Why GNU/Linux?" onfocus="this.value=''" />
+  <input type="submit" value="Search" />
+  </div>
+ </form>
+</div><!-- /searcher -->
+
+<!-- if initial translation list isn't included before banner.html,
+     then the file may use an old boilerplate that contains
+     div#translations in its body, and we mustn't duplicate it here. -->
+<!-- begin /server/gnun/initial-translations-list.html -->
+<!-- HTML body: expand when this file is previously included in HTML head
+                    unless already expanded.  -->
+<div id="translations">
+<p>
+<span dir="ltr" class="original"><a href="/server/standards/translations/po-how-to.html">English</a>&nbsp;[en]</span>
+</p>
+</div>
+<!-- end /server/gnun/initial-translations-list.html -->
+
+
+<!-- end of server/body-include-1.html -->
+
+<!-- start of server/body-include-2 -->
+
+<div id="header">
+<div id="fsf-frame">
+<p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">JOIN&nbsp;THE&nbsp;FSF</a></p>
+<div id="fssbox">
+<p><a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
+<form action="https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31" method="post">
+ <div>
+  <input name="postURL" type="hidden" value="" />
+  <input type="hidden" name="group[25]" value="1" />
+  <input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+  <input name="_qf_default" type="hidden" value="Edit:cancel" />
+ </div>
+ <p>
+  <input type="text" id="frmEmail" name="email-Primary" size="18" maxlength="80"
+         value="email address" onfocus="this.value=''"/>
+  <input type="submit" name="_qf_Edit_next" value="Sign up" />
+ </p>
+</form>
+</div><!-- /fssbox -->
+</div><!-- /fsf-frame -->
+
+<div id="gnu-banner">
+ <a href="/">
+ <img src="/graphics/heckert_gnu.small.png" alt=" [A GNU head] " /><strong>GNU</strong> Operating System</a>
+</div><!-- /gnu-banner -->
+
+<p id="fsf-support">Sponsored by the <a href="#mission-statement">Free Software Foundation</a></p>
+
+</div><!-- /header -->
+
+<div id="ghm-banner"
+     style="overflow: hidden; background: #ccc; border: font-size: large; padding: 5px">
+  <p style="font-size: x-large; font-weight: bold;">
+    Meet the GNU contributors in person at the
+    <a href="http://www.gnu.org/ghm">GNU Hackers' Meeting</a>!
+  </p>
+  <p>
+    The <a href="http://www.gnu.org/ghm/upcoming.html">8th GNU Hackers' Meeting</a>
+    takes place in Munich, Germany from 15&ndash;17&nbsp;August
+    2014. It spans three days, and comprises talks about new GNU
+    programs, status of the GNU system and news from the free software
+    community.
+  </p>
+  <p>
+    <a href="http://www.gnu.org/ghm/register">Register</a>
+    <strong>now</strong> to secure your place.
+  </p>
+</div>
+
+<div id="navigation">
+
+ <ul>
+  <li id="tabAboutGNU"><a href="/gnu/gnu.html">About&nbsp;GNU</a></li>
+  <li id="tabPhilosophy"><a href="/philosophy/philosophy.html">Philosophy</a></li>
+  <li id="tabLicenses"><a href="/licenses/licenses.html">Licenses</a></li>
+  <li id="tabEducation"><a href="/education/education.html">Education</a></li>
+  <li id="tabSoftware"><a href="/software/software.html">Software</a></li>
+  <li id="tabDoc"><a href="/doc/doc.html">Documentation</a></li>
+  <li id="tabHelp"><a href="/help/help.html">Help&nbsp;GNU</a></li>
+ </ul>
+
+</div><!--  /navigation -->
+<!-- end of server/body-include-2 -->
+
+<div id="content">
+<!-- end of server/banner.html -->
+
+
+<h2>How to Translate Using PO Files</h2>
+
+<p>This is a very simple guide to help translators with little computer 
+knowledge do their work using the Gettext PO file format. It assumes 
+that the coordinator will complete strings such as the footnotes.</p>
+
+<h3>Guide to Translating Using PO Files</h3>
+
+  <p>1. The first step is to install a specific program to edit .po 
+  files; for example gTranslator, Kbabel, Poedit, among others. All 
+  these programs work more or less in the same way. In this guide we 
+  will use Poedit as an example.</p>
+
+  <p>2. Download the template that contains the last version of the 
+  original page in English. This file is called POT (PO Template). You 
+  will find it in the <code>/po/</code> subdirectory, which is located
+  immediately after the directory that contains the page you want to 
+  translate. For example, if the page is in</p>
+
+  <pre>
+  http://www.gnu.org/gnu/about-gnu.html
+  </pre>
+
+  <p>you add <code>/po/</code> after <code>/gnu/</code>, like this:</p>
+
+  <pre>
+  http://www.gnu.org/gnu/po/
+  </pre>
+
+  <p>And there you will find:</p>
+
+  <pre>
+  http://www.gnu.org/gnu/po/about-gnu.pot
+  </pre>
+
+  <p>3. Rename <em>about-gnu.pot</em> to <em>about-gnu.es.po</em>.</p>
+
+  <p>4. Open <em>about-gnu.es.po</em> with Poedit. Then go to 
+  <em>Catalog > Settings</em> and fill in the fields as follows:</p>
+
+  <pre>
+  Project name and version: about-gnu.html
+  Team: Spanish
+  Team's email address: www-es-general@gnu.org
+  Language: Spanish
+  Country: You can leave this field blank
+  Charset: UTF-8
+  Source code charset: You can leave this field blank
+  Plural forms: nplurals=2; plural=(n!=1);
+  </pre>
+
+  <p>Save by clicking OK.</p>
+
+  <p>5. Select <em>View > Comments</em> and <em>View > Automatic 
+  Comments</em>. That way, in the lower right corner of the window you 
+  will see any instructions present in the English HTML page that are 
+  useful for translators.</p>
+
+  <p>6. In the main window of Poedit, you will see that all strings 
+  are in English (&ldquo;strings&rdquo; are lines of text, such as 
+  titles and paragraphs). One by one, you start translating those 
+  strings.</p>
+
+  <ul>
+    <li>
+    <p>Links. You will see that all links are in HTML format, like 
+    this:</p>
+   
+    <pre>
+    <code>&lt;a href="/gnu/gnu.html"&gt;Other historical and general articles about GNU&lt;/a&gt;.</code> 
+    </pre>
+    
+    <p>In all links, what you need to translate is only the text that 
+    appears between &ldquo;&gt;&rdquo; and &ldquo;&lt;/a&gt;&rdquo;. 
+    Thus, in the example above, you only need to translate the sentence 
+    &ldquo;Other historical and general articles about GNU&rdquo; and
+    leave the rest untouched. The best way to do this is to copy the
+    complete original link, paste it in your translation, and then
+    replace &ldquo;Other historical and general articles about GNU&rdquo;
+    with its translation in Spanish.</p>
+    </li>
+
+    <li>
+    <p>Quotation marks. Quotation marks in English are: &ldquo; &rdquo;. 
+    Replace them with the Spanish quotation marks: &laquo; &raquo;. In 
+    the Spanish keyboard, you get them by doing AltGr+z and AltGr+x.</p>
+    </li>
+
+    <li>Foreign and emphatic words. Foreign words in the Spanish text 
+    are marked like this: <code>&lt;cite&gt;foreign word&lt;/cite&gt;
+    </code>. For emphasis, use 
+    <code>&lt;em&gt;emphasized word&lt;/em&gt;</code>.
+    </li>
+  </ul>
+
+  <p>7. The following strings are special:</p>
+
+     <ul>
+       <li>*GNUN-SLOT: TRANSLATOR'S NOTES* <br />
+       Unless we have a translation note, this string is "translated" 
+       with a blank space; that is, press the space bar once. (see XXX 
+       for instructions on how to put translation notes).</li>
+     </ul>
+   
+     <ul>
+      <li>*GNUN-SLOT: TRANSLATOR'S CREDITS* <br />
+      Do not translate.</li>
+    </ul>
+     
+    <ul> 
+      <li>Copyright &copy; 2012 Free Software Foundation, Inc. <br />
+      Copy and paste verbatim.</li>
+    </ul>
+
+  <p>8. Do not translate the following strings:</p>
+
+     <ul>
+       <li><p>Please send general FSF &amp; GNU inquiries to &lt;a
+       href=\"mailto:gnu@gnu.org\">&lt;gnu@gnu.org&gt;&lt;/a&gt;. There 
+       are also &lt;a href=\"/contact/\"&gt;other ways to 
+       contact&lt;/a&gt; the FSF.</p></li>
+
+       <li><p>Please send broken links and other corrections or 
+       suggestions to &lt;a 
+       href=\"mailto:webmasters@gnu.org\">&lt;webmasters@gnu.org&gt;/a&gt;.</p></li>
+
+       <li><p>Please see the &lt;a
+       href=\"/server/standards/README.translations.html\"&gt;Translations
+       README&lt;/a&gt; for information on coordinating and submitting 
+       translations of this article.</p></li>
+
+       <li><p>This page is licensed under a &lt;a rel=\"license\"
+       href=\"http://creativecommons.org/licenses/by-nd/3.0/us/\"&gt;
+       Creative Commons Attribution-NoDerivs 3.0 United States 
+       License&lt;/a&gt;.</p></li>
+
+       <li><p>Updated:</p></li>
+      </ul>
+
+  <p>9. When you are finished, close Poedit and open <em>about-gnu.es.po</em> 
+      with a normal text editor, for example Gedit. Then edit the 
+      header as follows:</p>
+
+      <ul>
+        <li><p>Replace:<br />
+        # LANGUAGE translation of http://www.gnu.org/gnu/about-gnu.html <br />
+        with: <br />
+        # Spanish translation of http://www.gnu.org/gnu/about-gnu.html</p></li>
+
+        <li><p>Replace the YEAR in:<br />
+        # Copyright (C) YEAR Free Software Foundation, Inc.<br /> 
+        with the year the translation was made (for example, 2012):<br />
+        #Copyright (C) 2012 Free Software Foundation, Inc.</p></li>
+ 
+        <li><p>Leave the following comment as is:<br />
+        # This file is distributed under the same license as the original article.</p></li>
+
+        <li><p>Replace the following comment:<br />
+        # FIRST AUTHOR &lt;EMAIL@ADDRESS&gt;, YEAR. <br />
+        with your own data and the year you made the translation:<br />
+        # Your Name &lt;your_address@domain.com&gt;, 2012.</p></li>
+     </ul>
+
+  <p>10. Leave the following as is:</p>
+
+      <pre>
+      msgid ""
+      msgstr ""
+      "Project-Id-Version:
+      "POT-Creation-Date:
+      "PO-Revision-Date:
+      "Last-Translator:
+      "Language-Team:
+      "MIME-Version:
+      "Content-Type:
+      "Content-Transfer-Encoding:
+      </pre>
+
+</div><!-- for id="content", starts in the include above -->
+
+              <!-- begin server/footer-text.html -->
+<div id="fsf-links">
+ <ul>
+  <li><a href="/">GNU&nbsp;home&nbsp;page</a></li>
+  <li><a href="http://www.fsf.org/">FSF&nbsp;home&nbsp;page</a></li>
+  <li><a href="/graphics/graphics.html">GNU&nbsp;Art</a></li>
+  <li><a href="/fun/fun.html">GNU&nbsp;Fun</a></li>
+  <li><a href="/people/people.html">GNU's&nbsp;Who?</a></li>
+  <li><a href="http://directory.fsf.org">Free&nbsp;Software&nbsp;Directory</a></li>
+  <li><a href="/server/sitemap.html">Site&nbsp;map</a></li>
+ </ul>
+</div><!-- /fsf-links -->
+
+<div id="mission-statement">
+
+<blockquote>
+<p><a href="http://www.fsf.org"><img id="fsfbanner"
+src="/graphics/fsf-logo-notext.png" alt=" [FSF logo] "/></a><strong>&ldquo;Our
+mission is to preserve, protect and promote the freedom to use, study,
+copy, modify, and redistribute computer software, and to defend the
+rights of Free Software users.&rdquo;</strong></p>
+</blockquote>
+
+<p>The <a href="http://www.fsf.org">Free Software Foundation</a> is
+the principal organizational sponsor of the GNU Operating System.
+<strong>Support GNU and the FSF</strong> by <a
+href="http://shop.fsf.org/">buying manuals and gear</a>, <a
+href="https://my.fsf.org/associate/support_freedom?referrer=4052">
+<strong>joining the FSF</strong></a> as an associate member, or making
+a <strong>donation</strong>, either <a
+href="http://donate.fsf.org/">directly to the FSF</a> or <a
+href="http://flattr.com/thing/313733/gnuproject-on-Flattr">via
+Flattr</a>.</p>
+
+<p id="backtotop"><a href="#header">back to top</a></p>
+
+</div><!-- /mission-statement -->
+<!-- end server/footer-text.html -->
+
+
+<div id="footer">
+<div class="unprintable">
+
+<p>Please send general FSF &amp; GNU inquiries to
+<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
+There are also <a href="/contact/">other ways to contact</a>
+the FSF.  Broken links and other corrections or suggestions can be sent
+to <a href="mailto:web-translators@gnu.org">&lt;web-translators@gnu.org&gt;</a>.</p>
+
+<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
+        replace it with the translation of these two:
+
+        We work hard and do our best to provide accurate, good quality
+        translations.  However, we are not exempt from imperfection.
+        Please send your comments and general suggestions in this regard
+        to <a href="mailto:web-translators@gnu.org">
+        &lt;web-translators@gnu.org&gt;</a>.</p>
+
+        <p>For information on coordinating and submitting translations of
+        our web pages, see <a
+        href="/server/standards/README.translations.html">Translations
+        README</a>. -->
+
+Please see the <a
+href="/server/standards/README.translations.html">Translations
+README</a> for information on coordinating and submitting translations
+of this article.</p>
+</div>
+
+<p>Copyright &copy; 2014 Free Software Foundation, Inc.</p>
+
+<p>This page is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
+Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
+
+<!-- start of server/bottom-notes.html -->
+<div class="unprintable">
+<p><a href="http://www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+
+
+</div>
+<!-- end of server/bottom-notes.html -->
+
+
+<p class="unprintable">Updated:
+<!-- timestamp start -->
+$Date: 2014/04/15 09:25:31 $
+<!-- timestamp end -->
+</p>
+</div>
+</div>
+</body>
+</html>

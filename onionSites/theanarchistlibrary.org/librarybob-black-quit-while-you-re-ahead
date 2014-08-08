@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Quit While You’re Ahead (Bob Black) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/bob-black-quit-while-you-re-ahead?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=bob-black-quit-while-you-re-ahead">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Quit While You’re Ahead
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/bob-black">Bob Black</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1984
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/critique">critique</a>
+        <a href="/topics/raoul-vaneigem">Raoul Vaneigem</a>
+        <a href="/topics/review">review</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    (Originally published in Social Anarchism in, if I recall, 1984, reprinted with revisions in Beneath the Underground. Today I wouldn’t judge the book so harshly, but at the time my measure was Vaneigem’s first book, The Revolution of Everyday Life, to which I thought it was — and still think it is — much inferior.)
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on October 5<sup>th</sup>, 2009 from <a href="http://www.spunk.org/texts/writers/black/sp001670.html">www.spunk.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="bob-black-quit-while-you-re-ahead.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="bob-black-quit-while-you-re-ahead.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="bob-black-quit-while-you-re-ahead.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="bob-black-quit-while-you-re-ahead.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="bob-black-quit-while-you-re-ahead?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="bob-black-quit-while-you-re-ahead.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="bob-black-quit-while-you-re-ahead.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Bob Black</h2>
+	
+	<h1 id="textttitleh">Quit While You’re Ahead</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	
+<blockquote>
+<p><em>The Book of Pleasures</em>. <br />
+By Raoul Vaneigem<br />
+Translated by John Fullerton<br />
+London: Pending Press, 1983 <br />
+</p></blockquote>
+<p>The nostalgia craze has caught up with the Situationist International, although a reunion and comeback tour is unlikely. From the nadir of the mid-1970’s, when the American pro-situationist groups fought themselves to exhaustion, interest in the sits has been on the rise in the English-speaking world, especially since Ken Knabb published his translation anthology and Greil Marcus revealed the situationists as the occult inspiration of punk rock. Guy Debord’s <em>Society of the Spectacle</em> has been available from Black &amp; Red for over twenty years, and the authorized translation of Raoul Vaneigem’s Revolution of Everyday Life for more than ten. “Situationism” is back, if only as an object of contemplation, but it has no avowed practitioners (except absurdity incarnate Bill Brown). As <em>Newsweek</em> used to say, “Where Are They Now?” 
+</p><p>For the Situationist International the flush times were the early and middle 60’s. Having ousted the aesthetes, the triumphant politicized faction of Debord and Vaneigem turned its mercilessly lucid scorn on global “spectacular” society at its zenith. The spectacle is capital self-confident and fully realized, a self-subsistent structure of appearances which the situationists supoosed they discerned through the welter of “issues” and contingencies. Weberians in Hegelian drag, the sits (Debord above all) constructed an ideal type, the spectacle, capitalism in its purity and maturity. 
+</p><p>And it must have seemed that managed capitalism had left behind world wars, colonialism, and all other detractions from the business of realizing itself as a totality. Class society at its acme called forth the most radical negation possible: that of the situationists themselves. Within a few years — in the United States, anyway — economic decline, executive corruption, military defeat and thwarted expectations exhumed, then reburied the archaic forms of leftist opposition, something the sits failed to forsee. In the end (of which they were the beginning) it would be simply the situationist workers against the society of the spectacle. Everything else was a sideshow, part and parcel of the greatest show on earth, the spectacle. 
+</p><p>Now it was the partial success of the situationists which was to prove their undoing. As they were fond of quoting (a salutory example, actually), “those who make half a revolution dig their own graves” (Saint-Just). Their half-revolution of May-June 1968, for all their subsequent boasting, surprised them as much as it did their enemies. 
+</p><p>In France there was no war, no economic crisis, and no serious political conflict. Even the students who started it all had only petty grievances. Which suggests that the uprising was about something more serious than issues. A few situationist-influenced students, <em>enrages</em> and anarchists, early appreciated the depth of the malaise and exploited. Situationist theory was indeed practical. Ten million French workers walked away from work in solidarity with students they had never been particularly fond of. Since they made no demands, the traditional leaders supplied some, above all, more money — more of the same — as the philistine technocrat C.P. Snow would say, “more jam.” In its final consequential act, the Communist Party through its unions separated workers from students and, more important, workers from workers. Perhaps their massive multi-media agitational campaign lent credence to the situationist brag that their ideas were in everybody’s heads; but during a rather brief period of time. The bad old days returned. Even de Gaulle enjoyed an Indian summer. The sits had given him too much credit the time they said that, unlike the left, at least the Gaullists understood modern society well enough to administer it. 
+</p><p>The return to normalcy was so rapid and so seemingly complete that situationist claims concerning the May days and their part in them sounded empty and self-serving when announced over a year later in “The Beginning of an Era.” Rene Vienet had within weeks produced a short account with documentation, but the full-blown analysis and critique came curiously late. If May 1968 was the beginning of an era, what was June? And what next? If it was time, as announced, to put situationist theory into practice, what was the role of the erstwhile theorists? They suggested that further theoretical progress would be informed by renewed working-class militance. It never was. If the theorists were now to play a purely pedantic part, restating and popularizing a theory considered complete or at least presented that way for pedagogic purposes, the situationists would qualify for the very critique they had aimed at the anarchists. What is to be done? When in doubt, more of the same — or stall for time. Debord took the first route, Vaneigem the second. 
+</p><p>The Debordists, including Vienet and ex-<em>enrage</em> Rene Riesel, polemicized against anonymous others — Vaneigem — for resting on their laurels. Stung by the accusation of indolence, Vaneigem resigned in 1970, invoking a “taste for pleasure” he later went to great lengths to justify. In 1971 Riesel was purged and the two-member American Section staged its “scission.” Debord and Gianfranco Sanguinetti responded with a tedious tome, <em>The Real Split in the International</em> — the sits thus producing their equivalent of <em>The German Ideology</em> at the end of their career instead of, as Marx and Engels did, at its beginning. Debord awoke at last to his embarrassing resemblance to the quixotic conquistador in Werner Herzog’s <em>Aguirre, the Wrath of God</em> when he finds himself alone on his raft, adrift on the Amazon. The S.I. dissolved in 1972. 
+</p><p>There had always been tension between Debord’s and Vaneigem’s visions, even if Vaneigem — the first non-artist of any importance in the S.I. — gained his combat experience as a partisan of Debord in the campaign against the aesthetes. Debord, though an artist, was a classicist. Vaneigem, not an artist, was nonetheless a romanticist. Debord’s “spectacle” is objective, static, a structure (in hindsight, situationism shared with — or owed to — structuralism much more than any situationist will ever admit). Vaneigem is more diffuse, more dynamic in historical sweep, more subjective and more concerned with subjectivity. Debord resembles Robespierre; Vaneigem resembles Danton. Debord is Appollonian; Vaneigem is Dionysian. Ken Knabb’s <em>Situationist International Anthology</em> heavily emphasises the texts of Debord and those reflecting his Hegelian-cerebral style. It all but suppresses the aesthetic faction (Asger Jorn, Constant, etc.) so prominent in the early S.I., and it also slights Vaneigem. Not that Vaneigem was a hippie — he vehemently rejected the American would-be situationist Ben Morea for interpreting him as one. But he might have been just what the 60’s counter-culture needed to infuse some lucidity into its sensibility and deepen its differences with the death-culture. Herbert Marcuse, Che Guevara, Paul Goodman, Norman O. Brown, Theodore Roszak — none was up to the task. Not surprisingly, the trickle of translations from Debord and the Debordists made no impact on 60’s America. 
+</p><p>But if Vaneigem was more the man for the 60’s than the 60’s set ever knew, the 70’s took their toll on him, as on them. <em>The Book of Pleasures</em> (1979), translated in 1983, takes its place among the many monuments to contrived nostalgia which so many found so soothing at the time (and ever since). What was urgently explicated with furious intelligence returns as stilted self-simulation. As at a retrorock reunion, all the old superstars put in an <em>appearance</em>: “survival sickness,” “reversal of perspective,” and the familiar antitheses of gift and exchange, life and survival. But they shuffle on-stage stiffly, slowly, self-consciously. Vaneigem, formerly a situationist, is now a pro-situ. He’s something less than — but not something else than — a situationist. 
+</p><p>It was thanks to Vaneigem that the S.I. retrieved for radical critique the achievements of Wilhelm Reich. Vaneigem appropriated Reich’s concept of “character,” the “armor” which, at once protective and restrictive, reveals neurosis to be both normal and normative in a repressive society. The medical model of mental illness realizes and exhausts itself in the conclusion that society is sick. Freud shrank from the implications; Reich took it from there. But as Jean-Pierre Voyer observes, “While Reich concluded in a very ambiguous manner that character was an obstacle to work,” rather, “character is an obstacle to the <em>critique</em> of work.” Vaneigem’s original formulation — also “ambiguous” in keeping with situationist deference to Marxism — came as close to relating the supersession of character to the supersession of work as the S.I. ever got. He linked character (via the playing of roles) to the division of labor and thus to the totality of exchange-organized sociality. 
+</p><p>Freud was conservative, in fact fatalistic, about sexuality. It couldn’t be suppressed, and yet it had to be suppressed. In contrast, Reich’s was a radically positivist approach with a slight savor (and <em>savoir</em>) of Saint-Simon or Bentham. Social engineering and social revolution are strange bedfellows, especially in the bedroom. Reich’s Freudian contribution to Marxism was only additive. Where there was one beef, economic exploitation, now there is also another, sexual repression. Reich never regarded character and work totalistically as exercising a coercive co-dominion over everyday life. Hence he called for radical reforms in both the norms of morality and the organization of work, but nothing more. And any advance Vaneigem made on Reich in <em>The Revolution of Everyday Life</em> he surrendered in <em>The Book of Pleasures</em>. 
+</p><p>Masters and Johnson have long since taken the input-output sexology model to the farce-point for positivism. Vaneigem complements their parodic Reichianism with a parodic situationism. There are exactly two ideas in his <em>Book</em>. Sex is good. Trade is bad. Four legs good, two legs bad. It is <em>impossible</em> to enjoy a commodity: “Even stolen, it is tainted with the infamy of price.” On the other hand, “intense pleasure” implies the end of work, exchange, guilt, the state, even the intellect! The truth was always right under your nose, sitting on your face. Love the one you’re with. All you need is love. Now Vaneigem <em>is</em> a hippie. 
+</p><p>In <em>Revolution</em>, Vaneigem’s critique of exchange was subtle and far-reaching, converging from every quarter of human time and space upon the apotheosis of exchange: bourgeois society. Vaneigem put the collar on exchange in even its most successful disguises. Religious sacrifice, for instance, is (<em>vide</em> Christ) a form of exchange with unusually confused bookkeeping. In contrast the <em>Book</em> bookishly rails against even the <em>gift</em> as suspect, conceivably concealing some claim to reciprocity. 
+</p><p>Like John Zerzan, Raoul Vaneigem is looking for the fall from grace, the original sin. He appears to be unaware he has found it in society itself (which is, come to think of it, a plausible reading of the Garden of Eden myth). The earliest humans were hunters and gatherers living in stateless, classless, kinship-based face-to-face societies. Judging from their contemporary counterparts, they practiced what anthropologist Marshall Sahlins has called “generalized reciprocity”: ongoing gift-giving relations with, however, implicit expectations of approximate equality over the long term. If by becoming social we became human, by becoming human we lost our humanity. 
+</p><p>In <em>Revolution</em>, Vaneigem held up as inspiring and instructive the play-element in the <em>potlatch</em> of the Northwest Coast Indians, an unmistakably competitive system of gift-giving (“fighting with property,” in Helen Codere’s phrase). The Vaneigem of the Book, committed to an absolute anti-economic <em>moralism</em>, cannot distinguish this, or any, exchange-“tainted” relationship from any other. But any relationship is by definition a bilateral (if not multilateral) “exchange” of, if nothing else, meanings. A relationship in which one person does all the giving (or all the talking) is <em>at least</em> as alienated as any exchange. 
+</p><p>And what about “intense pleasure,” solvent of all alienations? Is there no reciprocity in that? If not, Vaneigem’s formula for liberation is just — and not just metaphorically — a jackoff. 
+</p><p>“It is impossible,” he explains, “to enjoy anything made by work and constraint.” What a cross to bear! Intense pleasure dispells guilt — but not before Vaneigem makes us feel guilty for feeling guilty, and for just about everything else which we, huddled in darkness, do to obtain some satisfaction from living however bittersweet. 
+</p><p>So if trade is sickening, the cure is — literally, it seems — at hand. You can always fuck your way to freedom provided no trace of mutuality taints your ecstasy with exchange. This is no revolution of everyday life, just other-worldly contempt for it. “As sure[ly] as work kills pleasure, pleasure kills work.” If only it were that easy. Ben Morea wasn’t wrong, just premature: Vaneigem is a mystic after all. 
+</p><p><em>The Book of Pleasures</em> reads like Cliff Notes for <em>The Revolution of Everyday Life</em> compiled by an uncomprehending exegete. Ideas are nothing else but what you do with them. In this sense Vaneigem has run out of ideas, although he remembers their names. He once cut deep with his critique of roles; now he hates them too much to understand them. He’s too afraid of playing roles to play with them. His one-handed cult of the abstract orgasm is pathetic. Some people <em>should</em> quit while they’re ahead.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

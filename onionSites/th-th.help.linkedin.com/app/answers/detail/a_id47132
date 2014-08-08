@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2014 LinkedIn -->
+<!--[if lt IE 7]> <html lang="lv-LV" class="ie ie6 lte9 lte8 lte7 os-win"> <![endif]-->
+<!--[if IE 7]> <html lang="lv-LV" class="ie ie7 lte9 lte8 lte7 os-win"> <![endif]-->
+<!--[if IE 8]> <html lang="lv-LV" class="ie ie8 lte9 lte8 os-win"> <![endif]-->
+<!--[if IE 9]> <html lang="lv-LV" class="ie ie9 lte9 os-win"> <![endif]-->
+<!--[if gt IE 9]> <html lang="lv-LV" class="os-win"> <![endif]-->
+<!--[if !IE]><!--> <html lang="lv-LV" class="os-win"> <!--<![endif]-->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  	<meta name="google-site-verification" content="Sqd4FjL57LycYv5wXyqPskyNooVAVsMSdF1wlFRv60s" />
+	<title>LinkedIn Ads - คำถามที่พบบ่อย | ศูนย์ความช่วยเหลือ LinkedIn</title>
+	    <link rel="canonical" href="http://th-th.help.linkedin.com/app/answers/global/a_id/47132/~/linkedin-ads---%E0%B8%84%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%9A%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%A2">
+  	<link rel="search" type="application/opensearchdescription+xml" title="การค้นหาศูนย์ความช่วยเหลือของ LinkedIn" href="/ci/browserSearch/desc/http%3A%2F%2Fth-th.help.linkedin.com%2Fapp%2Fanswers%2Flist%2Fkw%2F%7BsearchTerms%7D/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B8%AD%E0%B8%87+LinkedIn/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B8%AD%E0%B8%87+LinkedIn/%2Feuf%2Fassets%2Fimages%2Ffavicons%2Fv1%2Ffavicon.ico"/>
+	
+				<link type="text/css" rel="stylesheet" href="/euf/assets/themes/linkedin/style.css" />
+					
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://th-th.help.linkedin.com/euf/rightnow/optimized/1406595520/themes/linkedin/' />
+<link href='/euf/rightnow/optimized/1406595520/templates/linkedin.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+.rn_IncidentThreadDisplay .rn_ThreadContent{word-wrap:break-word;}
+.rn_IncidentThreadDisplay p.MsoNormal, .rn_IncidentThreadDisplay li.MsoNormal, .rn_IncidentThreadDisplay div.MsoNormal{margin:0;}
+.rn_IncidentThreadDisplay p.MsoListParagraph, .rn_IncidentThreadDisplay li.MsoListParagraph, .rn_IncidentThreadDisplay div.MsoListParagraph{margin: 0 0 0 48px;}
+.rn_AnswerFeedback2 .rn_ThanksLabel{margin-left:3em;overflow:hidden;}
+</style>
+    <meta name="description" content="ศูนย์ความช่วยเหลือ LinkedIn - LinkedIn Ads - คำถามที่พบบ่อย - คำถามที่พบบ่อยเกี่ยวกับ LinkedIn Ads มีอะไรบ้าง">
+  <meta property="og:title" content="LinkedIn Ads - คำถามที่พบบ่อย" /><meta property="og:url" content="http://th-th.help.linkedin.com/app/answers/global/a_id/47132/~/linkedin-ads---%E0%B8%84%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%9A%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%A2" />
+	<link rel="apple-touch-icon-precomposed" href="/euf/assets/images/icons/apple-touch-icon.png">
+	<!--[if lte IE 8]>
+  		<link rel="shortcut icon" href="/euf/assets/images/favicons/v1/16x16/favicon.ico" type="image/x-icon">
+	<![endif]-->
+	<!--[if IE 9]>
+  		<link rel="shortcut icon" href="/euf/assets/images/favicons/v1/favicon.ico" type="image/x-icon">
+	<![endif]-->
+	<link rel="icon" href="/euf/assets/images/favicons/v1/favicon.ico" type="image/x-icon">
+	<meta name="msapplication-TileImage" content="/euf/assets/images/logos/linkedin/logo-in-win8-tile-144_v1.png">
+	<meta name="msapplication-TileColor" content="#0077B5"/>
+	<meta name="application-name" content="LinkedIn"/>
+</head>
+<body class="yui-skin-sam hc th ab_rand ab_6 ab_100 _86"><form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<div id=""></div>
+<script type="text/javascript">document.getElementsByTagName('body')[0].className+=' js'</script>
+<div id="rn_Container" class="chrome-v4">
+	 <div id="rn_SkipNav"><a href="#rn_MainContent">ข้ามการนำทาง</a></div> 	<div id="header" class="global-nav member" role="banner">
+		<div class="top-nav">
+			<div class="wrapper">
+				<ul class="util" role="navigation">
+					<li class="tab">
+													<a class="tab-name signin" href="https://www.linkedin.com/uas/login?session_redirect=http%3A%2F%2Fth-th.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F47132%2Freauth%2Ftrue">ลงชื่อเข้าใช้</a>
+											</li>
+					<li class="tab">
+						<a href="/app/lang/callback/%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F47132" class="tab-name username">
+							ภาษา <span class="menu-indicator"></span>
+						</a>
+						<ul class="menu">
+							<li class="username-cont">
+								<a href="/app/lang/callback/%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F47132" class="tab-name username">
+									ภาษา <span class="menu-indicator"></span>
+								</a>
+							</li>
+                                                <li><a class="lang-link" href="#" data-li-href="//in.bantuan.linkedin.com/app/answers/detail/a_id/47132">
+                    Bahasa Indonesia                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ms.bantuan.linkedin.com/app/answers/detail/a_id/47132">
+                    Bahasa Malaysia                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//napoveda.linkedin.com/app/answers/detail/a_id/47132">
+                    Čeština                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjaelp.linkedin.com/app/answers/detail/a_id/47132">
+                    Dansk                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hilfe.linkedin.com/app/answers/detail/a_id/47132">
+                    Deutsch                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//help.linkedin.com/app/answers/detail/a_id/47132">
+                    English                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ayuda.linkedin.com/app/answers/detail/a_id/47132">
+                    Español                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//zh-tw.help.linkedin.com/app/answers/detail/a_id/47132">
+                    中文 (正體)                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//aide.linkedin.com/app/answers/detail/a_id/47132">
+                    Français                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ko.help.linkedin.com/app/answers/detail/a_id/47132">
+                    한국어                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//guida.linkedin.com/app/answers/detail/a_id/47132">
+                    Italiano                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//zh-cn.help.linkedin.com/app/answers/detail/a_id/47132">
+                    中文 (简体)                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hulp.linkedin.com/app/answers/detail/a_id/47132">
+                    Nederlands                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ja.help.linkedin.com/app/answers/detail/a_id/47132">
+                    日本語                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjelp.linkedin.com/app/answers/detail/a_id/47132">
+                    Norsk                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//pomoc.linkedin.com/app/answers/detail/a_id/47132">
+                    Polski                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ajuda.linkedin.com/app/answers/detail/a_id/47132">
+                    Português                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//asistenta.linkedin.com/app/answers/detail/a_id/47132">
+                    Română                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//ru.help.linkedin.com/app/answers/detail/a_id/47132">
+                    Русский                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//hjalp.linkedin.com/app/answers/detail/a_id/47132">
+                    Svenska                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//tulong.linkedin.com/app/answers/detail/a_id/47132">
+                    Tagalog                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//th-th.help.linkedin.com/app/answers/detail/a_id/47132">
+                    ภาษาไทย                  </a></li>
+                                  <li><a class="lang-link" href="#" data-li-href="//yardim.linkedin.com/app/answers/detail/a_id/47132">
+                    Türkçe                  </a></li>
+                              						</ul>
+					</li>
+					<li class="add-connection-cont">
+						<a href="//www.linkedin.com" class="add-conx">ไปที่ LinkedIn.com</a>
+					</li>
+				</ul>
+				<h2 class="logo">
+					<a title="Home" href="//www.linkedin.com/">&nbsp;</a>
+				</h2>
+				<h2 class="head-title">
+					<a title="Support Home" href="/">
+						ศูนย์ความช่วยเหลือ					</a>
+				</h2>
+			</div>
+		</div>
+		<div class="bottom-nav">
+			<div class="wrapper">
+				<ul class="nav" role="navigation">
+					<li class="tab " id="nav-primary-home">
+						<a href="/app/home" class="tab-name"><span>หน้าแรกสำหรับการสนับสนุน</span></a>
+					</li>
+																<li class="tab " id="nav-primary-home">
+							<a href="/app/safety/home" class="tab-name"><span>ศูนย์ความปลอดภัย</span></a>
+						</li>
+																					<li class="tab " id="nav-primary-contact-us">
+							<a href="/app/ask" class="tab-name"><span>ติดต่อเรา</span></a>
+						</li>
+									</ul>
+			</div>
+		</div>
+	</div>
+	<div id="body">
+    		<div class="noscript">
+			<noscript>
+			<div class="alert error">
+				<span class="icon" data-davinci="icon"></span><b>จะต้องเปิดใช้ Javascript เพื่อใช้ศูนย์ความช่วยเหลือ</b> ขออภัย แต่การตั้งค่าของเบราวเซอร์ในปัจจุบันของคุณไม่ได้อนุญาตให้คุณใช้ศูนย์ความช่วยเหลือ คุณสามารถเรียนรู้วิธี<a href="/app/answers/global/id/4641/ft/eng">การเปิดใช้การตั้งค่า JavaScript ของคุณ</a>			</div>
+			 				<div class="content_overlay answer"></div>
+						</noscript>
+		</div>
+									<div id="content_v2" role="main">
+																												<div class="main">
+																				<div class="page_content search_content no_header">
+							<div class="top_search">
+								<h2 class="rn_ScreenReaderOnly">ค้นหา</h2>
+								<form method="post" autocomplete="off" action="/app/answers/list" id="top_search_form">
+									<input type="text" name="kw" maxlength="255" placeholder="ป้อนคำถามหรือหัวข้อ" value="">
+									<input type="submit" class="blue large" value="ค้นหา">
+								</form>
+							</div>
+						</div>
+																		<div class="page_content no_header">
+					<a name="rn_MainContent" id="rn_MainContent"></a>					
+
+<div class="answer">
+	<div class="tools" id="answer_tools">
+		<div class="_wrapper">
+					</div>
+		<div class="message shadow"></div>
+	</div>
+	<div class="top">
+		<h1>LinkedIn Ads - คำถามที่พบบ่อย</h1>
+		<h3>คำถามที่พบบ่อยเกี่ยวกับ LinkedIn Ads มีอะไรบ้าง</h3>
+		<div class="second_line">
+			<div class="posted">
+				<span>ทบทวนครั้งล่าสุด:</span>
+									13/02/2014							</div>
+			<a id="report_inaccuracies">รายงานความไม่แม่นยำของคำตอบ</a>
+		</div>
+	</div>
+	<div id="coll_nav">
+		<div id="expand_all">ขยายทั้งหมด</div>
+		<div id="collapse_all">ยุบทั้งหมด</div>
+	</div>
+	<div class="content">
+		<div class="text" id="answer_text">
+			<div class="faq"><p> LinkedIn Ads เป็นผลิตภัณฑ์โฆษณาด้วยข้อความแบบบริการตนเองที่ช่วยให้ผู้โฆษณาเข้าถึงกลุ่มเป้าหมายมืออาชีพได้ตามที่ต้องการ เพียงแค่มีบัตรเครดิตและบัญชี LinkedIn ก็<a href="//www.linkedin.com/ads/home">เริ่มต้นใช้งาน</a>ได้ เรียนรู้เพิ่มเติมโดยคลิกคำถามที่พบบ่อยด้านล่างเพื่ออ่าน<a href="http://partner.linkedin.com/ads/bestpractices/index.html">วิธีปฏิบัติที่ดีที่สุดสำหรับการโฆษณา</a>ของ LinkedIn</p><div class="i18n" data-lang-exclude="en"><p> <em>หมายเหตุ:</em> ถ้ามีคำตอบที่ยังไม่ได้แปลเป็นภาษาไทย คุณจะเห็นคำตอบนั้นเป็นภาษาอังกฤษ โปรดกลับมาดูภายหลังว่ามีเวอร์ชั่นภาษาไทยหรือยัง </p></div><div><h4>ทั่วไป ข้อมูล:</h4><ul><li><a href="/app/answers/global/id/721/ft/eng">จะสร้างโฆษณาได้อย่างไร</a></li> <li><a href="/app/answers/global/id/718/ft/eng">จะติดต่อพนักงานขายเพื่อคุยเรื่องโฆษณาได้อย่างไร</a></li> <li><a href="/app/answers/global/id/730/ft/eng">ข้อตกลงเกี่ยวกับโฆษณาเป็นอย่างไร</a></li> <li><a href="/app/answers/global/id/1401/ft/eng">เวลาโฆษณา "อยู่ภายใต้การตรวจสอบ" หมายความว่าอย่างไร</a></li></ul></div><div><h4>เนื้อหาโฆษณา:</h4><ul><li><a href="/app/answers/global/id/727/ft/eng">แนวทางสำหรับคำที่ยอมรับได้และลักษณะลิงค์สำหรับโฆษณาเป็นอย่างไร</a></li> <li><a href="/app/answers/global/id/729/ft/eng">ได้รับข้อความว่า "มีข้อความที่ไม่ได้รับอนุญาต" ตอนที่ส่งโฆษณา หมายความว่าอย่างไร</a></li> <li><a href="/app/answers/global/id/12412/ft/eng">ฉันจะแก้ไขโฆษณาของตัวเองได้อย่างไร</a></li> <li><a href="/app/answers/global/id/732/ft/eng">หน้าเพจประเภทใดที่เชื่อมโยงกับโฆษณาได้</a></li> <li><a href="/app/answers/global/id/733/ft/eng">ฉันจะลบลิงค์โพรไฟล์ในโฆษณาของตัวเองได้หรือไม่</a></li> <li><a href="/app/answers/global/id/734/ft/eng">ฉันจะดูตัวอย่างโฆษณาของตัวเองได้อย่างไร</a></li> <li><a href="/app/answers/global/id/735/ft/eng">มีเคล็ดลับในการเขียนโฆษณาไหม</a></li> <li><a href="/app/answers/global/id/12413/ft/eng">ฉันจะเปลี่ยนกลุ่มเป้าหมาย การชำระเงิน การประมูล หรืองบประมาณของโฆษณาได้อย่างไร</a></li></ul></div><div><h4>กลุ่มเป้าหมายและการแสดงผล:</h4><ul><li><a href="/app/answers/global/id/719/ft/eng">โฆษณาของฉันจะแสดงให้เห็นที่ไหน</a></li> <li><a href="/app/answers/global/id/722/ft/eng">มีตัวเลือกอะไรบ้างสำหรับกลุ่มเป้าหมายของโฆษณา</a></li> <li><a href="/app/answers/global/id/723/ft/eng">ข้อมูลกลุ่มเป้าหมายของโฆษณามาจากไหน</a></li> <li><a href="/app/answers/global/id/724/ft/eng">ความสามารถในการเข้าถึงกลุ่มเป้าหมายตามข้อมูลโพรไฟล์จะทำให้ผู้โฆษณารู้ว่าฉันเป็นใครหรือไม่</a></li> <li><a href="/app/answers/global/id/725/ft/eng">จำเป็นต้องเลือกตัวเลือกสำหรับกลุ่มเป้าหมายหรือเปล่า</a></li> <li><a href="/app/answers/global/id/737/ft/eng">ฉันจะแสดงโฆษณาของฉันวันละกี่ครั้ง</a></li> <li><a href="/app/answers/global/id/740/ft/eng">ฉันจะแสดงโฆษณาของฉันเฉพาะบางช่วงเวลาในแต่ละวันได้ไหม</a></li> <li><a href="/app/answers/global/id/747/ft/eng">มีบริการรายงานเพื่อช่วยติดตามแคมเปญโฆษณาของฉันไหม</a></li> <li><a href="/app/answers/global/id/749/ft/eng">ฉันควรคาดหวังอัตราการคลิกผ่านแบบไหนสำหรับโฆษณาของฉัน</a></li> <li><a href="/app/answers/global/id/1389/ft/eng">ไม่มีตัวเลือกกลุ่มเป้าหมายที่ฉันต้องการ</a></li> <li><a href="/app/answers/global/id/1395/ft/eng">โฆษณาของฉันมีสถานะเป็น "เปิด" แต่ทำไมไม่แสดงผลหรือไม่มีคนคลิก</a></li> <li><a href="/app/answers/global/id/1410/ft/eng">ฉันจะเลือกภูมิภาคใดได้บ้างในการเข้าถึงกลุ่มเป้าหมายด้วยโฆษณา</a></li> <li><a href="/app/answers/global/id/7432/ft/eng">รายงานโฆษณาใช้โซนเวลาใด</a></li> <li><a href="/app/answers/global/id/12413/ft/eng">ฉันจะเปลี่ยนกลุ่มเป้าหมาย วิธีการชำระเงิน การประมูล หรืองบประมาณของโฆษณาได้อย่างไร</a></li></ul></div><div><h4>Lead Collection</h4><ul><li><a href="/app/answers/global/id/8448/ft/eng">Lead Collection คืออะไร</a></li> <li><a href="/app/answers/global/id/8451/ft/eng">ฉันจะเปิดหรือปิดการใช้งาน Lead Collection ในบัญชีของฉันได้อย่างไร</a></li> <li><a href="/app/answers/global/id/8450/ft/eng">ฉันจะได้รับอีเมลแจ้งเตือนทุกครั้งที่มีชื่อลูกค้าเป้าหมายถูกส่งเข้ามาทางแคมเปญโฆษณา LinkedIn Ads ของฉันหรือไม่</a></li><li><a href="/app/answers/global/id/8449/ft/eng">ฉันจะดูรายชื่อลูกค้าเป้าหมายใน Lead Collection ได้ที่ไหน</a></li> <li><a href="/app/answers/global/id/8452/ft/eng">ฉันจะส่งออกรายชื่อลูกค้าเป้าหมายได้หรือไม่</a></li></div><div><h4>ราคาและการชำระเงิน:</h4><ul><li><a href="/app/answers/global/id/7431/ft/eng">แคมเปญ LinkedIn Ads มีค่าใช้จ่ายเท่าไร</a></li>  <li><a href="/app/answers/global/id/743/ft/eng">ทางไซต์สามารถรองรับสกุลเงินใดได้บ้าง</a></li> <li><a href="/app/answers/global/id/744/ft/eng">ฉันสามารถจ่ายค่าโฆษณาด้วยที่อยู่ในเรียกเก็บเงินนอกสหรัฐอเมริกาได้หรือไม่</a></li> <li><a href="/app/answers/global/id/12411/ft/eng">ฉันจะถูกเรียกเก็บเงินสำหรับ LinkedIn Ads ของฉันบ่อยแค่ไหน</a></li> <li><a href="/app/answers/global/id/1392/ft/eng">CPC และ CPM คืออะไร</a></li> <li><a href="/app/answers/global/id/1399/ft/eng">ฉันจะถูกเรียกเก็บเงินมากกว่างบประมาณประจำวันของฉันหรือไม่</a></li> <li><a href="/app/answers/global/id/1398/ft/eng">ฉันจะถูกเรียกเก็บเงินหรือไม่ถ้าไม่มีผู้ใดดูหรือคลิกโฆษณาของฉัน</a></li> <li><a href="/app/answers/global/id/1390/ft/eng">งบประมาณประจำวันของ LinkedIn Ads เป็นอย่างไร</a></li> <li><a href="/app/answers/global/id/1393/ft/eng">ฉันควรตั้งราคาประมูลไว้ที่เท่าไร</a></li> <li><a href="/app/answers/global/id/1394/ft/eng">ระบบจะคิดค่าใช้จ่ายตามราคาประมูลสูงสุดสำหรับการคลิกหรือการแสดงโฆษณาทุกครั้งหรือไม่</a></li> <li><a href="/app/answers/global/id/12413/ft/eng">ฉันจะเปลี่ยนกลุ่มเป้าหมาย วิธีการชำระเงิน การประมูล หรืองบประมาณของโฆษณาได้อย่างไร</a></li></ul></div></div>		</div>
+		<div class="file_attach" id="answer_file_attach">
+			
+		</div>
+			</div>
+</div>
+<script type="text/javascript">	var realurl = "/app/answers/detail/a_id/47132";
+</script>
+				</div>
+			</div>
+						 				<div class="sidebar" role="navigation">
+																										<div class="block">
+		<div class="related_answers">
+						    <h3>คำตอบต่าง ๆ ที่เกี่ยวข้อง</h3>
+						<div id="rn_RelatedAnswers2_4" class="rn_RelatedAnswers2">
+			    <ul>
+			    			        <li><a href="/app/answers/global/a_id/47165/related/1" target="_self" > ราคาแคมเปญโฆษณา LinkedIn - ภาพรวม</a></li>
+			    			        <li><a href="/app/answers/global/a_id/44900/related/1" target="_self" > บัญชี LinkedIn ฟรีและพรีเมี่ยมที่อัพเกรดแล้ว</a></li>
+			    			        <li><a href="/app/answers/global/a_id/47763/related/1" target="_self" > การสร้างบัญชีธุรกิจสำหรับโฆษณาและอัพเดทที่สนับสนุน</a></li>
+			    			        <li><a href="/app/answers/global/a_id/44828/related/1" target="_self" > การเพิ่มหน้าเพจของบริษัท</a></li>
+			    			        <li><a href="/app/answers/global/a_id/49282/related/1" target="_self" > การกำหนดเป้าหมายของโฆษณา</a></li>
+			    			    </ul>
+			</div>
+		</div>
+	</div>
+															<div class="block previous_answers">
+		<h3>สิ่งที่ดูล่าสุด</h3>
+		<div id="rn_PreviousAnswers2_5" class="rn_PreviousAnswers2">
+		    <ul>
+		    		        <li><a href="/app/answers/global/a_id/44808" target="_self" >แนวทางชุมชนมืออาชีพของ LinkedIn</a></li>
+		    		        <li><a href="/app/answers/global/a_id/34593" target="_self" >LinkedIn Professional Community Guidelines</a></li>
+		    		        <li><a href="/app/answers/global/a_id/49343" target="_self" >การใช้งบประมาณโฆษณาประจำวันเกิน</a></li>
+		    		        <li><a href="/app/answers/global/a_id/1399" target="_self" >Exceeding Ads Daily Budget</a></li>
+		    		        <li><a href="/app/answers/global/a_id/1015" target="_self" >LinkedIn Ads - Frequently Asked Questions</a></li>
+		    		    </ul>
+		</div>
+	</div>
+									</div>
+			 		</div>
+					<div id="report_inaccuracies_popup" class="popup_wrapper ri" data-reason-needed="โปรดเลือกเหตุผล" data-thanks="ขอบคุณ! เพื่อเตือนความจำ คำตอบของคุณจะถูกใช้ในการปรับปรุงคำตอบนี้ แต่เราจะไม่ตอบความคิดเห็นหรือคำถามที่ส่งมาจากที่นี้โดยตรง หากคุณต้องการความช่วยเหลือ โปรดติดต่อทีมการสนับสนุนลูกค้าของเรา พวกเขายินดีที่จะช่วยเหลือคุณเสมอ">
+				<div class="report_inaccuracies_popup shadow">
+					<h3>โปรดบอกเราว่าทำไมคำตอบนี้ไม่สามารถช่วยเหลือคุณได้</h3>
+					<ul>
+						<li><label><input type="radio" name="reason" value="1"><span>คำตอบไม่แม่นยำ</span></label></li>
+						<li><label><input type="radio" name="reason" value="2"><span>คำตอบไม่สมบูรณ์</span></label></li>
+						<li><label><input type="radio" name="reason" value="3"><span>คำตอบไม่ชัดเจน</span></label></li>
+													<li><label><input type="radio" name="reason" value="4"><span>คำตอบแปลได้แย่มาก</span></label></li>
+												<li><label><input type="radio" name="reason" value="5"><span>ไม่ใช่สิ่งที่ฉันกำลังมองหาอยู่</span></label></li>
+						<li><label><input type="radio" name="reason" value="0"><span>อื่น ๆ</span></label></li>
+					</ul>
+					<p>ป้อนรายละเอียดที่เฉพาะเจาะจงเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อปรับปรุงคำตอบนี้ เราจะทบทวนความคิดเห็นของคุณ แต่จะไม่ตอบคุณโดยตรง</p>
+					<br><textarea id="inaccuracies" class="rn_TextArea" rows="6"></textarea><br><br>
+					<button class="medium blue" id="submit_inaccruacies" data-aid="47132">ส่งคำติชม</button>
+					<button id="report_inaccuracies_close_btn" class="medium close">ยกเลิก</button>
+					<div class="loading_icon" id="report_inaccuracies_submitting">
+						<img alt="Submitting" src="/euf/assets/images/indicator.gif">
+						<span id="message">กำลังส่ง...</span>
+					</div>
+				</div>
+			</div>
+			</div>
+	<div id="footer">
+		<div class="wrapper">
+			<ul class="nav-footer">
+				<li><a href="http://press.linkedin.com">เกี่ยวกับ</a></li>				<li><a href="http://blog.linkedin.com">บล็อก</a></li>								<li><a href="http://talent.linkedin.com">โซลูชันสำหรับการสรรหาพนักงานใหม่</a></li>				<li><a href="//www.linkedin.com/static?key=tools">เครื่องมือ</a></li>
+				<li><a href="//touch.www.linkedin.com/mobile.html">โทรศัพท์มือถือ</a></li>
+				<li><a href="//developer.linkedin.com">นักพัฒนา</a></li>
+				<li id="nav-utility-lang">
+					<a class="link" href="/app/lang/callback/%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F47132">ภาษา</a>
+					<ul>
+                                          <li><a class="lang-link" href="#" data-li-href="//in.bantuan.linkedin.com/app/answers/detail/a_id/47132">
+                  Bahasa Indonesia                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ms.bantuan.linkedin.com/app/answers/detail/a_id/47132">
+                  Bahasa Malaysia                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//napoveda.linkedin.com/app/answers/detail/a_id/47132">
+                  Čeština                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjaelp.linkedin.com/app/answers/detail/a_id/47132">
+                  Dansk                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hilfe.linkedin.com/app/answers/detail/a_id/47132">
+                  Deutsch                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//help.linkedin.com/app/answers/detail/a_id/47132">
+                  English                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ayuda.linkedin.com/app/answers/detail/a_id/47132">
+                  Español                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//zh-tw.help.linkedin.com/app/answers/detail/a_id/47132">
+                  中文 (正體)                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//aide.linkedin.com/app/answers/detail/a_id/47132">
+                  Français                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ko.help.linkedin.com/app/answers/detail/a_id/47132">
+                  한국어                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//guida.linkedin.com/app/answers/detail/a_id/47132">
+                  Italiano                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//zh-cn.help.linkedin.com/app/answers/detail/a_id/47132">
+                  中文 (简体)                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hulp.linkedin.com/app/answers/detail/a_id/47132">
+                  Nederlands                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ja.help.linkedin.com/app/answers/detail/a_id/47132">
+                  日本語                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjelp.linkedin.com/app/answers/detail/a_id/47132">
+                  Norsk                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//pomoc.linkedin.com/app/answers/detail/a_id/47132">
+                  Polski                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ajuda.linkedin.com/app/answers/detail/a_id/47132">
+                  Português                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//asistenta.linkedin.com/app/answers/detail/a_id/47132">
+                  Română                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//ru.help.linkedin.com/app/answers/detail/a_id/47132">
+                  Русский                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//hjalp.linkedin.com/app/answers/detail/a_id/47132">
+                  Svenska                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//tulong.linkedin.com/app/answers/detail/a_id/47132">
+                  Tagalog                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//th-th.help.linkedin.com/app/answers/detail/a_id/47132">
+                  ภาษาไทย                </a></li>
+                              <li><a class="lang-link" href="#" data-li-href="//yardim.linkedin.com/app/answers/detail/a_id/47132">
+                  Türkçe                </a></li>
+                          					</ul>
+				</li>
+				<li class="last"><a href="//www.linkedin.com/secure/purchase?displayProducts=&_ra=sub&_pt=sub"><b>อัพเกรดบัญชีของคุณ</b></a></li>
+			</ul>
+			<ul id="nav-legal">
+				<li><p id="copyright">LinkedIn Corporation &copy; 2014</p></li>
+								<li><a href="//www.linkedin.com/static?key=user_agreement">ข้อตกลงผู้ใช้</a></li>
+				<li><a href="//www.linkedin.com/static?key=privacy_policy">นโยบายสิทธิส่วนบุคคล</a></li>
+				<li><a href="//www.linkedin.com/static?key=copyright_policy">นโยบายลิขสิทธิ์</a></li>
+                  <li class="last"><a href="https://twitter.com/linkedin">ติดตามเราบน Twitter</a></li>
+        			</ul>
+		</div>
+		<div class="rnfooterlogo">
+			<span id="rn_RightNowLogo_6" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+		</div>
+			</div>
+</div>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22%5Cu0e40%5Cu0e23%5Cu0e37%5Cu0e48%5Cu0e2d%5Cu0e07%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22%5Cu0e2a%5Cu0e16%5Cu0e32%5Cu0e19%5Cu0e30%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22%5Cu0e01%5Cu0e32%5Cu0e23%5Cu0e2d%5Cu0e31%5Cu0e1e%5Cu0e40%5Cu0e14%5Cu0e17%5Cu0e04%5Cu0e23%5Cu0e31%5Cu0e49%5Cu0e07%5Cu0e25%5Cu0e48%5Cu0e32%5Cu0e2a%5Cu0e38%5Cu0e14%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22%5Cu0e01%5Cu0e32%5Cu0e23%5Cu0e2d%5Cu0e31%5Cu0e1e%5Cu0e40%5Cu0e14%5Cu0e17%5Cu0e04%5Cu0e23%5Cu0e31%5Cu0e49%5Cu0e07%5Cu0e25%5Cu0e48%5Cu0e32%5Cu0e2a%5Cu0e38%5Cu0e14%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22%5Cu0e1b%5Cu0e34%5Cu0e14%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22%5Cu0e40%5Cu0e1b%5Cu0e34%5Cu0e14%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22%5Cu0e01%5Cu0e33%5Cu0e25%5Cu0e31%5Cu0e07%5Cu0e23%5Cu0e2d%5Cu0e2a%5Cu0e21%5Cu0e32%5Cu0e0a%5Cu0e34%5Cu0e01%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22%5Cu0e23%5Cu0e32%5Cu0e22%5Cu0e07%5Cu0e32%5Cu0e19%5Cu0e1b%5Cu0e31%5Cu0e0d%5Cu0e2b%5Cu0e32%5Cu0e41%5Cu0e25%5Cu0e49%5Cu0e27%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22%5Cu0e23%5Cu0e32%5Cu0e22%5Cu0e07%5Cu0e32%5Cu0e19%5Cu0e04%5Cu0e33%5Cu0e15%5Cu0e34%5Cu0e0a%5Cu0e21%5Cu0e41%5Cu0e25%5Cu0e49%5Cu0e27%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22%5Cu0e40%5Cu0e18%5Cu0e23%5Cu0e14%22%2C%22CP_REQUIRED%22%3A%22%5Cu0e08%5Cu0e33%5Cu0e40%5Cu0e1b%5Cu0e47%5Cu0e19%22%2C%22CP_INVALID%22%3A%22%5Cu0e44%5Cu0e21%5Cu0e48%5Cu0e16%5Cu0e39%5Cu0e01%5Cu0e15%5Cu0e49%5Cu0e2d%5Cu0e07%22%2C%22CP_UPLOADING%22%3A%22%5Cu0e01%5Cu0e33%5Cu0e25%5Cu0e31%5Cu0e07%5Cu0e2d%5Cu0e31%5Cu0e1e%5Cu0e42%5Cu0e2b%5Cu0e25%5Cu0e14%22%2C%22CP_SUBMITTING%22%3A%22%5Cu0e01%5Cu0e33%5Cu0e25%5Cu0e31%5Cu0e07%5Cu0e2a%5Cu0e48%5Cu0e07%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22%5Cu0e41%5Cu0e1a%5Cu0e1a%5Cu0e1f%5Cu0e2d%5Cu0e23%5Cu0e4c%5Cu0e21%5Cu0e19%5Cu0e35%5Cu0e49%5Cu0e01%5Cu0e33%5Cu0e25%5Cu0e31%5Cu0e07%5Cu0e08%5Cu0e30%5Cu0e2b%5Cu0e21%5Cu0e14%5Cu0e2d%5Cu0e32%5Cu0e22%5Cu0e38+%5Cu0e42%5Cu0e1b%5Cu0e23%5Cu0e14%5Cu0e22%5Cu0e37%5Cu0e19%5Cu0e22%5Cu0e31%5Cu0e19%5Cu0e27%5Cu0e48%5Cu0e32%5Cu0e04%5Cu0e38%5Cu0e13%5Cu0e15%5Cu0e49%5Cu0e2d%5Cu0e07%5Cu0e01%5Cu0e32%5Cu0e23%5Cu0e01%5Cu0e23%5Cu0e2d%5Cu0e01%5Cu0e41%5Cu0e1a%5Cu0e1a%5Cu0e1f%5Cu0e2d%5Cu0e23%5Cu0e4c%5Cu0e21%5Cu0e15%5Cu0e48%5Cu0e2d%22%7D';
+</script>
+<script type="text/javascript">
+	function readCookie(name) {
+		 var nameEQ = name + "=";
+		 var ca = document.cookie.split(";");
+		 for(var i=0;i < ca.length;i++) {
+			  var c = ca[i];
+			  while (c.charAt(0)==" ") c = c.substring(1,c.length);
+			  if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		 }
+		 return "";
+	}
+	var realreferrer = decodeURIComponent(readCookie("realreferrer"));
+	document.cookie = "realreferrer=; path=/";
+	var li_loc = decodeURIComponent(readCookie("li_loc"));
+	document.cookie = "li_loc=; path=/";
+	var li_trk = decodeURIComponent(readCookie("li_trk"));
+	document.cookie = "li_trk=; path=/";
+	var realurl = realurl || '';
+	var domain = domain || 'linkedin.com';
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-11775227-2']);
+	_gaq.push(['_setDomainName', domain]);
+	_gaq.push(['_setAllowHash', 'false']);
+	_gaq.push(['_setSiteSpeedSampleRate', 20]);
+	if (realreferrer.length > 0) {
+		 _gaq.push(['_setReferrerOverride',realreferrer]);
+	}
+	if (li_loc.length > 0) {
+		_gaq.push(['_setCustomVar', 4, 'Location', li_loc ]);
+	}
+	if (li_trk.length > 0) {
+		_gaq.push(['_setCustomVar', 5, 'Pagekey', li_trk ]);
+	}
+	if (realurl.length > 0) {
+		_gaq.push(['_trackPageview',realurl]);
+	} else {
+		_gaq.push(['_trackPageview']);
+	}
+		_gaq.push(['_setVar','guest']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var scripts = document.getElementsByTagName('script');
+		var s = scripts[scripts.length - 1]; s.parentNode.insertBefore(ga, s.nextSibling);
+	})();
+</script>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1406595520/templates/linkedin.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1406595520/pages/answers/detail.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"\u0e04\u0e33\u0e40\u0e15\u0e37\u0e2d\u0e19","INFORMATION_LBL":"Inform\u0101cija","HELP_LBL":"Pal\u012bdz\u012bba","ERROR_REQUEST_ACTION_COMPLETED_MSG":"Rad\u0101s piepras\u012bjuma k\u013c\u016bda, un darb\u012bbu nevar pabeigt.","OK_LBL":"\u0e15\u0e01\u0e25\u0e07","DIALOG_LBL":"dialogs","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialogs, l\u00fbdzu, augst\u00e2k izlasiet dialoga zi\u00f2ojuma tekstu","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Dialoga s\u00e2k\u00f0ana, l\u00fbdzu, pirms darba turpin\u00e2\u00f0anas aizveriet dialogu.","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Dialoga beigas, l\u00fbdzu, pirms darba turpin\u00e2\u00f0anas aizveriet dialogu","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"K\u013c\u016bme veidlapas iesnieg\u0161an\u0101, ko izrais\u012bja neder\u012bga ievade","ERR_SUBMITTING_SEARCH_MSG":"Rad\u0101s ar j\u016bsu piepras\u012bjumu saist\u012bta probl\u0113ma.  L\u016bdzu, mainiet savus mekl\u0113\u0161anas vienumus un m\u0113\u0123iniet v\u0113lreiz.","CLOSE_CMD":"Aizv\u0113rt","BACK_LBL":"Atpaka\u013c","ANSWERFEEDBACK2_DIALOG_MISSING_REQD_MSG":"Dialogam AnswerFeedback2, tr\u016bkst oblig\u0101t\u0101 elementa %s.","PCT_D_OF_PCT_D_SELECTED_LBL":"%d no izv\u0113l\u0113tajiem %d","PCT_S_IS_REQUIRED_MSG":"%s ir oblig\u00e2ts","FIELD_IS_NOT_A_VALID_EMAIL_ADDRESS_MSG":"lauks ir neder\u012bga e-pasta adrese.","THANKS_FOR_YOUR_FEEDBACK_MSG":"Paldies par j\u00fbsu atsauksm\u00e7m."};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"th-th.help.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"Au1DOg_l","uh":"9fa9f45a","uc":"th-th.help.linkedin.com\/app\/answers\/detail\/a_id\/47132","b":"ca34356","i":"linkedin:linkedin_th","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/Libraries.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Common.js?1363721921'></script>
+</body>
+</html>

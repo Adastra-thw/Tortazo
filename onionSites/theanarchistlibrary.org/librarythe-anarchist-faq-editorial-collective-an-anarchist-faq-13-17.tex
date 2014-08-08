@@ -1,0 +1,802 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+The Anarchist FAQ Editorial Collective  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+An Anarchist FAQ (13/17)
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+June 18, 2009. Version 13.1
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+\awikipart{Appendix: The Symbols of Anarchy
+}
+
+\section{Introduction
+}
+
+Anarchism has always stood deliberately for a broad, and at times vague, political platform. The reasoning is sound; blueprints create rigid dogma and stifle the creative spirit of revolt. Along the same lines and resulting in the same problems, Anarchists have rejected the “disciplined” leadership that is found in many other political groupings on the Left. The reasoning for this is also sound; leadership based on authority is inherently hierarchical.
+
+
+It seems to follow logically that since Anarchists have shied away from anything static, that we would also shy away from the importance of symbols and icons. Yet the fact is Anarchists have used symbolism in our revolt against the State and Capital, the most famous of which are the circled-A, the black flag and the red-and-black flag. This appendix tries to show the history of these three iconic symbols and indicate why they were taken up by anarchists to represent our ideas and movement.
+
+
+Ironically enough, one of the original anarchist symbols was the {\bf {\em red}} flag. As anarchist Communard Louise Michel put it, {\em “Lyon, Marseille, Narbonne, all had their own Communes, and like ours [in Paris], theirs too were drowned in the blood of revolutionaries. That is why our flags are red. Why are our red banners so terribly frightening to those persons who have caused them to be stained that colour?”} [{\bf The Red Virgin: Memoirs of Louise Michel}, p. 65] March 18\high{th}, 1877, saw Kropotkin participate in a protest march in Berne which involved the anarchists {\em “carrying the red flag in honour of the Paris Commune”} for {\em “in Switzerland federal law prohibited public display of the red flag.”} [Martin A. Miller, {\bf Kropotkin}, p. 137] Anarchist historians Nicolas Walter and Heiner Becker note that {\em “Kropotkin always preferred the red flag.”} [Peter Kropotkin, {\bf Act for Yourselves}, p. 128] On Labour Day in 1899, Emma Goldman gave lectures to miners in Spring Valley, Illinois, which ended in a demonstration which she headed {\em “carrying a large red flag.”} [{\bf Living My Life}, vol. 1, p. 245] According to historian Caroline Waldron Merithew, the 300 marchers {\em “defied police orders to haul down the ‘red flag of anarchy.’”} [{\bf Anarchist Motherhood}, p. 236]
+
+
+This should be unsurprising as anarchism is a form of socialism and came out of the general socialist and labour movements. Common roots would imply common imagery. However, as mainstream socialism developed in the nineteenth century into either reformist social democracy or the state socialism of the revolutionary Marxists, anarchists developed their own images of revolt based upon those raised by working class people in struggle. As will be shown, they come from the revolutionary anarchism most directly associated with the wider labour and socialist movements, i.e., the dominant, mainstream social anarchist tradition. As Nicholas Walter put it:
+
+
+
+\startblockquote
+{\em  “[The] serious study of anarchism should be based on fact rather than fantasy, and concentrate on people and movements that actually used the word. However old and wide the ideas of anarchism may be \unknown{} no one called himself an anarchist before [Proudhon in] 1840, and no movement called itself anarchist before the 1870s \unknown{} The actual anarchist movement was founded \unknown{} by the anti-authoritarian sections of the First International \unknown{} This was certainly the first anarchist movement, and this movement was certainly based on a libertarian version of the concept of the class struggle.”} [{\bf The Anarchist Past and other essays}, pp. 60–1]
+
+
+
+\stopblockquote
+Unsurprisingly, the first anarchist symbols reflected the origins and ideas of this class struggle movement. Both the black and red-and-black flags were first used by revolutionary anarchists. The black flag was popularised in the 1880s by Louise Michel, a leading French communist-anarchist militant. From Europe it spread to America when the communist-anarchists of the {\bf International Working People’s Association} raised it in their struggle against capitalism before being taken up by other revolutionary class struggle anarchists across the globe. The red-and-black flag was first used by the Italian section of the First International and this had been the first to move from collectivist to communist-anarchism in October 1876. [Nunzio Pernicone, {\bf Italian Anarchism, 1864–1892}, p. 111] From there, it spread to Mexico and was used by anarchist labour militants there before being re-invented by the Spanish anarcho-syndicalists in the 1930s. Like anarchism itself, the anarchist flags are a product of the social struggle against capitalism and statism.
+
+
+We would like to point out that this appendix is partly based on Jason Wehling’s 1995 essay {\bf Anarchism and the History of the Black Flag}. Needless to say, this appendix does not cover all anarchists symbols. For example, recently the red-and-black flag has become complemented by the green-and-black flag of eco-anarchism (the symbolism of the green should need no explanation). Other libertarian popular symbols include the IWW inspired {\em {\bf “Wildcat”}} (representing, of course, the spontaneity, direct action, solidarity and militancy of a wildcat strike), the {\em {\bf “Black Rose”}} (inspired, no doubt, by the demand of striking IWW women workers in Lawrence, 1912, for not only bread, but for roses too) and the ironic {\em {\bf “little black bomb”}} (among others). Here we concentrate on the three most famous ones.
+
+
+\chapter{1 What is the history of the Black Flag?
+}
+
+As is well known, the black flag is the symbol of anarchism. Howard Ehrlich has a great passage in his book {\bf Reinventing Anarchy, Again} on why anarchists use it. It is worth quoting at length:
+
+
+
+\startblockquote
+{\em “Why is our flag black? Black is a shade of negation. The black flag is the negation of all flags. It is a negation of nationhood which puts the human race against itself and denies the unity of all humankind. Black is a mood of anger and outrage at all the hideous crimes against humanity perpetrated in the name of allegiance to one state or another. It is anger and outrage at the insult to human intelligence implied in the pretences, hypocrisies, and cheap chicaneries of governments \unknown{} Black is also a colour of mourning; the black flag which cancels out the nation also mourns its victims the countless millions murdered in wars, external and internal, to the greater glory and stability of some bloody state. It mourns for those whose labour is robbed (taxed) to pay for the slaughter and oppression of other human beings. It mourns not only the death of the body but the crippling of the spirit under authoritarian and hierarchic systems; it mourns the millions of brain cells blacked out with never a chance to light up the world. It is a colour of inconsolable grief.}
+
+
+{\em “But black is also beautiful. It is a colour of determination, of resolve, of strength, a colour by which all others are clarified and defined. Black is the mysterious surrounding of germination, of fertility, the breeding ground of new life which always evolves, renews, refreshes, and reproduces itself in darkness. The seed hidden in the earth, the strange journey of the sperm, the secret growth of the embryo in the womb all these the blackness surrounds and protects.}
+
+
+{\em “So black is negation, is anger, is outrage, is mourning, is beauty, is hope, is the fostering and sheltering of new forms of human life and relationship on and with this earth. The black flag means all these things. We are proud to carry it, sorry we have to, and look forward to the day when such a symbol will no longer be necessary.”} [{\em “Why the Black Flag?”}, Howard Ehrlich (ed.), {\bf Reinventing Anarchy, Again}, pp. 31–2]
+
+
+
+\stopblockquote
+Here we discuss when and why anarchists first took up the black flag as our symbol.
+
+
+There are ample accounts of the use of black flags by anarchists. Probably the most famous was Nestor Makhno’s partisans during the Russia Revolution. Under the black banner, his army routed a dozen armies and kept a large portion of the Ukraine free from concentrated power for a good couple of years. On the black flag was embroidered {\em “Liberty or Death”} and {\em “The Land to the Peasant, The Factories to the Workers.”} [Voline, {\bf The Unknown Revolution}, pp. 607–10] In 1925, the Japanese anarchists formed the {\bf Black Youth League} and, in 1945, when the anarchist federation reformed, their journal was named {\bf Kurohata} ({\bf Black Flag}). [Peter Marshall, {\bf Demanding the Impossible}, pp. 525–6] In 1968, students carried black (and red) flags during the street fighting and General Strike in France, bringing the resurgence of anarchism in the 1960s into the view of the general public. The same year saw the Black Flag being raised at the American {\bf Students for a Democratic Society} national convention. Two years later the British based magazine {\bf Black Flag} was started and is still going strong. At the turn of the 21\high{st} century, the Black Flag was at the front of the so-called anti-globalisation protests. Today, if you go to any sizeable demonstration you will usually see the Black Flag raised by the anarchists present.
+
+
+However, the anarchists’ black flag originated much earlier than this. Louise Michel, famous participant in the Paris Commune of 1871, was instrumental in popularising the use of the Black Flag in anarchist circles. At a March 18\high{th} public meeting in 1882 to commemorate the Paris Commune she proclaimed that the {\em “red flag was no longer appropriate; [the anarchists] should raise the black flag of misery.”} [Edith Thomas, {\bf Louise Michel}, p. 191] The following year she put her words into action. According to anarchist historian George Woodcock, Michel flew the black flag on March 9, 1883, during demonstration of the unemployed in Paris, France. An open air meeting of the unemployed was broken up by the police and around 500 demonstrators, with Michel at the front carrying a black flag and shouting {\em “Bread, work, or lead!”} marched off towards the Boulevard Saint-Germain. The crowd pillaged three baker’s shops before the police attacked. Michel was arrested and sentenced to six years solitary confinement. Public pressure soon forced the granting of an amnesty. [{\bf Anarchism}, pp. 251–2] August the same year saw the publication of the anarchist paper {\bf Le Drapeau Noir} ({\bf The Black Flag}) in Lyon which suggests that it had become a popular symbol within anarchist circles. [{\em “Sur la Symbolique anarchiste”}, {\bf Bulletin du CIRA}, no. 62, p. 2] However, anarchists had been using red-and-black flags a number of years previously (see next section) so Michel’s use of the colour black was not totally without precedence.
+
+
+Not long after, the black flag made its way to America. Paul Avrich reports that on November 27, 1884, it was displayed in Chicago at an anarchist demonstration. According to Avrich, August Spies, one of the Haymarket martyrs, {\em “noted that this was the first occasion on which [the black flag] had been unfurled on American soil.”} By January the following year, {\em “[s]treet parades and mass outdoor demonstrations, with red and black banners \unknown{} were the most dramatic form of advertisement”} for the revolutionary anarchist movement in America. April 1885 saw Lucy Parsons and Lizzie Holmes at the head of a protest march {\em “each bearing a flag, one black, the other red.”} [{\bf The Haymarket Tragedy}, p. 145, pp. 81–2 and p. 147] The Black Flag continued to be used by anarchists in America, with one being seized by police at an anarchist organised demonstration for the unemployed in 1893 at which Emma Goldman spoke. [{\bf Emma Goldman: A Documentary History of the American Years}, vol. 1, p. 144] Twenty one years later, Alexander Berkman reported on another anarchist inspired unemployed march in New York which raised the black flag in {\em “menacing defiance in the face of parasitic contentment and self-righteous arrogance”} of the {\em “exploiters and well-fed idlers.”} [{\em “The Movement of the Unemployed”}, {\bf Anarchy! An Anthology of Emma Goldman’s Mother Earth}, p. 341]
+
+
+It seems that black flags did not appear in Russia until the founding of the {\bf Chernoe Znamia} ({\bf {\em “black banner”}}) movement in 1905. With the defeat of that year’s revolution, anarchism went underground again. The Black Flag, like anarchism in general, re-emerged during the 1917 revolution. Anarchists in Petrograd took part in the February demonstrations which brought down Tsarism carrying black flags with {\em “Down with authority and capitalism!”} on them. As part of their activity, anarchists organised armed detachments in most towns and cities called {\em “Black Guards”} to defend themselves against counter-revolutionary attempts by the provisional government. As noted above, the Makhnovists fought Bolshevik and White dictatorship under Black Flags. On a more dreary note, February 1921 saw the end of black flags in Soviet Russia. That month saw Peter Kropotkin’s funeral take place in Moscow. Twenty thousand people marched in his honour, carrying black banners that read: {\em “Where there is authority there is no freedom.”} [Paul Avrich, {\bf The Russian Anarchists}, p. 44, p. 124, p. 183 and p. 227] Only two weeks after Kropotkin’s funeral march, the Kronstadt rebellion broke out and anarchism was erased from Soviet Russia for good. With the end of Stalinism, anarchism with its Black Flag re-emerged all across Eastern Europe, including Russia.
+
+
+While the events above are fairly well known, as has been related, the exact origin of the black flag is not. What is known is that a large number of Anarchist groups in the early 1880s adopted titles associated with black. In July of 1881, the Black International was founded in London. This was an attempt to reorganise the Anarchist wing of the recently dissolved First International. In October 1881, a meeting in Chicago lead to the {\bf International Working People’s Association} being formed in North America. This organisation, also known as the {\bf Black International}, affiliated to the London organisation. [Woodcock, {\bf Op. Cit.}, pp. 212–4 and p. 393] These two conferences are immediately followed by Michel’s demonstration (1883) and the black flags in Chicago (1884).
+
+
+Thus it was around the early 1880s that anarchism and the Black Flag became inseparably linked. Avrich, for example, states that in 1884, the black flag {\em “was the new anarchist emblem.”} [{\bf The Haymarket Tragedy}, p. 144] In agreement, Murray Bookchin reports that {\em “in later years, the Anarchists were to adopt the black flag”} when speaking of the Spanish Anarchist movement in 1870. [{\bf The Spanish Anarchists}, p. 57] Walter and Heiner also note that {\em “it was adopted by the anarchist movement during the 1880s.”} [Kropotkin, {\bf Act for Yourselves}, p. 128]
+
+
+Now the question becomes why, exactly, black was chosen. The Chicago {\em “Alarm”} stated that the black flag is {\em “the fearful symbol of hunger, misery and death.”} [quoted by Avrich, {\bf Op. Cit.}, p. 144] Bookchin asserts that anarchists were {\em “to adopt the black flag as a symbol of the workers misery and as an expression of their anger and bitterness.”} [{\bf Op. Cit.}, p. 57] Historian Bruce C. Nelson also notes that the Black Flag was considered {\em “the emblem of hunger”} when it was unfurled in Chicago in 1884. [{\bf Beyond the Martyrs}, p. 141 and p. 150] While it {\em “was interpreted in anarchist circles as the symbol of death, hunger and misery”} it was {\em “also said to be the ‘emblem of retribution’”} and in a labour procession in Cincinnati in January 1885, {\em “it was further acknowledged to be the banner of working-class intransigence, as demonstrated by the words ‘No Quarter’ inscribed on it.”} [Donald C. Hodges, {\bf Sandino’s Communism}, p. 21] For Berkman, it was the {\em “symbol of starvation and desperate misery.”} [{\bf Op. Cit.}, p. 341] Louise Michel stated that the {\em “black flag is the flag of strikes and the flag of those who are hungry.”} [{\bf Op. Cit.}, p. 168]
+
+
+Along these lines, Albert Meltzer maintains that the association between the black flag and working class revolt {\em “originated in Rheims [France] in 1831 (’Work or Death’) in an unemployed demonstration.”} [{\bf The Anarcho-Quiz Book}, p. 49] He went on to assert that it was Michel’s action in 1883 that solidified the association. The links from revolts in France to anarchism are even stronger. As Murray Bookchin records, in Lyon {\em “[i]n 1831, the silk-weaving artisans \unknown{} rose in armed conflict to gain a better {\bf tarif}, or contract, from the merchants. For a brief period they actually took control of the city, under red and black flags — which made their insurrection a memorable event in the history of revolutionary symbols. Their use of the word {\bf mutuelisme} to denote the associative disposition of society that they preferred made their insurrection a memorable event in the history of anarchist thought as well, since Proudhon appears to have picked up the word from them during his brief stay in the city in 1843–4.”} [{\bf The Third Revolution}, vol. 2, p. 157] Sharif Gemie confirms this, noting that a police report sent to the Lyon prefect that said: {\em “The silk-weavers of the Croix-Rousse have decided that tomorrow they will go down to Lyon, carrying a black flag, calling for work or death.”} The revolt saw the Black Flag raised:
+
+
+
+\startblockquote
+{\em  “At eleven a.m. the silk-weavers’ columns descended the slops of the Croix-Rousse. Some carried black flags, the colour of mourning and a reminder of their economic distress. Others pushed loaves of bread on the bayonets of their guns and held them aloft. The symbolic force of this action was reinforced by a repeatedly-shouted slogan: ‘bread or lead!’: in other words, if they were not given bread which they could afford, then they were prepared to face bullets. At some point during the rebellion, a more eloquent expression was devised: ’{\bf Vivre en travaillant ou mourir en combattant}!’ — ‘Live working or die by fighting!’. Some witnesses report seeing this painted on a black flag.”} [Sharif Gemie, {\bf French Revolutions, 1815–1914}, pp. 52–53]
+
+
+
+\stopblockquote
+Kropotkin himself states that its use continued in the French labour movement after this uprising. He notes that the Paris Workers {\em “raised in June [1848] their black flag of ‘Bread or Labour’”} [{\bf Act for Yourselves}, p. 100] Black flags were also hung from windows in Paris on the 1\high{st} of March, 1871, in defiance of the Prussians marching through the city after their victory in the Franco-Prussian War. [Stewart Edwards, {\bf The Communards of Paris, 1871}, p. 25]
+
+
+The use of the black flag by anarchists, therefore, is an expression of their roots and activity in the labour movement in Europe, particularly in France. The anarchist adoption of the Black Flag by the movement in the 1880s reflects its use as {\em “the traditional symbol of hunger, poverty and despair”} and that it was {\em “raised during popular risings in Europe as a sign of no surrender and no quarter.”} [Walter and Becker, {\bf Act for Yourselves}, p. 128] This is confirmed by the first anarchist journal to be called {\bf Black Flag}: {\em “On the heights of the city [of Lyon] in la Croix-Rousse and Vaise, workers, pushed by hunger, raised for the first time this sign of mourning and revenge [the black flag], and made therefore of it the emblem of workers’ demands.”} [{\bf Le Drapeau Noir}, no. 1, 12\high{th} August 1883] This was echoed by Louise Michel:
+
+
+
+\startblockquote
+{\em “How many wrathful people, young people, will be with us when the red and black banners wave in the wind of anger! What a tidal wave it will be when the red and black banners rise around the old wreck!}
+
+
+{\em “The red banner, which has always stood for liberty, frightens the executioners because it is so red with our blood. The black flag, with layers of blood upon it from those who wanted to live by working or die by fighting, frightens those who want to live off the work of others. Those red and black banners wave over us mourning our dead and wave over our hopes for the dawn that is breaking.”} [{\bf The Red Virgin: Memoirs of Louise Michel}, pp. 193–4]
+
+
+
+\stopblockquote
+The mass slaughter of Communards by the French ruling class after the fall of the Paris Commune of 1871 could also explain the use of the Black Flag by anarchists at this time. Black {\em “is the colour of mourning [at least in Western cultures], it symbolises our mourning for dead comrades, those whose lives were taken by war, on the battlefield (between states) or in the streets and on the picket lines (between classes).”} [Chico, {\em “letters”}, {\bf Freedom}, vol. 48, No. 12, p. 10] Given the 25 000 dead in the Commune, many of them anarchists and libertarian socialists, the use of the Black Flag by anarchists afterwards would make sense. Sandino, the Nicaraguan libertarian socialist (whose use of the red-and-black colours we discuss below) also said that black stood for mourning ({\em “Red for liberty; black for mourning; and the skull for a struggle to the death”} [Donald C. Hodges, {\bf Sandino’s Communism}, p. 24]).
+
+
+Regardless of other meanings, it is clear that anarchists took up the black flag in the 1880s because it was, like the red flag, a recognised symbol of working class resistance to capitalism. This is unsurprising given the nature of anarchist politics. Just as anarchists base our ideas on actual working class practice, we would also base our symbols on those created by that self-activity. For example, Proudhon as well as taking the term {\em “mutualism”} from radical workers also argued that co-operative {\em “labour associations”} had {\em “spontaneously, without prompting and without capital been formed in Paris and in Lyon\unknown{} the proof of it [mutualism, the organisation of credit and labour] \unknown{} lies in current practice, revolutionary practice.”} [{\bf No Gods, No Masters}, vol. 1, pp. 59–60] He considered his ideas, in other words, to be an expression of working class self-activity. Indeed, according to K. Steven Vincent, there was {\em “close similarity between the associational ideal of Proudhon \unknown{} and the program of the Lyon Mutualists”} and that there was {\em “a remarkable convergence [between the ideas], and it is likely that Proudhon was able to articulate his positive program more coherently because of the example of the silk workers of Lyon. The socialist ideal that he championed was already being realised, to a certain extent, by such workers.”} [{\bf Pierre-Joseph Proudhon and the Rise of French Republican Socialism}, p. 164] Other anarchists have made similar arguments concerning anarchism being the expression of tendencies within working class struggle against oppression and exploitation and so the using of a traditional workers symbol would be a natural expression of this aspect of anarchism.
+
+
+Similarly, perhaps it is Louise Michel’s comment that the Black Flag was the {\em “flag of strikes”} which could explain the naming of the {\bf Black International} founded in 1881 (and so the increasing use of the Black Flag in anarchist circles in the early 1880s). Around the time of its founding congress Kropotkin was formulating the idea that this organisation would be a {\em “Strikers’ International”} ({\bf Internationale Greviste}) — it would be {\em “an organisation of resistance, of strikes.”} [quoted by Martin A. Miller, {\bf Kropotkin}, p. 147] In December 1881 he discussed the revival of the International Workers Association as a {\bf {\em Strikers’ International}} for to {\em “be able to make the revolution, the mass of workers will have to organise themselves. Resistance and strikes are excellent methods of organisation for doing this.”} He stressed that the {\em “strike develops the sentiment of solidarity”} and argued that the First International {\em “was born of strikes; it was fundamentally a strikers’ organisation.”} [quoted by Caroline Cahm, {\bf Kropotkin and the Rise of Revolutionary Anarchism, 1872–1886}, p. 255 and p. 256]
+
+
+A {\em “Strikers International”} would need the strikers flag and so, perhaps, the {\bf Black International} got its name. This, of course, fits perfectly with the use of the Black Flag as a symbol of workers’ resistance by anarchism, a political expression of that resistance.
+
+
+However, the black flag did not instantly replace the red flag as the main anarchist symbol. The use of the red flag continued for some decades in anarchist circles. Thus we find Kropotkin writing in the early 1880s of {\em “anarchist groups \unknown{} rais[ing] the red flag of revolution.”} As Woodcock noted, the {\em “black flag was not universally accepted by anarchists at this time. Many, like Kropotkin, still thought of themselves as socialists and of the red flag as theirs also.”} [{\bf Words of a Rebel}, p. 75 and p. 225] In addition, we find the Chicago anarchists using both black and red flags all through the 1880s. French Anarchists carried three red flags at the funeral of Louise Michel’s mother in 1885 as well as at her own funeral in January 1905. [Louise Michel, {\bf Op. Cit.}, p. 183 and p. 201] Anarchist in Japan, for example, demonstrated under red flags bearing the slogans {\em “Anarchy”} and {\em “Anarchist Communism”} in June, 1908. [John Crump, {\bf Hatta Shuzo and Pure Anarchism in Interwar Japan}, p. 25] Three years later, the Mexican anarchists declared that they had {\em “hoisted the Red Flag on Mexico’s fields of action”} as part of their {\em “war against Authority, war against Capital, and war against the Church.”} They were {\em “fighting under the Red Flag to the famous cry of ‘Land and Liberty.’”} [Ricardo Flores Magon, {\bf Land and Liberty}, p. 98 and p. 100]
+
+
+So for a considerable period of time anarchists used red as well as black flags as their symbol. The general drift away from the red flag towards the black must be placed in the historical context. During the 1880s the socialist movement was changing. Marxist social democracy was becoming the dominant socialist trend, with libertarian socialism going into relative decline in many areas. Thus the red flag was increasingly associated with the authoritarian and statist (and increasingly reformist) side of the socialist movement. In order to distinguish themselves from other socialists, the use of the black flag makes perfect sense as it was it an accepted symbol of working class revolt like the red flag.
+
+
+After the Russian Revolution and its slide into dictatorship (first under Lenin, then Stalin) anarchist use of the red flag decreased as it no longer {\em “stood for liberty.”} Instead, it had become associated, at worse, with the Communist Parties or, at best, bureaucratic, reformist and authoritarian social democracy. This change can be seen from the Japanese movement. As noted above, before the First World War anarchists there had happily raised the red flag but in the 1920s they unfurled the black flag. Organised in the {\bf Kokushoku Seinen Renmei} (Black Youth League), they published {\bf Kokushoku Seinen} (Black Youth). By 1930, the anarchist theoretical magazine {\bf Kotushoku Sensen} (Black Battlefront) had been replaced by two journals called {\bf Kurohata} (Black Flag) and {\bf Kuhusen} (Black Struggle). [John Crump, {\bf Op. Cit.}, pp. 69–71 and p. 88]
+
+
+According to historian Candace Falk, {\em “[t]hough black has been associated with anarchism in France since 1883, the colour red was the predominant symbol of anarchism throughout this period; only after the First World War was the colour black widely adopted.”} [{\bf Emma Goldman: A Documentary History of the American Years}, vol. 1, p. 208fn] As this change did not occur overnight, it seems safe to conclude that while anarchism and the black flag had been linked, at the latest, from the early 1880s, it did not become the definitive anarchist symbol until the 1920s (Carlo Tresca in America was still talking of standing {\em “beneath the red flag that is the immaculate flag of the anarchist idea”} in 1925. [quoted by Nunzio Pernicone, {\bf Carlo Tresca: Portrait of a Rebel}, p. 161]). Before then, anarchists used both it and the red flag as their symbols of choice. After the Russian Revolution, anarchists would still use red in their flags, but only when combined with black. In this way they would not associate themselves with the tyranny of the USSR or the reformism and statism of the mainstream socialist movement.
+
+
+\chapter{2 Why the red-and-black flag?
+}
+
+The red-and-black flag has been associated with anarchism for some time. Murray Bookchin placed the creation of this flag in Spain:
+
+
+
+\startblockquote
+{\em “The presence of black flags together with red ones became a feature of Anarchist demonstrations throughout Europe and the Americas. With the establishment of the CNT, a single flag on which black and red were separated diagonally, was adopted and used mainly in Spain.”} [{\bf The Spanish Anarchists}, p. 57]
+
+
+
+\stopblockquote
+George Woodcock also stressed the Spanish origin of the flag:
+
+
+
+\startblockquote
+{\em “The anarcho-syndicalist flag in Spain was black and red, divided diagonally. In the days of the [First] International the anarchists, like other socialist sects, carried the red flag, but later they tended to substitute for it the black flag. The black-and-red flag symbolised an attempt to unite the spirit of later anarchism with the mass appeal of the International.”} [{\bf Anarchism}, p. 325fn]
+
+
+
+\stopblockquote
+According to Abel Paz, anarchist historian and CNT militant in the 1930s, the 1\high{st} of May, 1931, was {\em “the first time in history [that] the red and black flag flew over a CNT-FAI rally.”} This was the outcome of an important meeting of CNT militants and anarchist groups to plan the May Day demonstrations in Barcelona. One of the issues to be resolved was {\em “under what flag to march.”} One group was termed the {\em “Red Flag”} anarchists (who {\em “put greater emphasis on labour issues”}), the other {\em “Black Flag”} anarchists (who were {\em “more distant (at the time) from economic questions”}). However, with the newly proclaimed Republic there were {\em “tremendous opportunities for mass mobilisations”} which made disagreements on how much emphasis to place on labour issues {\em “meaningless.”} This allowed an accord to be reached with its {\em “material expression”} being {\em “making the two flags into one: the black and red flag.”} [{\bf Durruti in the Spanish Revolution}, p. 206]
+
+
+However, the red-and-black flag was used by anarchists long before 1931, indeed decades before the CNT was even formed. In fact, it, rather than the black flag, may well have been the first specifically anarchist flag.
+
+
+The earliest recorded use of the red-and-black colours was during the attempted Bologna insurrection of August 1874 where participants were {\em “sporting the anarchists’ red and black cockade.”} [Nunzio Pernicone, {\bf Italian Anarchism, 1864–1892}, p. 93] In April 1877, a similar attempt at provoking rebellion saw anarchists enter the small Italian town of Letino {\em “wearing red and black cockades”} and carrying a {\em “red and black banner.”} These actions helped to {\em “captur[e] national attention”} and {\em “draw considerable notice to the International and its socialist programme.”} [Nunzio Pernicone, {\bf Op. Cit.}, pp. 124–5 and pp. 126–7] Significantly, another historian notes that the insurgents in 1874 were {\em “decked out in the red and black emblem of the International”} while three years later they were {\em “prominently displaying the red and black anarchist flag.”} [T. R. Ravindranathan, {\bf Bakunin and the Italians}, p. 208 and p. 228] Thus the black-and-red flag, like the black flag, was a recognised symbol of the labour movement (in this case, the Italian section of the First International) before becoming linked to anarchism.
+
+
+The red-and-black flag was used by anarchists a few years later in Mexico. At an anarchist protest meeting on December 14\high{th}, 1879, at Columbus Park in Mexico City {\em “[s]ome five thousand persons gathered replete with numerous red-and-black flags, some of which bore the inscription ‘La Social, Liga International del Jura.’ A large black banner bearing the inscription ‘La Social, Gran Liga International’ covered the front of the speaker’s platform.”} The links between the Mexican and European anarchist movements were strong, as the {\em “nineteenth-century Mexican urban labour-movement maintained direct contact with the Jura branch of the \unknown{} European-based First International Workingmen’s Association and at one stage openly affiliated with it.”} [John M. Hart, {\bf Anarchism and the Mexican Working Class, 1860–1931}, p. 58 and p. 17] One year after it was founded, the anarchist influenced {\bf Casa del Obrero Mundial} organised Mexico’s first May Day demonstration in 1913 and {\em “between twenty and twenty-five thousand workers gathered behind red and black flags”} in Mexico City. [John Lear, {\bf Workers, Neighbors, and Citizens}, p. 236]
+
+
+Augusto Sandino, the radical Nicaraguan national liberation fighter was so inspired by the example of the Mexican anarcho-syndicalists that he based his movement’s flag on their red-and-black ones (the Sandinista’s flag is divided horizontally, rather than diagonally). As historian Donald C. Hodges notes, Sandino’s {\em “red and black flag had an anarcho-syndicalist origin, having been introduced into Mexico by Spanish immigrants.”} Unsurprisingly, his flag was considered a {\em “workers’ flag symbolising their struggle for liberation.”} (Hodges refers to Sandino’s {\em “peculiar brand of anarcho-communism”} suggesting that his appropriation of the flag indicated a strong libertarian theme to his politics). [{\bf Intellectual Foundations of the Nicaraguan Revolution}, p. 49, p. 137 and p. 19]
+
+
+This suggests that the red-and-black flag was rediscovered by the Spanish Anarchists in 1931 rather than being invented by them. However, the CNT-FAI seem to have been the first to bisect their flags diagonally black and red (but other divisions, such as horizontally, were also used). In the English speaking world, though, the use of the red-and-black flag by anarchists seems to spring from the world-wide publicity generated by the Spanish Revolution in 1936. With CNT-FAI related information spreading across the world, the use of the CNT inspired diagonally split red-and-black flag also spread until it became a common anarchist and anarcho-syndicalist symbol in all countries.
+
+
+For some, the red-and-black flag is associated with anarcho-syndicalism more than anarchism. As Albert Meltzer put it, {\em “[t]he flag of the labour movement (not necessarily only of socialism) is red. The CNT of Spain originated the red-and-black of anarchosyndicalism (anarchism plus the labour movement).”} [{\bf Anarcho-Quiz Book}, p. 50] Donald C. Hodges makes a similar point, when he states that {\em “[o]n the insignia of the Mexico’s House of the World Worker [the Mexican anarcho-syndicalist union], the red band stood for the economic struggle of workers against the proprietary classes, and the black for their insurrectionary struggle.”} [{\bf Sandino’s Communism}, p. 22]
+
+
+This does not contradict its earliest uses in Italy and Mexico as those anarchists took it for granted that they should work within the labour movement to spread libertarian ideas. Therefore, it is not surprising we find movements in Mexico and Italy using the same flags. Both were involved in the First International and its anti-authoritarian off-spring. Both, like the Jura Federation in Switzerland, were heavily involved in union organising and strikes. Given the clear links and similarities between the collectivist anarchism of the First International (the most famous advocate of which was Bakunin) and anarcho-syndicalism, it is not surprising that they used similar symbols. As Kropotkin argued, {\em “Syndicalism is nothing other than the rebirth of the International — federalist, worker, Latin.”} [quoted by Martin A. Miller, {\bf Kropotkin}, p. 176] So a rebirth of symbols would not be a co-incidence.
+
+
+Thus the red-and-black flag comes from the experience of anarchists in the labour movement and is particularly, but not exclusively, associated with anarcho-syndicalism. The black represents libertarian ideas and strikes (i.e. direct action), the red represents the labour movement. Over time association with anarcho-syndicalism has become less noted, with many non-syndicalist anarchists happy to use the red-and-black flag (many anarcho-communists use it, for example). It would be a good generalisation to state that social anarchists are more inclined to use the red-and-black flag than individualist anarchists just as social anarchists are usually more willing to align themselves with the wider socialist and labour movements than individualists (in modern times at least). However, both the red and black flags have their roots in the labour movement and working class struggle which suggests that the combination of both flags into one was a logical development. Given that the black {\bf and} red flags were associated with the Lyon uprising of 1831, perhaps the development of the red-and-black flag is not too unusual. Similarly, given that the Black Flag was the {\em “flag of strikes”} (to quote Louise Michel — see above) its use with the red flag of the labour movement seems a natural development for a movement like anarchism and anarcho-syndicalism which bases itself on direct action and the importance of strikes in the class struggle.
+
+
+So while associated with anarcho-syndicalism, the red-and-black flag has become a standard anarchist symbol as the years have gone by, with the black still representing anarchy and the red, social co-operation or solidarity. Thus the red-and-black flag more than any one symbol symbolises the aim of anarchism ({\em “Liberty of the individual and social co-operation of the whole community”} [Peter Kropotkin, {\bf Act for Yourselves}, p. 102]) as well as its means ({\em “[t]o make the revolution, the mass of workers will have to organise themselves. Resistance and the strike are excellent means of organisation for doing this”} and {\em “the strike develops the sentiment of solidarity.”} [Kropotkin, quoted by Caroline Cahm, {\bf Kropotkin and the Rise of Revolutionary Anarchism: 1872–1186}, p. 255 and p. 256]).
+
+
+\chapter{3 Where does the circled-A come from?
+}
+
+The circled-A is, perhaps, even more famous than the Black and Red-and-Black flags as an anarchist symbol (probably because it lends itself so well to graffiti). According to Peter Marshall the {\em “circled-A”} represents Proudhon’s maxim {\em “Anarchy is Order.”} [{\bf Demanding the Impossible} p. 558] Peter Peterson also adds that the circle is {\em “a symbol of unity and determination”} which {\em “lends support to the off-proclaimed idea of international anarchist solidarity.”} [{\em “Flag, Torch, and Fist: The Symbols of Anarchism”}, {\bf Freedom}, vol. 48, No. 11, pp. 8]
+
+
+However, the origin of the “circled-A” as an anarchist symbol is less clear. Many think that it started in the 1970s punk movement, but it goes back to a much earlier period. According to Peter Marshall, {\em “[i]n 1964 a French group, {\bf Jeunesse Libertaire}, gave new impetus to Proudhon’s slogan ‘Anarchy is Order’ by creating the circled-A a symbol which quickly proliferated throughout the world.”} [{\bf Op. Cit.}, p. 445] This is not the earliest sighting of this symbol. On November 25 1956, at its foundation in Brussels, the {\bf Alliance Ouvriere Anarchiste} (AOA) adopted this symbol. Going even further, a BBC documentary on the Spanish Civil War shows an anarchist militia member with a “circled-A” clearly on the back of his helmet. Other than this, there is little know about the “circled-A“s origin.
+
+
+Today the circled-A is one of the most successful images in the whole field of political symbolising. Its {\em “incredible simplicity and directness led [it] to become the accepted symbol of the restrengthened anarchist movement after the revolt of 1968”} particularly as in many, if not most, of the world’s languages the word for anarchy begins with the letter A. [Peter Peterson, {\bf Op. Cit.}, p. 8]
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+The Anarchist FAQ Editorial Collective
+
+
+
+An Anarchist FAQ (13/17)
+
+
+
+
+
+
+June 18, 2009. Version 13.1
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Copyright (C) 1995–2009 The Anarchist FAQ Editorial Collective: Iain McKay, Gary Elkin, Dave Neal, Ed Boraas\crlf  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation, and/or the terms of the GNU General Public License, Version 2.0 or any later version published by the Free Software Foundation.\crlf  See the Licenses page at \goto{www.gnu.org}[url(http://www.gnu.org/)] for more details.
+
+
+
+
+\stopalignment
+
+\stoptext
+
+

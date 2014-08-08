@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Anarchism Versus Civilization</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Anarchism Versus Civilization
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-margaret-killjoy">Margaret Killjoy</a>
+	  
+	</p>
+	
+	<p id="textdate"><strong>Date:</strong>
+	  2010
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-anthropology">anthropology</a>
+	  	  <a href="../../topics.html#library-index-anti-civ">anti-civ</a>
+	  	  <a href="../../topics.html#library-index-post-civ">post-civ</a>
+	  
+	</p>
+		
+	<strong>Source:</strong>
+	Retrieved on 24 August 2010 from <a href="http://www.postcivilized.net/2010/08/anarchism-versus-civilization/">www.postcivilized.net</a>
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="margaret-killjoy-anarchism-versus-civilization.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Margaret Killjoy</h2>
+	
+	<h1 id="textttitleh">Anarchism Versus Civilization</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>In his 2003 polemic <em>Anarchism versus Primitivism</em>, Brian Oliver Sheppard makes the case that primitivism is inherently in contradiction with anarchism.
+</p><p>Much can be inferred from his tone, which is openly mocking. He makes references to how “[u]nfortunately for anarchists, plunging into the primitivist miasma has become necessary,” openly condescending to engage the primitivists at all. But his arguments are mired in absurdities: he mocks primitivists as hypocrites for engaging in technological practices while ignoring the fact that nearly every anarchist of any stripe in capitalist and statist society is not living as she or he preaches.
+</p><p>The core of his argument is that primitivism is authoritarian and therefore irreconcilable with anarchism. But the anarchism he promotes is rather clearly a simplistic and “classical” one, a red anarchism that argues for worker control of a stateless society. He argues that primitivists are stuck in an illusory past that cannot be supported by evidence, yet never acknowledges his complicity in the same behavior; here is a man arguing that anarchism has always been about worker control and communistic ideas, completely ignoring the heterogeneous past and present of anarchism. The individualists, the anarchists-without-adjectives, the mutualists... these people simply never existed, if one is to infer from Brian’s<a href="#fn1" class="footnote" id="fn_back1">[1]</a> piece.
+</p><p>Well-reasoned critiques of primitivism exist, but they are rarely distributed. Instead, self-defeating and remarkably sectarian missives are the norm. But this basic idea, that anarcho-primitivism is no more anarchist than the largely dismissed ideas of “anarcho”-capitalists and “anarcho”-nationalists, is a curious one.
+</p><p>For the sake of argument, I make the opposite case: anarchism is and always has been anti-civilization, and that civilization and anarchism are completely irreconcilable. Anyone who claims to be for civilization and anarchism both is deluding themselves.<a href="#fn2" class="footnote" id="fn_back2">[2]</a>
+</p><p>An anthropologist named Elman Service<a href="#fn3" class="footnote" id="fn_back3">[3]</a> suggested a widely-used system of classification for human cultures that contains four rough categories. Firstly, there are gatherer-hunter bands, which are generally egalitarian; secondly there are tribal societies that are larger, slightly more formal, and have bits of social ranking; third are chiefdoms, which continue down the path of social stratification; and finally there are civilizations, which are anthropologically understood by their complex social hierarchies and organized, institutional governments.
+</p><p>The rejection of complex social hierarchies and government means, therefore, the rejection of civilization. If an anarchist society were to develop, it would be by definition a non-civilized society.
+</p><p>Sure, an argument can be made that “classical” anarchists<a href="#fn4" class="footnote" id="fn_back4">[4]</a> are in opposition to the concept of the State rather than the idea of government per say, but the overwhelming majority of contemporary anarchist thought and dialogue speaks to the rejection of government as something that is inherently tied to the stateform.
+</p><p>So an anarchist society would necessitate either a return to the gatherer-hunter bands or it would — and I consider this option much more likely and much preferable, personally — mean developing something entirely new. I would personally like to call it the post-civilization, but I don’t believe we <em>need</em> to call it that. We simply need to understand it as anarchism.
+</p><p>Elman understood his four-part typology to be illustrative of a linear loss of autonomy. In a band, an individual had liberty. In a civilization, an individual ceded or lost this liberty. Now, Elman was an integration theorist; he believed that citizens in early civilizations gave up their autonomy willingly — in essence, that they signed the social contract, ceding their liberty so as to allow for a more complex society. The opposing theory is conflict theory: that states have, from the beginning, sought to consolidate power into the hands of the few for the benefit of those few.
+</p><p>But no one is arguing that the development from band to civilization hasn’t resulted in hierarchy and a lack of autonomy. This has, historically, been quite simple and linear: the further a society “advances” along these lines towards civilization, the more that liberty has waned.
+</p><p>Anarchism argues for a classless, egalitarian society devoid of coercive authority and therefore argues — and always has — against some of the primary, distinguishing traits that define civilization. To argue in favor of civilization is as absurd as to argue in favor of the state.
+</p><p>Very few modern anarchists would argue against anarcha-feminism. Anarcha-feminism is not understood as a separate thing, alien to anarchism as a whole, but rather as an essential component to the struggle against domination. It is generally understood that there are those who identify more strongly with anarcha-feminism than others. There are those who use it as their personal lens with which to address the world, who lay down important theory and practical organizing to address and overcome patriarchy.
+</p><p>And this, I would argue, is the role of the anti-civilized, the anarcho-primitivists. Anti-civilization thought has greatly deepened our understandings of oppression, with its critique of the division of labor and of linear concepts of progress.
+</p><p>It is as much of a mistake to reject all anarcho-primitivists as genocidal hypocrites as it is to reject all communist anarchists as technophiles who want the enslavement of nature in service of the almighty Worker<a href="#fn5" class="footnote" id="fn_back5">[5]</a>.
+</p><p>Patriarchy, government, capitalism, nationalism, racism, civilization... none of it has a place in the society we envision. And more importantly, none of it has a place in our struggles, here and now.
+</p><p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> It is, of course, the norm to refer to a writer by their last name rather than their first name. This applies much more often to men than women; compare Kropotkin and Bakunin with Voltairine DeCleyre and Emma Goldman.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Or simply use different semantic set and tend to define things differently than I, or this article, do.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> Elman Service, by the way, for some red-anarcho cred, was an American volunteer in the Abraham Lincoln Brigade of the Spanish Civil War, fighting against Franco and the fascists.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> The word “classical” is getting the quotes treatment in this article because I personally disapprove of this oversimplification of “what anarchists have always wanted” that is presented to us by Brian Sheppard as much as I disapprove of the oversimplification of what “primitive people were like” that indeed many primitivists are guilty of.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> Of course, it would be easier for me to not make this mistake myself if I didn’t personally know more than few people who fit these rude stereotypes...
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Burning Bridges to the New Millennium (and making deeper connections in our lives) (Matches) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Burning Bridges to the New Millennium (and making deeper connections in our lives)
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/matches">Matches</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-civ">anti-civ</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    from <em>Disorderly Conduct</em> #6
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on January 1, 2005 from <a href="http://www.blackandgreen.org">www.blackandgreen.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="matches-burning-bridges-to-the-new-millennium-and-making-deeper-connections-in-our-lives.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Matches</h2>
+	
+	<h1 id="textttitleh">Burning Bridges to the New Millennium (and making deeper connections in our lives)</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>This is <strong>not</strong> a ransom note, manifesto, or communiqué. This is not meant to be anything more then a declaration of autonomy, the remembering of the anarchist idea of free association, and a re-commitment to the spirit of <strong>no compromise!</strong>
+</p><p>As I try to comprehend the enormity of the disease of civilization, and how it has been declared terminal by every type of expert to the simplest folk of the land, I contemplate on the amount of time and energy (and security) wasted trying to form artificial connections with those I haven’t much real affinity. I have found my family, my pack. We are amorphous on one level, always growing and shrinking, yet we are made of the same basic elements. We sometimes travel to other lands to spread ideas of dissent and to learn some wicked new tricks, and occasionally we don’t connect again for a season, a couple years, or sometimes even a lifetime. In this post-colonial, post-modern, post-office world we “live” in, my crew comes from different positions, products, and places. We are of different ethnic, cultural, and economic backgrounds. We are of different ages, sexual orientations, and interests. We may identify differently in the political and social contexts, but we do have some basic things in common which unite us in life and in resistance — It is our hatred of all domesticating and dominating powers, and our desire to be wild human-animals once again.
+</p><p>We are a strange strain, yet we are just like you. In fact, we may be you! We have long-term visions, ongoing affinity on specific goals, and daily projects together. We respect, but are not afraid to challenge and debate our different tactics. We often discuss our overlapping, converging, or even seemingly contrasting strategies. We are always trying to deepen our connection with each other and care for our damaged bodies and tormented souls, as we become closer to the communal beings we once were, despite the alienation and isolation that the modern mega-machine imposes upon us.
+</p><p>No, we are not perfect. We are part of the fractured existence, a by-product of the suffocating and domesticating order, but we know what we feel... and it is rage! Despite the odds and the institutions of control, we have been able to connect to one of our primal instincts — the urge to live and to fight back! All around us we see our world being destroyed, the killing, the torture, and the slavery being inflicted on all of life, and our rage continues to grow! Our rage has engulfed us, and now it must flow. Rage over the misery brought on by those whose only salvation will be a bullet in the head. Rage over the war on the earth and her creatures — a war that has been going on for thousands of years, and is always escalating. Rage at the idea of this death-culture being the only prospect for us, then we die. No, we will not submit to the apparatus of the state, the institutions of power, the ideologies of order! We will resist, and continue to resist. When we have finally destroyed our oppressors, we will burn their remains and the rubble of their civilization, and we will bury its ruins deep so we may begin to heal.
+</p><p>We are filled with great love. Love of the beautiful chaos of life. Love for the organic and wild connections we make with the earth and with each other. Love for those who have compassion for our ravaged bodies, programmed minds, and broken hearts. Love for those regaining our lost knowledge and primitive spirit. Love for those with the courage and passion to resist and to create anarchy now.
+</p><p>Our battle call is a treasonous one. Yes, we have declared war on the existing order. We try to understand its foundations, so we may crack them. We study its institutions, so we can undermine them. We seek out its power, so we can destroy it. We battle against its logic — reason and order; its mechanisms of control — domestication, capitalism, and the state; its ideology — patriarchy and civilization. We fight against these ideas, their physical manifestations, and their remnants in our lives.
+</p><p>But, we must remember that we all have different perspectives on these subjects, different experiences, different points of reference, and different ideas on how to destroy these structures and mindsets (and in some people’s minds, whether to destroy them at all, or if they even exist). This is why our relations with others need to be flexible enough to compensate for and/or appreciate these differences, yet at the same time, firm enough not to relinquish our autonomy or water down our ideas and our passions. It is a balancing act that we often spend too much time on (and in the “activist world”, almost all of the time). We need to figure out when to be open to, and learn from, other perspectives, and when there is no reconciliation possible. This is a gray area, which at times needs to come into more focus. It is not as simple as being either a fundamentalist or a fence-rider. We should not be afraid to make some distinctions, and occasionally draw some lines. We have spent enough time arguing violence vs. non-violence, whether technology is neutral, or if we should vote. We need to follow our instincts and deal with the consequences, whether or not others find us “not anarchist”, “lifestylist” or “too militant”. Let’s end the abstract, academic, and hyper-theoretical word games. Let’s create the lives we want, let’s fight how we chose to, and let’s get free!
+</p><p>Certainly, we do need to continue to challenge one another, and be critical of each other’s behaviors, attitudes, and ideas, but let’s focus (at least some of) our energy where it belongs the most — the institutional systems of control that are sucking every last bit of energy out of life. Let’s agree to disagree. Let’s struggle shoulder to shoulder with those who respect us, and whom we can respect. Let’s live with and support those whom we feel closest to. Let’s fight alongside those we have real affinity with, and let’s break from those with whom we have none. Let’s stop trying to kill each other, and let’s go for the throats of the muthafuckas who are laughing at our sandbox world, and who are kickin’ our asses (and have been for a really long time!). Let’s connect with other struggles where our paths converge, but let’s burn those fuckin’ bridges that are too rigid for change, too cemented for growth, and too long a span over irreconcilable gorges of disagreement and mistrust. No, we can’t (and won’t) all get along, so let’s stop pretending we can... and move on.
+</p>
+<blockquote>
+<p><strong>We’re takin’ back our lives!</strong><br />
+(sorry, if it ain’t the way you would like us to.)<br />
+</p><p>revoltingly yours,<br />
+Matches<br />
+Minister of Destruction and Re-connection<br />
+The “Bring On the Ruckus” Society<br />
+</p></blockquote>
+
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

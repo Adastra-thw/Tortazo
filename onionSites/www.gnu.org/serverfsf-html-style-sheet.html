@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<!-- start of server/head-include-1.html -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:webmasters@gnu.org" />
+<link rel="icon" type="image/png" href="/graphics/gnu-head-mini.png" />
+<meta name="ICBM" content="42.355469,-71.058627" />
+<meta name="DC.title" content="gnu.org" />
+<!-- end of server/head-include-1.html -->
+
+<!-- end of server/header.html -->
+
+<!-- Parent-Version: 1.77 -->
+<title>Web Site Guidelines - GNU Project - Free Software Foundation</title>
+<!-- begin translist file -->
+
+
+<!-- end translist file -->
+
+<!-- start of server/banner.html -->
+<!-- start of head-include-2.html -->
+
+<link rel="stylesheet" href="/combo.css" media="screen" />
+<link rel="stylesheet" href="/mini.css" media="handheld" />
+<link rel="stylesheet" href="/layout.css" media="screen" />
+
+<link rel="stylesheet" href="/print.css" media="print" />
+
+<!-- end of head-include-2.html -->
+
+</head>
+<body>
+<div class="inner">
+<!-- start of server/body-include-1.html -->
+
+<div id="toplinks">
+ <a href="#content">Skip to main text</a>
+</div> <!-- /toplinks -->
+
+<div id="searcher">
+ <form method="get" action="//www.gnu.org/cgi-bin/estseek.cgi">
+  <div>
+  <input name="phrase" id="phrase" type="text" size="18" accesskey="s"
+         value="Why GNU/Linux?" onfocus="this.value=''" />
+  <input type="submit" value="Search" />
+  </div>
+ </form>
+</div><!-- /searcher -->
+
+<div id="translations">
+<p>
+<span dir="ltr" class="original"><a lang="en" hreflang="en" href="/server/fsf-html-style-sheet.en.html">English</a>&nbsp;[en]</span>&nbsp;&nbsp;
+</p>
+</div>
+
+<!-- end of server/body-include-1.html -->
+
+<!-- start of server/body-include-2 -->
+
+<div id="header">
+<div id="fsf-frame">
+<p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">JOIN&nbsp;THE&nbsp;FSF</a></p>
+<div id="fssbox">
+<p><a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
+<form action="https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31" method="post">
+ <div>
+  <input name="postURL" type="hidden" value="" />
+  <input type="hidden" name="group[25]" value="1" />
+  <input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+  <input name="_qf_default" type="hidden" value="Edit:cancel" />
+ </div>
+ <p>
+  <input type="text" id="frmEmail" name="email-Primary" size="18" maxlength="80"
+         value="email address" onfocus="this.value=''"/>
+  <input type="submit" name="_qf_Edit_next" value="Sign up" />
+ </p>
+</form>
+</div><!-- /fssbox -->
+</div><!-- /fsf-frame -->
+
+<div id="gnu-banner">
+ <a href="/">
+ <img src="/graphics/heckert_gnu.small.png" alt=" [A GNU head] " /><strong>GNU</strong> Operating System</a>
+</div><!-- /gnu-banner -->
+
+<p id="fsf-support">Sponsored by the <a href="#mission-statement">Free Software Foundation</a></p>
+
+</div><!-- /header -->
+
+<div id="ghm-banner"
+     style="overflow: hidden; background: #ccc; border: font-size: large; padding: 5px">
+  <p style="font-size: x-large; font-weight: bold;">
+    Meet the GNU contributors in person at the
+    <a href="http://www.gnu.org/ghm">GNU Hackers' Meeting</a>!
+  </p>
+  <p>
+    The <a href="http://www.gnu.org/ghm/upcoming.html">8th GNU Hackers' Meeting</a>
+    takes place in Munich, Germany from 15&ndash;17&nbsp;August
+    2014. It spans three days, and comprises talks about new GNU
+    programs, status of the GNU system and news from the free software
+    community.
+  </p>
+  <p>
+    <a href="http://www.gnu.org/ghm/register">Register</a>
+    <strong>now</strong> to secure your place.
+  </p>
+</div>
+
+<div id="navigation">
+
+ <ul>
+  <li id="tabAboutGNU"><a href="/gnu/gnu.html">About&nbsp;GNU</a></li>
+  <li id="tabPhilosophy"><a href="/philosophy/philosophy.html">Philosophy</a></li>
+  <li id="tabLicenses"><a href="/licenses/licenses.html">Licenses</a></li>
+  <li id="tabEducation"><a href="/education/education.html">Education</a></li>
+  <li id="tabSoftware"><a href="/software/software.html">Software</a></li>
+  <li id="tabDoc"><a href="/doc/doc.html">Documentation</a></li>
+  <li id="tabHelp"><a href="/help/help.html">Help&nbsp;GNU</a></li>
+ </ul>
+
+</div><!--  /navigation -->
+<!-- end of server/body-include-2 -->
+
+<div id="content">
+<!-- end of server/banner.html -->
+
+<h2>The GNU/FSF Web Site Guidelines</h2>
+
+<p>These are style guidelines for writing WWW web pages in HTML for
+the GNU web server.</p>
+
+<p>The standards documented here are the default for the GNU
+project website. All pages should appear this way by
+default.</p>
+
+<h3 id="CopyrightGuidelines">Copyright Guidelines</h3>
+
+<ul>
+<li>Every page should have a copyright notice.  See the boilerplate
+document linked below.</li>
+
+<li>If the page is copyrighted by someone else, make sure their
+copyright notice replaces the FSF copyright, but maintains the
+address, etc. The user of our pages should always find the
+copyright information at the same place on each page.</li>
+
+<li>If the source text for a set of pages is copyrighted by someone
+else (i.e., you split a document into more than one page), make sure
+their copyright notice is at the bottom of each page, where the
+default FSF copyright notice would otherwise be.</li>
+
+<li>All pages should have a notice saying that they are freely
+distributable. If you can not get such a permission from the
+author, please discuss this with the webmasters first.</li>
+</ul>
+
+<h3 id="GeneralGuidelines">General Guidelines</h3>
+
+<ul>
+<li>Good spelling is encouraged.</li>
+
+<li>The GNU web server has only <a href="/philosophy/free-sw.html">free
+software</a> available.  We prefer that only free software be used to
+develop content for the GNU web server.</li>
+
+<li>The GNU web server list an links
+<strong>only</strong> to free software. The software's source code and
+executables have to be freely redistributable and modifiable to and by
+all people and organizations. If in doubt, ask <a
+href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.</li>
+
+<li>The GNU web server gives priority to software covered by either
+the GNU General Public License or GNU Lesser General Public
+License.</li>
+
+<li>The GNU web server is interested first in content. Substance is
+more important than style. The use of graphics should be minimized so
+pages load fast over slow links. The GNU Project is for everyone, even
+those with slow Internet access or text-only browsers.</li>
+
+<li>Offer a document in as many formats as the GNU Project has it.
+For an example, see <a href="/copyleft/fdl.html">The GNU Free
+Documentation License</a>. This lets the user get the document in the
+format most useful to him.</li>
+
+<li>Before you take any graphics or text from another Web site,
+please ask for permission to use it. It's polite to do so. It is also
+essential for us to avoid copyright infringement.</li>
+
+<li>Do not list an address of an individual, including the
+maintainer of a GNU package, unless explicitly asked to have it
+listed. Most GNU maintainers do not want a lot of extra mail and prefer
+to get bug reports, etc. from the GNU bug report <a
+href="/prep/mailinglists.html">mailing lists</a>.</li>
+
+</ul>
+
+<h3 id="HTMLGuidelines">HTML Guidelines</h3>
+
+<ul>
+<li>Our goal is to get information to people. Keeping the site
+design simple helps accomplish that.</li>
+
+<li>HTML on the GNU web server should be strictly compliant with
+W3C standards.</li>
+
+<li>A boilerplate for web pages, especially project web pages, is provided:
+<a href="/server/standards/boilerplate.html">view formatted</a>,
+<a href="http://web.cvs.savannah.gnu.org/viewvc/*checkout*/www/server/standards/boilerplate.html?root=www&amp;content-type=text%2Fplain">view source</a> (with
+server-side includes intact).</li>
+
+<li>Acronyms/abbreviations:
+  <ul>
+  <li>Never use <code>&lt;acronym&gt;</code>: HTML5 obsoletes it in
+  favor of <code>&lt;abbr&gt;</code>.</li>
+
+  <li>Don't use <code>&lt;abbr&gt;</code> unless for a really
+  compelling reason.  Browsers render it in an ugly way.</li>
+
+  <li>When an abbreviation may be unfamiliar to a reader, give its
+  expansion the first time it is used in a document, like this:
+  <code>&lt;abbr title="Expanded
+  Abbreviation"&gt;EA&lt;/abbr&gt;</code> or <code>EA
+  (Expanded Abbreviation)</code>.</li>
+  
+  <li>Further occurrences, in any case, should be written without any
+  markup: just <code>EA</code>.</li>
+
+  <li>For common-enough initialisms, such as GNU, FSF, BSD, RAM, HTML,
+  DVD, and so on and so on, no markup is needed at all.
+  Use your judgement.</li>
+  </ul>
+</li>
+
+<li>Our server-side includes declare UTF-8 as the character encoding,
+so using any other encoding is problematic.</li>
+
+<li>Please be considerate of all who access our web pages, and
+accomodate them, including those who use text-only browsers, or old
+browsers. We wish to prevent HTML design that looks great under one
+version of one browser, and ugly under many others. Of course, please
+don't install any of the proprietary software browsers available if you
+don't already use them anyway.</li>
+
+<li>Please follow the above mentioned web standards strictly.  Don't
+neglect <a
+href="http://www.w3.org/TR/html401/struct/global.html#h-7.1">required
+elements</a> such as &lt;HTML&gt; &lt;HEAD&gt; &lt;TITLE&gt;
+&lt;BODY&gt;, etc. when using (X)HTML, and always include the
+appropriate DTD or Schema reference. This appeases overly pedantic
+browsers.</li>
+
+<li>All pages should have contact info for both the FSF (or
+responsible party) and the address for bug reports (webmasters for
+general pages, but project-specific addresses otherwise) at the bottom
+of each page.  The reason to note this at the bottom is so the user
+always finds this contact information at the same place on each
+page.</li>
+
+<li>The first header tag, &lt;H[n]&gt;, should have its text
+duplicated at the start of the &lt;TITLE&gt; tag. The &lt;TITLE&gt; tag
+is used by many browsers in menus like the history and bookmarks lists,
+as a link to that page. It helps the user to have them the same, so when
+he clicks on an item in a list, he gets a page with the same
+"TITLE". Please properly use your headers in numerical order: 1, 2,
+etc. These are not used for looks, but for the organization of the
+document.</li>
+
+<li>The &lt;TITLE&gt; tag should include the phrases "GNU Project"
+and "Free Software Foundation" so the pages will be found
+when WWW search engines are used. The default is to add this at the
+end: <code> - GNU Project - Free Software Foundation</code>.</li>
+
+<li>The &lt;HEAD&gt; pair should have this line after the
+&lt;TITLE&gt; pair:<br />
+&lt;LINK rev="made" href="mailto:webmasters@gnu.org"&gt;<br />
+Some browsers use this information to allow users to easily report
+problems they find on a page.</li>
+<li>On pages with dated entries (e.g., What's New, Thank GNUs, and
+GNU's Bulletins, the newer entries should be first (i.e., reverse
+chronological order).</li>
+
+<li>Cite people with e-mail addresses this way:
+<pre>
+&lt;a href="http://www.stallman.org/"&gt;Richard Stallman&lt;/a&gt;
+&lt;a href="mailto:rms@gnu.org"&gt;&amp;lt;rms@gnu.org&amp;gt;&lt;/a&gt;
+
+</pre>
+which browsers display this way:<br />
+<a href="http://www.stallman.org/">Richard Stallman</a>
+<a href="mailto:rms@gnu.org">&lt;rms@gnu.org&gt;</a><br />
+It is less confusing to the user, because it's clear what is a
+http: link to another WWW page and what is a mailto: anchor that
+will bring up a mail form to fill out and send, if this is
+supported by the client. Also, if the user saves a copy of the
+page, he will have a copy of the e-mail address he can use, without
+going back to his web browser. If the person doesn't have a web
+page, leave the name unanchored.</li>
+<li>Cite FTP locations of source code with the full URL of the
+directory they are in:
+<pre>
+&lt;a href="http://ftp.gnu.org/gnu/foo"&gt;http://ftp.gnu.org/gnu/emacs&lt;/a&gt;
+</pre>
+which browsers display this way:<br />
+<a href=
+"http://ftp.gnu.org/gnu/">http://ftp.gnu.org/gnu/emacs</a><br />
+
+We encourage FTP sites to use a directory for each package, and only put
+one package's files in each directory, so that the users can see what
+versions of that package and related information can be downloaded
+(e.g., a <code>README</code> file, information of what versions are
+available, documentations, fonts, etc.). Also, it means that the FTP
+location URLs do not need to be changed, on this and other sites, as new
+versions are released into that directory.</li>
+
+<li>When they exist, preserve double spaces after sentence breaks.</li>
+
+<li>If you specify any color attribute, you should specify all of
+them that are allowed for that tag. This is because some browsers
+allow users to specify defaults for the color attributes, and the
+user's choices could conflict with your choices, as your choices
+override the user's choices. In the worse case, the foreground and
+background could end up the same. Please use a style sheet for
+this, and not HTML 3.2 (HTML 4 Transitional) deprecated
+markup.</li>
+
+<li>Please use tables to organize data, not the presentation of the
+webpage.</li>
+
+<li>Some people like to use tables to organize links as a menu to
+the left or right of content when using graphical browsers. That
+does not work very well with text browsers since they will make the
+menu appear either on top of the page or at the bottom. If you have
+a menu that is more than 30 lines long, then it's very probable
+that a user viewing the page will never bother to read the text
+because it will be too far down. You should make an effort to keep
+such menus under 20 lines long so that the content of the page is
+visible on the first page when viewing it with a text browser. A
+menu bar of one or two horizontal lines might accomplish your
+purpose as well.</li>
+
+<li>Consider others linking to your page when removing page
+anchors.</li>
+
+<li>Screen reader software used by most blind people reads the text
+from left to right, ignoring any tables that you make. If you use
+tables, you should make an effort to make sure that reading a whole
+page left to right doesn't confuse such software. Please follow the
+WAI compatibility guidelines to ensure that tables are properly
+marked for accessibility.</li>
+
+<li>SGML and XML are case sensitive. TITLE and title are not the
+same thing in HTML. (This means that text/html and
+application/xhtml+xml are mutually exclusive, which also means that
+strictly speaking XHTML and HTML are mutually exclusive.)</li>
+
+<li>Do not add comments at the top of a document. Web browsers
+expect the doctype, XML declaration, or Schema to be at the top.
+Comments will confuse web browsers, and often cause them to
+incorrectly interpret your markup.</li>
+</ul>
+
+<h3 id="FilenameAndURLGuidelines">Filename and URL Guidelines</h3>
+
+<ul>
+<li>Hand-written URLs which refer to other files should be
+absolute, starting from the root page. That is, file names should start
+with <code>/</code> (e.g., <code>/order/order.html</code>, <em>not</em>
+<code>http://www.gnu.org/</code>).  This makes it easier to
+copy and paste links from other pages.  Links like
+<code>http://www.gnu.org/</code> will be wrong when the visitor uses
+HTTPS.</li>
+
+<li>Be sure to omit the file name entirely when referring to a tag
+in the same file.</li>
+
+<li>Collections of files produced automatically from Texinfo source
+contain links with relative file names. They always refer to another
+file in the same directory. These relative links are to be
+tolerated.</li>
+
+<li>To make it easier to edit many files at once in Emacs:
+try and give each HTML file a unique name; the filename
+<code>index.html</code> should only be used as a symbolic link, as
+explained next:</li>
+
+<li>Each directory in the web server tree should have an
+symbolic link named <code>index.html</code> to the top-level HTML file
+for that directory. Use the <a
+href="/server/standards/README.webmastering.html#symlinks"><code>.symlinks</code></a>
+file to handle this.</li>
+
+<li>Don't use just a directory name in a URL; always include the
+specific file name. E.g., use "/gnu/gnu-history.html" not just
+"/gnu/". Never use "index.html" in a URL. Both of these are kindnesses
+to the users, as browsers change the highlighting on a link if a user
+has already seen it. If the link is known by several different file
+names, the user will not get a highlighted link on the file names the
+user hasn't explicitly referenced. So the user goes to pages the user
+has already seen, which is irritating. Also, this helps mirroring.</li>
+
+<li id="NamingTranslations">If you translate your web pages in different
+languages, please use <code>article.html</code> name for the English
+files and <code>article.<var>LANG</var>.html</code> for the
+translations.  <var>LANG</var> should contain two-letter language code
+from <a
+href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO
+639</a> and optional hyphen with two-letter country code given in ISO
+3166.  For example, the German translation of <code>not-ipr.html</code>
+should be named <code>not-ipr.de.html</code>; the Brazilian Portuguese
+translation should be named <code>not-ipr.pt-br.html</code>.</li>
+</ul>
+
+<h3><a name="UseofGraphics" id="UseofGraphics">Use of Graphics</a></h3>
+
+<ul>
+<li>The use of graphics should be minimized, so pages load fast
+over slow links, especially animations. The GNU Project is for
+everyone, even those with slow Internet access and/or text-only WWW
+browsers.</li>
+
+<li>In the past, GIFs have had patent problems. However, now that
+the IBM and Unisys patents (and other patents world-wide that are
+relevant to LZW compression) have expired, GIFs that are based on the
+87a or 89a standard are acceptable. Please be wary of proprietary
+applications that may include non-standard patented technologies (we'd
+prefer you use free software applications when authoring for our
+websites). In general, PNG or JPEG format, are still safe, and are
+probably better from a technical standpoint. For details regarding the
+old GIF problem, see <a
+href="/philosophy/gif.html">http://www.gnu.org/philosophy/gif.html</a>.
+Other formats are also allowed, though JPEG is the one most widely
+recognized by Web browsers (be careful with JPEG 2000, as well as PNG
+alpha channels, as it includes features not fully supported by older
+browsers).</li>
+
+<li>Before you take any graphics or text from another Web site,
+please ask for permission to use it. It's polite to do so. It is
+also essential for us to avoid copyright infringement.</li>
+
+<li>Whenever you add a graphic to this site's web pages, please:
+<ul>
+<li>install the graphic file in the '/graphics/' subdirectory.</li>
+<li>create a new html web page in '/graphics/'</li>
+<li>add a link to it on the <a href="/graphics/graphics.html">GNU
+graphics</a> page. This is so it's easy for visitors to the site to
+find all the graphics on the site in one place.</li>
+</ul>
+</li>
+
+<li>Tag all images like this:<br />
+<a href="/graphics/agnuhead.html"><img src=
+"/graphics/gnu-head-sm.jpg" alt=
+" [Image of the Head of a GNU] " /></a><br />
+This will allow the user to quickly go to a page related to the
+picture if he or she is interested.</li>
+
+<li>Always have a textual alternative for in-line images:<br />
+&lt;img src="/graphics/*.jpg" alt=" [Image of DESCRIPTIVE TEXT]
+"&gt;.<br />
+The FSF wants users who have text-only access to the Web to be
+treated as well as those who have both text and graphic
+access.<br />
+We add the spaces and square brackets to separate the DESCRIPTIVE
+TEXT from adjacent text, and help the user realize that this is a
+stand-in for a graphic.</li>
+
+<li>Use width and height attributes for in-line images, but not in
+ISO HTML:<br />
+&lt;img src="/graphics/*.jpg" alt=" [Image of DESCRIPTIVE TEXT] "
+width="999" height="666" /&gt;.<br />
+This improves the performance of, and display on, some
+browsers.</li>
+
+<li>We do not use backgrounds on our pages, as they make text
+significantly harder to read. Improving readability is also the
+reason we specify black text on a white background as the default
+on our pages.</li>
+
+<li>Sometimes it can be useful to add some HTML tags, for example
+with &lt;SPAN&gt; and CSS, that gives a broader "white" area around
+a block of text. This can be used to draw more attention to one
+block in the text.</li>
+</ul>
+
+<h3><a id="UsefulResources" name="UsefulResources">Useful Resources</a></h3>
+
+<ul>
+<li><a href="/software/texinfo/manual/texinfo/html_node/Tips.html">
+Appendix B Tips and Hints</a>, and other style tips in the <a
+href="/software/texinfo/manual/texinfo/">Texinfo Manual</a>.</li>
+
+<li>We follow the guidelines of <a href=
+"http://www.anybrowser.org/campaign/">Best Viewed with Any
+Browser</a> campaign.</li>
+
+<li>Basic info on the WWW and its technical specifications can be
+found at <a href="http://www.w3.org/">The World Wide Web
+Consortium</a>.</li>
+
+<li>Use of the <a href=
+"https://www.cs.tcd.ie/15445/UG.HTML">ISO</a> standard for the
+<a href="http://www.w3.org/MarkUp/">Hypertext Markup Language
+(HTML)</a> allows for consistent backwards compatibility among web
+user agents.</li>
+
+<li>The GNU web server follows the w3.org <a href=
+"http://www.w3.org/Provider/Style/Overview.html">Style
+Guide</a>.</li>
+
+</ul>
+
+</div><!-- for id="content", starts in the include above -->
+
+              <!-- begin server/footer-text.html -->
+<div id="fsf-links">
+ <ul>
+  <li><a href="/">GNU&nbsp;home&nbsp;page</a></li>
+  <li><a href="http://www.fsf.org/">FSF&nbsp;home&nbsp;page</a></li>
+  <li><a href="/graphics/graphics.html">GNU&nbsp;Art</a></li>
+  <li><a href="/fun/fun.html">GNU&nbsp;Fun</a></li>
+  <li><a href="/people/people.html">GNU's&nbsp;Who?</a></li>
+  <li><a href="http://directory.fsf.org">Free&nbsp;Software&nbsp;Directory</a></li>
+  <li><a href="/server/sitemap.html">Site&nbsp;map</a></li>
+ </ul>
+</div><!-- /fsf-links -->
+
+<div id="mission-statement">
+
+<blockquote>
+<p><a href="http://www.fsf.org"><img id="fsfbanner"
+src="/graphics/fsf-logo-notext.png" alt=" [FSF logo] "/></a><strong>&ldquo;Our
+mission is to preserve, protect and promote the freedom to use, study,
+copy, modify, and redistribute computer software, and to defend the
+rights of Free Software users.&rdquo;</strong></p>
+</blockquote>
+
+<p>The <a href="http://www.fsf.org">Free Software Foundation</a> is
+the principal organizational sponsor of the GNU Operating System.
+<strong>Support GNU and the FSF</strong> by <a
+href="http://shop.fsf.org/">buying manuals and gear</a>, <a
+href="https://my.fsf.org/associate/support_freedom?referrer=4052">
+<strong>joining the FSF</strong></a> as an associate member, or making
+a <strong>donation</strong>, either <a
+href="http://donate.fsf.org/">directly to the FSF</a> or <a
+href="http://flattr.com/thing/313733/gnuproject-on-Flattr">via
+Flattr</a>.</p>
+
+<p id="backtotop"><a href="#header">back to top</a></p>
+
+</div><!-- /mission-statement -->
+<!-- end server/footer-text.html -->
+
+
+<div id="footer">
+<div class="unprintable">
+
+<p>Please send general FSF &amp; GNU inquiries to
+<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
+There are also <a href="/contact/">other ways to contact</a>
+the FSF.  Broken links and other corrections or suggestions can be sent
+to <a href="mailto:webmasters@gnu.org">&lt;webmasters@gnu.org&gt;</a>.</p>
+
+<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
+        replace it with the translation of these two:
+
+        We work hard and do our best to provide accurate, good quality
+        translations.  However, we are not exempt from imperfection.
+        Please send your comments and general suggestions in this regard
+        to <a href="mailto:web-translators@gnu.org">
+        &lt;web-translators@gnu.org&gt;</a>.</p>
+
+        <p>For information on coordinating and submitting translations of
+        our web pages, see <a
+        href="/server/standards/README.translations.html">Translations
+        README</a>. -->
+Please see the <a
+href="/server/standards/README.translations.html">Translations
+README</a> for information on coordinating and submitting translations
+of this article.</p>
+</div>
+
+<!-- Regarding copyright, in general, standalone pages (as opposed to
+     files generated as part of manuals) on the GNU web server should
+     be under CC BY-ND 3.0 US.  Please do NOT change or remove this
+     without talking with the webmasters or licensing team first.
+     Please make sure the copyright date is consistent with the
+     document.  For web pages, it is ok to list just the latest year the
+     document was modified, or published.
+     
+     If you wish to list earlier years, that is ok too.
+     Either "2001, 2002, 2003" or "2001-2003" are ok for specifying
+     years, as long as each year in the range is in fact a copyrightable
+     year, i.e., a year in which the document was published (including
+     being publicly visible on the web or in a revision control system).
+     
+     There is more detail about copyright years in the GNU Maintainers
+     Information document, www.gnu.org/prep/maintain. -->
+
+<p>Copyright &copy; 2010, 2013, 2014 Free Software Foundation, Inc.</p>
+
+<p>This page is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
+Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
+
+<!-- start of server/bottom-notes.html -->
+<div class="unprintable">
+<p><a href="http://www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+
+
+</div>
+<!-- end of server/bottom-notes.html -->
+
+
+<p class="unprintable">Updated:
+<!-- timestamp start -->
+$Date: 2014/04/12 12:40:53 $
+<!-- timestamp end --></p>
+</div>
+</div>
+</body>
+</html>

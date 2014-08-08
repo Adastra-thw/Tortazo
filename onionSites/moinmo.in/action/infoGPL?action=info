@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta name="verify-v1" content="0WyQ+hn2OtHJ8nIJUihkSAkxCHyVcRg+RXh9VxId8jU=">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+    t.parentNode.insertBefore(s, t);
+})();
+/* ]]> */
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Info for "GPL" - MoinMoin</title>
+<script type="text/javascript" src="/moin_static19/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/moin_static19/modernized/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/moin_static19/modernized/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/moin_static19/modernized/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="MoinMoin: GPL" href="/action/rss_rc/GPL?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=GPL&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/MoinMoinWiki">
+<link rel="Alternate" title="Wiki Markup" href="/action/raw/GPL?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/action/print/GPL?action=print">
+<link rel="Appendix" title="gnu-head-banner.png" href="/GPL?action=AttachFile&amp;do=view&amp;target=gnu-head-banner.png">
+<link rel="Appendix" title="xorg-x11" href="/GPL?action=AttachFile&amp;do=view&amp;target=xorg-x11">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="/GPL">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/MoinMoinWiki"><img src="/moin_static19/common/moinmoin.png" alt="MoinMoin Logo"></a></div>
+<div id="username"><a href="/action/login/GPL?action=login" id="login" rel="nofollow">Login</a></div>
+<h1 id="locationline">
+<span id="interwiki"><a href="/MoinMoinWiki" rel="nofollow">MoinMoin</a><span class="sep">: </span></span>
+<span id="pagelocation">Info for "GPL"</span>
+</h1>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/GPL">GPL</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GPL?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GPL?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GPL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div id="content"><p>[<a href="/action/info/GPL?action=info" rel="nofollow">Show "Revision History"</a>] [<a href="/action/info/GPL?action=info&amp;general=1" rel="nofollow">Show "General Page Infos"</a>] [<a href="/action/info/GPL?action=info&amp;hitcounts=1" rel="nofollow">Show "Page hits and edits"</a>] <h2>Revision History</h2><form action="" method="GET"><div class="info-paging-info"><p class="searchstats info-paging-info">Showing page edit history entries from <strong>1</strong> to <strong>40</strong> out of <strong>40</strong> entries total.<span class="info-count-selector"> (<span class="info-count-item"><a class="info-count-link" href="/action/info/GPL?action=info&amp;max_count=5&amp;offset=0" rel="nofollow">5</a></span><span class="info-count-selector info-count-selector-divider"> | </span><span class="info-count-item"><a class="info-count-link" href="/action/info/GPL?action=info&amp;max_count=10&amp;offset=0" rel="nofollow">10</a></span><span class="info-count-selector info-count-selector-divider"> | </span><span class="info-count-item"><a class="info-count-link" href="/action/info/GPL?action=info&amp;max_count=25&amp;offset=0" rel="nofollow">25</a></span><span class="info-count-selector info-count-selector-divider"> | </span><span class="info-count-item"><a class="info-count-link" href="/action/info/GPL?action=info&amp;max_count=50&amp;offset=0" rel="nofollow">50</a></span><span class="info-count-selector info-count-selector-divider"> | </span><span class="info-count-item info-cur-count">100</span><span class="info-count-selector info-count-selector-divider"> | </span><span class="info-count-item"><a class="info-count-link" href="/action/info/GPL?action=info&amp;max_count=200&amp;offset=0" rel="nofollow">200</a></span> items per page)</span></div><div class="info-paging-nav info-paging-nav-top"></div><div id="page-history"><input type="hidden" name="action" value="diff"><form action="/GPL" method="GET" name="dbw.form"><div><div><table id="dbw.table"><tbody><tr>  <td class="hcolumn0"><strong>#</strong></td>
+  <td class="hcolumn1"><strong>Date</strong></td>
+  <td class="hcolumn2"><strong>Size</strong></td>
+  <td class="hcolumn3"><strong><input type="submit" value="Diff"></strong></td>
+  <td class="hcolumn4"><strong>Editor</strong></td>
+  <td class="hcolumn5"><strong>Comment</strong></td>
+  <td class="hcolumn6"><strong>Action</strong></td>
+</tr>
+<tr>  <td class="column0">33</td>
+  <td class="column1">2011-05-12 10:19:04</td>
+  <td class="column2">1035</td>
+  <td class="column3"><input type="radio" name="rev1" value="33"><input type="radio" name="rev2" value="33" checked="checked"><a href="/action/diff/GPL?action=diff&amp;rev1=32&amp;rev2=33" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ HSI-KBW-078-042-161-030.hsi3.kabel-badenwuerttemberg.de[78.42.161.30]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ HSI-KBW-078-042-161-030.hsi3.kabel-badenwuerttemberg.de[78.42.161.30]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=33" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">32</td>
+  <td class="column1">2011-05-12 06:48:46</td>
+  <td class="column2">1099</td>
+  <td class="column3"><input type="radio" name="rev1" value="32" checked="checked"><input type="radio" name="rev2" value="32"><a href="/action/diff/GPL?action=diff&amp;rev1=31&amp;rev2=32" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="EugeneSyromyatnikov @ 82.97.198.200[82.97.198.200]"><a href="/EugeneSyromyatnikov" title="EugeneSyromyatnikov @ 82.97.198.200[82.97.198.200]">EugeneSyromyatnikov</a></span></td>
+  <td class="column5">spam</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=32" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">31</td>
+  <td class="column1">2011-05-12 06:41:14</td>
+  <td class="column2">1182</td>
+  <td class="column3"><input type="radio" name="rev1" value="31"><input type="radio" name="rev2" value="31"><a href="/action/diff/GPL?action=diff&amp;rev1=30&amp;rev2=31" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 208.75.10.242[208.75.10.242]">208</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=31" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">30</td>
+  <td class="column1">2011-05-12 06:40:42</td>
+  <td class="column2">1182</td>
+  <td class="column3"><input type="radio" name="rev1" value="30"><input type="radio" name="rev2" value="30"><a href="/action/diff/GPL?action=diff&amp;rev1=29&amp;rev2=30" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 208.75.10.242[208.75.10.242]">208</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=30" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">29</td>
+  <td class="column1">2011-05-12 06:35:36</td>
+  <td class="column2">1099</td>
+  <td class="column3"><input type="radio" name="rev1" value="29"><input type="radio" name="rev2" value="29"><a href="/action/diff/GPL?action=diff&amp;rev1=28&amp;rev2=29" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="EugeneSyromyatnikov @ 82.97.198.200[82.97.198.200]"><a href="/EugeneSyromyatnikov" title="EugeneSyromyatnikov @ 82.97.198.200[82.97.198.200]">EugeneSyromyatnikov</a></span></td>
+  <td class="column5">spam</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=29" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">28</td>
+  <td class="column1">2011-05-12 06:21:34</td>
+  <td class="column2">1266</td>
+  <td class="column3"><input type="radio" name="rev1" value="28"><input type="radio" name="rev2" value="28"><a href="/action/diff/GPL?action=diff&amp;rev1=27&amp;rev2=28" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 208.75.10.242[208.75.10.242]">208</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=28" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">27</td>
+  <td class="column1">2011-05-12 06:18:49</td>
+  <td class="column2">1749</td>
+  <td class="column3"><input type="radio" name="rev1" value="27"><input type="radio" name="rev2" value="27"><a href="/action/diff/GPL?action=diff&amp;rev1=26&amp;rev2=27" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 124.6.181.165[124.6.181.165]">124</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=27" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">26</td>
+  <td class="column1">2011-05-12 06:18:02</td>
+  <td class="column2">1264</td>
+  <td class="column3"><input type="radio" name="rev1" value="26"><input type="radio" name="rev2" value="26"><a href="/action/diff/GPL?action=diff&amp;rev1=25&amp;rev2=26" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 208.75.10.242[208.75.10.242]">208</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=26" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">25</td>
+  <td class="column1">2011-05-12 04:56:49</td>
+  <td class="column2">1195</td>
+  <td class="column3"><input type="radio" name="rev1" value="25"><input type="radio" name="rev2" value="25"><a href="/action/diff/GPL?action=diff&amp;rev1=24&amp;rev2=25" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 208.75.10.242[208.75.10.242]">208</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=25" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">24</td>
+  <td class="column1">2011-05-09 09:30:08</td>
+  <td class="column2">1099</td>
+  <td class="column3"><input type="radio" name="rev1" value="24"><input type="radio" name="rev2" value="24"><a href="/action/diff/GPL?action=diff&amp;rev1=23&amp;rev2=24" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ReimarBauer @ icg1033.icg.kfa-juelich.de[134.94.153.232]"><a href="/ReimarBauer" title="ReimarBauer @ icg1033.icg.kfa-juelich.de[134.94.153.232]">ReimarBauer</a></span></td>
+  <td class="column5">Revert to revision 22.</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=24" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">23</td>
+  <td class="column1">2011-05-09 09:05:49</td>
+  <td class="column2">1153</td>
+  <td class="column3"><input type="radio" name="rev1" value="23"><input type="radio" name="rev2" value="23"><a href="/action/diff/GPL?action=diff&amp;rev1=22&amp;rev2=23" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 112.198.135.50[112.198.135.50]">112</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=23" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">22</td>
+  <td class="column1">2011-04-17 20:43:39</td>
+  <td class="column2">1099</td>
+  <td class="column3"><input type="radio" name="rev1" value="22"><input type="radio" name="rev2" value="22"><a href="/action/diff/GPL?action=diff&amp;rev1=21&amp;rev2=22" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ ool-182fc904.dyn.optonline.net[24.47.201.4]">ool-182fc904</span></td>
+  <td class="column5">remove the ,but: grammar</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=22" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">21</td>
+  <td class="column1">2011-04-17 20:42:59</td>
+  <td class="column2">1104</td>
+  <td class="column3"><input type="radio" name="rev1" value="21"><input type="radio" name="rev2" value="21"><a href="/action/diff/GPL?action=diff&amp;rev1=20&amp;rev2=21" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ ool-182fc904.dyn.optonline.net[24.47.201.4]">ool-182fc904</span></td>
+  <td class="column5">don't lie to the people; make it more clear what the GPL does and does not do.</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=21" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">20</td>
+  <td class="column1">2011-03-25 21:32:29</td>
+  <td class="column2">1092</td>
+  <td class="column3"><input type="radio" name="rev1" value="20"><input type="radio" name="rev2" value="20"><a href="/action/diff/GPL?action=diff&amp;rev1=19&amp;rev2=20" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="PatrickDGarvey @ pool-71-106-227-147.lsanca.dsl-w.verizon.net[71.106.227.147]"><a href="/PatrickDGarvey" title="PatrickDGarvey @ pool-71-106-227-147.lsanca.dsl-w.verizon.net[71.106.227.147]">PatrickDGarvey</a></span></td>
+  <td class="column5">Made the reference to GPLv2 occur in the first instance on the page and in the link so it may not be inferred that MoinMoin is licensed under the most recent GPL, as the link referenced.</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=20" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">19</td>
+  <td class="column1">2010-07-26 14:27:43</td>
+  <td class="column2">1074</td>
+  <td class="column3"><input type="radio" name="rev1" value="19"><input type="radio" name="rev2" value="19"><a href="/action/diff/GPL?action=diff&amp;rev1=18&amp;rev2=19" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ lists.lds.org[216.49.181.254]">lists</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=19" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">18</td>
+  <td class="column1">2010-04-23 13:26:22</td>
+  <td class="column2">1081</td>
+  <td class="column3"><input type="radio" name="rev1" value="18"><input type="radio" name="rev2" value="18"><a href="/action/diff/GPL?action=diff&amp;rev1=17&amp;rev2=18" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ p175-060.ujaen.es[150.214.175.60]">p175-060</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=18" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">17</td>
+  <td class="column1">2009-12-21 07:51:26</td>
+  <td class="column2">1079</td>
+  <td class="column3"><input type="radio" name="rev1" value="17"><input type="radio" name="rev2" value="17"><a href="/action/diff/GPL?action=diff&amp;rev1=16&amp;rev2=17" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ReimarBauer @ port-92-204-35-14.dynamic.qsc.de[92.204.35.14]"><a href="/ReimarBauer" title="ReimarBauer @ port-92-204-35-14.dynamic.qsc.de[92.204.35.14]">ReimarBauer</a></span></td>
+  <td class="column5">read the whole text not only big letters</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=17" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">16</td>
+  <td class="column1">2009-12-21 07:16:59</td>
+  <td class="column2">1087</td>
+  <td class="column3"><input type="radio" name="rev1" value="16"><input type="radio" name="rev2" value="16"><a href="/action/diff/GPL?action=diff&amp;rev1=15&amp;rev2=16" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ dslb-092-074-171-075.pools.arcor-ip.net[92.74.171.75]">dslb-092-074-171-075</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=16" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2009-06-16 16:00:54</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B43093.dip0.t-ipconnect.de[87.180.48.147]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B43093.dip0.t-ipconnect.de[87.180.48.147]">ThomasWaldmann</a></span></td>
+  <td class="column5">ATTDEL: package.zip </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2009-06-16 15:37:47</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="??? @ c-98-223-140-54.hsd1.in.comcast.net[98.223.140.54]">c-98-223-140-54</span></td>
+  <td class="column5">ATTNEW: package.zip </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">15</td>
+  <td class="column1">2009-03-21 13:46:19</td>
+  <td class="column2">1079</td>
+  <td class="column3"><input type="radio" name="rev1" value="15"><input type="radio" name="rev2" value="15"><a href="/action/diff/GPL?action=diff&amp;rev1=14&amp;rev2=15" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p5B15B2D6.dip0.t-ipconnect.de[91.21.178.214]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p5B15B2D6.dip0.t-ipconnect.de[91.21.178.214]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=15" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">14</td>
+  <td class="column1">2009-02-13 21:35:57</td>
+  <td class="column2">1292</td>
+  <td class="column3"><input type="radio" name="rev1" value="14"><input type="radio" name="rev2" value="14"><a href="/action/diff/GPL?action=diff&amp;rev1=13&amp;rev2=14" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ReimarBauer @ p54BB919C.dip0.t-ipconnect.de[84.187.145.156]"><a href="/ReimarBauer" title="ReimarBauer @ p54BB919C.dip0.t-ipconnect.de[84.187.145.156]">ReimarBauer</a></span></td>
+  <td class="column5">reverted gui indenting</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=14" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">13</td>
+  <td class="column1">2009-02-13 17:48:15</td>
+  <td class="column2">1294</td>
+  <td class="column3"><input type="radio" name="rev1" value="13"><input type="radio" name="rev2" value="13"><a href="/action/diff/GPL?action=diff&amp;rev1=12&amp;rev2=13" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 132.166.140.163[132.166.140.163]">132</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=13" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2008-12-28 21:34:58</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="ThomasWaldmann @ 81.163.117.79[81.163.117.79]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ 81.163.117.79[81.163.117.79]">ThomasWaldmann</a></span></td>
+  <td class="column5">ATTDEL: LICENSE </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2008-12-28 21:25:00</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="??? @ 62-47-175-193.adsl.highway.telekom.at[62.47.175.193]">62-47-175-193</span></td>
+  <td class="column5">ATTNEW: LICENSE </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2008-07-05 21:51:47</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="ReimarBauer @ p54BBB073.dip0.t-ipconnect.de[84.187.176.115]"><a href="/ReimarBauer" title="ReimarBauer @ p54BBB073.dip0.t-ipconnect.de[84.187.176.115]">ReimarBauer</a></span></td>
+  <td class="column5">ATTDEL: package.zip </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2008-07-05 18:45:12</td>
+  <td class="column2">0</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="??? @ 202.152.167.88[202.152.167.88]">202</span></td>
+  <td class="column5">ATTNEW: package.zip </td>
+  <td class="column6"></td>
+</tr>
+<tr>  <td class="column0">12</td>
+  <td class="column1">2007-10-29 19:20:42</td>
+  <td class="column2">1292</td>
+  <td class="column3"><input type="radio" name="rev1" value="12"><input type="radio" name="rev2" value="12"><a href="/action/diff/GPL?action=diff&amp;rev1=11&amp;rev2=12" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ localhost[127.0.0.1]">localhost</span></td>
+  <td class="column5">converted to 1.6 markup</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=12" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">11</td>
+  <td class="column1">2007-09-20 20:26:43</td>
+  <td class="column2">1284</td>
+  <td class="column3"><input type="radio" name="rev1" value="11"><input type="radio" name="rev2" value="11"><a href="/action/diff/GPL?action=diff&amp;rev1=10&amp;rev2=11" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B43D4A.dip0.t-ipconnect.de[87.180.61.74]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B43D4A.dip0.t-ipconnect.de[87.180.61.74]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=11" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">10</td>
+  <td class="column1">2007-09-20 18:30:54</td>
+  <td class="column2">1208</td>
+  <td class="column3"><input type="radio" name="rev1" value="10"><input type="radio" name="rev2" value="10"><a href="/action/diff/GPL?action=diff&amp;rev1=9&amp;rev2=10" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="NirSoffer @ bzq-219-206-31.static.bezeqint.net[212.179.206.31]"><a href="/NirSoffer" title="NirSoffer @ bzq-219-206-31.static.bezeqint.net[212.179.206.31]">NirSoffer</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=10" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">9</td>
+  <td class="column1">2007-09-20 18:30:25</td>
+  <td class="column2">1206</td>
+  <td class="column3"><input type="radio" name="rev1" value="9"><input type="radio" name="rev2" value="9"><a href="/action/diff/GPL?action=diff&amp;rev1=8&amp;rev2=9" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="NirSoffer @ bzq-219-206-31.static.bezeqint.net[212.179.206.31]"><a href="/NirSoffer" title="NirSoffer @ bzq-219-206-31.static.bezeqint.net[212.179.206.31]">NirSoffer</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=9" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">8</td>
+  <td class="column1">2007-09-20 10:53:15</td>
+  <td class="column2">985</td>
+  <td class="column3"><input type="radio" name="rev1" value="8"><input type="radio" name="rev2" value="8"><a href="/action/diff/GPL?action=diff&amp;rev1=7&amp;rev2=8" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B43D4A.dip0.t-ipconnect.de[87.180.61.74]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B43D4A.dip0.t-ipconnect.de[87.180.61.74]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=8" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">7</td>
+  <td class="column1">2007-08-29 07:16:48</td>
+  <td class="column2">935</td>
+  <td class="column3"><input type="radio" name="rev1" value="7"><input type="radio" name="rev2" value="7"><a href="/action/diff/GPL?action=diff&amp;rev1=6&amp;rev2=7" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B43A17.dip0.t-ipconnect.de[87.180.58.23]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B43A17.dip0.t-ipconnect.de[87.180.58.23]">ThomasWaldmann</a></span></td>
+  <td class="column5">Revert to revision 5.</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=7" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">6</td>
+  <td class="column1">2007-08-29 07:15:27</td>
+  <td class="column2">952</td>
+  <td class="column3"><input type="radio" name="rev1" value="6"><input type="radio" name="rev2" value="6"><a href="/action/diff/GPL?action=diff&amp;rev1=5&amp;rev2=6" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ 61-224-50-43.dynamic.hinet.net[61.224.50.43]">61-224-50-43</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=6" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">5</td>
+  <td class="column1">2007-07-28 21:19:34</td>
+  <td class="column2">935</td>
+  <td class="column3"><input type="radio" name="rev1" value="5"><input type="radio" name="rev2" value="5"><a href="/action/diff/GPL?action=diff&amp;rev1=4&amp;rev2=5" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="NirSoffer @ bzq-219-253-17.static.bezeqint.net[212.179.253.17]"><a href="/NirSoffer" title="NirSoffer @ bzq-219-253-17.static.bezeqint.net[212.179.253.17]">NirSoffer</a></span></td>
+  <td class="column5">You can use GPL code in proprietary programs, but you can't distribute it as non-free software</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=5" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">4</td>
+  <td class="column1">2007-07-28 20:45:26</td>
+  <td class="column2">928</td>
+  <td class="column3"><input type="radio" name="rev1" value="4"><input type="radio" name="rev2" value="4"><a href="/action/diff/GPL?action=diff&amp;rev1=3&amp;rev2=4" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="??? @ thirtyfour.202.omne.uk.net[80.255.202.34]">thirtyfour</span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=4" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">3</td>
+  <td class="column1">2007-05-01 13:40:46</td>
+  <td class="column2">858</td>
+  <td class="column3"><input type="radio" name="rev1" value="3"><input type="radio" name="rev2" value="3"><a href="/action/diff/GPL?action=diff&amp;rev1=2&amp;rev2=3" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=3" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">-</td>
+  <td class="column1">2007-05-01 13:25:07</td>
+  <td class="column2">4791</td>
+  <td class="column3">-</td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]">ThomasWaldmann</a></span></td>
+  <td class="column5">ATTNEW: gnu-head-banner.png </td>
+  <td class="column6"><a href="/GPL?action=AttachFile&amp;do=view&amp;target=gnu-head-banner.png">view</a>&nbsp;<a href="/GPL?action=AttachFile&amp;do=get&amp;target=gnu-head-banner.png">get</a></td>
+</tr>
+<tr>  <td class="column0">2</td>
+  <td class="column1">2007-05-01 13:24:34</td>
+  <td class="column2">743</td>
+  <td class="column3"><input type="radio" name="rev1" value="2"><input type="radio" name="rev2" value="2"><a href="/action/diff/GPL?action=diff&amp;rev1=1&amp;rev2=2" rel="nofollow"> to previous</a></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=2" rel="nofollow">view</a></td>
+</tr>
+<tr>  <td class="column0">1</td>
+  <td class="column1">2007-05-01 13:07:27</td>
+  <td class="column2">663</td>
+  <td class="column3"><input type="radio" name="rev1" value="1"><input type="radio" name="rev2" value="1"></td>
+  <td class="column4"><span title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ p57B439F4.dip0.t-ipconnect.de[87.180.57.244]">ThomasWaldmann</a></span></td>
+  <td class="column5">&nbsp;</td>
+  <td class="column6"><a href="/action/recall/GPL?action=recall&amp;rev=1" rel="nofollow">view</a></td>
+</tr>
+</tbody></table></div></div></form></div><div class="info-paging-nav info-paging-nav-bottom"></div></form></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GPL?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GPL?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GPL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

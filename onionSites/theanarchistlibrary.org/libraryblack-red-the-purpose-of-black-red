@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The Purpose of Black &amp; Red (Black &amp; Red) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/black-red-the-purpose-of-black-red?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=black-red-the-purpose-of-black-red">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The Purpose of Black &amp; Red
+  </p>
+  
+  <p id="textsubtitle">
+    <strong>Subtitle:</strong>
+    If you don’t like it, make your own.
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/black-red">Black &amp; Red</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    November, 1968
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/1968">1968</a>
+        <a href="/topics/anarchist-publications">anarchist publications</a>
+        <a href="/topics/students">students</a>
+        <a href="/topics/underground-press">underground press</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Scanned from original. Capitalization and punctuation as in original.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Black &amp; Red, no. 3 (November 1968), pp. 64–71
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="black-red-the-purpose-of-black-red.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="black-red-the-purpose-of-black-red.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="black-red-the-purpose-of-black-red.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="black-red-the-purpose-of-black-red.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="black-red-the-purpose-of-black-red?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="black-red-the-purpose-of-black-red.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="black-red-the-purpose-of-black-red.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Black &amp; Red</h2>
+	
+	<h1 id="textttitleh">The Purpose of Black &amp; Red</h1>
+	
+	<h2>If you don’t like it, make your own.</h2>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p><strong>What is Black &amp; Red?</strong>
+</p><p>Black &amp; Red is not a capitalist activity. It is anti-capitalist in its organization and its aims.
+</p><p>Black &amp; Red is a subversive action, and in this it is not Liberal.
+</p><p>Its present field of action is the student milieu, but Black &amp; Red is not a new intellectual current, a new “cultural trend” within the Capitalist University.
+</p><p>Black &amp; Red is a new front in the world anti-capitalist struggle.
+</p><p>It is an organic link between the theory-action of the world revolutionary movement and the action-theory of the new revolutionary front.
+</p><p>Its aim is: “To create at long last a situation which goes beyond the point of no return” (International Situationists).
+</p><p><strong>Black &amp; Red is an anti-capitalist activity</strong>
+</p><p>The production of Black &amp; Red is not capitalist production.
+</p><p>It is not the production of a commodity, nor a social relation between capitalists-owners and workers-producers, and it is not done for profit. Black &amp; Red has this in common with other media of the “underground press,” but not with Monthly Review or Ramparts, for example. Monthly Review, Maspero in France, Feltrinelli in Italy, are capitalist activities. They’re businesses which publish left-wing books. The underground presses are struggles. They don’t create profits. Frequently they don’t even reproduce the variable capital-the wages of the militants who produce them. As a result, these activities cannot sustain their producers. The time, the money, the energy of the militants who create these presses have to be LIBERATED out of capitalism in order to make the presses exist, in order to create these instruments of struggle.
+</p><p>Not all the social relations within the existing society are necessarily capitalist relations. There are PRE-capitalist relations, for example family relations, where there is no commodity production, labor is not alienated from worker to capitalist, and production is not for profit. There are also NON-capitalist relations, for example, “revolutionary” political parties, which may exist for 50 years within capitalist society; religious organization; or hippies. These relations COEXIST with capitalist relations. They are all a part of capitalist “culture”; they do not destroy the capitalist relations.
+</p><p>But the SOCIAL RELATIONS CREATED FOR THE PRODUCTION of Black &amp; Red are not, in principle, integrable within capitalist society. These relations DO NOT COEXIST with capitalist social relations. “Underground presses” cannot survive within capitalist society; in fact, they do not even have continuity within capitalist society; they have to be re-created from one issue to the next, from one meeting to the next; they are created only IN ORDER TO DESTROY capitalist relations. When people spend working-days engaged in production, and are not paid, either the activity stops, or capitalist society stops. They either make a revolution, or they become transformed into capitalist activities, like Monthly Review, which starts by paying wages, and then, why not make a profit as well, so as to invest, in order to make the operation grow? Some “underground presses” don’t even pay for their “constant capital,” for the equipment and material they use up. They don’t create any of their conditions for reproduction: they don’t reproduce themselves. They are created by revolutionary energy-they represent a struggle which is the same as the struggle of the movement itself: revolutionary activity demands the working-time and leisure-time of militants, WITHOUT PROVIDING THE MEANS OF LIFE which capitalist working-activity provides.
+</p><p>This is why the “underground press” either DESTROYS capitalist society, or it is destroyed. IT’S EITHER REVOLUTION OR DEATH.
+</p><p><strong>Black &amp; Red is subversive, not liberal</strong>
+</p><p>Violence is the expression, the manifestation of the existence of irreconcilable contradictions in the capitalist system (class struggle, anti-imperialist struggle, struggle against alienation, i.e., for life). It is the expression of the consciousness of two antagonistic forces (Exploiter and Exploited; Colonizer-Colonized; World Capitalist System-World Revolutionary Movement), i.e., force A and force non-A, one of which is dominant, the other of which seeks to destroy the first
+</p><p>The non-radical (we call him a Liberal) is situated in the dominant force, A, and denies the existence of non-A.
+</p><p>He is an integral part of the dominant system; his motivation is moral. His moral attitude is the product of the capitalist ideology of PEACE, an ideology which completely contradicts IMPERIALIST PRACTICE. Imperialist practice destroys all the forces which are radically opposed to it The Liberal does not question working for the capitalist system and its consequence: IMPERIALIST VIOLENCE. What bothers him are only the MORAL consequences of his work within the system.
+</p><p>This is why he wants VIOLENCE to end. But he can’t stop EITHER the Americans OR the Vietnamese; he can’t stop either the racists or the blacks. Since he’s “liberal,” since he agrees with the “aspirations” of the Vietnamese, of the blacks, he tells THEM to stop the violence. But as soon as THEY stop, the dominant system wins: America wins, Racism wins. The victim is not liberated: he’s forced to negotiate with his oppressor.
+</p><p>The Liberal is an integral part of the dominant system. That is why his attitude aims to “change” (i.e., to interpret) the system from the inside, not to destroy (i.e., transform) it. When he presents himself as a radical, it is to create a new ideological current, a new group, sometimes even a group inspired by Marx’s analysis.
+</p><p>Analysis, even “Marxist” analysis, without revolutionary practice, means CONVERSION to anew idea. Such analysis makes it possible for the Liberal to tell the revolutionary: Look at my accomplishments. I’ve created consciousness (i.e., “culture”). This is the way to change society. You activists want to go too fast It’s not yet time for action. If you want to act, if you want to fight right now, we will be clubbed and beaten. You are calling for repression. The consciousness (i.e., “culture”) we have created will be destroyed.
+</p><p>The “consciousness” which the Liberal creates is consistent with PROFITS. All of his “revolutionary” activities have one thing in common: THEY ALL COEXIST WITH CAPITALISM. (We are not asking if the Capitalist System is better or worse with these things). Capitalism can survive with the type of “Critical Analysis” created by the Liberal.
+</p><p>The Liberal talks about “critical consciousness,” but what he defends is the Capitalist University, Corporate-Military Research, Textbooks, Classrooms. These are the Liberal’s VALUES. The revolutionary who says that these are the Liberal’s instruments of oppression and repression, and that only a violent struggle against these instruments, these values, can destroy the system, is called an Extremist, a Dangerous Agitator. The Liberal calls him VIOLENT. And while calling him violent, THE LIBERAL CALLS THE POLICE.
+</p><p>The Liberal knows that the society is sick with contradictions which spread in it like tumors. The Liberal submits to this sickness. He knows that the tumors have to be removed. The following analogy by B.R. Rafferty * shows that ACTION is the cutting-edge that separates the revolutionary from the Liberal. The first is the surgeon; the second runs in to prevent the operation.
+</p><p>“Don’t operate! shouts the Liberal. What will you put in the place of the tumor?
+</p><p>The surgeon answers: Nothing!”
+</p><p>It’s the same as the question: What kind of exploitation will replace capitalist exploitation: What kind of alienation will replace capitalist alienation?
+</p><p>The Liberal wants the surgeon to JUSTIFY the operation INSTEAD of carrying it out. The Liberal calls for an “alternative tumor,” are structured capitalist society. This gives the Liberal a basis for saying: at least we offer something positive, whereas all you do is offer something negative and destructive. The Liberal makes pictures of the “future society”- pictures of a restructured capitalism, or even pictures of a future “socialist” or “communist” society. And these pictures coexist with capitalist society; they are completely consistent with capitalist production relations. The revolutionary does not make pictures; he does not coexist with capitalist society; his aim is not to make pictures of society after the revolution, but to make revolutionary action. The Liberal has no conception of revolutionary action; for the Liberal, revolutionary action is destructive; it is just Violence.
+</p><p>For the revolutionary, the problem is not VIOLENCE versus NON-VIOLENCE. Violence ALREADY EXISTS. Violence is the relation between the oppressor and the oppressed. Non-violence does not eliminate the relation between oppressor and oppressed. Neutrality does not eliminate violence. For the oppressed there is no neutrality. In the struggle of the oppressed to liberate themselves, one who does not act against oppression is an oppressor.
+</p><p>The GI against whom the Vietnamese struggles is an oppressor, even if this GI is actually a worker who is exploited and oppressed, like the Vietnamese, by the capitalist system. It is up to the GI to decide. And GIs are in fact deciding. The growing number of deserters, the growing consciousness in the U.S., show that this is the problem which is being posed, by GIs, by black people, by students.
+</p><p>The only choice is to take part in the struggle to eliminate the relation of oppressor-oppressed, colonizer-colonized. The only choice is to struggle against the capitalist system and its manifestations: imperialism for the Vietnamese, racism for black people, brainwashing for students. THIS IS THE CHOICE OF THE REVOLUTIONARY. Black &amp; Red makes this choice: this is what makes it subversive. Black &amp; Red is part of the struggle of the Vietnamese, of black militants in the U.S., of French and other revolutionary students. The violence of the revolutionary is the violence of all the oppressed against the violence of the dominant class. The violence of the revolutionary does not aim to transform the oppressed into a new oppressor, nor to restore the economic and social relations of exploitation, but to build a society without classes, without alienation, and thus without violence.
+</p><p><strong>Black &amp; Red is a new revolutionary front</strong>
+</p><p>Black &amp; Red is a new front in the world anti-capitalist struggle. Its geographical milieu is Kalamazoo: the high schools and universities. Its social milieu is students. Its activity is radical action against the University, against its stunting of creativity and its brainwashing. Its action is based on analysis which defines the University as an integral part of a larger whole: the world capitalist system.
+</p><p>Black &amp; Red is an addition to the anti-capitalist struggle already being waged on other fronts:
+</p><p>Its action parallels that of black revolutionaries struggling in ghettos against racism-racism which is the direct outgrowth of a world system of exploitation.
+</p><p>Its action parallels that of Dodge revolutionary workers struggling against racism and against capitalist exploitation.
+</p><p>Its action parallels that of European revolutionary workers at Citroen, Renault, Fiat, against the union bureaucracy and the capitalist owners.
+</p><p>Its action parallels that of Bolivian revolutionaries and peasants struggling against landlords in the Andes-Bolivian revolutionaries who have expressed their understanding that they are not engaged in a local struggle, but in a struggle against the entire imperialist system.
+</p><p>“Create One, Two, Three, Many Vietnams”-this is how Che Guevara expressed the need to struggle on all the fronts.
+</p><p>The fact that the action of Black &amp; Red is situated in a student milieu is not a self-restriction; it is the definition of a specific front which is part of a larger struggle.
+</p><p>The May revolutionary movement in France spread from the University to the factories. The University was transformed into a center of revolutionary coordination and diffusion for workers and students. This role had been played by worker-occupied factories in Russia in 1917.
+</p><p>American workers are not a social category who will be “reached,” “organized,” or “led” by the students. They are situated in what is, potentially, one of the main fronts of the world anti-capitalist struggle. Up to now, they have been had by capitalist ideology, and they’ve been used against the oppressed. Until now, American workers have been brainwashed and have collaborated with their exploiters; this has not prevented colonized Algerians and Vietnamese, racially oppressed blacks, brainwashed students, French workers, Czech and Yugoslav students and workers, from starting to struggle on their own fronts. Each new front pushes the world anti-capitalist struggle closer to the point of no return. When American workers begin their own struggle within their factories, they will join the revolutionaries who have already begun struggling on other fronts.
+</p><p>Thus Black &amp; Red is not addressed particularly to students, but to all revolutionaries engaged in the same struggle, to all people who are attempting to build a critique of their situation and a revolutionary movement within the structure which oppresses them.
+</p><p>Black &amp; Red is the means of expression, action and analysis of an active minority. It is the expression of the practice of a specific group on a specific front. PRACTICE which is not communicated is not practice but merely isolated action; COMMUNICATION which is not followed by an extension of practice to a larger group is merely analysis of an action.
+</p><p>Black &amp; Red is an attempt TO COMMUNICATE PRACTICE. The communication of practice extends over time and over space. Past practice of the world revolutionary movement is the basis for present action on a given front; present practice on any single front is a further extension of the practice of the entire world movement.
+</p><p>Black &amp; Red is in a world context because the capitalist system is a unified world system, a world market. All opposition to it is a part of the same struggle. Thus Black &amp; Red is in solidarity with all other revolutionaries fighting on all fronts, and attempts to bring into the actions of Kalamazoo the analysis and experience of revolutionary students in Mexico, Berlin, Yugoslavia, Columbia, The analysis and experience of workers and students in France and Czechoslovakia.
+</p><p>At the same time, the experience in Kalamazoo which is based on critical analysis of the entire world movement, is communicated (i.e., extended) to other fronts. This experience includes a systematic critique of capitalist ideology carried out in classrooms (modeled on actions of the German SDS), self-critiques of militants engaged in actions, critiques of pseudo-revolutionary “actions.” The purpose of the critiques and self-critiques is to push potential revolutionaries to self-analyses and reevaluations of the relation of forces, and to stimulate among potential revolutionaries the ABILITY TO ANALYZE ACTIONS and to realize that NOT EVERY dangerous action or provocation is a REVOLUTIONARY ACTION.
+</p><p>Thus Black &amp; Red does not represent a new current of thought or a new method of analysis. It is not a new REVIEW, but the analytic and theoretical element of an action, addressed to people who are not interested in a cultural critique, but who have potential for action, and for the extension of revolutionary practice to a new front
+</p><p>In this spirit, a formal critique of the contents or method of Black &amp; Red has no relevance unless it is an action-critique which bases its analysis on a specific action. To say that A NEW FRONT is ineffectual implies the capacity to CREATE ANOTHER FRONT. The interest of Black &amp; Red is not to be THE front, but A front. The very content of its purpose and practice is TO BE SURPASSED. Its interest is precisely the CREATION OF OTHER FRONTS.
+</p><p>Black &amp; Red is not an INSTITUTION which defends its own existence against the pressure of history and even against the very revolution it aims for. If a larger revolutionary front can be created in Kalamazoo, Black &amp; Red will become part of it-either as Black &amp; Red, or as a group of revolutionaries. If a larger revolutionary front is not created, then Black &amp; Red intends to grow, to engage all revolutionary groups and individuals within actions and analyses. To participate in the actions of Black &amp; Red means to modify these actions, to make them more effective, more critical, i.e., to enlarge the revolutionary front created by Black &amp; Red.
+</p><p>Black &amp; Red claims NO MONOPOLY OF ACTION OR ANALYSIS. It invites every critique which is a new front “IF YOU DON’T LIKE IT, MAKE YOUR OWN!”
+</p><p>1968
+</p><p><strong>Note</strong>
+</p><p>- One of the professors who, last year, was not rehired (i.e., was fired) by Western Michigan University.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

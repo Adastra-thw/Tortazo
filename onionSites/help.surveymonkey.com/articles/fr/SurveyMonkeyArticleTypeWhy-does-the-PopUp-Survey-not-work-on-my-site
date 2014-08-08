@@ -1,0 +1,220 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/fr/SurveyMonkeyArticleType/Why-does-the-PopUp-Survey-not-work-on-my-site","l":"fr","id":"kA030000000hhMdCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"Les bases pour bien commencer"},{"subcats":[],"name":"creating-designing-surveys","label":"Conception du sondage"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"Distribuer des sondages"},{"subcats":[],"name":"analyzing-results","label":"Analyse des réponses"},{"subcats":[],"name":"managing-account","label":"Gestion du compte"},{"subcats":[],"name":"contact-us","label":"Contactez le Centre d’aide"}],"language":"fr"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[num] résultats pour [term]';
+    var showingForLabel = 'Résultats pour [term]';
+    var loadingLabel = 'Chargement en cours ...';
+    var dymLabel = 'Essayez avec cette orthographe: [term]';
+    var stKey = 'Bex6QUdpD2S6MQyVkdfV';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>Pourquoi les sondages par fen&ecirc;tres contextuelles ne fonctionnent-ils pas sur mon site ?</title>
+  <link href="http://help.surveymonkey.com/articles/fr/kb/Why-does-the-PopUp-Survey-not-work-on-my-site" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'fr';
+ var cx = '013440216857884837477:es57noojsro';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"fr"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 fr"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 fr"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 fr"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 fr"><![endif]-->
+<!--[if gt IE 9]><body class="fr"><![endif]-->
+<body class="fr">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://fr.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">Se connecter</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-fr" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">R&eacute;duire toutes les sections</div>
+  <div id="expandLabel" style="display:none">D&eacute;velopper toutes les sections</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">Pourquoi les sondages par fenêtres contextuelles ne fonctionnent-ils pas sur mon site ?
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text">Notre collecteur de fenêtres contextuelles utilise des cookies pour contrôler les paramètres et les restrictions du lien. Lorsque vous mettez une URL en tant que fenêtre contextuelle d&#39;une page Web, vous prenez le risque de présumer que les navigateurs de toutes les personnes interrogées autorisent les cookies. 
+<p>Les comportements suivants sont contrôlés par les cookies :</p>
+<ul><li>Configurer la fenêtre contextuelle pour qu&#39;elle s&#39;ouvre uniquement toutes les X visites de votre site.</li><li>Permettre à l&#39;utilisateur de décider s&#39;il souhaite répondre au sondage tout de suite ou ultérieurement. </li><li>Créer une fenêtre contextuelle qui ouvre directement le sondage sans fenêtre d&#39;invitation.</li></ul>
+<h3> </h3>
+<h3>Comment ça marche :</h3>
+<p>Si le navigateur des personnes interrogées bloque les cookies, nous n&#39;avons aucun moyen de contourner cette commande. Internet Explorer dispose également d&#39;un paramètre de cookie supplémentaire qui autorise les <i>cookies tierce partie</i>.</p>
+<ul><li>Lorsque vous testez la fenêtre contextuelle sur votre site dans IE, si elle ne s&#39;ouvre pas, vous devez activer les cookies tierce partie.</li><li><b>REMARQUE</b><b> :</b> cela ne signifie pas que tous vos participants potentiels auront activé cette option sur leur navigateur. Si l&#39;option n&#39;a pas été cochée dans les paramètres de navigateur des personnes interrogées, nos fenêtres contextuelles ne fonctionneront jamais pour ces personnes. </li></ul>
+<h3> </h3>
+<h3>Pour activer les cookies tierce partie sur IE 7 et versions antérieures :</h3>
+<ol><li>Cliquez sur <b>Outils</b> dans la barre de menu d&#39;IE.</li><li>Choisissez <b>Options Internet</b>.</li><li>Cliquez sur l&#39;onglet <b>Confidentialité</b>.</li><li>Assurez-vous que le paramètre est réglé au moins sur Moyenne, puis cliquez sur le bouton <b>Avancé</b>.</li><li>Dans la fenêtre qui s&#39;ouvre ensuite, cochez la case <b>Ignorer la gestion automatique des cookies</b>. Assurez-vous que l&#39;option <b>Cookies tierce partie</b> est sélectionnée.</li><li>Cliquez sur <b>OK</b> pour fermer cette fenêtre.</li><li>Assurez-vous que la case <b>Activer le bloqueur de fenêtres publicitaires intempestives</b> est vide, puis cliquez sur <b>Appliquer</b>.</li><li>Cliquez à nouveau sur <b>OK</b> pour quitter la configuration.</li></ol>
+<h3> </h3>
+<h3>Pour activer les cookies tierce partie sur IE 8 :</h3>
+<ol><li>Cliquez sur <b>Outils</b> dans la barre de menu d&#39;IE.</li><li>Choisissez <b>Options Internet</b>.</li><li>Cliquez sur l&#39;onglet <b>Sécurité</b> et réglez-la sur le niveau de sécurité le plus faible.</li><li>Cliquez sur l&#39;onglet Confidentialité, puis sur le bouton <span style="font-weight: bold;">Avancé</span>.</li><li>Dans la fenêtre suivante, <b><span style="font-weight: normal;">a</span></b><span style="font-weight: normal;">ssurez</span>-vous de sélectionner les <b>cookies tierce partie</b>. Vérifiez également qu&#39;elle est réglée sur A<strong style="font-weight: normal;">ccepter tous les cookies. Cliquez sur <b>OK</b> pour fermer cette fenêtre. </strong></li><li>Assurez-vous que la case <b>Activer le bloqueur de fenêtres publicitaires intempestives</b> est vide, puis cliquez sur <b>Appliquer</b>.</li><li>Cliquez à nouveau sur <b>OK</b> pour quitter la configuration.</li></ol>
+<h3> </h3>
+<table border="0" width="100%"><tbody><tr style="background-color: rgb(255,255,204);"><td colspan="1" rowspan="1">
+<h3>Éditer le HTML :</h3>
+<p>Outre les cookies tierce partie, vous ne pouvez pas modifier le code qui est fourni par le collecteur :</p>
+<ul><li>La fenêtre contextuelle ne pourra pas fonctionner si vous changez quoi que ce soit dans le code généré. Nous fournissons le code HTML de base des fenêtres contextuelles, avec tous les paramètres appliqués, dans les options [<b>Changer la fenêtre contextuelle</b>].</li><li>Si vous ajoutez quelque chose, ou si vous modifiez ce code, le lien ne fonctionnera pas. Même en écrivant le cookie requis pour empêcher la fenêtre contextuelle de s&#39;ouvrir à nouveau lorsque des personnes cliquent sur [Jamais] ou [Plus tard].</li></ul>
+Nous vous recommandons également de placer le lien vers le sondage directement sur votre <a target="_self" href="http://help2.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-do-I-post-the-survey-link-on-my-website-using-a-Web-Link-collector">page Web</a>. Ainsi les participants pourront cliquer volontairement sur le lien sur votre site pour accéder au sondage.</td></tr></tbody></table>
+<p> </p>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>En savoir plus</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-do-I-embed-a-survey-or-have-it-open-in-a-popup-window-on-my-site" class="relatedLink">Incorporer un sondage ou utiliser des fen&ecirc;tres contextuelles d'invitation</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/Posting-your-survey-form-on-your-website" class="relatedLink">Poster votre formulaire de sondage sur votre site Web</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-to-collect-responses" class="relatedLink">Comment collecter des r&eacute;ponses au sondage</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-do-I-send-my-survey-to-respondents-or-get-responses-to-my-survey" class="relatedLink">Collecter les r&eacute;ponses apport&eacute;es aux sondages</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>Assistance t&eacute;l&eacute;phonique</h4>
+			<p>
+				Passez au niveau sup&eacute;rieur et acc&eacute;dez &agrave; des fonctionnalit&eacute;s extraordinaires comme l'assistance t&eacute;l&eacute;phonique (en anglais uniquement).
+			</p>
+			<a class="upgrade-button-yellow" href="https://fr.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">Mettre votre compte &agrave; niveau</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">Langues&nbsp;:</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://fr.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/aboutus/" target="_blank">&Agrave; propos de nous</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">Politique de confidentialit&eacute;</a></li>
+					
+					
+					<li><a href="/contact-us">Nous contacter</a></li>
+				</ul>
+				<span class="copy">Copyright &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/fr\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/fr/kb/Why-does-the-PopUp-Survey-not-work-on-my-site';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, 'Pourquoi les sondages par fenêtres contextuelles ne fonctionnent-ils pas sur mon site ?', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

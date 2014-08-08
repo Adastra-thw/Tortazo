@@ -1,0 +1,690 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Kevin Tucker  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+To Produce or Not to Produce
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+Class, Modernity and Identity
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+Fall \& Winter 2004/2005
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\page[yes,right]
+
+Class is a social relationship. Stripped to its base, it is about economics. It’s about being a producer, distributor or an owner of the means and fruits of production. No matter what category any person is, it’s about identity.Who do you identify with? Or better yet, what do you identify with? Every one of us can be put into any number of socio-economic categories. But that isn’t the question. Is your job your identity? Is your economical niche?
+
+
+Let’s take a step back. What are economics? My dictionary defines it as: “the science of production, distribution, and consumption of goods and services.” Fair enough. Economies do exist. In any society where there is unequal access to the necessities of life, where people are dependent upon one another (and more importantly, institutions) there is economy.The goal of revolutionaries and reformists has almost always been about reorganizing the economy. Wealth must be redistributed. Capitalist, communist, socialist, syndicalist, what have you, it’s all about economics. Why? Because production has been naturalized, science can always distinguish economy, and work is just a necessary evil.It’s back to the fall from Eden where Adam was punished to till the soil for disobeying god. It’s the Protestant work ethic and warnings of the sin of ‘idle hands’. Work becomes the basis for humanity. That’s the inherent message of economics.Labor “is the prime basic condition for all human existence, and this to such an extent that, in a sense, we have to say that labor created man himself.” That’s not Adam Smith or God talking (at least this time), that’s Frederick Engels.But something’s very wrong here. What about the Others beyond the walls of Eden? What about the savages who farmers and conquistadors (for all they can be separated) could only see as lazy for not working?
+
+
+Are economics universal?Let’s look back at our definition.The crux of economy is production. So if production is not universal, then economy cannot be. We’re in luck, it’s not. The savage Others beyond the walls of Eden, the walls of Babylon, and the gardens: nomadic gatherer/hunters, produced nothing. A hunter does not produce wild animals. A gatherer does not produce wild plants. They simply hunt and gather. Their existence is give and take, but this is ecology, not economy.Every one in a nomadic gatherer/hunter society is capable of getting what they need on their own. That they don’t is a matter of mutual aid and social cohesiveness, not force. If they don’t like their situation, they change it. They are capable of this and encouraged to do so. Their form of exchange is anti-economy: generalized reciprocity. This means simply that people give anything to anyone whenever. There are no records, no tabs, no tax and no running system of measurement or worth. Share with others and they share in return.These societies are intrinsically anti-production, anti-wealth, anti-power, anti-economics. They are simply egalitarian to the core: organic, primal anarchy.
+
+
+But that doesn’t tell how we became economic people. How work became identity.Looking at the origins of civilization does.Civilization is based off production. The first instance of production is surplus production. Nomadic gatherer/hunters got what they needed when they needed it. They ate animals, insects, and plants. When a number of gatherer/hunters settled, they still hunted animals and gathered plants, but not to eat.At least not immediately.
+
+
+In Mesopotamia, the cradle of our now global civilization, vast fields of wild grains could be harvested. Grain, unlike meat and most wild plants, can be stored without any intensive technology. It was put in huge granaries. But grain is harvested seasonally. As populations expand, they become dependent upon granaries rather than what is freely available.Enter distribution. The granaries were owned by elites or family elders who were in charge of rationing and distributing to the people who filled their lot. Dependency means compromise: that’s the central element of domestication. Grain must be stored. Granary owners store and ration the grain in exchange for increased social status. Social status means coercive power. This is how the State arose.
+
+
+In other areas, such as what is now the northwest coast of the United States into Canada, store houses were filled with dried fish rather than grain. Kingdoms and intense chiefdoms were established. The subjects of the arising power were those who filled the storehouses. This should sound familiar. Expansive trade networks were formed and the domestication of plants and then animals followed the expansion of populations. The need for more grain turned gatherers into farmers. The farmers would need more land and wars were waged. Soldiers were conscripted. Slaves were captured. Nomadic gatherer/hunters and horticulturalists were pushed away and killed.
+
+
+The people did all of this not because the chiefs and kings said so, but because their created gods did. The priest is as important to the emergence of states as chiefs and kings. At some points they were the same position, sometimes not. But they fed off each other. Economics, politics and religion have always been one system. Nowadays science takes the place of religion. That’s why Engels could say that labor is what made humans from apes. Scientifically this is could easily be true. God punished the descendants of Adam and Eve to work the land. Both are just a matter of faith.
+
+
+But faith comes easily when it comes from the hand that feeds. So long as we are dependent on the economy, we’ll compromise what the plants and animals tells us, what our bodies tell us. No one wants to work, but that’s just the way it is.So we see in the tunnel vision of civilization. The economy needs reformed or revolutionized. The fruit of production needs redistributed.
+
+
+Enter class struggle.Class is one of many relationships offered by civilization. It has often been asserted that the history of civilization is the history of class struggle. But I would argue differently. The relationship between the peasant and the king and between chief and commoner cannot be reduced to one set of categories. When we do this, we ignore the differences that accompany various aspects of civilization. Simplification is nice and easy, but if we’re trying to understand how civilization arose so that we can destroy it, we must be willing to understand subtle and significant differences.What could be more significant than how power is created, maintained and asserted? This isn’t done to cheapen the very real resistance that the ‘underclass’ had against elites, far from it. But to say that class or class consciousness are universal ignores important particulars.Class is about capitalism. It’s about a globalizing system based on absolute mediation and specialization. It emerged from feudal relationships through mercantile capitalism into industrial capitalism and now modernity.Proletarian, bourgeoisie, peasant, petite bourgeoisie, these are all social classes about our relationship to production and distribution. Particularly in capitalist society, this is everything. All of this couldn’t have been more apparent than during the major periods of industrialization. You worked in a factory, owned it or sold what came out of it. This was the heyday of class consciousness because there was no question about it. Proletarians were in the same conditions and for the most part they knew that is where they would always be. They spent their days and nights in factories while the ‘high society’ of the bourgeoisie was always close enough to smell, but not taste.
+
+
+If you believed God, Smith or Engels, labor was your essence. It made you human. To have your labor stolen from you must have been the worst of all crimes. The workers ran the machine and it was within their grasp to take it over. They could get rid of the boss and put in a new one or a worker’s council.
+
+
+If you believed production was necessary, this was revolutionary. And even more so because it was entirely possible. Some people tried it. Some of them were successful. A lot of them were not. Most revolutions were accused of failing the ideals of those who created them. But in no place did the proletariat resistance end relationships of domination.
+
+
+The reason is simple: they were barking up the wrong tree. Capitalism is a form of domination, not its source. Production and industrialism are parts of civilization, a heritage much older and far more rooted than capitalism.
+
+
+But the question is really about identity. The class strugglers accepted their fate as producers, but sought to make the most of a bad situation. That’s a faith that civilization requires. That’s a fate that I won’t accept. That’s a fate the earth won’t accept.The inevitable conclusion of the class struggle is limited because it is rooted in economics. Class is a social relationship, but it is tied to capitalist economics. Proletarians are identified as people who sell their labor. Proletarian revolution is about taking back your labor. But I’m not buying the myths of God, Smith, or Engels. Work and production are not universal and civilization is the problem.What we have to learn is that link between our own class relationships and those of the earlier civilizations is not about who is selling labor and who is buying, but between about the existence of production itself. About how we came to believe that spending our lives building power that is wielded against us is justified. About how compromising our lives as free beings to become workers and soldiers became a compromise we were willing to take.
+
+
+It is about the material conditions of civilization and the justifications for them, because that is how we will come to understand civilization. So we can understand what the costs of domestication are, for ourselves and the earth. So that we can destroy it once and for all.
+
+
+This is what the anarcho-primitivist critique of civilization attempts to do. It’s about understanding civilization, how it is created and maintained. Capitalism is a late stage of civilization and class struggle as the resistance to that order is all extremely important to both our understanding of civilization and how to attack it.
+
+
+There is a rich heritage of resistance against capitalism. It is another part of the history of resistance against power that goes back to its origins. But we should be wary to not take any stage as the only stage. Anti-capitalist approaches are just that, anti-capitalist. It is not anti-civilization. It is concerned with a certain type of economics, not economics, production or industrialism itself. An understanding of capitalism is only useful so far as it is historically and ecologically rooted.
+
+
+But capitalism has been the major target of the past centuries of resistance. As such, the grasp of class struggle is apparently not easy to move on from. Global capitalism was well rooted by 1500 AD and continued through the technological, industrial and green revolutions of the last 500 years. With a rise in technology it has spread throughout the planet to the point where there is now only one global civilization. But capitalism is still not universal. If we see the world as a stage for class struggle, we are ignoring the many fronts of resistance that are explicitly resisting civilization. This is something that class struggle advocates typically ignore, but in some ways only one of two major problems. The other problem is the denial of modernity.
+
+
+Modernity is the face of late capitalism. It’s the face that has been primarily spreading over the last 50 years through a series of technological expansions that have made the global economy as we know it now possible. It is identified by hyper-technology and hyper-specialization.
+
+
+Let’s face it; the capitalists know what they are doing. In the period leading up to World War I and through World War II the threat of proletariat revolution was probably never so strongly felt. Both wars were fought in part to break this revolutionary spirit.But it didn’t end there. In the post war periods the capitalists knew that any kind of major restructuring would have to work against that level of class consciousness. Breaking the ability to organize was central. Our global economy made sense not only in economic terms, but in social terms. The concrete realities of class cohesion were shaken. Most importantly, with global production, a proletarian revolution couldn’t feed and provide for itself. This is one of the primary causes for the ‘failure’ of the socialist revolutions in Russia, China, Nicaragua and Cuba to name just a few.
+
+
+The structure of modernity is anti-class consciousness. In industrialized nations, most of the work force is service oriented. People could very easily take over any number of stores and Wal-Marts, but where would this get us? The periphery and core of modern capitalism are spread across the world. A revolution would have to be global, but would it look any different in the end? Would it be any more desirable?
+
+
+In industrializing nations which provide almost everything that the core needs, the reality of class consciousness is very real. But the situation is much the same. We have police and fall in line; they have an everyday reality of military intervention. The threat of state retaliation is much more real and the force of core states to keep those people in line is something most of us probably can’t imagine. But even should revolt be successful, what good are mono-cropped fields and sweatshops? The problem runs much deeper than what can be achieved by restructuring production.
+
+
+But, in terms of the industrial nations, the problem runs even deeper. The spirit of modernity is extremely individualistic. Even though that alone is destroying everything it means to be human, that’s what we’re up against. It’s like lottery capitalism: we believe that it is possible for each of us to strike it rich. We’re just looking out for number one. We’ll more than happily get rich or die trying.The post-modern ethos that defines our reality tells us that we have no roots. It feeds our passive nihilism that reminds us that we’re fucked, but there’s nothing we can do about it. God, Smith and Engels said so, now movies, music, and markets remind us.The truth is that in this context proletarian identity has little meaning. Classes still exist, but not in any revolutionary context. Study after study shows that most Americans consider them middle class. We judge by what we own rather than what we owe on credit cards. Borrowed and imagined money feeds an identity, a compromise, that we’re willing to sell our souls for more stuff.Our reality runs deeper than proletarian identity can answer. The anti-civilization critique points towards a much more primal source of our condition. It doesn’t accept myths of necessary production or work, but looks to a way of life where these things weren’t just absent, but where they were intentionally pushed away.
+
+
+It channels something that can be increasingly felt as modernity automates life. As development tears at the remaining ecosystems. As production breeds a completely synthetic life. As life loses meaning. As the earth is being killed.
+
+
+I advocate primal war. But this is not an anti-civilization form of class war. It’s not a tool for organizing, but a term for rage. A kind of rage felt at every step of the domestication process. A kind of rage that cannot be put into words. The rage of the primal self subdued by production and coercion. The kind of rage that will not be compromised.The kind of rage that can destroy civilization.
+
+
+It’s a question of identity.Are you a producer, distributor, owner, or a human being?Most importantly, do you want to reorganize civilization and its economics or will you settle for nothing less than their complete destruction?
+
+
+Taken from {\em Green Anarchy} \#18
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Kevin Tucker
+
+
+
+To Produce or Not to Produce
+
+
+
+Class, Modernity and Identity
+
+
+
+
+Fall \& Winter 2004/2005
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+
+
+Retrieved on December 26\high{th}, 2013 from Kevin Tucker’s Facebook page
+
+
+\stopalignment
+
+\stoptext
+
+

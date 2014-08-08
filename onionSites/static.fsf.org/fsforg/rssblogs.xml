@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns="http://purl.org/rss/1.0/">
+
+
+
+<channel rdf:about="http://www.fsf.org/blogs/recent-blog-posts/RSS">
+  <title>FSF's blog</title>
+  <link>http://www.fsf.org/blogs/recent-blog-posts</link>
+  <description>Writing by representatives of the Free Software Foundation. </description>
+  <image rdf:resource="http://www.fsf.org/logo.png"/>
+
+  <items>
+    <rdf:Seq>
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-8"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/licensing/introducing-micah-summer-intern-for-the-licensing-team-1"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/licensing/replace-your-proprietary-bios-with-libreboot"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/recap-of-friday-free-software-directory-irc-meetup-august-1"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/community/fsf-at-commonbound-conference-on-economic-equality"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/community/gnu-spotlight-with-karl-berry-18-new-gnu-releases-1"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/community/volunteers-translate-email-self-defense-guide-into-spanish-and-more"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-1"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/licensing/interview-with-tox"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/community/fsf-congratulates-uk-government-on-choosing-open-document-format"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-25"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/licensing/introducing-summer-licensing-intern-tyler-livingston"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-18"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/community/tell-the-fcc-net-neutrality-is-crucial-to-free-software"/>
+      
+      
+        <rdf:li rdf:resource="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-11"/>
+      
+    </rdf:Seq>
+  </items>
+
+</channel>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-8">
+    <title>Friday Free Software Directory IRC meetup: August 8</title>
+    <link>http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-8</link>
+    <description></description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Join the FSF and friends on Friday, August 8, from 2pm to 5pm EDT (18:00 to 21:00 UTC) to help improve the <a href="https://directory.fsf.org">Free Software Directory</a> by adding new entries and updating existing ones. We will be on IRC in the <a href="irc://irc.gnu.org/fsf">#fsf channel on freenode</a>.</p>
+<br /><p>Tens of thousands of people visit <a href="https://directory.fsf.org">directory.fsf.org</a> each month to discover free software. Each entry in the Directory contains a wealth of useful information, from basic category and descriptions, to providing detailed info about version control, IRC channels, documentation, and licensing info that has been carefully checked by FSF staff and trained volunteers.</p>
+<br /><p>While the Free Software Directory has been and continues to be a great resource to the world over the past decade, it has the potential of being a resource of even greater value. But it needs your help!</p>
+<br /><p>If you are eager to help and you can't wait or are simply unable to make it onto IRC on Friday, our <a href="https://directory.fsf.org/wiki/FSD:Participate"><em>participation guide</em></a> will provide you with all the information you need to get started on helping the Directory today!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-07T18:53:26Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/licensing/introducing-micah-summer-intern-for-the-licensing-team-1">
+    <title>Introducing Micah, summer intern for the Licensing Team</title>
+    <link>http://www.fsf.org/blogs/licensing/introducing-micah-summer-intern-for-the-licensing-team-1</link>
+    <description>Micah-Shalom Kesselman recently started working at the FSF as one of this summer's licensing interns. In this post, he writes about his interest in free software and what his goals are for his internship.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<img src="http://static.fsf.org/nosvn/licensing/micah.jpg" alt="Micah-Shalom Kesselman" style="float:right;padding-left:10px" />
+
+<p>Hello, my name is Micah. I am currently a second-year law student at Suffolk University Law School in Boston. My primary focus has been on the law surrounding copyrights, patents, and trademarks as well as software licensing. At the same time, I am also a returning undergraduate studying Computer Science at University of Massachusetts Boston.</p>
+<p>In my life before law school, I was a graduate student at University of Wisconsin—Milwaukee, in my hometown, where I studied Political Science. Prior to that, I completed my BA in Political Science and Philosophy at Purdue University in Indiana. I have always been fascinated by the intersection of technology and society and in law school that interest naturally culminated in a focus on software law and the use of software in the practice of law.</p>
+<p>I believe that law and software share the quality of being at their best when developed transparently and collaboratively. This belief drew my attention to software freedom. Exploring the many ways the two fields can support each other has been both rewarding and one I believe to be incredibly important to modern society. I am very interested in how a better understanding of the law and licenses that both developers and users are bound by can foster better software, not only technologically but also socially. On the flip side, I think it is clear that a better understanding of software and its workings has the potential to improve legal reasoning and policy consideration.</p>
+<p>During my summer at the FSF, I hope to obtain a better understanding of free software licensing and also a more informed view of the free software movement. As an intern for the Licensing Team, I will have the opportunity to answer licensing questions and assist on FSF projects. My desire is to conclude this summer having not only helped the FSF in its mission of software freedom and helping developers with their questions, but also to have obtained a fuller understanding of the concerns, considerations, and perceptions of software developers and users.</p>
+<p>This summer is sure to be a unique and rewarding experience. I am extremely excited to be working with the Licensing Team here at the Free Software Foundation.</p>
+<p><strong>More information about the FSF's internship program is at <a href="https://www.fsf.org/volunteer/internships">https://www.fsf.org/volunteer/internships</a>.</strong></p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-05T18:55:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/licensing/replace-your-proprietary-bios-with-libreboot">
+    <title>Replace your proprietary BIOS with Libreboot</title>
+    <link>http://www.fsf.org/blogs/licensing/replace-your-proprietary-bios-with-libreboot</link>
+    <description>Launch of the downstream Coreboot distro, Libreboot; RYF-certified Gluglug X60 laptop changes name to Libreboot X60.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>With the launch of the <a href="http://libreboot.org">Libreboot</a> project, users now have an easy-to-install, 100% free software replacement for proprietary BIOS/boot programs. This project is important; currently, many computer-makers notoriously deny free software developers the information they need to develop free replacements for the proprietary software they ship with their products. In some cases, manufacturers do not even share enough information for it to be possible to install a free operating system.</p>
+<img src="//static.fsf.org/nosvn/ryf/RYF.png" alt="ryf-certification-mark" width="200" class="imgright" />
+
+<p>In order to make it possible to run Libreboot on as many hardware platforms as possible, the project needs your help. Fortunately, there are a lot of simple and easy ways you can start supporting the project today, including buying a computer with Libreboot preinstalled, helping to test Libreboot by installing it on new systems, and directly contributing code and documentation to the project or to its upstream parent, Coreboot.</p>
+<p>In December 2013, we awarded the <a href="https://www.fsf.org/resources/hw/endorsement/respects-your-freedom">Respects Your Freedom (RYF)</a> certification mark to <a href="http://gluglug.org.uk">Gluglug</a> for their refurbished and updated X60 laptops.  In order to meet the FSF's RYF certification requirements, Francis Rowe of Gluglug had to be sure that the boot program he was distributing was 100% free software. Fortunately, the Coreboot project solved most of this problem for him. Francis was able to compile a version of Coreboot that ran on the X60 laptop, without requiring any proprietary firmware blobs. However, because Coreboot provides proprietary firmware blobs for several different chip-sets in the source code, Francis was still left with the task of removing those blobs from the source tree that he was distributing. At first, Francis did this deblobbing by hand. This spring, he launched the Libreboot project to formalize the process of deblobbing the Coreboot source tree.
+<img class="imgleft" src="//static.fsf.org/nosvn/ryf/ryf-x60-1.jpg" width="200/" />
+Coinciding with the release of Libreboot, Francis also decided to rebrand the laptop, changing the name from Gluglug X60 to <a href="http://shop.gluglug.org.uk/product/ibm-lenovo-thinkpad-x60-coreboot/"><em>Libreboot
+X60</em></a> (the RYF certification applies to the Libreboot X60 as well). You can support the development of Libreboot by buying a <a href="http://shop.gluglug.org.uk/product/ibm-lenovo-thinkpad-x60-coreboot/">Libreboot X60 laptop</a> today. All laptops come preinstalled with Libreboot and Trisquel GNU/Linux, and have been upgraded with a free software-friendly 802.11n wireless card.</p>
+<p>In addition to the X60 laptop, Libreboot now supports select models of the ThinkPad T60, the X60 Tablet (with digitizer) and certain models of the MacBook2,1 which use the same chip-sets as the X60.</p>
+<p>While we applaud and endorse Francis' work on Libreboot, it is important to note that neither the FSF nor Francis considers Libreboot
+a fork of Coreboot. The Libreboot project <a href="http://libreboot.org/docs/index.html#why">clarifies this fact</a> on its website with the following statement: "Libreboot is not a fork of Coreboot, despite misconceptions of this fact. Libreboot (downstream supplier) is a parallel effort which works closely with and rebases on the latest Coreboot (upstream supplier) every so often." The work done by both Libreboot and Coreboot are important and they need the support of the free software community if we hope to have more laptops bearing the RYF certification mark in the future.</p>
+<p>The Libreboot project has begun attracting some much-needed attention and support.  "From small patches, bug fixes, feature additions, suggestions for improvement, help with GnuPG (at the time of writing, recent Libreboot releases are now GnuPG-signed) and more. To all those that have contributed to Libreboot, I thank you and appreciate it!" stated Francis Rowe.</p>
+<p>If you have questions, or are interested in working on Libreboot, send an email to <a href="mailto:info@gluglug.org.uk">info@gluglug.org.uk</a> or drop by the <a href="irc://irc.gnu.org/libreboot">#libreboot</a> channel on the Freenode network.</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-05T14:50:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/recap-of-friday-free-software-directory-irc-meetup-august-1">
+    <title>Recap of Friday Free Software Directory IRC meetup: August 1</title>
+    <link>http://www.fsf.org/blogs/directory/recap-of-friday-free-software-directory-irc-meetup-august-1</link>
+    <description>Join the FSF and friends every Friday to help improve the Free Software Directory by adding new entries and updating existing ones.  </description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Today's Friday <a href="http://directory.fsf.org">Free Software Directory</a> IRC
+Meeting was energetic and productive -- as IRC newcomer noted: "what is this all about? I feel excited!". And, for good reason: this summer has been an exciting and productive one on the Directory.  One of the big reasons for this success is due to contributions of
+Morten "Jobbe" Jakobsen, who has been helping to run our IRC meetings,
+as well as to make sure that the many contributions and submissions
+from other volunteers are handled in a timely manner.  Jobbe and the
+other volunteers and contributors continue to increase as do the
+number of <a href="http://directory.fsf.org/wiki/Special:NewPages">new entries</a> and
+<a href="http://directory.fsf.org/wiki?title=Special:RecentChanges&amp;days=30&amp;from=">updates</a>.</p>
+<p>Four of the entries we published today were: </p>
+<ul>
+<li><a href="http://directory.fsf.org/wiki/Privacy_Badger">Privacy Badger</a>: Browser extension that detects and prevents third-party tracking (License: GPLv3+)</li>
+<li><a href="http://directory.fsf.org/wiki/Silicon_Empire">Silicon Empire</a>: Program to Burn CDs, DVDs and Blu-rays (License: GPLv3)</li>
+<li><a href="http://directory.fsf.org/wiki/Motif">Motif</a>: Distribution for the Motif user interface component toolkit (License: LGPLv2+)</li>
+<li><a href="http://directory.fsf.org/wiki/Mu">mu</a>: Maildir indexer/searcher + GNU Emacs mail client + Guile bindings (License: GPLv3+)</li>
+</ul>
+<p>In addition to publishing and updating entries, we also made some
+cosmetic improvements to our link icons and templates.</p>
+<p>We hope you can join Jobbe and the rest of us, too, next week! You can
+find out how to attend our Friday Free Software Directory IRC Meetings
+by checking our <a href="http://www.fsf.org/blogs/directory">blog</a> or
+subscribing to the <a href="http://static.fsf.org/fsforg/rss/directory.xml">RSS feed</a>.</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-01T22:31:35Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/community/fsf-at-commonbound-conference-on-economic-equality">
+    <title>FSF at CommonBound conference on economic equality</title>
+    <link>http://www.fsf.org/blogs/community/fsf-at-commonbound-conference-on-economic-equality</link>
+    <description>The FSF is happy to building bridges to new communities, and exploring
+the role of free software in social justice and economic change.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<table cellpadding="5" cellspacing="0" width="310" border="0" style="float:right;margin-left:10px">
+<tr>
+    <td style="padding:10px;background-color:#eeeeee;" align="center">
+        <img src="//static.fsf.org/nosvn/images/commonbound_zak.jpg" alt="" />
+        <div style="padding-top:10px;color:#444444">FSF campaigns manager Zak Rogoff (left) with René Pérez of the New Economy Coalition.</div>
+    </td>
+</tr>
+</table>
+
+<p>Last month, FSF campaigns manager Zak Rogoff attended
+<a href="http://commonbound.org">CommonBound</a>, a Boston conference for those working towards a more
+equitable and sustainable economy.</p>
+<p>Zak joined René Pérez of the <a href="http://neweconomy.net/new-economy-coalition">New Economy
+Coalition</a> on the panel
+"Opening access to the digital means of production: free software for
+a more equitable economy." The panel featured an exploration of
+existing and proposed free software business models, as well as a
+discussion with participants of varying free software experience, from
+seasoned hackers to economic justice activists discovering the <a href="https://www.gnu.org/philosophy/free-sw.html">four
+freedoms</a> for the first
+time.</p>
+<p>No matter where you are on the political spectrum, free software is
+important to achieve political autonomy. The FSF is happy to be
+building bridges to new communities, and exploring the role of free
+software in social justice and economic change. We look forward to
+sharing skills and ideas with diverse allies as we continue to foster
+an inclusive free software community.</p>
+<p>If you're interested in a conference experience focused on free
+software, check out LibrePlanet, the FSF's weekend-long event next
+spring, and <a href="https://libreplanet.org/2014/">sign up for updates on LibrePlanet
+2015</a>.</p>
+<p>We'd also be glad to speak at your event if we can make the trip. Send
+us an email at <a href="mailto:campaigns@fsf.org">&#99;&#97;&#109;&#112;&#97;&#105;&#103;&#110;&#115;&#64;&#102;&#115;&#102;&#46;&#111;&#114;&#103;</a> to get the conversation started. We
+also encourage supporters to give talks and host events in their
+communities. Check out our <a href="https://www.fsf.org/resources">resources</a>
+area if you'd like to get started with free software outreach.</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-01T19:09:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/community/gnu-spotlight-with-karl-berry-18-new-gnu-releases-1">
+    <title>GNU Spotlight with Karl Berry: 18 new GNU releases!</title>
+    <link>http://www.fsf.org/blogs/community/gnu-spotlight-with-karl-berry-18-new-gnu-releases-1</link>
+    <description>18 new GNU releases in the last month (as of July 26, 2014):</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<ul>
+<li><a href="https://www.gnu.org/software/coreutils/">coreutils-8.23</a></li>
+<li><a href="https://www.gnu.org/software/cssc/">cssc-1.4.0</a></li>
+<li><a href="https://www.gnu.org/software/datamash/">datamash-1.0.5</a></li>
+<li><a href="http://www.denemo.org/">denemo-1.1.6</a></li>
+<li><a href="https://www.gnu.org/software/emms/">emms-4.0</a></li>
+<li><a href="https://www.gnu.org/software/gcc/">gcc-4.9.1</a></li>
+<li><a href="https://www.gnu.org/software/gettext/">gettext-0.19.2</a></li>
+<li><a href="https://www.gnu.org/software/gforth/">gforth-0.7.3</a></li>
+<li><a href="https://www.gnu.org/software/gnudos/">gnudos-1.3</a></li>
+<li><a href="http://health.gnu.org/">gnuhealth-2.6.1</a></li>
+<li><a href="https://www.gnu.org/software/gnupg/">gnupg-1.4.18</a></li>
+<li><a href="https://www.gnu.org/software/gnupg/">gnupg-2.0.25</a></li>
+<li><a href="https://www.gnu.org/software/gsrc/">gsrc-2014.07.06</a></li>
+<li><a href="https://www.gnu.org/software/nano/">nano-2.3.6</a></li>
+<li><a href="https://www.gnu.org/software/parallel/">parallel-20140722</a></li>
+<li><a href="https://www.gnu.org/software/commoncpp/">ucommon-6.1.9</a></li>
+<li><a href="https://www.gnu.org/software/unifont/">unifont-7.0.03</a></li>
+<li><a href="https://www.gnu.org/software/xorriso/">xorriso-1.3.8</a></li>
+</ul>
+<p>To get announcements of most new GNU releases, subscribe to the info-gnu
+mailing list: <a href="https://lists.gnu.org/mailman/listinfo/info-gnu">https://lists.gnu.org/mailman/listinfo/info-gnu</a>. Nearly
+all GNU software is available from <a href="https://ftp.gnu.org/gnu/">https://ftp.gnu.org/gnu/</a>, or
+preferably one of its mirrors (<a href="https://www.gnu.org/prep/ftp.html">https://www.gnu.org/prep/ftp.html</a>). You
+can use the url <a href="http://ftpmirror.gnu.org/">http://ftpmirror.gnu.org/</a> to be automatically
+redirected to a (hopefully) nearby and up-to-date mirror.</p>
+<p>This month, we welcome Mose Giordano as a new co-maintainer of
+AUC-TeX, James Cloos as a new co-maintainer of a2ps (following his
+work on GNU enscript and trueprint), and Assaf Gordon as the author
+and maintainer of the new package datamash. Thanks to all.</p>
+<p>Also, please consider attending the GNU Hackers' Meeting
+<a href="https://www.gnu.org/ghm/">https://www.gnu.org/ghm/</a>, in Munich this year, August 15-17;
+attendance is gratis, but pre-registration is essential (and needs to
+be done immediately).</p>
+<p>A number of GNU packages, as well as the GNU operating system as a
+whole, are looking for maintainers and other assistance: please see
+<a href="https://www.gnu.org/server/takeaction.html#unmaint">https://www.gnu.org/server/takeaction.html#unmaint</a> if you'd like to
+help. The general page on how to help GNU is at
+<a href="https://www.gnu.org/help/help.html">https://www.gnu.org/help/help.html</a>. To submit new packages to the
+GNU operating system, see <a href="https://www.gnu.org/help/evaluation.html">https://www.gnu.org/help/evaluation.html</a>.</p>
+<p>As always, please feel free to write to me, <a href="mailto:karl@gnu.org">&#107;&#97;&#114;&#108;&#64;&#103;&#110;&#117;&#46;&#111;&#114;&#103;</a>, with any
+GNUish questions or suggestions for future installments.</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-01T18:31:32Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/community/volunteers-translate-email-self-defense-guide-into-spanish-and-more">
+    <title>Volunteers translate Email Self-Defense guide into Spanish, Romanian, and more</title>
+    <link>http://www.fsf.org/blogs/community/volunteers-translate-email-self-defense-guide-into-spanish-and-more</link>
+    <description>Free software community rallies around FSF to translate Email Self-Defense into still more languages.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<img style="float:right;padding-left:10px" src="//static.fsf.org/nosvn/images/web_of_trust.png" alt="Email Self-Defense" />
+
+<p>When the FSF launched our <a href="https://emailselfdefense.fsf.org">guide to personal email encryption</a> last
+month, it was enthusiastically received by English-speakers looking
+for an easy way to get started fighting bulk surveillance. Our community then came together to translate it and bring it to speakers of
+six more languages. Today we're launching the second round of
+translations: <a href="https://emailselfdefense.fsf.org/es">Spanish</a>, <a href="https://emailselfdefense.fsf.org/ro">Romanian</a>, <a href="https://emailselfdefense.fsf.org/it">Italian</a>,
+and <a href="https://emailselfdefense.fsf.org/el">Greek</a>.</p>
+<p>This guide started as an effort of the FSF and some skilled graphic
+and Web designers, but it's become a worldwide effort by free software
+activists translating in more than ten countries. This kind of
+teamwork is what our movement is all about, and the FSF is thrilled to
+facilitate it.</p>
+<p>The Free Software Foundation provides the infrastructure and
+professional management for our community of translators, and
+rigorously researches and refines the material in Email
+Self-Defense. We also maintain Edward, the multilingual encryption
+reply bot program. We've spent a lot of time and energy on this guide
+so far, and we want to spend more, but we need resources.</p>
+<p><strong><a href="https://u.fsf.org/10t">Can you donate to help us recoup some of the cost we've put into
+  creating this guide and fostering a community around it?</a></strong></p>
+<p>Your donation will also enable us to make technical infrastructure
+improvements to EmailSelfDefense.fsf.org to make it easy to translate
+into more languages, and hopefully let us add a set of instructions
+for using encryption on mobile devices.</p>
+<p><strong>Our goal is to make email encryption approachable for people
+  speaking any language and using any device, while also using the
+  guide to deliver a clear message about the importance of free
+  software.</strong></p>
+<p>If you'd like to create a version for a language that we haven't
+published yet, or help maintain one of the existing translations,
+please send an email to <a href="mailto:campaigns@fsf.org">&#99;&#97;&#109;&#112;&#97;&#105;&#103;&#110;&#115;&#64;&#102;&#115;&#102;&#46;&#111;&#114;&#103;</a> telling us about your
+experiences with translating.</p>
+<p>We're also looking for people to join the <a href="https://www.gnu.org/server/standards/README.translations">GNU.org translation
+team</a> and create translated versions of Richard Stallman's article
+<a href="https://www.gnu.org/philosophy/surveillance-vs-democracy">"How Much Surveillance Can Democracy Withstand?"</a> The article
+makes the point that, to fight bulk surveillance, we need to reduce
+the amount of data that is collected about our lives in general (both
+by government and private entities).</p>
+<p>Thank you for being such a supportive community, and coming forward to
+help us with this project. We're happy to be making it easier for you
+to protect your privacy and put up a defense against surveillance.</p>
+<p><em>Please email us at <a href="mailto:donate@fsf.org">&#100;&#111;&#110;&#97;&#116;&#101;&#64;&#102;&#115;&#102;&#46;&#111;&#114;&#103;</a> if you'd like to donate in Euros.</em></p>
+<p><em>Languages: English, <a href="https://fsf.org/ro/blogs/voluntari-de-pretutindeni-traduc-in-spaniola-si-in-alte-limbi-ghidul-protejarea-corespondentei-electronice">română</a>, <a href="https://fsf.org/es/la-comunidad-del-software-libre-se-une-en-torno-a-la-fsf-para-traducir-la-defensa-personal-del-correo-electronico-a-mas-idiomas">español</a></em></p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-08-01T15:25:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-1">
+    <title>Friday Free Software Directory IRC meetup: August 1</title>
+    <link>http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-august-1</link>
+    <description></description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Join the FSF and friends on Friday, August 1, from 2pm to 5pm EDT (18:00 to 21:00 UTC) to help improve the <a href="https://directory.fsf.org">Free Software Directory</a> by adding new entries and updating existing ones. We will be on IRC in the <a href="irc://irc.gnu.org/fsf">#fsf channel on freenode</a>.</p>
+<br /><p>Tens of thousands of people visit <a href="https://directory.fsf.org">directory.fsf.org</a> each month to discover free software. Each entry in the Directory contains a wealth of useful information, from basic category and descriptions, to providing detailed info about version control, IRC channels, documentation, and licensing info that has been carefully checked by FSF staff and trained volunteers.</p>
+<br /><p>While the Free Software Directory has been and continues to be a great resource to the world over the past decade, it has the potential of being a resource of even greater value. But it needs your help!</p>
+<br /><p>If you are eager to help and you can't wait or are simply unable to make it onto IRC on Friday, our <a href="https://directory.fsf.org/wiki/FSD:Participate"><em>participation guide</em></a> will provide you with all the information you need to get started on helping the Directory today!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-30T22:04:03Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/licensing/interview-with-tox">
+    <title>Interview with Tox.im</title>
+    <link>http://www.fsf.org/blogs/licensing/interview-with-tox</link>
+    <description>This is the latest installment of our Licensing and Compliance Lab's
+series on free software developers who choose GNU licenses for their
+works.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<img src="//static.fsf.org/nosvn/licensing/tox-logo.png" alt="Tox.im logo" style="float:right;padding-left:10px" />
+
+<p>In this edition, we conducted an email-based interview with David Lohle
+from the Tox project, an all-in-one communication platform and
+protocol that ensures users full privacy and secure message
+delivery. The <a href="https://directory.fsf.org/wiki/Tox">Tox core library</a>
+is licensed under the terms of GNU GPL version 3, or (at your option)
+any later version. The library implements the Tox protocol and
+provides an API for clients, such as
+<a href="https://directory.fsf.org/wiki/Venom">Venom</a> and
+<a href="https://directory.fsf.org/wiki/Toxic">Toxic</a>.</p>
+<h2>Tell us about yourself</h2>
+<p>We're the Tox Foundation, creators of <a href="https://tox.im">Tox</a>, a secure
+and distributed multimedia messenger. Our core developer team consists
+of people from Canada, Germany, the US, and more. Though we speak
+different languages and represent diverse cultures, we are dedicated
+to working together on our common goal: to create a product we think
+is necessary in a world where our privacy is often overlooked.</p>
+<h2>What inspired you to create Tox?</h2>
+<p>After the initial leaks from Edward Snowden, we decided to take a look
+at what chat programs we could use that would respect our
+privacy. Unfortunately, at the time, all other existing
+implementations were either too convoluted to convince our friends to
+use or were proprietary, so we decided that Tox was a necessary
+project.</p>
+<h2>How are people using it?</h2>
+<p>Right now, people are using Tox to talk with their family in a more
+secure way than what other big-name, proprietary competitors
+offer. People from all over the world are joining group chats to talk
+about their favorite hobbies, and friends are getting together to
+discuss weekend plans. We even have plugins that allow for Tox-to-IRC
+and vice versa conversations. Audio calling is available in a select
+few clients right now, so people are even using Tox to perhaps speak
+with one another while they play a video game. Tox itself is a
+protocol, so it can be adapted to anything you can imagine. Some
+people have even used Tox as a file sync, safely synchronizing between
+their computers.</p>
+<h2>What features do you think really sets Tox apart from similar software?</h2>
+<p>Perhaps it's not so much a feature as an ideology, but Tox focuses on
+simplicity and security without compromise. There are a lot of great
+privacy-minded instant messengers out there; unfortunately, they
+really fall short in the user experience department. If Tox's goal is
+to get secure messaging in the hands of the masses, then we need to
+develop a set of software with a minimal learning curve. Cryptography
+and security are complex tasks that require special care, and Tox
+takes it a step further by hiding most of the configuration and other
+steps it usually takes to set up a competing messenger
+program. However, this does not mean we prevent tinkering. We're
+excited to see more advanced users toy around and customize Tox to
+their own liking, but we're also excited to see that beginners can
+pick up Tox and not have to sit through a video tutorial detailing how
+to add a friend.</p>
+<p>When we near a finalized product, we're not going to market Tox as a
+secure messenger as much as we do on it's simplicity and ease. By
+focusing on what people care about, such as group chats and a
+streamlined experience, we can achieve our goal of a safe,
+eavesdrop-free messaging platform for all.</p>
+<h2>Why did you choose the GPLv3 as Tox's license?</h2>
+<p>When we started Tox, we wanted a platform that was easily modified,
+shared, and redistributed—a community is a project's strongest
+asset. Since most of us already supported free software, our initial
+discussions wavered between using a permissive license versus a strong
+copyleft license, and we ultimately chose GPL Version 3 in the
+end. Its simplicity, clarity, and strong patent protection affords our
+community large freedoms in changing our software, while protecting us
+from malicious intents.</p>
+<h2>How can users (technical or otherwise) help contribute to Tox?</h2>
+<p>We greatly appreciate all efforts, no matter how small (we're even
+grateful for the grammar-related commits). If you know a programming
+language, and wish to help develop a client, you can visit
+<a href="https://wiki.tox.im/Clients">https://wiki.tox.im/Clients</a> and see what you can offer. If you
+fluently speak a language other than English, and want to help
+translate Tox clients into other locales, browse our wiki at
+<a href="https://wiki.tox.im">https://wiki.tox.im</a> for projects you could contribute to.</p>
+<p>We're also very interested in other's constructive criticism, as no
+project is ever perfect. Feedback is what fuels Tox, so if you have
+something to say, drop us a comment at <a href="mailto:comments@tox.im">&#99;&#111;&#109;&#109;&#101;&#110;&#116;&#115;&#64;&#116;&#111;&#120;&#46;&#105;&#109;</a> and we'll try
+our best to incorporate suggestions and improve from
+critique. Everyone can have a role in helping to push Tox forward,
+even if that just means telling your friends about us.</p>
+<h2>What's the next big thing for Tox?</h2>
+<p>We're currently working on implementing audio and video in all of the
+main Tox clients. It's a fairly momentous task, so it might take some
+time, but we feel it's imperative to have proper video calling in
+order to move forward. Due of the nature of Git and a large community,
+we're able to work on multiple tasks at once—group chatting, for
+example—but we're trying to focus most of our efforts on A/V.</p>
+<p><em>Enjoyed this interview? Check out our previous entry in this series featuring <a href="https://fsf.org/blogs/licensing/interview-with-ciaran-gultnieks-of-f-droid">Ciaran Gultnieks of F-Droid</a>.</em></p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    
+      <dc:subject>GPL-interview</dc:subject>
+    
+    <dc:date>2014-07-30T01:26:49Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/community/fsf-congratulates-uk-government-on-choosing-open-document-format">
+    <title>FSF congratulates UK Government on choosing Open Document Format</title>
+    <link>http://www.fsf.org/blogs/community/fsf-congratulates-uk-government-on-choosing-open-document-format</link>
+    <description>If you live in the UK, you'll soon be able to fill out government
+paperwork with your freedoms intact. The British government announced
+last week that Open Document Format (ODF), HTML, and PDF will be the
+official file formats used by all government agencies.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<img src="//static.fsf.org/nosvn/ODF-logo.jpg" alt="OpenDocument" style="float:right;padding-left:10px" />
+
+<p>According to a <a href="https://www.gov.uk/government/news/open-document-formats-selected-to-meet-user-needs">press release</a> from the Cabinet Office, "The
+standards set out the document file formats that are expected to be
+used across all government bodies. Government will begin using open
+formats that will ensure that citizens and people working in
+government can use the applications that best meet their needs when
+they are viewing or working on documents together."</p>
+<p>The Free Software Foundation applauds the British government's
+decision to make ODF its official file format. We are especially happy
+that the decision excludes use of Microsoft's OOXML format, which is
+not fully free and would prevent the goal of interoperability. Now
+British citizens can use free software like <a href="https://www.libreoffice.org/discover/libreoffice/">LibreOffice</a> without
+worrying that they'll have trouble applying for a passport, reading
+court documents, or getting their pensions.</p>
+<p>The British government's adoption of ODF will make it harder for
+laggards to ignore the standard file format, and <a href="https://www.gnu.org/philosophy/government-free-software">could inspire other
+governments to make the switch</a>. After all, it's unethical to spend
+public funds on proprietary software that hinders interoperability and
+forces citizens to use the same software or miss out on access to
+vital government documents.</p>
+<h3>What's so great about ODF?</h3>
+<p>Users can read and write OpenDocument files without agreeing to
+proprietary software licenses and programmers are free to write
+applications that support ODF without fear of patent claims or
+licensing issues. Governments, businesses, and archivists can use ODF
+to ensure critical documents can be read for years to come, without
+being forced to pay for updates to proprietary software.</p>
+<p>Using free formats is one of the easiest and most important things we
+can do to defend software freedom. We also need to reject proprietary
+formats from Microsoft Office and Apple's iWork (.doc[x], .ppt[x],
+etc.). At the FSF, we use only free formats in our office and we're
+proud to work with the LibreOffice project as a member of the
+<a href="https://www.documentfoundation.org">Document Foundation's</a> Advisory Board.</p>
+<p>So, all of you in the UK who've kept a copy of Microsoft Office around
+for official business, now you can ditch the proprietary office suite
+and upgrade to one that respects your freedom: <a href="https://www.libreoffice.org/discover/libreoffice/">LibreOffice</a>.</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-29T20:57:03Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-25">
+    <title>Friday Free Software Directory IRC meetup: July 25</title>
+    <link>http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-25</link>
+    <description></description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Join the FSF and friends on Friday, July 25, from 2pm to 5pm EDT (18:00 to 21:00 UTC) to help improve the <a href="https://directory.fsf.org">Free Software Directory</a> by adding new entries and updating existing ones. We will be on IRC in the <a href="irc://irc.gnu.org/fsf">#fsf channel on freenode</a>.</p>
+<br /><p>Tens of thousands of people visit <a href="https://directory.fsf.org">directory.fsf.org</a> each month to discover free software. Each entry in the Directory contains a wealth of useful information, from basic category and descriptions, to providing detailed info about version control, IRC channels, documentation, and licensing info that has been carefully checked by FSF staff and trained volunteers.</p>
+<br /><p>While the Free Software Directory has been and continues to be a great resource to the world over the past decade, it has the potential of being a resource of even greater value. But it needs your help!</p>
+<br /><p>If you are eager to help and you can't wait or are simply unable to make it onto IRC on Friday, our <a href="https://directory.fsf.org/wiki/FSD:Participate"><em>participation guide</em></a> will provide you with all the information you need to get started on helping the Directory today!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-24T04:52:31Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/licensing/introducing-summer-licensing-intern-tyler-livingston">
+    <title>Introducing Tyler Livingston, a summer Licensing Team intern</title>
+    <link>http://www.fsf.org/blogs/licensing/introducing-summer-licensing-intern-tyler-livingston</link>
+    <description>Tyler Livingston is one of the Licensing Team's summer interns. In this post he discusses
+the importance of free software and his personal interests.</description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<img src="http://static.fsf.org/nosvn/licensing/interns/2014/tyler.jpg" alt="Tyler Livingston" style="float:right;padding-left:10px" />
+
+<p>Hello. I am a rising Third Year law student at SMU Dedman School of Law in
+Dallas, TX. I am working hard to master the technical aspects of law,
+electronics, and software. My current interests involve protecting
+individuals and investigating new technology, particularly in the
+communications field by utilizing licenses for authorship, art,
+and inventions. Prior to law school, I attained a bachelor's degree in
+History at the University of Texas at Dallas.</p>
+<p>Licensing is where I began to be involved with free software; the FSF
+in particular utilizes a great strategy of working within the current
+licensing jurisprudence by using copyleft to support freedom
+and empowerment for users over their computers and software. My
+computer science skills are lacking, but I have worked with UNIX
+systems in the past and am now finally feeling comfortable enough to
+make a permanent switch to enjoy software on my own terms. Other
+interests include electronics and travel (with a trip planned to
+Eastern Europe later this year).</p>
+<p>Over the summer I will be working with the licensing department on
+various projects, including the <a href="https://directory.fsf.org">Free Software Directory</a>,
+publications, and hopefully a bit of the nitty-gritty licensing terms
+and compliance issues. The number one priority for my time at the FSF is to
+learn. Collaboration brings together society and carries with it
+several other natural positive externalities. I hope to integrate into
+the free software community because it is an integral cog of the free
+software movement. I am extremely excited to reach out to others and
+soak up as much as I can from this enthralling environment.</p>
+<p>I encourage all to contact me at <a href="mailto:tlivingston@fsf.org">&#116;&#108;&#105;&#118;&#105;&#110;&#103;&#115;&#116;&#111;&#110;&#64;&#102;&#115;&#102;&#46;&#111;&#114;&#103;</a>.</p>
+<p><em>More information about the FSF's internship program is available at <a href="https://www.fsf.org/volunteer/internships">https://www.fsf.org/volunteer/internships</a>.</em></p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-21T16:45:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-18">
+    <title>Friday Free Software Directory IRC meetup: July 18</title>
+    <link>http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-18</link>
+    <description></description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Join the FSF and friends on Friday, July 18, from 2pm to 5pm EDT (18:00 to 21:00 UTC) to help improve the <a href="https://directory.fsf.org">Free Software Directory</a> by adding new entries and updating existing ones. We will be on IRC in the <a href="irc://irc.gnu.org/fsf">#fsf channel on freenode</a>.</p>
+<br /><p>Tens of thousands of people visit <a href="https://directory.fsf.org">directory.fsf.org</a> each month to discover free software. Each entry in the Directory contains a wealth of useful information, from basic category and descriptions, to providing detailed info about version control, IRC channels, documentation, and licensing info that has been carefully checked by FSF staff and trained volunteers.</p>
+<br /><p>While the Free Software Directory has been and continues to be a great resource to the world over the past decade, it has the potential of being a resource of even greater value. But it needs your help!</p>
+<br /><p>If you are eager to help and you can't wait or are simply unable to make it onto IRC on Friday, our <a href="https://directory.fsf.org/wiki/FSD:Participate"><em>participation guide</em></a> will provide you with all the information you need to get started on helping the Directory today!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-16T19:22:16Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/community/tell-the-fcc-net-neutrality-is-crucial-to-free-software">
+    <title>Tell the FCC: Net Neutrality is crucial to free software</title>
+    <link>http://www.fsf.org/blogs/community/tell-the-fcc-net-neutrality-is-crucial-to-free-software</link>
+    <description>The Federal Communications Commission (FCC) needs to be convinced that Net Neutrality is worth saving. </description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p><span style="color:#c0392b"><strong>UPDATE: The FCC has extended the comment deadline for the first comment period to Friday, July 18, 2014 at midnight. Why the extension? The FCC's servers are crashing--they can't seem to handle the number of public comments coming in. Keep 'em coming!</strong></span></p>
+<p>The agency has asked members of the public, along with industry leaders and entrepreneurs, to tell it why Internet Service Providers should be banned from traffic discrimination. This comment window is one of the best opportunities
+we've had to make an impact. <strong>Comments for the first comment period are due July 18, 2014.</strong> <a href="https://dearfcc.org">Submit your statement in support of Net Neutrality right away</a> using the Electronic Frontier Foundation's free software commenting tool.</p>
+<p>Net neutrality, the principle that all traffic on the Internet should
+be treated equally, should be a basic right for Internet users. It's
+also crucial for free software's continued growth and success. Here's
+why:</p>
+<p>Media distribution giants that use <a href="https://www.defectivebydesign.org/what_is_drm_digital_restrictions_management">Digital Restrictions
+Management</a> and proprietary software to control what's on your
+computer have also been fighting for years to control the
+network. Without Net Neutrality, DRM-laden materials could be easier
+to access, while DRM-free competitors could be stuck in the slow
+lane. Web-based free software projects like GNU MediaGoblin could also
+suffer the slow treatment while competitors like YouTube shell out big
+bucks for speedier service. The bottom line--an Internet where the
+most powerful interests can pay for huge speed advantages could push
+smaller free software projects right off the map and make it harder
+for decentralized projects to flourish. That's not good for free
+software, and it's not good for other innovative voices for change in
+the digital world.</p>
+<p><strong><a href="https://dearfcc.org">Tell the FCC: Net Neutrality will help free software flourish</a></strong></p>
+<p>Activists have worked for years to get to this moment. Over the last
+several months, things have really heated up--with Internet freedom
+lovers camping out outside of the FCC, serenading FCC Chairman Tom
+Wheeler with a special version "Which Side Are You On?" The comments
+flooding in to the agency have jammed the phones and crashed the FCC's
+email servers. And yet, Chairman Wheeler still thinks he can get away
+with ignoring overwhelming public outrage and wrecking the free
+Internet. We have to keep up our historic momentum in order to
+convince a cable-industry sympathizer like Chairman Wheeler to listen
+to the public and protect Net Neutrality.</p>
+<p>The deadline for comments is July 18, 2014. <strong><a href="https://dearfcc.org">Don't
+delay--comment now</a></strong>!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-14T22:20:00Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+  <item rdf:about="http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-11">
+    <title>Friday Free Software Directory IRC meetup: July 11</title>
+    <link>http://www.fsf.org/blogs/directory/friday-free-software-directory-irc-meetup-july-11</link>
+    <description></description>
+    <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>Join the FSF and friends on Friday, July 11, from 2pm to 5pm EDT (18:00 to 21:00 UTC) to help improve the <a href="https://directory.fsf.org">Free Software Directory</a> by adding new entries and updating existing ones. We will be on IRC in the <a href="irc://irc.gnu.org/fsf">#fsf channel on freenode</a>.</p>
+<br /><p>Tens of thousands of people visit <a href="https://directory.fsf.org">directory.fsf.org</a> each month to discover free software. Each entry in the Directory contains a wealth of useful information, from basic category and descriptions, to providing detailed info about version control, IRC channels, documentation, and licensing info that has been carefully checked by FSF staff and trained volunteers.</p>
+<br /><p>While the Free Software Directory has been and continues to be a great resource to the world over the past decade, it has the potential of being a resource of even greater value. But it needs your help!</p>
+<br /><p>If you are eager to help and you can't wait or are simply unable to make it onto IRC on Friday, our <a href="https://directory.fsf.org/wiki/FSD:Participate"><em>participation guide</em></a> will provide you with all the information you need to get started on helping the Directory today!</p>]]></content:encoded>
+    <dc:publisher>No publisher</dc:publisher>
+    <dc:creator></dc:creator>
+    <dc:rights></dc:rights>
+    <dc:date>2014-07-09T15:56:57Z</dc:date>
+    <dc:type>Blog Entry</dc:type>
+  </item>
+
+
+
+</rdf:RDF>

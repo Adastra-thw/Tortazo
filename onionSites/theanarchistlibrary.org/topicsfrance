@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     France | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="france">France</h3>
+<ol>
+
+  <li>
+   <a href="/library/anonymous-about-the-tarnac-9">
+   About the Tarnac 9
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/andre-veidaux-abscontrition">
+   Abscontrition
+   </a>
+  
+  
+      
+          (<a href="/authors/andre-veidaux">André Veidaux</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/an-anarchist-without-the-habit-of-deconstruction-a-difficult-subject">
+   A difficult subject
+   </a>
+  
+  
+      
+          (<a href="/authors/an-anarchist-without-the-habit-of-deconstruction">An anarchist without the habit of deconstruction</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-a-difficult-subject">
+   A difficult subject
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/paul-reclus-anarchist">
+   Anarchist
+   </a>
+  
+  
+      
+          (<a href="/authors/paul-reclus">Paul Reclus</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-anarchists-and-the-french-algerian-war">
+   Anarchists and the French-Algerian War
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sebastien-faure-the-anarchist-synthesis">
+   The Anarchist Synthesis
+   </a>
+  
+  
+      
+          (<a href="/authors/sebastien-faure">Sébastien Faure</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/arthur-ranc-anarchy">
+   Anarchy
+   </a>
+  
+  
+      
+          (<a href="/authors/arthur-ranc">Arthur Ranc</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-articles-from-machete-1">
+   Articles from “Machete” #1
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/anonymous">Anonymous</a>, <a href="/authors/benjamin-peret">Benjamin Péret</a>, <a href="/authors/emile-armand">Émile Armand</a>, <a href="/authors/ricardo-flores-magon">Ricardo Flores Magón</a>, <a href="/authors/zo-d-axa">Zo d’Axa</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/melvin-w-jackson-aw-sit-down">
+   Aw, Sit Down!
+   </a>
+  
+  
+      
+          (<a href="/authors/melvin-w-jackson">Melvin W. Jackson</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/jacques-camatte-beaubourg-future-cancer">
+   Beaubourg: Future Cancer?
+   </a>
+  
+  
+      
+          (<a href="/authors/jacques-camatte">Jacques Camatte</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/jacqueline-v-behind-the-barricades">
+   Behind the Barricades
+   </a>
+  
+  
+      
+          (<a href="/authors/jacqueline-v">Jacqueline V.</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-black-flag">
+   The Black Flag
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/joseph-jean-marie-tortelier-campaign-poster-for-the-election-of-nov-16-1890-quartier-clignancou">
+   Campaign poster for the election of Nov. 16, 1890, Quartier Clignancourt.
+   </a>
+  
+  
+      
+          (<a href="/authors/joseph-jean-marie-tortelier">Joseph Jean-Marie Tortelier</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-capital-and-the-capitalists">
+   Capital and the Capitalists
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/robert-scalapino-and-george-t-yu-the-chinese-anarchist-movement">
+   The Chinese Anarchist Movement
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/george-t-yu">George T. Yu</a>, <a href="/authors/robert-scalapino">Robert Scalapino</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/comite-invisible-the-coming-insurrection">
+   The Coming Insurrection
+   </a>
+  
+  
+      
+          (<a href="/authors/comite-invisible">comité invisible</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/research-and-destroy-communique-from-an-absent-future-the-terminus-of-student-life">
+   Communique from an Absent Future: The Terminus of Student Life
+   </a>
+  
+  
+      
+          (<a href="/authors/research-and-destroy">Research and Destroy</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/guerre-au-paradis-considerations-on-nihilism">
+   Considerations on Nihilism
+   </a>
+  
+  
+      
+          (<a href="/authors/guerre-au-paradis">Guerre au Paradis</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/charles-malato-a-conversation-with-charles-malato">
+   A Conversation with Charles Malato
+   </a>
+  
+  
+      
+          (<a href="/authors/charles-malato">Charles Malato</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/auguste-vaillant-courtroom-speech">
+   Courtroom speech
+   </a>
+  
+  
+      
+          (<a href="/authors/auguste-vaillant">Auguste Vaillant</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-documents-from-france">
+   Documents from France
+   </a>
+  
+  
+      
+          (<a href="/authors/various-authors">Various Authors</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/octave-mirbeau-elections">
+   Elections
+   </a>
+  
+  
+      
+          (<a href="/authors/octave-mirbeau">Octave Mirbeau</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/james-guillaume-federalism">
+   Federalism
+   </a>
+  
+  
+      
+          (<a href="/authors/james-guillaume">James Guillaume</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-forgotten-heroes-spanish-resistance-in-france-1939-45">
+   Forgotten Heroes: Spanish Resistance in France 1939–45
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/giovanna-berneri-the-french-anarchist-movement">
+   The French Anarchist Movement
+   </a>
+  
+  
+      
+          (<a href="/authors/giovanna-berneri">Giovanna Berneri</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/emile-zola-germinal">
+   Germinal
+   </a>
+  
+  
+      
+          (<a href="/authors/emile-zola">Émile Zola</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/paul-berthelot-the-gospel-of-the-hour">
+   The Gospel of the Hour
+   </a>
+  
+  
+      
+          (<a href="/authors/paul-berthelot">Paul Berthelot</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/andrew-flood-haiti-a-history-of-intervention-occupation-and-resistance">
+   Haiti: a history of intervention, occupation and resistance
+   </a>
+  
+  
+      
+          (<a href="/authors/andrew-flood">Andrew Flood</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-infinite-strike">
+   Infinite Strike
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-in-the-most-free-state-of-the-world">
+   In The Most Free State of the World
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/guerre-au-paradis-in-the-thick-of-it">
+   In the Thick of It
+   </a>
+  
+  
+      
+          (<a href="/authors/guerre-au-paradis">Guerre au Paradis</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-it-s-been-four-years-since-zoe-died">
+   It’s been four years since Zoé died
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ravage-editions-kick-it-till-it-breaks">
+   Kick It Till It Breaks
+   </a>
+  
+  
+      
+          (<a href="/authors/ravage-editions">Ravage Editions</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/octave-garnier-a-letter-from-garnier">
+   A Letter from Garnier
+   </a>
+  
+  
+      
+          (<a href="/authors/octave-garnier">Octave Garnier</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/clement-duval-a-letter-from-cleement-duval">
+   A Letter from Mazas Prison
+   </a>
+  
+  
+      
+          (<a href="/authors/clement-duval">Clément Duval</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/isa-letter-from-the-prison-of-lille-sequedin-france">
+   Letter from the Prison of Lille-Séquedin (France)
+   </a>
+  
+  
+      
+          (<a href="/authors/isa">Isa</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bruno-and-ivan-letter-from-the-prisons-of-fresnes-and-villepinte-in-france">
+   Letter from the Prisons of Fresnes and Villepinte in France
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/bruno">Bruno</a>, <a href="/authors/ivan">Ivan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/pierre-joseph-proudhon-the-malthusians">
+   The Malthusians
+   </a>
+  
+  
+      
+          (<a href="/authors/pierre-joseph-proudhon">Pierre-Joseph Proudhon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-manifesto-of-nihilist-women">
+   Manifesto of Nihilist Women
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/val-basilio-the-merchants-of-life">
+   The Merchants of Life
+   </a>
+  
+  
+      
+          (<a href="/authors/val-basilio">Val Basilio</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anarchists-never-vote">
+   Never vote…
+   </a>
+  
+  
+      
+          (<a href="/authors/anarchists">Anarchists</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/olivier-and-dan-nothing-to-declare-why-we-refuse-to-participate-in-our-own-repression">
+   “Nothing to declare” : Why we refuse to participate in our own repression
+   </a>
+  
+  
+      
+          (<a href="/authors/olivier-and-dan">Olivier and Dan</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/michel-onfray-on-palante">
+   On Palante
+   </a>
+  
+  
+      
+          (<a href="/authors/michel-onfray">Michel Onfray</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-open-letter-to-some-italian-anarchists">
+   Open letter to some Italian anarchists
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/emile-armand-our-rule-of-ideological-conduct-manifesto-of-the-journal-l-en-dehors">
+   Our Rule of Ideological Conduct: Manifesto of the journal L’En-Dehors
+   </a>
+  
+  
+      
+          (<a href="/authors/emile-armand">Émile Armand</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/michel-onfray-preface-to-georges-palante-the-individualist-sensibility">
+   Preface to “Georges Palante: The Individualist Sensibility”
+   </a>
+  
+  
+      
+          (<a href="/authors/michel-onfray">Michel Onfray</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/charles-malato-preface-to-socialist-documents">
+   Preface to “Socialist Documents”
+   </a>
+  
+  
+      
+          (<a href="/authors/charles-malato">Charles Malato</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/erik-buelinckx-proudhon-s-influence-in-belgium-nationalism-and-culture">
+   Proudhon’s influence in Belgium: nationalism and culture
+   </a>
+  
+  
+      
+          (<a href="/authors/erik-buelinckx">Erik Buelinckx</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/charles-malato-religions">
+   Religions
+   </a>
+  
+  
+      
+          (<a href="/authors/charles-malato">Charles Malato</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/two-members-of-the-march-22nd-movement-revolt-in-france-repression-unveiled">
+   Revolt in France: Repression Unveiled
+   </a>
+  
+  
+      
+          (<a href="/authors/two-members-of-the-march-22nd-movement">Two Members of the March 22nd Movement</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/han-ryner-the-revolt-of-the-machines">
+   The Revolt of the Machines
+   </a>
+  
+  
+      
+          (<a href="/authors/han-ryner">Han Ryner</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/le-retif-the-revolutionary-illusion">
+   The Revolutionary Illusion
+   </a>
+  
+  
+      
+          (<a href="/authors/victor-serge">Victor Serge</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/khaled-satour-secularism-the-celestial-city-and-the-revolutionary-left">
+   “Secularism,” the Celestial City and the Revolutionary Left
+   </a>
+  
+  
+      
+          (<a href="/authors/khaled-satour">Khaled Satour</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-frightened">
+   The Frightened
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/le-retif-their-peace">
+   Their Peace
+   </a>
+  
+  
+      
+          (<a href="/authors/victor-serge">Victor Serge</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-wind-is-blowing-let-s-sabotage-the-machinery-of-deportation">
+   The wind is blowing… Let’s sabotage the machinery of deportation
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/pierre-joseph-proudhon-toast-to-the-revolution">
+   Toast to the Revolution
+   </a>
+  
+  
+      
+          (<a href="/authors/pierre-joseph-proudhon">Pierre-Joseph Proudhon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only">
+   To French comrades concerning Tarnac arrests but not only
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alain-sergent-a-visit-to-l-anarchie">
+   A visit to L’anarchie
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/alain-sergent">Alain Sergent</a>, <a href="/authors/emile-armand">Émile Armand</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/octave-mirbeau-the-voters-strike">
+   The Voters Strike
+   </a>
+  
+  
+      
+          (<a href="/authors/octave-mirbeau">Octave Mirbeau</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-who-are-the-terrorists">
+   Who are the terrorists?
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/zo-d-axa-you-are-nothing-but-suckers">
+   You Are Nothing But Suckers
+   </a>
+  
+  
+      
+          (<a href="/authors/zo-d-axa">Zo d’Axa</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

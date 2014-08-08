@@ -1,0 +1,294 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/fr/SurveyMonkeyArticleType/How-do-I-copy-or-move-a-question-page-in-my-survey","l":"fr","id":"kA030000000hhHqCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"Les bases pour bien commencer"},{"subcats":[],"name":"creating-designing-surveys","label":"Conception du sondage"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"Distribuer des sondages"},{"subcats":[],"name":"analyzing-results","label":"Analyse des réponses"},{"subcats":[],"name":"managing-account","label":"Gestion du compte"},{"subcats":[],"name":"contact-us","label":"Contactez le Centre d’aide"}],"language":"fr"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[num] résultats pour [term]';
+    var showingForLabel = 'Résultats pour [term]';
+    var loadingLabel = 'Chargement en cours ...';
+    var dymLabel = 'Essayez avec cette orthographe: [term]';
+    var stKey = 'Bex6QUdpD2S6MQyVkdfV';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>Copier ou d&eacute;placer des questions et des pages</title>
+  <link href="http://help.surveymonkey.com/articles/fr/kb/How-do-I-copy-or-move-a-question-page-in-my-survey" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'fr';
+ var cx = '013440216857884837477:es57noojsro';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"fr"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 fr"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 fr"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 fr"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 fr"><![endif]-->
+<!--[if gt IE 9]><body class="fr"><![endif]-->
+<body class="fr">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://fr.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">Se connecter</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-fr" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">R&eacute;duire toutes les sections</div>
+  <div id="expandLabel" style="display:none">D&eacute;velopper toutes les sections</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'create'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id83"> 
+            <h1 id="titleBetaEnabled">Copier ou déplacer des questions et des pages
+            </h1>
+            <div id="betaTabContainer">
+              <div class="betaTabs">
+                <ul>
+                  <li class="activeBetaTab" id="classicTabHeader">
+                    <span id="classictabtext">Conception classique</span>
+                  </li>
+                  <li id="betaTabHeader">
+                    <span id="betatabtext">Nouvelle conception</span>
+                  </li>
+                  <span class="tooltip-icon">?</span>
+                  <div class="tooltip-holder">
+                    <div class="tooltip">
+                      <h5>Conception classique et Nouvelle conception</h5>
+                      <span class="tooltip-x">D</span><br/><p>L’outil Conception classique est notre outil de création de sondage d’origine. L’outil Nouvelle conception est notre nouvel outil de création de sondage, actuellement disponible en version bêta.<br/><br/><a href="/articles/fr/kb/Classic-Design-and-New-Design" target="_blank">Quelle version suis-je en train d'utiliser ? »</a></p>
+                      <span class="tip"></span>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="betaTabsContent" data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text">
+                <div class="betaTabBody" id="classicBody" style="display:block"><br><ul><li>
+		<a href="#part1">Déplacer des questions ou des pages dans un sondage</a></li><li>
+		<a href="#part2">Copier des questions ou des pages dans un sondage</a></li><li>
+		<a href="#part3">Copier une question dans un autre sondage</a></li></ul>
+Affichez cette vidéo pour découvrir un petit didacticiel sur la façon de déplacer ou de copier des questions ou des pages, ou lisez les instructions ci-dessous. (Cette vidéo est disponible uniquement en anglais pour le moment.)<br><br><iframe frameborder="0" allowfullscreen="" height="315" src="http://www.youtube.com/embed/Y441StX7SEU?list=PLtEFX3upuUcOk69Xhhc8JX5RZDpESQ-rZ&amp;wmode=opaque" width="450"></iframe>
+<p>
+	 </p>
+<h3 id="part1">
+	Déplacer des questions ou des pages dans un sondage</h3>
+<br>Pour déplacer une question ou une page à un autre endroit du sondage :
+<ol><li>
+		Faites défiler jusqu&#39;à la question ou la page que vous désirez déplacer.</li><li>
+		Cliquez sur le bouton <strong>Déplacer</strong>.</li><li>
+		Faites défiler jusqu&#39;à l&#39;endroit où vous voulez la placer et cliquez sur le bouton <strong>Placer la question ici</strong> ou <strong>Placer la page ici</strong>.</li></ol>
+<br><h3 id="part2">
+	Copier des questions ou des pages dans un sondage</h3>
+<br>Pour copier une question ou une page dans un sondage :
+<ol><li>
+		Faites défiler jusqu&#39;à la question ou la page que vous désirez dupliquer.</li><li>
+		Cliquez sur le bouton <strong>Copier</strong>.</li><li>
+		Faites défiler jusqu&#39;à l&#39;endroit où vous voulez la placer et cliquez sur le bouton <strong>Coller la question ici</strong> ou <strong>Coller la page ici</strong>.</li></ol>
+<br><h3 id="part3">
+	Copier une question dans un autre sondage</h3>
+<br>Vous pouvez insérer une question précédemment créée dans un autre sondage de votre compte afin d&#39;éviter de toujours devoir recréer des questions que vous utilisez souvent dans plusieurs sondages.<br><br>Pour copier une question précédemment créée :
+<ol><li>
+		À la page <strong>Éditer le sondage</strong> du nouveau sondage, cliquez sur <strong>Ajouter une question</strong>.</li><li>
+		Commencez à saisir les mots clés ou le texte de la question. Un menu de saisie semi-automatique apparaîtra.</li><li>
+		Dans la partie <strong>Mes questions</strong>, cliquez sur la question précédemment créée que vous voulez utiliser. La question et tous ses paramètres seront automatiquement saisis.</li><li>
+		Cliquez sur <strong>Enregistrer et fermer</strong>.</li></ol>
+<strong>REMARQUE :</strong> il est impossible de copier ou de déplacer des pages d&#39;un sondage à l&#39;autre, ainsi que de <a href="/articles/fr/SurveyMonkeyArticleType/Can-I-combine-or-merge-multiple-surveys-into-one?anonymousBody=List%3CId%3E+articleVersionIds+%3D+new+List%3CId%3E%28%29%3B%0ASet%3CString%3E+articleNumbers+%3D+new+Set%3CString%3E%28%29%3B%0AList%3CString%3E+articlesChanged+%3D+new+List%3CString%3E%28%29%3B%0AList%3CSurveyMonkeyArticleType__kav%3E+articles+%3D+new+List%3CSurveyMonkeyArticleType__kav%3E%28%29%3B%0ASet%3CString%3E+articleNumbers2+%3D+new+Set%3CString%3E%28%29%3B%0ASet%3CString%3E+articleNumbers3+%3D+new+Set%3CString%3E%28%29%3B%0A%0A%2F%2F+find+all+of+the+articles+we+need%0Afor+%28SurveyMonkeyArticleType__kav+beforeArt+%3A+%5BSELECT+Id%2C%0A+++++++++++++++++++++++++++++++++++++++++++++++ArticleNumber%2C%0A+++++++++++++++++++++++++++++++++++++++++++++++KnowledgeArticleId%0A+++++++++++++++++++++++++++++++++++++++++++++++FROM+SurveyMonkeyArticleType__kav%0A+++++++++++++++++++++++++++++++++++++++++++++++WHERE+PublishStatus+%3D+%27Online%27%0A+++++++++++++++++++++++++++++++++++++++++++++++AND+Language+%3D+%27en_US%27%0A+++++++++++++++++++++++++++++++++++++++++++++++AND+BETA_Selections__c+%3D+%27Create+BETA%27%5D%29+%7B%0A%0A++++%2F%2F+store+the+article+ids+for+later%0A++++articleNumbers.add%28beforeArt.ArticleNumber%29%3B+++++++++++++++++++++++++++++++++++++++++++%0A%7D%0A%0Ainteger+size+%3D+articleNumbers.size%28%29%3B%0ASystem.debug%28articleNumbers+%2B+%27+is+the+article+numbers+total.+size%3A+%27+%2B+size%29%3B%0A%0ASet%3CString%3E+excludeArticleNumbers+%3D+new+Set%3CString%3E+%7B%27000002927%27%2C+%27000002599%27%2C+%27000006143%27%2C+%27000005632%27%2C+%27000002589%27%2C+%27000002724%27%2C+%27000002517%27%2C+%27000002532%27%2C+%27000002940%27%2C+%27000002922%27%2C+%27000002526%27%2C+%27000002898%27%2C+%27000002500%27%2C+%27000002548%27%7D%3B%0Asize+%3D+excludeArticleNumbers.size%28%29%3B%0ASystem.debug%28excludeArticleNumbers+%2B+%27+is+the+article+numbers+excluded.+size%3A+%27+%2B+size%29%3B%0A%0AarticleNumbers.removeAll%28excludeArticleNumbers%29%3B%0Asize+%3D+articleNumbers.size%28%29%3B%0ASystem.debug%28articleNumbers+%2B+%27+is+the+articles+after+exclusion.+size%3A+%27+%2B+size%29%3B%0A%0Afor+%28SurveyMonkeyArticleType__kav+toUnpublishArt+%3A+%5BSELECT+Id%2C%0A++++++++++++++++++++++++++++++++KnowledgeArticleId%2C%0A++++++++++++++++++++++++++++++++ArticleNumber%2C%0A++++++++++++++++++++++++++++++++Language+++++++++++++++++++%0A++++++++++++++++++++++++++++++++FROM+SurveyMonkeyArticleType__kav%0A++++++++++++++++++++++++++++++++WHERE+PublishStatus+%3D+%27Online%27+AND+Language+%3D+%27fr%27+AND+ArticleNumber+IN+%3AarticleNumbers%5D%29+%7B%0A+++++++++++++++++++++++++++++++%0A++++%2F%2F+unpublish+the+language+version+if+the+Beta+body+has+content%0A++++System.Debug%28toUnpublishArt.KnowledgeArticleId%29%3B%0A++++String+Id+%3D+KbManagement.PublishingService.editPublishedTranslation%28toUnpublishArt.KnowledgeArticleId%2C+toUnpublishArt.Language%2C+true%29%3B%0A++++System.Debug%28ID%29%3B%0A++++if+%28Id+%3D%3D+null%29+System.debug%28%27ERROR+EDITING+ARTICLE%27%29%3B++%0A++++articleNumbers2.add%28toUnpublishArt.ArticleNumber%29%3B+++%0A%7D%0A%0Asize+%3D+articleNumbers2.size%28%29%3B%0ASystem.debug%28articleNumbers2+%2B+%27+were+unpublished%3A+%27+%2B+size%29%3B%0A%0Afor+%28SurveyMonkeyArticleType__kav+afterArt+%3A+%5BSELECT+Id%2C%0A++++++++++++++++++++++++++++++++KnowledgeArticleId%2C%0A++++++++++++++++++++++++++++++++Language%2C%0A++++++++++++++++++++++++++++++++ArticleNumber%2C%0A++++++++++++++++++++++++++++++++BETA_Body__c%2C%0A++++++++++++++++++++++++++++++++BETA_Selections__c%0A++++++++++++++++++++++++++++++++FROM+SurveyMonkeyArticleType__kav%0A++++++++++++++++++++++++++++++++WHERE+PublishStatus+%3D+%27Draft%27+AND+Language+%3D+%27fr%27+AND+ArticleNumber+IN+%3AarticleNumbers%5D%29+%7B%0A++++%2F%2F+meat+of+the+changes%0A+++%0A++++%2F%2F+change+the+BETA+Selections+field+to+create+BETA+if+the+BETA+body+has+content%0A++++if+%28%28afterArt.BETA_Body__c+%21%3D+%27%27%29+%26%26+%28afterArt.BETA_Body__c+%21%3D+null%29%29+%7B%0A++++++++afterArt.BETA_Selections__c+%3D+%27Create+BETA%27%3B%0A++++++++articlesChanged.add%28afterArt.BETA_Selections__c%29%3B%0A++++%7D%0A+++%0A++++articleVersionIds.add%28afterArt.Id%29%3B%0A++++articles.add%28afterArt%29%3B%0A%7D%0A%0Aupdate+articles%3B%0A%0Afor+%28String+articleVersionId+%3A+articleVersionIds%29+%7B%0A++++KbManagement.PublishingService.completeTranslation%28articleVersionId%29%3B%0A%7D%0A%0Asystem.debug%28articles.size%28%29+%2B+%27+articles+updated.%27%29%3B%0Asystem.debug%28articlesChanged.size%28%29+%2B+%27+article+versions+change+to+create+BETA%27%29%3B" target="_self">combiner des sondages</a> en une seule conception. 
+                </div>
+                <div class="betaTabBody" id="betaBody" style="display:block">Vous pouvez copier ou déplacer les questions et les pages sous l&#39;onglet Concevez un sondage.
+<h3 id="move">
+	Déplacer une question</h3>
+<p>
+	Vous pouvez déplacer une question à un autre endroit du sondage. Toutes les options configurées sous les onglets Modifier, Options, et Branchement conditionnel resteront appliquées. Lorsqu&#39;un branchement conditionnel est appliqué à une question, veillez à tester les chemins de branchement conditionnel avant d&#39;envoyer le sondage aux personnes interrogées.<br>	<br>	Pour déplacer une question à un autre endroit du sondage :</p>
+<ol><li>
+		Cliquez sur une question, faites-la glisser à l&#39;endroit souhaité du sondage et positionnez-la.</li></ol>
+<p>
+	OU</p>
+<ol><li>
+		Placez le curseur sur la question que vous souhaitez déplacer et cliquez sur <strong>Déplacer</strong>.</li><li>
+		Sélectionnez la page et l&#39;endroit où vous souhaitez déplacer la question.</li><li>
+		Cliquez sur <strong>Déplacer la question</strong>.</li></ol>
+<h3 id="copy">
+	Copier une question</h3>
+<p>
+	La copie d&#39;une question entraîne la création d&#39;une deuxième version de la question à un autre endroit du sondage. Toutes les options configurées sous les onglets Modifier et Options seront reportées sur la copie. Le branchement conditionnel sur la question d&#39;origine ne sera pas reporté sur la copie.</p>
+<p>
+	Pour copier une question du sondage :</p>
+<ol><li>
+		Placez le curseur sur la question que vous souhaitez copier, puis cliquez sur <strong>Copier</strong>.</li><li>
+		Sélectionnez la page et l&#39;endroit où vous souhaitez placer la copie de la question.</li><li>
+		Cliquez sur <strong>Dupliquer la question</strong>.</li></ol>
+<h3 id="movepage">
+	Déplacer une page</h3>
+<p>
+	Vous pouvez déplacer une page à un autre endroit du sondage afin de modifier l&#39;organisation de la conception du sondage. Le branchement conditionnel sur une page et le classement aléatoire des pages seront toujours appliqués à la page. Aussi, veillez à tester les chemins de branchement conditionnel avant d&#39;envoyer le sondage aux personnes interrogées.<br>	<br> Pour déplacer une page :</p>
+<ol><li>
+		En haut de la page que vous souhaitez déplacer, cliquez sur <strong>Déplacer</strong>.</li><li>
+		Sélectionnez la page et l&#39;endroit où vous souhaitez déplacer la page.</li><li>
+		Cliquez sur <strong>Appliquer</strong>.</li></ol>
+<p>
+	<strong>REMARQUE :</strong> L&#39;option permettant de déplacer une page apparaît uniquement lorsque le sondage contient plus d&#39;une page.</p>
+<h3 id="copypage">
+	Copier une page</h3>
+<p>
+	Vous pouvez copier une page pour créer une deuxième version de la page, que vous pouvez placer n&#39;importe où dans le sondage. Toutes les questions de la page seront incluses dans la copie, mais le branchement conditionnel sur une page et le classement aléatoire des pages ne seront pas reportés sur la copie (à moins que le classement aléatoire des pages ne soit appliqué à toutes les questions du sondage).<br>	<br>	Pour copier une page :</p>
+<ol><li>
+		En haut de la page que vous souhaitez copier, cliquez sur <strong>Copier</strong></li><li>
+		Sélectionnez la page et l&#39;endroit où vous souhaitez déplacer la page.</li><li>
+		Cliquez sur <strong>Appliquer</strong>.</li></ol>
+                </div>
+              </div>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>En savoir plus</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-do-I-edit-the-survey-s-page-and-question-numbering" class="relatedLink">Comment puis-je &eacute;diter la num&eacute;rotation des questions et des pages de mon sondage ?</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-to-create-a-survey" class="relatedLink">Comment cr&eacute;er un sondage</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-do-I-add-questions-pages-into-a-survey" class="relatedLink">Comment puis-je ajouter des questions/pages &agrave; un sondage&nbsp;?</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-to-analyze-results" class="relatedLink">Comment analyser les r&eacute;sultats d&#8217;un sondage</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>Assistance t&eacute;l&eacute;phonique</h4>
+			<p>
+				Passez au niveau sup&eacute;rieur et acc&eacute;dez &agrave; des fonctionnalit&eacute;s extraordinaires comme l'assistance t&eacute;l&eacute;phonique (en anglais uniquement).
+			</p>
+			<a class="upgrade-button-yellow" href="https://fr.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">Mettre votre compte &agrave; niveau</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">Langues&nbsp;:</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://fr.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/aboutus/" target="_blank">&Agrave; propos de nous</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">Politique de confidentialit&eacute;</a></li>
+					
+					
+					<li><a href="/contact-us">Nous contacter</a></li>
+				</ul>
+				<span class="copy">Copyright &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/fr\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/fr/kb/How-do-I-copy-or-move-a-question-page-in-my-survey';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, 'Copier ou déplacer des questions et des pages', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

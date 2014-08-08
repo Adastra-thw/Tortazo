@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     With Allies Like These: Reflections on Privilege Reductionism (Common Cause Ottawa) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    With Allies Like These: Reflections on Privilege Reductionism
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/common-cause-ottawa">Common Cause Ottawa</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    June 6, 2014
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-oppression">anti-oppression</a>
+        <a href="/topics/privilege">privilege</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retreived on July 6, 2014 from http://linchpin.ca/?q=content/allies-these-reflections-privilege-reductionism
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="common-cause-ottawa-with-allies-like-these-reflections-on-privilege-reductionism.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Common Cause Ottawa</h2>
+	
+	<h1 id="textttitleh">With Allies Like These: Reflections on Privilege Reductionism</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">I. Historical Context
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">II. Practices
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">III. Implications
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">IV. Moving Forward
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">V. Conclusion
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Over the course of the last several decades, anti-oppression politics have risen to a position of immense influence on activist discourse in North America. Anti-oppression workshops and reading groups, privilege and oppression checklists and guidelines, and countless books, online blogs and articles make regular appearances in anarchist organizing and discussion. Enjoying a relatively hegemonic position in Left conversation, anti-oppression politics have come to occupy the position of a sacred object—something that expresses and reinforces particular values, but does not easily lend itself to critical reflection. Indeed, it is common for those who question the operating and implications of anti-oppression politics to be accused of refusing to seriously address oppression in general. A political framework should be constantly reflected upon and evaluated—it is a tool that should serve our struggles and not vice versa.
+</p><p>Against this backdrop, this article aims to critically engage with the dominant ideas and practices of anti-oppression politics. We define anti-oppression politics as a related group of analyses and practices that seeks to address inequalities that materially, psychologically, and socially exist in society through education and personal transformation. While there is value in some aspects of anti-oppression politics, they are not without severe limitations. Anti-oppression politics obfuscates the structural operations of power and promotes a liberal project of inclusion that is necessarily at odds with the struggle to build a collective force capable of fundamentally transforming society. It is our contention that anti-oppression furthers a politics of inclusion as a poor substitute for a politics of revolution. The dominant practices of anti-oppression further an approach to struggle whose logical conclusion is the absorption of those deemed oppressed into the dominant order, but not to the eradication and transformation of the institutional foundations of oppression.
+</p><h4 id="toc1">I. Historical Context
+</h4>
+<p><strong>The Defeat of Liberation and the Rise of anti-oppression</strong>
+</p><p>In the Global North, the 1960s and 1970s marked a high point in social movement struggle. Today, when revolution can seem impossible, it is difficult to imagine a time when militants spoke of “the revolution” not cynically, but as something that was happening, or would happen in the near future. Subdued using old-fashioned strategies of incarceration, murder, sexual assault, espionage and surveillance, blacklisting, and other forms of direct physical, economical, and emotional violence, beginning in the 1980s, the Left found itself entombed in a sophisticated system of control and co-option. In describing this, our goal is to illustrate how anti-oppression politics are neither radical, nor revolutionary. In fact, the prominence of anti-oppression in activist circles is both a symptom of, and contributing factor to, the ongoing victory of the ruling elite over our movements.
+</p><p>Dylan Rodriguez (2007), in <em>The Revolution Will Not Be Funded,</em> elaborates this reality:
+</p>
+<blockquote>
+<p>Indeed, the US state learned from its encounters with the crest of radical and revolutionary liberationist movements of the 1960s and early 1970s that endless, spectacular exercises of military and police repression against activists of colour on the domestic front could potentially provoke broader local and global support for such struggles—it was in part because they were so dramatically subjected to violent and racist US state repression that Black, Native American, Puerto Rican, and other domestic liberationists were seen by significant sectors of the US and the international public as legitimate freedom fighters, whose survival of the racist State pivoted on the mobilization of a global political solidarity. On the other hand, the US state has found in its coalition with the Non-Profit Industrial Complex a far less spectacular, generally demilitarized, and still highly effective apparatus of political discipline and repression that (to this point) has not provoked a significant critical mass of opposition or political outrage.
+</p></blockquote>
+<p>Strategies previously employed by State-Capital interests to dispose of a fighting trade union movement were modified and extended to control the heterogeneous New Left movements of the 1960s and 1970s. Rather than being crushed by outright military force, elements of the resistance movements are subsumed into the inner workings of State and Capital, and ultimately come to reinforce the overarching structures of exploitation and oppression. In the 1950s in Canada, what is known as ‘labour peace’ was declared by a subsection of the labour movement, Capital and the State. The process of establishing labour peace involved some key elements which could be seen as analogous to the pacification of other movements.
+</p><p>The process begins with legitimizing a section of the antagonistic movement, and propping them up as leaders or representatives of the whole. This representation requires funding and a bureaucracy to maintain itself. In the case of labour peace, funding was guaranteed by the Rand Formula, a policy which requires employers whose workers are unionized to collect dues and hand them over to the union, which serves to put the union in a dependent position to the legislative framework, and therefore the State. The maintenance of power and outside legitimacy by those placed on the top of the hierarchy is contingent on their discipline of the rank and file.
+</p><p>Finally, other systems of domination are mobilized to keep everyone in check—for example, white union workers enforcing a racial hierarchy among their co-workers.
+</p><p><strong>The One-Two Punch:Destroy and Replace</strong>
+</p><p>While the co-option of revolutionary movements was no new insight on the part of the ruling class, the scale of this project was novel. Understanding that every new generation would bring with it a “new” awareness that revolutionary change is desirable, the ruling class sought to create infrastructure not just to contain existing movements, but to redirect the energies of future ones. Destroy existing movements by way of violence, infiltration, etc., and replace all aspects of people’s movements with institutions that are in line with the interests of the ruling class. For our purposes, it is on this latter point that we focus.
+</p><p>In the 1980s, substantial inroads were made for new areas where people’s organizations previously enjoyed a monopoly: the creation of revolutionary theory, the internal movement and popular education by which that theory is shared and elaborated upon, the provision of services to marginalized people and the creation of progressive social spaces. In these four areas, liberalism posturing as an emancipatory politics has thoroughly washed the revolutionary potential away.
+</p><p><strong>Development of Analysis and Theory</strong>
+</p><p>While analysis and theory were historically produced by radicals in the context of struggle, this task has largely been shifted into the realm of academia. Over the course of the last several decades, entire bodies of literature and corresponding vocabularies have been developed, turning radical theory and analysis into a highly specialized undertaking. Coming out of the 1970s, many liberation movements sought to create homes for themselves within the university through the creation of ‘Progressive Studies’ departments (eg. Gender Studies, Critical Race Studies, Disability Studies, Queer Studies, Labour Studies, etc.).
+</p><p>At the time, some activists thought that obtaining space within universities was an important goal because of its potential to organize collectively, and because of the large amount of resources within the university. However, in hindsight, the channeling of resistance into the universities facilitated the destruction of the grassroots movements, and created a space in which people could build careers off of the backs of past struggles. Despite ostensibly radical beginnings, Progressive Studies function to hinder (rather than further) the interests of revolutionary movements.
+</p><p>The gravitation of would-be revolutionaries to the university for an “education”, where radical theory is subject to bourgeois pressures more than an accountability to humanity, harnesses our radical traditions and erases collective memory of struggle. There exists a fundamental misunderstanding (to be generous regarding motivation) of a radical education: that the classroom can serve as a foundation for transformative politics, rather than an adjunct to learning and development focused on real-world struggle.
+</p><p>“Research” conducted by students on marginalized constituencies, which is the closest thing to grassroots work that may be seen, is often based on such exploitative assumptions and power relationships that value may only occasionally be derived from it. The demobilizing effects of the alienation of theory from action cannot here be overstated.
+</p><p>In the creation of Progressive Studies, the passing of stories, information, theory, and practice was very smartly removed from organizations where work was happening. The blossoming of the historical study of people’s movements by academia in the past thirty years has had some key effects. Those with the best access to university have the best access to people’s history. Simply having access to university, being competent working within it, and having an interest in people’s history, is enough to facilitate access to the history.
+</p><p>Therefore, there is no correlation between access to history, the framing and development of that history, and being engaged in struggle oneself. Lacking intimate knowledge of the context of organizing, students of people’s history are rarely capable of understanding the material they study. Therefore, we have noticed that historians who consider themselves “radicals” because they have an interest in liberation stories are often stumped when it comes to extracting the value from their work.
+</p><p>While people’s history was a people’s pursuit in the 1960s and 1970s, its movement into the university effectively removed people’s access and contributions to it. In this sense, history is back to being written by the victors – the liberal bourgeoisie, and those who are able to adapt their studies to their criteria for inclusion. Despite this, it manages to maintain a veneer of subversiveness, which is misleading and unhelpful.
+</p><p><strong>Popular and movement education</strong>
+</p><p>Popular education has been almost entirely abandoned by the Left, from radical to reformist. Here we focus on internal movement education, and how it is done.
+</p><p>Movement education continues in the form of mentoring, book-fairs, workshops, literature, online forums, and formal training programs. This stands in contrast to the pedagogy employed by successful movements in the past and contemporarily: education of individual militants is best done in the midst of work, struggle, and action.
+</p><p>James P Garrett worked extensively on the creation of Black Studies at San Francisco State University, a program which was exemplary in the creation of Progressive Studies departments around North America. Interviewed by Ibram Rogers (2009) in <em>Remembering the Black Campus Movement: An Oral History Interview with James P. Garrett</em>, he recounts his own political education, beginning when he “got involved in the sit-in movements. We demonstrated and I was arrested seven times that summer and I was hooked. My life changed... by the time I got to [San Francisco] State I was ready. I was trained and prepared. I came there as a veteran of the movement.”
+</p><p>Here we contrast the militant who arrives at university “trained” (not in manners, but in the manipulation of power for radical ends) and then proceeds to organize, instead of arriving hoping to be educated.
+</p><p>Describing the goals of the creation of Black Studies as the redirection of university resources “to benefit or ameliorate the Black community,” he is critical of modern careerists “who consolidated the attire of Black consciousness” and “owe a tremendous amount — they don’t pay — but they owe a tremendous amount to the sacrifices of people who lost their hands their fingers, their eyes, people who spent time in prison who were killed—students.” Pragmatically, Garret is not wedded to the continuation of the institution he helped to create, but hopes younger militants will “develop a worldview about what education should be in the twenty-first century for young Blacks and then move to organize around that.”
+</p><p>Even in forms of movement education which were later depicted as individualized, such as Consciousness Raising (CR), people actually emphasized the collective creation and distribution of knowledge by those affected. CR, borrowed by the Women’s Movement from Chinese revolutionaries, was a self-education process in groups of women who articulated the truthful realities of their lives to one another, thereby creating a new knowledge of their collective situation.
+</p><p>Of course, the term consciousness raising is now used more to describe awareness of issues faced by oneself or others. The original meaning of the term was not an individual intellectual exercise or imposition. Instead, CR was a deliberate tactic whose goal was to provide a tool with which people could raise themselves from the destitutions in which they found themselves to become militants with agency, by fostering a class-consciousness, based on their experiences (in this example) as women.
+</p><p>The development of class-consciousness, history and identity by a vast collective, in contrast to representatives of given groups who are seen as having authority to speak is perhaps subtle, but important. We see most often in anti-oppression an emphasis on the latter.
+</p><p>In researching this article, we found <em>The Combahee River Collective Statement</em> (1978) to be one of the most frequently cited documents in the origin stories of anti-oppression. Often mentioned in the first paragraphs of modern writing and workshop outlines, it was not obvious to us that this document had in fact been read by most authors.
+</p><p>The Combahee Collective takes great pains to describe a process by which its members, all Black Lesbians, educated themselves, and got them to the conclusion that they should continue the creation of a Black Lesbian consciousness and analysis, rather than individualizing insights regarding their condition, as is done contemporarily. The Collective describes the effect that the group-based generation of knowledge had on their development:
+</p>
+<blockquote>
+<p>There is also undeniably a personal genesis for Black Feminism, that is, the political realization that comes from the seemingly personal experiences of individual Black women’s lives. Black feminists and many more Black women who do not define themselves as feminists have all experienced sexual oppression as a constant factor in our day-to-day existence … Black feminists often talk about their feelings of craziness before becoming conscious of the concepts of sexual politics, patriarchal rule, and most importantly, feminism, the political analysis and practice that we women use to struggle against our oppression.
+</p></blockquote>
+<p>Practitioners of anti-oppression have been heard to say, “a white person cannot be an expert on racism.” In practice, especially in combination with the Non-Profit Industrial Complex (NPIC), where paid jobs increasingly demand a university education, a degree in any Progressive Study functions to make viable the prominence/importance/leadership of individuals within movements where they would otherwise not be central. Using academic credentials, an “ally” can obtain employment at an agency, where services are provided to a constituency in which the worker may or (more often) may not have “lived experience.” This helps to propagate systems of domination within marginalized communities by entitling non-members to important roles in their maintenance. Alisa Bierria (2007), in <em>The Revolution Will Not Be Funded</em>, gives the following example of the progression in the ways education is viewed:
+</p>
+<blockquote>
+<p>Organizers often understood themselves as belonging to a mutual community of women who had suffered from patriarchal violence. Seattle Rape Relief, for example, began from a speak-out, a mutual sharing of stories about the experience of abuse. As the movement developed and became increasingly professionalized, workers were expected to be not “battered women” but experts with a master’s degree in social work.
+</p></blockquote>
+<p><strong>The Provision of Services</strong>
+</p><p>In the past, many revolutionary groups provided services to those who were unable to obtain them elsewhere due to their marginalization. Examples of this would be the development of shelters by radical feminists for women being subjected to violence, and the Black Panther Party’s free breakfast program. These services, provided by grassroots organizers, posed important political questions: Why do women need shelters? Why do Black children need breakfast? Then they proposed responses: patriarchy, white supremacy, and capitalism.
+</p><p>Service provision was a valuable method for the recruitment, training, and retention of militants. It served as a form of “prefigurative practice” via direct action, as a way to develop organizing skills, and a venue to sharpen revolutionary analysis. Also, every action taken by an organization or social movement is also a form of outreach and recruitment. Different forms of action attract people with different goals. Symbolic action may attract those interested in representation. Lobbying attracts those who are invested in the power of the State. The direct service provision served to attract high quality new recruits who were interested in immediate results, but as they were constructed with revolutionary goals in mind, served as a way to demonstrate the viability of alternative economic and social arrangements.
+</p><p><strong>Social interactions</strong>
+</p><p>In recent years we have seen an emphasis placed on the role of anti-oppressive practice in regulating social interactions on the left. As manners go, anti-oppression is not a bad try at a moral code that seeks not to brutalize and disempower each other. Perhaps this is the best that can be said about it. However, it does not in and of itself constitute anything other than a bare minimum standard of behaviour, certainly not a politics.
+</p><p>Decades ago, in yet another work that has been left unread by those who invoke it, the value of such interventions were questioned by Carol Hanisch (1970) in <em>The Personal is Political</em>. Discussing CR she states, “personal problems are political problems. There are no personal solutions at this time. There is only collective action for a collective solution.” Soon after, Hanisch dismisses lifestylism as without political merit:
+</p>
+<blockquote>
+<p>The groups that I have been in have also not gotten into “alternative lifestyles” or what it means to be a “liberated” woman. We came early to the conclusion that all alternatives are bad under present conditions... There is no “more liberated” way; there are only bad alternatives.
+</p></blockquote>
+<p><strong>Reading and Waiting for the Anti-Globalization Movement</strong>
+</p><p>When the Anti-Globalization Movement saw a groundswell of activism, action and organizing, the capacities of the NPIC and Progressive Studies to contain potential revolutionary forces were put to the test.
+</p><p>Hungry to learn more about the world and how to change it, fresh activists turned to the remnants of the last generation of high struggle. Only instead of finding the history in their neighbourhoods, grandparents, political organizations and prisons, they found them in books written by university-educated people, themselves overwhelmingly disengaged from struggle, published in academic journals and university-affiliated presses.
+</p><p>Infused in this purportedly radical press was the ideology of anti-oppression. Explicitly claiming heritage in the 1960s and 1970s liberation movements on the one hand, anti-oppression theory on the other hand discourages direct connection with these movements. Referencing and critiquing works of past generations while not making those works directly available to new activists, academics and their allies on the one hand stood on the backs of (often still-living) organizers of decades gone, while dismissing their work as a whole as “problematic.”
+</p><p>Black Power can be dismissed as anti-feminist and homophobic. Labour struggles are racist, colonialist, and patriarchal. Radical feminism is anti-trans*, anti-sex, and sometimes homophobic. Other feminisms are pro-capitalist, and white-centred. Gay liberation was dominated by white, affluent men. Components of all movements sought to integrate themselves in political power structures and Capital. In order for an idea to be worth considering, the generator of the idea must be politically pure. And since the purity has to do with strict adherence to a code of speech and conduct which was developed and is learned primarily through universities in the past twenty years, which are accessible only to a portion of workers (and in departments which are desirable to far, far fewer than even have access) the pool of people who are able to speak with any authority is quite small. Interestingly, it does not include many on-the-ground organizers, past and present, but is dominated by those who have access or desire to pursue a formal education in Progressive Studies.
+</p><p>The Anti-Globalization Movement, as it became known, thus came to serve as the means by which anti-oppression politics would come to imbed itself in the theory and activity of the Left, the activist milieu, etc. Now, a decade and a half later it is held as the hegemonic, almost innate, orientation of most of the Left—radical, progressive, reformist, or otherwise. We now will look at what this entails in day-to-day practice, and what we understand the implications of this to be.
+</p><h4 id="toc2">II. Practices
+</h4>
+<p>In order to situate our critique, it is useful to consider some of the common practices associated with anti-oppression politics. Although a homogenous grouping of practices does not exist, there are dominant trends that can be observed. There are common customs and rules that constitute the lived practices of anti-oppression politics. The descriptions we provide here are not exhaustive but representative.
+</p><p><strong>Workshops, Workshops &amp; More Workshops!</strong>
+</p><p>Workshops are a foundational component of anti-oppression politics. Anti-oppression workshops are mandatory in many non-governmental organizations (NGOs) and activist groups. Workshops attempt to provide an overview of the ways in which power operates in society, outline different forms of oppression, and encourage participants to reflect on the ways in which they experience privilege. Group exercises such as “Step Forward, Step Back” and “Mainstream/Margin” are used to draw on personal experiences to highlight the different ways in which oppression and privilege affect participants.
+</p><p><strong>In Pursuit of Safe(r) Spaces</strong>
+</p><p>Safe or “safer” space policies are a standard outcome of anti-oppression politics. Organizations and groups incorporate into their mission statements or basis of unity documents a policy that expresses their commitment to anti-oppression via the construction of safe spaces. These statements present a laundry list of oppressions (racism, sexism, homophobia, “classism,” ableism, ageism, etc.), and cover guidelines for appropriate behaviour. Common features of these policies include using inclusive language (i.e. avoid gendered language), being respectful towards others, and the provision of “active” listeners.
+</p><p><strong>Call-out Culture &amp; “Working on Your Shit”</strong>
+</p><p>The “checking of privilege” is a fundamental component of anti-oppression practice.
+</p><p>The analogy of “unpacking the knapsack” first used by Peggy McIntosch in <em>White Privilege: Unpacking the Invisible Knapsack</em> has been widely adopted by anti-oppression advocates, who centralize recognizing and thinking about privilege. Part of this practice includes the use of the qualifier—people preface statements with an acknowledgement of the ways in which they are privileged ( i.e. “As a white able-bodied settler who is university educated…”). If someone is not adequately “checking their privilege,” the retaliation is “the call-out”—an individual or group is informed (often publicly) that they need to “work on their shit” in order to realize the ways in which they benefit, and are complicit in x oppression.
+</p><p><strong>The “Good Ally”</strong>
+</p><p>The identity of ally (as someone who primarily identifies as engaging in struggle in support of others) is another cornerstone of anti-oppression politics. According to a popular anti-oppression guide, an ally is “…a person who supports marginalized, silenced, or less privileged groups.” The fundamental pursuit of someone with privilege is the quest to become a “good ally.” It is considered fundamental to take leadership (usually unquestionable) from representatives of oppressed groups and act as an ally to their struggles. Innumerable lists, guides, and workshops have been produced to outline the steps and necessary requirements for being an ally. The individual focus of the idea of “ally” in contrast to the collective response of “solidarity” which used to occupy a similar place is symptomatic of the general denigration of collective action by anti-oppression politics.
+</p><h4 id="toc3">III. Implications
+</h4>
+<p><strong>Championing Individual Over Collective Action</strong>
+</p><p>While anti-oppression theory acknowledges that power relations operate at both the micro and macro level, it places a disproportionate focus on the level of individual interactions. Emphasis is placed on individual conduct and personal improvement, with little attention given to challenging oppression at a structural level. Widely used by activist groups and NGOs, the document <em>Principles and Practices of Anti-Oppression</em> is a telling example of this trend. The statement describes the operation of oppression and outlines steps for challenging the unequal distribution of power solely in terms of individual behaviour. It puts forth the following suggestions for confronting oppression: “Keep space open for anti-oppression discussion… Be conscious of how your language may perpetuate oppression…promote anti-oppression in everything you do…don’t feel guilty, feel motivated.”
+</p><p>In a similar vein, the popular blog <em>Black Girl Dangerous</em> in a recent post <em>4 Ways to Push Back Against Your Privilege</em> offers a simple four-step model. The first step is to make the choice to relinquish power—if you are in a position of power, relinquish this position. Step two is “just don’t go”—“If you have access to something and you recognize that you have it partly because of privilege, opt out of it”. The third step is to shut up—if you are an individual of privilege who is committed to anti-oppression you will “…sit the hell down and shut up.” And finally, step four is to be careful with the identities that you claim. The strategy for ending oppression is articulated as a matter of addressing power dynamics between individuals in a group context, but within the confines of the State and Capitalism.
+</p><p>For the privileged subject, struggle is presented as a matter of personal growth and development—the act of striving to be the best non-oppressive person that you can be. An entire industry is built on providing resources, guides, and trainings to help people learn to challenge oppression by means of “checking their privilege.” The underlining premise of this approach is the idea that privilege can be willed away. At best this orientation is ineffective, and at worst it can actually work to recenter those who occupy positions of privilege at the expense of wider political struggle. Andrea Smith reflecting on her experiences with anti-oppression workshops, describes this issue:
+</p>
+<blockquote>
+<p>These workshops had a bit of a self-help orientation to them: “I am so and so, and I have x privilege.” It was never quite clear what the point of these confessions were…It did not appear that these individual confessions actually led to any political projects to dismantle the structures of domination that enabled their privilege. Rather, the confession became the political project themselves.
+</p></blockquote>
+<p>Resulting in what Smith terms the “ally industrial complex,” the approach of challenging oppression via the confession of one’s privilege leads to a valorization of the individual actions of a “confessing subject”. Acknowledging the ways in which structures of oppression constitute who we are and how we experience the world through the allocation of privilege is a potentially worthwhile endeavour. However, it is not in and of itself politically productive or transformative.
+</p><p>Privilege is a matter of power. It equates benefits, including access to resources and positions of influence, and can be considered in terms of both psychological or emotional benefits, as well as economic or material benefits. It is much more than personal behaviours, interactions, and language, and can neither be wished, nor confessed away. The social division of wealth and the conditions under which we live and work shape our existence, and cannot be transformed through individual actions. We must organize together to challenge the material infrastructure that accumulates power (one result of which is privilege). Anything less leads to privilege reductionism—the reduction of complex systems of oppression whose structural basis is material and institutional to a mere matter of individual interactions and personal behaviours.
+</p><p><strong>Relentless Articulation of Difference</strong>
+</p><p>As a component of anti-oppression politics, intersectionality accounts for the complexity of domination by outlining the various ways in which different forms of oppression intersect and reproduce each other. Rooted in feminist discussions of the 1970s and 1980s that sought to problematize the notion of universal “womanhood,” intersectionality provides a framework for conceptualizing the ways in which different “positionalities” (eg. gender, sexuality, race, class, ability, etc.) shape people’s subjective experiences, as well as material realities. Patricia Hill Collins describes intersectionality as an “…analysis claiming that systems of race, social class, gender, sexuality, ethnicity, nation, and age form mutually constructing features of social organization.” In sum, intersectionality provides a lens through which we can view people’s social locations as mutually constitutive and tied to systemic inequalities.
+</p><p>Intersectionality is often evoked in a manner that isolates and reifies social categories without adequately drawing attention to common ground. Crucial to its analysis is an emphasis on a politics of difference—it is asserted that our identities and social locations necessarily differentiate us from those who do not share those identities and social locations. So, for example, a working class queer woman will not have the same experiences and by extension, the same interests as an affluent woman who is straight. Similarly, a cis-man of colour will not have the same experiences and by extension the same interests as a trans* man of colour, and so on and so forth. Within this framework, difference is the fundamental unit of analysis and that which proceeds and defines identity. This practice works to isolate and sever connections between people in that it places all of its emphasis on differentiation.
+</p><p>There are seemingly endless combinations of identities that can be articulated. However, these articulations of difference do not necessarily get at the root of the problem. As Collins argues: “…Quite simply, difference is less a problem for me than racism, class exploitation and gender oppression. Conceptualizing these systems of oppression as difference obfuscates the power relations and material inequalities that constitute oppression.”
+</p><p>It is absolutely true that our social locations shape our experiences, and may influence our politics. Acknowledging difference is important, but it is not enough. It can obscure the functioning of oppression, and act as a barrier to collective struggle. The experiences of a female migrant who works as a live-in caregiver will not be the same as a male worker who has citizenship and works in a unionized office. These differences are substantial and should not be ignored. However, in focusing only on difference we lose sight of the fact that both are exploited under capitalism, and have a shared interest in organizing to challenge Capital. To be clear, this is not to say that divisions can be put aside and dealt with “after the revolution”, but to highlight the importance of finding common ground as a basis to bridge difference and organize collectively to challenge oppression. In the words of Sherene Razack: “speaking about difference…is not going to start the revolution.” Moving beyond a politics of difference, we need an oppositional politics that seeks to transform structural relations of power.
+</p><p><strong>The Subcultural Ghetto and Lifestylism</strong>
+</p><p>The culture of anti-oppression politics lends itself to the creation and maintenance of insular activist circles. A so-called “radical community” — consisting of collective houses, activist spaces, book-fairs, etc. — premised on anti-oppression politics fashions itself as a refuge from the oppressive relations and interactions of the outside world. This notion of “community”, along with anti-oppression politics’ intense focus on individual and micro personal interactions, disciplined by “call-outs” and privilege checking, allows for the politicization of a range of trivial lifestyle choices. This leads to a bizarre process in which everything from bicycles to gardens to knitting are accepted as radical activity.
+</p><p>Call-out culture and the fallacy of community accountability creates a disciplinary atmosphere in which people must adhere to a specific etiquette. Spaces then become accessible only to those who are familiar with, and able to express themselves with the proper language and adhere to the dominant customs. Participation in the discourse which shapes and directs this language and customs is mostly up to those who are able to spend too much time debating on activist blogs, or who are academics or professionals well versed in the dialect. As mentioned previously, the containment of radical discourse to the university further insulates the “activist bubble” and subcultural ghetto.
+</p><p>In addition to creating spaces that are alienating to those outside of our milieu, anti-oppression discourse, call-out culture, and the related “communities” leads activists to perceive themselves as an “enlightened” section of the class (largely composed of academics, students, professionals, etc. who have worked on their shit and checked their privilege) who are tasked with acting as missionaries to the ignorant and unclean masses. This anarchist separatist orientation is problematic for any who believe in the possibility of mass liberatory social movements that are capable of actually transforming society.
+</p><p>One example of this orientation is a recent tumblr blog maintained by Toronto activists entitled <em>Colonialism Ain’t Fashionable</em>. The blog encourages activists to use their smart phones to snap photos of people wearing Hudson Bay jackets in public and submit them. Hudson Bay is a Canadian retailer which played a historically significant role in colonialism, and the jacket in particular is seen by activists as an example of cultural appropriation. Photos are then published in a strange act of attempted public shaming, justified with some high-minded language about “challenging colonialism at a cultural level,” or “sparking discussion.” What we actually see on display here is the arrogant glee with which those within the activist bubble shake their finger at those outside it.
+</p><p>The retreat to subcultural bohemian enclaves and activist bubbles acknowledges that revolutionary change is impossible, and as a substitute offers a counterfeit new society in the here and now. We understand that such a proposition is appealing given the day-to-day indignity and suffering that is life under our current conditions, but time and time again we have seen these experiments implode on themselves. Capitalism simply does not offer a way out and we must face this reality as the rest of the class that we are a part of faces it everyday. No amount of call-outs or privilege checking will make us into individuals untainted by the violent social relationships that permeate our reality.
+</p><p><strong>Privilege, Militancy &amp; Implicit Pacifism</strong>
+</p><p>As a pacifying feature of anti-oppression politics, the assertion is frequently made that militancy is a luxury for the privileged. In the context of a meeting in which a militant action is proposed, proponents of anti-oppression politics will often critique the proposal on the basis that only those with x or y privilege can participate in such an action. Due to the increased risks associated with militant action, it is argued that confrontational politics are largely the domain of those who occupy a social location of privilege, mainly cis-men. This line of argument is then used to criticize confrontational actions as exclusionary and to gender such actions as masculine (i.e. the framing of a tactic as “manarchist”). For example, the Autonomous Workers’ Group notes that black bloc actions in their city of Portland are often critiqued on the basis of furthering a “…mentality of masculine, white privilege.” In a similar vein, another article critiques property destruction and illegal strike action, stating:
+</p>
+<blockquote>
+<p>There are many problems with this. Some people cannot get arrested (immigration status or compromise of professional licensing)…Other issues that warrant consideration are people who may have had traumatic experiences around violence or the police (or both). People with health issues (mental or physical) may also not be able to participate in these kind actions…
+</p></blockquote>
+<p>Noting that it is not feasible for everyone to participate in high-risk actions, the article concludes that peaceful protest provides an opportunity for anyone, regardless of privilege, to participate. The end result of this logic is an aversion to risk that breeds an implicit pacifism.
+</p><p>The avoidance of risk is a logical impossibility. To engage in revolutionary struggle is necessarily to put yourself at risk. To be against Capital, the State, colonialism, white supremacy, patriarchy, etc., is to declare yourself an enemy of these systems. Risk, discomfort, conflict are unavoidable. The history and ongoing reality of resistance movements is radically unsafe. Furthermore, for a lot of people simply going through their daily life is not safe. Marginalized communities aren’t safe going about their daily lives because of institutions of oppression—police, prisons, individual, and systemic violence, etc. To ignore this reality is to abandon revolutionary organizing. Jackie Wang notes: “…removing all elements of risk and danger reinforces a politics of reformism that just reproduces the existing social order.”
+</p><p>If we accept that a) confrontation is relegated to privileged social positions, and that b) inclusivity is an uncompromising imperative, it follows that pacifism is the only acceptable approach to struggle. There exists an essential contradiction. Within the framework of anti-oppression politics it is only the most oppressed who are considered to be legitimate actors in struggle (the role of the privileged is the ally). Yet, it is argued that militancy is for the privileged alone. Thus, the only option available is passive resistance. The framing of confrontational forms of resistance as belonging to the realm of privilege acts to relegate necessary tools — actions, tactics, strategies, etc. — to a domain that is inaccessible. It re-inscribes, rather than challenges the unequal distribution of power in society, acts to erase militant histories in which oppressed peoples have engaged in violent resistance, and further thrusts a role of hapless victim onto those who are oppressed. There is nothing liberatory about this.
+</p><h4 id="toc4">IV. Moving Forward
+</h4>
+<p>We have identified the current regime of anti-oppression politics as inadequate in providing a way forward in the task of developing a revolutionary movement capable of meaningfully challenging systems of oppression and exploitation. Not only are these politics inadequate, but ultimately regressive and counter productive. Attempts to address the inadequacies of anti-oppression are often met with accusations of class reductionism. While we acknowledge that class reductionism exists as an incorrect political orientation, the accusation of such can be used as a strawman attack on those who transgress the dominant discourse within anarchist/radical circles.
+</p><p><strong>Reducing the Class</strong>
+</p><p>As an actual political orientation, class reductionism can be largely described as a tendency on the Left which prioritizes the economic struggle in the workplace as the primary terrain of revolutionary or progressive action. Often this will go further to fetishize a particular segment of workplace struggle, namely that of blue collar, industrial workers. Whether or not it is implicitly stated, the belief is held that the struggle against other oppressions — white supremacy, hetero-patriarchy, ableism, etc. — are incidental to the class struggle, to be engaged in as secondary, or that they are simply prejudices concocted by the ruling class to be dealt with “after the revolution.”
+</p><p>On the other hand, we have the proponents of anti-oppression politics attempting to amalgamate “class” as another oppression alongside the rest, which “intersect” with one another at various times and places in a person’s life. Here we are presented with the grotesque notion of “classism”—the result of an attempt by anti-oppression theory to reconcile inadequate politics with the entirety of capitalist social relations. <em>The School Of the Americas Watch Anti-Oppression Toolkit</em> section on classism offers a prime example:
+</p>
+<blockquote>
+<p>The stereotype is that poor and working class people are unintelligent, inarticulate, and “overly emotional.” A good ally (a non-working class committed supporter) will contradict these messages by soliciting the knowledge and histories of poor working class people, being a thoughtful listener, trying to understand what is being said…
+</p></blockquote>
+<p>Putting aside for a second the conflation of “poor” and “working class” which indicates this writer’s lack of insight into the matter they seek to educate about, there is truth in the descriptions of the “stereotype”.
+</p><p>We are reminded of the 2010 movie, <em>Made in Daginham</em>, where Eddie O’Grady attempts to ingratiate himself to his wife by pointing out that he does not beat her or their children. Frustrated by her husband’s lack of consideration of her struggle, Rita replies, “That is as it should be…You don’t go on the drink, do ya? You don’t gamble, you join in with the kids, you don’t knock us about. Oh, lucky me. For Christ’s sake, Eddie, that’s as it should be! You try and understand that. Rights, not privileges. It’s that easy. It really bloody is.”
+</p><p>Similarly, for all the back-patting going on with regards to “allies” most of what is advised and done constitutes nothing more than a minimal standard of behaviour. We do not feel respected when someone in a position of power “consults” us before making a decision regarding our lives, no matter how attentive and probing they may be. We see this emphasis on listening to rather than creating-with as uncomradely and tokenizing.
+</p><p>In their essay <em>Insurrections at the Intersections</em> anarchists Jen Rogue and Abbey Volcano address so-called classism by writing:
+</p>
+<blockquote>
+<p>Since everyone experiences these identities differently, many theorists writing on intersectionality have referred to something called “classism” to complement racism and sexism. This can lead to the gravely confused notion that class oppression needs to be rectified by rich people treating poor people “nicer” while still maintaining class society. This analysis treats class differences as though they are simply cultural differences. In turn, this leads toward the limited strategy of “respecting diversity” […] This argument precludes a class struggle analysis which views capitalism and class society as institutions and enemies of freedom. We don’t wish to “get along” under capitalism by abolishing snobbery and class elitism.
+</p></blockquote>
+<p>Both of these instances of reductionism point to a fundamental misunderstanding of class and class struggle, as well as to the limits of intersectionality in understanding social relationships under capitalism. The class reductionism we should be critical of is that which attempts to reduce the class to a mere section of it (whether it is simply the poorest, or the most blue collar), and that which attempts to hold up the interests of that section as that of the entire class. The reality is that the majority of the planet is working class, and we must recognize that the material obstacles within our class, and the manner by which they reproduce themselves must be attacked as a matter of necessity. Not because we are good allies or because we want to check privileges or because we want to reduce everything to “class first!” but because we are fucking revolutionaries and we have to.
+</p><p><strong>The (Re)production of Division</strong>
+</p><p>If our intention is not strictly limited to maintaining activist enclaves, we are required to look for the means to understand the development of identity and division under capitalism. In <em>Caliban and the Witch</em>, Silvia Federici examines the position of women throughout the rise of capitalism. With an emphasis on the incredibly violent subjugation necessary, witch burnings being an especially stark example, Federici outlines the historical process that fostered the patriarchal social relationships which uphold, and define capitalism.
+</p><p>This process is one which ran alongside the period of primitive accumulation in the transition from feudalism to capitalism. The enclosure of the commons by a fledgling bourgeoisie and the imposition of private property was the material basis for the proletarianization of populations—without the land base necessary for subsistence, peasants became workers who must sell their labour for a wage in order to survive. Primitive accumulation is the subsumption of life into the rubric of Capital — land into property, time into wages, things into commodities — and by extension the transformation of social relationships necessary to maintain and reproduce these categories. The subjugation of women to patriarchal capitalism was a crucial element of this process. The construction of the nuclear family, the assignment of domestic and reproductive labour as “women’s work”, and the subsequent devaluation and erasure of that labour, were historic tasks achieved through the development of capitalism. Attempting to understand patriarchy as limited to individual attitudes or actions, or somehow isolated from capitalism (regardless of patriarchal or gendered divisions of labour in pre-capitalist history) is therefore impossible. Speaking to the accomplishment of the implementation of these new social relationships, Federici writes:
+</p>
+<blockquote>
+<p>… in the new organization of work every woman (other than those privatized by bourgeois men) became a communal good, for once women’s activities were defined as non-work, women’s labor began to appear as a natural resource, available to all, no less than the air we breathe or the water we drink.
+</p></blockquote>
+<p>The social, economic, and political position of women was thus defined under capitalism. This new reality meant that the class struggle, that is the struggle for the emancipation of the working class, takes on a particular character whether or not this is recognized by its would-be partisans. Federici further explains:
+</p>
+<blockquote>
+<p>With their expulsion from the crafts and the devaluation of reproductive labor, a new patriarchal order was constructed, reducing women to a double dependence: on employers and on men.
+</p></blockquote>
+<p>This “double dependence” thus implies that the oppression of women under capitalism is not something that is incidental, nor something that can be addressed in isolation. As having particular features and the product of (ongoing) historic development, attacking patriarchy demands that we attack the conditions which allow the perpetuation of the social relationships by which it is constituted. As class struggle anarchists then we identify the class struggle as one against this “double dependence” as we struggle against the conditions which are necessary for capitalism to reproduce itself.
+</p><p><strong>Struggling at the Barricades, Struggling at Home</strong>
+</p><p>In 2006, the Mexican state of Oaxaca became engulfed in a popular uprising that lasted several months. What began as an annual teachers strike developed into a popular conflict. Barucha Calamity Peller’s <em>Women in Uprising: The Oaxaca Commune, the State, and Reproductive Labour</em> looks at the revolt and the particular role women played. The essay shows us both what the disruption of the reproduction of patriarchal social relations can look like and how the reinforcement of those relations from within the movement ultimately contributed to its limitation and defeat.
+</p><p>On April 1<sup>st</sup>, 2006, a march of the Cacerolas (later imitated in Quebec and across Canada) consisting of over ten thousand women, initiated the takeover of TV station Canal Neuve. Several hundred women from the march occupied the building, which was repurposed as a communication hub and resource to the ongoing struggle. Peller writes:
+</p>
+<blockquote>
+<p>Besides transmitting, producing daily programming, and holding workshops, long hours were spent during nightly patrols of the transmitter and defensive barricades in which the women of Canal Nueve spoke to each other while huddled around small fires drinking coffee to stay awake. The dialogue and solidarity that emerged between the women was perhaps one of the most potent results of the takeover. What was before “private” and “personal” became a site for resistance. It was during these conversations that women for the first time experienced a space not dominated by men, in the absence of the market, in which they could organize freely and relate experiences, and talk to other women. This is where the idea of women’s autonomy emerged in Oaxaca, and it was to this formation of women, where there was no exploitation of their labor, no dominance of the market or the family, that the women would refer throughout the struggle.
+</p></blockquote>
+<p>What we find important here is the implication that the creation of new, anti-capitalist, anti-patriarchal relations requires the creation of the material basis to do so. The creation of such a basis requires the negation and disruption of the conditions that produce the old ways of interacting. Here, the occupation of the Canal Neuve could be understood as what a revolutionary women’s movement in embryo might look like—where the conditions were created for the creation of a new subjectivity and the destruction of the former identity.
+</p><p>In the case of Oaxaca, patriarchy still persisted within the movement. Women who attempted to challenge traditional gender roles were subjected to domestic abuse and/or forced to continue to take on the full burden of reproductive labour.
+</p><p>Rather than rely on limited class reductionist understandings, either limiting itself to the factory floor or sociological definitions of “proles,” we must strive for a class struggle which directs us towards the abolition of the divisions within our class that are necessary to uphold capitalism. We find the example of the Oaxaca uprising useful insofar as it provides us with a glimpse of both the undoing of oppressive social relationships, and the defense of those relationships in a period of intensified struggle.
+</p><p>While this section has focused primarily on gendered division and oppression under capitalism, our intention is to emphasize that these categories and identities are historically constructed, and have a material basis to their continued reproduction. We see the process of their destruction as one that is necessarily part of the class struggle. To paraphrase Marx, this is the process of moving towards a class that is conscious of itself, and able to act in its own interest—a class for itself.
+</p><h4 id="toc5">V. Conclusion
+</h4>
+<p>It is our belief that the ways in which humans are exploited, assaulted, pitted against one another, and robbed of individual and collective agency must (and furthermore, can) be overcome and replaced with a liberatory existence. While some see anti-oppression politics as contributing to this endeavour, we see these politics as a substantial hindrance to revolutionary organizing. We would like to challenge our comrades and fellow travellers to do better than this half-hearted liberal project that facilitates the reduction of complex social and economic problems to interpersonal dynamics and individual privileges. Our struggle is collective, and so too must be our tools and analysis.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,736 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Cornelius Castoriadis  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+The Pulverization of Marxism-Leninism
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+1990
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+Originally published as “L’Effondrement du marxisme-leninisme” in {\em Le Monde}, April 23–24, 1990. The author’s original title and other phrases dropped from the {\em Le Monde} edition have been restored.
+
+
+---
+
+
+The downfall of the Roman Empire lasted three centuries. Two years have sufficed, without the aid of foreign barbarians, to dislocate irreparably the worldwide network of power directed from Moscow, its ambitions for world hegemony, and the economic, political and social relationships which held it together. Search as one might, it is impossible to find a historical analogy to this pulverization of what seemed just yesterday a steel fortress. The granite monolith has suddenly shown itself to be held together with its saliva, while the horrors, monstrosities, lies and absurdities being revealed day after day have proved to be even more incredible than anything the most acerbic critics among us had been able to affirm.
+
+
+At the same time as are vanishing these Bolsheviks for whom “no fortress is impregnable” (Stalin), the nebula of “Marxism-Leninism,” which for more than a half century had almost everywhere played the role of dominant ideology, fascinating some, obliging others to take a stand in relation to it, has gone up in smoke. What remains of Marxism, “the unsurpassable philosophy of our time” (Sartre)? Upon what map, with what magnifying glass, will one now discover the “new continent of historical materialism,” in what antique shop will one purchase the scissors to make the “epistemological break” (Althusser) which was to have relegated to the status of worn-out metaphysical speculations the reflection on society and history, replacing it with “the science of Capital”? Hardly is it worth mentioning now that one will search in vain for the least connection between anything said and done today by Mr. Gorbachev and, not Marxist-Leninist “ideology,” but any idea whatsoever.
+
+
+After the fact, the suddenness of the collapse may seem as if it could go without saying. Was this ideology, from the first years after the Bolsheviks’ seizure of power in Russia, in head-on contradiction with reality--and was not this reality, despite the combined efforts of Communists, fellow travelers and even the respectable press of Western countries (which, for the most part, had swallowed whole the Moscow Trials), visible and knowable for those who wanted to see and to know? Considered in itself, did it not reach the height of incoherence and inconsistency? But the enigma only is doubled. How and why was this huge scaffolding capable of holding up for so long? Claiming to be “science” and “ideological criticism,” Marxism-Leninism promised the radical liberation of the human being, the instauration of a “really democratic” and “rational” society--and it came into being as the hitherto matchless figure of mass slavery, terror, “planned” poverty, absurdity, lies and obscurantism. How was this unprecedented historical fraud able to operate for so long?
+
+
+Where Marxism-Leninism settled into power, the answer may appear simple: thirst for power and self-interest for some, Terror for all. This response is inadequate, for even in these cases the seizure of power has almost everywhere been made possible by a large popular mobilization. Nor does this response say anything about its near-universal attraction. To elucidate that attraction would require an analysis of world history over the past century and a half. Here we must limit ourselves to two factors. First, Marxism-Leninism presented itself as the continuation, the radicalization of the emancipatory, democratic, revolutionary project of the West. A presentation all the more credible as it was for a long time-as everyone today happily forgets--the only one seemingly opposed to the beauties of capitalism, both in the metropolises as well as in the colonies. Behind this, however, there is something more, and here lies its historical novelty. On the surface, there is what is called an ideology: a labyrinthine “scientific theory”--Marx’s--sufficient to keep hordes of intellectuals occupied until the end of their lives; a simplified version, a vulgate of this theory (first formulated by Marx himself), with an explanatory force adequate for the more faithful; finally, a “hidden” version for the true initiates, first appearing with Lenin, which makes the absolute power of the Party the supreme objective and the Archimedean point for “the transformation of history.” (I am not speaking here of the summits of the apparatuses, where the pure and simple obsession for power, coupled with total cynicism, has reigned at least since Stalin.)
+
+
+Holding together this edifice, however, are not “ideas,” or reasonings. It is rather a new imaginary, which develops and changes in two stages. In the properly “Marxist” phase, during the era in which the old religious faith was dissolving, it was, as we know, the imaginary of secular Salvation. The project of emancipation, of freedom as activity, of the people as author of its own history, was inverted into an imaginary of a Promised Land, within reach and guaranteed by the substitute for transcendence produced by that age, viz., “scientific theory.” \footnote{Father J.-Y. Calves [S.J.], trying with full Christian benevolence to help out his Marxist friends, instead clobbers them over the head when he speaks of the messianic component of Marxism in the April 14, 1990 issue of Le Monde.}
+
+
+In the following Leninist phase, this element, while it did not disappear, found itself increasingly supplanted by another: more than the “laws of history,” it is the Party, its Boss, their actual power, power itself, Brute Force that became not only the guarantor but the ultimate point of fascination and fixation for representations and desires. At issue here is not fear of force--real and immense though it is where Communism is in power--but the positive attraction Force exercises over human beings. If we do not understand that, we will never understand the history of the twentieth century, neither Nazism, nor Communism. In the latter case, the combination of what people would like to believe and of Force has long proved irresistible. And it is only from the moment when this Force no longer succeeded in imposing itself--Poland, Afghanistan--only when it became clear that neither Russian tanks nor H-bombs could “resolve” all problems, that the rout truly began and that the various brooks of decomposition united in the Niagara which has been pouring down in torrents since the Summer of 1988 (the first demonstrations in Lithuania).
+
+
+\section{Marx and Marxism
+}
+
+The strongest reservations, the most radical criticism with regard to Marx, cancel neither his importance as a thinker nor the grandeur of his effort. People will still reflect upon Marx when they will search with difficulty in dictionaries for the names of Messrs. von Hayek and Friedman. It is not, however, by means of the effect of his work that Marx has played his immense role in actual history. He would have been only another Hobbes, Montesquieu or Tocqueville if a dogma had not been able to be drawn from him--and if his writings did not so lend themselves. And if they do so lend themselves, this is because his theory contains more than just the elements of that dogma.
+
+
+The vulgate (derived from Engels), which attributed to Marx as sources Hegel, Ricardo and the French “utopian” socialists, masks half the truth. Marx is equally the inheritor of the emancipatory or democratic movement, whence his fascination, to the very end of his life, for the French Revolution and even, in his youth, for the Greek polls and demos. This movement of emancipation, this project of autonomy, had already been in motion for centuries in Europe and had reached its culmination with the Great Revolution.
+
+
+But the Revolution left an enormous, and double, deficit. It maintained and even accentuated, in furnishing it with new bases, an immense inequality of actual power in society rooted in economic and social inequalities. It maintained and reinforced the strength and structure of state bureaucracy, “checked” to a superficial degree by a stratum of professional “representatives” separated from the people.
+
+
+First in England and then on the Continent, the nascent workers’ movement responded to these deficiencies as well as to the inhuman existence to which capitalism, spreading with lightning speed, subjected the working class. The seeds of Marx’s most important ideas on the transformation of society--notably that of the self-government of the producers--are to be found not in the writings of the utopian socialists but in the press and self-organizing activity of English workers from 1810 to 1840, long before Marx first began writing. The nascent workers’ movement thus appears as the logical continuation of a democratic movement broken off midway.
+
+
+At the same time, however, another project, another social-historical imaginary came on the scene: the capitalist imaginary, which transformed social reality before one’s very eyes and clearly seemed destined to rule the world.
+
+
+Contrary to a confused prejudice still dominant today--and which is at the basis of the contemporary version of classical “liberalism”--the capitalist imaginary stands in direct contradiction to the project of emancipation and autonomy. Back in 1906 Max Weber derided the idea that capitalism might have anything at all to do with democracy, and one can still share a laugh with him when thinking of South Africa, Taiwan, or Japan from 1870 to 1945 and even today. Capitalism subordinates everything to the “development of the forces of production”; people as producers, and then as consumers, are to be made completely subordinate to it. The unlimited expansion of rational mastery--pseudomastery and pseudorationality, as is abundantly clear today--thus became the other great imaginary signification of the modern world, powerfully embodied in the realms of technique and organization.
+
+
+The totalitarian potentialities of this project are readily apparent--and fully visible in the classical capitalist factory. If capitalism neither in that epoch nor later succeeded in transforming society into one huge factory, with a single command structure and a sole logic (which, after their own fashion and in a certain manner, Nazism and Communism later tried to do), this was due to rivalries and struggles between capitalist groupings and nations--but especially to the resistance the democratic movement offered, from the very outset, on the societal level and the workers’ struggles on the factory level.
+
+
+The contamination of the emancipatory project of autonomy by the capitalist imaginary of technical and organizational rationality, with its assurance of automatic “progress” in history, occurred rather early on (it is already to be found in Saint-Simon). It is Marx, however, who was the principal theoretician and artisan of the penetration into the workers’ and socialist movement of ideas which made technique, production and the economy the central factors. Thus, via a retroactive projection of the spirit of capitalism, Marx interpreted the whole of human history as the result of the evolution of the forces of production--an evolution which, barring some catastrophic accident, was to “guarantee” our future freedom. Upon reworking, political economy was brought into action in order to show the “inevitability” of the path to socialism--just as Hegelian philosophy, “put back on its feet,” was used to unveil a Reason secretly at work in history, realized in technique and capable of assuring the final reconciliation of all with and of each with him/herself. Millenarian and apocalyptic expectations of immemorial origin were henceforth given a scientific “foundation” fully consonant with the imaginary of the age. As “last class,” the proletariat received its mission as Savior, and yet its actions were necessarily to be dictated by its “real conditions of existence,” themselves tirelessly fashioned by the action of economic laws which were to force it to liberate humanity as it liberated itself.
+
+
+\section{The Effects of Marxism
+}
+
+One forgets all too easily today the enormous explanatory power the Marxist conceptual outlook, even in its vulgar versions, long seemed to possess. It revealed and denounced the mystifications of classical liberalism, showed that the economy operates for capital and for profit (a fact which, to their bewilderment, American sociologists have come to discover over the past twenty years), and predicted the worldwide expansion and concentration of capitalism. Economic crises have succeeded one another for more than a century with almost natural regularity, producing poverty, unemployment, and an absurd destruction of wealth. The carnage of the First World War, the Great Depression of 1929 through 1933, the rise of fascism could only be understood at the time as striking confirmations of Marxist conclusions--and the issue of the actual rigorousness of the arguments leading to these conclusions held little weight when compared to the crushing mass of the real situation.
+
+
+Nevertheless, under pressure from the workers’ struggle, which continued nonstop, capitalism was obliged to transform itself. From the end of the nineteenth century onward, the claim that capitalism would inevitably lead to (absolute or relative) pauperization was disproved by the rise in real wages and by reductions in work time. Enlargement of domestic markets through increased mass consumption gradually became the conscious strategy of the ruling strata and, after 1945, Keynesian policies more or less assured an approximation of full employment. An abyss came to separate Marxian theory from actual reality in the world’s wealthy countries. However, with the aid of theoretical acrobatics, to which national movements in the former colonies of these countries seemingly lent support, some people transferred onto the countries of the Third World and onto the “wretched of the Earth” the role of “builder of socialism” which Marx had imputed, with less unlikelihood, to the industrial proletariat of the advanced countries.
+
+
+The Marxist doctrine has undoubtedly aided people enormously to believe--therefore, to struggle. But Marxism was not the necessary condition for these struggles which have changed both the condition of the working class and capitalism itself, as is shown by the countries (for example, Anglo-Saxon) into which Marxism has been able to penetrate only to a slight degree. And there was a very heavy price to be paid.
+
+
+If this strange alchemy, in which are combined (economic) “science,” a rationalist metaphysics of history and a secular eschatology, has been able to exert for so long such a powerful appeal, it is because it responded to the thirst for certainty and to the hope for a salvation guaranteed, in the last analysis, by something much greater than the fragile and uncertain activities of human beings, viz., the “laws of history.” It thus imported into the workers’ movement a pseudo-religious dimension ripe with catastrophes to come. In the same gesture, it also introduced into this movement the monstrous notion of orthodoxy. Here again, Marx’s exclamation (in private), “I am not a Marxist,” bears little weight in comparison with the real situation. S/he who says “orthodoxy” says need for appointed guardians of orthodoxy, for ideological and political functionaries, as well as the demonization of heretics. Joined with modern societies’ irrepressible tendency toward bureaucracy, which from the end of the nineteenth century onward penetrated into and came to dominate the workers’ movement itself, orthodoxy powerfully contributed toward the establishment of Party-Churches. It also led to a near-complete sterilization of thought. “Revolutionary theory” became talmudic commentary upon sacred texts, and Marxism itself, faced with the immense scientific, cultural, artistic upheavals which began to accumulate around 1890, either remained completely aphonic or limited itself to characterizing these changes as products of bourgeois decadence. One text by Lukacs and a few phrases from Trotsky and Gramsci do not suffice to weaken this diagnosis.
+
+
+Homologous with and parallel to these developments is the transformation Marxism enticed the movement’s participants into making. During the greater part of the nineteenth century the working class of the industrializing countries brought itself through a process of self-constitution, taught itself to read and write and educated itself, and gave rise to a type of self-reliant individual which was confident in its own forces and its own judgment; which taught itself as much as it could; which thought for itself; and which never abandoned critical reflection. In getting a corner on the workers’ movement, Marxism replaced this individual with the militant activist who is indoctrinated in a Gospel; who believes in the organization, in the theory and in the bosses who possess this theory and interpret it; who tends to obey them unconditionally; who identifies with them and who is capable, most of the time, of breaking with this identification only by him/herself collapsing.
+
+
+\section{Leninist Totalitarianism
+}
+
+Some of the elements of what became totalitarianism thus had already been set in place: the phantasm of total mastery inherited from capitalism, orthodoxy, fetishism for organization, the idea of a “historical necessity” capable of justifying everything in the name of ultimate Salvation. It would be absurd, however, to make of Marxism--still less of Marx himself--the father of totalitarianism, as has been done with demagogic ease for the past sixty years. For as much as (and, numerically, more than) Leninism, Marxism has been continued in the form of social democracy, of which one can say everything one wants except that it is totalitarian, and which has not had any trouble finding in Marx all the necessary quotations for its polemics against Bolshevism in power.
+
+
+The true creator of totalitarianism is Lenin. The internal contradictions of this personage would be of little account if they did not illustrate, once again, the absurdity of “rational” explanations of history. A sorcerer’s apprentice who swore only by “science,” inhuman and yet without any doubt sincere and unmotivated by personal interest, extraordinarily lucid about his adversaries and blind concerning himself as he rebuilt the Czarist state Apparatus after having destroyed it and protesting against this reconstruction, the creator of bureaucratic commissions designed to struggle against the bureaucracy which he himself made proliferate, in the end he appears both as the near-exclusive artisan of a fantastic upheaval and as a piece of straw on the flood of events. Nevertheless, it is he who created the institution without which totalitarianism is inconceivable and which is today falling into ruin: the totalitarian party, the Leninist party, which is, all rolled into one, ideological Church, militant army, state Apparatus already in nuce when it still is held “in a taxi carriage,” and factory where each has his/her place in a strict hierarchy with a strict division of labor. Of these elements, which had long existed, but in dispersion, Lenin made a synthesis and conferred a new signification upon the whole he made of them. Orthodoxy and discipline were carried to the limit (Trotsky boasted of the comparison of the Bolshevik party to the order of Jesuits) and extended onto an international level. \footnote{It is not without merit to recall for new generations a few of the “twenty-one conditions” adopted by the Second Congress of the Third International (July 17 — August 1, 1920): “I\unknown{} All the Party’s press organs must be run by reliable Communists. The\unknown{}press and all the Party’s publishing institutions must be subordinated to the Party leadership. 9. The Communist cells [in the unions, etc.] must be completely subordinated to the Party as a whole. 12\unknown{} In the present epoch of acute civil war the Communist Party will only be able to fulfill its duty if it is organized in as centralist a manner as possible, if iron discipline reigns within it and if the Party center, sustained by the confidence of the Party membership, is endowed with the fullest rights and authority and the most far-reaching powers. 13. The Communist Parties of those countries in which the Communists can carry out their work legally must from time to time undertake purges [re-registration] of the membership of their Party organizations in order to cleanse the Party systematically of the petty-bourgeois elements within it. 15. As a rule, the program of every Party belonging to the Communist International must be ratified by a regular Congress of the Communist International or by the Executive Committee [my emphasis--C.C.]. 16. All decisions of the Congresses of the Communist International and decisions of its Executive Committee [my emphasis--C.C.] are binding on all parties belonging to the Communist International.” (“Theses on the Conditions of Admission to the Communist International,” in Theses, Resolutions and Manifestos of the First Four Congresses of the Third International [Atlantic Highlands, NJ.: Humanities Press, 1980], pp. 93, 95, 96.)} The principle that “those who are not with us are to be exterminated” was applied without mercy, the modern means of Terror were invented, organized and applied en masse. Above all, the obsession for power, power for the sake of power, power as end in itself, by every means possible and little matter what for, emerged and took hold, no longer as personal trait but as social-historical determinant. It was no longer a matter of seizing power so as to introduce definite changes, it was a matter of introducing the changes that allow one to stay in power and to reinforce it nonstop. In 1917 Lenin knew one thing and one thing only: that the moment to take power had come and that tomorrow it would be too late.
+
+
+But to do what with it? He did not know, and he said so: our teachers unfortunately have not told us what to do in order to build socialism. Later on, he will also say: “This is Thermidor. But we shan’t let ourselves be guillotined. We shall make a Thermidor ourselves.” \footnote{Translator: This quotation appears in Victor Serge’s Memoirs of a Revolutionary (New York: Oxford, 1967), p. 131.} This must be understood as meaning: if, in order to retain power, we must turn our orientation completely upside down, we shall do so. Indeed, he did so several times over. (Later on, Stalin brought this art to absolute perfection.) A single fixed point was ruthlessly maintained throughout the most incredible changes in course: the limitless expansion of the power of the Party, the transformation of all institutions, starting with the State, into its mere instrumental appendages and, finally, the pretense, not simply that the Party is directing society or even speaking in society’s name, but that it is in fact society itself.
+
+
+\section{The Failure of Totalitarianism
+}
+
+Under Stalin this project attained its extreme and demented form Also, beginning with his death its failure began to become apparent Totalitarianism is not an immutable essence. It has a history, one which we will not retrace here, but which, it must be recalled, is in the main that of the resistance by people and things to the phantasm that society can be totally reabsorbed, and history completely shaped, by the power of the party.
+
+
+Returning to the offensive today are those who denied the validity of the notion of totalitarianism. They draw their argument from the very fact that the regime is collapsing (with such a logic, no regime in history would ever have existed) or that it had encountered internal resistances. \footnote{See, for example, the review of S. Ingerflohn in Liber, March1990.} Clearly, these criticisms share in the phantasm of totalitarianism: totalitarianism could and should have been, for better or worse, what it claimed to be: a faultless monolith. It was not what it said it was--therefore, quite simply, it was not.
+
+
+Those who, however, have discussed the Russian regime seriously (I am not speaking of Reader’s Digest or Ms. Kirkpatrick), have never fallen victims to this mirage. They have emphasized and analyzed its internal contradictions and antinomies. \footnote{For my part, I have done so since 1946 and have never ceased doing so since. See La Societe bureaucratique, 2 vols. (Paris: 10/18, 1973; to be reprinted this Autumn by Editions Christian Bourgois). [Translator: The principal texts from this two-volume collection of articles originally published in Castoriadis’ review, Socialisme ou Barbarie, are now available in his Political and Social Writings, 2 vols., trans. David Ames Curtis (Minneapolis: University of Minnesota, 1988).]} Indifference and passive resistance on the part of the population; sabotage and wastage of industrial as well as agricultural production; the deep-seated irrationality of the system, from its own point of view, due to its delirious bureaucratization; decisions made according to the whims of the Autocrat or of the clique which has succeeded in imposing its will; a universal conspiracy of deception, which has become a structural trait of the system and condition for the survival of individuals, from zeks to Politburo members. All of this has been vividly confirmed by the events which began in 1953 and by the information which has not stopped pouring in since: zek revolts in the camps after Stalin’s death, the East Berlin strikes in June 1953,  Crushchev’s Report, the Polish and Hungarian Revolutions in 1956, the Czechoslovak movement in 1968 and the Polish one in 1970, the flood of dissident literature, the Polish explosion of 1980 which made the country ungovernable.
+
+
+After the failure of Krushchev’s incoherent reforms, the necrosis which was eating away at the system and left it no escape but a flight in advance toward over-armament and external expansion had become manifest. I wrote about this in 1981, saying that one could no longer speak in terms of “classical” totalitarianism. \footnote{See my article, “Destinies of Totalitarianism,” Salmagundi, 60 (Spring-Summer 1983), pp. 107–122. French translation now in Domains de l’ homme (Paris: Seuil, 1986), pp. 201–18.}
+
+
+Certainly too, the regime could not have survived for seventy years if it had not been able to create for itself large points of support within society, from the ultra-privileged bureaucracy down to the strata which have successively benefited from a degree of “social promotion”; in particular, a type of behavior, and an anthropological type of individual ruled by apathy and cynicism, preoccupied solely with tiny and precious improvements which, by dint of guile and intrigues, this individual can claim.
+
+
+On this last point, the regime has half succeeded, as is shown by the extreme slowness of popular reactions in Russia even after 1985. But it has also half failed, as is best seen, paradoxically, within the party Apparatus itself. When the force of circumstances (impasses in Poland and Afghanistan, the pressure of American rearmament in the face of its own growing technological and economic retardation, the inability to bear any longer the costs of its overextension worldwide) showed that the evolution toward “stratocracy,” dominant under Brezhnev, was becoming untenable in the long run, within the Apparatus and around an uncommonly capable leader a sufficiently large “reformist” group was able to emerge, impose itself and impose a series of changes unimaginable shortly beforehand--among which was the official death certificate of single-party rule drawn up on March 13, 1990. What the future holds for these changes remains totally obscure, but their effects are now and henceforth irreversible.
+
+
+\section{After the Deluge
+}
+
+Like Nazism, Marxism-Leninism allows us to gauge the folly and monstrosity of which human beings are capable, as well as their fascination with Brute Force. More than Nazism, it allows us to gauge their capacity for self-delusion, for turning upside down the most liberating ideas, for making them the instruments of unlimited mystification.
+
+
+As it collapses, Marxism-Leninism seems to be burying beneath its ruins both the project of autonomy and politics itself. The active hate on the part of those, in the East, who have suffered under it leads them to reject any project other than the rapid adoption of the liberal-capitalist model. In the West, people’s conviction that they live under the least bad regime possible will be reinforced, and this will hasten their sinking even further into irresponsibility, distraction and withdrawal into the “private” sphere (now obviously less “private” than ever).
+
+
+Not that these populations possess many illusions. In the United States, Lee Atwater, Chairman of the Republican Party, speaking of the population’s cynicism, says: “The American people think politics and politicians are full of baloney. They think the media and journalists are full of baloney. They think organized religion is full of baloney. They think big business is full of baloney. They think big labor is full of baloney.” \footnote{See “Politics: Are U.S. Visions and Values Drying Up?,” in the International Herald Tribune, March 19, 1990, p. 5.} Everything we know about France indicates that the same state of mind reigns there, too. Yet actual behavior carries much more weight than opinions. Struggles against the system, even mere reactions, are tending to disappear. But capitalism changed and became somewhat tolerable only as a function of the economic, social and political struggles which have marked the past two centuries. A capitalism torn by conflict and obliged to confront strong internal opposition, and a capitalism dealing only with lobbies and corporations, capable of quietly manipulating people and of buying them with a new gadget every year, are two completely different social-historical animals. Reality already offers abundant indications of this.
+
+
+The monstrous history of Marxism-Leninism shows what a movement for emancipation cannot and should not be. It in no way allows us to conclude that the capitalism and liberal oligarchy under which we now live embody the finally resolved secret of human history. The project of total mastery (which Marxism-Leninism took from capitalism and which, in both cases, was turned into its contrary) is a piece of delirium. It does not follow that we should suffer our history as a fatality. The idea of making a tabula rasa of everything that exists is a folly leading toward crime. It does not follow that we should renounce that which has defined our history since the time of ancient Greece and to which Europe has added new dimensions, viz., that we make our laws and our institutions, that we will our individual and collective autonomy, and that we alone can and should limit this autonomy. The term “equality” has served as a cover for a regime in which real inequalities were in fact worse than those of capitalism. We cannot for all that forget that there is no political freedom without political equality and that the latter is impossible when enormous inequalities of economic power, which translate directly into political power, not only exist but are growing. Marx’s idea that one could eliminate the market and money is an incoherent utopia. To understand that does not lead one to swallow the almightiness of money, or to believe in the “rationality” of an economy which has nothing to do with a genuine market and which is more and more coming to resemble a planetary casino. Just because there is no society without production and consumption does not mean that these latter should be erected into ultimate ends of human existence--which is the real substance of “individualism” and free-market “liberalism” today.
+
+
+These are some of the conclusions to which the combined experience of the pulverization of Marxism-Leninism and the evolution of contemporary capitalism should lead. They are not the ones public opinion will draw immediately. Nevertheless, when the dust clears it is to these conclusions that humanity will have to come, unless it is to continue on its course toward an illusory “more and more” which, sooner or later, will shatter against the natural limits of the planet, if it does not collapse beforehand under the weight of its own nothingness of meaning.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Cornelius Castoriadis
+
+
+
+The Pulverization of Marxism-Leninism
+
+
+
+
+
+
+1990
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+Scanned from original.
+
+
+
+Salmagundi No. 88–89, Fall, 1990-Winter, 1991, pp. 371–384
+
+
+\stopalignment
+
+\stoptext
+
+

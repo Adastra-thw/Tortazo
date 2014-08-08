@@ -1,0 +1,539 @@
+
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            
+				
+			
+
+            <title>Adobe - Adobe Reader, free PDF viewer download</title>
+
+            <link href="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/css/reset.css" rel="stylesheet">
+            <link href="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/css/jquery-ui/jquery-ui.css" rel="stylesheet">
+            <link href="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/css/core.css" rel="stylesheet">
+
+            <!--[if lt IE 9]>
+                <link href="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/css/ie_fix.css" rel="stylesheet">
+            <![endif]-->
+
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/jquery.min.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/jquery-ui.min.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/plugins/cookies/cookies.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/plugins/outside/outside.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/plugins/string/string.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/plugins/bxslider/bxslider.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/jquery/plugins/selectBox/selectBox.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/swfobject/swfobject.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/modal.js" type="text/javascript"></script>
+            <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/core.js" type="text/javascript"></script>
+			
+	        <script type="text/javascript" src="//fonts.adobe.com/yoe7ink.js"></script>
+            <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+            <script type="text/javascript">
+			if (!Array.prototype.indexOf)
+			{
+			  Array.prototype.indexOf = function(elt /*, from*/)
+			  {
+				var len = this.length;
+
+				var from = Number(arguments[1]) || 0;
+				from = (from < 0)
+					 ? Math.ceil(from)
+					 : Math.floor(from);
+				if (from < 0)
+				  from += len;
+
+				for (; from < len; from++)
+				{
+				  if (from in this &&
+					  this[from] === elt)
+					return from;
+				}
+				return -1;
+			  };
+			}
+            </script>
+
+            <!--[if lt IE 9]>
+                <script src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/js/html5shiv.js" type="text/javascript"></script>
+            <![endif]-->
+             
+          
+			
+            
+			<script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/uber/js/pdc_s_code.js"></script>
+			<script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/uber/js/atm/s_code_acdc.js"></script>
+		
+<script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/js/live/polarbear.js"></script>
+<script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/js/live/reader_detection.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/js/jquery.nyroModal/js/jquery.nyroModal-ie6.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+	setTimeout(function(){			
+	try{
+		$("#buttonDownload").hide();
+		try{
+		$(window).SiteCatalystWrapper({
+			siteCatalyst: s,
+			siteCatalystReboot: s_adobe
+		}).data("SiteCatalystWrapper");}catch(e){}
+
+		$("#buttonDownload").downloadbutton({
+			mainInstaller: "Reader_11.0.07_English_for_Windows",
+			mainInstallerName: "Reader 11.0.07 English for Windows",
+			mainInstallerAihCompatible: 1,
+			clientPlatformDistribution: "XP",
+			clientPlatformType: "Windows",
+			clientPlatformArchitecture: "x86-32",
+			clientPlatformMisc: "SP3",
+			browser_type: "Gecko",
+			browser_dist: "Firefox",
+			defaultDownloadType: "",
+			saiDownloadType: "download",
+			aihDownloadType: "download",
+			downloadcenter: "reader",
+			locale: "en",
+			buttonClass: "download-button",
+			useAihIfPossible: true,
+			downloadNowText : "Download now"
+		}).data("downloadbutton").updateDownloadButton();
+
+		
+			
+
+		
+		
+		$("#offer").addons({
+			downloadButton: $("#buttonDownload"),
+			megabyteAbbr: "MB",
+			fileSizeLabel: $("#filesizelabel"),
+			locale: "en",
+            language: "English",
+            os: "Windows",
+            browser_type: "Gecko",
+            browser_dist: "Firefox",
+			eula: $("#adobeEULA"),
+			resources: $("#adobeResources"),
+			adobeEula: "By clicking the \"Install now\" button, you acknowledge that you have read and agree to the  <a href=\"http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/Reader_11_0_en.pdf\" title=\"Adobe Software Licensing Agreement\" rel=\"modal\" id=\"AUTO_ID_db_a_license\">Adobe Software Licensing Agreement</a>.",
+			omniturePrefix: 'RDR_',
+			downloadcenter: "reader",
+			bundledAddon: $("#bundledAddon"),
+			fileSize: $("#clientfilesize"),
+			dualOfferInstallOptions: $("#dualOfferInstallOptions"),
+			dualModalWindow: $("#dualModalWindow"),
+			siteCatalystWrapper: $(window).data("SiteCatalystWrapper"),
+			polarbearpal: new Polarbearpal(),
+			appdetection: new PolarbearAppDetection(),
+			brCountryList: "",
+			brLanguageList: ""
+	}).data("addons");
+	
+		
+		
+		
+		
+		$("#offer").data("addons").registerAddon(1821, {
+			id: 1821,
+            
+            	size: .88,
+            
+			abbr: "mss",
+            
+            	siteCatalystAbbr : "MSS",
+                
+			name: "McAfee Security Scan Plus FireFox Browser",
+			type: "optional",
+			group: 1,
+			text: {"checkbox":"Yes, install the free <strong>McAfee Security Scan Plus<\/strong> utility to check the status of my PC security. It will not modify existing antivirus program or PC settings.","marketing":"<strong>McAfee Security Scan Plus<\/strong> is a free diagnostic tool that actively checks the anti-virus, firewall, and web security status of your PC. It complements any existing security software and does not impact the performance of your computer.","installoptions":"","additionalResources":["<a id=\"mss_learnmore\" href=\"http:\/\/us.mcafee.com\/root\/campaign.asp?cid=72563\" target=\"_blank\">Learn more about McAfee Security Scan Plus<\/a>","<a id=\"mss_privacy\" href=\"http:\/\/home.mcafee.com\/root\/campaign.aspx?cid=64986 \" target=\"_blank\">McAfee Security Scan Plus privacy policy<\/a>"],"eula":"By clicking the \"Install now\" button, you acknowledge that you have read and agree to the  <a href=\"http:\/\/wwwimages.adobe.com\/www.adobe.com\/content\/dam\/Adobe\/en\/legal\/licenses-terms\/pdf\/Reader_11_0_en.pdf\" title=\"Adobe Software Licensing Agreement\" rel=\"modal\" id=\"AUTO_ID_db_a_license\">Adobe Software Licensing Agreement<\/a> and the <a href=\"\/\/home.mcafee.com\/supportpages\/eula.aspx\" rel=\"modal\" id=\"AUTO_ID_db_a_mcafee_license\">McAfee Security Scan Plus License Agreement<\/a>.","learnmore":"Learn more"},
+			image: {"alt":"McAfee","height":66.0,"src":"http:\/\/wwwimages.adobe.com\/www.adobe.com\/downloadcenter\/singlepage\/live\/images\/mcafee_banner_225x66.png","width":225.0},
+           	queryName: "McAfee_Security_Scan_Plus_FireFox_Browser",
+			percentage: 1,
+			preinstalled: (function() { return false; })(),
+            isDefault : true,
+            isEligibleOffer: (function(){return true;})()
+		});
+	
+		
+		
+		
+		
+
+	
+    
+    
+    
+    
+    
+	
+	
+	
+	
+	
+	
+    
+    
+        	
+    
+    
+    try{   
+    $(window).data("SiteCatalystWrapper").setProperty ("pageName", "ACDC_Rdr_AIH_Offer");
+    $(window).data("SiteCatalystWrapper").setProperty ("channel", "ACDC_Reader");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystProperty ("prop32", "en");    
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop1", "Offer");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop2", "ACDC Downloads");		
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop3", "http://get.adobe.com");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop4", "en");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop5", "en:ACDC_Rdr_AIH_Offer");          		
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("products", "Reader_AIH");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("eVar73", "ACDC_Reader");
+    $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("events", "event98");    
+        
+						
+        $(window).data("SiteCatalystWrapper").setSiteCatalystProperty ("eVar5", "ACDC_Reader");        
+        var rdrVersionInfo = '';
+        var rdrVersion = '';		
+        var prop5 = '';  
+        if(navigator && (navigator.userAgent.toLowerCase()).indexOf("msie") > -1)
+        {
+            var control = null;   
+                   
+            try {    
+                control = new ActiveXObject('AcroPDF.PDF');
+            }
+            catch (e){}
+            
+            if (!control) {
+                try {    
+                 control = new ActiveXObject('PDF.PdfCtrl');
+                }
+                catch (e) {}
+            }
+            
+            if (control==null) {
+                prop5 = 'ACDC_Rdr_0.0.0';
+            }
+            else {
+                rdrVersionInfo = control.GetVersions().split(',');   				
+                rdrVersionInfo = rdrVersionInfo[0].split('=');      
+                rdrVersionInfo = parseFloat(rdrVersionInfo[1]);    		
+                if (rdrVersionInfo!=null) {
+                    prop5 = 'ACDC_Rdr_' + rdrVersionInfo;
+                }
+                else {
+                    prop5 = 'ACDC_Rdr_0.0.0'; 
+                }
+            }
+        }
+        
+        if (navigator.plugins && navigator.plugins.length>0) {
+            for (var i = 0; i<navigator.plugins.length; i++) {                                               
+                if (navigator.plugins[i].name.indexOf('Adobe Acrobat') > -1) {			
+                    rdrVersionInfo = navigator.plugins[i].description;
+                    break;
+                }
+            }
+            rdrVersion = rdrVersionInfo.match(/\d+\.\d+\.\d+/g);
+            
+            if (rdrVersion==null) {
+                rdrVersion = rdrVersionInfo.match(/\d+\.\d+/g);
+            }
+            if (rdrVersion!=null) { 
+                prop5 = 'ACDC_Rdr_' + rdrVersion;
+            }
+            else {
+                prop5 = 'ACDC_Rdr_0.0.0'; 
+            }		
+        }
+        $(window).data("SiteCatalystWrapper").setSiteCatalystProperty ("prop5", prop5);
+        $(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("prop75", prop5);       
+    
+        
+		
+    
+     
+   }catch(e){}   
+
+
+			var pbDisplayOffer = function(){
+				
+					// Optional Addons
+					$("#offer").data("addons").reset();
+					var result = $("#offer").data("addons").getBestOfferFromList("4661,4662,4202,4281,4282,4041,1461,4285,1821,4201,4284,4283");
+					$("#offer").data("addons").preinstalled(result.preinstalled);
+					$("#offer").data("addons").offerOptionalAddon(result.best);
+					var addonOffered = $("#offer").data("addons").getAddonById(result.best);
+					if(typeof(addonOffered) != "undefined" && (addonOffered.abbr === "ltrosx" || addonOffered.abbr === "ltrosxjp" || addonOffered.abbr === "ltr5x32" || addonOffered.abbr === "ltr5x64")){
+						result.accepted = false;
+					}
+					result.accepted ? $("#offer").data("addons").accept() : $("#offer").data("addons").decline();
+					// Call Sitecatalyst
+					try{
+					if (typeof(s.prop34) != "undefined")
+					{
+						eVar10 = s.prop34.substring(0,(s.prop34.search("=")));
+						$(window).data("SiteCatalystWrapper").setSiteCatalystProperty ("eVar10", eVar10);
+						$(window).data("SiteCatalystWrapper").setSiteCatalystRebootProperty ("eVar74", eVar10);
+					}
+					}catch(e){}
+					if(typeof(addonOffered) != "undefined" && addonOffered.abbr === "mss"){
+						$("#AUTO_ID_js_p_offer_image").css("margin-bottom","0.2em");
+						$("#AUTO_ID_js_p_more_links").css("margin-bottom","0.2em");					
+					}
+				
+
+				
+				
+				
+				try{
+				$(window).data("SiteCatalystWrapper").send();
+				$(window).removeData("SiteCatalystWrapper");
+				}catch(e){}
+				$("#buttonDownload").show();
+			};
+
+			try{
+				var palDomain = new PalDomainStorage("https://get3.adobe.com", "/util/pal/read/");
+				palDomain.requestValue(function(value){
+					/*if(value !== undefined && value.length > 0){
+						$("#offer").data("addons").setPalList(value);
+					}*/
+					pbDisplayOffer();
+				});
+			}catch(e){
+				pbDisplayOffer();
+			}
+
+		}catch(e){
+			$("#buttonDownload").show();
+			$.log("Error: " + e.message);
+		}
+		},600);
+	});
+</script>
+
+
+			<style>
+				body { display : none;}
+				.ui-dialog{ filter: none !important; }
+			</style>
+        <script type='text/javascript'>var locale = 'en';</script><script type="text/javascript" src="http://wwwimages.adobe.com/www.adobe.com/js/foresee/foresee-trigger-dlc.js"></script></head>
+
+        <body>
+        	<script type="text/javascript">
+ 				if (self == top) {
+	    			var theBody = document.getElementsByTagName('body')[0];
+	    			theBody.style.display = "block";
+	  			} else {
+	    			top.location = self.location;
+	  			}
+			</script>
+            <div class="MainContent" id="AUTO_ID_div_main_content">
+				<header id="AUTO_ID_singlepage_header">
+					<div class="header " id="AUTO_ID_singlepage_div_header">
+						<div class="HeaderContent" id="AUTO_ID_singlepage_div_headerContent">
+							<span id="AUTO_ID_singlepage_span_home"><a class="HomeLogo" href="http://www.adobe.com" id="AUTO_ID_singlepage_a_home">Home</a></span>
+							<p class="TextStep" id="AUTO_ID_singlepage_span_step">Step: 1 of 3</p>
+						</div>
+					</div>
+				</header>
+				<section id="AUTO_ID_singlepage_section">
+					<div class="section " id="mainSection">
+						
+<div id="ContentColumns-left">
+    <div class="ContentColumn ContentColumn-1" id="AUTO_ID_columnleft_div_01">
+            <h2 class="HeaderFlashPlayer" id="AUTO_ID_columnleft_h2_header">Adobe Reader</h2>
+            <p id="AUTO_ID_columnleft_p_reader_logo"><img src="http://wwwimages.adobe.com/www.adobe.com/downloadcenter/singlepage/live/images/reader_windows.gif" width="316" height="130" alt="Reader logo with screens" id="AUTO_ID_columnleft_img_reader_logo"></p>
+			<span id="clientfilesize" style="display:none;">71.2</span>
+			<noscript>
+				<style>
+					#playerInformationPane,#offersInformationPane,#AUTO_ID_columnright_h3_t_and_c,#eula,#bottom_download_button_section,
+					#autoSelectedVersion,#AUTO_ID_columnright_div_01,#AUTO_ID_columnright_div_02 {display:none;}
+				</style>
+				<div class="MessageBox NoBottomMargin" id="AUTO_ID_columnleft_div_js_error">
+					<p class="NoBottomMargin" id="AUTO_ID_columnleft_p_js_error">JavaScript is currently disabled in your browser and is required to download Adobe Reader.<br /><br /><a href="http://helpx.adobe.com/acrobat/kb/troubleshoot-reader-installation-windows.html#javascript_enabled" class="LinkStrong" style="color: ##006699" target="_blank">Click here</a> for instructions to enable JavaScript.</p>
+				</div><br/>
+			</noscript>
+         <div id="autoSelectedVersion">
+             <p class="NoBottomMargin" id="AUTO_ID_columnleft_p_version"><strong>Version XI (11.0.07)</strong></p>
+             <p id="AUTO_ID_columnleft_p_system_requirements"><a rel="modal" title="System requirements" href="/reader/modal/?content=readerSystemRequirement&loc=en&version=XI%20%2811%2E0%2E07%29&os=Windows&fakeajax" id="AUTO_ID_columnleft_a_system_requirements">System requirements</a></p>
+
+             <p class="NoBottomMargin" id="AUTO_ID_columnleft_p_your_system">Your system:</p>
+             <p class="NoBottomMargin" id="AUTO_ID_columnleft_p_platform"><strong>Windows XP SP2 - SP3, <span id="language"><strong>English</strong></span></strong></p>
+             <p id="AUTO_ID_columnleft_p_need_other_version"><a id="need_other_version" href="/reader/otherversions/">Do you have a different language or operating system?</a></p>
+             <p id="AUTO_ID_columnleft_p_distribute"><a rel="modal" href="/reader/modal/?content=readerDistribute&loc=en&version=XI%20%2811%2E0%2E07%29&fakeajax" id="AUTO_ID_columnleft_a_distribute">Are you an IT manager or OEM?</a></p>
+		</div>
+	</div>
+</div>
+<div id="ContentColumns-right">
+	<div class="ContentColumn ContentColumn-2" id="AUTO_ID_columnright_div_01">
+		<div id="playerInformationPane" style="display: none;">
+			<h3 id="AUTO_ID_db_h3_about_head">About:</h3>
+<p id="AUTO_ID_db_p_about_text_01">Adobe&reg; Reader&reg; software is the free global standard for reliably viewing, printing, and commenting on PDF documents.</p>
+<p id="AUTO_ID_db_p_about_text_02">It's the only PDF file viewer that can open and interact with all types of PDF content, including forms and multimedia.</p>
+		</div>
+		<div id="offersInformationPane">
+			<h3 id="AUTO_ID_columnright_h3_optional_offer">Optional offer:</h3>
+			<div id="offer"></div>
+		</div>
+	</div>
+
+	<div class="ContentColumn ContentColumn-3" id="AUTO_ID_columnright_div_02">
+		<h3 id="AUTO_ID_columnright_h3_t_and_c">Terms &amp; conditions:</h3>
+		<div id="eula">
+			<p id="adobeEULA">
+				
+                	
+                    	By clicking the "Install now" button, you acknowledge that you have read and agree to the  <a href="http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/Reader_11_0_en.pdf" title="Adobe Software Licensing Agreement" rel="modal" id="AUTO_ID_db_a_license">Adobe Software Licensing Agreement</a>.
+                    		
+				
+			</p>
+		</div>
+		<div class="AlignBottom" id="bottom_download_button_section" style="display: none;">
+			<p class="TextGrey" id="AUTO_ID_columnright_p_note">Note: Your antivirus software must allow you to install software.</p>
+			<p class="SmallBottomMargin AlignCenter" id="AUTO_ID_columnright_p_download_button">
+				<a id="buttonDownload" href="http://www.adobe.com" class="Button ButtonYellow">
+					Install now
+				</a>
+			</p>
+			<p class="NoBottomMargin AlignCenter TextGrey" id="total_size_text">Total size: <span id="totalsize">71.2</span> MB</p>
+		</div>
+	</div>
+</div>
+<noscript><img src="http://stats.adobe.com/b/ss/mxmacromedia/1/H.24.4T/0?pageName=ACDC%5FNoscript&g=http%3A//get.adobe.com/&ch=ACDC%5FNoscript&server=Dylan" height="1" width="1" border="0" alt="" /></noscript><noscript><img src="http://stats.adobe.com/b/ss/adbacdcprod/1/H.24.4T/0?pageName=ACDC%5FNoscript&g=http://get.adobe.com&ch=ACDC%5FNoscript" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End Adobe Digital Marketing Suite Tag Management code -->
+<script>
+	$("#bottom_download_button_section").show();
+</script>
+
+					</div>
+				</section>
+
+				
+					
+                    
+					<footer id="singlepage_footer">
+						<div class="footer " id="AUTO_ID_singlepage_div_footer">
+							
+								
+                                
+					<!-- $Id: //depot/projects/dylan/releases/rc_14_7/ubi/footer/en_us/globalfooter_ssi_pdc_singlepage.html#1 $ -->
+
+<div class="SiteFooterRegionPanel" id="RegionPanel" style="display: none;">
+  <div class="SiteFooterRegionPanelHeader"> <span class="SiteFooterMenuItemIcon SiteFooterMenuItemIconRegionBlack">Choose your region</span> <a id="RegionClose" class="SiteFooterRegionPanelHeaderClose">Close</a> </div>
+  <div class="Column">
+    <div class="Column">
+            <div class="Column-1">
+              <p class="SiteFooterRegionPanelRegionHeader">Americas</p>
+            </div>
+            <div class="Column-2-3">
+              <p class="SiteFooterRegionPanelRegionHeader">Europe, Middle East and Africa</p>
+            </div>
+            <div class="Column-4">
+              <p class="SiteFooterRegionPanelRegionHeader">Asia Pacific</p>
+            </div>
+            <div class="Column-1">
+              <ul>
+                <li lang="pt"><a onClick="changeRegion('br');">Brasil</a></li>
+                <li lang="en"><a onClick="changeRegion('ca');">Canada - English</a></li>
+                <li lang="fr"><a onClick="changeRegion('ca_fr');">Canada - Fran&ccedil;ais</a></li>
+                <li lang="es"><a onClick="changeRegion('la');">Latinoam&eacute;rica</a></li>
+                <li lang="es"><a onClick="changeRegion('mx');">M&eacute;xico</a></li>
+                <li lang="en"><a onClick="changeRegion('us');">United States</a></li>
+              </ul>
+            </div>
+            <div class="Column-2">
+              <ul>
+                <li lang="en"><a onClick="changeRegion('africa');">Africa - English</a></li>
+                <li lang="de"><a onClick="changeRegion('at');">&Ouml;sterreich - Deutsch</a></li>
+                <li lang="en"><a onClick="changeRegion('be_en');">Belgium - English</a></li>
+                <li lang="fr"><a onClick="changeRegion('be_fr');">Belgique - Fran&ccedil;ais</a></li>
+                <li lang="nl"><a onClick="changeRegion('be_nl');">Belgi&euml; - Nederlands</a></li>
+                <li lang="bg"><a onClick="changeRegion('bg');">България</a></li>
+                <li lang="hr"><a onClick="changeRegion('hr');">Hrvatska</a></li>
+                <li lang="en"><a onClick="changeRegion('eeurope');">Cyprus - English</a></li>
+                <li lang="cs"><a onClick="changeRegion('cz');">Česk&aacute; republika</a></li>
+                <li lang="da"><a onClick="changeRegion('dk');">Danmark</a></li>
+                <li lang="en"><a onClick="changeRegion('eeurope');">Eastern Europe - English</a></li>
+                <li lang="et"><a onClick="changeRegion('ee');">Eesti</a></li>
+                <li lang="fi"><a onClick="changeRegion('fi');">Suomi</a></li>
+                <li lang="fr"><a onClick="changeRegion('fr');">France</a></li>
+                <li lang="de"><a onClick="changeRegion('de');">Deutschland</a></li>
+                <li lang="en"><a onClick="changeRegion('eeurope');">Greece - English</a></li>
+                <li lang="hu"><a onClick="changeRegion('hu');">Magyarorsz&aacute;g</a></li>
+                <li lang="en"><a onClick="changeRegion('ie');">Ireland</a></li>
+                <li lang="en"><a onClick="changeRegion('il_en');">Israel - English</a></li>
+                <li lang="he"><a onClick="changeRegion('il_he');">&#1497;&#1513;&#1512;&#1488;&#1500; - &#1506;&#1489;&#1512;&#1497;&#1514;</a></li>
+                <li lang="it"><a onClick="changeRegion('it');">Italia</a></li>
+                <li lang="lv"><a onClick="changeRegion('lv');">Latvija</a></li>
+                <li lang="lt"><a onClick="changeRegion('lt');">Lietuva</a></li>
+                <li lang="de"><a onClick="changeRegion('lu_de');">Luxembourg - Deutsch</a></li>
+                <li lang="en"><a onClick="changeRegion('lu_en');">Luxembourg - English</a></li>
+                <li lang="fr"><a onClick="changeRegion('lu_fr');">Luxembourg - Fran&ccedil;ais</a></li>
+                <li lang="en"><a onClick="changeRegion('eeurope');">Malta - English</a></li>
+                <li lang="ar"><a onClick="changeRegion('mena_ar');">&#1575;&#1604;&#1588;&#1585;&#1602; &#1575;&#1604;&#1571;&#1608;&#1587;&#1591; &#1608;&#1588;&#1605;&#1575;&#1604; &#1571;&#1601;&#1585;&#1610;&#1602;&#1610;&#1575; - &#1575;&#1604;&#1604;&#1594;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a></li>
+                <li lang="en"><a onClick="changeRegion('mena_en');">Middle East and North Africa - English</a></li>
+                <li lang="fr"><a onClick="changeRegion('mena_fr');">Moyen-Orient et Afrique du Nord - Fran&ccedil;ais</a></li>
+              </ul>
+            </div>
+            <div class="Column-3">
+              <ul>
+                <li lang="nl"><a onClick="changeRegion('nl');">Nederland</a></li>
+                <li lang="no"><a onClick="changeRegion('no');">Norge</a></li>
+                <li lang="pl"><a onClick="changeRegion('pl');">Polska</a></li>
+                <li lang="pt"><a onClick="changeRegion('pt');">Portugal</a></li>
+                <li lang="ro"><a onClick="changeRegion('ro');">Rom&acirc;nia</a></li>
+                <li lang="ru"><a onClick="changeRegion('ru');">Россия</a></li>
+                <li lang="sr"><a onClick="changeRegion('rs');">Srbija</a></li>
+                <li lang="sk"><a onClick="changeRegion('sk');">Slovensko</a></li>
+                <li lang="sl"><a onClick="changeRegion('si');">Slovenija</a></li>
+                <li lang="es"><a onClick="changeRegion('es');">Espa&ntilde;a</a></li>
+                <li lang="sv"><a onClick="changeRegion('se');">Sverige</a></li>
+                <li lang="de"><a onClick="changeRegion('ch_de');">Schweiz - Deutsch</a></li>
+                <li lang="fr"><a onClick="changeRegion('ch_fr');">Suisse - Fran&ccedil;ais</a></li>
+                <li lang="it"><a onClick="changeRegion('ch_it');">Svizzera - Italiano</a></li>
+                <li lang="tr"><a onClick="changeRegion('tr');">T&uuml;rkiye</a></li>
+                <li lang="uk"><a onClick="changeRegion('ua');">Україна</a></li>
+                <li lang="en"><a onClick="changeRegion('uk');">United Kingdom</a></li>
+              </ul>
+            </div>
+            <div class="Column-4">
+              <ul>
+                <li lang="en"><a onClick="changeRegion('au');">Australia</a></li>
+                <li lang="zh"><a onClick="changeRegion('cn');">中国</a></li>
+                <li lang="zh"><a onClick="changeRegion('hk_zh');">中國香港特別行政區</a></li>
+                <li lang="en"><a onClick="changeRegion('hk_en');">Hong Kong S.A.R. of China</a></li>
+                <li lang="en"><a onClick="changeRegion('in');">India - English</a></li>
+                <li lang="ja"><a onClick="changeRegion('jp');">日本</a></li>
+                <li lang="ko"><a onClick="changeRegion('kr');">한국</a></li>
+                <li lang="en"><a onClick="changeRegion('nz');">New Zealand</a></li>
+                <li lang="en"><a onClick="changeRegion('sea');">Southeast Asia (Includes Indonesia, Malaysia, Philippines, Singapore, Thailand, and Vietnam) - English</a></li>
+                <li lang="zh"><a onClick="changeRegion('tw');">台灣</a></li>
+              </ul>
+              <p class="SiteFooterRegionPanelRegionHeader">Commonwealth of Independent States</p>
+              <ul>
+                <li><a href="/cis/">Includes Armenia, Azerbaijan, Belarus, Georgia, Moldova, Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Ukraine, Uzbekistan</a></li>
+              </ul>
+            </div>
+  </div>
+</div>
+<div class="Region">
+  <p id="RegionLink"><a href="//www.adobe.com/go/gffooter_choose_region" class="RegionLink">Choose your region</a></p>
+  <p id="RegionLinkSet" style="display: none;">United States <a href="//www.adobe.com/go/gffooter_choose_region" id="sfRegionChange">(Change)</a></p>
+</div>
+<div class="Copyright">
+  <p>Copyright &copy; 2014 Adobe Systems Incorporated.  All rights reserved.</p>
+  <p><a rel="modal" href="//www.adobe.com/go/gffooter_terms_of_use">Terms of use</a> | <a rel="modal" href="//www.adobe.com/privacy.html">Privacy</a> | <a rel="modal" href="//www.adobe.com/privacy/cookies.html">Cookies</a></p>
+</div>
+
+					
+							
+						</div>
+					</footer>
+                  
+            </div>
+			<div id="dualOfferInstallOptions" style="display: none;" title="Install Option"></div>
+        </body>
+    </html>

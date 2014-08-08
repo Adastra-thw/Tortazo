@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Tuli Kupferberg (1923–2010) (Anonymous) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/anonymous-tuli-kupferberg-1923-2010?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=anonymous-tuli-kupferberg-1923-2010">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Tuli Kupferberg (1923–2010)
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/anonymous">Anonymous</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    Winter 2010–2011
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/culture">culture</a>
+        <a href="/topics/music">music</a>
+        <a href="/topics/obituary">obituary</a>
+        <a href="/topics/poetry">poetry</a>
+        <a href="/topics/subversion">subversion</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Scanned from print original.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    <em>Communicating Vessels</em>, Issue 22, Fall-Winter, 2010–2011, page 16
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="anonymous-tuli-kupferberg-1923-2010.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="anonymous-tuli-kupferberg-1923-2010.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="anonymous-tuli-kupferberg-1923-2010.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="anonymous-tuli-kupferberg-1923-2010.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="anonymous-tuli-kupferberg-1923-2010?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="anonymous-tuli-kupferberg-1923-2010.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="anonymous-tuli-kupferberg-1923-2010.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Anonymous</h2>
+	
+	<h1 id="textttitleh">Tuli Kupferberg (1923–2010)</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1"><em>Morning, Morning</em> <br />(poem) by Tuli Kupferberg
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Tuli Kupferberg is gone. We always had an appreciation for his sense of humor, as expressed in his band The Fugs and his cartoons. He died at the age of 86 in Manhattan.
+</p><p>The Fugs exemplified a certain time and place. They formed in 1964, and frequently played at Vietnam War protest rallies, and had a knack for the “Theatre of the Absurd”. They never took themselves too seriously, which allowed them to have a good time playing music.
+</p><p>Tuli’s comics were on the crude side of things — like the lyrics that were written for various songs by The Fugs — in many ways. Even so, they still make me laugh.
+</p><p>Tuli’s understanding of poetic forms and the structure of music was impressive. Kupferberg drew on his Eastern European and Jewish family background to aid his creativity. At various times he sent us his parasongs. Here Kupferberg took old Jewish songs, made a parody of them and kept the traditional melody. He also made parasongs of selective contemporary tunes.
+</p><p>Tuli shared our love for Omar Khayyam’s Rubaiyat. He produced a wonderful rendition of it in song form.
+</p><p>Along with occasional short notes, cartoons, parasongs and financial contributions, Kupferberg also, at one point, sent us a copy of his book entitled Teach Yourself Fucking. It is a collection of his cartoons. With the book he included a note declaring that we could use anything he sent our way. He didn’t want us to include his name as source credit because he was “already listed as a subversive on too many government lists”.
+</p><p>Kupferberg was one of the last bohemians, in the best sense of the term. The life he lived was a reflection of his ideas. His spirit and sense of humor and creativity will be missed.
+</p><p>So long, Tuli.
+</p><p>The following is Tuli’s poetic masterpiece, “Morning, Morning”. It is from the second album of The Fugs. Put to music, this is one of the most hauntingly magical songs I have ever listened to.
+</p><h4 id="toc1"><em>Morning, Morning</em> <br />(poem) by Tuli Kupferberg
+</h4>
+
+<blockquote>
+<p>Morning morning <br />
+Feel so lonesome in the morning <br />
+Morning morning <br />
+Morning brings me grief
+</p><p>Sunshine sunshine <br />
+Sunshine laughs upon my face <br />
+&amp; the glory of the growing <br />
+Puts me in my rotting place
+</p><p>Evening evening <br />
+Feel so lonesome in the evening <br />
+Evening evening <br />
+Evening brings me grief
+</p><p>Moonshine moonshine <br />
+Moonshine drugs the hills with grace <br />
+&amp; the secret of the shining <br />
+Seeks to break my simple face
+</p><p>Nighttime nighttime <br />
+Kills the blood upon my cheek <br />
+Nighttime nighttime <br />
+Does not bring me to relief
+</p><p>Starshine starshine <br />
+Feel so loving in the starshine <br />
+Starshine starshine <br />
+Darling kiss me as I weep
+</p></blockquote>
+
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

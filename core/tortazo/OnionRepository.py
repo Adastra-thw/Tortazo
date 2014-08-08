@@ -241,7 +241,6 @@ class RepositoryProcess:
                 proc.daemon=True
                 proc.start()
             except:
-                print "Interrupt"
                 proc.terminate()
         self.onionQueue.join()
 
@@ -251,7 +250,6 @@ class RepositoryProcess:
                 proc.daemon=True
                 proc.start()
             except:
-                print "Interrupt"
                 proc.terminate()
         self.onionQueueResponses.join()
 

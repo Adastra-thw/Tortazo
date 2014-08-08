@@ -1,0 +1,849 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+W. Awry  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Goodbye to All That
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+The Seams \& the Story \#1
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+June 2014
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\page[yes,right]
+
+1.
+
+
+I finally get up the courage to ask my father what bourgeois means. I’ve heard it every day for the past few months, during our ritual listen to {\em Ragtime the Musical} in our living room. The word sounds dirty and I’ve put off asking about it, because I’m paralyzed by the prospect of awkwardness and embarrassment.
+
+
+“I’ll tell you when you’re older,” my father says. He has confirmed my suspicions. My cheeks redden and I return to listening.
+
+
+I’m nine, bookish and gawky, marooned in the suburbs just north of New York City. My father’s favorite musical is {\em Ragtime}. He loves it, in part, because he is a ragtime pianist himself. My father’s good, really good- he captures Scott Joplin’s syncopation with such skill that it takes me years to tell the difference between his playing and a recording.\footnote{My father thought about becoming a professional pianist once, but decided it was too uncertain and too dependent on what the public thought of him. Instead, he programs code.}
+
+
+I sing and dance along with the musical. I memorize all the words, even the ones I do not know, even the ones that might be dirty, like bourgeois. I beg him to take me to see it, but he tells me that I must wait until I am older.
+
+
+2.
+
+
+Ragtime as a musical style is defined by syncopation.
+
+
+Syncopation, according to NPR music commentator Miles Hoffman, is a {\em disturbance or interruption of the regular flow of rhythm. It’s the placement of rhythmic stresses or accents where they wouldn’t normally occur.} The messy, interweaving plot lines that make up {\em Ragtime the Musical} and the E.L. Doctorow novel of the same name are syncopated themselves. {\em Ragtime} is a story of what happens when the quiet lives of a wealthy white family in the suburb of New Rochelle get mixed up with the immigrants filling the tenements of the Lower East Side and the African-American intelligentsia shaking up Harlem.
+
+
+3.
+
+
+I’m ten years old. I’ve received a ticket to {\em Ragtime} for my birthday. I talk back to a teacher in school the day of the performance, and have to beg them not to tell my parents, so that I won’t lose the privilege of going. I live in a suburb of New York City, just sixteen minutes from New Rochelle. I sing the songs under my breath the whole drive down to Midtown.
+
+
+My favorite character is Evelyn Nesbitt. She’s one of many that Doctorow plucked from history; a model and chorus girl who, in the musical, is performing a vaudeville act based on the events of her life. As a teenager, Nesbitt found herself caught between two of America’s most important men: architect Stanford White and millionaire Harry Thaw. Both men sexually assaulted her[2], both also claimed to love her, and ultimately, Thaw killed White in an act of revenge and jealously. Evelyn is a fierce survivor capitalizing on a mortal pissing contest between patriarchs, and I love her. I, too, want to sit on a red velvet swing, draped in lace and pearls. This adoration undercuts a darker truth: I want to be beautiful more than I want to be smart, or strong, or witty.[3]
+
+
+Younger Brother attends Evelyn Nesbitt’s performance on the nightly. He’s the son of a professor and the brother-in-law and employee of a fireworks manufacturer. He’s a pathetic character: an awkward, listless, well-off white man seeking authenticity in the seedier theaters of the city. Younger Brother’s obsessed with Evelyn Nesbitt and fantasizes that she will fall in love him.
+
+
+She won’t, of course, and Younger Brother will eventually leave the theaters for the union halls. He encounters Emma Goldman[4] on a soapbox in Union Square, orating about the Lawrence textile strikes. Just as Younger Brother imagined a personal relationship with Nesbitt, midway through Goldman’s speech he starts imagining that she is speaking directly to him. It’s in this exchange that she spits out that phrase: {\em Poor young bourgeois!}
+
+
+For the rest of the play, Emma acts as Younger Brother’s inner monologue, the things he wishes he could say.
+
+
+It’s Coalhouse Walker, Jr., a successful ragtime pianist, that the syncopated plot pivots around. Coalhouse and his sweetheart Sarah are driving his new Model T when they are stopped by a gang of white firefighters, who destroy the car. Coalhouse soon finds himself stuck with a legal system that doesn’t care and a progressive African-American milieu that tells him they have more important things to do than deal with a {\em mere case of vandalism}. Desperate, Sarah attends a rally to appeal Coalhouse’s case directly to a vice-presidential candidate. Her raised hand is mistaken for a gun, and she is beaten to death by the police. Coalhouse breaks, or rises to the occasion, depending on how you look at it. He organizes a group of men who start burning down firehouses; first in New Rochelle, and then across the entire city. Hysteria spreads.
+
+
+Younger Brother eventually finds his way to Coalhouse’s underground bunker, and the voice-of-Emma-in-his-head goes with him. In her Eastern European accent, pince-nez sliding down her nose, she explains Younger Brother’s arrival to the skeptical Coalhouse. Younger Brother wants to join the incendiary group for two reasons: because of a desire to stand in solidarity with Coalhouse and because of a deep gratitude: Coalhouse has exposed the unjust underpinnings of America to the {\em poor young rich boy}, and Younger Brother has finally found a path that makes sense to him. Emma narrates his inner thoughts, spewing poetry about solidarity and commonality, but when he finally speaks out loud, Younger Brother only manages a clumsy sentence about what he can do to help.
+
+
+I’m mesmerized by the glamorous, brave Evelyn Nesbitt and by fierce, brilliant Coalhouse Walker. Back home, I lip sync and choreograph dances to their songs. I don’t notice that it is listless, privileged Younger Brother that I resemble most.
+
+
+4.
+
+
+I’m thirteen and it’s my summer vacation. My father and I take the subway down to Manhattan’s East Village. It’s my first time east of Canal and south of 14\high{th} Street, I’ve read about the neighborhood in the literary guide to New York City I received for Christmas. I’ve also read works that were produced there-- fiction by Kerouac, the wild wending poems of Ginsberg and lesser known Beats anthologized in {\em The Outlaw Bible of American Poetry}. My alarm clock is set to The Ramones’ {\em Blitzkrieg Bop}, and I’ve studied Warhol’s art in great detail.
+
+
+My father has done his usual thing and looked up book stores in the neighborhood. We get off the train in Astor Place, the turn-of-the century buildings of Cooper Union towering above us, and head to our first stop: St. Mark’s Bookshop.
+
+
+I’ve never been in a book store like it before. St. Mark’s is packed with obscure literary journals and with sections titled {\em Feminism, Anarchism \& Ecology}. In the back, a rack displays handmade books of poetry and the earliest issues of {\em Found Magazine}. A sign explains how the shop consigns these {\em zines}. Although many of the titles don’t interest me, this will become my favorite section in the bookshop. In years to come, I will head straight to the zine rack, feel the hand-printed and stapled pamphlets in my hands and turn their card stock pages. I will imagine what it is like to put one together and then I will begin to do so, cobbling together photos and articles from friends in my suburban punk scene; writing about being young, punk and in love in unabashed detail.
+
+
+It’s in St. Mark’s Bookshop that my father finds the map. It is pinned to a pillar, with additional copies for sale below it. The map is several shades of purple and insets show illustrations of and captions about famous New York radicals, writers and artists. Emma Goldman’s place at East 13\high{th} is there, as well as Andy Warhol’s Union Square loft, original punk hole CBGB’s and 1980s squat cum social center ABC No Rio.
+
+
+{\em Do you want it?} my father asks. I do, and we bring it to the counter, where the dour, bespectacled cashier rolls it up and slips it in to a plastic case.\footnote{Over the next decade, the cashiers will change, but they will remain dour and bespectacled, just as the bookshelves will remain magnetic, drawing me in for hours at a time.}
+
+
+We set out down the block of St. Mark’s that is a punk rock bazaar. On either side of the street, hawkers sell vintage clothing, cut-rate facial piercings and bullet belts. My father and I go in to a few of the stores; cartooned genitalia and lewd tee-shirts are on prominent display. I don’t know which one of us is more uncomfortable: the shy, god-fearing father or the misfit daughter who is precociously attuned to the discomfort of others.
+
+
+Below Second Avenue, St. Mark’s becomes a tree-lined street with coffee shops and record stores. At First Avenue, it ends abruptly, running head first in to Tompkins.
+
+
+5.
+
+
+Tompkins Square Park was dredged out of a salt marsh in 1834. For the next century and a half it was the center of a hardscrabble neighborhood.
+
+
+The Draft Riots of 1863 took place here, as well as across most of Lower Manhattan. These bloody riots were the largest civilian insurrection in U.S. History. Poor immigrant whites rebelled against the Union Army draft that included them but disincluded the wealthy, who could pay a substitute, and African-Americans, who were not citizens. The wealthy hid in their offices and brownstones, while over one-hundred working-class blacks were murdered, eleven by lynching.
+
+
+After the civil war and a half-century of protest over food shortages, unemployment and immigrant rights, the city tore up the trees and turned the park into a military exercise ground. The protests and soapbox gatherings were not stymied by the barren scape. In 1878, the trees were re-planted at the urging of landscape architect Frederick Law Olmsted.
+
+
+But the calculated and controlling urban planning continued. Park commissioner Robert Moses built a road through Tompkins Square in 1936. He was purportedly separating the side of the park intended for active recreation from the side intended for passive recreation. But it might be said that through dividing the park, he was trying to make it wholly passive.
+
+
+Moses was foiled by counter-culture, by Vietnam, by the enclaves of squatters that made a home in the park. On July 31, 1988, a one a.m. curfew was put in place to curtail residence in Tompkins. Skirmishes erupted between the homeless, protesters, and the police, which became all-out riots during the dark hours strung between August 7\high{th} and 8\high{th}. In the aftermath, over one-hundred complaints of police misconduct were filed by protesters and neighborhood residents.
+
+
+In 1991, the park was closed for renovations. When it re-opened, the bandshell had been removed and the lanes had been widened to fit police cars.
+
+
+6.
+
+
+From the western edge of the park-- where St. Mark’s ends-- we can hear the loud, fast call of punk rock and the discordant response of a stomping, singing crowd. We walk toward the plaza where the band shell once stood; a portable stage is set up there. A singer screams in to the microphone while punks with crayola-box hair and studded vests dive off of the edges of the stage. They are caught and carried by dozens of hands.
+
+
+We pause briefly and then my father continues walking. I follow him. I want to stay longer, but I’m afraid my curiosity will be read as a pledge of allegiance. It is alright for a good Catholic girl from the suburbs to wear goth pants and shop at Hot Topic, but to daydream about joining up with the punx- the beer-drinking, god-hating, chaos-loving kind- in front of one’s own father is a different thing altogether.
+
+
+We descend in to Alphabet City. I will later learn that Alphabet City is the gentrifier’s name for a slice of the Lower East Side encompassing Avenues A, B and C. The neighborhood was named Loisaida[6] by the Puerto Ricans and allies who lived and organized there in the 1970s and 80s. Before Giuliani became mayor, Losaida was a lively, multi-racial network of squats, community gardens and neighborhood associations.
+
+
+Many of the punks that saunter down Avenue B that day are post-Giuliani white kids, a fractional part of the latest wave of gentrification. But I don’t know that history, and can’t yet see it written on the streets. I’m too young and too sheltered- and this entropic urban world is too shiny and new. All I see is toughness and resilience, the James Dean way these punks suckle their cigarettes. I want to walk the way they do in their giant combat boots; flamboyant, indignant, self-assured. In years to come I will learn to do so, until my stride is twice as big as expected for my tiny frame and friends can pick out my footsteps before I enter a room.
+
+
+7.
+
+
+The social center at 156 Rivington Street was named after what remained, eight letters on a sign that once read Abogado Con Notario. It was 1980, exactly nine years before I was born and twenty-five before I would step foot in the building. What passed in those twenty-five years was the entire history of an era. By the time I clomp through ABC No Rio’s archway of cogs and pipes for the first time, the building is already a vestige.
+
+
+I’m in high school. On Sunday afternoons friends and I take the commuter rail down from Westchester to help prepare Food Not Bomb’s in ABC’s second-floor kitchen. We chop boxes full of dumpstered and donated vegetables, the smell sinking in to the lines of our hands and defying soap and water. It is the earthy smell of aging carrots and cabbage and tomato juice, and it mingles with the thick, sweet smell of human grime and ancient building that permeates the ground floor of the space.
+
+
+{\em Eau de ABC No Rio,} I joke, but it is one of my favorite smells in the world. It is strongest on Saturdays, during the punk matinees, when the show space is crowded with riot grrrls and crust punks who have just chugged their forty-ounces in nearby parks and alley ways.\footnote{ABC is, after all, a sober space.} I return to the suburbs smelling like piss and cigarettes, with mosh-pit bruises on my arms. I daydream of a time when I will not have to take the train north by nine, but can stay up all night, climb rooftops and howl at the washed-out Gotham sky. I re-read {\em Off the Map} for the fourth time, reveling at each overwrought line. I plot hitch-hiking trips in Europe with one hand, apply to college with the other.
+
+
+8.
+
+
+I’m twenty-one, and I’m dating a kid who lives on the upper floor of a Prospect Heights apartment building. Their room is lined with tall windows, and I like to lie on their mattress and watch planes fly against the cloudy blue. I like to walk to Grand Army Plaza and stare at the illuminated arch that makes that corner of Brooklyn look like Paris. We are young, and we drink too much, and we talk too much, and neither of us acquiesce to ever being wrong.
+
+
+One night, sodden with too much whiskey, with cream cheese from late night bagels wedged between our fingernails, I try to tell them about {\em Ragtime}. I try to trace the threads that connect that evening in a Broadway theater to high school anti-war and feminist activism, to punk, to anarchism, to the direct action campaign in Appalachia where I currently reside. But my nervousness at a tenuous connection that’s splitting apart splits my thesis as well. The pieces don’t fit: I can’t explain the pain of Coalhouse or the listlessness of Younger Brother, or how the story swallowed me up, made me love the city recklessly.
+
+
+All I say is: {\em Emma Goldman is in it. She dances and sings.}
+
+
+9.
+
+
+It’s the fall of that year. My friend and I have broken up; they’ve moved away, to a small town in New England. I work pressing juice at a vegetarian restaurant on East 12\high{th}. I’ve just left the unintentional community in West Virginia where several dozen of us lived in close quarters, ran a direct action campaign against mountaintop removal and drove ourselves in to stress and madness. I’ve returned to New York for some sort of rest and homecoming I will not find.
+
+
+On my way to work, I often walk by the tenement at 208 East Thirteenth Street where Emma Goldman lived in the first decade of the 21\high{st} century. It is a pinkish-brown brick building with an iron fire escape stopping at each floor. A sidewalk tree obscures the right half of it with small, green leaves. There is a plaque erected for a president of Mexico’s wife, who slept in the building for one night. There is a plaque for Emma, too, but it is smaller and harder to find.
+
+
+As a child, my family toured the Tenement Museum on Orchard Street. The docent led us up dim-lit hallways where the peeling paint on the walls was once made of lead. The two- or three-room apartments, cluttered with bed rolls and sewing machines and hanging laundry, often slept a dozen. Emma’s small tenement on East 13\high{th} was built for thirty-six families.
+
+
+Emma and her friends put out Mother Earth Magazine there for many years. I think of them churning out that incendiary rag in a tiny apartment with inadequate lights and airflow. Little’s changed. ABC No Rio has always been threatened with closure, and has been in negotiations with the city since 1994. The compound of houses I lived in in West Virginia were similar-- we slept on all the couches and across the floors; mold crawling up the walls and dishes filling the sinks. Spaces of resistance are often like this: too small, with too much to do; their precarious existences mythologized, because if we are evicted/foreclosed on/pushed out/broken down we will need those stories.
+
+
+10.
+
+
+The ABC No Rio Collective obtained the title to the building in 2006, when I was seventeen and spending most of my weekends there, although I didn’t know about this at the time. Part of the bargain with the city was that the collective renovate the old tenement, which is not up to code. After a decade of research and fundraising, the collective decided that it was more cost effective to erect an entirely new building than to renovate the old one.
+
+
+Online, you can see plans for what the new ABC No Rio will look like. It will have solar panels and a planted facade climbing with vines and flowers. It will have a larger show space and dark room, a better screen printing lab and kitchen for Food Not Bombs.
+
+
+It will not be the same building.
+
+
+That shouldn’t matter, right? It’s {\em just} a building.
+
+
+Then again, how many writers have penned endless pages about their grandmother’s house in the country, or that apartment they lived in outside of Barcelona, or the lake they visited every summer? These are the stage sets against which they tell their stories. Without that particular set of creaky stairs, that particular smell of punk and rot and the dark, dingy lighting, something will be lost. Place triggers the senses and the senses trigger memory, and those memories- sharp, fragmented, distinct- are the ones I try hardest to hold in my hands. They are always made of water.
+
+
+11.
+
+
+It’s April 2012. Erin and I walk east on Rivington, towards ABC No Rio. We’ve just finished tabling at the New York Anarchist Bookfair for the infoshop we’re both part of in Boston. I worked late shifts the days before the book fair, and woke up at five a.m. to drive the three and a half hours, chugging coffee the whole time. I’m underslept and overstimulated. Nostalgia and exhaustion make a ruckus of my brain and stories spill out of my mouth like a game of word association. The street signs, buildings and corner stores bear down on me with so much memory that the neighborhood feels slightly unreal.
+
+
+Erin listens patiently, smiling in that way she does, seemingly unbothered by my running mouth and spastic gestures. I tell her about my memory of the neighborhood the first time I visited it, on a September morning the year that I started eleventh grade, shortly after making friends with a group of kids who went down to the city to do Food Not Bombs. The Lower East Side was awash in bright colors; purples and reds and blues. The walls and the streets were painted with giant murals. Looking out of the window of the zine library, where I had just found a copy of the first {\em Punk Magazine}, I saw an old Black Panther sign hanging in the second-story window across the street.
+
+
+The sign disappeared a few months after I started going to Food Not Bombs, when a clothing boutique called Narnia opened up below where it had hung. I’m not sure if the colors and murals existed or if I invented them, my subconscious weaving the bright purple map that hung on my bedroom wall with the asphalt and steel of the living city.
+
+
+We step under the metal-worked archway and approach the door. I know that ABC is closing soon, and I worry that it might already be locked up. I hold my breath. I push. It opens.
+
+
+The place smells the same, and looks the same- dimly lit with fragments of mosaics and murals scattered across the walls. I give my friend a tour, speaking in a sleepless tone that edges on hallucinatory.
+
+
+“This is where Food Not Bombs was,” I say, standing at the doorway of the second floor kitchen. I point across the hall: “This is where the zine library is.” We try the door to the library; it is locked.
+
+
+We descend, kicking up grime with our footsteps. I walk down the narrow hallway that runs outside the show space and tug on the door to the backyard. It, too, is locked. I recall one particular summer when I spent a lot of time sitting in that backyard on the rotting couch, watching a rat decompose over a series of weeks at the base of the big tree.
+
+
+12.
+
+
+In the suburbs I was taught that counter-culture and rebellion were the purview of history. The city, where history brimmed to the surface and counter-culture could be plainly seen, undid those lessons.
+
+
+At seventeen, I thought I was lurking at the edges of a world I would grow up to take my place in. What I was actually seeing during the punk matinees and those weekend afternoons in Tompkins were the final hangings-on of a vibrant subculture in a rapidly gentrifying city. By the time I graduated high school, that world was totally gone.
+
+
+“New York,” I say over whiskey in a mountain town six-hundred and ninety-one miles south, “is a dream that has already passed.” The other former New Yorkers laugh and nod, sip their beers.
+
+
+13.
+
+
+In {\em Ragtime}, the incendiary group’s final action is taking J.P. Morgan’s opulent Manhattan library hostage. The place is packed with explosives, and the men are prepared to die.
+
+
+After an intervention by Booker T. Washington, Coalhouse decides to leave the explosives undetonated and to turn himself in. He has been promised a fair trial. Of course, when he throws open the library doors, he’s met with a torrent of fatal police bullets.
+
+
+Younger Brother is in the library that night. He’s the only white man, and the most militant voice. He’s angry at Coalhouse for surrendering; he sees it as an abandonment of their cause. But Younger Brother is white and wealthy. And he lives. Coalhouse doesn’t. Younger Brother began by seeking out authenticity, and found anger and responsibility.
+
+
+After Coalhouse dies, Younger Brother leaves New York for Mexico, where he fights alongside Emiliano Zapata. We are not told if he survives those battles, or what else he goes on to fight. I like to imagine that his life unfolded in beautiful and painful ways, where he learned to face his own race and class and his own culpability in the oppression of others. It’s more likely that he styled himself a revolutionary hero and lived out his life with a bad case of white saviorism.
+
+
+Since leaving New York, I have lived in Ohio, West Virginia, North Carolina, Louisiana, Boston and again, North Carolina. Four months ago, I moved west, to the borderlands of southern Arizona. In that dusty, parched desert bugged by Border Patrol and turned in to a war zone by the United States government, I attempt to make a home.
+
+
+Still, if you ask me if there is a time and place I wish I could have lived through, I will tell you that it is the Lower East Side in the 1980s, when squatters were opening up rusting tenements and defending them against the police.
+
+
+[2]Although the musical glosses over this “detail.”
+
+
+[3]Even now, after thousands of conversations about the patriarchy, after embracing my own queerness, I still relate to that young girl’s longing to be Evelyn. I rarely question if I am strong, or witty, or smart-- but when I worry needlessly, I worry about not being desirable enough, about not being considered worthy of affection or attention.
+
+
+[4]See: Red Emma; most dangerous woman in America; early 20\high{th} century anarchism
+
+
+[6]{\em Loisada} was coined by Nuyorican poet Bimbo Rivas in 1974.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+W. Awry
+
+
+
+Goodbye to All That
+
+
+
+The Seams \& the Story \#1
+
+
+
+
+June 2014
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+
+
+Retrieved on June 9\high{th}, 2014 from http://seamsandstory.noblogs.org/post/2014/06/09/the-seams-the-story-1-goodbye-to-all-that/
+
+
+\stopalignment
+
+\stoptext
+
+

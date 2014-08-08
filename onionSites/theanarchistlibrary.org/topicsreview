@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     review | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="review">review</h3>
+<ol>
+
+  <li>
+   <a href="/library/wayne-price-an-anarchist-response-to-a-trotskyist-attack">
+   An Anarchist Response to a Trotskyist Attack
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-an-anarchist-review-of-change-the-world-without-taking-power-by-john-holloway">
+   An Anarchist Review of Change the World without Taking Power by John Holloway
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-anarchists-and-the-french-algerian-war">
+   Anarchists and the French-Algerian War
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/tanya-z-solomon-are-survivalists-and-anarchists-distant-cousins">
+   Are survivalists and anarchists distant cousins?
+   </a>
+  
+  
+      
+          (<a href="/authors/tanya-z-solomon">Tanya Z. Solomon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/layla-abdelrahim-avatar-an-anarcho-primitivist-picture-of-the-history-of-the-world">
+   Avatar: An Anarcho-Primitivist Picture of the History of the World
+   </a>
+  
+  
+      
+          (<a href="/authors/layla-abdelrahim">Layla AbdelRahim</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-avatar-revising-the-white-man-s-story">
+   Avatar: Revising the White Man’s Story
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/sarah-white-beyond-panic-controversy-taboo-levine-s-enlightened-look-at-kids-sex">
+   Beyond panic, controversy &amp; taboo: Levine’s enlightened look at kids &amp; sex
+   </a>
+  
+  
+      
+          (<a href="/authors/sarah-white">Sarah White</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/leonard-williams-book-review-the-politics-of-postanarchism">
+   Book Review: <em>The Politics of Postanarchism</em>
+   </a>
+  
+  
+      
+          (<a href="/authors/leonard-williams">Leonard Williams</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-continuing-appeal-of-nationalism-among-anarchists">
+   The Continuing Appeal of Nationalism among Anarchists
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/the-red-menace-demolition-derby-reflections-on-primitivism">
+   Demolition Derby: reflections on ‘primitivism’
+   </a>
+  
+  
+      
+          (<a href="/authors/the-red-menace">The Red Menace</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-broder-the-earth-is-not-flat-a-review-of-against-nationalism">
+   the earth is not flat: a review of ‘against nationalism’
+   </a>
+  
+  
+      
+          (<a href="/authors/david-broder">David Broder</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/rob-los-ricos-empire-for-beginners">
+   Empire for Beginners
+   </a>
+  
+  
+      
+          (<a href="/authors/rob-los-ricos">Rob los Ricos</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-fragments-of-a-reformist-anarchism">
+   Fragments of a Reformist Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alejandro-de-acosta-green-nihilism-or-cosmic-pessimism">
+   Green Nihilism or Cosmic Pessimism
+   </a>
+  
+  
+      
+          (<a href="/authors/alejandro-de-acosta">Alejandro de Acosta</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/aragorn-have-you-heard-the-news">
+   Have You Heard the News?
+   </a>
+  
+  
+      
+          (<a href="/authors/aragorn">Aragorn!</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/george-bradford-how-deep-is-deep-ecology">
+   How Deep is Deep Ecology?
+   </a>
+  
+  
+      
+          (<a href="/authors/david-watson">David Watson</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-in-defense-of-bakunin-and-anarchism">
+   In Defense of Bakunin and Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/xyosefx-in-praise-of-unfettered-revolt">
+   In Praise of Unfettered Revolt
+   </a>
+  
+  
+      
+          (<a href="/authors/xyosefx">xYosefx</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/paul-petard-john-zerzan-and-the-primitive-confusion-by-en-attendant-a-review">
+   John Zerzan and the primitive confusion, by En Attendant: A Review
+   </a>
+  
+  
+      
+          (<a href="/authors/paul-petard">Paul Petard</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/allan-antliff-the-life-of-guy-debord-a-history">
+   The Life of Guy Debord: A History
+   </a>
+  
+  
+      
+          (<a href="/authors/allan-antliff">Allan Antliff</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/peter-gelderloos-life-under-the-jolly-roger">
+   Life Under the Jolly Roger
+   </a>
+  
+  
+      
+          (<a href="/authors/peter-gelderloos">Peter Gelderloos</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-malleus-maleficarum-the-hammer-of-witches-a-review">
+   The Malleus Maleficarum — The Hammer of Witches: A Review
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-brinker-mix-ted-kaczynski-with-lsd-do-you-get-the-unabomber">
+   Mix Ted Kaczynski with LSD; do you get The Unabomber?
+   </a>
+  
+  
+      
+          (<a href="/authors/john-brinker">John Brinker</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/chris-sitka-napaltjarri-morgan-s-mutant-fantasy-a-critique-of-marlo-morgan-s-book-mutant-messag">
+   Morgan’s Mutant Fantasy: A critique of Marlo Morgan’s book <em>Mutant Message Down Under</em>
+   </a>
+  
+  
+      
+          (<a href="/authors/chris-sitka-napaltjarri">Chris Sitka (Napaltjarri)</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-carr-not-the-state-s-failure-but-its-success">
+   Not the State’s Failure, but its Success
+   </a>
+  
+  
+      
+          (<a href="/authors/david-carr">David Carr</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/cast-old-school-and-proud">
+   Old School and Proud
+   </a>
+  
+  
+      
+          (<a href="/authors/cast">Cast</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/neal-keating-outwitting-the-state-takes-a-different-kind-of-power">
+   “Outwitting the State” takes a different kind of power
+   </a>
+  
+  
+      
+          (<a href="/authors/neal-keating">Neal Keating</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/rb-ozimandias-review-against-his-story-against-leviathan-by-fredy-perlman">
+   Ozimandias — Review: Against His-story! Against Leviathan! by Fredy Perlman
+   </a>
+  
+  
+      
+          (<a href="/authors/c8ee22e1fc2165dfd3d2b04aef93b2f2">RB</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-the-palestinian-struggle-and-the-anarchist-dilemma">
+   The Palestinian Struggle and the Anarchist Dilemma
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/henry-david-thoreau-paradise-to-be-regained">
+   Paradise (to be) Regained
+   </a>
+  
+  
+      
+          (<a href="/authors/henry-david-thoreau">Henry David Thoreau</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/murray-bookchin-and-jeremy-brecher-post-affluence-anarchy-a-dialogue">
+   Post-Affluence Anarchy: A Dialogue
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/jeremy-brecher">Jeremy Brecher</a>, <a href="/authors/murray-bookchin">Murray Bookchin</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lewis-call-post-anarchism-today">
+   Post-anarchism Today
+   </a>
+  
+  
+      
+          (<a href="/authors/lewis-call">Lewis Call</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/randolph-bourne-the-price-of-radicalism">
+   The Price of Radicalism
+   </a>
+  
+  
+      
+          (<a href="/authors/randolph-bourne">Randolph Bourne</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-quit-while-you-re-ahead">
+   Quit While You’re Ahead
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ran-prieur-ran-prieur-on-avatar">
+   Ran Prieur on Avatar
+   </a>
+  
+  
+      
+          (<a href="/authors/ran-prieur">Ran Prieur</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-review-anarchism-marxism-and-the-future-of-the-left">
+   Review: Anarchism, Marxism and the Future of the Left
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/marie-mason-review-battle-of-seattle">
+   Review: Battle of Seattle
+   </a>
+  
+  
+      
+          (<a href="/authors/marie-mason">Marie Mason</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/michael-william-review-bisexuality">
+   Review: Bisexuality
+   </a>
+  
+  
+      
+          (<a href="/authors/michael-william">Michael William</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/aragorn-review-locked-up">
+   Review: Locked Up by Alfredo M. Bonanno
+   </a>
+  
+  
+      
+          (<a href="/authors/aragorn">Aragorn!</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/deric-shannon-review-of-life-under-the-jolly-roger">
+   Review of “Life under the Jolly Roger”
+   </a>
+  
+  
+      
+          (<a href="/authors/deric-shannon">Deric Shannon</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-review-of-revelation-x">
+   Review of Revelation X
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/dot-matrix-reviews">
+   Reviews
+   </a>
+  
+  
+      
+          (<a href="/authors/dot-matrix">dot matrix</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-review-science-capital-radical-essays-on-science-technology">
+   Review: Science &amp; Capital — Radical Essays on Science &amp; Technology
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/ron-sakolsky-rocks-in-my-pillow">
+   Rocks In My Pillow
+   </a>
+  
+  
+      
+          (<a href="/authors/ron-sakolsky">Ron Sakolsky</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/james-pendlebury-tangled-threads-of-revolution">
+   Tangled Threads of Revolution
+   </a>
+  
+  
+      
+          (<a href="/authors/james-pendlebury">James Pendlebury</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/lawrence-jarach-that-aside-a-valuable-service">
+   That Aside, A Valuable Service
+   </a>
+  
+  
+      
+          (<a href="/authors/lawrence-jarach">Lawrence Jarach</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-the-alternative-to-capitalism">
+   The Alternative to Capitalism?
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-the-marxist-paradox-an-anarchist-critique">
+   The Marxist Paradox: An Anarchist Critique
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/wayne-price-the-two-main-trends-in-anarchism">
+   The Two Main Trends in Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/wayne-price">Wayne Price</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/tom-wetzel-venezuela-from-below">
+   Venezuela from Below
+   </a>
+  
+  
+      
+          (<a href="/authors/tom-wetzel">Tom Wetzel</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-views-from-nowhere-review-of-design-your-own-utopia">
+   Views From Nowhere: Review of “Design Your Own Utopia”
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/aragorn-what-do-streams-want">
+   What Do Streams Want?
+   </a>
+  
+  
+      
+          (<a href="/authors/aragorn">Aragorn!</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline">
+   What is Wrong with this Picture? A critique of a neo-futurist’s vision of the decline of work
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-women-and-violence-gender-myths-a-review-of-some-literature-from-the-other-side">
+   Women and Violence — Gender Myths: A review of some literature from the other side
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying">
+   You Can’t Blow up a Social Relationship... But you can have fun trying!
+   </a>
+  
+  
+      
+          (<a href="/authors/bob-black">Bob Black</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     You Can’t Blow up a Social Relationship... But you can have fun trying! (Bob Black) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    You Can’t Blow up a Social Relationship... But you can have fun trying!
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/bob-black">Bob Black</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1992
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/ajoda">AJODA</a>
+        <a href="/topics/ajoda-33">AJODA #33</a>
+        <a href="/topics/critique">critique</a>
+        <a href="/topics/propaganda-of-the-deed">propaganda of the deed</a>
+        <a href="/topics/review">review</a>
+        <a href="/topics/society">society</a>
+        <a href="/topics/terrorism">terrorism</a>
+        <a href="/topics/violence">violence</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Originally published in <em>Anarchy: A Journal of Desire Armed</em> #33, Summer of 1992.
+  </p>
+  
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="bob-black-you-can-t-blow-up-a-social-relationship-but-you-can-have-fun-trying.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Bob Black</h2>
+	
+	<h1 id="textttitleh">You Can’t Blow up a Social Relationship... But you can have fun trying!</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>In 1979, four Australian anarchist and “libertarian socialist” organizations published a tract called <em>You Can’t Blow Up a Social Relationship</em>, presumptuously subtitled “The Anarchist Case Against Terrorism” — as if theirs was the only case against it and there was no case <em>for</em> it. The pamphlet has been reprinted and distributed by North American anarchist groups, usually workerists, and by default appears to enjoy some currency as a credible critique of terrorism canonical for anarchists.
+</p><p>In fact, the pamphlet is rubbish: incoherent, inaccurate, even statist. It makes sense only as an attempt to spruce up anarchism‘s public image. It clutters the question of violence and should be swept, if there is any room left there, into the trashcan of history from a perspective which is not pro-terrorist but on this occasion anti-anti-terrorist.
+</p><p>What makes the diatribe so wonderful is the way it refutes itself as it goes along. Opening with reference to obscure actions by Croatian fascists in Australia, the authors explain that the state uses right wing terrorism to justify the repression of the left. indeed, democracies “will even incite or conspire in terrorism to justify their own actions.” They cite “the famous American Sacco and Vanzetti case of the 1920s” as “an archetypal case of the preparedness of the police to frame dissenters on charges of political violence.” Apparently the case is not famous enough for the authors to notice the duo was not framed for “political violence” but rather — as they proceeded to tell us! — for “robbery and murder.” The Haymarket case would have made a better example but is perhaps not famous enough. The lesson, if any, to be drawn is that one way or another, the anarchists are going to be screwed. Sacco and Vanzetti, like the Haymarket anarchists (except Lingg) did not “take up the gun,” they “engage[d] in the long, hard work of publicizing and understanding of this society” as the Australians propose. Why <em>not</em> throw a bomb or two? (As Lingg was preparing to do when he was arrested... showing that something like Haymarket was inevitable.)
+</p><p>Here is how anarchists sound when they speak the language of the state:
+</p>
+<blockquote>
+<p>“Around the world the word ‘terrorism’ is used indiscriminately by politicians and police with the intention of arousing hostility to any phenomenon of resistance or preparedness for armed defense against their own terroristic acts. Terrorism is distinguished by the systematic use of, violence against people for political ends.”
+</p></blockquote>
+<p>A usage which is indiscriminate when police- and politicians resort to it is presumably discriminate when, one sentence later, anarchists do it. By this definition, violent revolution is terrorism; even if it involves the majority of the population. Indeed collective self — defense, which the authors elsewhere imply they approve of, is the systematic use of violence for political (among other) ends. By way of added inanity, the definition leaves out the <em>un</em>systematic assaults by individuals acting alone — Czolgosz‘s assassination of McKinley, Berkman’s wounding of Frick — which <em>everybody</em> has <em>always</em> agreed are fairly called terrorism. These Australians are not speaking proper English and it’s not a difference in dialect either.
+</p><p>Having adopted a pejorative nonsense definition of their subject, the authors proceed to silly it further. “Just as the rulers” — and, as we see, certain anarchists — “prefer the word ‘terrorist’, terrorists prefer the description ‘urban guerrilla‘ as it lends them a spurious romantic air.” The authors explain that <em>urban</em> guerrillas are terrorists (just like “the rulers” say), but <em>rural</em> guerrillas are not: <em>’Especially in rural warfare these people can use non-terroristic armed action. This usually involves armed clashes with the police or army.”</em> So an armed attack on police stations in a village is guerrilla warfare, but an armed attack on a police station in a city is terrorism? Do these anarchists think the police care how populous the locality is that they are killed in? Do they think the general population cares? Who’s being <em>romantic</em> here? These guys are romanticizing peasants because they have never met one and maligning urban intellectuals like themselves because they know their own kind. 
+</p><p>What, according to these tacticians, rural guerrillas can do is not all of what the successful ones <em>actually</em> do. The Vietcong were based in the countryside but carried out assassinations, bombings, and expropriations in the cities too. Guerrilla warfare is by definition opportunistic and elastic, wherever it happens. The fact that rural guerrillas <em>can</em> (and do) “use non-terroristic armed action” does not mean they don‘t also use terroristic armed action, such as the village massacres of the Khmer Rouge or Sendero Luminoso.
+</p><p>Lexicography aside, what‘s really put ants in these anarchists pants? The pamphlet has nothing, really, to do with terrorism as such. Instead it‘s a critique of urban armed struggle by mostly nationalist and/or Marxist-Leninist outfits in the ’60s and ‘70s: the IRA, PLO, RAF, SLA, etc. Understandably these leftists (as they repeatedly identify themselves) do not want to be confused with these terrorists, but surely their discrepant <em>ends</em> mark the distinction much more clearly than their often identical <em>means</em>? Most Marxist groups, they admit, denounce terrorism in favor of party-building and propaganda, pretty much what the Australians call for. The Red Brigades had no harsher enemy than the Italian Communist Party. Then again, maybe the Australians exaggerate their differences in method (all but ignoring the long history of <em>anarchist</em> terrorism) because they do <em>not</em> differ so much programmatically from the Marxists. They keep making puzzling remarks such as “a democracy can only be produced if a majority movement is built.” Typically, this generalization is false — that was not how democracy came to Japan and West Germany — but regardless, why are <em>anarchists</em> concerned to foster the condition in which democracy, a <em>form of government</em>, is produced? Or did the “libertarian socialists” slip that in?
+</p><p><em>“Terrorism does not conflict with such ideas”</em> as authoritarianism and vanguardism, they say. Well, there are a lot of ideas terrorism doesn’t conflict with, considering that terrorism is an activity, not an idea. Terrorism does not conflict with vegetarianism either: Hitler was a vegetarian and so were the anarchist bank robbers of the Bonnot Gang. So what? In other words, even if the authors make an anarchist case against terrorism (they don’t), they haven’t made a case against <em>anarchist</em> terrorism, which means they can‘t excommunicate the anarchist terrorist and usurp the label for their own exclusive use. Which seems to be what this all comes down to. 
+</p><p>The authors’ treatment of anarchist terrorism is shallow, deceptive, and incomplete. If their definition of terrorism as systematic political violence was meant to dispose of many embarrassing assassinations, bombings, and bank robberies by verbal sleight of hand, they are smarter than they seem, but they’re really just changing the subject (political violence) to an artificiality of no practical interest. They are talking to themselves with no claim to anyone else‘s attention. More likely they aren’t articulate enough to say what they mean.
+</p><p>To state the obvious, anarchists have practiced terrorism in the “Australian” sense collective politically motivated violence directed at persons — for over a century. The bungled anarchist insurrections in Italian towns in the 1870s involved gunfire with the carabinieri. Soon these local revolts became recurrent features of peasant anarchism in rural Spain. By the 1890s the anarchists were killing heads of state all over the Western world and if they were not delegated to do so by authoritative anarchist organizations, does that not sever the link between ‘terrorism’ and ‘vanguardism’?
+</p><p>The authors allude to Stalin’s bank robberies but not to those of the Bonnet Gang or Durruti. More recently, the noted Italian anarchist Alfredo Bonanno has pled guilty to bank robbery. They ignore Berkman’s <em>attentat</em> against Frick, Dora Kaplan’s attempt to assassinate Lenin and Stuart Christie‘s aborted attempt to assassinate Franco. Some of these, certainly the last one, involved conspiracies and thus should be ‘collective’. To equate anarchists with bomb throwers is grossly unfair. To ignore anarchists who were bomb-throwers, often at the cost of their lives, is dishonest and despicable. 
+</p><p>What about the Spanish Revolution? The anarchist armed groups, it is said, <em>“drew much of their specific justifications”</em> — what they are, we are never informed — <em>“from the Spanish revolution and war and the urban warfare that continued there even past the end of the Second World War.”</em> Yes, exactly, the urban guerrillas- the terrorists — had some “specific justifications,” valid or not. Which is just to say nobody takes up the gun without reasons, a conclusion as banal as it is evasive. <em>“For our argument the civil war in Spain is exemplary because the slogans ‘win the war first’ was used against politics, to halt the revolution and then to force  it back under Stalinist dominated but willing republican governments.”</em> This is asinine coming and going. It equates falsely what the Aussies call ‘politics’ with what the Spaniards made, ‘revolution’. For the wimps Down Under, politics means alternative institution building (presumably the usual leftist stuff, constituency lobbying, food coops, etc.) plus propaganda. For <em>all</em> the Spanish revolutionaries it meant far more, and it <em>certainly</em> included taking up the gun. The revolution no less than the war was done with the gun. When Durruti and his column  occupied the town of Fraga and executed 38 police, priests, lawyers, landlords etc. that was politics, that was revolution, and that was political violence. That was, to hear some people talk, terrorism. That was anarchist revolution also. If that upheaval is exemplary what is it an example <em>of</em> pray tell?
+</p><p>It is true that anarchist violence has often backfired and never won any lasting victory. But this is but to say that anarchism is a failure to date. Anarchist propaganda is a failure. Anarchist organizing is a failure (<em>vide</em> the IWW). Anarchist schooling is a failure. If anything, anarchists have accomplished more by violence than in any other way, in the Ukraine and in Spain, for instance. The fact is anarchists have not accomplished anything by any means to compare with their leftist and fascist and liberal rivals. Their propaganda, for instance, has not come close to the efficiency of propaganda by Nazis, televangelicals, and Fabian Socialists. Their institution-building (touted by the Australian consortium) amounts to nothing but anarchists bagging granola in food coops or supplying warm bodies for demonstrations claimed by Stalinists or Green yuppies or whomever. Anything they can do, others do better. Could it be that <em>anarchism itself</em> scares most people away, stirs up their fear of freedom such that they seize upon media spoon-fed slanders like ‘terrorism’ as excuses for looking the other way?
+</p><p>My purpose has been limited and negative, merely cutting some weeds, not planting anything. If anarchists have an image problem — and it they care — it attaches to their anarchism, not to their occasional terrorism. The Australian anarchists seem to have been most concerned  not with an anarchist approach to so-called terrorism but with assuring their government they are harmless. To their everlasting shame, I’m quite sure they are. An anarchism that wants to be anything but harmless to the state and to class society must deal with terrorism and much more in another, more radical way.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

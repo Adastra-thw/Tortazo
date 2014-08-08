@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+	<script type="text/javascript">var page_start = new Date();</script>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="kewfPZRKi6SaOAaeUDSQw9AawbOKWiyEOyp2-lMxXBQ" />
+			    <title>领英帮助中心 - 正在验证身份</title>
+        
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://zh-cn.help.linkedin.com/euf/rightnow/optimized/1406595565/themes/linkedin/'></base>
+<link href='/euf/rightnow/optimized/1406595565/pages/utils/auth.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+
+	<link rel="shortcut icon" type="image/ico" href="/euf/assets/images/favicons/v1/favicon.ico">
+	<script type="text/javascript">	document.cookie = "realreferrer="+encodeURIComponent(document.referrer)+"; path=/";
+	</script>
+</head>
+<body>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<script>
+var api_callback = 'http://zh-cn.help.linkedin.com/app/answers/detail/a_id/1394/ft/eng';
+var api_key = 'uq9789xsg6uf';
+</script>
+<div class="loading center">
+	<span id="message"></span>
+</div>
+<div id="passthrough_link" class="center">
+	系统会将您自动导向目标页面。如果相应时间过长，请点击<a href="/app/utils/log_error/et/0/ec/7/callback/http%3A%2F%2Fzh-cn.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">此处</a>继续。</div>
+<noscript>
+	<div class="noscript center">
+		抱歉，使用帮助中心前必须先开启 Javascript。<br><meta http-equiv="refresh" content="5; url=/app/utils/log_error/et/0/ec/6/callback/http%3A%2F%2Fzh-cn.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">系统会在 5 秒后自动导向目标页面，或点击<a href="/app/utils/log_error/et/0/ec/5/callback/http%3A%2F%2Fzh-cn.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">此处</a>继续。	</div>
+</noscript>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22%5Cu4e3b%5Cu9898%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22%5Cu72b6%5Cu6001%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22%5Cu4e0a%5Cu6b21%5Cu66f4%5Cu65b0%5Cu4e8e%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22%5Cu4e0a%5Cu6b21%5Cu66f4%5Cu65b0%5Cu4e8e%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22%5Cu5df2%5Cu5173%5Cu95ed%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22%5Cu5f00%5Cu653e%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22%5Cu7b49%5Cu5f85%5Cu4f1a%5Cu5458%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22%5Cu95ee%5Cu9898%5Cu5df2%5Cu5907%5Cu6848%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22%5Cu53cd%5Cu9988%5Cu5df2%5Cu5907%5Cu6848%22%2C%22CP_AUTH_JS_LOADING_CONNECT_LIBRARY%22%3A%22%5Cu6b63%5Cu5728%5Cu52a0%5Cu8f7d%5Cu8d44%5Cu6599%5Cu5e93...%22%2C%22CP_AUTH_JS_CHECKING_ACCOUNT_STATUS%22%3A%22%5Cu6b63%5Cu5728%5Cu68c0%5Cu67e5%5Cu5e10%5Cu6237%5Cu72b6%5Cu6001...%22%2C%22CP_AUTH_JS_FETCHING_PROFILE_INFORMATION%22%3A%22%5Cu6b63%5Cu5728%5Cu83b7%5Cu53d6%5Cu6863%5Cu6848%5Cu4fe1%5Cu606f...%22%2C%22CP_AUTH_JS_LOADING_THE_HELP_CENTER%22%3A%22%5Cu6b63%5Cu5728%5Cu52a0%5Cu8f7d%5Cu5e2e%5Cu52a9%5Cu4e2d%5Cu5fc3...%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22%5Cu8ba8%5Cu8bba%22%2C%22CP_REQUIRED%22%3A%22%5Cu5fc5%5Cu586b%22%2C%22CP_INVALID%22%3A%22%5Cu65e0%5Cu6548%22%2C%22CP_UPLOADING%22%3A%22%5Cu6b63%5Cu5728%5Cu4e0a%5Cu4f20%22%2C%22CP_SUBMITTING%22%3A%22%5Cu6b63%5Cu5728%5Cu63d0%5Cu4ea4%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22%5Cu6b64%5Cu8868%5Cu683c%5Cu5373%5Cu5c06%5Cu8fc7%5Cu671f%5Cu3002%5Cu8bf7%5Cu786e%5Cu8ba4%5Cu60a8%5Cu5e0c%5Cu671b%5Cu7ee7%5Cu7eed%5Cu586b%5Cu5199%5Cu3002%22%7D';
+</script>
+<span id="rn_RightNowLogo_1" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"\u8b66\u544a","INFORMATION_LBL":"\u4fe1\u606f","HELP_LBL":"\u5e2e\u52a9","ERROR_REQUEST_ACTION_COMPLETED_MSG":"\u8bf7\u6c42\u51fa\u73b0\u9519\u8bef\uff0c\u64cd\u4f5c\u65e0\u6cd5\u5b8c\u6210\u3002","OK_LBL":"\u786e\u5b9a","DIALOG_LBL":"\u5bf9\u8bdd\u6846","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"\u5bf9\u8bdd\u6846\uff0c\u8bf7\u9605\u8bfb\u4e0a\u65b9\u7684\u5bf9\u8bdd\u6846\u6d88\u606f\u6587\u672c","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u5bf9\u8bdd\u6846\u7684\u5f00\u5934\uff0c\u8bf7\u5728\u7ee7\u7eed\u64cd\u4f5c\u524d\u5173\u95ed\u5bf9\u8bdd\u6846","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u5bf9\u8bdd\u6846\u7684\u672b\u5c3e\uff0c\u8bf7\u5728\u7ee7\u7eed\u64cd\u4f5c\u524d\u5173\u95ed\u5bf9\u8bdd\u6846","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"\u7531\u4e8e\u8f93\u5165\u65e0\u6548\uff0c\u5728\u63d0\u4ea4\u8868\u5355\u65f6\u53d1\u751f\u9519\u8bef","ERR_SUBMITTING_SEARCH_MSG":"\u60a8\u7684\u8bf7\u6c42\u5b58\u5728\u95ee\u9898  \u8bf7\u66f4\u6539\u641c\u7d22\u9879\uff0c\u7136\u540e\u91cd\u8bd5\u3002","CLOSE_CMD":"\u5173\u95ed","BACK_LBL":"\u4e0a\u4e00\u6b65"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"zh-cn.help.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"Au1DOg_l","uh":"b3a07a2c","uc":"zh-cn.help.linkedin.com\/app\/utils\/auth","b":"ca34356","i":"linkedin:linkedin_cn","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/get-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/json-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Auth.js'></script>
+</body>
+</html>

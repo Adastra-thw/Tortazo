@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it-IT" xml:lang="it-IT">
+<head>
+	<script type="text/javascript">var page_start = new Date();</script>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="kewfPZRKi6SaOAaeUDSQw9AawbOKWiyEOyp2-lMxXBQ" />
+			    <title>Centro assistenza LinkedIn - Verifica autenticazione</title>
+        
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://guida.linkedin.com/euf/rightnow/optimized/1406595310/themes/linkedin/'></base>
+<link href='/euf/rightnow/optimized/1406595310/pages/utils/auth.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+
+	<link rel="shortcut icon" type="image/ico" href="/euf/assets/images/favicons/v1/favicon.ico">
+	<script type="text/javascript">	document.cookie = "realreferrer="+encodeURIComponent(document.referrer)+"; path=/";
+	</script>
+</head>
+<body>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<script>
+var api_callback = 'http://guida.linkedin.com/app/answers/detail/a_id/1394/ft/eng';
+var api_key = 'uq9789xsg6uf';
+</script>
+<div class="loading center">
+	<span id="message"></span>
+</div>
+<div id="passthrough_link" class="center">
+	Verrai indirizzato automaticamente alla tua destinazione. Se l'operazione richiede troppo tempo, clicca <a href="/app/utils/log_error/et/0/ec/7/callback/http%3A%2F%2Fguida.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">qui</a> per continuare.</div>
+<noscript>
+	<div class="noscript center">
+		È richiesto JavaScript per il Centro assistenza.<br>
+			<meta http-equiv="refresh" content="5; url=/app/utils/log_error/et/0/ec/6/callback/http%3A%2F%2Fguida.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">
+			Sarai automaticamente indirizzato alla pagina richiesta entro 5 secondi o clicca <a href="/app/utils/log_error/et/0/ec/5/callback/http%3A%2F%2Fguida.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F1394%2Fft%2Feng%2Ffrom_auth%2Ftrue">qui</a> per continuare.	</div>
+</noscript>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22Oggetto%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22Stato%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22Ultimo+aggiornamento%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22Ultimo+aggiornamento%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22Chiusa%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22Aperta%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22Attesa+del+membro+in+corso%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22Problema+segnalato%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22Commenti+e+suggerimenti+archiviati%22%2C%22CP_AUTH_JS_LOADING_CONNECT_LIBRARY%22%3A%22caricamento+in+corso...%22%2C%22CP_AUTH_JS_CHECKING_ACCOUNT_STATUS%22%3A%22controllo+dello+stato+dell%27account+in+corso...%22%2C%22CP_AUTH_JS_FETCHING_PROFILE_INFORMATION%22%3A%22recupero+delle+informazioni+del+profilo+in+corso...%22%2C%22CP_AUTH_JS_LOADING_THE_HELP_CENTER%22%3A%22caricamento+del+centro+assistenza+in+corso...%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22Thread%22%2C%22CP_REQUIRED%22%3A%22Obbligatorio%22%2C%22CP_INVALID%22%3A%22Invalido%22%2C%22CP_UPLOADING%22%3A%22Caricamento+in+corso%22%2C%22CP_SUBMITTING%22%3A%22Invio+in+corso%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22Questo+modulo+sta+per+scadere.+Conferma+che+desideri+procedere+con+la+compilazione.%22%7D';
+</script>
+<span id="rn_RightNowLogo_1" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"Attenzione","INFORMATION_LBL":"Informazioni","HELP_LBL":"Guida","ERROR_REQUEST_ACTION_COMPLETED_MSG":"Si \u00e8 verificato un errore durante la richiesta e non \u00e8 stato possibile completare l'azione.","OK_LBL":"OK","DIALOG_LBL":"finestra di dialogo","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"finestra di dialogo, leggere il testo sopra per il messaggio della finestra di dialogo","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Inizio della finestra di dialogo, chiudere la finestra prima di continuare","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Fine della finestra di dialogo, chiudere la finestra prima di continuare","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"Si \u00e8 verificato un errore di invio del modulo a causa di un input non valido","ERR_SUBMITTING_SEARCH_MSG":"Si \u00e8 verificato un problema con la richiesta.  Cambiare i termini di ricerca e riprovare.","CLOSE_CMD":"Chiudi","BACK_LBL":"Indietro"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"guida.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"RpTTOg_l","uh":"c88e22b8","uc":"guida.linkedin.com\/app\/utils\/auth","b":"ca34356","i":"linkedin:linkedin_it","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/get-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/json-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Auth.js'></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/What-is-Random-Assignment","l":"zh_TW","id":"kA030000000hhNlCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>A/B &#29256;&#26412;&#36984;&#38917; (&#38568;&#27231;&#25351;&#23450;)</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/What-is-Random-Assignment" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">A/B 版本選項 (隨機指定)
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><p>
+	SurveyMonkey 的<span style="font-weight: bold;">隨機指定</span>功能 (又稱為 A/B 版本選項) 可讓研究人員將人員隨機放到不同的群組，以向他們顯示不同的影像或文字。好處是在調查問卷中引入實驗性誤差。造成誤差的因素  (任意文字、影像或問題的用詞)     有所不同，分析中會測量使用者對誤差因素的不同反應。我們的<span style="font-weight: normal;">黃金型</span>與<span style="font-weight: normal;">白金型</span>方案提供此項功能。</p>
+<h3>
+	 </h3>
+<h3>
+	隨機指定的範例：</h3>
+<p>
+	本功能可讓您測試下列問題類型中的不同變數  (誤差因素)：</p>
+<ul><li>
+		<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-add-images-or-pictures-into-the-survey" target="_self">影像</a>：影像變數  -     顯示不同的影像。</li><li>
+		<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-add-additional-text-into-the-body-of-my-survey-design" target="_self">描述性文字</a>：文字變數  -     顯示簡介、故事或任意文字等不同版本的文字。</li><li>
+		<a href="http://zh.surveymonkey.com/QuestionBuilder_Examples.aspx" target="_self">開放式/封閉式</a>：問題變數 - 針對問題本身顯示不同的用詞。選項維持相同。</li></ul>
+<p>
+	<img alt="star" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPeAAI&amp;oid=00D30000001HuKJ"></img> 若要檢視使用以上每一種變數的即時調查問卷，請檢視下列調查問卷：<a href="http://zh.surveymonkey.com/s/DM6SNBT" target="_new">隨機指定範例調查問卷</a>。</p>
+<p style="font-weight: bold;">
+	 </p>
+<p style="font-weight: bold;">
+	A.     測試不同的誤差因素  -     使用文字或影像變數</p>
+<p style="font-weight: normal;">
+	使用文字或影像變數以顯示數種不同誤差因素的其中一種。例如，身為行銷人員的您希望研究不同的標誌如何引起不同的反應。您可以在調查問卷設計中對人員顯示不同的標誌，以將人員隨機放到群組中。在人員檢視標誌後，詢問後續的問題，然後根據所顯示標誌比較每一個群組回答調查問卷的方式。</p>
+<p style="font-weight: bold;">
+	B.     變數的控制  -     使用問題變數</p>
+<p style="font-weight: normal;">
+	使用問題變數在會改變的問題中建立單一誤差因素。例如，您有一份清單列出某產品的三種形容。您希望對受訪者隨機顯示某個形容，看看該形容對他們關於產品的意見有什麼影響。根據他們所看到的形容，您可以比較他們回答問題的方式：</p>
+<ul><li>
+		<div style="font-weight: normal;">
+			您會考慮購買<span style="font-style: italic;">降價的</span>汽車嗎？是或否</div>
+	</li><li>
+		<div style="font-weight: normal;">
+			您會考慮購買<span style="font-style: italic;">雙動力</span>的汽車嗎？是或否</div>
+	</li><li>
+		<div style="font-weight: normal;">
+			您會考慮購買<span style="font-style: italic;">省油的</span>汽車嗎？是或否</div>
+	</li></ul>
+<p style="font-weight: bold;">
+	C.     問題偏見  -     使用問題變數</p>
+<p style="font-weight: normal;">
+	目標是研究問題不同的用詞如何影響回覆。例如，您正在進行調查問卷的初始測試，看看是否能識別出任何偏差。您注意到問題的某些用詞可能會對結果造成偏差。您希望隨機顯示這些問題的兩種不同版本，看看是否有明顯的差異。使用「問題變數」選項，建立問題的不同用詞版本。</p>
+<p style="font-weight: normal;">
+	<span style="font-weight: bold;">注意：</span>使用「問題變數」選項時  (在範例  B     或  C     中)，您只能編輯問題的文字及用詞。您無法編輯選項以顯示不同的選擇。</p>
+<p>
+	 </p>
+<h3>
+	建立隨機指定問題的方式：</h3>
+<ol><li>
+		按一下<span style="font-weight: bold;">設計</span>圖示  <img alt="design" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzRKAAY&amp;oid=00D30000001HuKJ"></img> 以進入  [<span style="font-weight: bold;">編輯調查問卷</span>]     模式。</li><li>
+		按一下位於  <span style="font-weight: bold;"><span style="font-weight: normal;">[</span>+     新增問題</span>]     按鈕右邊的下拉式箭頭。</li><li>
+		功能表開啟後，選擇選項 [<span style="font-weight: bold;">+ 新增隨機指定</span>]。</li></ol>
+<p style="font-weight: bold;">
+	建立第一個變數：</p>
+<ol><li>
+		在<span style="font-weight: bold;">選擇類型</span>下拉式功能表下，選擇您要建立「影像變數」、「文字變數」還是「問題變數」。</li><li>
+		在<span style="font-weight: bold;">名稱</span>欄位中，輸入隨機指定問題的名稱  (例如：隨機指定  -     影像)。</li><li>
+		在<strong>文字</strong><span style="font-weight: bold;">變數</span>區段中，設定變數為影像、文字或問題。</li><li>
+		按一下<span style="font-weight: bold;">新增</span>以進行儲存。這會將第一個變數儲存至編輯器中的灰色方塊。</li><li>
+		自訂個別變數的名稱。此名稱將出現在試算表匯出中，以便您決定每位受訪者看見哪些參數。</li><li>
+		輸入 [<span style="font-weight: bold;">受訪者 %</span>] 數量，配置會看見第一個變數的受訪者百分比。</li></ol>
+<p style="font-weight: bold;">
+	建立第二個變數：</p>
+<ol><li>
+		在<span style="font-weight: bold;">變數</span>區段中，根據初始變數類型設定第二個變數。例如，如果您已選擇了「文字」，則可輸入第二個文字變數。或是，如果您已選擇了「影像」，則可上傳第二個影像。</li><li>
+		按一下<span style="font-weight: bold;">新增</span>以進行儲存。這會將第二個變數儲存至編輯器中的灰色方塊。</li><li>
+		自訂變數的名稱。</li><li>
+		輸入 [<span style="font-weight: bold;">受訪者 %</span>] 數量，配置會看見第二個變數的受訪者百分比。</li></ol>
+<p style="font-weight: bold;">
+	繼續新增變數直到完成：</p>
+<p>
+	您最多可以新增  20     個變數，而且在所有變數之間的<span style="font-weight: normal;">受訪者  %</span> 數量總計必須為  100%。</p>
+<ul><li>
+		完成建立問題時，按一下  [<span style="font-weight: bold;">儲存並關閉</span>]。這會帶您回到「編輯調查問卷」模式。</li><li>
+		按一下  [<span style="font-weight: bold;">預覽調查問卷</span>]     按鈕，查看受訪者將看到的設計效果。這會根據指定的受訪者百分比向您隨機顯示變數。</li></ul>
+<p style="font-weight: bold;">
+	 </p>
+<h3 style="font-weight: bold;">
+	配置受訪者百分比的運作方式：</h3>
+<p style="font-weight: normal;">
+	在您設定調查問卷時，會指定要查看每一種誤差因素的受訪者百分比。在受訪者填寫調查問卷時，SurveyMonkey     會根據群組的機率百分比，將受訪者隨機指定至特定的群組。例如，如果您有三個群組：</p>
+<ul><li>
+		<div style="font-weight: normal;">
+			A     -     50%     的受訪者</div>
+	</li><li>
+		<div style="font-weight: normal;">
+			B     -     30%     的受訪者</div>
+	</li><li>
+		<div style="font-weight: normal;">
+			C     -     20%     的受訪者</div>
+	</li></ul>
+<p style="font-weight: normal;">
+	受訪者在填寫調查問卷時，有  50%     的機率可以看見  A，30%     的機率看見  B     及  20%     的機率看見  C。由於這是隨機指定，所以我們無法保證進行準確的劃分，尤其對較少數量的受訪者來說更是如此。若要確保群組之間的誤差為最小，請方案至少擁有  50     位受訪者。</p>
+<p style="font-weight: normal;">
+	<span style="font-weight: bold;">「擲銅板」範例：</span>如果您丟十次銅板，則很可能不會得到剛好正反面各半的結果。您丟得越多次，就越可能得到接近正反面各半的結果。我們無法保證有任何受訪者數量可以讓您獲得平均劃分的結果。<br>	</p>
+<h3 id="analyze">
+	分析隨機指定結果</h3>
+<p>
+	[分析結果]     區段中有許多區域，可讓您檢視和分析  [隨機指定]     測試的結果。</p>
+<ul><li>
+		在  [問題摘要]     標籤下方，您可以看到已檢視每個變數之受訪者的數量和百分比。</li><li>
+		在  [個別回覆]     標籤下方，您可以看到向每位受訪者顯示的變數。</li><li>
+		在左側側邊工具欄的 [目前資料檢視頁面] 區段中，您可以<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Filter-Rules?beta=true" target="_self">依 A/B 版本選項篩選</a>或<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Compare-Rules?beta=true" target="_self">依 A/B 版本選項比較</a>。</li><li>
+		所有摘要資料和所有回覆資料匯出檔會包含「隨機指定」資料。但是，套用「依 A/B     版本選項篩選」或「依 A/B     版本選項比較」規則時，只能使用摘要資料和所有回覆資料  PDF     匯出檔等格式。</li></ul>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-add-images-or-pictures-into-the-survey" class="relatedLink">&#23559;&#22294;&#29255;&#25110;&#24433;&#20687;&#26032;&#22686;&#21040;&#35519;&#26597;&#21839;&#21367;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-to-create-a-survey" class="relatedLink">&#22914;&#20309;&#24314;&#31435;&#35519;&#26597;&#21839;&#21367;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-professional-plans-does-SurveyMonkey-offer" class="relatedLink">SurveyMonkey &#23560;&#26989;&#22411;&#26041;&#26696;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/builder" class="relatedLink">&#26032;&#22411; Design&#65306;&#24314;&#31435;&#22120;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/What-is-Random-Assignment';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, 'A/B 版本選項 (隨機指定)', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

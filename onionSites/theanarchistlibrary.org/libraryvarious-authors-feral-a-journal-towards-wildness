@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Feral: a journal towards wildness (Various Authors) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/various-authors-feral-a-journal-towards-wildness?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=various-authors-feral-a-journal-towards-wildness">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Feral: a journal towards wildness
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/chris-kortright">Chris Kortright</a>
+        <a href="/authors/craig-evarts">Craig Evarts</a>
+        <a href="/authors/david-orton">David Orton</a>
+        <a href="/authors/james-barnes">James Barnes</a>
+        <a href="/authors/joanne-lauck">Joanne Lauck</a>
+        <a href="/authors/patricia-freund">Patricia Freund</a>
+        <a href="/authors/rob-los-ricos">Rob los Ricos</a>
+        <a href="/authors/wolfi-landstreicher">Wolfi Landstreicher</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-civ">anti-civ</a>
+        <a href="/topics/anti-work">anti-work</a>
+        <a href="/topics/canada">Canada</a>
+        <a href="/topics/deep-ecology">deep ecology</a>
+        <a href="/topics/earth-first">Earth First!</a>
+        <a href="/topics/ideology">ideology</a>
+        <a href="/topics/language">language</a>
+        <a href="/topics/morality">morality</a>
+        <a href="/topics/post-left">post-left</a>
+        <a href="/topics/prison">prison</a>
+        <a href="/topics/progress">progress</a>
+        <a href="/topics/technology">technology</a>
+        <a href="/topics/ted-kaczynski">Ted Kaczynski</a>
+        <a href="/topics/the-left">the left</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on 23 March 2010 from <a href="http://www.angelfire.com/journal2/feraltowardswildness/">www.angelfire.com</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="various-authors-feral-a-journal-towards-wildness.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="various-authors-feral-a-journal-towards-wildness.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="various-authors-feral-a-journal-towards-wildness.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="various-authors-feral-a-journal-towards-wildness.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="various-authors-feral-a-journal-towards-wildness?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="various-authors-feral-a-journal-towards-wildness.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="various-authors-feral-a-journal-towards-wildness.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Various Authors</h2>
+	
+	<h1 id="textttitleh">Feral: a journal towards wildness</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel2"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Issue 1
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Welcome to Feral: a journal towards wildness
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Not Left But <em>wild</em>! <em>by Chris Kortright and Craig Evarts</em>
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">The Left...
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Wildness...
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">The Transformative power of the Wild <em>by Joanne E. Lauck</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">The Politics of Everyday Life
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc8">Biocentrism as a Moral Imperative <em>by James A. Barnes</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc9">My Path to Left Biocentrism: Part 1 <em>by David Orton</em>
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc10">Introduction
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc11">Important Thinkers
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc12">Visions
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc13">Relationship with Mainstream Environmentalists
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc14">Continuities of Left Biocentrism with Deep Ecology
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc15">Discontinuities of Left Biocentrism with Deep Ecology
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc16">Self-Realization
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc17">Accountability
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc18">The Left
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc19">Social Ecology, Eco-Feminism and Eco-Marxism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc20">Movement Separation?
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc21">Appendix: A Left Biocentrism Primer
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc22">Endangered Species: Techno-Humanism and the Vanishing Humanity a Beginner’s Guide <em>by Patricia Freund</em>
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc23">The End of the Word
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc24">Kaczynski Family Values
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc25">On Going Feral <em>by James Barnes</em>
+</a></p>
+
+<p class="tableofcontentline toclevel2"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc26">Issue 2
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc27">Wildness <em>by James Barnes</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc28">Anarchism is Dead! Long Live <em>Anarchy</em>! <em>by Rob los Ricos</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc29">Born Caged <em>by Anonymous</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc30">Lust for A Wild Life: emotions from an individual of the doomed generation <em>by Chris Kortright</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc31">How Then Do We Go Feral: unfinished notes to be discussed and acted upon <em>by Wolfi Landstreicher</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc32">Wildness in the City <em>by Chris Kortright</em>
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc33">The Question of Ideology
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc34">Ideology’s Effect on Action
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc35">Wild Self-theory
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h2 id="toc1">Issue 1
+</h2>
+<h3 id="toc2">Welcome to Feral: a journal towards wildness
+</h3>
+<p><strong>Fer-al</strong> <em>adj</em> : wild, or existing in a state of nature, as freely occurring animals or plants; having reverted to the wild state from domestication.
+</p><p>There you are, that’s the definition. But what’s does that have to do with environmentalism, anarchy, or activism? When James and I decided to put this magazine together we felt there were fundamental things missing from the larger picture of environmental as well as anarchist activism.
+</p><p>In general, the environmental movement seeks to save (as an example) wilderness in pockets such as parks or wilderness areas. Asking for parcels large enough to “survive” but small enough to be allocated by government agencies. In the more radical approach there may be a strategy of larger areas, no roads or zero cut. However, the average conservationist is willing to “ask” and wait and ask again. This legitimizes the concept of governments and private property. Within the context of begging for “pockets of wilderness” from the power structure the idea that wilderness should exist for itself gets lost in the government’s authority to dictate what life deserves to exist. It also never challenges the institution of government and power by asking the question ‘do the natural world and humans prosper more effectively in a state of freedom or coercion?’ It also comes short in analyzing and attacking industrialism and technologies’ assault on everyday life. Not just “bad” or “hard” technology, but technology in general. Does technology alienate humans from each other and the natural world as well as lay the ground work and ability to dominate and destroy the natural world? I think you’ll find the answer to both is yes. And maybe most important this it reinforces the same separation between humans and the natural world that we accuse the “anthropocentric” thinkers as celebrating. It denies a wildness in us as human beings. Can we as activists incorporate a re-wildness in ourselves as we defend the wildernesses, can humans go feral? Can these ideas come together in dialogue and practice, freedom of humans and freedom of the wild, wilderness and human wildness?
+</p><p>In turning to the anarchist movement, too much of it is based ideologically and strategically on industrialist thinking. Celebrating “work” and “rationalism” it is hard for many anarchists to see the necessity of defending and fighting for the freedom of all life; for all life to exist for itself.
+</p><p>In this magazine we hope to create a forum for true and authentic dialogue unimpeded by rigid ideology and “isms” as well as discussions and examples of practice (be it strategy or actual communities living free and in harmony with nature.) That in a nutshell is the vision of <em>Feral</em>.
+</p><p><em>Feral</em> is a new project. Whether its successful depends on the support by interested parties. I know people are interested. I have received mail from all over the world (and this country). I already have a few subscriptions. People have been very interested in the idea, now that it is actualized it needs support. For existing and effective dialogue we need submissions from all sorts of different perspectives (see our up and coming themes). So please if you like this project subscribe, get your friends to subscribe and help us get distributed in you local area. We also hope that <em>Feral</em> can be used as a networking tool for folks so send us contacts, letters, and info about you all.
+</p><p>Well dive in and enjoy (or despise) our diverse pieces. I hope they are thought-provoking and inspire you to write us. Let’s begin tearing down the walls that keep us pinned in and wilderness fortified out. It’s time not only to defend the wild but become wild. We need to take on an offensive role in tearing down this nightmare that cripples us and dulls our instincts and desires.
+</p>
+<blockquote>
+<p>going feral,<br />
+Chris Kortright <em>co-editor</em>
+</p></blockquote>
+<h3 id="toc3">Not Left But <em>wild</em>! <em>by Chris Kortright and Craig Evarts</em>
+</h3>
+<p><em>[author’s note: I (Chris) started writing this essay. Then my buddy Craig came in to S.F. for a month. The essay started many late night discussions between the two of us. Those talks turned into a jointly written piece. So instead of totally re-writing it, we decided to let you see its evolution. To clarify the essay: when anything is written in first person there will either be (CK) after it or (CE). I hope it doesn’t detract from the reading but we felt it was better then trying to cram our individual ideas into one single commentary]</em>
+</p>
+<blockquote>
+<p>“Are you ready for everything to crash? What a terrifying jump to be free.” — Bedlam Rovers
+</p></blockquote>
+<p>What is our reaction to ecological collapse? I’m (CK) told by radical ecologists and eco-minded anarchists that there is an organized militant resistance to the atrocities against the natural world and all that is wild (including humans). You see them at demonstrations; yelling the loudest, telling us the proper way to live and how to relate to one another as well as which ideology we are to follow. But are these militant actions really bringing down civilization and it’s most recent incarnation, centralized global capitalism, or are they just playing their loyal role of reinforcing society with their ideologies and utopian visions by reinforcing their role in the spectacle?
+</p><p>I (CK) see activists (often including myself) with good intentions and a honest desire for authentic resistance who fall victim to the spectacle of society because they fear their own desires, passions and experiences. Through socialization they distrust their passions and experiences and submit to specialists, ideologies, “rational thought” or leaders. No matter how much we try to resist as long as we follow in the foot steps of the Left we are bound to fail just as they have.
+</p><h4 id="toc4">The Left...
+</h4>
+<p>Leftist ideology can’t understand a critique of or a resistance to industrialism in its totality. And just as every other industrial society they too would “rationalize” every living thing, including humans, in relation to industrialism. They are materialists in denial, still believing maximum industry and maximum production. The only difference is they want to distribute more commodities to a larger portion of the human population, never challenging commodities, western society’s consumption levels and waste.
+</p><p>The Left is too tied to their “rational thought” stemming from the 18<sup>th</sup> century Enlightenment. The Enlightenment saw the importance of rational, scientific analysis as a way to free “man” from the shackles of superstition, irrationality and nature. Enlightenment thought held that the wild and dangerous world should be analyzed, classified and tamed by the rational, western man. The conflict between his own internal world of culture and the menacing wildness of nature could only be resolved by the taming and dominance of nature. So coming from this tradition “satisfaction is measured in terms of gaining material. So the mountain becomes gravel, the lake becomes coolant for a factory and the people are rounded up for processing through the indoctrination mill Europeans like to call school.” (Means, 1987)
+</p><p>Even the ecologists coming out of the Leftist tradition still believe they are “god-like” with their rationalism and science. Just as many Christians believe humans are the cream of creation, the pinnacle of God’s will, so any actions humans take in relation to our dominance over the natural world (and often each other) is how God willed it. Rational Leftists or humanists see that humans are the end of evolution, the pinnacle of nature, thus taming the wild or looking at wilderness as resources is just humans being “nature’s mouth piece”; they praise “humanity’s ascent out of animality” (Bookchin, 1989) claiming that this separation makes humans superior.
+</p><p>This superiority is also asserted over “primitive” people who won’t or “can’t” join modern society. Living in a way similar to traditional native Americans is an atrocity to most “rational” Leftist because “Society would have been mired indefinitely in a brute subsistence economy living chronically on the edge of survival” (Bookchin, 1991). What I think makes the Left despise wildness is the fear of what can’t be controlled, it is the unknown and chaos of the real world which brings up reactions like “Nature...is normally ‘stingy’ and an ungiving and deceptive ‘mother’” (Bookchin, 1991). Because of their tight grip on “rational theory” they can’t let go of the Hobbesian view of nature even though sciences like anthropology and ecology have shown that wilderness and pre-agricultural societies were quite the opposite to that of the Enlightenment’s miscalculations.
+</p>
+<blockquote>
+<p>“...the vanity that man is the great secret object of animal evolution. Man is absolutely not the crown of creation: every creature stands beside him at the same stage of perfection... And even in the asserting that we assert too much: man is relatively speaking, the most unsuccessful animal, the sickest, the one most dangerously strayed from it’s instincts.” (Nietzsche, 1990)
+</p></blockquote>
+<p>The other night I (CK) was talking to my buddy at a small bar here in San Francisco drinking Gin and listening to Johnny Cash. “Forget those commies, I (CE) don’t want to work in their factories. Why is it that all these intellectuals and rich college kids think work is cool. I just want to live with a few friends and my wife out in the woods growing my own food, hunting and enjoying my life with family and friends. It’s only people who have never worked at a dead end job with no future that thinks us working class people give a shit who runs the factory. Work is Work; no matter if the boss is a capitalist or all of us. I wish they would stop trying to save me and tell me how to liberate myself.” The statement my friend Craig said shows two other major flaws in Leftist ideology. The first being their devotion to work and work culture. The second is the constant need to save everyone from the working class to women to people of color if we all would just subscribe to their ideology we would all be free.
+</p><p>It’s hard for most of us who work (and aren’t college educated) to understand the romantic view of work. It doesn’t take a genius (just a worker) to see the alienation in work.
+</p><p>In fact few workers I (CE) know even think in terms of left or right, mostly in terms of liberal or conservative. They do associate liberal with left and generally loathe the liberals and want them dead. I wonder how many “leftists” have actually talked to a worker this week. They don’t know left from right and they don’t care, they just want to make as much money for as little work as possible. And, they know the liberals are surely not going to help them with that.
+</p><p>I (CK) bring this up because as the Leftists continually try to nurse us workers into a better way. The trouble is they never listen to us. If they did, they would realize that the bottom line is we do not want to work and we especially don’t want to work in a socialist world (even anarco-syndicalism or any other worker self-management program). The discussion about why must be saved for another time; but trust me, we don’t want to work in a socialist system even more than a capitalist one. The idea of self-managing our own slavery is even less appealing then having an enemy cracking the whip. <em>We</em> know that industry does not offer happiness or fulfillment because we live it and we built it.
+</p><p>The question needs to go out the Leftist telling us that only through worker-controlled factories can we find self-liberation. Do you believe your utopia will eliminate the pollution and toxins created by industry, the child and spouse abuse created by the self-loathing of constant drudgery as well as the self abuse through drugs and alcohol to either cope with work or be more effective at it (the use of speed to work harder)? To all these the answer is <strong>no!</strong> Industrialism can’t function without toxins. Contrary to what most Leftists believe we can’t have eco-friendly technology, the computer that you can’t live without can not be made without toxins. So as you are liberating yourself you are also poisoning the air you breathe and the water you drink as well as killing many other species.
+</p><p>Even without capitalists the drudgery will still be there as long as we need to work. A commodity economy can’t function without most people still doing the grunt work. I (CE) know we are told that the only reason why working people try so hard to accumulate wealth is because the capitalists dangle the carrot in front of us, but most of us working people know that we could never have what they have. Now create a world were we can have every commodity that we want and do you think people would work less? We then would be working for the commodity itself, hence being a slave to the commodity, no longer the capitalist. We are not fighting to take our place on an assembly line (which most leftists have never seen or heard) to spend our life working. We don’t believe humans are the rational “inheritors of the earth”. The Left has nothing to offer our revolt of everyday life. So what are we to do? We have been taught that to change we must go either Right of Left. Screw that. The answer is wild insurrection, <strong>wildness</strong>.
+</p><h4 id="toc5">Wildness...
+</h4>
+<p>Pity the lanky Leftist who tries to co-op wildness. There is no way because it is not based on language. It is not based on material goods so there’s no way you can rip it off. There is nothing to talk about or you to talk us out of. There is nothing to buy so you can’t sell it back to us in a safer more consumer-friendly jar. One of the many examples of turning resistance into a commodity is Earth First! and the monkey wrenching myth. When EF! started, they discussed monkey wrenching openly, often acts of ecotages though not done by EF! may have been inspired by EF!. Then the myth built, and the t-shirts were for sale along with a bunch of other pretty monkey wrenching paraphernalia. As the image of resistance is sold back to the masses the acts of revolt diminish. As we have seen the sales of monkey wrenching t-shirts (earrings, patches, stickers) go up we have actually see a decline in acts of ecotage.
+</p><p>Wildness is the playful insurrection of our deepest and most instinctual desires. These desires can only be defined and fulfilled by us as individuals or small clusters of individuals. It is raw unmediated emotion. It is living every moment on the brink of the unknown, like the butterflies you get in your stomach when you are interacting with a person you are attracted to (and you still don’t know if they are attracted to you); playing the mutually attraction dance not knowing who will admit the attraction first, raw and spontaneous sex with a new partner. The fear and excitement a snowboarder or skier feels when they hit a jump or mountain side that they are not prepared for. Or the stimulation someone feels jumping out a plane before they pull their parachute. Wildness is not only about sex and dangerous extreme sports but they are the few personal interactions with one another and life that can still possibly be spontaneous, raw and unmediated (but too often turned into a commodity). It is the free, untamed self the one that you find in the wilderness or in the midst of passion, the unpredictable, uncontrollable emotions that everyday life has killed.
+</p><p>We have no program, no plan, no organization, not even a name or slogan to rally under. None of us will lead you to were you need to go. This time it must come from you, from each of us, as individuals we must look around and feel what’s going on; see the alienation, the taming, controlling. <strong>Now act!</strong> This time it is up to you there are no rules, no dialectic to adhere to. No manifestos will be written, no how-to books or battle plans. This revolution will not only not be televised — it will not be mediated. It can only come about by living free, participating in a revolt of every aspect of everyday life.
+</p><p>In the process of living life in and for the moment, actualizing your desires and creating the wild side in you, confrontations with authority will accrue. This revolt of/for life will bring down all we know now. It has no option because being free is not compatible with any incarnation of authority or control; be it work, commodity economics, laws, or wilderness “management”. So break out of the cage of society and stop following failed ideals. No one can liberate you but yourself. By buying in to leftist ideology you will be shackling your own leg to the factory floor, cracking the whip upon yourself and your loved ones. So find your loved one, the ones you trust and make life real. Untame your desires, run wild and remember creation only comes from destruction. For all that is wild, all that is caged and of course for yourself bring down the walls.
+</p><h3 id="toc6">The Transformative power of the Wild <em>by Joanne E. Lauck</em>
+</h3>
+
+<blockquote>
+<p>“We are drawn...by an indifference, whose other name is love.”<br />
+Belden C. Lane
+</p></blockquote>
+<p>We are afraid of wildness or what we deem wild, in ourselves and in other species. We equate it with a kind of craziness, an unpredictable state that is potentially dangerous. Abandoned domestic animals that are considered “too wild” are euthanized at our local humane society. Usually the behavior they exhibit is just a lashing out, with claw or tooth, from understandable fear. Those responses, however, are viewed as evidence of wildness and their appearance, regardless of the circumstances, makes the animal unadoptable. What we can’t tame or control easily, we eliminate.
+</p><p>Paradoxically, the autonomy of wild creatures and their indifference to our pressing human concerns and frantic quest for self-fulfillment draws us to them. Studies show that just being in a wilderness area renews us and makes us feel more complete. Without access to wilderness, when we reside in a purely human-oriented environment, we suffer from emotional loss and unrealized potential. We even lose a measurable degree of vitality and general health. Many of us intuitively sense this psychological dependence when we are outside in an area populated with wildlife. Encounters with other species heighten our awareness and return us to an energetic state of being. Outdoors, insects sometimes surprise and arouse us. Were we more open, they too could awaken us out of our complacency, returning us to an alert, watchful state of being. As teachers of the natural world, they continually invite us closer to inspect and reflect on their ways.
+</p><p>Small creatures often have power unaccountable for their size. Mosquitoes can make grown men run; so can spiders and bees. Tracker and teacher John Stokes, who studied for many years with the aboriginal people of Australia and now teaches people how to survive in wilderness areas, thinks small creatures make us aware that we live in an automated world of false power. Because they have real power, they fascinate us and effectively counter our own disproportionate sense of importance.
+</p><p>Wise individuals exercise caution when outside in the domain of wild and sometimes dangerous creatures. They are more alert, more likely not to charge blindly through the area. Such individuals know that an encounter with a species that can bite or sting us, unlike a carnival ride or electronic thrill, demands more than our money and physical presence. It calls forth in us certain qualities — traits of the native hunter or the mediator. We sense in the potentially dangerous creature real power, and unless we panic, we are likely to quiet our own noisy thoughts and restlessness and try to match its depth of silence. Sometimes our well being depends upon how well we match it.
+</p><p>The benefit of being silent in the presence of real power is that it anchors us to our own center where the power can be matched and used to transform and initiate us. Sensitivity heightened, a brush with these kinds of creatures typically leaves us raw, as though our terror strips away the layers of comfort that protect us from life. Their ability to hurt us also binds us to the present moment like few things can. And after the moment, when we are returned to safety, we notice that we feel more alive.
+</p><p>There is opportunity for growth even in the bite or sting of one of these kinds of creatures. Our anger or confusion at the unpredictable and painful encounter lets us enter, if only for the moment, the gaps, a transition place where we are not in control. If we don’t lash out, if we forgo the heroic stance and allow ourselves to be humbled and temporarily subdued, all manner of insight and fortune await. Confronting real power frees us from the bonds of greed, desire, numbness, and the concerns of the ego for comfort and control. It also awakens our intuitive and imaginative abilities and gives us rein to approach the big questions about who we are, where we come from, and where we are going.
+</p><p>When wild creatures enter our living spaces, the same opportunity exists although we have been taught only to kill or run from what might hurt us. A director of a gardening extension service, for example, wrote an article on how to kill scorpions, sharing with her readers memories of a time when she stepped on a scorpion in her house and got stung. Incensed by the stabbing pain in the arch of her foot, she grabbed a book and started smashing the creature. When it was dead, she called Poison Control. They told her that unless she had a severe allergic reaction to the sting, it would only cause swelling and soreness in the affected area. “Soak it in ice,” they advised.
+</p><p>Later she discovered that nearby house construction was the reason a few scorpions had moved to her home. Their habitat had been disturbed. She also read that they sting only when provoked. Understanding their reasons, however, wasn’t enough to quell her fear of having them in her house and the possibility of being stung again. The rest of the article focuses on getting rid of them. She recommends crushing, stomping, smashing, or squashing them and using indoor and outdoor pesticide sprays.
+</p><p>What is often angered, and then humbled, in a painful encounter with a wild creature — especially a small one like a scorpion — is the self-important, inflated parts of ourselves. Those parts mask our general fear of the unknown and our resistance to the pain of being overcome and changed. I suspect our task, and a monumental one at that, is not to withhold ourselves or defend ourselves from that which would help us grow strong and move us closer to our true natures. “What we choose to fight is so tiny, what fights with us is so great,” Rilke reminds us in “The Man Watching.” <a href="#fn1" class="footnote" id="fn_back1">[1]</a> When we let go of our resistance to pain and change, when we can trust that the creatures of the natural world that move into our lives bidden by unseen powers can arouse us and help us grow, we can learn to accept what happens in an encounter with them — without angry retaliation. We might even find ourselves seeking out these transitional places where the subjective and objective worlds intersect — in dread and expectation — which means we will have altered our way of being in the world enough to open avenues of thought and action previously unavailable.
+</p><p>When we can let go and refrain from erecting elaborate defenses or seeking revenge, we become participants in life’s small and great initiations. We become actively receptive to these opportunities to grow without doing battle with forces and creatures that are ultimately allies of a fundamental natural self at home in the world. There is power in our defeats and in our surrender and there are blessings due for those messengers who disrupt our familiar world. As Rilke so eloquently explains in the last passage of the same poem.
+</p><p>Whoever was beaten by this Angel ... went away proud and strengthened and great from that harsh hand, that kneaded him as if to change his shape. Winning does not tempt that man. This is how he grows: by being defeated, decisively, by constantly greater beings. <a href="#fn2" class="footnote" id="fn_back2">[2]</a>
+</p><p>In all great spiritual traditions it is in the wilderness that the disciple’s faith and endurance is tested. Wilderness and those wild ones who move outside our human agendas are fierce teachers who sometimes teach us by defeating us. It is an insistent love that calls us home to our true nature. By silencing the little self we find that a grand new wholeness comes to replace all that has been lost.
+</p><p><em>Joanne Lauck is an environmental educator and the author of a new book </em>The Voice of the Infinite in the Small: Revisioning the Insect-Human Connection<em> (Swan•Raven, 1998) which is available through your local bookstore or online through Amazon.com. Write her at 1724 Alberta Ave., San Jose, CA 95125 or e-mail her at jleafhobbs@aol.com</em>
+</p><p>Ask a few questions here, but do it casually.
+</p><h3 id="toc7">The Politics of Everyday Life
+</h3>
+
+<blockquote>
+<p>Think of your direct bodily experience of life. No one can lie to you about that.
+</p><p>Do you hear insect sound of drones clickering keyboards in a fluorescent hive of fabric-padded cubicles?
+</p><p>How many hours a day do you spend in front of a TV screen? A computer screen? An automobile screen? All three screens combined?
+</p><p>Is software your supervisor?
+</p><p>And how many hours a day do you sleep?
+</p><p>How are you affected by sound?
+</p><p>How are you affected by light?
+</p><p>How are you affected by warmth and touch?
+</p><p>How are you affected by music?
+</p><p>Is a good record better that live music raw?
+</p><p>Is it simply sound you want? Or shared ritual music?
+</p><p>How many of your rituals come at you through a glass, vicariously?
+</p><p>What are you being screened from?
+</p><p>Does it bother you if the windows don’t open, even your air is “conditioned”?
+</p><p>How about your degree and variety of bodily movement?
+</p><p>How do you feel in situations of enforced passivity?
+</p><p>How are you affected by non-stop assaults of symbolic communication, audio, robotic voices, video, print, billboard, as you stumble through the forest of signs?
+</p><p>What are they urging upon you?
+</p><p>Do you need contemplation? Do you remember it?
+</p><p>Thinking from inside, rather than reacting to stimuli?
+</p><p>Is it hard to look away?
+</p><p>Is looking in the very thing that can not be permitted?
+</p><p>How are you affected by being in crowds?
+</p><p>How much bodily space do you need?
+</p><p>Do you find yourself blocking your empathetic responses to other humans?
+</p><p>Do you find yourself committing acts of symbolic violence?
+</p><p>How are you affected by the size of the room you’re in?
+</p><p>By living in two and three dimensional grids?
+</p><p>And by the visual space?
+</p><p>Do you need to see the sky? Water?
+</p><p>Foliage? Animals? Glinting, glimmering, moving?
+</p><p>(Is that why you have a pet, an aquarium, and fernplants?)
+</p><p>Or is video your glinting, glimmering, moving?
+</p><p>Who prepares your meals? Do you eat standing up?
+</p><p>Do you trust what you are eating?
+</p><p>How are you affected by standardized time, designed solely to synchronize your movements with those of millions of others?
+</p><p>How long do you ever go without knowing what time it is?
+</p><p>Who or what controls your minutes and hours?
+</p><p>The minutes and hours that add up to your life?
+</p><p>How are you affected by being moved around without control, in elevators, subways, escalators, conveyor belts?
+</p><p>How are you affected by waiting?
+</p><p>Waiting in line, waiting in traffic, waiting to pee, waiting...learning to discipline and punish you spontaneous urge?
+</p><p>How are you affected by being immobilized and scheduled rather than wandering and roaming freely and spontaneously?
+</p><p>Scavenging? (Shoplifting?)
+</p><p>Can you use your hands creatively, building, making, touching a variety of materials?
+</p><p>How are you affected by holding in your desires?
+</p><p>By sexual repression, by delay or denial of pleasure, starting in childhood, along suppression of everything in you that evidences your wild nature, your animal life?
+</p><p>Is pleasure dangerous? Is danger joy?
+</p><p>What are we deprived of by labor-saving devices?
+</p><p>And thought-saving devices?
+</p><p>How are you affected by the efficiency requirement that puts the end product ahead of the process, that values only the future and never the moment, the present moment that gets shorter and shorter, as we try to speed to the future endpoint?
+</p><p>Are you saving time?
+</p><p>Are you lonely in a way that language can’t allay or even express?
+</p><p>Do you sometimes feel yourself ready to <strong>lose control?</strong>
+</p><p>That had been the signal.
+</p></blockquote>
+<h3 id="toc8">Biocentrism as a Moral Imperative <em>by James A. Barnes</em>
+</h3>
+<p>Biocentrism: In a way it’s a misnomer. If the Christian God of the Middle Ages is dead, and we postmoderns have deemed it unseemly and egomaniacal to place Man at the center of the universe as the pinnacle of evolution, then perhaps it is fitting to eschew ideologies that must place anything at the center at all. Nevertheless, biocentrism remains a more subtle philosophy that accords all living species and (why not?) material creation an equality in existence that we humans have no moral right to trample.
+</p><p>Whatever your beliefs regarding the origins of life and the world, it is obvious that we did not make the creation; therefore simple courtesy demands that it is not ours to destroy. And yet apologists for destruction of the biosphere have long appealed to human consciousness and awareness of self as an excuse for thoughtless abuse of that which is non-self and/or (it is assumed) nonsentient. Again, as the biblical prescription of dominion over the earth has waned in its usefulness along with the Church, this modern, humanist justification for rotten treatment of other living things — the fact that we have big brains — replaced it. Clearly we have here a desire to commit dirty deeds in search of a rationale to make it OK.
+</p><p>Yet self-awareness ought to lead to reflection and mindfulness, not merely serve as a tool for the satisfaction of greed and other lusts. Mind you, greed is good — not in the Randian sense, but as one of a number of base desires that serve as stimuli for an organism’s self-sustaining activities, to obtain food, shelter, mates etc. As such, human self-awareness, communication and culture have served us very well indeed. But as anyone knows who has found themselves battling a weight problem, an addiction, or perhaps even the sociopathic effects of overweening ambition, the ability to endlessly satisfy desire creates often more intractable problems than privation.
+</p><p>Where external controls and limits to our desires have been defeated, as is the case for many of us in the rich parts of the world, internal self-control becomes necessary. We are in many ways in a situation comparable to that of an absolute monarch. And being kings, there is no one who will dare to contradict our will or refuse us our most unworthy command. Armies of merchants and servants stand ready to provide us with meaty treats and tasty snacks; the garment industry, whose slaves toil in the most wretched places on earth, presents us with colorful and ever-changing fashions. The most beautiful vistas and rare, unspoilt lands are available for us to build our clean, warm and well-appointed mansions; and miraculous, blinking gizmos and whirring appliances enrich our lives with entertainment and uncomplaining labor. Of course, to achieve these comforts whole nations have had to be put to the sword and whole ecosystems cut, plowed, paved, graded, mined, burned and otherwise converted. And yet we still do not, like the mad tyrant or even a burger-chomping frat boy, foresee the day when the consequences of our excess come home to roost.
+</p><p>The human strategy of evolving maximal flexibility of behavior coupled with maximal problem-solving ability has led us to an unparalleled success — so far. But this flexibility demands from us responsibility, something not asked of creatures who are naturally bounded by limits of competition, behavior or other adaptations. Having self-conscious awareness of one’s actions must include the ability to prevent over-saturation of desires, overabundance of one’s kind, overuse of the resources upon which one depends and wisdom to practice mercy and respect for other species we might easily destroy. Being relatively unconstrained, we must use our free minds to better foster that which is truly in our long-term best interest. Our genes and our base instincts cannot do this. Since we are capable of foreseeing the consequences of our actions (even if we are often in denial about them), we must exercise ourselves to render those consequences beneficial to all existence. And why should we do this? To satisfy our own conscience, our ethical sense, our feelings of self-esteem, worth, and right and wrong. A moral compass, culturally determined and imprinted while young, is the only way to a human sensibility of self-control and restraint. Nature may kill us for our acts but it cannot care what we do. Each species that we wipe out or river we destroy regards its extinction with the equanimity of the unaware.
+</p><p>We are free to be as horrible as we like to the biosphere, even to the point of self destruction, just as a person is free to drink themselves to death if they want. Yet a drunk is not free in this society to drive under the influence or otherwise harm innocent people. Likewise, we should not grant humans the right to destroy other species in the course of our folly. The difference is that our non-human victims do not complain, as though drunks were licensed to mow down pedestrians and slaughter other drivers on their way to their own high-speed encounter with destiny. We have to police ourselves.
+</p><p>Evolution persists in reaction to environmental stimulus, even the holocaust we have created. In the redemption of natural selection, a more strange creation will come in time (and there’s plenty of time) to replace the species whose lines we have truncated. But what would have been is gone, a possibility cut short. And only we humans who have knowledge of the past and can guess about the future will grieve in guilt for the lost, whom we have murdered.
+</p><p>As animals with supple brains and nimble hands we will busy ourselves impacting the world’s ecosystems for as long as we live as a species. If we are to live as plain citizens of this world instead of mad kings whose subjects (nonhumans and oppressed people) live in fear of our whims, we must choose self-discipline. In a democracy, all citizens are presumed to be equal under the law. Those persons elected to positions of leadership are considered servants of the people, not their rulers. Neither are they above the law; in fact they must bear more scrutiny than private citizens. In our present ascendancy, we too must take care not to abuse our position of power over the biosphere. We will not always be so strong and will have to live with our legacy.
+</p><p>Thus, biocentrism, that places the needs of all the world’s creatures on a par with our own; that forces us to ask ourselves what our actions will do to the least of these, whose claim on life and livelihood is as great as any human’s; that requires us to go without some of what we desire so that others will have anything at all; that demands the mutual respect of equals to underpin our dealings with one another; that enjoins us from committing crimes against those of different species from ourselves; that allows us to love these our neighbors and fellow citizens rather than destroy them through hatred, or worse, through ignorant indifference.
+</p><h3 id="toc9">My Path to Left Biocentrism: Part 1 <em>by David Orton</em>
+</h3>
+<h4 id="toc10">Introduction
+</h4>
+<p>Gaining more understanding of the wonders of the natural world and practical involvement in defending the Earth opens one’s eyes to a more biocentric world view. The shift in individual consciousness from a human-centered world view to that of a non-human centered deep ecology philosophy, is always highly personal. The more we identify with Nature, the more we care what happens to it. The historic contribution of deep ecology is addressing the philosophical task of working out this new non-human centered relationship for humans with the Earth.
+</p><p>“My Path to Left Biocentrism” has been written as an introduction to this evolving theoretical tendency within the deep ecology movement. It reflects the collective networking experiences, the practical work and perspective of the Green Web*, and also my own views. It is also indebted to the thinking of others who have explored what a left focus in deep ecology means. There are a number of Green Web bulletins, book reviews and articles which discuss various left biocentric-related theoretical questions — the focus being their relationship to deep ecology; and there are also bulletins discussing practical applications of deep ecology to particular issues, some of them sensitive, e.g. the ecological evaluation of the Left, and assessing environmental/indigenous contradictions. <a href="#fn3" class="footnote" id="fn_back3">[3]</a> Left biocentrism draws from this theoretical and practical fusion.
+</p><p>“Left,” as used in left biocentrism, means anti-industrial and anti-capitalist, but not necessarily socialist. Thus some left biocentrists consider themselves socialists, as I do myself, while others do not. All left biocentrists address and are concerned with social justice issues in society. They do however place such issues within a context of ecological values.
+</p><p>The Green Web uses the expressions “left biocentrism” or “left ecocentrism” interchangeably. Biocentrism (“life-centered”) is a more popular movement term, although Ecocentrism is more comprehensive and “scientific,” in that it includes the physical earth as well as plant and animal life forms. We prefer to use left biocentrism. But we do use it in the more inclusive sense to include the physical earth.
+</p><h4 id="toc11">Important Thinkers
+</h4>
+<p>The following thinkers have been particularly important for a new, left biocentric synthesis of ideas: the writings of the Norwegian deep ecology founder Arne Naess; the Australian forestry activist, deep ecologist, and critic of the philosophical fuzziness of deep ecology, Richard Sylvan (1935–1996); the Left German eco-philosopher and green movement activist Rudolf Bahro (1935–1997), whose life and writings show the torment and transition in his evolution from Red to Green; the radical ecocentrism of the American deep ecology philosopher, socialist and bioregionalist Andrew McLaughlin; and the young Canadian activist and thinker Ken Wu. <a href="#fn4" class="footnote" id="fn_back4">[4]</a>
+</p><p>Other key writers for a left biocentric synthesis are: Aldo Leopold (<em>A Sand County Almanac</em>); John Livingston (<em>The Fallacy of Wildlife Conservation and Rogue Primate</em>); Andrew Dobson, (<em>Green Political Thought</em>); Saral Sarkar (<em>Green-Alternative Politics in West Germany</em>, two volumes); David Johns (“The Practical Relevance of Deep Ecology,” <em>Wild Earth</em>, Summer 1992) <a href="#fn5" class="footnote" id="fn_back5">[5]</a>; and George Sessions (<em>Deep Ecology For The 21<sup>st</sup> Century</em>).
+</p><h4 id="toc12">Visions
+</h4>
+<p>Looking back at my twenty years of involvement in the environmental movement <a href="#fn6" class="footnote" id="fn_back6">[6]</a>, it seems that a primary concern has been to raise “alternative visions” as a contribution to the public debate taking place around the particular environmental issues, such as biocides, forestry, ‘sustainable development,’ protected areas, indigenous issues, or natural gas. While raising such visions requires a detailed knowledge of an issue, to develop an alternative vision means going beyond practical knowledge, of which Earth destroyers have often had a monopoly. It is these alternative visions, which reject the existing industrial order, that are so threatening to corporations, governments and “wise use” groups. We have seen this first hand from corporate and “wise use” attacks on the work of the Green Web. Once I became aware of deep ecology philosophy in the mid-1980s, I saw that there was a real, hopeful, non-human centered alternative to the destructiveness of industrial capitalist society. It still required a detailed knowledge of the issues, but deep ecology helped to focus and raise the questions to ask. Many times I have been at meetings designed primarily to obtain the public’s approval for an environmentally destructive project. Usually there is a “consensus” within which any controversy takes place. Someone informed by deep ecology, and with a detailed knowledge of the particular issue, can shatter the consensus and open up a real discussion. Others present can then participate in this discussion, which is subversive to the taken-for-granted industrial order.
+</p><p>Raising ecological and social visions alternative to those peddled by industrial society is of fundamental importance. Circulating such visions within society, in any public way, is extremely difficult.
+</p><h4 id="toc13">Relationship with Mainstream Environmentalists
+</h4>
+<p>The Canadian federal government provides government funding to the Canadian Environmental Network (CEN). Each province and territory has a provincial branch of the CEN. In our province it is called the Nova Scotia Environmental Network. The CEN is a “non-advocacy” network as this is a condition of the funding it receives from the federal government. The CEN cannot take stands on environmental issues, but member groups of this network can. Those who work in this network mainly accept the existence of industrial society, and working with governments and capitalist industry. The participation of environmentalists through the CEN gives an environmental legitimacy to the existing industrial situation. Alternative visions do not usually come from the ranks of the CEN, which in Naess’s terms, are promoting shallow ecology. <a href="#fn7" class="footnote" id="fn_back7">[7]</a> Deciding what attitude to take towards the CEN is a problem. Basically I work with individual members of the CEN on environmental issues of mutual interest, but without joining this network. While doing this, I have continued to argue the necessity of an environmental movement that is neither government nor corporate funded. In Nova Scotia, most people who become involved in fighting on environmental issues are outside the CEN and rural based. They respond to “not in my backyard” situations. This sector is easily the most powerful part of the environmental opposition but it lacks staying power, and the existence of the CEN helps inhibits the emergence of a grass-roots controlled and funded, more radical environmental movement in Canada.
+</p><h4 id="toc14">Continuities of Left Biocentrism with Deep Ecology
+</h4>
+<p>The main driving force of the Deep Ecology movement, as compared with the rest of the ecological movement, is that of identification and solidarity with all life. <a href="#fn8" class="footnote" id="fn_back8">[8]</a> In the early 70s Arne Naess made the distinction between “deep” and “shallow” ecology, in the now famous article “The Shallow and the Deep, Long-Range Ecology Movement. A Summary.” <a href="#fn9" class="footnote" id="fn_back9">[9]</a> Naess says that the publication of Rachel Carson’s book <em>Silent Spring</em> in 1962, roughly marks the beginning of the international long-range deep ecology movement.
+</p><p>Deep ecology (DE) says major ecological problems cannot be resolved within the existing capitalist or socialist industrial economic system. Shallow ecology says that these problems can be resolved within, and with the continuation of industrial society. Yet it is this industrial society that has caused the Earth-threatening ecological crisis.
+</p><p>The eight-point deep ecology Platform drafted by Arne Naess and George Sessions is accepted by left biocentrists as a basis of unity within the deep ecology movement. Andrew McLaughlin has called the Platform the “heart of deep ecology”. DE promotes biological, cultural, and social diversity. Respect for diversity avoids dogmatism in ideas and organizational forms and the elevation of ideas above life itself. Naess speaks of a personal DE being “an intuition.” By this he means it cannot be solely logically derived. The soul of deep ecology is the belief that there has to be a fundamental change in consciousness for humans, in how they relate to the natural world. This requires a change from a human-centered to an ecocentric perspective, meaning humans as a species have no superior status in nature. All other species have a right to exist, irrespective of their usefulness to the human species or human societies. Humans cannot presume dominance over all non-human species, and see nature as a “resource” for human and corporate utilization.
+</p><h4 id="toc15">Discontinuities of Left Biocentrism with Deep Ecology
+</h4>
+<p>The deep ecology movement carries an excessive amount of rubbish with it (in contravention, so to say, of its own platform). That does not imply that there is not a clean sound position to be discerned when the often inessential rubbish is removed...<a href="#fn10" class="footnote" id="fn_back10">[10]</a> Discontinuities illustrate theoretical differences and criticisms, which differentiate left biocentrism from some views within mainstream deep ecology. Richard Sylvan, in his daring 1985 article “A Critique Of Deep Ecology”, spoke of deep ecology as being a “conceptual bog” that was “well on the way to becoming all things to all interested parties.” Thankfully there is now the eight-point deep ecology Platform as a relatively uncomplicated basis of unity. However, real life is rather more complicated. Other ideas of Naess’, such as self-realization and the non-violence/ Gandhian approach to organizing, become stressed as crucial components by some who have appointed themselves as deep ecology interpreters or gatekeepers.
+</p><p>How does a philosophy or theoretical outlook remain an evolving life force and not be reduced to a Platform catechism? What is the room for variance? How do deep ecology ideas evolve? Who “owns” the eight-point Platform, originally drafted by Naess and the US deep ecologist George Sessions, after it becomes embedded in the radical environmental movement? How can future changes to the Platform come about? What can one reject or accept in deep ecology and still be considered a follower of this philosophical position? Is acceptance, say of Gandhi’s non-violence, which is part of Naess’ thinking (but is not in the Platform), necessary to be considered a deep ecology supporter? How do we avoid contributing to ‘sainthood’ and ‘slavishness’ within deep ecology?
+</p><p>All the above are important questions for supporters of deep ecology. I find Naess sophisticated and illuminating in his thinking. But he is also often ambiguous, difficult to understand and sometimes wrong in his prescriptions for the way forward. Naess, who is now in his 80s, is often a diluter of the deep ecology position, whenever a conflict in the actual world arises.
+</p><p>The content of deep ecology is open to different interpretations, and ambiguity seems almost built in. There is an unwillingness, or extreme reluctance by many deep ecology thinkers/writers, to publicly discuss contradictory or confusing views which have been put forth within deep ecology. Also there is an unwillingness to apply the deep ecology philosophy to controversial issues in order to provide some guidelines for activists in dealing with such issues. An example of ambiguity on a fundamental issue is that Naess has promoted sustainable development in several articles <a href="#fn11" class="footnote" id="fn_back11">[11]</a>, yet in correspondence to me <a href="#fn12" class="footnote" id="fn_back12">[12]</a>, he has denied endorsing it. He has also argued forcefully against an economic philosophy of zero growth: “There is no economic philosophy of zero growth.” <a href="#fn13" class="footnote" id="fn_back13">[13]</a> There are other deep ecology writers who have written against sustainable development. But because of the writings of Naess on sustainable development, there is quite a lot of ambiguity.
+</p><h4 id="toc16">Self-Realization
+</h4>
+<p>A good example of this ambiguity and confusion in deep ecology, is the Australian Warwick Fox, with his 1990 book “Toward A Transpersonal Ecology: Developing New Foundations For Environmentalism.” <a href="#fn14" class="footnote" id="fn_back14">[14]</a> Fox argues in his search for “New Foundations,” that deep ecology should now be renamed and refocused as “transpersonal ecology”. For him self- realization, the expansion of personal consciousness to include the well-being of the Earth, is the essence of deep ecology.
+</p><p>But it is difficult to see the place of collective activism with Fox’s “New Foundations.” Also, self-realization is not part of the eight-point Platform, even though it is given prominence in Naess’s own writings.
+</p><p>Left biocentrism considers self-realization an important concept in deep ecology. Expanding one’s sense of self so that it comes to encompass the natural world also provides a needed spiritual root for radical activism. Identification with the natural world is of enormous importance and self-realization addresses this. However, Fox puts self-realization forward as a kind of litmus test, of who is and who is not a deep ecologist. This undermines the unifying nature of the eight-point deep ecology Platform, as a common reference for movement activists.
+</p><h4 id="toc17">Accountability
+</h4>
+<p>It is the activists organizing in the name of deep ecology who have to defend the various texts. Another book that activists were forced to defend was <em>Deep Ecology</em> by Devall and Sessions, which came out in 1985. For several years this was the basic anthology of deep ecology writings. A belated confession by one of the authors, George Sessions in his 1995 anthology, <em>Deep Ecology For The 21<sup>st</sup> Century</em>, says the earlier book “had serious flaws, both substantive and stylistic, from its inception and is now theoretically out of date in many respects.” A footnote to this statement, points out that this book was produced in a rush over a two-week period because of a publisher’s demands to beat out another book with the same title. What a betrayal of everything that deep ecology stands for! <a href="#fn15" class="footnote" id="fn_back15">[15]</a>
+</p><p>There is no accountability by deep ecology academics for what they write to movement activists in the trenches. There is no accountability for proposed changes in the eight-point deep ecology Platform to the deep ecology movement. For example, David Rothenberg, who has been a translator and interpreter of Naess, claimed in his book <em>Conversations with Arne Naess: Is It Painful to Think?</em>, that Naess had wanted to include support for sustainable development in the eight-point Platform. <a href="#fn16" class="footnote" id="fn_back16">[16]</a>
+</p><p>Anthologies of deep ecology writings reflect an academic bias in their selection of authors for printing. Also such anthologies show very few practical applications of deep ecology to real environmental problems.
+</p><p>A fundamental assumption which seems to permeate mainstream deep ecology, is that ideas are enough to bring about social change in our relationship to Nature. This can be called the “educational fallacy”. It completely fails to deal with class and power relationships in industrial capitalist society. We must not forget the role of society in creating lifestyles and ecological destruction.
+</p><h4 id="toc18">The Left
+</h4>
+<p><em>Ecology, Community and Lifestyle</em> is at present the best single introduction to the ideas of Arne Naess. <a href="#fn17" class="footnote" id="fn_back17">[17]</a> In this book, Naess comes through as sympathetic to socialism. Naess considers class restrictions as limitations for the possibilities of self-realization by individuals. He notes that Green politics wants the elimination of class differences locally, regionally, nationally, and globally.
+</p><p>However, with a few exceptions, deep ecology writers, including Naess, have paid little attention to defining a relationship to the Left. This has been part of the work taken up by left biocentrists. Writers like Rudolf Bahro and Andrew McLaughlin have made important theoretical contributions to understanding this relationship.
+</p><h4 id="toc19">Social Ecology, Eco-Feminism and Eco-Marxism
+</h4>
+<p>These three positions have in common that they are all human-centered and consider human-to-human relations within society to be more important and, in the final analysis, determine society’s relationship to the natural world. Therefore the priorities for organizers from either of these three positions are social, not environmental, relationships. Left biocentrists believe that an egalitarian, non-sexist, non-discriminating society, which is a highly desirable goal, can still be exploitive towards the Earth. There is nothing inherently sexist, or racist within the inclusiveness of deep ecology. This inclusiveness holds up as an ideal identification and solidarity with all life.
+</p><p>It has been easy to pin a right-wing label on deep ecology. This is partly because of not defining a relationship to the Left and minimal attention paid to social justice issues, as well as anti-Left bashing by some deep ecology writers. Social ecology particularly benefited from this. To be a “left green” was to be a supporter of social ecology! However, in social ecology while there are social concerns, there is little ecology and no awareness of the needed ecocentric consciousness change for a radical ecological politics.
+</p><h4 id="toc20">Movement Separation?
+</h4>
+<p>Naess’s position is that there is a necessary separation of the peace, social justice and ecology movements, but they are united under a Green movement umbrella. I believe this is wrong, further isolates the radical deep ecology movement and feeds a right-wing image. This position contributes to making deep ecology seem uncaring about human issues. The view of the necessary separation of the movements, has been adopted by George Sessions, for example. He has been at the center of the deep ecology debate in North America. I do not believe that the three movements listed have necessarily to be separate movements united under a green movement banner. Ecology must be primary, and if it is, one can be involved in peace/anti-war and social justice issues. Left biocentrism says that you must be involved in social justice issues as an environmental activist, but ecology is primary. At the same time, we must not turn ecological issues into social justice issues as is widely done in the environmental movement. Left biocentrists call such a position “social environmentalism”. It is particularly prevalent in the context of environmental-indigenous relationships. <a href="#fn18" class="footnote" id="fn_back18">[18]</a>
+</p><h4 id="toc21">Appendix: A Left Biocentrism Primer
+</h4>
+
+<ol>
+<li><p>Left biocentrism is a left focus or theoretical tendency within the deep ecology movement, which is subversive of the existing industrial society. It accepts and promotes the eight-point Deep Ecology Platform drawn up by Arne Naess and George Sessions. Left biocentrism holds up as an ideal, identification, solidarity, and compassion with all life. “Left” as used in left biocentrism, means anti-industrial and anti-capitalist, but not necessarily socialist. The expressions ‘left biocentrism’ or ‘left ecocentrism’ are used interchangeably.
+</p>
+</li>
+<li><p>Left biocentrism accepts the view that the Earth belongs to no one. While raising a number of criticisms, left biocentrism is meant to strengthen, not undermine, the deep ecology movement which identifies with all life.
+</p>
+</li>
+<li><p>Left biocentrism says that individuals must take responsibility for their actions and be socially accountable. Part of being individually responsible is to practice voluntary simplicity, so as to minimize one’s own impact upon the Earth.
+</p>
+</li>
+<li><p>Left biocentrists are concerned with social justice and class issues, but within a context of ecology. To move to a deep ecology world, the human species must be mobilized, and a concern for social justice is a necessary part of this mobilization. Left biocentrism is for the redistribution of wealth, nationally and internationally.
+</p>
+</li>
+<li><p>Left biocentrism opposes economic growth and consumerism. Human societies must live within ecological limits so that all other species may continue to flourish. We believe that bioregionalism, not globalism, is necessary for sustainability. The perspective of the late German Green philosopher Rudolf Bahro is accepted that, for world-wide sustainability, industrialized countries need to reduce their impact upon the Earth to about one tenth of what it is at the present time. It is also incumbent upon non-industrialized nations to become sustainable and it is necessary for industrialized nations to help on this path.
+</p>
+</li>
+<li><p>Left biocentrism holds that individual and collective spiritual transformation is important to bring about major social change, and to break with industrial society. We need inward transformation, so that the interests of all species override the short-term self-interest of the individual, the family, the community, and the nation.
+</p>
+</li>
+<li><p>Left biocentrism believes that deep ecology must be applied to actual environmental issues and struggles, no matter how socially sensitive, e.g. population reduction, aboriginal issues, workers’ struggles, etc.
+</p>
+</li>
+<li><p>Social ecology, eco-feminism and eco-marxism, while raising important questions, are all human-centered and consider human-to-human relations within society to be more important and, in the final analysis, determine society’s relationship to the natural world. Left biocentrism believes that an egalitarian, non-sexist, non-discriminating society, a highly desirable goal, can still be exploitive towards the Earth.
+</p>
+</li>
+<li><p>Left biocentrists are “movement greens” in basic orientation. They are critical of existing Green political parties, which have come to an accommodation with industrial society and have no accountability to the deep ecology movement.
+</p>
+</li>
+<li><p>To be politically relevant, deep ecology needs to incorporate the perspective advanced by left biocentrism.
+</p>
+</li>
+
+</ol>
+<p>March 15, 1998
+</p><p>The above Primer is a result of a protracted collective discussion among a number of those who support left biocentrism and deep ecology.
+</p><h3 id="toc22">Endangered Species: Techno-Humanism and the Vanishing Humanity a Beginner’s Guide <em>by Patricia Freund</em>
+</h3>
+
+<blockquote>
+<p>“We are not the first, who with best meanings have incurr’d the worst” — Cordelia, <em>King Lear</em>
+</p></blockquote>
+<p>Techno-humanism is a belief system, born of science, that rivals flesh-eating bacteria in comprehensive consumption. But no mere virus this, techno-humanism is a world perpetually at dinner and the objects of its appetite are society’s ties that bind: religion, language and cultural values. As it destroys, it creates replacements. It feeds and replaces the feed, but its meal is a solitary one. The ancients knew the need of sacrificing to their gods, but the feast was mutual; both the gods and mortals shared in the sacrificial meal of the best, the most beautiful, the brightest. The gods took their share and humankind did too and their union was confirmed. Under techno-humanism, barely the bones remain when its gods feast, and humankind is no longer the guest but the entrée.
+</p><p>Nobody said McDonald’s.
+</p><p>Understanding the essence of the creature demands its dissection and an explanation of how it came to occupy stage center of the tabernacle.
+</p><p>Intrinsic to 20<sup>th</sup> century thought is the conclusion that technological progress is not only infinite but inseparable from daily life. It leads, we follow. It moves, we strive to keep up. As human values decay and disappear, humanity’s relationship to science becomes one of a disastrous faith rather than understanding. Ironically, we have been forewarned. Western culture is replete with stories detailing the consequences of seduction by technology. Humankind barely brushed off the forming clay when a Serpent importuned with an invitation too “cutting edge” to refuse.
+</p><p>Knowledge, the claim goes, is power. Science has become provable knowledge. Faith, on the other hand, is defined by tradition and practice as the absolute surrender to what cannot ultimately be proven.
+</p><p>Encouraged by advertising into misplacing our trust, people have begun relinquishing traditional faith for technological faith, a belief structure with seemingly manifest power, a faith that could ultimately be quantified and replicated through equation or formula and one created entirely by humans without the evolutionary interference of nature. So how did humanity devolve from creating technology to cowering in its shadow? Can we trace those critical factors that subvert human culture into human sacrifice? Maybe “Apple” computer, an early pioneer in take-home technology, was not so accidentally named and the use of “Menu” as a computer term not random either. Regrettably, 20<sup>th</sup> century governments understood early and too well the use of pseudo-science as a means to achieve economic centralization and social control. Technological principles were accepted and advanced, their appeal nearly universal. “Know-how” has grown up. In its guise as humble servant and mere tool, technology has effaced itself sufficiently to catch the eye of democracies, oligarchies and dictatorships equally; with its implied promise of enhancement without the burden of moralizing or commentary, techno-science can make itself at home in any political or economic system without ruining the grand design. Technology is a master salesman, and most governments knew a better mousetrap when they see one. Commerce, education and the media bought in early, and eventually many ordinary citizens were not only paying lip service to this new design for the future but believing it too. 20<sup>th</sup> century technology has become a new form of patriotism and science is the most popular gal in town. Seeing is believing and we see the present in a different way and watch as the future becomes suddenly nearer. Not since Copernicus and Galileo altered our understanding of the universe from geocentric to heliocentric have the old limitations of our systems been deemed so arbitrary and been so comprehensively challenged. Many of the old institutions appear to have faded away. The past seems increasingly remote and our heritage harder to find. All it has left us was alone. It would be unfair to suggest that there has been no resistance to this technological steamroller. Sadly, however, focused dissent, with the exception of a few spectacular examples, has decreased proportionally throughout the century. Yet something is wrong and even today we know it. We have learned alienation, but technology marches on. Oppenheimer’s warnings came too late; the case has been made. Now one can challenge, say, specific unlikeable components of technology but not technology as a whole. Techno-science had sold itself as a package — the good with the bad. Failure to acknowledge its primacy is to spurn the future. Moderately serious dissent has become <em>lèse-majesté</em>; at best, willful stupidity.
+</p><p>Unusual reactions have followed resistance which, because it appears from diverse corners, cannot be merely dismissed. The loosely-bound organizations and systems, which when combined form the nucleus of society, have engaged in subtle restructuring. Self-interest and self-defense have brought about peculiar pairings and alliances of mutual aid. Not the least among these strange alliances was the marriage between humanism and science. This union between man and machine has yielded a monster hybrid — techno-humanism — a prettier Frankenstein which enjoys unparalleled popularity along with unquestioned orthodoxy. This new philosophy threatens to neutralize dissent forever.
+</p><p>The key principles of this belief system are grounded in ecstatic humanism but ultimately pertain to scientific achievement: that the human mind can accomplish anything, that knowledge is limitless, that all barriers are artificial. In the absence of limits, how can one go too far? Techno-humanism fits with uncomfortable ease into a world which increasingly reflects more “it” than “us.” As flexible as a mutating cold virus, its spread is fast and forceful. Even Alexander the Great could not have been more assured of world domination. There are clearly distinguishable constants to the technological Golden Calf and its court which are worth examining.
+</p><p>Techno-humanism has assumed the mantle and trappings of a militant religion complete with its own promises, prohibitions and standards of conduct. It has engaged in aggressive proselytizing, instituted language and ritual, given acolytes a comforting structure, provided the elite with avenues to advance, and perhaps most significantly, subdued heretics and apostates with lethal force.
+</p><p>According to Genesis, divine power created humanity in the image and likeness of God, but techno-humanism has assumed divine power to make up a God in the image of humans. This time there is no genial wizard (“Pay no attention to the man behind the curtain!”) in Oz. With increasing likelihood, there is more often a machine than a man behind the curtain for such is the speed and power of technology. Scientific progress rules. The waning years of the 20<sup>th</sup> century have left people substantially faithless but wanting a faith. Technology is happy to oblige.
+</p><p>First and foremost in its features, techno-humanism teaches as an article of faith that scientific progress is good. We are aggressively encouraged to base our faith in the future on the intrinsic goodness of technological achievement. We are urged to acknowledge this scientific expansion as infinite as well as infinitely good. Faith in the future therefore mandates an unquestioned trust in our own creations. These fundamentals are reinforced, repeated and advanced through school systems and the electronic and printed media.
+</p><p>These special features inspire us to the wonders of a future as modified by technology — a world free of pain, disease and deformity, a planet without hunger or want, a future life gloriously reframed by science and those practitioners of science with the courage to dream and the vision to create. Still us; only smarter, better designed, problem-free. All issues of pain and desire will be addressed and resolved by scientists, social designers, technocrats and doctors. Currently, most objections to technology are routinely rebutted by an appeal to the medical applications of just about any offensive activity. And in the rare event that a technology lacks a medical application then it is sure to have some other socially desirable use, for example engineering crops to combat world famine. Although exactly why corporations would invest billions in humanitarian tasks such as feeding the world’s hungry we are not told.
+</p><p>News programs regularly feature enthusiastic accounts of “cutting edge” technologies; the entertainment industry paints irresistible scenes of adventure which combine favorite elements of our present lives with future innovations and fun gadgets. Still us; only better, faster and closer to our fantasy self-image than our mirror-image. <em>Brave New World</em> is now an old-fashioned and half-forgotten yarn and <em>1984</em> is safely in the past.
+</p><p>Technology permitted the communications industry a substantial increase in influence; news reporting in particular. Given that any news event can be monitored by, say, thirty camera angles then thirty angles can conceivably show thirty versions of what is ostensibly occurring. As is openly, but not excessively, acknowledged, a media decision-maker then selects among the thirty those few which met the pre-determined criteria for broadcasting. The media’s role is to see for us, tell us what we are seeing, and represent it as truth. Our belief eliminates the need for seeing and so our sight is filtered through the rose-colored glasses of techno-humanism. In short order, believing alone becomes seeing and we want to believe. This frees society from questioning the basic principles and assumptions of technology itself.
+</p><h4 id="toc23">The End of the Word
+</h4>
+<p>Technology’s impact on language has been equally profound. In its typical takeover style, techno-humanism employs language as a means to not just advance but enforce its creed. Unfortunately, its machinations will ultimately contribute to the destruction of language — but not to worry, there are technological alternatives already operational to fill the gap.
+</p><p>So what are the warning signs that precede this demise of language? It may be argued that the destruction of the living quality of a language is a primary element in its fall; when language is no longer used to inform but merely to feed the emotions or dull the senses then the end cannot be too far off. Language and the meaning of words may be so revised and misappropriated that random groups of “native speakers” may be hard-pressed to communicate.
+</p><p>I may further suggest that societal institutions have assumed the biggest role of all in the decline. We can select the word “progress” as an example of disinformation that renders words meaningless. Commerce and the media have sold consumers on the mistaken belief that scientific innovation constitutes progress. General Electric’s slogan “progress is our most important product” seems to have unquestionable authority. Nevertheless, a glance at historical reality reveals that progress in time is not necessarily progress in civilization. Change makes civilizations rise and decay. Civilizations and, for that matter, all observable things move in circles. They are born, “progress,” and disappear.
+</p><p>“Progress” is not a pre-measured or determined movement nor much less a guarantee of betterment. Unlike circular time, the concrete time necessary to progress is based on the notion that each moment is unique and that the sequence of such moments moves from beginning to the end. Concrete time is a religious and eschatological concept rather than a scientifically demonstrable reality and extends from creation to conclusion. In terms of the individual life, concrete time works in the pilgrim’s progress from the earthly life to the heavenly life. Indeed, the word progress, once a religious concept, gained its appeal from Bunyan’s popular narrative <em>The Pilgrim’s Progress</em>. Our use, then, of the word “progress” to describe technical sophistication strips the word of conventional understanding. The secularization of a religious concept may be a stage of civilization, but its use as an advertising slogan smells of the decay of a civilization in its disregard of the meaning of the word. So has techno-humanism struck again with its misappropriation of a quasi-religious term for its own religious purposes?
+</p><p>How fitting, then, that Genesis provided two classic Old Testament warnings to humanity against involving itself with technology and consequently, with the technological troublemaking that follows its introduction. The first heartbreaking example was, of course, the Fall and human expulsion from the natural world. Hebraic thought held that the natural world was a good and orderly place while disorder was a feature of the post-Fall human mind and entered the world as humanity’s dubious contribution to it new state. This is true also for the second example, the Tower of Babel. The building of the tower suggested the “cutting edge” of technical knowledge used in support of an end-product of stupendous achievement, but the inevitable outcome was a technological arrogance that displeased God. The divinely imposed destruction of the Tower and the absence of subsequent Biblical mention of the enabling technology was less important than the immediate outcome — the permanent disabling of humankind’s ability to communicate and be understood by all others.
+</p><p>This isolation resulting from a misuse of technology was a second Fall. No proliferation of scientific shorthand, computer programming languages or the World Wide Web has succeeded in restoring our diminished capacities. Unquestionably, through some ancient memory, we are reminded of our loss in a variety of painful and lonely ways. These ancient failures make us vulnerable to centralized social control and for interpretation of the world around us. When words degenerate to meaningless sounds and the natural world a becomes a foreign and frightening pace, we demand explanations that manage the chaos. That we, ourselves, become managed in the process becomes secondary to our fears of being individual and alone in an alien and threatening world.
+</p><p>Television and computers, our constant visual “aids,” threaten language in ways transcending the mere misuse of words and the alteration of their meanings. The daily and constant use of these visual stimulators makes written language appear doomed and its replacement by pictographs inevitable. The neutral power of the printed word will be replaced by media control of personal truth, choice and imagination and not even a defensive illiteracy can spare us from the sightless seeing of media.com. The resulting social control will just about finish us off by stripping us of the last vestiges of our independence. Our demise will be an organic event in time although the means that actually slay us will be of manufactured origin. How ironic then that our passing can be described as “progress” in all of the incarnations and misuses of the word.
+</p><h4 id="toc24">Kaczynski Family Values
+</h4>
+<p>The concept of “family values” although imperfectly understood and incorrectly articulated by former Vice President Quayle, is nonetheless of critical importance when discussing the technological age. Quayle’s views were interesting and maybe even right, in a sense, without his understanding specifically why that was so. However, the well publicized failures of family values within the confines of techno-humanism are better illustrated by the Family Kaczynski than by “Murphy Brown.”
+</p><p>Family values, the mother of cultural values, has its origins, since classical times, in the primacy of the conjugal family. Antigone defied the ironclad laws of the State to bury her brother and the classical word implicitly understood that the laws of the family could certainly supersede governmental directives and prohibitions.
+</p><p>The development of cultural values may be viewed as an implementation of a series of family value taboos which were later enforced by myth, legend and religion to illustrate certain codes of desirable conduct. In all cases, these codes of conduct were designed to protect the conjugal inviolability of the family and not the convenience of government or State imperatives. However, this ethic has changed. Governments have sought to instruct by example that the State, not the family, is the institution deserving of an individual’s love and loyalty. Families have been accorded hero’s laurels when they became State agents of detection, pursuit and capture of their own errant family members. Denouncing of and informing on one’s nearest and allegedly dearest has become acceptable. An activity viewed with revulsion when it occurred in communist East Germany, informing on family is an idea that has threatened to become a spectator sport in the USA with consequences that are ugly and permanent.
+</p><p>Family “ties that bind” begin to look indistinguishable from those of the hangman.
+</p><p>With the requisite amount of public angst, David Kaczynski betrayed his brother to federal authorities against a background of public acclaim, a hefty cash award and instant celebrity status for an otherwise most ordinary individual. Despite a series of well rehearsed interviews, parceled out to favored reporters, David Kaczynski apparently sorted through his conflicting emotions with record speed. Despite his public persona as a tormented soul, torn between family values and social safety, the younger Kaczynski appeared increasingly cheerful, obviously happy with his new car, million dollar finders fee and national role as an expert on mentally ill family members; to complete the picture, he blithely accepted an award created solely for him by his employer, a “Courage of Conviction” award for sending his brother to the then-expected hangman.
+</p><p>“Psychology” has assumed a place in the Law and Order arsenal of both the right and left. To many, a bullet would appear to be a cleaner, faster tool of governmental vengeance than submission to the tender mercies of the “helping” professions. Naturally, those self-same helping professions have donned a scientific mantle. Their psychological analyses are delivered by their “experts” as quantifiable knowledge. We seem to have forgotten that phrenology as a measure of intelligence or derangement was considered equally scientific with just about equal justification a mere hundred years or so ago.
+</p><p>In the meantime, we almost had ourselves a trial. The Unabomber pre-trial events will rank as a textbook example of how techno-humanist systems proceed against heretics. Crimes motivated by the baser emotions such as passion, revenge or self-interest, while not generally tolerated, are handled in a standard fashion and only rarely excite sustained comment. Crimes committed by governments are permitted, well, in the universal and time-honored way. However, crimes born in the pure exercise of intellect are unparalleled in recent American memory and are patently unforgivable. Our institutions close cover before striking on this point.
+</p><p>In this case the federal government introduced an astounding ferocity to its usual Clinton-era, warm-fuzzy, politics of meaning. Kaczynski’s pre-trial hearings combined the giddy excitement of an <em>auto-da-fé</em> with the thoroughness of a Stalinist purge. Many of us were stunned by the invectives hurled by a reputed free press. Non-committal, “objective” reporting remained conspicuously absent from the mainstream press; not even decent restraint proved possible. The prosecution made a statement and the press carried the charge forward. Kaczynski was evil, Kaczynski was mad, Kaczynski was dangerous, Kaczynski did not bathe frequently. All in all, not journalism’s finest hour. Neither O.J. Simpson nor Timothy McVeigh experienced anything approaching this storm. Of course, neither of these men could claim to have any thoughts or theories beyond pedestrian ones and their mental blandness insulated them from the full fury of the press. Dr. Kaczynski demonstrated the special treatment reserved for intellectual dissidents who, shall we say, have abandoned the contemplative life. Eliminating the rogue professor became less important than denigrating his ideas beyond resuscitation. Even his most sympathetic audience remained fearfully silent. Not exactly our finest hour either.
+</p><p>Technology appeared to be featured even more prominently in the media showcase during those dismal days. ABC lengthened and expanded its “Technology: the Cutting Edge” segments and its pro-science positions were trumpeted almost daily with the usual accompanying breezy cheerfulness or reverential awe. These network “bullets” clarified the party line on technology: it was either good or better. Those of us inclined to disagree grew uneasy and isolated. Was there anyone left who shared our bad thoughts?
+</p><p>The fate of Theodore Kaczynski is destined to become a cautionary tale, a there-but-for-the-grace-of-God-go-you example. Not exactly an incentive to protest. Hearing of his alleged suicide attempt, one may recall the Baader-Meinhof group and their weakly questioned “suicide” in prison. Yet Kaczynski showed a grace and wit made more remarkable for the conditions he endured. The press, now unsure of what to do with an issue they themselves created, were contradicting themselves by the end of the first day and by the second, the “suicide” business was effectively dropped. The pre-trial hearings resumed.
+</p><p>Like it or not, Theodore Kaczynski has entered the pantheon of prophets and social visionaries with a contribution uniquely his own. No discussion of anti-technological resistance will be complete without him. Enter the anarchist-Luddite-environmentalist Kaczynski, one of us, and if he did not fit our preconceptions then the problem is ours, not his. Some may see him as a traditional prophet with a prophet’s personality: difficult, disagreeable and most likely right on all counts. Others, such as this writer, see him in a much more personal way — a thoroughly American blend of Daniel Boone, John Brown and the romantic Polish anarchists of 1848, combined with the too-shy math genius in just about everyone’s 7<sup>th</sup> grade class. In total, an individual in the best sense of the word. A person unique in a mass-produced world. The one black jelly bean in the pile. History, I suspect, will judge him correctly, perhaps more kindly.
+</p><p>So now and forever, a retreating figure clad in orange, fully manacled and led away, a former assistant professor of mathematics, of late a prisoner, a man with jail as his vocation. Somehow the century seemed to end at that moment. The idealist and his escorts turn a corner and now he is gone.
+</p><p>He may or may not have any or all of these qualities we see in him or project on him but he left us a manifesto and an image seen too rarely. How unforgettably frail Kaczynski looked surrounded by the burly robustness of his Federal captors and yet, he wore his chains with an indifference, refused to recant and in that stubborn integrity his is not emblematic of his age. 
+</p><h3 id="toc25">On Going Feral <em>by James Barnes</em>
+</h3>
+<p>What does it mean for a human to be feral? To figure that out, one needs to examine the condition of domestication from which a feral creature is fleeing from. Going feral is going wild again, escaping a subservient status and reestablishing one’s own autonomy. It is freedom.
+</p><p>Feral, however, is a word used mostly for wild populations of animals that usually are human-controlled, whose bodies and behavior have been molded to serve our needs for labor, food, fiber or fancy. Feral animals have slipped the traces of human servitude, often reverting to wild type and behavior as they seek to make a living by the terms of the natural environment (or suburban yards or urban alleys) without human care.
+</p><p>It can be rough — the lives of feral animals can be poor, unhealthy and short. They are not necessarily well-adapted to the environments they have escaped into; they may face predation from native wild animals or endemic disease or starvation. Yet many animals will choose freedom whenever they get the chance. They accept, however unconsciously, the terms and conditions of freedom: responsibility for their own lives. Can a human be feral? After all, by definition we are and always have been truly wild animals. No other creature has domesticated us, controlling our breeding and food and shelter. And yet we feel we are subject to irksome domination; we dream of freer lives — even those of us who are the world’s pampered pets, eating soft, processed food and plopped on overstuffed couches. Yet a pet, castrated and leashed, is as much a slave as the ox at the plow. It is just a house slave rather than a field hand, as are we in the wealthy West. Even though no alien masters are secretly breeding us for their own evil purposes (I hope), the same domesticating tendencies that have produced beef cattle, sweet corn and Pekinese dogs are at work attempting to fit our very lives into a predetermined mold of production efficiency.
+</p><p>Throughout history dominant peoples have tried to control human reproduction, whether through caste systems, race mixing laws, repulsive Nazi experiments, or just plain old killing all the men and enslaving the women. Ruling classes have enslaved whole peoples, forcing them to labor in the mines and fields; they have circumscribed the rights of women, making them dependent and sequestered, their reproductive capacities guarded and sold like commodities for male gain, etc. But for all that, the human need to breed and live free has defeated these efforts. If necessary that drive will outlast civilizations in order to be expressed. Songs and literatures have been built on the tensions between the elite’s demand that individuals serve their desires and the individual’s quest to find their own fulfillment despite social pressures. We remain genetically wild, although we groan under the burden of socially-imposed constraints to our wild behavior.
+</p><p>And that is what we must shake off — the voice inside our heads that says we must obey our bosses, priests and generals. We must do it now, before they use the science of genetics to alter us into permanently willing slaves, incapable of desiring autonomy. We must be willing to accept responsibility for our own lives, establishing communities that support their members so that we do not continue serving our masters from the threat of starvation and cold. It will be hard. But we are animals capable of living wild; left to our own devices humans form villages and camps with kin and clan. It’s time to burn the cities and abandon them; let’s gather the tribes and go. The cage door is open — let’s not be afraid to walk out.
+</p><h2 id="toc26">Issue 2
+</h2>
+<h3 id="toc27">Wildness <em>by James Barnes</em>
+</h3>
+<p>We environmentalists talk an awful lot about the wild, wilderness and sometimes even wildness without, I think, really knowing what we’re talking about. To me wildness is a quality in living things and the world that is more important, in the long run, than quantitative measurements of biodiversity, native purity of ecosystems or protected legal designation.
+</p><p>The wild is opposed, commonly and of course, to the tame. We think of domesticated plants and animals as somehow inferior (if more useful to us) to wild varieties, usually because their reproduction and development has been compromised by our bred specializations and they have become dependent on our care. This may be a fallacious view, in that one can also look at domesticated species as having been preadapted to humans’ choosing them to enter into symbiosis. That symbiosis can be described as a trade of food: eggs, milk, seeds, fruit — and bodies — or other useful products for competition-free habitat and guaranteed care and feeding. As an example, the range of the domestic cow is global, excluding only Antarctica, and it numbers in the billions of individuals of numerous varieties. An unarguable success for such a large mammal. Is it a good strategy in the long term? Only time will tell. All adaptive strategies are short term, for the moment. The future is equally unknowable to a cow, a gene or a human.
+</p><p>If this makes the meaning of domestic unclear except insofar as it is connected to things human, then wild can only be defined as not human-influenced. That leaves humans in a somewhat hopeless position of being forever the negative definition of the term, condemned to inhabit a fallen world of social control while wildness exists in fenced-off preserves.
+</p><p>Yet it would be a real mistake to believe that humans are somehow also domesticated, and not wild. Not so. We are dangerous wild animals, the most dangerous. And as witnessed by our population of six billion strong and growing, we have no problem managing our reproduction autonomously.
+</p><p>Like uncertainty principle, merely looking at the “wilderness” changes it. Not just roads and logging but air and water pollution, climate change, lack of traditional human activity (fire, gathering, hunting), likewise, the nonhuman creeps into our most carefully ordered spaces, making mockery of our control whether it be fire or flood, insect or disease or the perils of our own wild behavior
+</p><p>If the dichotomy wild/domestic is valid, it is not by reference to human versus non, the domesticated, the tame comes from but rather the impulse to subsume under the authority of our conscious selves the autonomy of the other, whether that is a landscape, a creature or a part of our own striving for freedom.
+</p><p>Wildness is the ineffable quality of the left-alone, the autonomous and self-creating. It is not ordered, managed or restored. It’s existence is independent: it can be used, altered and even destroyed (in places, in part) but it cannot be manufactured. It is not pure, nor is it a clear thing: it is the result of a movement of forces some of which may have intent and purpose, but cannot direct the whole. It includes all of us.
+</p><h3 id="toc28">Anarchism is Dead! Long Live <em>Anarchy</em>! <em>by Rob los Ricos</em>
+</h3>
+<p>I am an anarchist. I cannot believe that there are people in the world more capable of determining what is best/most appropriate for me than I am myself. If I were not born into a society like the one we live in, I would never have chosen to live according to it’s dictates. Though I utilize much of what the capitalist/nation/state has to offer, I do so only because there are no acceptable options available to me (live as a wage slave or die!)
+</p><p>Yet, what does it mean to be an anarchist? Does it mean that I’ll protest the oppression I live under while never taking any action to liberate my life from the dominate forces of the nation/state and capitalism, or does it mean that I’ll resist these same forces through action and non-cooperation, no matter the consequences of my actions? Or, are there other options I can’t yet envision due to the fact than I am immersed in the machinations of my oppression?
+</p><p>These are questions and issues which have always nagged anarchists. Classic anarchists were almost incapable of defining who they were and what they believed in without having to resort to explaining what it was they were <em>not</em>! It is this philosophy of negation, of opposition, which has prevented anarchists — for the most part — from being able to present a clear definition of what they truly believe in and how an anarchist society would function outside the parameters defined by capitalism and the nation/state. It is far past the time for anarchists to begin to envision their lives without having to resort to referring to all the reified actions which define what they are not. The challenge for anarchists as we enter the 21<sup>st</sup> century is to define ourselves, our beliefs and actions, outside the paradigms set for us by the dominate social constructs we were born into and to demonstrate what it is we actually believe about how we are to conduct ourselves and the directions we take our lives. What do we want to actively achieve with our lives, not just how we do not wish to participate in the domination of those in less developed nation states, lesser social/economic categorizations, nature-based lives.
+</p><p>One of the easiest ways we can start down this road of self-definition is to reject the terminology of black/white — either/or — relationships that are the foundation of Western dichotomy. The greatest fallacy of Western ideology is that human beings are something apart from — and somehow superior to — the natural world. Here are some suggestions of how to achieve this:
+</p>
+<ol>
+<li><p>Stop referring to the planet where we live as “the Earth,” or “planet Earth.” We should acknowledge this place as what it is: our home. Home — in this more expansive definition, would exclude trashing, destroying, sacrificing or otherwise shitting in the place where we live. While some people may take a particularly strong liking to certain places, we should all be aware of the fact that our home world belongs to all of us, that we are only passing through and that other generations will want to enjoy this place the same way we could, if we were not stuck in some hideous circumstance which compels us to kill our home world.
+</p>
+</li>
+<li><p>We would do just as well to stop referring to human beings by differing categorizations. We are “we.” There is only one race, the human race — we are but a single species. The concept of race is a tool the ruling elite created to keep the oppressed peoples from realizing their common plight and banding together to overthrow the ruling class. It has worked amazingly well, as the poor have pretty much fallen into in-fighting and “racial” divisions as a survival mechanism, thus not only leaving the ruling elite unscathed by the desperate violence of the down-trodden, but also by acting as front-line footsoldiers in the oppression of other poor people in exchange for some limited “acceptance” by the rulers.
+</p>
+</li>
+<li><p>We must reject the Marxist view of class divisions. The rich are (almost) every bit as oppressed as the poor. After all, they have to struggle hard to uphold their social status, discarding any semblance of any kind of behavior that can be described as “human,” or “natural.” Most humans cannot see another person suffering and begin to calculate how they can turn a profit from it, nor look at a lush rain forest and immediately begin to plot how to depopulate and strip mine the place in order to improve the earnings of the coal/mineral extracting corporations. Some one who does is no longer a person, but a money-generating carbon-unit, with no feelings, no emotions, no heart. Their total existence is based on their fear of losing their place in society, of somehow not being able to buy something they want, of having everyone turn their backs on them because they have no more wealth to parcel out to their minions and the other lackeys of wealth. I can only pity the wealthy for the complete impoverishment of their experiences of life.
+</p>
+</li>
+<li><p>Anarchists must abandon anarchism. Anarchism is only the far left wing of socialism. Socialists have no problem with creating more laws, empowering the police and courts to enforce them and discarding anything which may stand in the way of disrupting their ability to determine what, who and why we do the things we do. In the end, all socialist ideology leads to fascism. Or worse.
+</p>
+</li>
+
+</ol>
+<p>It is also important to recognize just how far we have to go in our development as anarchists. Adherents to the ideology of anarchism try to discredit us by calling us names and making up fantasy scenarios about us in order to discredit us. Murray Bookchin and his henchwoman Janet Biehl have pulled no punches in their criticism of anarchists willing to expand anarchist discourse beyond the confines of capitalism and the nation state.
+</p><p>While taking it upon themselves to determine what is and is not anarchist thought, theory and practice, they have labeled anyone willing to take a closer, more insightful examination of capital and our current social constraints as fascists, lumping antiwork theorists into the same category as those who put the slogan to work is to be free above the gates to concentration camps. Those of us who desire to abolish the death camps face the greatest opposition from those inside the death camps who — as long as they are able to serve their masters — are doing just fine. Why rock the boat as long as there is space for bootlickers as well their masters?
+</p><p>There are many organizations devoted to the development of anarchists as servants to the ruling class (the IWW, WSA and other worker-defined groups). Their total devotion to upholding the capitalist world is sickening. They can no more envision a life outside of capitalism than a fish can envision a climb to the summit of Mt. Everest. In this regard, anarchism can be said to be but another tool in the subjugation of the human species by the abstractions of money and economic relationships, rather than a theory of liberation from them. If the enlightenment view of progress can be interpreted as an ideology of the annihilation of life on Earth in the pursuit of monetary gain, then anarchism can only be seen as a more democratic form of worldwide genocidal-euthanasia.
+</p><p>The final deathknell of the viewpoint of anarchism can no better be illustrated than by the essay from Left-Green Perspectives “The Culture of Terrorism,” by another lackey of Bookchin’s — Michael D. Weiss. His piece deals with the concept of “terror culture.” Is his concept of “terror culture” somehow related to the encroaching police state which TV viewers are subjected to in programs like “Cops,” or “Scariest police chases” or other such depictions of actual, real terror on Americans by the forces of “Law and Order?” Is his diatribe merely revisiting the intellectual ground covered by Noam Chomsky in his examination of how the various military, media and law enforcement agencies impose rule by fear, intimidation and murder upon the American people as well as the victims of the capitalist system of production in lesser “developed” nations in his book “Nation of Terror?” Did Weiss turn his eye upon the 70s concept of “deathkulture” as the Zendik cult continues to expand upon? No. Sadly, Weiss was ranting against people with body piercings and tattoos. Who read (and even publish) books. Aaaiiiieeee! Nothing could better illustrate the deathknell of classic anarchism than this denunciation of people who do not fall into the narrow definitions of what they think people should look and act like in order to be good workers and — more importantly — loyal acolytes for the dying career academics who have built their reputations by defining where the anarchist movement was — thirty or more years ago — and demanding that the following generations sheepishly follow their lead and thus give life to the dead ideas espoused by these aging academics.
+</p><p>Since the 80s, and even before, investigations by the likes of Fredy Perlman, John Zerzan, and even by the Situtationist International and philosophers like Michel Foucault have brought forward new ways of looking at history and the forces of domination we live under. The investigations of how the languages we speak (among other things) shape, confine and otherwise determine how we view our world and social situations have lead many people to reject orthodox ideologies in favor of developing more far-reaching aspects of rebellion and insurrection. If this leads to the destruction of everything we now know as living (from the viewpoint of economic survival), then so be it. We have the world to gain and nothing but our chains — and the lives of those willing to enslave us — to lose.
+</p><h3 id="toc29">Born Caged <em>by Anonymous</em>
+</h3>
+<p>I was born in prison. I grew up in prison. Except for brief escapes I have been incarcerated my entire life. This shapes how I think and act. I am so accustomed to my impoverished conditions that I often forget that I am a prisoner. I will never truly know what I have lost. Nor will you.
+</p><p>The function of the prison system is often described in the conservative moralistic terms of “punishment” or in the more liberal (but currently laughable) ideas of “rehabilitation.” Don’t be fooled. The purpose of prisons is a political one: to maintain order through force. People are isolated from one another and from their community and placed in an artificial environment where every moment and every detail is about exercising control over the individual. Cops, courts and jails seek only one thing and it is not justice, it is obedience.
+</p><p>We are all subjected to a military model of discipline. This is to be expected in a society that embraced the factory with its intrinsic need for time regimentation, compartmentalization and crushing of worker autonomy. Military-style obedience is cultivated by indoctrination (schooling), removal from one’s community (the natural world), imposition of authority (teachers, landlords, bosses, police) and finally the threat of leg-irons and the brig. Prison is merely the last stop for the rebel, the non-conformer, the dissatisfied and broken souls in a chain of authoritarian, prison-like settings.
+</p><p>By establishing Indian reservations under the watchful eye of the military, the US government created a type of minimum-security prison with the purpose of isolating and controlling entire populations. (“Domesticating the wild Indian” and thus clearing the way for domesticating the land.) There were no attempts to justify this confinement with the rhetoric of crime and punishment. The European mindset, hell-bent on exerting control and order over the landscape, was too self-consumed to bother much with justifications, unless to shroud government policies in the mutterings of benevolent paternalism. By severing their relationship with the land and by forced schooling of their children, government policy attempted to assimilate the rich diversity of Native cultures into the increasingly bland American melting-pot with the single-mindedness of the Borg on Star Trek.
+</p><p>Eventually the colonizers entrap themselves in their systems of oppression. The cities and later the suburbs become cages teeming with humanity but devoid of relationships with other beings. We become isolated from the larger biological community, separated from the natural world which gives context to all that humans do. Prepackaged entertainment designed for individual consumption replaces social events that build community (e.g., kitchen dances, contra dances, barn raisings, festivals community sings). Technology increasingly mediates interactions amongst people and interactions between humans and the natural world. We are trapped in ever more constricting spheres of aloneness, narcissism and pacification.
+</p><p>I first became aware of my status as a prisoner in high school. Subjected to thousands of hours of confinement, sitting at a desk, monitored, surrounded by walls my compulsion to escape grew uncontrollable like wildfire. I forged countless passes (the administration must have believed that I was a very sickly child) and then I would walk along the still-wild streambanks. I began to sense that if school was prison, then my suburban neighborhood was the prison yard, part of the controlled environment. My rambling walks gave me a taste of freedom, a taste of my kinship with critters other than leashed dogs, potted plants and manicured lawns. But I returned to my domesticated life like a dog who escapes for a run around the neighborhood but comes back when the belly grows hungry. All those years of education hadn’t given me any skills for living outdoors.
+</p><p>There are one-and-a-half million Americans behind bars and razor wire. This is the first clue that our society is oriented around incarceration. But each one of us leads a life of imprisonment where schooling is essentially mandatory, followed by compulsory labor in adulthood. This expansive penal colony maintains order in three ways.
+</p><p>First, various levels of confinement have been established. People who don’t follow the rules are stripped of their limited freedoms and moved to a more restrictive institution. Supermax facilities and “the hole” are no more than small concrete boxes, no more than eight corners. A medium security installation allows contact with other prisoners and occasionally with the sun and the wind. A minimum-security installation might even allow contact with plants and soil through landscaping duty or a roadside clean-up crew. Cities allow free association amongst humans and pigeons. Suburbs have fuzzier boundaries where wildness creeps in despite all the pruning, the herbicides and the roadkill.
+</p><p>The second method of maintaining order is by providing limitless distractions. TV is the great pacifier within the prison walls. At decreasing levels of confinement, more associations are permitted but more distractions also exist. The plethora of hobbies, toys, videos, techno-gadgets and consumer junk grows logarithmically with each holiday season.
+</p><p>The third method of maintaining order is by denying prisoners the skills, the means and the attitudes necessary to successfully live outside, so that they will end up back inside. The systems of confinement are thereby perpetuated but without appearing to be overly repressive. Prisoners seem to end up back in prison because of their own desires or shortcomings. This is true for inmates released from prison and equally for each one of us wanting to be released from the grip of techno-industrial society. (Observe the difficulty that even seasoned Earth First!ers experience camping away from vehicles, sleeping outside of tents, venturing away from the campfire, foraging food, exploring the night. How many of us have actually spent an entire season or two in the Big Outside?)
+</p><p>Although all cultures have well-defined social norms that constrain freedom, no other culture has so effectively and drastically isolated its members in a realm of human artifacts, built environment and self-referential lore.
+</p><p>For over half a millennium in the Americas, both colonizers and colonized have been removed farther and farther from the living landscape into more controlled settings. During each one of those 500 plus years, the roads have been pushed deeper into the wilderness, the fences have grown more numerous, the land itself has become more imprisoned in human designs that drain away its diversity and vitality.
+</p><p>I do not wish to belittle the horrid conditions facing those who have been confined to a far greater degree than I, who suffer not just spiritual deprivation but daily psychological brutality. Rather, I want to acknowledge our affinity with those who are spending months, years, lifetimes in a hell composed of nothing but concrete and steel. Supporting prisoner struggles is important work for biocentric anarchists.
+</p><p>We are all in the same sinking oil tanker. Some of us have been confined below decks, while others have free roam of the ship. But it is not where any of us belongs. Life cannot flourish here.
+</p><h3 id="toc30">Lust for A Wild Life: emotions from an individual of the doomed generation <em>by Chris Kortright</em>
+</h3>
+<p>I’m born of the doomed generation. Other generations cannot understand our feelings. There are some members of these generations who try to grasp this hopelessness but for us it is not theoretical, it is all we know. It is all we have ever known (emotionally, intellectually, spiritually). My parents tell a story about me when I was three years old. I was in their office in San Francisco and the Blue Angels were stunt flying over head, I jumped under the table yelling “they’re dropping the bomb!” As a child I had friends who were refugees from Vietnam and Central America so I heard first hand the atrocities of both capitalism and communism. By the age of ten I knew a handful of people who died of AIDS, not to mention the people I watched decay in front of me. I’ve seen few marriages stay together and too many children stolen by “Child Protective Services” for the crime of being broke. I set foot in San Quentan for the first time at five and watched a person murdered at sixteen.
+</p><p>I’ve known nothing but ecological collapse. The hole in the ozone has always existed. Creeks and rivers have always smelled funny. I couldn’t eat the craw dads I caught in the creek behind my house, shit, I couldn’t drink the water when I was backpacking with my dad. He had to try to explain why hillsides had no trees and why he was missing half his ear to skin cancer. Isn’t there supposed to be brown foam around the tires on the beach at the Pacific Ocean? Babies dying from industrial waste — that’s natural right? Now you want to talk to me about Utopia. You want me to see the light at the end of the tunnel when I’ve never even seen a match!
+</p><p>Industrialism has created a world where the whole human environment and every object in it are to serve the cause of “production” and to remind people that their only happiness lies in the industrial world. This artificial world built by humans who want to remove the last wild influence in the world, promises to be so all-encompassing that it will be impossible for humans to see, imagine, or even hope for anything beyond it.
+</p><p>It’s hard for me to understand or relate to any visions of hope or illusions of utopias. But within the decaying belly of civilization many of us are trying to connect with our own wildself. Those desires and instincts that makes me feel ill when I’m working, lost in the labyrinth of buildings and concrete, deafened by the buzzing of electricity and the inability to repress the violent reaction to being controlled, herded and manipulated. These connections may come from the recognition of our insignificance while standing in the wilderness or next to a gigantic cliff, it may have come from a camaraderie felt when we made eye contact with a raccoon or it could have been in the erotic adrenaline rush and chaos of a street fight with the cops. Each of us found this path our own way, but what we have in common is unlike many activists we will not wait for the revolution, look to the future or visualize Utopia. We are attempting to live our resistance, to live for the moment and resist by the moment.
+</p><p>Like the flames that devour a building or a bulldozer, our lust to destroy this Leviathan is uncontrollable and unpredictable. Because of the rejection of ideology and a conscious refusal of dialectics, manifestos and programs our resistance can not be mapped, anticipated, or prepared for. Though analysis is vital to the dismantling of this technological society, action must also play its crucial role. And it is in the shadow of this civilization that there is a creeping menace. This menace threatens the foundation of our civilization because it lacks the rationalism that is vital for the survival of industrialism. The rejection of productionism, to favor the desire of life and adventure over work. To pick the life of a single animal over the advancement of science and medicine. To put wilderness or the ocean over and above industrial society. The anti-rational desire to be the one who throws the match that stops those who are poisoning the world and controlling me! anti-rationalist in the sense that it could cost me my life, but not as a martyr, as the individual who did it for the pure joy of living and that lust/love for life.
+</p><p>A free and wild world can only be created in the ruins of this civilization. When I say ruins I do mean physical ruins. The buildings and factories must be brought down and their technological innards demolished with hammers and flames. The roads and sidewalks must be ripped up to let the soil underneath breathe again. The machines that think, run, control and live our lives for us must be assassinated. All the caged animals and fenced wildlands must be liberated. The entire artificial world must be destroyed for the creation of a new society.
+</p><p>This new free and wild society must also be born among the ruins of another kind, a more important kind. These are the ruins of the death culture, the social relationships we create with everything in the world. The relationship with the non-human world needs to move from a resource, superiority relationship to one of playmates in a world of adventure. With our fellow human beings we must dismantle the commodity relationships that have been created by work culture, instead of thinking about what we get from one another lets experience and feel one another. With our lovers the relationships are usually production-based, we enter into one contract or another depending of the product outcome we expect from our commitment. As radicals we are bringing one of the most digusting attributes of industrial capitalism into the most beautiful places in our lives. There should not be contracts with our lovers. Agreement, understandings, honest dialogue — these are necessary, but if you create your love life to a economical/legal model it will be as lifeless and unfullfilling as economic life. Whether your relationship is for an evening or your life, non-monogamous or monogamous, it must be spontaneous, passionate and void of laws. Trying to create new relationships with the world sounds better then waiting for the revolution, doesn’t it?
+</p><p>Will we win? Can we create a new free society living within wilderness instead of destroying it? I doubt it, but I’m going to live my life in defiance because I enjoy it. I feel better at the throat of this destructive machine then living comfortable in it’s belly. In the process of fighting for freedom and wildness we experience it, at least the closest emotions to authentic freedom. Our resistance also creates cracks in the foundation of civilization speeding up its inevitable collapse. Because this civilization will fall, it can’t support itself. When it falls it will take all of humanity with it, such is the way of evolution, entropy and life!
+</p><p>Or maybe I’m wrong! Maybe we can win!
+</p><h3 id="toc31">How Then Do We Go Feral: unfinished notes to be discussed and acted upon <em>by Wolfi Landstreicher</em>
+</h3>
+<p>The destruction of civilization — the network of relationships encompassing the state, economy, technology, religion, the family, all forms of authority and control — the overturning of domestication — for me, these are revolutionary aims, guidelines towards a way of living in insurrection against the present. Though expressed negatively, there is a positive vision behind this negation. This positive vision can be spoken of in terms of “wildness.” But wildness — especially as an aim for individuals to achieve in revolt against domestication and civilization — is an unknown quality. As an anarchist, I am glad about this. There can be no experts in human wildness, no leaders to take us there (not even the comrade who has lived in the forest for the last fifteen years, viewing it through such civilized ideological lenses as “Nature”, “Mother Earth”, “the circle of Life”, even “wilderness” or “ecological balance” and seeing himself as the judge of who does or does not know “wildness”.) For anyone who can read this and are, thus, clearly civilized beings, wildness is a concept, an idea, which can inspire revolt; but this potential to inspire revolt does not spring from an answer this idea may seem to provide (like any liberatory idea which has not slipped into ideology, it provides no answers) but from the questions it raises, the problems it opens up.
+</p><p>Our exporation of the question of human wildness can, of course, include the examination of what we know about non-civilized people and how they have lived, with the realization that all such knowledge has been filtered through such scientific lenses of civilization as anthropology and paleontology. We must avoid delusions of imitating or “going back to” the way of life of these people. Even if we chose to attempt such an imitation, it would be an imitation of the static image of such a people presented to us by our civilized lenses rather than a re-living of the dynamic of real natural-social relationships of these people. What is best learned from the examination of anthropological studies of uncivilized people is that people have been able to live and live well without all the supposed conveniences provided by the complex of social and technological systems that is civilization. But again such a realization, free of any ideological frame work, does not provide answers, but raises questions demanding experimentation and courageous exploration of possibilities. I emphasize this repeatedly, because too often the rhetoric of anti-civilization anarchists is full of asceticism and a morality of sacrifice, wereas I see the revolt against civilization to be precisely a revolt against the asceticism imposed by the institutions of civilization, a revolt against the channeling of desire into production and social reproduction. Within our milieu, there have already been many good explorations of what uncivilized cultures might mean to us. I would rather explore what “going wild” might mean as an insurrectionary practise in the present.
+</p><p>One thing to be learned by the examination of anthropology, history and a careful look at our present is that human beings are extremely variable and adaptable creatures. To speak of a “human nature” in light of what we know of human relations with each other and with the world around us seems absurd. Human beings seem to have few — if any — instincts, and these few, if they exist at all, seem to involve taking the path of least resistance. If this is the case, then “going wild” may well require overcoming our instincts. But the level of variability and adaptability in human beings, indicates that individuals are capable of such an overcoming. The apparent lack of a specific human nature is what allowed human beings to be domesticated, to become civilized beings, but it also opens up the possibility of revolt against this condition, a revolt which could destroy this condition and transform us into something new — because the experiences that we have had as civilized beings would not simply disappear, but would affect what we become. A post-civilization “wildness” would, thus, not be a return to a pre-civilized past, but an exploration of new ways of relating to the world around us free of the limits imposed by civilization. It’s full significance would only be understood at the moment it is created and would change from moment to moment as it is recreated in the dynamic flow of interactions that is the world especially in it’s wildness.
+</p><p>All of this may seem abstract. After all, for the civilized individual, wildness is an abstract concept. It will remain no more then this until one is inspired by this idea — not as an ideal above oneself, but as a conception of how to create one’s own freedom — to rise up in active rebellion against their own domestication and against all of the institutions of civilization which impose this domestication. The individual who has been so inspired develops a ferocity similar to that found in many feral creatures — formerly domesticated animals who have gone wild — but the human individual can direct this ferocity at precise targets in a willful insurgence against recognized sources of domestication.
+</p><p>My point here is that for the insurgent against the totality of civilization, wildness is not an answer, not an ultimate solution that we will one day come upon, but rather a question, a problem to be wrestled with everyday. Thus, the practise of wildness must be for us a perpetual experimentation, which incorporates the willful creation of each moment of one’s life for oneself and the willful rejection, through destructive action, of authority in all it’s forms — and, thus, of domestication and civilization as we know it. Such experimentation will transform us and our ways of interacting with the world around us. Within the context of civilization , this may be the best practical understanding of what wildness can mean for us.
+</p><p>There are no answers here — only questions. But it is by the imposition of answers that we were domesticated and by the most cruel and intense of questioning that we may overcome this and become our unique selves.
+</p><h3 id="toc32">Wildness in the City <em>by Chris Kortright</em>
+</h3>
+<p>Many people have asked me why I choose to live in San Francisco. If I love the wilderness and feel a connection to the natural world, how come I live in the midst of human society? As an anti-industrialist my activism and writings focus on wildness, animals, anti-technology, freedom and a small touch of misanthropy. Isn’t it contradictory to live in a big city? Yes, there a level of contradiction as well as hypocrisy in my life. As everyone is connected to this civilization, all those opposing techno-society are engaged in a contradiction in one way or another. <strong>But is this distinction between the city and the wild absolute?</strong> Are cities devoid of wildness?
+</p><p>As I walk down the street here in this toxic cement jungle with cars and people tearing around me, rushing to work, shop, consume and die, I feel alienated from the natural world. The trees are planted individually in small squares of dirt surrounded by concrete. These trees are always in perfect rows like everything else in this city. Everything in the city is in grids and lines, nothing is non-liner or spontaneous. Every decision that is made in the creation of this city is made to fit as many people as possible into the smallest space, offering them the most amount of products to consume. Cities are concrete scabs on what was once beautiful wilderness. Most of the world is now covered in almost identical scabs. If you are caught up in the rat race this is all you might see, but is this all that is out there?
+</p><p>When I walk down the street I see something different. I see the scab, the toxicity and the drone; consuming, breeding and not dying quick enough. But I also see something else. I see millions of cracks in the sidewalks from the movement of the earth’s surface. The static nature of concrete is not compatible with the spontaneous movement of the earth. The roads, sidewalks, and buildings which seem so strong will not last against the evolving motion of the planet we call home.
+</p><p>Another beautiful thing I see as I walk down the street are thousands of weeds and mushrooms. Weeds creep up through the cracks in the concrete and keep the trees company that humans feel should be isolated. Mushrooms pop up through the cracks in the wall of apartments, forcing people to interact with nature even in their solitary little boxes. Both weeds and fungi are great examples of how humans lack of control over the natural world. No matter how many chemicals and toxins humans use they can never rid themselves of these “pests” which are abundant in the cities.
+</p><p>There is also the more apparent urban wildlife that is in every city. There are the falcons that live and swoop cars in New York City. Mountain lions are now appearing in southern California suburbs. Here in San Francisco we have many different species you can run into, from the mice and rats in the train tunnels to opossums and even deer. There is one species though that I personally love to hang out with, that is the raccoon. These little mischievous creatures wreak havoc on the city every evening digging through trash, knocking over trash cans, breaking into apartments and raiding kitchens and devouring pet food. I even know someone who was riding their bike through Golden Gate Park one evening and was knocked off her bike by a pack of raccoons. There is a sense of friendship I feel with the raccoons I used to hang out with. For one year I used to sit on my apartment roof with the same raccoon as I drank beer. One night she brought over three young raccoons. For hours the four of us would watch each other, play and taunt one another. Every night until I moved from that house I spent a few hours with my non-human friends.
+</p><p>There is another aspect of living in San Francisco: the biggest wilderness in the world is only a few miles from my door step. It takes me minutes to get to the Pacific Ocean. There is a connection with the ocean that is hard to explain but If you can’t smell or taste the ocean in the air you feel a craving for this lucid and chaotic body of water. I can spend hours walking on the beach, or standing on rocks with the waves crashing around me. There is nothing in the world more exciting and powerful as running on the beach in the middle of a thunderstorm. The wind almost picking you up, lightning striking the ocean and the waves crashing on the beach.
+</p><p>The more humans encroach on the wild the more species will adapt to survive in an urban environment. Though this is not a <em>new</em> idea by any means it will start to teach people that we are not in control. But until this society crumbles the more wildlife I see in the cities the happier I’ll be, for it helps me connect with my own wild side and makes me feel as if the collapse is happening quicker. You never know maybe even in a few years there will be mountain lions and bears roaming the streets of San Francisco. 
+</p><h3 id="toc33">The Question of Ideology
+</h3>
+<p>What role does ideology play on our path of resistance? This is an important question for the longevity and fluidity of our community (community being larger then EF!, all encompassing the resistance to industrialism.) The ideologues on every side will explain that we need a coherent dialectic to follow and that ideology plays an important role in creating a “revolutionary” platform for us to move forward. But is this true? Can insurrection come from external ideas or does it need to come from within us as individuals and our personal connection to the wild. 
+</p><p>Can ideology fit into a wild insurrection? To answer this question we must define ideology. Ideology is false consciousness. It doesn’t come from within us it comes from someone else; an idea created from their experience then given to us as a mold. There are many forms of ideology, fitting into every aspect of our lives: capitalism, communism, atheism, theism, humanism, rationalism, in the orthodox branch anarchism and in academic biocentrism. All of these were created outside of us as individuals centering the world outside of our personal experiences.
+</p><p>Because ideology doesn’t come from within us we can not fully experience or define it in our own words. Often you hear statements like “Marxism says...” or “Biocentrism says...” and “The Bible states...”, instead of “I feel...” or “I think...” These external ideas can not be fluid because they are already established in one form or another as “legitimate thought.” They are used to justify our actions and ideas. Because we don’t trust our own ideas, experiences and desires we must make them valid by fitting them into an external box of thought. It is because we must fit into this box instead of letting our ideas stand on their own that ideology becomes rigid and dogmatic. We do not have the ability to change and evolve with ideology because it is not ours, we are a part of it instead of it being a part of us. 
+</p><p>This is not to say that the ideologies out there don’t have some good ideas mixed up with their dogma. Almost all ideologies can teach us something, they have ideas that can expand our individual understanding of the world. But the important thing is to take these ideas when they fit in with our personal understanding of life and expand them to fit our personal world view. The same goes with citing individual authors. There is a level of comraderie and strength in agreement, as long as this agreement is personal. To say “I agree with John Zerzan when he says...” or “I feel that Kirkpatrick Sale made a good point when he wrote...” This is personal, to take a personal idea from a conversation or article we read and apply it to our personal understanding. This strengthens and supports our ideas while keeping them ours. But ideologies such as “biocentrism” or “Marxism” are not individuals they are abstract ideas. To sight these as “legitimate sources” instead of individuals as personal sources you keep the dialogue in academic realms instead of personal everyday life. 
+</p><h4 id="toc34">Ideology’s Effect on Action
+</h4>
+<p>If our ideas become rigid and dogmatic in the midst of ideology, what happens to our actions? I answer that our actions become stagnant and ineffective. Factionalizing happens quickly as vicious and ugly fights break out over “moral, correct and right tactics.” Just as with our ideas when we cling to ideology to justify our actions they become rigid and do not flow and evolve as is necessary to be effective. 
+</p><p>As long as EF! has existed there has been an ideological split that has been battling under the guise of “strategy.” It again has resurfaced in the last few issues of this paper in the wake of the Vail arson. Will this disagreement ever be resolved? No, not unless each ideological faction splits into its own ideological movement. Or we, as a resistance community, abandon ideological thinking and ideologically-driven actions. The debate of sabotage vs. civil disobedience is not a strategic debate; it is a ideological/moralistic debate. Thus not leaving room for diversity within the community of resistance. 
+</p><p>I am not asking “why can’t we all just get along?” I understand that there are differences of opinion and I, myself, have very strong feeling on this topic. My opinion is based on my personal experiences, desires and view of efficiency instead of ideology or an external moralism. Because this is my understanding and what is right for me I do not judge others (or try not to) for what is best for them based on their experiences and desires. By bringing the debate out of the ideological realm into the practical and personal realm we can have authentic discussions on effectiveness and personal experiences leaving room for our differences. 
+</p><h4 id="toc35">Wild Self-theory
+</h4>
+<p>If ideology is destructive for our community of resistance where should we place our ideas? We need to form self-theory based in our own wildness and our personal connection to the wild we have experienced. I do not have the same connections to the wild as my friends who are “desert rats.” They prefer hot and dry climates, backpacking in the desert, sage brush and cactus. Just the same they can not know my connection to the ocean, sharks, sea gulls and raccoons. We respect and understand each others desire for a free and wild nature and experience. But we can not fully understand each others’ emotional and personal base connection to the wild. 
+</p><p>By creating an ideology around such a personal connection and emotion we sterilize and smother these wild desires, emotions and experiences. Our ideas cannot be presented in any way but thousands of individual ideas networked for a common goal; a wild and free world. Anything short of this is a disgrace to our wild visions and the diverse wildernesses we love and defend. 
+</p><p>If we create a resistance community based on a network of self-theorists instead of ideologues and slogans, our actions will be more compatible and more productive. If the ideological lines have been brought down we can except each other’s actions as driven by our self-theory and desires thus is correct for our individual part of the larger community of resistance. This respect and understanding will help to create a more encompassing and tolerant community towards the diverse tactical choices individuals make. Another strength that will come from actions driven by the desires of individuals and collectives is raw passion. Not to say that this passion is not already there but many individuals feel they need to fit into one “box of thought” or the other. By expanding the freedom to tactics that we desire in the natural world, individuals will act from the heart. When an action comes from the heart one puts all their effort (and hopefully their intelligence) into the form of resistance they chose. 
+</p><p>I live in San Fransisco, California, I have chosen not to participate in the Headwaters campaign because of our differences of opinion regarding tactics and participation with authorities. If the individuals engaging in this campaign have chosen this path I can not tell them they are “wrong.” I will engage in dialogue with them, share my ideas and perspective and hear theirs. Since we do not have the same desires regarding tactics I chose not to work on their campaign, with respect, because the goal to protect the redwoods I understand. Instead of fighting with them about our differences I found a few individuals with similar desires towards tactics and I work with them. We fight a similar battle on a different front. 
+</p><p>Let us tear down the walls of ideology, free our minds and desires towards authentic resistance. For if we are fighting for a wild and free world, free beings interacting and experiencing each other we can not build this world with rules and rigid thought. So, while each of us is fighting to free animals and the land itself, let’s remember to also free our desires and our own wildness. Think for yourself and act, but most importantly think while you act! 
+</p><p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> Rilke, Maria. “A Man Watching,” in News of the Universe: Poems of Twofold Consciousness. Robert Bly, ed. San Francisco: Sierra Club Books, 1980, pp. 121–122.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Ibid.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> See “Green Web Literature” (1998), an annotated list of publications.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> Ken Wu believes that Robyn Eckersley, Warwick Fox and Judi Bari have all contributed to left ecocentrism.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> See also Green Web Bulletin #34 (1992).
+</p><p class="fnline"><a class="footnotebody" href="#fn_back6" id="fn6">[6]</a> I came to Canada from England in 1957. My involvement in environmental work started in 1977 in British Columbia. I was a member of naturalist organizations, and active environmentally as a representative for the BC Federation of Naturalists. This experience taught me that naturalizing does not necessarily lead to environmental activism. Naturalist organizations do not normally see the active defense of Nature as part of their mandate. <br /> Prior to this environmental involvement, I was active in the anti-war and social justice movements. (My background in England was working class, and I served a five-year industrial apprenticeship as a shipwright in Portsmouth Dockyard.) Also important for my pre-environmental awareness, were a number of years of involvement in student movement and university politics, both in Canada and the United States, up to 1969. I was an organizer for a Marxist-Leninist party from 1968 to 1975. <br /> In 1979 I moved with my family to Nova Scotia. I worked in several environmental groups (the last three I helped bring into existence): the Uranium Committee of the Ecology Action Center (EAC), the Socialist Environmental Protection and Occupational Health Group (SEPOHG, founded in 1981), the North Shore Environmental Web (NSEW, founded in 1986) and the Green Web (GW, founded in 1988). We moved to a rural forested area in 1984, where we still live. Our area is now largely deforested from industrial forestry operations. I have considered myself part of the green movement since 1983, and have been promoting deep ecology since 1985.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back7" id="fn7">[7]</a> D. Orton, “Two environmental tendencies,” <em>Canadian Dimension</em>, 24:5 (1990), p. 41.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back8" id="fn8">[8]</a> Arne Naess, “Politics And The Ecological Crisis,” (1991) in George Session’s anthology, <em>Deep Ecology For The 21<sup>st</sup> Century</em> (Boston: Shambhala Publications, 1995), pp. 445–53.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back9" id="fn9">[9]</a> <em>Inquiry</em> 16 (1973), pp. 95–100.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back10" id="fn10">[10]</a> <em>A Critique of Deep Ecology</em>, (Canberra: Australian National University, 1985), p.47.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back11" id="fn11">[11]</a> For example, “Sustainable Development and the Deep Long-Range Ecology Movement”, <em>The Trumpeter</em>, 5:4, (1988).
+</p><p class="fnline"><a class="footnotebody" href="#fn_back12" id="fn12">[12]</a> Letters of December 2, 1996 and January 10, 1997.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back13" id="fn13">[13]</a> <em>Ecology, Community and Lifestyle</em>, (New York: Cambridge University Press, 1989) p.114.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back14" id="fn14">[14]</a> See my review of Fox’s book, “New Age Deep Ecology” in <em>Canadian Dimension</em>, 25:6 (1991), p. 35.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back15" id="fn15">[15]</a> See my criticism of the original Deep Ecology text, in a letter to the editor “Deep Ecology and the Green Movement,” in the <em>New Catalyst</em>, 6 (Winter 1986/87) and the authors’ replies in subsequent issues.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back16" id="fn16">[16]</a> D. Orton, “Revised deep ecology platform surprising and disheartening”, <em>Alternatives</em>, 20:4 (1994) pp. 40–1, and the letter by Rothenberg, 21:2 (1995).
+</p><p class="fnline"><a class="footnotebody" href="#fn_back17" id="fn17">[17]</a> See my review of this book in <em>Capitalism, Nature, Socialism</em>, 4:4, (1993), pp. 131–33.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back18" id="fn18">[18]</a> Green Web Bulletin #50, “Social Environmentalism and Native Relations” (1996).
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

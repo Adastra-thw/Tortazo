@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>To French comrades concerning Tarnac arrests but not only</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  To French comrades concerning Tarnac arrests but not only
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-anonymous">Anonymous</a>
+	  
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-france">France</a>
+	  	  <a href="../../topics.html#library-index-italy">Italy</a>
+	  	  <a href="../../topics.html#library-index-media">media</a>
+	  	  <a href="../../topics.html#library-index-repression">repression</a>
+	  	  <a href="../../topics.html#library-index-tarnac-9">Tarnac 9</a>
+	  
+	</p>
+		
+	<strong>Source:</strong>
+	Retrieved on January 2, 2010 from <a href="http://www.non-fides.fr/?To-French-comrades-concerning">www.non-fides.fr</a>
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="anonymous-to-french-comrades-concerning-tarnac-arrests-but-not-only.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Anonymous</h2>
+	
+	<h1 id="textttitleh">To French comrades concerning Tarnac arrests but not only</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>We know how painful it’s to be separated from our own comrades, and we have no recipes nor lessons to give about the way to take them out the fastest (to take them all out, forgetting the distinction between ‘guilty’ and ‘innocent’). The rapid notes that follow are the fruit of several thoughts born out of different experiences lived in Italy, hoping they could be useful to our French comrades.
+</p><p>The Tarnac arrests represent a serious fact, not only as an attack against everybody who already fights, with critics and practices, against the State and the Capital, but also as a tentative of intimidation against all the potential allies of a social war more diffused. Actually, the repression aims at hitting, further than particular acts, the “bad intentions”, playing then a fundamental pedagogical role supposed to drain out of everyone his/her potential disposition to revolt. The invention of “terrorist cells” or “movement” with an identity or another is used to isolate any insurrectional hypothesis from the general existing practices of confrontation (conflicualité) , separating at the same time anyone from his/her rebellious tendencies and his/her own potentialities. The pedagogy of repression is always a pedagogy of fear.
+</p><p>The tentative to transform street encounters, anonymous actions of sabotages, theoretical texts and solidarity into a “terrorist association” with so many cells, chiefs, and partisans is unfortunately a movie we’ve already seen many times in Italy. The problem of the State is obvious: to try to liquidate some subversive practices and “movements” who patently defend them, its accusations based on specific facts are not enough. It consists in inventing associative crimes, to be able to distribute years and years of prison without using this archaic formality, which is called, proof. Many of us were subjected to trials, months of preventive prison and sometimes heavy condemnations. Even though it doesn’t get to maintain its own investigations to the end, the State gives itself parallel goals: to break the relationships, to interrupt the road of subversive activity, to test the capacity of the comrades to answer, and so on.
+</p><p>In France, the sabotages action and the confrontation with the police didn’t come out yesterday. What frightened the State these last years, was, to our mind, the emergence of a possible solidarity — in words and acts- between different forms of social revolt, as well as the refinement and diffusion of the discourse that claims openly the practices of a possible insurrection. Of course, the State doesn’t fear the revolutionary speeches, as long as it enjoys an abstract freedom of speech, nor a particular attack: what it is afraid of, is the unpredictability of the diffused attack and the mutual strengthening of combined words and gestures. What has been the defended position by very few individuals during a long time, starts now to look like a “swampland” (using the expression of the ‘anti terrorist’ unit of the Italian carabiniers, about 12 years ago), hardly identifiable and governable. The State wants to dry up this marsh, so as to extract the chiefs from it, some ‘organizations’, alleged circle of influence, with so many acronyms, delegates, and so on.
+</p><p>Even though the advice Victor Serge gave to the revolutionists taken in hostage is still valuable (“deny everything, even evidence”), it’s necessary to be able to read the repression, so as to revive and to reinforce our perspectives. We all know that the left (and its left) has always been the historical enemy of every insurrectional fight: parties and unions, scavengers, mediators, intellectuals, modern Princes counsellors, crafty allies of the repression, dexterous to divide into “good” and “bad”. In particular circumstances and confronting an “unjust Justice”, they can go to the point they defend the comrades who have always attacked them. To enable these rotting carcasses to acquire again the least force from our imprisoned, is a mistake which is not inconsequential. The fact there’s not only comrades who oppose the antiterrorism swindles, but a larger environment, includes positive aspects (it’s the reflection of the scared report that the State terror crushes us more everyday). But our perspective goes on only in the clarity with other exploited and rebels, which means in a firm hostility for the Left and its media. To say it another way, the way you react to the repression belongs also to this social war, that doesn’t admit any truce. Non bearing some positions, we give up ground to the enemy. The democrat solidarity and the space in the newspaper are never offered for free: today, not only they are used for the Left to rehabilitate itself to the eyes of who is ‚at daggers drawn with the existing‘ (“ you see? At the end, we all agree...”), but also to neutralise every position of radical rupture with the present (some youth excess could be forgiven...).
+</p><p>Confronting similar investigations (or even more heavy) the answer that multiples comrades in Italy gave was simple: “We don’t know who made the acts you accuse us of, Sir; what we know, is that we defend them openly, and that your investigation will not stop the fire of the social revolts which didn’t wait for our text to spread”. Such an answer, linked to the practices that result from it- gave us the opportunity to continue our activities even out of prison. Such an answer would certainly not get support from the media, and democrat intellectuals; and especially, it doesn’t let them to talk on our behalf. Some clear paroles always find ears disposed to listen to them. Imprisoned, the words force sometimes the chains, emerging from the most mysterious and common parts of the experience and the heart. The power that follows from the fact to insert their game and their speech, with the pretension to use it or embezzle it to our own finality, is an illusion. We don’t even share the same meaning for the same words with our enemy- nor the sense of happiness, time, possibility, or the sense of failure or success.
+</p><p>There are positions of rupture that proved they are useful, including on judicial level, as there are comrades who spent one year in prison for a few graffiti: there’s no exact science in this matter. The tension on the way to coherence between the methods and the objective shows the problem of efficacy. In other words, corresponding to the life for which we are fighting. “ If there are innocents who deserve our solidarity, there are culprits who merit it even more” said Renzo Novatore. The solider comrades often find in these words a more favourable ground to act, to continue where other have provisory been arrested, and to discover new allies...
+</p><p>We have got one certitude: the insurrection doesn’t read Libé <a href="#fn1" class="footnote" id="fn_back1">[1]</a>.
+</p>
+<blockquote>
+<p>Some Italian anarchists.<br />
+February 2009.
+</p></blockquote>
+<p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> Libération: bourgeois newspaper of the left. 1er july 1927, the first newspaper is edited by Jules Vignes. It was a libertarian gazette. Clandestine newspaper during the second war resistance- and became a daily newspaper in 1944. The 1973 project, to “give the word to the people” turns nasty with Serge July, and is now linked to the socialist party.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="ie" lang="en" dir="ltr"><![endif]-->
+  <!--[if !IE]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+<head>
+  <title>JavaScript License Information | Defective by Design</title>
+  <meta charset="utf-8" />
+<meta http-equiv="cleartype" content="on" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="canonical" href="/javascript-license-information" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortlink" href="/node/2302" />
+<link rel="shortcut icon" href="http://defectivebydesign.org/sites/nodrm.civicactions.net/files/favicon.png" type="image/png" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<meta name="viewport" content="width=device-width" />
+  <style>@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.base.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.menus.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.messages.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/aggregator/aggregator.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/field/field.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/modules/node/node.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/search/search.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/user/user.base.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/user/user.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/modules/views/css/views.css?n8vdt6");</style>
+<style>@import url("http://defectivebydesign.org/sites/all/modules/ctools/css/ctools.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/modules/flexslider/assets/css/flexslider_img.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/libraries/flexslider/flexslider.css?n8vdt6");</style>
+<style>@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/layouts/basic/basic.layout.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/dbd2.normalize.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/dbd2.styles.css?n8vdt6");</style>
+  <script>/**
+ * @licstart The following is the entire license notice for the JavaScript
+ * code in this page.
+ *
+ * Copyright (C) 2014  Defective by Design.
+ *
+ * The JavaScript code in this page is free software: you can redistribute
+ * it and/or modify it under the terms of the GNU General Public License
+ * (GNU GPL) as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.  The code is
+ * distributed WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU GPL
+ * for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you may
+ * distribute non-source (e.g., minimized or compacted) forms of that code
+ * without the copy of the GNU GPL normally required by section 4, provided
+ * you include this license notice and a URL through which recipients can
+ * access the Corresponding Source.
+ *
+ * @licend The above is the entire license notice for the JavaScript code
+ * in this page.
+ */</script>
+<script src="http://defectivebydesign.org/misc/jquery.js?v=1.4.4"></script>
+<script src="http://defectivebydesign.org/misc/jquery.once.js?v=1.2"></script>
+<script src="http://defectivebydesign.org/misc/drupal.js?n8vdt6"></script>
+<script src="http://defectivebydesign.org/sites/all/libraries/flexslider/jquery.flexslider-min.js?n8vdt6"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","flexslider":{"optionsets":{"default":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":0,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":"7000","directionNav":true,"controlNav":false,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"default"}}});</script>
+</head>
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-2302 node-type-page section-javascript-license-information">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <script>
+/*
+|@licstart The following is the entire license notice for the
+JavaScript code in this page.|
+
+    Copyright 2014 Free Software Foundation Inc.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses/.
+
+|@licend The above is the entire license notice
+for the JavaScript code in this page.|
+*/
+</script>
+<div class="l-page">
+  <header class="l-header" role="banner">
+    <div class="l-header--inner">
+      <div class="l-branding">
+          
+                              <h1 class="site-name">
+              <a href="/" title="Home" rel="home"><span>Defective by Design</span></a>
+            </h1>
+            
+                    
+              </div>
+  
+              <div class="l-region l-region--navigation">
+    <nav id="block-system-main-menu" role="navigation" class="block block--system block--menu block--system-main-menu">
+      
+  <ul class="menu"><li class="first leaf"><a href="/" title="Return to the home page">Home</a></li>
+<li class="leaf"><a href="/what_is_drm_digital_restrictions_management" title="">What is DRM?</a></li>
+<li class="leaf"><a href="/action" title="">Take Action</a></li>
+<li class="leaf"><a href="/guide" title="">DRM-free Guide</a></li>
+<li class="leaf"><a href="/blog" title="">Blog</a></li>
+<li class="leaf"><a href="/contact" title="Contact DefectiveByDesign">Contact</a></li>
+<li class="last leaf"><a href="https://crm.fsf.org/civicrm/contribute/transact?reset=1&amp;id=40" title="Make a donation to support the campaign">Donate</a></li>
+</ul></nav>
+  </div>
+    </div>
+  </header>
+  
+  <div class="l-highlighted">
+      </div>
+  
+  <div class="l-main">  
+    <div class="l-content" role="main">
+      <div class="l-content--inner">
+        <a id="main-content"></a>
+                          <h1 class="page-title">JavaScript License Information</h1>
+                                                        <article role="article" class="node node--page node--full node--page--full">
+  
+  
+  <div class="node__content">
+    <div class="field field--name-body field--type-text-with-summary field--label-hidden"><div class="field__items"><div class="field__item even"><table id="jslicense-labels1" border="1"><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.min.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.min.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery-1.7.js">jquery-1.7.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.chainedSelects.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.chainedSelects.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License version 3 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.chainedSelects.js">jquery.chainedSelects.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/dad-signup/jquery.chainedSelects.js">http://static.fsf.org/nosvn/dbd/2013/dad-signup/jquery.chainedSelects.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License version 3 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.chainedSelects.js">jquery.chainedSelects.js</a></td>
+</tr><tr></tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/dad-signup/jquery.form.js">http://static.fsf.org/nosvn/dbd/2013/dad-signup/jquery.form.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License version 3 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.form.js">jquery.form.js</a></td>
+</tr><tr></tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.form.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.form.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.form.js">jquery.form.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/Common.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/Common.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/Common.js">Common.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmaccordions.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmaccordions.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.crmaccordions.js">jquery.crmaccordions.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmasmselect.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmasmselect.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.crmasmselect.js">jquery.crmasmselect.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmeditable.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmeditable.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.crmeditable.js">jquery.crmeditable.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmtooltip.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmtooltip.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.crmtooltip.js">jquery.crmtooltip.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/rest.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/rest.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/rest.js">rest.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-ui-1.8.16.custom.min.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-ui-1.8.16.custom.min.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery-ui-1.8.16.custom.js">jquery-ui-1.8.16.custom.js</a></td>
+<!-- need to check if this is really the source --></tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dataTables.min.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dataTables.min.js</a></td>
+<td> <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a><br /><a href="http://www.opensource.org/licenses/BSD-3-Clause">The BSD 3-Clause License</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.dataTables.js">jquery.dataTables.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.autocomplete.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.autocomplete.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.autocomplete.js">jquery.autocomplete.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.blockUI.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.blockUI.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.blockUI.js">jquery.blockUI.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.civicrm-validate.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.civicrm-validate.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.civicrm-validate.js">jquery.civicrm-validate.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.contextMenu.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.contextMenu.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.contextMenu.js">jquery.contextMenu.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dashboard.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dashboard.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.dashboard.js">jquery.dashboard.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-fieldselection.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-fieldselection.js</a></td>
+<td><a href="http://www.opensource.org/licenses/BSD-3-Clause">The BSD 3-Clause License</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery-fieldselection.js">jquery-fieldselection.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.form.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.form.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.form.js">jquery.form.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.FormNavigate.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.FormNavigate.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.FormNavigate.js">jquery.FormNavigate.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jeditable.mini.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jeditable.mini.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.jeditable.js">jquery.jeditable.js</a>
+<!-- https://github.com/tuupola/jquery_jeditable --></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.menu.pack.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.menu.pack.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.menu.js">jquery.menu.js</a>
+<!-- http://p.sohei.org/jquery-plugins/menu/ --></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mousewheel.pack.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mousewheel.pack.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.mousewheel.js">jquery.mousewheel.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mustache.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mustache.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.mustache.js">jquery.mustache.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tableHeader.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tableHeader.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.tableHeader.js">jquery.tableHeader.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.textarearesizer.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.textarearesizer.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a>
+<!-- derivative of Drupal misc/textarea.js, which is not Expat licensed http://drupal.org/licensing/faq --><p>            <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></p></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.textarearesizer.js">jquery.textarearesizer.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.timeentry.pack.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.timeentry.pack.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.timeentry.js">jquery.timeentry.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tokeninput.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tokeninput.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.tokeninput.js">jquery.tokeninput.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.toolTip.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.toolTip.js</a></td>
+<td><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License version 3</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.toolTip.js">jquery.toolTip.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.ui.datepicker.validation.pack.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.ui.datepicker.validation.pack.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.ui.datepicker.js">jquery.ui.datepicker.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.validate.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.validate.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.validate.js">jquery.validate.js</a></td>
+</tr><tr><td><a href="http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jstree.js">http://static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jstree.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/crm.fsf.org/jquery.jstree.js">jquery.jstree.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/ajax.js">/misc/ajax.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/ajax.js">/misc/ajax.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/autocomplete.js">/misc/autocomplete.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/autocomplete.js">/misc/autocomplete.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/collapse.js">/misc/collapse.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/collapse.js">/misc/collapse.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/drupal.js">/misc/drupal.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/drupal.js">/misc/drupal.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/form.js">/misc/form.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/form.js">/misc/form.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/jquery.cookie.js">/misc/jquery.cookie.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/jquery.cookie-src-r3931.js">/misc/jquery.cookie-src-r3931.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/jquery.form.js">/misc/jquery.form.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/jquery.form-2.52.js">/misc/jquery.form-2.52.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/jquery.js">/misc/jquery.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/jquery-1.4.4.js">/misc/jquery-1.4.4.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/jquery.once.js">/misc/jquery.once.js</a></td>
+<td><a href="http://www.jclark.com/xml/copying.txt">Expat</a><br /><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/jquery.once.js">/misc/jquery.once.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/progress.js">/misc/progress.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/progress.js">/misc/progress.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/states.js">/misc/states.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/states.js">/misc/states.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/tabledrag.js">/misc/tabledrag.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/tabledrag.js">/misc/tabledrag.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/tableheader.js">/misc/tableheader.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/tableheader.js">/misc/tableheader.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/tableselect.js">/misc/tableselect.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/tableselect.js">/misc/tableselect.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/textarea.js">/misc/textarea.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/textarea.js">/misc/textarea.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/misc/vertical-tabs.js">/misc/vertical-tabs.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/misc/vertical-tabs.js">/misc/vertical-tabs.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/modules/field/modules/text/text.js">/modules/field/modules/text/text.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/modules/field/modules/text/text.js">/modules/field/modules/text/text.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/modules/field_ui/field_ui.js">/modules/field_ui/field_ui.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/modules/field_ui/field_ui.js">/modules/field_ui/field_ui.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/modules/file/file.js">/modules/file/file.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/modules/file/file.js">/modules/file/file.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/modules/filter/filter.js">/modules/filter/filter.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/modules/filter/filter.js">/modules/filter/filter.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/modules/node/node.js">/modules/node/node.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="http://weblabels.fsf.org/defectivebydesign.org/20130319/files/modules/node/node.js">/modules/node/node.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/sites/all/libraries/flexslider/jquery.flexslider-min.js">/sites/all/libraries/flexslider/jquery.flexslider-min.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="/sites/all/libraries/flexslider/jquery.flexslider-min.js">/sites/all/libraries/flexslider/jquery.flexslider-min.js</a></td>
+</tr><tr><td><a href="http://defectivebydesign.org/sites/all/modules/flexslider/assets/js/flexslider.load.js">/sites/all/modules/flexslider/assets/js/flexslider.load.js</a></td>
+<td><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License version 2 or later</a></td>
+<td><a href="/sites/all/modules/flexslider/assets/js/flexslider.load.js">/sites/all/modules/flexslider/assets/js/flexslider.load.js</a></td>
+</tr></table></div></div></div>  </div>
+
+    </article>
+                <div class="l-content-bottom">
+          <div class="l-content-bottom--inner">
+                                  </div>
+        </div>  
+      </div>
+    </div>
+    
+    <!-- @TODO -- conditionalize both sidebar and content bottom to only show up on not-front and front, respectively -- or, possibly recast the sidebars as content-bottom if they are mutually exclusive -->
+      <aside class="l-region l-region--sidebar-first">
+    <div id="block-search-form" role="search" class="block block--search block--search-form">
+        <div class="block__content">
+    <form class="search-block-form" action="/javascript-license-information" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-6kvHEZzDmLl-aievijOMK-yUfVLSZ8zUxyIfdGdV8sQ" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<div id="block-block-84" class="block block--block block--block-84">
+        <h2 class="block__title">Get action alerts</h2>
+      <div class="block__content">
+    <form action="https://crm.fsf.org/civicrm/profile/create?gid=257&amp;reset=1" method="post" name="Edit" id="Edit">
+<input name="postURL" type="hidden" value="http://www.defectivebydesign.org/thanks" /><input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=257" /><input name="add_to_group" type="hidden" value="41" /><input name="_qf_default" type="hidden" value="Edit:cancel" /><div id="crm-container" class="crm-container crm-public" lang="en" xml:lang="en" xml:lang="en">
+<div id="editrow-email-Primary" class="crm-section editrow_email-Primary-section form-item">
+<div class="label"><label for="email-Primary">Email <span class="crm-marker" title="This field is required.">*</span></label></div>
+<div class="edit-value content"><input maxlength="64" size="20" name="email-Primary" type="text" id="email-Primary" class="form-text medium required" /></div>
+</div>
+</div>
+<!-- end form-layout-compressed for last profile --><div class="crm-submit-buttons" style=""><span class="crm-button crm-button-type-next crm-button_qf_Edit_next"><input class="validate form-submit default" accesskey="S" name="_qf_Edit_next" value="Sign up" type="submit" id="_qf_Edit_next" /></span></div>
+
+</form>
+<p><a href="https://my.fsf.org/donate/privacypolicy.html">We won't share your information.</a></p>
+  </div>
+</div>
+<div id="block-views-status-updates-block-3items" class="block block--views block--views-status-updates-block-3items">
+        <h2 class="block__title">Updates</h2>
+      <div class="block__content">
+    <div class="view view-status-updates view-id-status_updates view-display-id-block_3items view-dom-id-bd70609a1f02e3583614555cf239fba3">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list"><ul>  <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-description">        <span class="field-content">Looking ahead to the next International Day Against DRM - May 6, 2015. <a href="https://u.fsf.org/11i" title="https://u.fsf.org/11i" rel="nofollow external">https://u.fsf.org/11i</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">5 days</em> ago</span>  </div></li>
+  <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-description">        <span class="field-content">&quot;Isn't DRM ineffective anyway?&quot; and other frequently asked questions about Digital Restrictions Management.  <a href="https://u.fsf.org/110" title="https://u.fsf.org/110" rel="nofollow external">https://u.fsf.org/110</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">2 weeks</em> ago</span>  </div></li>
+  <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field views-field-description">        <span class="field-content">.@EA uses DRM in Origin client to snoop your computer for recently accessed files. <a href="https://u.fsf.org/10v" title="https://u.fsf.org/10v" rel="nofollow external">https://u.fsf.org/10v</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">3 weeks</em> ago</span>  </div></li>
+</ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <p><span class="status-update-follow-links">Status updates on: <a href="http://status.fsf.org/dbd">GNU social</a> | <a href="https://microca.st/dbd">pump.io</a> | <a href="https://twitter.com/endDRM">Twitter</a></span></p>
+    </div>
+  
+  
+</div>  </div>
+</div>
+<div id="block-views-photos-block" class="block block--views block--views-photos-block">
+        <div class="block__content">
+    <div class="view view-photos view-id-photos view-display-id-block view-dom-id-e475ccb86210e31a1e77222233774b22">
+        
+  
+  
+      <div class="view-content">
+      <div  id="flexslider-1" class="flexslider">
+  <ul class="slides"><li>  
+  <div class="photo-image">        <img src="http://defectivebydesign.org/sites/defectivebydesign.org/files/styles/flexslider_full/public/cancel-netflix_0.png?itok=uGNvZNu5" width="800" height="500" alt="" />  </div>  
+  <div class="photo-caption">        <a href="/cancelnetflix">Cancel Netflix</a>
+  </div></li>
+<li>  
+  <div class="photo-image">        <img src="http://defectivebydesign.org/sites/defectivebydesign.org/files/styles/flexslider_full/public/hollyweb-small.jpeg?itok=YJHvvL6H" width="800" height="500" alt="" />  </div>  
+  <div class="photo-caption">        <a href="/no-drm-in-html5">Stop DRM in HTML5</a>
+  </div></li>
+</ul></div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </aside>
+      <aside class="l-region l-region--sidebar-second">
+    <div id="block-views-quote-block" class="block block--views block--views-quote-block">
+        <h2 class="block__title">Quote</h2>
+      <div class="block__content">
+    <div class="view view-quote view-id-quote view-display-id-block view-dom-id-073448eec9f5de7bb4aefbde4a0278f5">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+          <p class="quote">...trying to make digital files uncopyable is like trying to make water not wet.</p>    
+          <p class="quote-source">Bruce Schneier</p>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </aside>
+    
+    
+        
+  </div>
+  
+  <div class="l-prefooter">
+    <div class="l-prefooter--inner">
+                </div>
+  </div>
+  
+  <footer class="l-footer" role="contentinfo">
+    <div class="l-footer--inner">
+        <div class="l-region l-region--footer-upper-first">
+    <div id="block-block-28" class="block block--block block--block-28">
+        <h2 class="block__title">Check out other Free Software Foundation campaigns</h2>
+      <div class="block__content">
+    <ul><li><a href="http://playogg.org/">PlayOgg</a> — support free media formats</li>
+<li><a href="http://www.gnu.org/">GNU</a>, a free Unix-like operating system</li>
+<li><a href="http://upgradefromwindows8.com/">Upgrade from Windows *</a>, pledge to free your computer today!</li>
+</ul>  </div>
+</div>
+  </div>
+        <div class="l-region l-region--footer-upper-second">
+    <div id="block-block-80" class="block block--block block--block-80">
+        <h2 class="block__title">Defective by Design is a campaign of the</h2>
+      <div class="block__content">
+    <p><a href="http://www.fsf.org/"><img src="//static.fsf.org/nosvn/dbd/2012/assets/logo-fsf.png" alt="Free Software Foundation" /></a></p>
+  </div>
+</div>
+  </div>
+        <div class="l-region l-region--footer">
+    <div id="block-block-29" class="block block--block block--block-29">
+        <div class="block__content">
+    <p>Copyright © 2006—2014 Free Software Foundation, Inc.</p>
+  </div>
+</div>
+<div id="block-block-77" class="block block--block block--block-77">
+        <div class="block__content">
+    <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nd/3.0/">Creative Commons Attribution-No Derivative Works 3.0 license (or later version)</a> — <a href="https://www.gnu.org/licenses/license-list.html#OpinionLicenses">Why this license?</a></p>
+  </div>
+</div>
+<div id="block-block-78" class="block block--block block--block-78">
+        <div class="block__content">
+    <p><a href="//www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+  </div>
+</div>
+<div id="block-block-79" class="block block--block block--block-79">
+        <div class="block__content">
+    <p><a rel="jslicense" href="/javascript-license-information">JavaScript License Information</a></p>
+  </div>
+</div>
+  </div>
+    </div>
+  </footer>
+</div>
+  <script src="http://defectivebydesign.org/sites/all/modules/flexslider/assets/js/flexslider.load.js?n8vdt6"></script>
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://piwik.fsf.org/" : "http://piwik.fsf.org/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();</script>
+</body>
+</html>

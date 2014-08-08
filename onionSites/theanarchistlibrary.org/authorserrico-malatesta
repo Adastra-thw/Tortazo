@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Errico Malatesta | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   id="current"
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="errico-malatesta">Errico Malatesta</h3>
+<ol>
+
+  <li>
+   <a href="/library/errico-malatesta-about-my-trial-class-struggle-or-class-hatred">
+   About my trial: Class Struggle or Class Hatred?
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-and-nestor-makhno-about-the-platform">
+   About the Platform
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-against-the-constituent-assembly-as-against-the-dictatorship">
+   Against the Constituent Assembly as Against the Dictatorship
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-anarchism-and-organization">
+   Anarchism and Organization
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-anarchist-propaganda">
+   Anarchist Propaganda
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-the-anarchist-revolution">
+   The Anarchist Revolution
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-the-anarchists-in-the-present-time">
+   The Anarchists in the Present Time
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-anarchists-the-war-and-their-principles">
+   Anarchists, the War and Their Principles
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-anarchy">
+   Anarchy
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-anarchy-and-organization-the-debate-at-the-1907-international-anarchist-congres">
+   Anarchy and Organization: The Debate at the 1907 International Anarchist Congress
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-democracy-and-anarchy">
+   Democracy and Anarchy
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-further-thoughts-on-the-question-of-crime">
+   Further thoughts on the question of crime
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-the-idea-of-good-government">
+   The Idea of Good Government
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-a-little-theory">
+   A Little Theory
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-majorities-and-minorities">
+   Majorities and Minorities
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-mutual-aid-an-essay">
+   Mutual Aid: An Essay
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-neither-democrats-nor-dictators-anarchists">
+   Neither Democrats, nor Dictators: Anarchists
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-note-on-medicine-and-anarchism">
+   Note on Medicine and Anarchism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-note-to-the-article-individualism-and-anarchism-by-adamas">
+   Note to the article “Individualism and Anarchism” by Adamas
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-on-syndicalism">
+   On Syndicalism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-reformism">
+   Reformism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-the-revolutionary-haste">
+   The Revolutionary “Haste”
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-revolution-in-practice">
+   Revolution in Practice
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-a-talk-about-anarchist-communism-between-two-workers">
+   A Talk About Anarchist Communism Between Two Workers
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-towards-anarchism">
+   Towards Anarchism
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-the-tragic-bandits">
+   The Tragic Bandits
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/donald-rooum-and-freedom-press-ed-what-is-anarchism-an-introduction">
+   What Is Anarchism? An Introduction
+   </a>
+  </li>
+   
+  <li>
+   <a href="/library/errico-malatesta-what-is-to-be-done">
+   What is to be done?
+   </a>
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

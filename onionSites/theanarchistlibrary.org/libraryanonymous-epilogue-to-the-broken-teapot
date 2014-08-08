@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Epilogue to The Broken Teapot (Anonymous) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/anonymous-epilogue-to-the-broken-teapot?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=anonymous-epilogue-to-the-broken-teapot">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Epilogue to The Broken Teapot
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/anonymous">Anonymous</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    Spring 2014
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/accountability">accountability</a>
+        <a href="/topics/violence">violence</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retreived on July 6, 2014 from <a href="http://anarchistnews.org/content/broken-teapot-epilogue">http://anarchistnews.org/content/broken-teapot-epilogue</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="anonymous-epilogue-to-the-broken-teapot.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="anonymous-epilogue-to-the-broken-teapot.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="anonymous-epilogue-to-the-broken-teapot.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="anonymous-epilogue-to-the-broken-teapot.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="anonymous-epilogue-to-the-broken-teapot?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="anonymous-epilogue-to-the-broken-teapot.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="anonymous-epilogue-to-the-broken-teapot.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Anonymous</h2>
+	
+	<h1 id="textttitleh">Epilogue to The Broken Teapot</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p><em>Half a dozen lessons I might never learn, not until them troubles come around...</em><a href="#fn1" class="footnote" id="fn_back1">[1]</a>
+</p><p>First off, this zine was meant to be descriptive not prescriptive, although I own the suggestions I’ve laid out and continue to hold to them. The hope was that the zine would encourage contextual, thoughtful and critical responses to rape and abuse. It should be possible within anarchist circles to have critical reflection about the use of essentialist categories without being accused of being a rape apologist. We are all holding on so tight to these labels and I think it is apparent that they are not working for us.
+</p><p>The zine was meant to parse out what wasn’t working about our ever-expanding definition of rape and assault. It was an attempt to call the innate judicial reasoning behind accountability processes into question. It was meant as a critique of innocence and guilt, not an attack on people who identify as survivors.
+</p>
+<blockquote>
+<p>When we rely on appeals to innocence, we foreclose a form of resistance that is outside the limits of law, and instead ally ourselves with the State ...When people identify with their victimization, we need to critically consider whether it is being used as a tactical maneuver to construct themselves as innocent and exert power without being questioned. That does not mean delegitimizing the claims made by survivors— but rather, rejecting the framework of innocence, examining each situation closely, and being conscientious of the multiple power struggles at play in different conflicts. <a href="#fn2" class="footnote" id="fn_back2">[2]</a>
+</p></blockquote>
+<p>Giving voice to the “multiple power struggles” at play is an uncomfortable process. Many people have offered feedback that they did not like the zine because it perpetuates the myth that abuse is a dynamic between two people and that feels like blaming the victim. It was never my intention to downplay the pain of abuse. I do, however, think that abuse is participatory and that it is useful to understand it as such in order to heal. My criticism of an essentialist understanding of victim or survivor is twofold: first, not everyone uses those categories with honesty or transparency, and second, even when they do, I am not sure that these identities really help you heal.
+</p><p>Personally, I don’t find it helpful to think of myself as a victim or survivor. I realize that the identity of survivor was meant to address the focus on passivity that occurs with the term victim, but in practice I think the two terms are not always well delineated and the same associations and assumptions often accrue. These identities make me the subject, the passive receiver, of another’s violence or abuse. In that reading of the situation, the power to end the cycle lies firmly with the active party, the “abuser.” That is a balance of power that I am uncomfortable with. In order to not feel completely helpless it has been necessary for me to honestly reflect on the parts that I played in unhealthy dynamics and violent situations because those are the things that I have the ability to change.
+</p><p>I started writing about accountability because I was grappling with why I felt so angry that I was supposed to identify myself as the right kind of victim in order to get support. It made me angry because I did not want to continue to be defined in relation to someone who had taken so much from me. I could not continue that relationship; in order to put myself back together I needed to cut all ties. I also could not wait for the person who harmed me to redress their ways before I began to heal. It wasn’t realistic. I would have waited forever.
+</p><p>Think of what your body does when you cut yourself. Along with blood clotting and the immune response, your body builds a network of collagen to isolate the wound site. This allows white blood cells to clean up the area without spreading the infection. Continuing to define yourself by the pain that others have caused you creates dehiscence and keeps the wound open.
+</p><p>Accountability is so tied up in adjudication and external affirmations, or condemnations, that it can be very hard to modulate and process shifting feelings as you go through different stages of healing. Being someone’s rape victim or survivor of abuse is not emotionally healthy. Every time a scar starts to form some part of the community process requires you to reference back to the initial pain as if it were new, and the scab gets ripped off. This can lead to chronic inflammation that can go systemic and eventually poison other relationships in your life.
+</p><p>Community processes that offer support based on victimization lend themselves to focusing and fixating on painful experiences. I have been raped. I was in an abusive relationship, and when I left I was stalked. Those experiences disrupted my life for a long time. I did not deserve to be treated that way, but I was not a passive participant. Being honest about participatory abuse is not the same as self-recrimination, and analyzing unhealthy dynamics is not a form of self-blame—it’s a form of self-reflection.
+</p><p>I have a hard time understanding why people are so offended at the idea that abuse is participatory because it was the epiphany that I was also responsible for my terrible caustic relationship that allowed me to leave. I stayed in a damaging relationship for so much longer than I should have, even after I realized it was abusive, under the absurd delusion that we were going to “end cycles of violence” together. We weren’t ending any fucking cycles, we were continuing them.
+</p><p>Until I rediscovered my agency I was totally paralyzed. How could I ever feel safe if nothing I had done contributed to the abuse? What could I change about the way I loved? Did I just need to implicitly know if people had that tendency in them?
+</p><p>How do you pick “undamaged” lovers? How could I ever fall in love, and more importantly break up with anyone again, without being afraid? Different choices along the way could have kept things from getting so fucking crazy at the end, and it is both naïve and dangerous to pretend otherwise. Acknowledging that doesn’t mean I deserved to be mistreated or stalked; but it does mean that because I understand the bad choices I made, I can make better ones in the future.
+</p><p>I realize the rejection of victim or survivor identity is harder to stomach when it comes to violent sexual assault, but even with rape one can go through a process of critical reflection. This, of course, does not absolve the assaulter from responsibility. No one deserves to be sexually assaulted or is ever to blame for being raped. We must differentiate blame from self-reflection. In order to move on with my life and regain the ability to work and travel alone it has helped me to focus on the things I have concrete control over. It has been useful to take stock of what kind of situations I put myself in, who I trust, what kind of contingency plans I make and what weapons I am actually comfortable using. Will being proactive about these kinds of considerations keep me from all future harm? Probably not—it’s a fucked up world out there. Will these considerations give me a more grounded sense of control and remind me of my own power to deal with and affect the course of potential violence? Yes, I think so. This of course brings us to the issue of retaliatory violence and the zine being criticized for “glorifying violence.”
+</p><p>I think Stokely Carmichael got the heart of why we must be wary of moral narratives about violence:
+</p>
+<blockquote>
+<p>The way the oppressor tries to stop the oppressed from using violence as a means to attain liberation is to raise ethical or moral questions about violence. I want to state emphatically here that violence in any society is neither moral nor is it ethical. It neither right, nor is it wrong. It is just simply a question of who has the power to legalize violence. <a href="#fn3" class="footnote" id="fn_back3">[3]</a>
+</p></blockquote>
+<p>I don’t have an absolute moral or ethical justifier for retaliatory violence, because one should never work in tactical absolutes. No solution or approach will be appropriate all the time. All I can do is clarify in what context retaliatory violence makes sense to me. I think people who are violently physically assaulted should be able to beat their rapist. However it is essential to understand karmic/proportional retribution.
+</p><p>I don’t think retaliatory violence is appropriate for situations that were not physically violent. Responding to physical violence with physical violence is understandable but responding to gray area miscommunications of consent with physical violence is manipulative and unnecessary. I also do not think it is appropriate to ask others to enact violence if you cannot bring yourself to participate. If you can’t do it yourself (with help), then you need to pick a different kind of revenge. The point is catharsis, isn’t it? A beating will send a direct message, but nothing can really communicate the experience of rape—only the anger and despair that come afterward.
+</p><p>Violence should be approached with humility and as a final resort. It is worth noting that it may not make you feel better, it may make you feel worse—it’s hard to know beforehand. Revenge is intimate, and not always healthy. Protracted campaigns of shame and intimidation continue to tie you emotionally and psychologically to the person who hurt you. At some point the best revenge is separating yourself in the ways you can and trying to live a happy life. This doesn’t mean you have to forgive to heal. I hold to my bitterness because it keeps me safe, but because I do not expect others to join me in that hatred it has been easier, with the passage of time, to let some of the pain recede.
+</p><p>To those who feel I gave up on transformative justice too soon, perhaps I did. I think if I lived in a different kind of community I would have more faith in transformative justice. I have heard that these models have worked in other kinds of communities. Within the anarchist scenes of North America however, I just don’t see the cohesion, gentleness or longevity required for transformative processes to work. People are too transient. I am not an optimist at a structural level. It’s not something I am particularly proud of so perhaps I shouldn’t be suggesting others accept my dismal assessment of anarchist “community.”
+</p><p>Really the discourse of transformative justice is hard for me to take at face value because the person I was in an abusive relationship with was very adept at using that kind of language in a manipulative manner, while the person who raped me had absolutely no point of reference for anything so radical. “Breaking cycles of abuse” is an enticing and lofty goal but sometimes I fear that all it means is that we put tons of time and energy into pieces of shit who will never address their socialization. At what point is it just not your fucking problem anymore?
+</p><p>This of course gets to the heart of most people’s problem with the zine. It was criticized for not offering a productive solution. I admit, I don’t have one; there is no one solution. A tendency towards myopic essentialism got us into this mess, a fancy rewriting of the survivor/perpetrator dualism with slightly more nuance sure as hell isn’t going to get us out. We should be discussing what consent really means.
+</p><p>We have done a good job of defining healthy sex as an active yes—and not just the absence of no, but is that really a standard we practice and how do we hold people to it? If consent is a continual process what expectations do we have about how no gets communicated? Intimacy is complicated and we are all damaged in our own way.
+</p><p>Who is responsible for identifying when yes becomes no? I would like to propose that we are responsible not only for obtaining a yes from our lovers before proceeding and keeping those lines of communication open but, more importantly, we are responsible for vocalizing our own yes or no. We need to redefine healthy consent as communicating our sexual needs in a proactive manner.
+</p><p>If that doesn’t happen we should be able to say, “you didn’t notice I was dissociating, can we talk about PTSD and trauma?” That conversation seems more productive to me than, “you raped me because you didn’t notice I checked out, even though I didn’t say no.” It needs to be okay to make mistakes and we need a language for hurt that doesn’t default to the worst kind of hurt ever. Hyperbolic language leads to a ranking of pain. Does everything need to be called assault or rape before we help our friends work through it? We need an intermediary language, something between “that was perfectly communicated every step of the way,” and “you assaulted me.”
+</p><p>At a spiritual level it is important to ask why couldn’t I vocalize my needs? What kinds of conversations, or partners, do I need in order to do that? We should not expect our lovers to read our minds. We need to make contingency plans. Healthy sex should involve telling your lovers what you want them to do when you check out. We are all responsible for our own happiness, pleasure and safety—these things are too important to outsource.
+</p><p>As for getting through the dark days, the only concrete advice I can give about sorting through the pain of assault or abuse is don’t turn to a larger community for support—turn to your friends, your chosen family and a therapist (if you believe in them). Don’t expect that people who were not already close to you will understand the situation or be able to respond or empathize in a way that feels good to you. They probably won’t. Get as far away from the person who hurt you as humanly possible and don’t take on their fucking process. Settle into the isolation and pain, because it’s going to be with you for a long time. Understand your part in the experience not because you deserved it, or because you were to blame for it, but understand your part so you can play a different, healthier, role in the future.
+</p><p>Ultimately, I think I have come back to a state of relative homeostasis again because I took the time to consider what parts of the abuse and rape were mine to carry and which ones weren’t. The process has been slow and painful. I think I began to heal when I stopped caring so much when, or if, it happened. I made my peace with being broken, and as I accepted the damage the scars slowly keratinized. I no longer care if the people who hurt me have become less caustic, because I am not responsible for them. I also don’t care if people who are not close to me understand what happened. Accountability processes are much too tied into social currency, reputation and propriety. I will not be held hostage to the theoretical dictates of a false anarchist “community.” I try and hold myself accountable to the community of people I have real ties to—those I parent, work and struggle with. Beyond that circle I have found the idea of accountability doesn’t hold up well under strain. It’s not that I don’t believe in accountability—I do, just with a little “a.”
+</p>
+<hr />
+<p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> Gillian Welch. “Only One and Only.” Revival, Alamo Sounds, 1996.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Wang, Jackie. “Against Innocence: Race, Gender, and the Politics of Safety.” LIES: A Journal of Materialist Feminism Volume 1, 2012, pg 162.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> Carmichael, Stokely. Stokely Speaks: Black Power Back to Pan-Africanism. New York: Random House, 1972.
+</p>
+<hr />
+<p>Original Zine: <a href="http://theanarchistlibrary.org/library/anonymous-the-broken-teapot">The Broken Teapot</a>
+</p><p>Contact: <a href="mailto:thebrokenteapot@riseup.net">thebrokenteapot@riseup.net</a>
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

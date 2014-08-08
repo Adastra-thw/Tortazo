@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" xml:lang="ru-RU">
+<head>
+	<script type="text/javascript">var page_start = new Date();</script>    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="kewfPZRKi6SaOAaeUDSQw9AawbOKWiyEOyp2-lMxXBQ" />
+			    <title>Справка LinkedIn. Проверка данных пользователя...</title>
+        
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='http://ru.help.linkedin.com/euf/rightnow/optimized/1406595505/themes/linkedin/'></base>
+<link href='/euf/rightnow/optimized/1406595505/pages/utils/auth.themes.linkedin.SITE.css' rel='stylesheet' type='text/css' media='all' />
+<style type="text/css">.rn_RightNowLogo a{background:url(/euf/rightnow/images/PoweredByOracle.png) no-repeat scroll right 0 !important;display:block !important;height:29px !important;width:134px !important;}
+.rn_RightNowLogo a:focus, .rn_RightNowLogo a:hover{background-position:right -37px !important;}
+</style>
+
+	<link rel="shortcut icon" type="image/ico" href="/euf/assets/images/favicons/v1/favicon.ico">
+	<script type="text/javascript">	document.cookie = "realreferrer="+encodeURIComponent(document.referrer)+"; path=/";
+	</script>
+</head>
+<body>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+<script>
+var api_callback = 'http://ru.help.linkedin.com/app/answers/detail/a_id/38188/related/1';
+var api_key = 'uq9789xsg6uf';
+</script>
+<div class="loading center">
+	<span id="message"></span>
+</div>
+<div id="passthrough_link" class="center">
+	Вы будете переадресованы автоматически. Если переадресация займет много времени, нажмите <a href="/app/utils/log_error/et/0/ec/7/callback/http%3A%2F%2Fru.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F38188%2Frelated%2F1%2Ffrom_auth%2Ftrue">здесь</a>, чтобы продолжить.</div>
+<noscript>
+	<div class="noscript center">
+		Для использования Справки необходимо включить Javascript.<br><meta http-equiv="refresh" content="5; url=/app/utils/log_error/et/0/ec/6/callback/http%3A%2F%2Fru.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F38188%2Frelated%2F1%2Ffrom_auth%2Ftrue">Вы будете переадресованы автоматически через 5 секунд. Вы также можете нажать <a href="/app/utils/log_error/et/0/ec/5/callback/http%3A%2F%2Fru.help.linkedin.com%2Fapp%2Fanswers%2Fdetail%2Fa_id%2F38188%2Frelated%2F1%2Ffrom_auth%2Ftrue">здесь</a>, чтобы продолжить.	</div>
+</noscript>
+<script type="text/javascript">
+	var i18n_string = '%7B%22CP_RPT_LBL_SH_SUBJECT%22%3A%22%5Cu0422%5Cu0435%5Cu043c%5Cu0430+%5Cu0437%5Cu0430%5Cu043f%5Cu0440%5Cu043e%5Cu0441%5Cu0430%22%2C%22CP_RPT_LBL_SH_STATUS%22%3A%22%5Cu0421%5Cu0442%5Cu0430%5Cu0442%5Cu0443%5Cu0441%22%2C%22CP_RPT_LBL_SH_LAST_UPDATED%22%3A%22%5Cu041e%5Cu0431%5Cu043d%5Cu043e%5Cu0432%5Cu043b%5Cu0435%5Cu043d%22%2C%22CP_RPT_LBL_ANS_LAST_UPDATED%22%3A%22%5Cu041e%5Cu0431%5Cu043d%5Cu043e%5Cu0432%5Cu043b%5Cu0435%5Cu043d%22%2C%22CP_RPT_DATA_SH_CLOSED%22%3A%22%5Cu0417%5Cu0430%5Cu043a%5Cu0440%5Cu044b%5Cu0442%22%2C%22CP_RPT_DATA_SH_OPEN%22%3A%22%5Cu041e%5Cu0442%5Cu043a%5Cu0440%5Cu044b%5Cu0442%22%2C%22CP_RPT_DATA_SH_WOM%22%3A%22%5Cu041e%5Cu0436%5Cu0438%5Cu0434%5Cu0430%5Cu0435%5Cu0442+%5Cu043e%5Cu0442%5Cu0432%5Cu0435%5Cu0442%5Cu0430+%5Cu043f%5Cu043e%5Cu043b%5Cu044c%5Cu0437%5Cu043e%5Cu0432%5Cu0430%5Cu0442%5Cu0435%5Cu043b%5Cu044f%22%2C%22CP_RPT_DATA_SH_ISSUE_FILED%22%3A%22%5Cu0421%5Cu043e%5Cu043e%5Cu0431%5Cu0449%5Cu0435%5Cu043d%5Cu0438%5Cu0435+%5Cu043e+%5Cu043f%5Cu0440%5Cu043e%5Cu0431%5Cu043b%5Cu0435%5Cu043c%5Cu0435+%5Cu043e%5Cu0442%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043b%5Cu0435%5Cu043d%5Cu043e%22%2C%22CP_RPT_DATA_SH_FEEDBACK_FILED%22%3A%22%5Cu041e%5Cu0442%5Cu0437%5Cu044b%5Cu0432+%5Cu043e%5Cu0442%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043b%5Cu0435%5Cu043d%22%2C%22CP_AUTH_JS_LOADING_CONNECT_LIBRARY%22%3A%22%5Cu0417%5Cu0430%5Cu0433%5Cu0440%5Cu0443%5Cu0437%5Cu043a%5Cu0430+%5Cu0431%5Cu0438%5Cu0431%5Cu043b%5Cu0438%5Cu043e%5Cu0442%5Cu0435%5Cu043a%5Cu0438...%22%2C%22CP_AUTH_JS_CHECKING_ACCOUNT_STATUS%22%3A%22%5Cu041f%5Cu0440%5Cu043e%5Cu0432%5Cu0435%5Cu0440%5Cu043a%5Cu0430+%5Cu0443%5Cu0447%5Cu0435%5Cu0442%5Cu043d%5Cu043e%5Cu0439+%5Cu0437%5Cu0430%5Cu043f%5Cu0438%5Cu0441%5Cu0438...%22%2C%22CP_AUTH_JS_FETCHING_PROFILE_INFORMATION%22%3A%22%5Cu041f%5Cu043e%5Cu043b%5Cu0443%5Cu0447%5Cu0435%5Cu043d%5Cu0438%5Cu0435+%5Cu0438%5Cu043d%5Cu0444%5Cu043e%5Cu0440%5Cu043c%5Cu0430%5Cu0446%5Cu0438%5Cu0438+%5Cu0438%5Cu0437+%5Cu043f%5Cu0440%5Cu043e%5Cu0444%5Cu0438%5Cu043b%5Cu044f...%22%2C%22CP_AUTH_JS_LOADING_THE_HELP_CENTER%22%3A%22%5Cu0417%5Cu0430%5Cu0433%5Cu0440%5Cu0443%5Cu0437%5Cu043a%5Cu0430+%5Cu0421%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043a%5Cu0438...%22%2C%22CP_TABLE_FIELD_Thread%22%3A%22%5Cu0412%5Cu0432%5Cu0435%5Cu0434%5Cu0438%5Cu0442%5Cu0435+%5Cu0442%5Cu0435%5Cu043a%5Cu0441%5Cu0442%22%2C%22CP_REQUIRED%22%3A%22%5Cu043e%5Cu0431%5Cu044f%5Cu0437%5Cu0430%5Cu0442%5Cu0435%5Cu043b%5Cu044c%5Cu043d%5Cu043e%22%2C%22CP_INVALID%22%3A%22%5Cu043d%5Cu0435%5Cu0432%5Cu0435%5Cu0440%5Cu0435%5Cu043d%22%2C%22CP_UPLOADING%22%3A%22%5Cu0417%5Cu0430%5Cu0433%5Cu0440%5Cu0443%5Cu0437%5Cu043a%5Cu0430%22%2C%22CP_SUBMITTING%22%3A%22%5Cu041e%5Cu0442%5Cu043f%5Cu0440%5Cu0430%5Cu0432%5Cu043a%5Cu0430%22%2C%22CP_FORM_IS_ABOUT_TO_EXPIRE%22%3A%22%5Cu0421%5Cu0440%5Cu043e%5Cu043a+%5Cu0434%5Cu0435%5Cu0439%5Cu0441%5Cu0442%5Cu0432%5Cu0438%5Cu044f+%5Cu0444%5Cu043e%5Cu0440%5Cu043c%5Cu044b+%5Cu0438%5Cu0441%5Cu0442%5Cu0435%5Cu043a%5Cu0430%5Cu0435%5Cu0442.+%5Cu041f%5Cu043e%5Cu0434%5Cu0442%5Cu0432%5Cu0435%5Cu0440%5Cu0434%5Cu0438%5Cu0442%5Cu0435%2C+%5Cu0447%5Cu0442%5Cu043e+%5Cu0445%5Cu043e%5Cu0442%5Cu0438%5Cu0442%5Cu0435+%5Cu043f%5Cu0440%5Cu043e%5Cu0434%5Cu043e%5Cu043b%5Cu0436%5Cu0438%5Cu0442%5Cu044c+%5Cu0435%5Cu0451+%5Cu0437%5Cu0430%5Cu043f%5Cu043e%5Cu043b%5Cu043d%5Cu0435%5Cu043d%5Cu0438%5Cu0435.%22%7D';
+</script>
+<span id="rn_RightNowLogo_1" class="rn_RightNowLogo">
+<a href="http://www.oracle.com/rightnowcx" target="_blank"  title="Powered By Oracle"><span class="rn_ScreenReaderOnly">Powered By Oracle</span></a>
+</span>
+<script type="text/javascript" src="/euf/rightnow/js/13.11.0.1.4.122/min/RightNow.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(5);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+(\\.[.]?[-_!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435","INFORMATION_LBL":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f","HELP_LBL":"\u0421\u043f\u0440\u0430\u0432\u043a\u0430","ERROR_REQUEST_ACTION_COMPLETED_MSG":"\u041f\u0440\u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0438 \u0437\u0430\u043f\u0440\u043e\u0441\u0430 \u043f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u043e\u0448\u0438\u0431\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0430.","OK_LBL":"\u041e\u041a","DIALOG_LBL":"\u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0435 \u043e\u043a\u043d\u043e","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"\u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0435 \u043e\u043a\u043d\u043e, \u043f\u0440\u043e\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0442\u0435\u043a\u0441\u0442 \u0432\u044b\u0448\u0435 \u0434\u043b\u044f \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0433\u043e \u043e\u043a\u043d\u0430","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u041d\u0430\u0447\u0430\u043b\u043e \u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0433\u043e \u043e\u043a\u043d\u0430, \u0437\u0430\u043a\u0440\u043e\u0439\u0442\u0435 \u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0435 \u043e\u043a\u043d\u043e \u043f\u0435\u0440\u0435\u0434 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0435\u043d\u0438\u0435\u043c","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"\u041d\u0430\u0447\u0430\u043b\u043e \u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0433\u043e \u043e\u043a\u043d\u0430, \u0437\u0430\u043a\u0440\u043e\u0439\u0442\u0435 \u0434\u0438\u0430\u043b\u043e\u0433\u043e\u0432\u043e\u0435 \u043e\u043a\u043d\u043e \u043f\u0435\u0440\u0435\u0434 \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0435\u043d\u0438\u0435\u043c","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"\u041f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u043e\u0448\u0438\u0431\u043a\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0444\u043e\u0440\u043c\u044b \u0432 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0435 \u043d\u0435\u0432\u0435\u0440\u043d\u043e\u0433\u043e \u0432\u0432\u043e\u0434\u0430 \u0434\u0430\u043d\u043d\u044b\u0445.","ERR_SUBMITTING_SEARCH_MSG":"\u0412\u043e\u0437\u043d\u0438\u043a\u043b\u0430 \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u043f\u0440\u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0438 \u0432\u0430\u0448\u0435\u0433\u043e \u0437\u0430\u043f\u0440\u043e\u0441\u0430.  \u0418\u0437\u043c\u0435\u043d\u0438\u0442\u0435 \u043f\u043e\u0438\u0441\u043a\u043e\u0432\u044b\u0439 \u0437\u0430\u043f\u0440\u043e\u0441 \u0438 \u043f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u0435 \u043f\u043e\u043f\u044b\u0442\u043a\u0443.","CLOSE_CMD":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","BACK_LBL":"\u041d\u0430\u0437\u0430\u0434"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w]+(\\.[-!#$%&'*+\/=?^~`{|}\\w]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"ru.help.linkedin.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"Au1DOg_l","uh":"6350f1c9","uc":"ru.help.linkedin.com\/app\/utils\/auth","b":"ca34356","i":"linkedin:linkedin_ru","f":"rnw","p":"Customer Portal","v":"13.11.0.1-b122-sp4","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca34356/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+<script type='text/javascript' src='/euf/assets/javascript/get-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/json-min.js'></script>
+<script type='text/javascript' src='/euf/assets/javascript/Auth.js'></script>
+</body>
+</html>

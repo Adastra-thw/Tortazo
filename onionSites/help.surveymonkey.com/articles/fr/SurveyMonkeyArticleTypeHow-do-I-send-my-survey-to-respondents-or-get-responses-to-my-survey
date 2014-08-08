@@ -1,0 +1,247 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/fr/SurveyMonkeyArticleType/How-do-I-send-my-survey-to-respondents-or-get-responses-to-my-survey","l":"fr","id":"kA030000000hhIrCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"Les bases pour bien commencer"},{"subcats":[],"name":"creating-designing-surveys","label":"Conception du sondage"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"Distribuer des sondages"},{"subcats":[],"name":"analyzing-results","label":"Analyse des réponses"},{"subcats":[],"name":"managing-account","label":"Gestion du compte"},{"subcats":[],"name":"contact-us","label":"Contactez le Centre d’aide"}],"language":"fr"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[num] résultats pour [term]';
+    var showingForLabel = 'Résultats pour [term]';
+    var loadingLabel = 'Chargement en cours ...';
+    var dymLabel = 'Essayez avec cette orthographe: [term]';
+    var stKey = 'Bex6QUdpD2S6MQyVkdfV';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>Collecter les r&eacute;ponses apport&eacute;es aux sondages</title>
+  <link href="http://help.surveymonkey.com/articles/fr/kb/How-do-I-send-my-survey-to-respondents-or-get-responses-to-my-survey" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'fr';
+ var cx = '013440216857884837477:es57noojsro';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"fr"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 fr"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 fr"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 fr"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 fr"><![endif]-->
+<!--[if gt IE 9]><body class="fr"><![endif]-->
+<body class="fr">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://fr.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">Se connecter</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-fr" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">R&eacute;duire toutes les sections</div>
+  <div id="expandLabel" style="display:none">D&eacute;velopper toutes les sections</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">Collecter les réponses apportées aux sondages
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><table border="0" width="100%"><tbody><tr style="background-color: rgb(255,255,204);"><td colspan="1" rowspan="1">
+				<h3>
+					   Problèmes fréquents :</h3>
+				<div>
+					    <img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <a href="http://help.surveymonkey.com/articles/fr/kb/Why-is-my-link-going-to-a-different-page-e-g-landing-page-thank-you-advertisement-etc" target="_blank">Le lien du sondage renvoie directement à la page de remerciement</a><br>					    <img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <a href="http://help.surveymonkey.com/articles/fr/kb/Respondents-say-they-submitted-the-survey-but-I-don-t-see-it" target="_blank">Les réponses envoyées ne sont pas enregistrées</a><br>					    <img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <a href="http://help.surveymonkey.com/articles/fr/kb/Is-SurveyMonkey-blocked-as-spam-because-some-respondents-did-not-receive-my-invitation" target="_blank">Les personnes interrogées n’ont pas reçu d’invitation par courrier électronique</a><br>					 </div>
+			</td></tr></tbody></table>
+<h3>
+	Dans cet article</h3>
+<ul><li>
+		<a href="#part1">Qu&#39;est-ce qu&#39;un collecteur ?</a></li><li>
+		<a href="#part2">Astuces à prendre en compte avant d&#39;envoyer un sondage</a></li><li>
+		<a href="#part3">Options de diffusion des sondages</a></li><li>
+		<a href="#part4">Vidéo : l&#39;art et la manière de recueillir des réponses (en anglais uniquement)</a></li></ul>
+<h3 id="part1">
+	Qu&#39;est-ce qu&#39;un collecteur ?</h3>
+<br>Un <strong>collecteur</strong> est un outil permettant de recueillir des réponses. SurveyMonkey propose 5 types de collecteurs, vous permettant de recueillir simultanément des réponses de diverses manières. Si vous disposez de l&#39;abonnement BASIC gratuit, vous pouvez créer 3 collecteurs par sondage. Vous pouvez créer un nombre illimité de collecteurs par sondage si vous disposez d’un abonnement payant, quel qu’il soit.
+<h3 id="part3">
+	<span style="font-size: 12px;">La manière dont vous diffusez votre sondage dépend du type de collecteur sélectionné :</span></h3>
+<ol><li>
+		<a href="http://help.surveymonkey.com/articles/fr/kb/How-do-I-create-a-web-link-or-URL-for-my-survey" target="_blank">Lien Web</a>
+		<ul><li>
+				Crée une URL universelle pour diffuser votre sondage via votre propre client de messagerie, par message instantané, via votre site Web, dans un bulletin d&#39;information, etc.</li><li>
+				Enregistre par défaut des réponses anonymes. Utilisez des <a href="http://help.surveymonkey.com/articles/fr/kb/What-are-custom-variables-and-how-do-I-use-them" target="_blank">variables personnalisées</a> ou une question de type <a href="http://help.surveymonkey.com/articles/fr/kb/Do-you-have-a-demographic-type-question" target="_blank">démographique</a> pour suivre les personnes interrogées.</li></ul>
+	</li><li>
+		<a href="http://help.surveymonkey.com/articles/fr/kb/How-do-I-send-a-survey-through-SurveyMonkey-s-Email-Invitation-Collector" target="_blank">Courrier électronique</a>
+		<ul><li>
+				Envoyez votre sondage via le système de publipostage de SurveyMonkey.</li><li>
+				Ajoutez des destinataires, créez un courriel et envoyez le message depuis le collecteur.</li><li>
+				Un lien de sondage unique sera généré pour chaque destinataire, ce qui signifie que chaque réponse sera liée à l&#39;adresse électronique d&#39;où elle provient.</li><li>
+				Visualisez l&#39;état des réponses à tout moment et <a href="http://help.surveymonkey.com/articles/fr/kb/Can-I-send-a-reminder-email-to-those-that-have-not-yet-responded" target="_blank">envoyez un courriel de rappel</a> à celles et ceux qui n&#39;ont pas encore répondu.</li></ul>
+	</li><li>
+		<a href="http://help.surveymonkey.com/articles/fr/kb/How-do-I-embed-a-survey-or-have-it-open-in-a-popup-window-on-my-site" target="_blank">site Web</a>
+		<ul><li>
+				Crée un code permettant d&#39;intégrer le sondage à votre propre site Web ou de le faire apparaître dans une fenêtre contextuelle.</li></ul>
+	</li><li>
+		<a href="http://help.surveymonkey.com/articles/fr/kb/How-can-I-use-Facebook-to-distribute-a-survey" target="_blank">Facebook</a>
+		<ul><li>
+				Partagez l&#39;URL du sondage sur votre mur Facebook.</li></ul>
+	</li><li>
+		Public ciblé
+		<ul><li>
+				Achetez des réponses auprès d&#39;un groupe démographique précis via l&#39;option <a href="http://fr.surveymonkey.com/mp/audience/" target="_blank">SurveyMonkey Audience</a>, nous nous chargerons de la diffusion du sondage.</li></ul>
+	</li></ol>
+<h3 id="part2" style="font-size: 13px;">
+	Astuces à prendre en compte avant d&#39;envoyer un sondage</h3>
+<br><img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPqAAI&amp;oid=00D30000001HuKJ"></img> <a href="http://help.surveymonkey.com/articles/fr/kb/Can-I-test-my-survey-before-it-goes-live" target="_blank">Testez le collecteur</a> pour vérifier que l’ensemble de l’expérience offerte par le sondage est configurée selon vos préférences.<br><img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPqAAI&amp;oid=00D30000001HuKJ"></img> Implémentez une <a href="http://help.surveymonkey.com/articles/fr/kb/How-can-I-track-the-names-and-emails-of-respondents" target="_blank">méthode de suivi</a> pour être en mesure de faire correspondre chaque personne interrogée à ses réponses.<br><img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPqAAI&amp;oid=00D30000001HuKJ"></img> Modifiez les paramètres du collecteur pour <a href="http://help.surveymonkey.com/articles/fr/kb/What-settings-allow-multiple-responses-from-one-computer" target="_blank">permettre plusieurs réponses par ordinateur</a> si vous prévoyez que les personnes interrogées répondent au sondage sur un ordinateur partagé.<br><img src="https://c.na1.content.force.com/servlet/servlet.ImageServer?id=01530000002fzPqAAI&amp;oid=00D30000001HuKJ"></img> Si vous disposez d’un abonnement GOLD ou PLATINUM, modifiez les options de <a href="http://help.surveymonkey.com/articles/fr/kb/What-are-the-Survey-Completion-options" target="_blank">fin du sondage</a> pour <a href="http://help.surveymonkey.com/articles/fr/kb/Can-I-redirect-respondents-to-a-different-website-upon-completion" target="_blank">rediriger</a> les personnes interrogées vers votre propre site Web, fermer le navigateur ou faire en sorte que le sondage revienne au début lors de l’envoi d’une réponse.<br><p>
+	Pour un complément d&#39;information sur la collecte des réponses, consultez le didacticiel suivant : <a href="http://help.surveymonkey.com/articles/fr/kb/How-to-collect-responses" target="_blank">Comment collecter des réponses</a></p>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>En savoir plus</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/What-are-Quotas" class="relatedLink">Utilisation des quotas</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-to-collect-responses" class="relatedLink">Comment collecter des r&eacute;ponses au sondage</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/Can-I-print-or-save-the-survey" class="relatedLink">Imprimer ou enregistrer une conception de sondage</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/fr/SurveyMonkeyArticleType/How-to-analyze-results" class="relatedLink">Comment analyser les r&eacute;sultats d&#8217;un sondage</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>Assistance t&eacute;l&eacute;phonique</h4>
+			<p>
+				Passez au niveau sup&eacute;rieur et acc&eacute;dez &agrave; des fonctionnalit&eacute;s extraordinaires comme l'assistance t&eacute;l&eacute;phonique (en anglais uniquement).
+			</p>
+			<a class="upgrade-button-yellow" href="https://fr.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">Mettre votre compte &agrave; niveau</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">Langues&nbsp;:</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://fr.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/aboutus/" target="_blank">&Agrave; propos de nous</a></li>
+					<li><a href="https://fr.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">Politique de confidentialit&eacute;</a></li>
+					
+					
+					<li><a href="/contact-us">Nous contacter</a></li>
+				</ul>
+				<span class="copy">Copyright &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/fr\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/fr/kb/How-do-I-send-my-survey-to-respondents-or-get-responses-to-my-survey';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, 'Collecter les réponses apportées aux sondages', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

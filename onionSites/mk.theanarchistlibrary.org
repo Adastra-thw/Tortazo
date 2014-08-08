@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://mk.theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="Анархистичка библиотека" href="http://mk.theanarchistlibrary.org/rss.xml" />
+   
+   <script type="text/javascript"
+	   src="http://mk.theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+   <link rel="stylesheet" media="all" href="http://mk.theanarchistlibrary.org/css/adaptive.css" />
+   
+   <title>
+     
+     Анархистичка библиотека | Архива на анархистичка литература   </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="информации и контакти">За библиотеката</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Други јазици</a>
+	 <ul id="sec-nav-submenu">
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+           <!--
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+           -->
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+<!--       
+       <li><a href="/special/distro" 
+	      
+	      title="дистрибуција">Distro</a>
+       </li>
+  -->
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="помош, документација, лични страници...(на англиски)">
+	   Вики
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Креирај PDF">
+	   Направи збирка
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Случајна страница</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Барај" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="Анархистичка библиотека" href="/">
+	      <img 
+		 title="Анархистичка библиотека"
+		 alt="Анархистичка билиотека" src="/images/titlebanner-mk.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="Текстови според автор">Автори</a></li>
+	    <li><a href="/library"
+		   
+		   title="Текстови според наслов">Наслови</a></li>
+	    <li><a href="/topics"
+		   
+		   title="Текстови според теми">Теми</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Додади нов текст во библиотеката">
+		Додади во библиотека
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+
+
+<div id="recenttexts">
+<h3>Последни записи</h3>
+<ul id="listrecenttexts">
+  
+  <li><a href="/library/dmp-otade-dvijenjeto-anarhija">Отаде ’Движењето‘ - Анархија!</a>
+     — DMP
+  </li>
+  
+  <li><a href="/library/dzhejson-mekvin-postlevicharska-anarhijaa">Постлевичарска анархија</a>
+     — Џејсон Меквин
+  </li>
+  
+  <li><a href="/library/crn-blok-nvo-sektorot-trojanski-konj-na-kapitalizmot">НВО секторот: тројански коњ на капитализмот</a>
+     — Црн Блок
+  </li>
+  
+  <li><a href="/library/dzhon-zerzan-zoshto-nadej">Зошто надеж?</a>
+     — Џон Зерзан
+  </li>
+  
+  <li><a href="/library/dzhordzh-vudkok-tiranijata-na-chasovnikot">Тиранијата на часовникот</a>
+     — Џорџ Вудкок
+  </li>
+  
+  <li><a href="/library/ema-goldman-jenskoto-pravo-na-glas">Женското право на глас</a>
+     — Ема Голдман
+  </li>
+  
+  <li><a href="/library/ema-goldman-brak-i-ljubov">Брак и љубов</a>
+     — Ема Голдман
+  </li>
+  
+  <li><a href="/library/ema-goldman-malcinstvoto-protiv-mnozinstvoto">Малцинството против мнозинството</a>
+     — Ема Голдман
+  </li>
+  
+  <li><a href="/library/petar-kropotkin-za-redot">За редот</a>
+     — Петар Кропоткин
+  </li>
+  
+  <li><a href="/library/petar-kropotkin-poraka-do-chehoslovachkite-rabotnici">Порака до чехословачките работници</a>
+     — Петар Кропоткин
+  </li>
+  
+  <li><a href="/library/petar-kropotkin-poraka-do-zapadnoevropskite-rabotnici">Порака до западноевропските работници</a>
+     — Петар Кропоткин
+  </li>
+  
+  <li><a href="/library/hristos-cakalos-direktnata-neodlojnost-na-napadot">Директната неодложност на нападот</a>
+     — Христос Цакалос
+  </li>
+  
+  <li><a href="/library/nikola-gai-neophodnosta-od-napad">Неопходноста од напад</a>
+     — Никола Гаи
+  </li>
+  
+  <li><a href="/library/l-fragment-nasilstvo">Фрагмент: насилство</a>
+     — Л
+  </li>
+  
+  <li><a href="/library/hakim-bej-paz-privremeno-avtonomna-zona-ontoloshka-anarhija-poetski-terorizam">ПАЗ: Привремено автономна зона, онтолошка анархија, поетски тероризам</a>
+     — Хаким Беј
+  </li>
+  
+  <li><a href="/library/anon-bez-ispukan-kurshum">Без испукан куршум</a>
+     — Anon
+  </li>
+  
+  <li><a href="/library/huan-levadura-nabavi-revolver">Набави револвер!</a>
+     — Хуан Левадура
+  </li>
+  
+  <li><a href="/library/lorens-dzharach-levicharstvo-za-pochetnici">Левичарство за почетници</a>
+     — Лоренс Џарач
+  </li>
+  
+  <li><a href="/library/lorens-dzharach-anarhisti-ne-dozvoluvajte-levicata-da-vi-go-rasipe-raspolojenieto">Анархисти, не дозволувајте левицата да ви го расипе расположението</a>
+     — Лоренс Џарач
+  </li>
+  
+  <li><a href="/library/piter-gelderlus-fashistite-se-prodoljena-raka-na-drjavata">Фашистите се продолжена рака на државата</a>
+     — Питер Гелдерлус
+  </li>
+  
+  <li><a href="/library/teodor-kachinski-industriskoto-opshtestvo-i-negovata-idnina">Индустриското општество и неговата иднина</a>
+     — Теодор Качински
+  </li>
+  
+  <li><a href="/library/piter-lamborn-vilson-protiv-multikulturalizmot">Против мултикултурализмот</a>
+     — Питер Ламборн Вилсон
+  </li>
+  
+  <li><a href="/library/masimo-pasamani-ne-nudime-nishto">Не нудиме ништо</a>
+     — Масимо Пасамани
+  </li>
+  
+  <li><a href="/library/volfi-landstrajker-varvarski-razmisli">Варварски размисли</a>
+     — Волфи Ландстрајкер
+  </li>
+  
+  <li><a href="/library/dzhon-zerzan-shto-e-anarhizam">Што е анархизам?</a>
+     — Џон Зерзан
+  </li>
+  
+  <li><a href="/library/pjer-klastr-slobodata-nesrekjata-i-bezimenoto">Слободата, несреќата и безименото</a>
+     — Пјер Кластр
+  </li>
+  
+  <li><a href="/library/fredi-perlman-postojanata-privlechnost-na-nacionalizmot">Постојаната привлечност на национализмот</a>
+     — Фреди Перлман
+  </li>
+  
+  <li><a href="/library/dzhon-zerzan-vremeto-kako-izvor-na-nezadovolstvo">Времето како извор на незадоволство</a>
+     — Џон Зерзан
+  </li>
+  
+  <li><a href="/library/dzhon-zerzan-potekloto-i-znachenjeto-na-jazikot">Потеклото и значењето на јазикот</a>
+     — Џон Зерзан
+  </li>
+  
+  <li><a href="/library/dzhejson-mekvin-postlevicharska-anarhija">Постлевичарска анархија?</a>
+     — Џејсон Меквин
+  </li>
+  
+</ul>
+</div>
+</div>
+<div id="cloud">
+  <a href="/topics/kritika-na-rabotata" class="cloud2">критика на работата</a>
+<a href="/topics/psihologija" class="cloud1">психологија</a>
+<a href="/authors/petar-kropotkin" class="cloud1">Петар Кропоткин</a>
+<a href="/topics/tehnika-tehnologija" class="cloud1">техника/технологија</a>
+<a href="/topics/otudjuvanje" class="cloud1">отуѓување</a>
+<a href="/authors/jak-elil-jacques-ellul" class="cloud1">Жак Елил (Jacques Ellul)</a>
+<a href="/topics/otpor" class="cloud1">отпор</a>
+<a href="/topics/nihilizam" class="cloud1">нихилизам</a>
+<a href="/topics/kapitalizam" class="cloud1">капитализам</a>
+<a href="/topics/istorija" class="cloud1">историја</a>
+<a href="/authors/derik-dzhensen-derrick-jensen" class="cloud1">Дерик Џенсен (Derrick Jensen)</a>
+<a href="/topics/feminizam" class="cloud1">феминизам</a>
+<a href="/authors/lorens-dzharach-lawrence-jarach" class="cloud1">Лоренс Џарач (Lawrence Jarach)</a>
+<a href="/topics/demokratija" class="cloud1">демократија</a>
+<a href="/authors/dzhejson-mekvin-jason-mcquinn" class="cloud1">Џејсон Меквин (Jason McQuinn)</a>
+<a href="/topics/kritika-na-civilizacijata" class="cloud2">критика на цивилизацијата</a>
+<a href="/authors/hakim-bej-hakim-bey" class="cloud1">Хаким Беј (Hakim Bey)</a>
+<a href="/topics/nasilstvo-nenasilstvo" class="cloud2">насилство/ненасилство</a>
+<a href="/topics/insurekcionizam" class="cloud3">инсурекционизам</a>
+<a href="/topics/sociologija" class="cloud1">социологија</a>
+<a href="/authors/ema-goldman-emma-goldman" class="cloud1">Ема Голдман (Emma Goldman)</a>
+<a href="/topics/levica" class="cloud2">левица</a>
+<a href="/topics/direktna-akcija" class="cloud1">директна акција</a>
+<a href="/topics/utopii" class="cloud1">утопии</a>
+<a href="/authors/volfi-landstrajker-wolfi-landstreicher" class="cloud2">Волфи Ландстрајкер (Wolfi Landstreicher)</a>
+<a href="/authors/feral-faun-feral-faun" class="cloud2">Ферал Фаун (Feral Faun)</a>
+<a href="/topics/primitivizam" class="cloud1">примитивизам</a>
+<a href="/topics/sindikalizam" class="cloud1">синдикализам</a>
+<a href="/authors/masimo-pasamani-massimo-passamani" class="cloud1">Масимо Пасамани (Massimo Passamani)</a>
+<a href="/topics/individualizam" class="cloud1">индивидуализам</a>
+<a href="/authors/dzhon-zerzan-john-zerzan" class="cloud2">Џон Зерзан (John Zerzan)</a>
+<a href="/topics/anarhizam" class="cloud5">анархизам</a>
+<a href="/authors/bob-blek-bob-black" class="cloud2">Боб Блек (Bob Black)</a>
+<a href="/authors/l-l" class="cloud1">Л (L)</a>
+<a href="/topics/aktivizam" class="cloud1">активизам</a>
+<a href="/authors/anon" class="cloud1">Anon</a>
+<a href="/authors/fredi-perlman-fredy-perlman" class="cloud1">Фреди Перлман (Fredy Perlman)</a>
+</div>
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="RSS" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

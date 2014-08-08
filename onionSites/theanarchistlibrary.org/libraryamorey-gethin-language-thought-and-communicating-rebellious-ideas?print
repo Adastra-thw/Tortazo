@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type"
+	  content="application/xhtml+xml; charset=UTF-8" />
+    <title>Language, Thought, and Communicating Rebellious Ideas</title>
+    <style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+html,body, pre.verse {
+	margin:0;
+	padding:0;
+	border: none;
+ 	background: transparent;
+	font-family: Verdana, "DejaVu Sans", Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+} 
+
+div#widepage {
+    padding: 20px 20px 0px 20px;
+}
+
+pre, code {
+    font-family: Consolas, courier, monospace;
+}
+
+pre {
+    border: 1pt solid #AEBDCC;
+    margin: 24px 0;
+}
+
+/* arial for some things */
+h1,h2,h3,h4,h5,h6,#cloud { 
+    font-weight: bolder;
+    font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+  {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+h1 { 
+    font-size: 200%;
+    margin: .67em 0
+}
+h2 { 
+    font-size: 180%;
+    margin: .75em 0
+}
+h3 { 
+    font-size: 150%;
+    margin: .83em 0
+}
+h4 { 
+    font-size: 130%;
+    margin: 1.12em 0
+}
+h5 { 
+    font-size: 115%;
+    margin: 1.5em 0
+}
+h6 { 
+    font-size: 100%;
+    margin: 0;
+}
+
+sup, sub {
+    font-size: 8pt;
+    line-height: 0;
+}
+
+/* invisibles */
+span.hiddenindex, span.commentmarker, .comment, span.tocprefix, #hitme {
+    display: none
+}
+
+.comment {
+    background: rgb(255,255,158);
+}
+
+pre.verse {          
+    margin: 24px 48px;
+    overflow: auto;
+    border: none;
+} 
+
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 2px 5px;
+}
+
+hr {
+    margin: 24px 0;
+    color: #000;
+    height: 1px;
+    background-color: #000;
+}
+
+table {
+    margin: 24px auto;
+}
+
+td, th { vertical-align: top; }
+th {font-weight: bold;}
+
+caption {
+    caption-side:bottom;
+}
+
+img.embedimg {
+    margin: 1em;
+    max-width:90%;
+}
+div.image {
+    margin: 1em;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+}
+
+.biblio p, .play p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+div.biblio, div.play {
+  padding: 24px 0;
+}
+
+div.caption {
+    padding-bottom: 1em;
+}
+
+div.center {
+    text-align: center;
+}
+
+div.right {
+    text-align: right;
+}
+
+a { text-decoration: none; }
+
+
+div#footer {
+    clear: both;
+    text-align: center;
+    display: none;
+}
+
+/* footnotes */
+
+a.footnote, a.footnotebody {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: super;
+}
+
+* + p.fnline {
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding-top: 2em;
+}
+
+p.fnline + p.fnline {
+    margin-top: 1em;
+    border-top: none;
+    padding-top: 0;
+}
+
+p.fnline {
+    font-size: 8pt;
+}
+/* end footnotes */
+
+/* exceptions: toc and indexes */
+.index a, h4 a.frontpageitem, div#header h4 {
+    font-weight: normal; 
+}
+
+/* which on hover get the underline */
+#tableofcontents a:hover{
+    text-decoration: underline;
+}
+
+/***********
+LINK COLORS
+************/
+
+/* this is the main color link */
+a { color: #8b0000; }
+
+/* visited links, hovering over links */
+a:visited, a:hover {
+    color:#610503; /* just a bit darker, not too much */
+}
+
+/* color for the links in the indexes titles topics authors */
+div.index ul li a, 
+div#frontpage div#header h4 a,
+div#cloud a
+ {
+    color: #8b1111;
+}
+
+a img, img {
+    border: none;
+}
+
+div#downloadformats {
+padding: 0 0 10px 0;
+}
+
+div#preamble p {
+    padding:0;
+    margin: 0;
+}
+
+#preamble a:hover {
+    text-decoration: underline;
+}
+
+
+/* TOC and BUTTONS */ 
+
+
+div#tableofcontents {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#tableofcontents a {
+	color: #000;
+	text-decoration: none;}
+
+ul#toc {
+    margin:0;
+    padding:0;
+    text-indent: 0; 
+
+}
+
+#tableofcontents p {
+    margin: 3px 1em;
+    text-indent: -1em;
+}
+
+.toclevel2 {
+	font-weight: bold;
+	font-size:11pt
+}	
+
+.toclevel3 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.toclevel4 {
+	font-weight: normal;
+	font-size: 9pt;
+}
+
+.toclevel5 {
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#nothere {
+    display: none;
+}
+
+  /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="widepage">
+    <div id="page">
+      <div id="preamble">
+	<p id="texttitle"><strong>Title:</strong>
+	  Language, Thought, and Communicating Rebellious Ideas
+	</p>
+	
+	<p id="authors"><strong>Author(s):</strong>
+	  	  <a href="../../authors.html#library-index-amorey-gethin">Amorey Gethin</a>
+	  
+	</p>
+	
+	<p id="ourtopics"><strong>Topics:</strong>
+	  	  <a href="../../topics.html#library-index-language">language</a>
+	  	  <a href="../../topics.html#library-index-noam-chomsky">Noam Chomsky</a>
+	  	  <a href="../../topics.html#library-index-the-raven">The Raven</a>
+	  
+	</p>
+		
+	<p id="preamblenotes"><strong>Notes:</strong>
+	  <em>The Raven</em> 34, pp 177–191
+	</p>
+	
+	<strong>Source:</strong>
+	Retrieved on 1 January 1999 from <a href="http://www.tao.ca/~freedom/gethin.html">www.tao.ca</a>
+	
+      </div>
+      <div id="downloadformats">
+	<p>
+	  <span id="pdfgeneric">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.pdf" class="pdflinks">
+	      [Plain PDF]
+	    </a>
+	  </span>
+	  <span id="pdfa4imp">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.a4.pdf" class="pdflinks">
+	      [A4 imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="letterimp">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.lt.pdf" class="pdflinks">
+	      [Letter imposed PDF]
+	    </a> 
+	  </span>
+	  <span id="downloadepub">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.epub">
+	      [EPUB]
+	    </a>
+	  </span>
+	  <span id="downloadtex">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.tex">
+	      [ConTeXt source]
+	    </a>
+	  </span>
+	  <span id="downloadsrc">
+	    <a href="amorey-gethin-language-thought-and-communicating-rebellious-ideas.muse">
+	      [Plain text source]
+	    </a>
+	  </span>
+	</p>
+      </div>
+      
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Amorey Gethin</h2>
+	
+	<h1 id="textttitleh">Language, Thought, and Communicating Rebellious Ideas</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">1
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">2
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">3
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">4
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">5
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">6
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">7
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h4 id="toc1">1
+</h4>
+<p>Understanding the nature of language and thought, or at least what they are not, is just about as important as any understanding can be. Both are at the basis of our lives; in a sense they are our lives. Is language a distinct faculty? Is it controlled by parts of the brain dedicated to language alone? Is human thought language? If it is, are we intellectual prisoners limited to thinking what language can describe, and allows us to think? Or is language a human invention, a purely cultural phenomenon? Is thought essentially independent of language, but in practice critically influenced by it? Much, politically and socially, depends indirectly on which is the correct view, and much depends on the view of linguisticians, neuroscientists and philosophers, correct or not.
+</p><p>The opinion of most writers on the subject seems to be that language is basic to our nature, whether it is our minds that shape language, or language that shapes our minds. Language is seen as the fascinating key to human thought and the whole human personality. The philosopher Karl Popper went so far in his reverence for language that he appeared to confuse it with reality. He thought, for instance, that small children only become aware that they are separate from others through language, at the time they begin to say “I”.
+</p><p>Noam Chomsky, the most famous living linguistician, perhaps the most famous linguistician ever, thinks that the form of language is determined inescapably by the form of the mind. Most of his academic colleagues seem to do little but devise or develop barren systems of linguistic analysis merely for the sake of analysis. Chomsky at least aspires to contribute to the understanding of human psychology. I want to discuss in some detail a few of the key elements in Chomskyan linguistic theory and point out a number of what I think are basic flaws. I want to do this because Chomsky’s ideas have strongly influenced people’s views on the ‘authority’ of language in our lives, and also because discussion of those ideas raises important issues of intellectual authority, in both principle and practice. And it is not just of coincidental interest that Chomsky, as most readers of this journal and of <em>Freedom</em> probably know, is an ardent libertarian.
+</p><h4 id="toc2">2
+</h4>
+<p>The American philosopher John Searle explains Chomsky’s argument for the existence of his well-known ‘universal grammar’ as follows: “But, more importantly, the syntax he came up with was extremely abstract and complicated, and that raised the question: ‘How can little kids learn that?’ You cannot teach a small child axiomatic set theory, and Chomsky showed that English is much more complicated than axiomatic set theory. How is it that little kids can learn that? What he said was: ‘In a sense, they already know it. It is a mistake to suppose that the mind is a blank tablet. What happens is that the form of all natural languages is programmed into the child’s mind at birth.’
+</p><p>This circular argument is an example of the false assumptions on which the Chomskyan theory to a large extent rests. Chomsky erects a frighteningly complicated and abstract system of syntax, without evidence that it exists as a psychological reality, and instead of conceding that he has perhaps created something artificial, he uses its very difficulty to suggest that therefore its mastery must be inborn.
+</p><p>So the forms human language can take, Chomsky maintains, are biologically determined. Yet his argument sometimes depends on plain and simple falsehoods. At least two are repeated in a recent much-heralded book by Steven Pinker. Pinker argues that to form questions one could “just as effectively...flip the first and last words, or utter the entire sentence in mirror-reversed order,” but languages don’t use these forms for questions, and this suggests “a commonality in the brains of speakers.” But what Pinker — following Chomsky — claims here is untrue. Take the sentence “Cats chase mice”, and apply to it what is both a first and last word flip and a mirror reversal, and of course you will get “Mice chase cats”, which cannot be used as a question, since it is already a different statement with a meaning the reverse of “Cats chase mice”. So there is a good practical reason why no language uses first and last flip or mirror reversal for question forming.
+</p><p>Pinker also asserts that “if a language has the verb before the object, as in English, it will also have prepositions; if it has the verb after the object, as in Japanese, it will have postpositions. This is a remarkable discovery. It means that the super-rules suffice not only for all phrases in English but for all phrases in all languages... when children learn a particular language, they do not have to learn a long list of rules. All they have to learn is whether their particular language has the parameter value head-first, as in English, or head-last, as in Japanese... Huge chunks of grammar are then available to the child, all at once, as if the child were merely flipping a switch to one of two possible positions.” Again the whole hypothesis is based on a falsehood. Not all verb-object languages have prepositions. For example, Finnish “Mies/(The) man pani/put pullon/(the) bottle poydan/(the) table’s alle/under”. Finnish is not the only language with the verb-object pattern together with postpositions. But it is obvious that even just one language that does not obey the Chomskyan-Pinker super-rule wrecks the entire rule, and a child can certainly not master the grammar of her language by “merely flipping a switch”.
+</p><p>Chomsky believes we are born with powers of abstract grammatical analysis, the ability to analyse sentences into their abstract “phrase structure” quite independently of any meaning, even, indeed, if the sentences are meaningless. But this is not how either children or adults really experience language. For instance, if we consciously examine the sentence “The man the man the man knew knew knew”, it is comparatively simple to analyse it into an abstract ‘phrase structure’ — (x(x(xy)y)y) — but it is almost impossible to work out its meaning. This is because there are no clear images to fasten on to, to give us our bearings. It is, by Chomsky’s criteria, a ‘well-formed’ sentence, but because it is, effectively, just an abstraction, it leaves us mystified. Yet, although in formal abstract terms the following sentence is far more complicated, it is comprehensible precisely because it consists of recognizable meanings: “Did you realize that bomb a radical immigrant the finance minister that idiotic president appointed last year employs in his own private bank managed to make in the small amount of spare time the minister allows him, and put under the self-important fool’s chair yesterday, was a toy?”
+</p><p>The linguistic ideology of Chomsky and his followers leads sometimes to grotesque mistakes. Two champions of his theories, for instance, explain that what determines whether is can be contracted to ‘s is a system of syntactic rules that move wh- words (where, when etc.) from certain positions in one sort of hypothetical sentence to other positions in another sort of hypothetical sentence. (Moving constituents of sentences about, ‘performing operations’ on sentences, is a basic part of Chomskyan linguistics.) The rules they propose are in fact rubbish, and it is very easy to demonstrate that they are so, but that is really all one can expect from such an approach. (As most unbiased people would probably imagine, the real determining factor for the contraction of is is whether emphasis is led away from it to some other part of the sentence.)
+</p><p>Chomsky’s system is in more than one way incoherent. He maintains that human ‘performance’ of language, what people actually say, is too full of mistakes, slips, and stumblings for children to be able to learn the rules of grammar accurately from observing it. Yet, he says, children do rapidly master language, so they cannot be getting its principles from outside data, but must be born already programmed with the principles of universal grammar, so that they are not misled by and can sort out the insufficient and imperfect examples of language they hear. But it would be just as reasonable to argue that children’s mastery of language shows the evidence cannot be ‘degenerate’, as he calls it.
+</p><p>Chomsky contradicts himself. He has continually emphasized that children always get it right.. He cannot have it both ways. He claims that children get the word order right in structures such as “Is the man who is tall in the room?” despite the mistakes their elders make. Yet this means he is claiming adults make mistakes but children don’t. The truth is that adults never make the sort of mistake Chomsky is referring to, or, if they do very occasionally, certainly no more than children do. So children in fact have perfectly good data to go on.
+</p><p>The objections to the proposal that grammar is innate and cannot be learned from ‘outside’ data are elementary but fundamental.
+</p><p>The language we know children actually get right is not, in Chomsky’s system, the Chomskyan ‘deep structure’, but language that has gone through Chomskyan ‘transformations’. But the ‘transformations’ must be different in each language. Yet the children learn them very efficiently and can only learn them from the data provided about their own particular language by their elders. Chomskyans argue that children are born with the knowledge of which transformations, among the many theoretically possible, human language actually permits. There are, they say, constraints that apply to all languages.
+</p><p>This is irrelevant. The fact remains that children have to learn to use certain modes of expression and not others, even though those others exist in other languages, and they can only learn which expressions are permitted in their language from experience, by observation. No pre-programmed universal grammar or transformational restrictions can help them there. For instance, English does not normally invert main clause verb and subject after an adverbial phrase: “Then the cat went to sleep.” But other Germanic languages do: “Then went the cat to sleep.” — “Dann ist die Katze eingeschlafen.” etc. And the English-learning child cannot do any simple ‘switch flipping’ to one of two possibles, à la Pinker, because it is only normally that English doesn’t invert. Sometimes English does invert — after negatives, quasi negatives like “only”, and “so”, “such”. (E.g. “Never had I heard anything so beautiful.”)
+</p><p>This leads on to an even more elementary objection. The whole Chomskyan case is self-contradictory. To flip the Pinkerian switch to the right position (for the sake of argument let us assume for a moment the false correlation of object-verb order with postpositions) children have to notice that verbs come after objects. And that’s very easy to do. Pinker tacitly affirms it. “They can do that merely by noticing whether a verb comes before or after its object in any sentence in their parents’ speech.” But in that case, why not reverse the process and notice first that there are postpositions in your parents’ speech, not prepositions — or any other of the grammatical patterns that follow from the super rules — and so conclude that verbs come after objects? That’s equally easy to do. Chomskyan linguistics demands the absurd. Language is not learned by observation, but you have to start the process by observation.
+</p><p>The truth is that Chomsky’s linguistics fail completely to account for the human mastery of language, both in detail and in the broad.
+</p><p>Even if his theory of constraints was wholly true, it is far too negative, ‘passive’, limited, to account for all that children have to learn about their language, even if we limit the discussion to ‘grammar’. A far more positive, active faculty is needed. How else — to take just two of the many thousands of possible examples — can Scandinavian and Romanian children learn that the definite article goes after rather than before the noun, unlike other Germanic and Latin languages? How else can children learn the precise way their language uses the definite article, different in subtle ways according to meaning from other languages belonging even to the same language family?
+</p><p>And, again supposing that Chomskyan theory is wholly true, it can only account for a tiny part of what everybody has to do to master a language. You have to observe, distinguish, and use a great many subtly different sounds. You have to observe, distinguish, and use the particular combinations of sounds we call words, and understand the connection between those and the different parts of reality. Even if you are not particularly sophisticated, you will learn to use 10,000 or more words, and to differentiate precisely between what are often very subtly varying meanings. You will understand the meaning of many more than that number. You will remember them whether or not you have what is called a “good memory”. (In addition you will observe and remember hundreds of idiomatic expressions which are often different even between languages closely related to each other, and which often ignore the normal ‘grammar’ of your language.) If you are bilingual you may learn twice as many words and expressions, again irrespective of how good your memory is. (Foreign-language learners take heart: outstanding memory is irrelevant to your task.) In the ‘developed’ world what might be termed the general (non-specialist) vocabulary of a language contains at least 200,000 words. And universal grammar will not help you to notice patterns of meaning such as that the past is expressed by -ed in English but in other ways in French etc., etc. You must store all these sound-meanings somewhere inside you in a form which is not the form you heard them in. You must be able to carry out the process of getting any ‘sounds’ you need out of the memory, arranging them in the right order, and turning them into the right outwardly audible sounds in the mouth, and be able to do all this at great speed in what is a remarkable feat of co-ordination. You can do the same thing in reverse when you listen and understand.
+</p><h4 id="toc3">3
+</h4>
+<p>But I believe the most serious mistake in Chomsky’s linguistics is what seems to be the assumption that thought is some kind of language. I do not know if he has ever stated that it is in so many words. The nearest he gets in what I have read of his work — and I have certainly not read all of it — is where he says “Of course, this deep structure is implicit only; it is not expressed but is only represented in the mind” and “The deep structure that expresses the meaning is common to all languages, so it is claimed, being a simple reflection of the forms of thought”. And that he thinks thought is language comes out pretty clearly, for instance, in his treatment of ambiguity. Ambiguity arises — he believes — because two different ‘thought- language’ sequences (my expression) are transformed into the same surface language.8
+</p><p>At this point I have to confess to personal pique. My book Antilinguistics was published in 1990. In Chapter 10 (pp.194–219) I demonstrated clearly, I think, that essentially thought can have nothing at all to do with anything that could remotely be called language. The only necessary connections are that language is a translating device for the imperfect expression of thought, and that thinking is necessary for producing language. But in The language instinct (1994) Pinker continues, regardless, to present thought as a kind of language. He does indeed give some valid reasons for insisting that it is not any of the ‘surface’ languages that as humans we actually speak; but he says it is likely that thought is a universal “mentalese” which follows basic principles of language structure.
+</p><p>Here are some of the simple arguments that show we do not think in language:
+</p>
+<ol>
+<li><p>“I was chased round a pond by a duck last week.” In order to say this:
+</p>
+<ol style="list-style-type:lower-alpha">
+<li><p>Something must have been kept in my mind since last week for me now to produce, among others, the word “duck”. The word “duck” itself, or any other symbol or representation, is useless for this purpose, since the word “duck” is stored inside me somewhere, not for this unique last-week-pond occasion, but for any and every ‘duck’ need that arises. Something that is not words but unique to that occasion must come up inside me to determine the words I use. 
+</p>
+</li>
+<li><p>There must be something inside me other than words or symbols that makes me choose the particular word “duck” rather than, say, “wolf”. If thought depended on language, all thought would be random and arbitrary, because there would be nothing to decide in the first place the specific language to be used. What in fact triggers “duck” is a mental picture of the unique occasion. (I comment below on the nature of this mental picture.)
+</p>
+</li>
+
+</ol>
+
+</li>
+<li><p>Language is a one-dimensional ‘straight’ line, one word after the other. Introspection tells us that thought is many-dimensional; moreover, in thinking, two or more things can be in the same place at the same time. It may be objected that what introspection suggests is an illusion; this cannot be so, even if for no other reason than that no straight-line thinking would be capable of organizing the straight line of language in the way we want it.
+</p>
+</li>
+<li><p>Practically everybody must have had the experience of being aware of an object, an emotion, a concept etc. without knowing any word for it.
+</p>
+</li>
+<li><p>No child can understand any language until she recognizes inside herself the thing the language refers to. This is particularly obvious in the case of experiences, emotions, ideas that are wholly inside her, not outside her. When, for instance, she hears the words “know”, “enjoy” or “decide”, she cannot understand them unless she is already aware in some other way of the mental processes they stand for. This process is in fact what all understanding consists of, in children and adults alike. If we cannot convert a piece of language into something that is not language, we say “I don’t understand”, even if individually the words are familiar to us.
+</p>
+</li>
+
+</ol>
+<p>But the best proof that thought is not language should be the simple awareness that it is not. I know that I do not think in language, and I know that a very large part of my thinking is in mental pictures. Pinker believes otherwise. He envisages representations worked on by processors, and sums up by saying: “This, in a nutshell, is the theory of thinking called ‘the physical symbol system hypothesis’ or the ‘computational’ or ‘representational’ theory of mind. It is as fundamental to cognitive science as the cell doctrine is to biology and plate tectonics is to geology. Cognitive psychologists and neuroscientists are trying to figure out what kinds of representations and processors the brain has.”
+</p><p>I think this must be quite wrong. Symbols are in themselves nothing, useless. Symbols have no content, they are not processes. They are merely bridges between the realities — in the context of thought, bridges between your thoughts and my thoughts or vice-versa. I cannot produce the symbols that are “the duck chased me round the pond” until I summon up a picture of that event in my mind, and equally I do not understand such symbols uttered by someone else until I use them to give me a picture in my mind. My ‘thought’ must be basically of the same kind as the original experience — even if there are obvious differences — just as a gramophone record is no good to me until it is turned back into sound. There can be no symbol until there is something we experience and are aware of to give a symbol to.
+</p><p>If you doubt this, think of tunes. Practically everyone can have tunes inside them. They are not symbols. They are the actual tunes themselves, but inside instead of outside. And if one can have tunes, sounds, inside one, there is no reason one cannot have pictures too.
+</p><p>It becomes even clearer that thinking has nothing to do with symbols if we consider an idea such as that expressed by “If I stop running, the duck will catch me”. “If”, “se”, “wenn”, “om” etc. (or any other sorts of ‘representation’) cannot in themselves be the thinking process of if-ing. The very fact that different languages have different symbols for the same thought should emphasize to us that that is all they are: symbols of, about, something else, the real thing, that exists only inside us and is exclusively itself. If-ing does not replace anything and is not replaced by anything. If-ing itself is not, of course, a picture; it is something more mysterious and intangible. But it does, in my experience, operate on pictures. (I am not, though, arguing in favour of a distinction between the physical and the abstract.)
+</p><h4 id="toc4">4
+</h4>
+<p>If I am right that thought is in essence entirely independent of language, then it is basically an objective awareness, not language, that determines our experience of reality. In practice, however, language corrupts the minds of practically everyone, and corrupts the minds of some people almost constantly. Words — meanings — do not accurately represent or describe things, substitute properly for them, although most people probably believe they do. If language truly reflected reality, which is ever-varied, there would be no limit to the number of words, and people would constantly have to make up new ones on the spur of the moment, which would clearly not work, because they would not understand each other. So pigeon-holing had to be invented instead, an artificial system of stylized symbols — mere tokens, references, associations — that falsify and deceive from the very first, by their very nature. They take on a life of their own, drive out and replace real life. They squeeze the whole world and human experience into a straitjacket of inflexible, fossilized meanings.
+</p><p>I have explained at some length in <em>Antilinguistics</em> how I think language corrupts thought, how people tend to think in terms of words instead of real things and feelings. The literate and articulate are particularly prone to this, and they use words to quickly create myths which most of the rest of their communities accept without question, and which are then almost impossible to destroy: “The will of the people, the sanctity of life, great literature, human rights, equal opportunity, democratic values, law and order, mob rule, sexual equality, national liberation, the dignity of work, traditional values, bourgeois morality, class struggle, people’s democracy.” These are just a few of the thousands of combinations that millions of people take for granted and use to fool themselves and others about the nature of the world. Perhaps one or two are accepted even by some who call themselves anarchists. And I fear that very often when people reject such phrases as bogus, they do so every bit as much by a knee-jerk reaction as they do when they accept them. In neither case do they try to think, without language, about what is really happening to actual human beings beyond the words.
+</p><p>Very often people associate words even though they are not used together in fixed phrases. The association is no less rigid for that. “Freedom” and “democracy”, for instance. How many people ever think of the reality beyond that robot-like reflex? And thoughtless combinations are joined in larger combinations: “Name a feature of free government.” — “The people freely electing their own rulers.” Such a commonplace can only be happily trotted out by those who do not try to turn the words into something closer to reality.
+</p><p>Language corrupts in even more basic ways than this. One result is that it gives birth to ideologies and their hatreds; it gives the ideologies names and so a permanent bogus ‘reality’, although they exist only in words in human minds. Language gives names and so permanence to the groups — tribal, political, national, philosophical — without which the hate and fanaticism could not commit its savageries. And the cruel absurdities that so often flow from religious belief would have been quite impossible without language.
+</p><p>Simple words like “good” and “bad” give humans something to rally round, to egg themselves on with, an excuse for intolerance, control of minds, war, torture, pride and arrogance. They use such words to reassure themselves. The tragic irony is that they would need no reassurance if the words had not been there in the first place to start anxieties and assertions.
+</p><p>In language humans have made themselves a tool, like the motor-car, but even more practical, even more seductive, and even more deadly.
+</p><h4 id="toc5">5
+</h4>
+<p>The mystique of language has had power over humans for a long time. Language has given them literature and the ‘art’ of words. These are widely respected, and many believe literature is a better guide to reality than life itself. Vested interests make a vicious circle in defence of language. Even today the expression and dissemination of ideas is done almost entirely by professional writers (including politicians). Nearly all the rest, of course, is done through spoken language. Pride, the way (directly or indirectly) they make their living, and an entrenched attitude passed down through generations make it unlikely that many who write would agree with me in my criticism. Perhaps even the majority of those who read this journal — no strangers, surely, to rebellious thoughts — will automatically react unfavourably.
+</p><p>Now to this old veneration of language has been added the new form of admiration, the science — so-called — of linguistics. This may not make all the old literature-lovers happy. But most people interested in intellectual matters seem pleased to be told by the experts that the medium they revel in is even more profound than they thought. Language is the foundation of our humanity.
+</p><p>Linguisticians thus do us, I believe, a disservice. They increase the emphasis and attention — worshipping attention — given to language. Chomskyan linguistics is among the most dangerous of all, because it claims to penetrate the innermost parts of our psychology, asserts that ‘grammar’ is the expression of our being.
+</p><p>Our attitude to language should be the opposite. We should regard it with constant distrust, be ever on the alert against its frauds. It is true that there are practically always writers who emphasize how dangerous language can be, who warn us about its abuses. But there seems to an almost universal view that language is intrinsically sound. If we can avoid abusing it, it will remain the greatest human asset. Western philosophy has been for the greater part about language. The ‘linguistic philosophers’ of this century appear to have recognised this, but instead of escaping from language they have tried to enslave us to it even more. Yet the defining of words (and almost any other analysis of language, for that matter) is merely words about words.
+</p><p>We are stuck with language, just as we are stuck with human disease — or, for now at least, the wickedness of governments. That is not a good reason for not trying to do something about it. We need constantly, both in our own language and in our assessment of the language of others, to try to get round beyond the words, to try to think wordlessly about what actually happens, and about what actual individuals feel, suffer and need. (It is worth noting, perhaps, that the worst offenders among the words we use are often nouns.)
+</p><p>And — though this may seem a contradiction — a helpful, if minor, confirmation of the essentially superficial nature of language can be found in learning foreign languages. Learning a foreign language well is one of the healthiest activities a human being can engage in. It gives a sense of achievement, a pride in mastery, yet involves no domination of others. It is wholly unauthoritarian. Foreign languages need not divide us; rather, they can teach us tolerance and sympathy. To study foreign languages should and can be to understand that while all humans share the same basic experience, the ways they express the details of that experience are fascinatingly varied. We can delight in the diversity of languages within a common humanity. To discover that other people have their own special way of expressing themselves and the world around them, just as we ourselves have, should not and need not separate us; it should bring us together, diminish our arrogance. But to learn a truly felt sympathy of that kind, most people need to learn one or more foreign languages seriously. And they find then, too, that learning foreign languages can be one of the most outgoing hobbies in the world. Not only in the obvious sense; also because sharing enthusiasm and curiosity about the myriad peculiarities of the world’s tongues is a joy open to practically all of us.
+</p><p>Even here, though, Chomskyan linguistics has had a bad influence. All over the world it has diverted a great deal of time and energy, and money too, away from the proper activities of departments of modern languages. It has drawn the attention of would-be language-learners, at least in further education, away from the things they really need to concentrate on if they want to learn a foreign language efficiently and quickly. They have been seduced by profound-sounding theories into neglecting words and idiomatic expressions, the essence of languages, in favour of abstractions of no practical value. It would probably be unfair to suggest that my experience is statistically representative, but I found it ironic when, many years ago, the foreign students of mine who tried to convert me to deep structure, transformations and universal grammar were mostly incapable of getting even fifty per cent of comparatively simple English sentences grammatically correct. They were too busy subjecting them to Chomskyan operations. In Sweden, certainly not known as backward in the matter of studying languages, two of the most experienced professors in the field, Johannes Hedberg and Gustav Korlén, have pointed out publicly on several occasions that there has been no progress in language teaching in their country since the late fifties.
+</p><h4 id="toc6">6
+</h4>
+<p>It gives me no pleasure to attack what is half of Chomsky’s life’s work, even if I have enjoyed the intellectual challenge. I wish Chomsky was some other political academic, like Henry Kissinger. I could then have felt much less compunction about assaulting his theories. I find considerable irony in the progress of Noam Chomsky’s life. The training in scholarship that he gained in his career as a linguistician did his linguistics no good at all. But it has served him wonderfully in searching out the evil deeds of governments. And, again ironically and by great good fortune, his linguistic work has made him famous, and the world should be grateful that his fame has helped him become such a formidable critic of those with power.
+</p><p>Chomsky strikes me as a person of great intellectual and social boldness and courage, the most important and perhaps rarest sort of courage. He could have sat back and basked in the admiration of academics and intellectuals. Instead he has faced abuse and contempt for his attack on the immorality of political and economic power throughout the world and his demand for decency. He is constantly misreported and misinterpreted. He is even accused of denying the Holocaust, although he has written of the killing of the Jews as “the most fantastic outburst of collective insanity in human history”. What Chomsky does do, though, in the face of malicious vilification, is defend the right of people to express views he himself despises. He is a worthy successor to Voltaire. An incident I find particularly moving can be seen in the Canadian-made film on Chomsky called “Manufacturing Consent” (1992). Robert Faurisson was convicted by a French court of the crime of arguing that the slaughter of the Jews never took place. Chomsky wrote in defence of Faurisson’s right to free speech, and went to Paris to protest. He was abused and heckled both by the French press and in person. But, as Chomsky pointed out, there are only two positions you can take on free speech. You are either for it or you are against it.
+</p><p>I don’t know if he gets tired as he goes on, year after year, defending the oppressed and gathering the information that condemns the leaders, the hierarchies, the corporations and the privileged. But he doesn’t stop, and his dedication to this task arouses great emotion in me. I have seen criticism of him by some readers of Freedom; I think he could sometimes have adopted a better approach. But shouldn’t the disagreements be seen as really only about tactics and emphasis?
+</p><p>Here I must come back to my frustration at the fate of my book <em>Antilinguistics</em>. Certainly it is a matter of personal pique. But I believe something far more important than my feelings is at issue. I anticipated the book’s reception in the book itself. Apart from three reviewers, the very existence of the book was ignored by the academic world. The three linguistician critics ridiculed the book and declared I did not know what I was talking about. Because I was an amateur, not a trained professional academic, my views were not to be taken seriously. Within the academic fraternity it is perfectly acceptable, proper indeed, to attack colleagues’ ideas. Chomsky must be as used to criticism of his linguistics as he is of his politics, although the tone is quite different. But if an outsider attacks a whole discipline, its practitioners of all schools close ranks and either pretend it hasn’t happened or scornfully declare their opponent incompetent.
+</p><p>The contrast with the reaction to my book of people who are interested in language but not academics was revealing. In three reviews it was written that my criticisms were “very powerfully” or “clearly” argued and needed to be answered. Yet neither then nor since have any of my critics or any other academics attempted to address any of my arguments. I publicly challenged two of them to public debate, but the response was — unsurprisingly — silence. (I do not name them, since my purpose is not a personal vendetta.)
+</p><p>I may have got it all wrong. But in that case I am no worse than probably the great majority of professional social ‘scientists’, since they disagree so much with each other, and only one school at the most can be correct. The behaviourist B.F.Skinner was heard and listened to, although clearly wrong, but he was an academic. Chomsky was heard and listened to — and answered — when he showed Skinner was wrong, but he was an academic as well. F.R.H.Englefield wrote about language too, but he was not an academic; he was a schoolteacher, and he was very little heard, very little listened to, and practically not answered at all.
+</p><p>The trouble is that the thousands of people capable of making valuable contributions to human thinking on all imaginable topics are today intimidated and locked out by our intellectual bosses at the universities. It is only naïve arrogant crazies like me who ever try, nearly always wholly unsuccessfully, to break their censorship. Englefield was a scholar. I am not even that, partly from laziness, but also from principle. Academics have no right to ignore the opinions of people interested in their subject just because they do not have the time, or the opportunity, or the inclination, or the temperament to read all, or even large amounts of, the ‘literature’, or to enjoy the privileged life of those at the seats of learning.
+</p><p>Scholarship is the paid job of academics. Academics should be our intellectual servants, not our intellectual masters — honoured and valued servants, certainly, but the community’s servants nevertheless. It is unwarranted to dismiss opinions because they are ‘old’ ones, suggested now only by ignoramuses unaware that they have been shown to be faulty long ago. Knowledge and argument are not the exclusive property of academia, from which the untrained are to be shut out. Any argued idea deserves the courtesy of an argued reply, together with any information the replier thinks relevant. Anybody who thinks that arguments do not need to be repeated and explained endlessly — even, and perhaps particularly, when they seem to be universally understood and accepted — is unjustifiably arrogant.
+</p><p>Noam Chomsky knows what it is like when people try to muzzle you. But I don’t think he knows fully what it feels like when it seems impossible to get a hearing anywhere at all. I am not quite in this position either, because I am lucky enough to have a friend who is an unusual person and at the same time an unusual publisher. And I am lucky too because my particular political and social views give me access to publications such as this one or <em>Freedom</em>. But it is impossible, it seems, to get a reasoned answer. I should very much welcome a public declaration by Chomsky on this problem, even if any great influence he can have on it is limited, at any rate immediately, to the academic world.
+</p><h4 id="toc7">7
+</h4>
+<p>Humans’ attitude to language may in the end be the basic factor that decides their fate. But today and tomorrow the problems of economics and politics are of course far more important than those of linguistics. Thinking on economics is today almost certainly the single most important factor in deciding political attitudes all over the world. Thinking on economics, too, though, is effectively largely controlled by academic theorists. The academics may not actually control the world’s money, but those who do are served by people who have come from the universities; and practically all the economists at the universities embrace one or other of the various schools of economic thought whose principles are applied in the world as it is today. Truly radical ideas on the subject can get virtually no hearing, let alone a response. What would happen, I wonder, if the great majority of academic economists declared that all the world’s economic doctrines and systems are unscientific, irrational and absurd? Perhaps the worst and oldest problem that anarchists face is precisely that of making themselves heard, listened to, and answered. Chomsky has said something (again in “Manufacturing Consent”) that is relevant, and true in two senses. I hope it is not really a paradox that my heart goes out more than ever to Noam Chomsky as a fine, good and exceptional man at the moment I hear him say that he is not really important; it is ‘ordinary’ people who are important. How do we get our ideas across to millions of ‘ordinary’ people, how do we persuade them that it is they who are important, and how are they then to translate their impulse towards a more decent life into practical action?
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+  </body>
+</html>
+
+

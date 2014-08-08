@@ -25,6 +25,12 @@ Function Name                          Description                              
 help                                   Shows the banner help.                                                         self.help()
 ====================================   ==========================================================================     ==========================================================================================================
 
+infoGathering Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P infoGathering -U -T config/config-example/torrc-example
 
 stemming
 ###########
@@ -39,6 +45,14 @@ Function Name                          Description                              
 ====================================   ==========================================================================     ==========================================================================================================
 help                                   Shows the banner help.                                                         self.help()
 ====================================   ==========================================================================     ==========================================================================================================
+
+stemming Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P stemming -U -T config/config-example/torrc-example
+
 
 crawler
 ###########
@@ -102,6 +116,13 @@ crawlOnionWebSite                      This function executes a crawler against 
 
 ====================================   ==========================================================================     ==========================================================================================================
 
+crawler Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P crawler -U -T config/config-example/torrc-example
+
 
 shodan
 ############
@@ -128,6 +149,14 @@ basicSearchAllRelays                   Performs a basic search with Shodan again
 basicSearchByRelay                     Performs a basic search with Shodan against the specified TOR relay.           self.basicSearchByRelay("OpenSSL 1.0.1", "80.80.80.80")
 basicSearchByNickname                  Performs a basic search with Shodan against the specified TOR NickName.        self.basicSearchByNickname("OpenSSL 1.0.1", "TORNickName")                                        
 ====================================   ==========================================================================     ==========================================================================================================
+
+shodan Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P shodan -U -T config/config-example/torrc-example
+
 
 =================
 Plugins to Pentesting and attack hidden services and TOR relays
@@ -178,6 +207,14 @@ httpBruterOnHiddenService              Bruteforce attack against an onion site (
                                        Uses FuzzDB if the dictFile is not specified.
 ====================================   ==========================================================================     ===================================================================================================================
 
+bruter Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P bruter -U -T config/config-example/torrc-example
+
+
 heartBleed
 #############
 
@@ -202,6 +239,14 @@ startAttack                            Starts the HeartBleed attack against the 
 startAttackAllRelays                   Starts the HeartBleed attack against all relays loaded in the plugin.          self.startAttackAllRelays()
                                        Default port: 443                                                                              
 ====================================   ==========================================================================     ==========================================================================================================
+
+heartBleed Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P heartBleed -U -T config/config-example/torrc-example
+
 
 =================
 Plugins for integration with Third-Party tools
@@ -255,6 +300,14 @@ listVulnerabilities                    List of Vulns in the Knowledge Base of W3
 exploitAllVulns                        Exploits all vulns in the Knowledge Base of W3AF.                              self.exploitVulns("sqli")
 exploitVuln                            Exploits the specified Vuln in the Knowledge Base of W3AF.                     self.exploitVulns("sqli",18)
 ====================================   ==========================================================================     ==========================================================================================================
+
+w3af Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P w3af -U -T config/config-example/torrc-example
+
 
 nessus
 ###########
@@ -326,3 +379,11 @@ reportDetails                          Details of a scan for a given host.      
 reportTags                             Tags of a scan for a given host.                                                    self.reportTags(<REPORT_UUID>, <HOSTNAME>)
 reportAttributesList                   List of filter attributes associated with a given report.                           self.reportAttributesList(<REPORT_UUID>)                                         
 ====================================   ===============================================================================     ==========================================================================================================
+
+nessus Plugin example
+=================
+
+Interaction Example::
+
+    sudo python Tortazo.py -v -D -P nessus -U -T config/config-example/torrc-example
+

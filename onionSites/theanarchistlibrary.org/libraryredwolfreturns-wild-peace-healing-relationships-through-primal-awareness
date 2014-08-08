@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Wild Peace: Healing Relationships through Primal Awareness (RedWolfReturns) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/redwolfreturns-wild-peace-healing-relationships-through-primal-awareness?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=redwolfreturns-wild-peace-healing-relationships-through-primal-awareness">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Wild Peace: Healing Relationships through Primal Awareness
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/redwolfreturns">RedWolfReturns</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-civ">anti-civ</a>
+        <a href="/topics/healing">healing</a>
+        <a href="/topics/primitivism">primitivism</a>
+        <a href="/topics/rewilding">rewilding</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on February 16, 2011 from <a href="http://flag.blackened.net/radicalanthropology/writings/redwolf3.htm">flag.blackened.net</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="redwolfreturns-wild-peace-healing-relationships-through-primal-awareness.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>RedWolfReturns</h2>
+	
+	<h1 id="textttitleh">Wild Peace: Healing Relationships through Primal Awareness</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">1. The Talking Circle:
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2"> 2. The Walking Circle:
+</a></p>
+
+<p class="tableofcontentline toclevel3"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">3. The Circle of Our Relations:
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	
+<blockquote>
+<p>“It is a silence out of which the tracker listens...” <em>Tom Brown, The Tracker</em>
+</p></blockquote>
+<p>For those of us raised in the matrix of post-modern industrial civilization, the sad reality is that the vast majority of our relationships are simply in tatters. We have come to the point in history where it is the norm for us to experience little, if any, respectful intimacy between ourselves and our wild relations (i.e. “the environment”). Subsequently, we have gotten to the point where we experience little, if any, respectful intimacy between ourselves and the people that surround us each day. And not surprisingly, we also experience little, if any, honest intimacy with our own deepest selves. We live at a time when the “existential crisis” — the feeling of being ultimately alone in a meaningless universe — is considered to be simply a core aspect of the “human condition”. In response to such an empty “human condition” as well as the many impersonal forces that dominate our lives, we compulsively seek ways to escape the reality we are faced with. Our escapes come in the form of various addictive behaviors ranging from full-blown alcohol &amp; drug abuse to the American average of 5+ hours of “zoning-out” in front of TV’s illusions each night. What all this amounts to is that real life is slipping by, moment by moment, and we are simply not there.
+</p><p>So how do we begin the process of healing these broken relationships? The answer is simple, yet profoundly difficult for most of us raised &amp; conditioned to a domination-oriented society. The answer is — in my opinion — for us to learn how to “shut up” and “listen”. To put it more diplomatically, we must re-learn the skills of respectful silence, and non-judgmental attention that have been fairly characteristic of our own primitive ancestors from countless millennia past. In a domination-oriented society, the operative rule for achieving power over others is; “I talk, you listen”. As each of us internalizes this rule, we get more and more caught up in our own voices — often voices of argument, judgment and rationalization — whether these are the chattering voices inside our heads, or the chattering voices coming from our mouths. This is “symbolic thought” in its most insidious form — the lawyer &amp; judge we have been conditioned to make a part of ourselves. We then get caught up in the battle between our own voice and all the other human voices out there vying to be heard — and just like people caught up in any argument, we rarely even hear the people we are arguing with, let alone voices outside the discussion. Often then, when the struggle becomes too much for us, or is not going our way, we begin to simply avoid the topic and the people involved — we break off the relationship. How many times have we been in conversations where we find ourselves compulsively interrupting each other? Or even if we are silent outside, inside we are usually focused on judging what is being said while either “checking out” or thinking about what we are going to say in response. How many of us have experienced relationships that disintegrated into power-struggles where nearly everyone came away feeling wounded &amp; misunderstood?
+</p><p>These same dynamics (not surprisingly) then pervade our relationships outside the human sphere. How many times have any of us gone for a hike in the woods and found ourselves completely absorbed in our own thoughts without seeing or hearing much of anything around us? Often these thoughts are about some political drama or conflict (whether personal or impersonal) in our lives, or they are made up of judgments about the world around us as well as our rationalizations for those judgments. Sometimes they are made up of fantasies that enable us to escape from reality (i.e. relationship) almost as effectively as if we were watching TV. The dynamic even dominates how we relate to our own bodies — how many times have we been so carried away by our thoughts that we failed to be aware of getting thirsty or tense or fatigued until the situation had gone too far?
+</p><p>Scribbles on paper.
+</p><p>You’re thinking they have meaning.
+</p><p>Stop. Feel your eyes now.
+</p><p>So how do we go about cultivating silence &amp; awareness (i.e. “shutting up &amp; listening”) in order to begin facilitating the kind of respectful communication that will heal our relationships and put an end to our existential crisis? Here are a couple of practices that come immediately to mind;
+</p><h3 id="toc1">1. The Talking Circle:
+</h3>
+
+<blockquote>
+<p>“It does not require many words to speak the truth” <em> — Chief Joseph, Nez Perce</em>
+</p></blockquote>
+<p>Get with the people you care about and who are willing to pursue an intimate &amp; honest relationship with you &amp; each other. Any time there is an important issue to resolve or a decision to be made, sit down together in a circle and talk it out. Only one person may talk at a time while everyone else gives them their full attention &amp; presence — using a “talking stick” is a good idea to help facilitate this. Consider speech within the circle to be sacred speech — worthy of paying close attention and full consideration to. Go around the circle so everyone has an equal chance to speak. While listening, respect the person who is talking enough to give them full &amp; undivided attention — especially when what they are saying is not something you already agree with or see any value in. Also, while speaking respect those who are listening — speak truthfully, clearly &amp; concisely. Use “I” statements — i.e. “I feel...[hurt by what you said]” or “I perceived...[what you said as an attack]” rather than you statements — i.e. “you are...[an asshole]”). These types of statements allow us to respect the sovereignty of others and the validity of their perspectives while owning our judgments as our own. Be as brief &amp; straightforward as possible — speak out of the feelings of the moment, not from scripts planned out in advance. Continue around the circle until the topic of conversation is exhausted, the conflict resolved, or the decision is made — hopefully to everyone’s basic satisfaction. Integrate the lessons learned in these “talking circles” into your interactions with people in any other situation you might find yourself, and eventually, into your interactions with other species as well.
+</p><h3 id="toc2"> 2. The Walking Circle:
+</h3>
+
+<blockquote>
+<p>“When you are in the woods, you cannot ever be lost. You are surrounded by friends and surrounded by the Divine.” <em> — Joe Coyhis, Stockbridge-Munsee</em>
+</p></blockquote>
+<p>Go for a walk in the woods &amp; whenever you find your mind wandering (i.e. lost in symbolic thought), gently re-direct your focus to your breathing. Feel the air go into your nostrils and down deep into your body — breathe into your lower belly. Then slowly expand your awareness from your breath outward to your whole body. Feel any body-sensations (aches, pains, heat, cold, the ground under your feet, etc.) and just experience them fully. Notice any tension in your body &amp; gently relax it as you feel each out-breath. Now expand this awareness out to your external senses (vision, hearing, smell, etc.) and maintain your focus on them for as long as you can. If you slip back into focusing on mind-chatter, then re-start the process. Be patient with yourself when practicing this &amp; don’t bother judging how well you are doing. Remember that no matter how much time you spend lost in thought before you catch yourself, every time you notice your mind wandering and then redirect your focus to your breath-body-senses, that is one more time you practiced. The more times you practice the sooner you will get better and the easier it will become, no matter how “bad” you might judge yourself to be at this.
+</p><h3 id="toc3">3. The Circle of Our Relations:
+</h3>
+
+<blockquote>
+<p>“...give me a wildness whose glance no civilization can endure...” <em>- Henry David Thoreau</em>
+</p></blockquote>
+<p>Get outside and break your dependence upon the civilized matrix as much as possible. Spend as much time as you can, &amp; do whatever you can, to live your life outside of climate-controlled house-boxes, clock-time, work, industrial technology, the mass media &amp; the cash economy. These all come together to create a false environment where the politics of domination make the psychology of alienation not only inevitable, but absolutely necessary on many levels. Learn the various arts of primitive self-reliance — tracking, gathering, hunting, trapping, fishing, shelter, crafts, calling Fire, etc — and integrate the lessons into your whole life. Also, be open to having your encounter with these arts change you in fundamental ways — primitive survival is often a question of being, not of technique. Let your resistance to civilization spring naturally from this fundamental shift in being, and the revolution in which you take part will be Primal in both character and effect.
+</p><p>As our primal awareness develops through these (&amp; other) practices, walking through the woods eventually becomes a constant conversation — the wildlings are always communicating with us. The time when “animals talked to people” is not really some far-off era known only to ancient mythology, it is here and now. However, their messages are often subtle, intuitive, and very easy to miss — unless we have developed the skill of respectful “listening”. Even though this skill is seriously lacking in a dominant culture where the politics of control are supported by judgmental ways of thinking and argumentative ways of communicating, it is not impossible for us to reconnect with it and gain a glimpse of a better way of being in the world. So in other words, to re-connect with All-Our-Relations in a primal way, don’t just kill the cop in your head — kill the lawyer &amp; the judge as well. Anyone interested in these ideas can email me at redwolfreturns@hotmail.com.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

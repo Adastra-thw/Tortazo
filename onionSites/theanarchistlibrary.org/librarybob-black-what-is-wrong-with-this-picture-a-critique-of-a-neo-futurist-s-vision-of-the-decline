@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     What is Wrong with this Picture? A critique of a neo-futurist’s vision of the decline of work (Bob Black) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    What is Wrong with this Picture? A critique of a neo-futurist’s vision of the decline of work
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/bob-black">Bob Black</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1995ish
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-work">anti-work</a>
+        <a href="/topics/critique">critique</a>
+        <a href="/topics/review">review</a>
+        <a href="/topics/work">work</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on October 5<sup>th</sup>, 2009 from <a href="http://www.t0.or.at/bobblack/futuwork.htm">www.t0.or.at</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="bob-black-what-is-wrong-with-this-picture-a-critique-of-a-neo-futurist-s-vision-of-the-decline.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Bob Black</h2>
+	
+	<h1 id="textttitleh">What is Wrong with this Picture? A critique of a neo-futurist’s vision of the decline of work</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	
+<blockquote>
+<p><em>The End of Work: The Decline of the Global Labor Force and the Dawn of the Post-Market Era</em><br />
+By Jeremy Rifkin<br />
+New York: G.P. Putnam’s Sons, 1995.
+</p></blockquote>
+<p>Futurists have announced the new post-industrial epoch almost as often as Marxists used to announce the final crisis of capitalism. Admitting as much, Jeremy Rifkin insists that this time, the future is finally here, and here to stay. He may be right.
+</p><p>No original thinker, Rifkin is a lucid concatenator and popularizer of important information, served up for easy digestion. Almost anybody would come away from reading this book knowing more about trends in technology and the organization of work which have already transformed everyday life worldwide and, whatever their ultimate impact, are certain to effect profounder changes still. Along the way, though, Rifkin makes enough crucial mistakes for his reform schemes, prosaic though they are, to assure their consignment to the utopian scrapheap.
+</p><p>Although Rifkin provides plenty of details, they never detract from the big, basic message. The world as we have known it throughout historic time has been a world of work. For all but an elite few (and even for most of them), their work has (as Rifkin says) “structured” their lives. For all the revolutionary transformations since the dawn of civilization, work as quotidian fatality has (to lift a line from William Faulkner) not only endured, it has prevailed. Indeed, work was longer, harder and duller after the Industrial Revolution and after the Neolithic Revolution before it. Political revolutions have worked profound changes, but not profound changes in work.
+</p><p>That’s all beginning to change, according to Rifkin.
+</p><p>The global economy has never been more productive, but worldwide, unemployment is at its highest since the Great Depression. New technology, especially information technology, is always capital-intensive. It’s blind faith and sheer fantasy to suppose that new technology always replaces the jobs it destroys. All the evidence, as Rifkin relentlessly and rightly insists, is to the contrary. It’s nonsensical and cruel to retrain ten workers for a job only one of them might get (but probably won’t, since a young new entry into the workforce is probably healthier, more tractable, and unburdened by memories of the good old days). We’re moving toward a “near-workerless world.” Out of 124 million American jobs, 90 million “are potentially vulnerable to replacement by machines.”
+</p><p>As Rifkin reveals, the tech-driven downsizing of the workforce spares no sector of the economy. In the United States, originally a country of farmers, only 2.7% of the population works in agriculture, and here — and everywhere — “the end of outdoor agriculture” is forseeable. The industrial sector was next. And now the tertiary sector, which had grown relative to the others, which is now by far the largest sector, is getting pared down. Automatic teller machines replace bank tellers. Middle management is dramatically diminished: the bosses relay their orders to the production workers directly, by computer, and monitor their compliance by computer too.
+</p><p>We approach what Bill Gates calls “frictionless capitalism”: direct transactions between producers and consumers. Capitalism will eliminate the mercantile middlemen who created it. In Proletarian Heaven, the handloom weavers must be snickering.
+</p><p>What’s wrong with this picture? Fundamentally this: the commodities so abundantly produced in an almost workerless economy have to be sold, but in order to be sold, they must be bought, and in order for them to be bought, consumers require the money to pay for them. They get most of that money as wages for working. Even Rifkin, who goes to great lengths not to sound radical, grudgingly admits that a certain Karl Marx came up with this notion of a crisis of capitalist overproduction relative to purchasing power.
+</p><p>There are other difficulties too. The work of the remaining workers, the knowledge-workers, is immensely stressful. Like text on a computer screen, it scrolls around inexorably, but for every worker who can’t take it, there’s another in “the new reserve army” of the unemployed (another borrowing from you-know-who) desperate to take her place. And the redundant majority is not just an insufficient market, it’s a reservoir of despair. Not only are people going to be poor, they’re going to know that they’re useless. What happened to the first victims of automation — southern blacks displaced by agricultural technology ending up as a permanent underclass — will happen to many millions of whites too. We know the consequences: crime, drugs, family breakdown, social decay. Controlling or, more realistically, containing them will be costly and difficult.
+</p><p>If that is the futurist future, seemingly so menacing even to those who are forcing us forward, what’s wrong with this picture? Employers should be clamoring for the reform which underpins all the others Rifkin proposes: a shorter workweek. 
+</p><p>That would put more people on the payroll, giving them something to do besides feeling sorry for themselves or, worse yet, figuring out who’s to blame, and providing the purchasing power to buy the commodities the employers are in business to sell. But — to Rifkin’s apparent amazement — those Americans still enjoying the dubious privilege of working, work longer hours than they did in 1948, although productivity has since then more than doubled. Instead of reducing hours, employers are reducing their fulltime workforces, intensifying exploitation and insecurity, while simultaneously maximizing the use of throwaway temp workers, momentarily mobilized reservists.
+</p><p>Rifkin is obviously frustrated by the bosses’ failure to appreciate what he has ascertained to be their long-term, enlightened self-interest. His own modest proposal for a kinder, gentler hightech capitalism accepts as given that a lot of people will continue to work while a lot of others will not. For those who work he proposes shorter hours, but he frets that they may fritter away their free time. Still more worrisome are those whom the economy has downloaded into idleness. For both classes he has a solution. The still-employed are to enter “the third sector”, the volunteer sector (as opposed to the market and government sectors), encouraged by “a tax deduction for every hour given-to legally certified tax-exempt-organizations.” 
+</p><p>And the permanently unemployed will get a government-supplied “social wage”, channelled through “nonprofit organizations to help them recruit and train the poor for jobs in their organizations.”
+</p><p>Hold it right there! Hasn’t Rifkin repeatedly insisted that the early decades of the 21<sup>st</sup> century, if not sooner, will be a nearly workless future? That productivity will increase as producers dwindle?
+</p><p>Why does this imperative govern the for-profit sector but not the nonprofit sector?
+</p><p>If there’s still so much work to be done, be it ever so feel-good and “community-based”, and if people are to be paid to do it — whatever the “creative accounting” by which their wages are paid — then this is no nearly-workless world at all. Rifkin is assigning the otherwise unemployable to the workhouse or the chain-gang. That’s, to say the least, an awfully odd conclusion to a book titled <em>The End of Work</em>.
+</p><p>What’s wrong (something obviously is) with this picture?
+</p><p>Just this. Rifkin misunderstands, or recoils from, the implications of his very powerful demonstration that work is increasingly irrelevant to production. Why is work getting ratcheted up for those who still do it even as it’s denied to those who need to work to survive? 
+</p><p>Are the bosses crazy?
+</p><p>Not necessarily. They may understand, if only intuitively, their interests better than a freelance demi-intellectual like Rifkin does. That supposition is at least consistent with the-.observed facts that the bosses are still running the world whereas Jeremy Rifkin is only writing books about it. Rifkin assumes that work is only about economics, but it was always more than that: it was politics too. 
+</p><p>As its economic importance wanes, work’s control function comes to the fore. Work, like the state, is an institution for the control of the many by the few. It preempts most of our waking hours. It’s often physically or mentally enervating. For most people it involves protracted daily direct submission to authority on a scale otherwise unknown to adults who are not incarcerated. Work wrings the energy out of workers, leaving just enough for commuting and consuming. This implies that democracy — if by this is meant some sort of informed participation by a substantial part of the population in its own governance — is -illusory. Politics is just one more, and more than usually unsavory manifestation of the division of labor (as the work-system is referred to after its tarting-up by academic cosmetologists). Politics is work for politicos, therapy for activists and a spectator sport for everybody else.
+</p><p>If we hypothesize that work is essentially about social control and only incidentally about production, the boss behavior which Rifkin finds so perversely stubborn makes perfect sense on its own twisted terms. Part of the population is overworked. Another part is ejected from the workforce. What do they have in common? Two things — mutual hostility and abject dependence. The first perpetuates the second, and each is disempowering.
+</p><p>Rifkin wonders how the system can deal with vast numbers of newly superfluous people. As he’s himself disclosed, it’s had plenty of practice. The creation and management of an underclass is already a done deal. The brave new world of techno-driven abundance — if by abundance you mean only more commodities — looks to look like this:
+</p>
+<ol>
+<li><p><em>THE ALPHAS</em>: A relatively small number of tenders of hightech, allied with essential tenders of people (entertainers, politicians, clergy, military officers, journalists, police chiefs, etc.). They will continue to work — harder, in many cases, than anybody — to keep the system, and each other, working.
+</p>
+</li>
+<li><p><em>THE BETAS</em>: In lieu of the old-time middle class and middle management which, as Rifkin explains, are obsolete, there will be a social control class of police, security guards, social “workers”, schoolteachers, daycare workers, clinical psychologists, with-it parents, etc. It merits special attention that the more robust and aggressive members of what used to be the working class will be coopted to police those they left behind (as one Gilded Age robber baron put it, “I can hire one-half the working class to kill the other half”). Thus the underclass loses its leaders even as it’s distracted by the phantasm of upward mobility.
+</p>
+</li>
+<li><p><em>THE GAMMAS</em>. The vast majority of the population, what Nicola Tesla called “meat-machines”, what Lee Kuan Yew calls “digits,” what Jeremy Rifkin is too embarrassed to call anything. They cannot be controlled, as the other classes can, by work, because they don’t work. They will be managed by bread and circuses. The bread consists of modest transfer payments maintaining the useless poor at subsistence level as helpless wards of the state. The circuses will be provided by the awesome techno-spectacles of what, in the wake of the Gulf War, can only be called the military-entertainment complex. Hollywood and tne Pentagon will always be there for each other.
+</p><p>Gammas form a mass, not a class, a simple aggregation of homologous multitudes, as Marx characterized the peasantry, “just as potatoes in a bag form a bag of potatoes.” They enjoy certain inalienable rights — to change channels, to check their E-Mail, to vote — and a few others of no practical consequence. Wars, professional sports, elections and advertising campaigns afford them the opportunity to identify with like-minded spectators. It doesn’t matter how they divide themselves up as long as they do. As they really are all the same any differentiation they seize upon is arbitrary, but any differentiation will do. They choose up teams by race, gender, hobby, generation, diet, religion, every which way <em>but</em> loose. In conditions of collective subservience, these distinctions have exactly, and only, the significance of a boys’ tree-house with a “No Girls” sign posted outside. Gammas are essentially fans, and the self-activity of fans is exhausted in their formation of fan-clubs. They are potatoes who bag themselves.
+</p>
+</li>
+<li><p><em>THE DELTAS</em>: This set-up will engender its own contradictions class societies always do. Bill Gates to the contrary notwithstanding, frictionless capitalism is an oxymoron. There’ll be plenty of potholes on the information superhighway. Every class will contribute a portion of drop-outs, deviants and dissidents. Some will rebel from principle, some from pathology, some from both. And their rebellion will be functional as long as it doesn’t get out of hand. The Deltas, the recalcitrants and unassimilables, will furnish work for the Betas and tabloid-type entertainment for the Gammas. In an ever more boring, predictable world, crazies and criminals will provide the zest, the risk, the mystery which the consciousness industry is increasingly inadequate to simulate. VR, morphing, computer graphics — all very impressive, for awhile, but there’s nothing like a whiff of fear, the scent of real blood, like the spectacles nobody did better than the Romans and the Aztecs. The show they call “America’s Most Wanted” — that’s a double entrendre. Societies don’t necessarily get, as some say, the criminals they deserve, but nowadays they get the criminals they want.
+</p>
+</li>
+
+</ol>
+<p>“Whether a utopian or dystopian future awaits us depends”, concludes Rifkin, “to a great measure on how the productivity gains of the Information Age are distributed.” None of his evidence substantiates this <em>ipse dixit</em>, announced so early on that by the time the reader has made it to the policy proposals, he probably assumes that the proof must have been lurking amidst all those facts lobbed at him along the way. In fact, Rifkin’s credibility in predicting the future is strained by his poor performance predicting the past.
+</p><p>Rifkin asserts, almost as an aside, that the American experience of the last 40 to 50 years — higher productivity and longer hours of work — is an aberration without historical precedent. (And thus, presumably, a wrinkle easily ironed out by our statesmen once it’s drawn to their attention by Jeremy Rifkin, tribune of the people.) Both the Neolithic (agricultural) and the Industrial Revolutions spurred productivity and also lengthened the hours of work work (as well as degrading work qualitatively, as an experience). Productivity gains never ushered in utopia before, why should they now? More equitable distribution of the wealth never ushered in utopia before, why should it now? It’s not that Jeremy Rifkin knows something he isn’t telling us. Rather, he doesn’t know something he is telling us.
+</p><p>Rifkin’s utopia turns out to be the New Deal. The statecertified, state-subsidized third sector is just the WPA: publicworks projects. Shortening the workweek by a mere ten hours amounts to no more than bringing New Deal wages-and-hours legislation up to date just as the minimum wage has to be raised from time to time to adjust for inflation. It’s far from obvious that these reforms would do much if anything to reverse the trickle-up redistribution of wealth which took place in the 80’s. It was World War II, after all, not New Deal social legislation, which effectuated this country’s most recent — and quite modest — economic levelling. What Rifkin calls the “social wage” smacks of what Republicans call “workfare.” And using tax breaks to encourage socially responsible enterprise is about as utopian as allowing charitable deductions, but probably not as radical as reducing the capital-gains tax.
+</p><p>Rifkin, like all futurists, is incapable of prophesying a plausible utopian future. A futurist is by definition a forecaster of the continuation of present trends, but if the present isn’t utopian, why should the future-as-the-same-only-more be utopian?
+</p><p>Not to say it can’t possibly be, just to say that Rifkin has some explaining to do. He hasn’t taken seriously or even acknowledged the possibility that a real end of work is a practical utopian possibility, not just an eyecatching title for a pop-futurist book. But that would involve rethinking work in a radically different way.
+</p><p>Thomas Edison said (but probably knew better) that genius is 1% inspiration and 99% perspiration. Utopia is 1% perspiration and 99% inspiration. It s practical possibility was never determined by technology or productivity, although technology and productivity have something to do with it, for better or for worse. Huxley and Orwell in tandem, with the advantage of not knowing nearly as much as Bill Gates and Jeremy Rifkin, long ago saw further than they do. Tech was the dependent, not the independent variable — the consequence, not the cause. There’s one and only one profoundly important conclusion of Rifkin’s, and the irony is, he doesn’t really mean it. It’s his implicit equation of utopia with the end of work. But Rifkin has no idea what the end of work would mean because he’s given no thought to what work means. Otherwise he could hardly have thought work is ended by being performed in a different “sector” of the economy. That’s like saying that exploitation is ended once everybody’s employer is a workers’ state.
+</p><p>To speak of the “end” of work is to speak in the passive voice as if work is ending itself, and needs only a nudge from progressive policies to wind down without a fuss. But work is not a natural process like combustion or entropy which runs its course of itself. Work is a social practice reproduced by repeated, multitudinous personal choices. Not free choices usually — “your money or your life” is, after all, a choice — but nonetheless acts of human intention. It is (the interaction of many) acts of will which perpetuate work, and it is (the interaction of many) acts of will which will abolish it by a collective adventure speaking in the active voice. Work will end, if it does, because workers end it by choosing to do something else — by living in a different way.
+</p><p>What, after all, is work? Nuances aside (as insightful as exploring them can be), work is production forced by and for survival. Its objectionable aspect isn’t production, it’s forced labor to live. Production without coercion is not only possible, it’s omnipresent. Rifkin points out that half the adult population already does volunteer “work” (a misnomer) with no economic encouragement at all. That’s not a bad place to start to think about how to reconcile production and freedom.
+</p><p>As Rifkin complains, people who volunteer <em>money</em> to charities can take tax deductions, but people who Volunteer their services cannot.
+</p><p>So why are they donating their services? To oversimplify, two main motives are probably operative. The first is benevolence. Many people derive satisfaction from helping other people. The second is satisfaction in the activity itself: the scoutmaster who enjoys the company of kids, the food-kitchen cook who enjoys cooking, or anybody with a craft or skill he cherishes so much he wants to pass it on to others. And these motives often overlap and reinforce each other. Often you can’t help people better than by imparting your skills to them. Most people have more ability than money, and sharing their abilities, unlike sharing their money, doesn’t deprive them of anything. They gain satisfaction and they lose nothing. Might there be a clue here to <em>really</em> ending work?
+</p><p>Rifkin only discerns, and only vaguely, that the voluntarist spirit has a part to play in the end of work. He doesn’t notice that self-interested activity does too — that <em>play</em> has a part to play. Mary Poppins perhaps exaggerated in saying that “in everything that must be done, there is an element of fun”, but in many things that must be done, there could be elements of fun. Production and play aren’t necessarily the same, but they’re not necessarily different either. Income and altruism aren’t the only springs of action. Crafts, sports, feasts, sex, games, song and conversation gratify by the sheer doing of them. Rifkin’s no radical, but he’s certainly a leftist, with the Judeo-Calvinist presumption that if you enjoy doing something, especially with others, it must be immoral or frivolous.
+</p><p>We finally know what’s wrong with this picture: we’ve seen it before, and we know how it ends. The future according to the visionary Rifkin is the present with better special effects. Putting people out of work does nothing to put an end to work. Unemployment makes work more, not less important. More makework does not mean less work, just less work it is possible to perform with even a vestige of self-respect. Nothing Rifkin forecasts, not even rising crime, offers any promise of ever ending work. Nothing Rifkin proposes does either. So strongly does he believe in the work-ethic that he schemes to perpetuate it even after the demise of the toil it hallows. He believes in ghosts, notably the ghost in the machine. But a spectre is haunting Rifkin: the spectre of the abolition of work by the collective creativity of workers themselves.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

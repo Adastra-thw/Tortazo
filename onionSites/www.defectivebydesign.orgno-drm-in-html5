@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="ie" lang="en" dir="ltr"><![endif]-->
+  <!--[if !IE]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+<head>
+  <title> Tell W3C: We don&#039;t want the Hollyweb | Defective by Design</title>
+  <meta charset="utf-8" />
+<meta http-equiv="cleartype" content="on" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="http://defectivebydesign.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="canonical" href="/no-drm-in-html5" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortlink" href="/node/2224" />
+<link rel="shortcut icon" href="http://defectivebydesign.org/sites/nodrm.civicactions.net/files/favicon.png" type="image/png" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<meta name="viewport" content="width=device-width" />
+  <style>@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.base.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.menus.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.messages.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/system/system.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/aggregator/aggregator.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/field/field.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/modules/node/node.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/search/search.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/user/user.base.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/omega/omega/css/modules/user/user.theme.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/modules/views/css/views.css?n8vdt6");</style>
+<style>@import url("http://defectivebydesign.org/sites/all/modules/ctools/css/ctools.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/modules/flexslider/assets/css/flexslider_img.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/libraries/flexslider/flexslider.css?n8vdt6");</style>
+<style>@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/layouts/basic/basic.layout.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/dbd2.normalize.css?n8vdt6");
+@import url("http://defectivebydesign.org/sites/all/themes/dbd2/css/dbd2.styles.css?n8vdt6");</style>
+  <script>/**
+ * @licstart The following is the entire license notice for the JavaScript
+ * code in this page.
+ *
+ * Copyright (C) 2014  Defective by Design.
+ *
+ * The JavaScript code in this page is free software: you can redistribute
+ * it and/or modify it under the terms of the GNU General Public License
+ * (GNU GPL) as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.  The code is
+ * distributed WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU GPL
+ * for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you may
+ * distribute non-source (e.g., minimized or compacted) forms of that code
+ * without the copy of the GNU GPL normally required by section 4, provided
+ * you include this license notice and a URL through which recipients can
+ * access the Corresponding Source.
+ *
+ * @licend The above is the entire license notice for the JavaScript code
+ * in this page.
+ */</script>
+<script src="http://defectivebydesign.org/misc/jquery.js?v=1.4.4"></script>
+<script src="http://defectivebydesign.org/misc/jquery.once.js?v=1.2"></script>
+<script src="http://defectivebydesign.org/misc/drupal.js?n8vdt6"></script>
+<script src="http://defectivebydesign.org/sites/all/libraries/flexslider/jquery.flexslider-min.js?n8vdt6"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","flexslider":{"optionsets":{"default":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":0,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":"7000","directionNav":true,"controlNav":false,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"default"}}});</script>
+</head>
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-2224 node-type-page section-no-drm-in-html5">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <script>
+/*
+|@licstart The following is the entire license notice for the
+JavaScript code in this page.|
+
+    Copyright 2014 Free Software Foundation Inc.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses/.
+
+|@licend The above is the entire license notice
+for the JavaScript code in this page.|
+*/
+</script>
+<div class="l-page">
+  <header class="l-header" role="banner">
+    <div class="l-header--inner">
+      <div class="l-branding">
+          
+                              <h1 class="site-name">
+              <a href="/" title="Home" rel="home"><span>Defective by Design</span></a>
+            </h1>
+            
+                    
+              </div>
+  
+              <div class="l-region l-region--navigation">
+    <nav id="block-system-main-menu" role="navigation" class="block block--system block--menu block--system-main-menu">
+      
+  <ul class="menu"><li class="first leaf"><a href="/" title="Return to the home page">Home</a></li>
+<li class="leaf"><a href="/what_is_drm_digital_restrictions_management" title="">What is DRM?</a></li>
+<li class="leaf"><a href="/action" title="">Take Action</a></li>
+<li class="leaf"><a href="/guide" title="">DRM-free Guide</a></li>
+<li class="leaf"><a href="/blog" title="">Blog</a></li>
+<li class="leaf"><a href="/contact" title="Contact DefectiveByDesign">Contact</a></li>
+<li class="last leaf"><a href="https://crm.fsf.org/civicrm/contribute/transact?reset=1&amp;id=40" title="Make a donation to support the campaign">Donate</a></li>
+</ul></nav>
+  </div>
+    </div>
+  </header>
+  
+  <div class="l-highlighted">
+      </div>
+  
+  <div class="l-main">  
+    <div class="l-content" role="main">
+      <div class="l-content--inner">
+        <a id="main-content"></a>
+                          <h1 class="page-title"> Tell W3C: We don&#039;t want the Hollyweb</h1>
+                                                        <article role="article" class="node node--page node--full node--page--full">
+  
+  
+  <div class="node__content">
+    <div class="field field--name-body field--type-text-with-summary field--label-hidden"><div class="field__items"><div class="field__item even"><div style="width:325px; text-align:center; float:right; font-size:90%"><img src="//static.fsf.org/dbd/hollyweb.jpeg" alt="Stop the DRM in HTML5" width="300px;" style="padding-bottom:0.5em;" /><strong>More than 28,600 people have signed.</strong></div>
+<p>Hollywood is at it again. Its latest ploy to take over the Web? Use its influence at the World Wide Web Consortium (W3C) to weave <a href="/what_is_drm">Digital Restrictions Management (DRM)</a> into HTML5 — in other words, into the very fabric of the Web. Millions of Internet users came together to defeat SOPA/PIPA, but now Big Media moguls are going through non-governmental channels to try to sneak digital restrictions into every interaction we have online. Giants like Netflix, Google, Microsoft, and the BBC are all rallying behind this <a href="https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html">disastrous proposal</a>, which flies in the face of the W3C's mission to "lead the World Wide Web to its full potential."</p>
+<p><b>On May 3rd, 2013, the <a href="/dayagainstdrm">International Day Against DRM,</a> we drove the message home by delivering your signatures to the W3C along with an Oscar award for "Best Supporting Role in the Hollyweb" (<a href="http://www.defectivebydesign.org/oscar-awarded-w3c-in-the-hollyweb">pictures here</a>). Moving forward, we need your signature as much as ever. We're hoping to have a deepening conversation with the W3C and the more concerned Web users supporting our position, the better. Sign below!</b></p>
+<p>
+Need more information first? <a href="https://www.eff.org/deeplinks/2013/03/defend-open-web-keep-drm-out-w3c-standards">Read this article by our friends at the Electronic Frontier Foundation.</a>
+</p>
+<script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.min.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-ui-1.8.16.custom.min.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/smoothness/jquery-ui-1.8.16.custom.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.autocomplete.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/jquery.autocomplete.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jstree.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/style.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.menu.pack.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/menu.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.chainedSelects.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.contextMenu.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tableHeader.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.textarearesizer.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.form.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.tokeninput.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/token-input-facebook.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.timeentry.pack.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mousewheel.pack.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.toolTip.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dataTables.min.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/demo_table_jui.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.dashboard.js"></script><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+@import url("//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/dashboard.css");
+/*--><!]]>*/
+</style><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.FormNavigate.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.validate.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.civicrm-validate.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.ui.datepicker.validation.pack.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery-fieldselection.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.jeditable.mini.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.mustache.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.blockUI.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/rest.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/Common.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmeditable.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmaccordions.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmasmselect.js"></script><script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/jquery.crmtooltip.js"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+var cj = jQuery.noConflict();
+//--><!]]>
+</script><link rel="stylesheet" href="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/deprecate.css" type="text/css" /><link rel="stylesheet" href="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/civicrm.css" type="text/css" /><link rel="stylesheet" href="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/css/extras.css" type="text/css" /><form action="https://crm.fsf.org/civicrm/profile/create?gid=183&amp;reset=1" method="post" name="Edit" id="Edit">
+<div>
+<input name="postURL" type="hidden" value="http://www.defectivebydesign.org/no-drm-in-html5/thankyou" /><p><input name="cancelURL" type="hidden" value="http://www.defectivebydesign.org/" /></p>
+<p><input name="add_to_group" type="hidden" value="262" /></p>
+<p><input name="_qf_default" type="hidden" value="Edit:cancel" /></p></div>
+<script type="text/javascript" src="//static.fsf.org/nosvn/dbd/2013/no-drm-in-html5/js/Common.js"></script><div id="crm-container" lang="en" xml:lang="en" xml:lang="en">
+<div class="help">
+<p><b>We call on the World Wide Web Consortium (W3C) and its member organizations to reject the Encrypted Media Extensions proposal (EME), which would incorporate support for Digital Restrictions Management (DRM) into HTML.</b></p>
+<p>EME would be an irreversible step backward for freedom on the Web. It would endorse and enable business models that unethically restrict users, and it would make subjugation to particular media companies a precondition for full Web citizenship. Just as Flash and Silverlight are finally dying off, we should not replace them with the media giants' latest control fantasy.</p>
+<p>Furthermore, EME contradicts the W3C's core values. It would hamper interoperability by encouraging the proliferation of DRM plugins. It  would fly in the face of the W3C's principle of keeping the Web royalty-free — this is simply a back door for media companies to require proprietary player software. It is willful ignorance to pretend otherwise just because the proposal does not mention particular technologies or DRM schemes by name. </p>
+<p><b>W3C and member organizations: don't weave DRM into the fabric of the Web.</b></p>
+</div>
+<div class="form-layout-compressed">
+<div id="editrow-first_name" class="crm-section editrow_first_name-section form-item">
+<div class="label"><label for="first_name">  First Name<span class="crm-marker" title="This field is required."><sup>*</sup></span><br /></label></div>
+<div class="edit-value content"><input maxlength="64" size="30" name="first_name" type="text" id="first_name" class="form-text big required" /></div>
+<div class="clear"></div>
+</div>
+<div id="editrow-last_name" class="crm-section editrow_last_name-section form-item">
+<div class="label"><label for="last_name">  Last Name<span class="crm-marker" title="This field is required."><sup>*</sup></span><br /></label></div>
+<div class="edit-value content"><input maxlength="64" size="30" name="last_name" type="text" id="last_name" class="form-text big required" /></div>
+<div class="clear"></div>
+</div>
+<div id="editrow-email-Primary" class="crm-section editrow_email-Primary-section form-item">
+<div class="label"><label for="email-Primary">  Email<span class="crm-marker" title="This field is required."><sup>*</sup></span><br /></label></div>
+<div class="edit-value content"><input maxlength="64" size="30" name="email-Primary" type="text" id="email-Primary" class="form-text big required" /></div>
+<div class="clear"></div>
+</div>
+<div id="editrow-custom_80" class="crm-section editrow_custom_80-section form-item">
+<div class="label"></div>
+<div class="edit-value content"><input type="hidden" name="custom_80[Would you like to join the Defective by Design mailing list?]" value="" /><input id="custom_80[Would you like to join the Defective by Design mailing list?]" name="custom_80[Would you like to join the Defective by Design mailing list?]" type="checkbox" value="1" class="form-checkbox" /><label for="custom_80[Would you like to join the Defective by Design mailing list?]"> I want to help Defective by Design fight DRM — send me news and action alerts.</label></div>
+<div class="clear"></div>
+</div>
+</div>
+<!-- end form-layout-compressed for last profile --><div class="help">After you sign, you'll receive an email from us that asks you to confirm your signature before we add it to the statement. Please note that signing does not put you on the general DbD mailing list; we will only follow up with you only on this particular issue. We will not publish or share your information with any party outside the FSF. See our <a href="https://my.fsf.org/donate/privacypolicy.html">privacy policy</a> for more information.</div>
+<div class="crm-submit-buttons">
+<p>  <span class="crm-button crm-button-type-next crm-button_qf_Edit_next"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Sign the Petition" type="submit" id="_qf_Edit_next" /></span>
+    </p></div>
+</div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+    
+cj(document).ready(function(){ 
+	cj('#selector tr:even').addClass('odd-row ');
+	cj('#selector tr:odd ').addClass('even-row');
+});
+
+
+
+//--><!]]>
+</script></form>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+      cj( function( ) {
+        cj("#Edit").validate({ 'errorClass': 'crm-error'});
+      });
+    
+//--><!]]>
+</script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+jQuery.noConflict(true);
+//--><!]]>
+</script><p>
+<!--
+<p><p>If you represent an organization that would like to sign, see instructions at the bottom of this page.</p>
+<p>-->
+</p>
+<p>Read this page in French: <a href="http://www.defectivebydesign.org/no-drm-in-html5/fr">http://www.defectivebydesign.org/no-drm-in-html5/fr</a></p>
+<hr /><h2>Coalition to Keep the Web Free</h2>
+<p>In addition to creating this petition, Defective by Design has joined 26 other organizations in a coalition to oppose Encrypted Media Extensions. See our <a href="http://www.defectivebydesign.org/sign-on-against-drm-in-html">joint letter</a> to the W3C condemning the proposal.</p>
+<hr /><h2>Voices Against EME</h2>
+<blockquote><p>"The W3C has a duty to send the DRM-peddlers packing, just as the US courts did in the case of digital TV. There is no market for DRM, no public purpose served by granting a veto to unaccountable, shortsighted media giants who dream of a world where your mouse rings a cash-register with every click and disruption is something that happens to other people, not them."<br />―<a href="http://www.guardian.co.uk/technology/blog/2013/mar/12/tim-berners-lee-drm-cory-doctorow">Cory Doctorow</a>
+</p></blockquote>
+<blockquote><p>"W3C is there to create comprehensible, publicly-implementable standards that will guarantee interoperability, not to facilitate an explosion of new mutually-incompatible software and of sites and services that can only be accessed by particular devices or applications. But EME is a proposal to bring exactly that dysfunctional dynamic into HTML5, even risking a return to the "bad old days, before the Web" of deliberately limited interoperability."<br />―<a href="http://www.eff.org/deeplinks/2013/03/defend-open-web-keep-drm-out-w3c-standards">Peter Eckersley and Seth Schoen of the Electronic Frontier Foundation</a></p></blockquote>
+<hr /><!-- REMOVED FOR NOW BECAUSE IT WAS CONFUSING PEOPLE WHO HAD SEEN THE SIGN-ON LETTER 
+The following organizations support the petition to keep DRM out of HTML:
+<h2><p><a href="http://www.april.org">April</a></h2>
+<h2><a href="http://www.fsfe.org">Free Software Foundation Europe</a></h2>
+<h2><a href="http://www.pp-international.net">Pirate Parties International</h2>
+<h2><a href="http://www.efn.no">Electronic Frontier Norway</a></h2>
+<h2><a href="http://www.mediagoblin.org">GNU MediaGoblin</a></h2>
+<h2><a href="http://www.perpinux.org">Perpinux</a></h2>
+<h2><a href="http://www.calltheninja.com">Call The Ninja</a></h2>
+<h2><a href="http://www.gatsbymedia.net">Gatsby Media</a></h2>
+<h2><a href="http://www.nowoczesnapolska.org.pl/">Modern Poland</a></h2>
+<h2><a href="http://www.lunatics.tv">Anansi Spaceworks</h2>
+<hr>
+<p>If you represent an organization and would like to add its name to this page, please contact <a href="mailto:info@defectivebydesign.org">info@defectivebydesign.org</a> with your organization name and URL. In addition to this petition, we are preparing a separate sign-on letter for organizations with the same message. If your organization is interested in signing on to the letter, please let us know in your email.</p>
+<p>--><p><em>Please share the Hollyweb image, which is copyright Free Software Foundation 2013, under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported license</a>.</em></p>
+</div></div></div>  </div>
+
+    </article>
+                <div class="l-content-bottom">
+          <div class="l-content-bottom--inner">
+                                  </div>
+        </div>  
+      </div>
+    </div>
+    
+    <!-- @TODO -- conditionalize both sidebar and content bottom to only show up on not-front and front, respectively -- or, possibly recast the sidebars as content-bottom if they are mutually exclusive -->
+      <aside class="l-region l-region--sidebar-first">
+    <div id="block-search-form" role="search" class="block block--search block--search-form">
+        <div class="block__content">
+    <form class="search-block-form" action="/no-drm-in-html5" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-s7ngNUP-kB4bS5Pz3r2HT4M5NFi7VYuavXfGylpX-yc" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<div id="block-block-84" class="block block--block block--block-84">
+        <h2 class="block__title">Get action alerts</h2>
+      <div class="block__content">
+    <form action="https://crm.fsf.org/civicrm/profile/create?gid=257&amp;reset=1" method="post" name="Edit" id="Edit">
+<input name="postURL" type="hidden" value="http://www.defectivebydesign.org/thanks" /><input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=257" /><input name="add_to_group" type="hidden" value="41" /><input name="_qf_default" type="hidden" value="Edit:cancel" /><div id="crm-container" class="crm-container crm-public" lang="en" xml:lang="en" xml:lang="en">
+<div id="editrow-email-Primary" class="crm-section editrow_email-Primary-section form-item">
+<div class="label"><label for="email-Primary">Email <span class="crm-marker" title="This field is required.">*</span></label></div>
+<div class="edit-value content"><input maxlength="64" size="20" name="email-Primary" type="text" id="email-Primary" class="form-text medium required" /></div>
+</div>
+</div>
+<!-- end form-layout-compressed for last profile --><div class="crm-submit-buttons" style=""><span class="crm-button crm-button-type-next crm-button_qf_Edit_next"><input class="validate form-submit default" accesskey="S" name="_qf_Edit_next" value="Sign up" type="submit" id="_qf_Edit_next" /></span></div>
+
+</form>
+<p><a href="https://my.fsf.org/donate/privacypolicy.html">We won't share your information.</a></p>
+  </div>
+</div>
+<div id="block-views-status-updates-block-3items" class="block block--views block--views-status-updates-block-3items">
+        <h2 class="block__title">Updates</h2>
+      <div class="block__content">
+    <div class="view view-status-updates view-id-status_updates view-display-id-block_3items view-dom-id-3e9e90900148e42cb3da0e23a2a544d6">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list"><ul>  <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-description">        <span class="field-content">Looking ahead to the next International Day Against DRM - May 6, 2015. <a href="https://u.fsf.org/11i" title="https://u.fsf.org/11i" rel="nofollow external">https://u.fsf.org/11i</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">5 days</em> ago</span>  </div></li>
+  <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-description">        <span class="field-content">&quot;Isn't DRM ineffective anyway?&quot; and other frequently asked questions about Digital Restrictions Management.  <a href="https://u.fsf.org/110" title="https://u.fsf.org/110" rel="nofollow external">https://u.fsf.org/110</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">2 weeks</em> ago</span>  </div></li>
+  <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field views-field-description">        <span class="field-content">.@EA uses DRM in Origin client to snoop your computer for recently accessed files. <a href="https://u.fsf.org/10v" title="https://u.fsf.org/10v" rel="nofollow external">https://u.fsf.org/10v</a></span>  </div>  
+  <div class="views-field views-field-timestamp">        <span class="field-content"><em class="placeholder">3 weeks</em> ago</span>  </div></li>
+</ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <p><span class="status-update-follow-links">Status updates on: <a href="http://status.fsf.org/dbd">GNU social</a> | <a href="https://microca.st/dbd">pump.io</a> | <a href="https://twitter.com/endDRM">Twitter</a></span></p>
+    </div>
+  
+  
+</div>  </div>
+</div>
+<div id="block-views-photos-block" class="block block--views block--views-photos-block">
+        <div class="block__content">
+    <div class="view view-photos view-id-photos view-display-id-block view-dom-id-a795ba2fce4912d5e7ca3c72b95cbba0">
+        
+  
+  
+      <div class="view-content">
+      <div  id="flexslider-1" class="flexslider">
+  <ul class="slides"><li>  
+  <div class="photo-image">        <img src="http://defectivebydesign.org/sites/defectivebydesign.org/files/styles/flexslider_full/public/cancel-netflix_0.png?itok=uGNvZNu5" width="800" height="500" alt="" />  </div>  
+  <div class="photo-caption">        <a href="/cancelnetflix">Cancel Netflix</a>
+  </div></li>
+<li>  
+  <div class="photo-image">        <img src="http://defectivebydesign.org/sites/defectivebydesign.org/files/styles/flexslider_full/public/hollyweb-small.jpeg?itok=YJHvvL6H" width="800" height="500" alt="" />  </div>  
+  <div class="photo-caption">        <a href="/no-drm-in-html5">Stop DRM in HTML5</a>
+  </div></li>
+</ul></div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </aside>
+      <aside class="l-region l-region--sidebar-second">
+    <div id="block-views-quote-block" class="block block--views block--views-quote-block">
+        <h2 class="block__title">Quote</h2>
+      <div class="block__content">
+    <div class="view view-quote view-id-quote view-display-id-block view-dom-id-5a4e7a269f46edc52528e1934bdcaddc">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+          <p class="quote">It's certainly easier to implement bad security and make it illegal for anyone to notice than it is to implement good security.</p>    
+          <p class="quote-source">Bruce Schneier</p>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </aside>
+    
+    
+        
+  </div>
+  
+  <div class="l-prefooter">
+    <div class="l-prefooter--inner">
+                </div>
+  </div>
+  
+  <footer class="l-footer" role="contentinfo">
+    <div class="l-footer--inner">
+        <div class="l-region l-region--footer-upper-first">
+    <div id="block-block-28" class="block block--block block--block-28">
+        <h2 class="block__title">Check out other Free Software Foundation campaigns</h2>
+      <div class="block__content">
+    <ul><li><a href="http://playogg.org/">PlayOgg</a> — support free media formats</li>
+<li><a href="http://www.gnu.org/">GNU</a>, a free Unix-like operating system</li>
+<li><a href="http://upgradefromwindows8.com/">Upgrade from Windows *</a>, pledge to free your computer today!</li>
+</ul>  </div>
+</div>
+  </div>
+        <div class="l-region l-region--footer-upper-second">
+    <div id="block-block-80" class="block block--block block--block-80">
+        <h2 class="block__title">Defective by Design is a campaign of the</h2>
+      <div class="block__content">
+    <p><a href="http://www.fsf.org/"><img src="//static.fsf.org/nosvn/dbd/2012/assets/logo-fsf.png" alt="Free Software Foundation" /></a></p>
+  </div>
+</div>
+  </div>
+        <div class="l-region l-region--footer">
+    <div id="block-block-29" class="block block--block block--block-29">
+        <div class="block__content">
+    <p>Copyright © 2006—2014 Free Software Foundation, Inc.</p>
+  </div>
+</div>
+<div id="block-block-77" class="block block--block block--block-77">
+        <div class="block__content">
+    <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nd/3.0/">Creative Commons Attribution-No Derivative Works 3.0 license (or later version)</a> — <a href="https://www.gnu.org/licenses/license-list.html#OpinionLicenses">Why this license?</a></p>
+  </div>
+</div>
+<div id="block-block-78" class="block block--block block--block-78">
+        <div class="block__content">
+    <p><a href="//www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+  </div>
+</div>
+<div id="block-block-79" class="block block--block block--block-79">
+        <div class="block__content">
+    <p><a rel="jslicense" href="/javascript-license-information">JavaScript License Information</a></p>
+  </div>
+</div>
+  </div>
+    </div>
+  </footer>
+</div>
+  <script src="http://defectivebydesign.org/sites/all/modules/flexslider/assets/js/flexslider.load.js?n8vdt6"></script>
+<script>var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://piwik.fsf.org/" : "http://piwik.fsf.org/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();</script>
+</body>
+</html>

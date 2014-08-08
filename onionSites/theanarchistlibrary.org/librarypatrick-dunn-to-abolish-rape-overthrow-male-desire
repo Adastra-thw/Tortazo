@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     To Abolish Rape, Overthrow Male Desire (Patrick Dunn) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/patrick-dunn-to-abolish-rape-overthrow-male-desire?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=patrick-dunn-to-abolish-rape-overthrow-male-desire">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    To Abolish Rape, Overthrow Male Desire
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/patrick-dunn">Patrick Dunn</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    June 2013
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/fifth-estate">Fifth Estate</a>
+        <a href="/topics/fifth-estate-389">Fifth Estate #389</a>
+        <a href="/topics/gender">gender</a>
+        <a href="/topics/patriarchy">patriarchy</a>
+        <a href="/topics/rape">rape</a>
+        <a href="/topics/sexuality">sexuality</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Fifth Estate #389
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="patrick-dunn-to-abolish-rape-overthrow-male-desire.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Patrick Dunn</h2>
+	
+	<h1 id="textttitleh">To Abolish Rape, Overthrow Male Desire</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>In at least some of its aspects, human culture functions as an elaborate system of sexual rituals – not substitutive satisfactions, in the Freudian sense, but social performances that organize sexual energies, and that bring sexual forces into a living, symbolic order of seduction, pleasure, power, and reproduction. From this point of view, rape and other forms of sexual violence – in particular, violence against women, children, and those not conforming to established sexual identities – can be seen as extensions of the normal regime of interaction among participants in a stratified cultural order.
+</p><p>Human culture is set up, in its logic and purpose, to stimulate and deploy the violent forces unleashed in acts of rape, sexual abuse, sexual harassment, and other forms of sexual violence. In this way, sexual violence serves as an instrument of cultural order and is recognized, through either active or tacit complicity, as something routine, natural, and normal.
+</p><p>The basic principle governing the deployment of sexual violence in human culture is <em>patriarchy</em>, or male rule. It is from the point of view of male consciousness, male desire, that the incessant theater of sexually encoded rituals is organized. Patriarchal culture is set up <em>for the sake of</em> male desire; male consciousness commands and directs cultural performances in order to satisfy and elicit this desire.
+</p><p>Male desire thus originates from an illusory standpoint of pure, sovereign subjectivity, outside the passing display of sexualized rituals, from which an absolute command and control is exercised over objective forces. This sovereign male consciousness is the secret determining agency that sets all sexual games and rituals in motion. It makes culture appear and develop as it does, according to a strategically encoded order; it also makes <em>sex</em> happen, it brings about sexual experiences.
+</p><p>Inherent in the condition of patriarchy is the assumption that male desire has the right to impose itself at will. Male desire, in its sovereignty, has the right to be satisfied; other sexual forces and potentials exist only for the sake of this satisfaction. Thus, when an individual man feels a desire for sex, he organizes material forces in order to achieve, by whatever means, the satisfaction to which he is entitled.
+</p><p>Others – men, women, children, beasts, etc. – who are objectified by this desire are, to varying degrees, at the man’s disposal; if they are useful, they may be violated, exploited, and discarded according to the rules of social stratification – rules which are themselves designed to serve the ends of male desire.
+</p><p>Some of these others may achieve formal recognition within the field of male desire (e.g. through marriage), thereby immunizing themselves, at least formally, against certain types of sexual violence, even while submitting themselves to others; those who remain “undeclared” in their sexuality, on the other hand, become potential targets for a wider range of violent acts, and their recourse for self-protection is more dangerous.
+</p><p>This, at least in part, explains the generalized lack of sympathy, and of solidarity in pursuit of justice, for female rape victims: Unmarried, unsupervised women who are perceived as exhibiting sexual qualities are implicitly regarded as legitimate objects of male desire. Married women, meanwhile, are viewed as institutionalized sex objects. What is in fact rape is thus redefined as the natural, rightful enjoyment of the woman’s sexual availability by sovereign male desire.
+</p><p>The situation resulting from this complex of male desire is one in which an array of grotesque aberrations and imbalances of power are allowed to flourish. Characters like the ones appearing in the stories of the Marquis de Sade – judges, statesmen, priests, schoolmasters: all male authority figures exercising the absolute right to impose their desires on the population – come to exemplify the naturalized order of sexuality.
+</p><p>Thus, in modern Amerikkkan society, we are surrounded by patriarchal serial rapists like Penn State football coach Jerry Sandusky and many esteemed members of the Catholic clergy. Such figures are granted free license under the executive power of male desire, and they experience their own sexual atrocities as wholly lawful and legitimate. The surrounding culture also confirms this lawfulness, however surreptitiously. Whereas a just ethical response to seeing a rich old man violently raping a poor eight-year-old boy might be to kill the old man on the spot, Amerikkkan culture, in its total subservience to patriarchal desire, rewards, abets, and ultimately breeds such rapists.
+</p><p>Male desire is able to operate at this illusory level of absolute sovereignty only through a deeply rooted mystification. While bodies are ritually ordered to move at the command of male desire, the machinery of this desire is supposed to lie concealed in secrecy. But even if its <em>modus operandi</em> is to avoid exposure, male desire ultimately remains unknown only to men themselves. For women, children, and others forced to live under the dominion of male desire acquire an intimate, direct knowledge of its ways – much as black slaves in the Amerikkkan south acquired a special knowledge of whiteness, an embodied, experiential knowledge inaccessible to white folks.
+</p><p>The spreading and airing of this knowledge, when combined with erotic sabotage enacted by non-conforming males, based on their own direct experience of the inner circuitry of male desire, is an essential factor in our resistance to patriarchal violence. Such knowledge displaces male desire from its position of absolute command and returns it to the field of relative ritual and performance, where it can be politicized and attacked. It is in this spirit that some rebellious critiques of masculinity have been offered; they are unmaskings of the symbolically coded, psychosomatic machinery through which male desire conducts itself into an incarnate agency of violence.
+</p><p>However, the discourse of ending patriarchy and abolishing masculinity belies a basic imbalance that continues to define sexual relations among human beings. This imbalance is rooted in the persistent executive authority and control wielded by men over the rituals, interactions, and physical techniques involved in bringing about sexual experiences. In other words, what is missing from the myriad critiques of gender, masculinity, and patriarchy is a positive solution to the problem of sex – specifically, how to do it, how to bring it about; such a solution is urgently needed, insofar as our species is not committed to a path of permanent abstinence.
+</p><p>Children experience pleasure, attraction, and arousal, and, in their complexity, need to be empowered to pursue these experiences free from violence, coercion, and control. Women have been bred as physically incapacitated, subjugated beings; they have been deprived of basic powers, such as the power to defend, manage, and enjoy their own bodies; they have been forced to rely primarily on their seductive influence as encoded and decorated sex objects, while ceding all executive control over violence (including sexual violence) to men. As literalized in Steubenville, Ohio, the agency of women, even their consciousness, is nonexistent under the regime of male desire; sex between males and females continues to be haunted by this delusion.
+</p><p>Moreover, at a fundamental level, the subjugation of women by men has been inscribed in the dominant form of male-female genital intercourse under patriarchy. However, despite what is suggested by theorists such as Andrea Dworkin (who argues that all male-female genital sex constitutes rape), this violent, “penetrative” form of intercourse is not a reflection of the inherent nature of male-female genital sex; like rape and sexual violence in general, it is a culturally encoded manifestation of the patriarchal order that defines the limits of what we have come to understand as sexuality.
+</p><p>To discover sex beyond sexuality will require a radical transformation in the erotic-physical relations between males and females. Obviously, this implies a radical transformation in human culture, such that the patriarchal organization of social hierarchies (i.e. gender distinction) based on biological differences is eliminated. Positively speaking, females, children, and those who reject patriarchal sexual relations, must be empowered to exert a creative influence over the rituals, strategies, and techniques involved in seeking, imagining, and sustaining sexual ecstasy. In this way, rape and sexual violence can be abolished, leading ultimately to the destruction of patriarchy, and to the total exposure and dissolution of the mystified subject of male desire.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

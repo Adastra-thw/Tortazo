@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Seeing an Iraqi Resistance (Peter Gelderloos) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/peter-gelderloos-seeing-an-iraqi-resistance?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=peter-gelderloos-seeing-an-iraqi-resistance">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Seeing an Iraqi Resistance
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/peter-gelderloos">Peter Gelderloos</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2006
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-militarist">anti-militarist</a>
+        <a href="/topics/armed-struggle">armed struggle</a>
+        <a href="/topics/class">class</a>
+        <a href="/topics/class-struggle">class struggle</a>
+        <a href="/topics/iraq">Iraq</a>
+        <a href="/topics/middle-east">Middle East</a>
+        <a href="/topics/movement">movement</a>
+        <a href="/topics/resistance">resistance</a>
+        <a href="/topics/terrorism">terrorism</a>
+        <a href="/topics/the-state">the State</a>
+        <a href="/topics/war">war</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    10 May 2006
+  </p>
+  
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="peter-gelderloos-seeing-an-iraqi-resistance.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Peter Gelderloos</h2>
+	
+	<h1 id="textttitleh">Seeing an Iraqi Resistance</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p>It is no surprise that current efforts within the US to stop the ongoing war against Iraq have been so ineffective.  The antiwar movement has indoctrinated itself with the pacifist delusion that peaceful protest ended the Vietnam war (when it was demonstrably the armed Vietnamese and the high number of mutinous, violently rebellious US troops), and now they are trying to repeat a victory that never happened.  The Democratic Party, eager for a passive opposition to lead, has been more than willing to embrace this delusion, which has found fertile ground among self-righteous, missionary-minded peace protestors.  The antiwar movement, living out a false history, prevents itself from learning from the past, and even creates false measurements, e.g. how big a protest is, for assessing the present.  The Pentagon, on the other hand, learned a great deal from why they lost Vietnam. A chief defeat they conceded in the psychological operations battle was to allow the perception to spread globally that the Vietnamese had a political cause, and even personhood.  The enemy could become the protagonist, and the US public and the rest of the world could incorporate a Vietnamese victory into that unfolding moral fable that constitutes the dominant history.   The Left’s self-defeating reaction to the events of September 11<sup>th</sup>, along with the racial stereotypes that have long been imposed on the Middle East, suggested the obvious tack for US wars in the immediate future.  Washington cannot allow its enemies to become protagonists; no one wants to sympathize with a terrorist; therefore the enemies of the US government must be terrorists.<a href="#fn1" class="footnote" id="fn_back1">[1]</a>
+</p><p>It is no coincidence that the US media have been awash in stories of suicide bombings in crowded marketplaces, sectarian killings, bodies found bound and tortured.  The resulting climate is recognizable: no self-respecting person who opposes the war will talk about solidarity with the Iraqi resistance, only solidarity with a passive, victimized Iraqi people, a formulation calling forth the image of suffering brown children we are accustomed to seeing on UNICEF fundraising materials.  This is not solidarity, this is charity.  
+</p><p>For starters, anarchists and other anti-authoritarian, anti-capitalist opponents to this war and all imperialist wars would do well to question the reality of Iraqi terrorism, and insofar as it is real, its sources.  From the day the first IED killed a Marine after W. declared major combat operations to be over, our expectation should have been that the US media would portray the resistance as terrorists, and that the US government would infiltrate and manipulate the resistance, take certain groups over or create them whole, to cause infighting and attacks against civilians.  Creating phony resistance groups to carry out terrorist acts was a well used part of the toolbox in the textbook cases of the French suppression of the Algerian revolution and the British suppression of the Kenyan independence struggle.  In Vietnam, the CIA bombed civilians in the South and blamed the attacks on the Viet Cong. More recently it has come out that some of the worst bombings carried out by the Irish Republican Army against civilians were facilitated by British government agents and soldiers.  (And, though Russia is not involved in the occupation of Iraq, the fact that the Russian government was behind the bombings of Moscow apartment buildings that killed hundreds and were blamed on Chechen rebels helps to demonstrate how widespread and current this tactic is among imperialist powers).  After the first US assault on Fallujah in April 2004 failed because the Shia fighters in the Mahdi Army were rising up in the south in solidarity with the Sunni fighters in Fallujah (i.e. the conflict was spreading), the strategic necessity for the US government to divide and sully the resistance became obvious.  
+</p><p>In an article in the Washington Post (10 April 2006), the Pentagon were candid in admitting they were hard at work encouraging infighting in the resistance, encouraging xenophobia, and their efforts had even caused physical fighting between different groups.  This admission was actually a justification for the newly uncovered Pentagon policy of exaggerating the role of Abu Musab al Zarqawi’s decidedly terrorist “Al Qaida in Iraq” group.  The purpose and effect of this psyops campaign was to create the illusion that Zarqawi’s group was a major part of the resistance (or even a leading formation). The Pentagon spread their propaganda through the Iraqi media, and also clearly listed the “U.S. Home Audience” as one of the targets in the propaganda campaign.<a href="#fn2" class="footnote" id="fn_back2">[2]</a> The effect of this effort is clear. US citizens are bombarded with the impression that the principal activity of the insurgency is blowing up civilians, and hardly anyone is acquainted with the facts that most Iraqi resistance groups oppose attacks on civilians, and that 90% of insurgent attacks target US-led forces, rather than civilians.<a href="#fn3" class="footnote" id="fn_back3">[3]</a>
+</p><p>There are strong indications that the US not only exaggerates the prominence of terrorism within the resistance, but it manufactures such terrorism. After the US killed Zarqawi, it came out that they had informants within his group.<a href="#fn4" class="footnote" id="fn_back4">[4]</a> If the US has the ability to kill undesirable leaders of this group, and plant or buy off other members, who will inevitably rise to control Al Qaida in Iraq?  Incidentally, terrorist bombings by Al Qaida in Iraq have not stopped after the rubbing out of Zarqawi or other leading members. In April 2007, a “splinter group” within Shia cleric Moqtada al-Sadr’s Mahdi Army provided politically valuable information to the West, that Iran was supposedly training and arming Iraqis, while a Pentagon spokesman offered similar information that had come from “debriefing personnel”.<a href="#fn5" class="footnote" id="fn_back5">[5]</a> And what about all the sectarian killings and ethnic cleansing blamed on rogue Shia government agencies (as though the Pentagon and CIA had somehow been so inept as to lose control of the security services and Interior Ministry in Iraq)?  Much evidence has emerged backing up the common sense that the US has been orchestrating and simultaneously distancing themselves from these killings. For example, US soldiers and intelligence personnel helped carry out the interrogations in the Jadiriyah detention facility (a supposedly secret torture dungeon to which kidnapped Iraqis often disappeared), which US troops “discovered” and stormed in November 2005 and denounced as a secret facility operated by rogue factions in the Interior Ministry in a major public relations operation. Incidentally, the US continued to hold and torture the detainees they rescued from Jadiriyah for months afterwards.<a href="#fn6" class="footnote" id="fn_back6">[6]</a> There is also the matter of US-trained commandos such as the Wolf Brigades, which have connections with Shia militias and have operated as death squads, carrying out systematic torture as well as disappearances and murders.<a href="#fn7" class="footnote" id="fn_back7">[7]</a>    
+</p><p>Many Iraqis themselves have alleged that US and British troops have been behind the suicide bombings, including allegations from the renowned Baghdad blogger Riverbend that what the international press were calling suicide bombings were actually remote-activated bombs; allegations from Iraqis that US agents secretly planted explosives in their cars while they were being detained and then sent them on their way to turn them into unwitting suicide bombers; statements from Iraqi police officers who arrested two plainclothes British soldiers on allegations they were planting bombs around the city — the two were shortly freed from prison by British troops backed by tanks; and mass protests by Iraqis in Baghdad and other cities claiming the occupation is behind the terrorism (Western media simply say these protests are criticizing the bad security situation).<a href="#fn8" class="footnote" id="fn_back8">[8]</a>
+</p><p>In all probability the US is encouraging or even orchestrating the terrorist bombings against civilians, sectarian bloodshed, ethnic cleansing, and the waves of abductions and extrajudicial killings.<a href="#fn9" class="footnote" id="fn_back9">[9]</a> The CIA has surely been doing more with that massive budget than tapping phones. Since they cannot crush the resistance, the occupation forces want to create a divided resistance with no international support. They have largely succeeded, and now we face an uphill battle.
+</p><p>For anarchists, the question of how we can end this war has at least one precondition: only the Iraqis can liberate themselves. A second consideration also arises: only by abolishing capitalism and the state — and most immediately this means defeating the US empire, can we meaningfully end this war, which has been going on far longer than four years (the bombings since 1991, the occupation by Saddam Hussein and prior Euro/American-backed governments, the colonial period...)  But if we allow the psyops successes of the US government to go unchallenged, and we cannot see an Iraqi resistance but only terrorists, authoritarians, or fundamentalists, then we cannot really challenge this war — we can only react to US military mobilizations and Congressional processes, leaving Iraq as a mute backdrop.
+</p><p>The situation poses the double problem of building solidarity with the Iraqis, and resistance at home. The question of solidarity with the Iraqis comes with some difficulties. There seem to be no visible elements in the Iraqi resistance that are anarchist, and solidarity is extremely tricky if our objectives are not the same. One reason that there are few anarchists in Iraq is that anarchism has still not made itself relevant to people fighting for national liberation. In fact, many anarchists snub national liberation struggles, perhaps confusing them as being inherently driven by nationalism. The fact of the matter is, few Iraqis facing occupation by a foreign power that has expressed contempt for their culture and religion, facing violence or preferential treatment by the proxy government based on their ethnicity or sect, and moreover who are probably unemployed, will be very likely to identify with the class war or embrace class comrades who either have been sent to kill them or who live thousands of miles away. Class simply is not the primary field of their ongoing oppression and brutalization. There are in fact other wars besides the class war, and other commonalities along which people will unite to fight oppression. Anarchist approaches lacking the exclusive emphasis on class can also fail to come to terms with the situation, by expecting anti-authoritarian resistance to emerge spontaneously. But spontaneous uprisings tend to be either anarchistic or fascistic, and given all the torture and abuse, the influx of sectarian and fundamentalist pressures, spontaneous outbursts occurring in Iraq these days are very unlikely to be anarchistic. 
+</p><p>Historically, anarchism never spread in any lasting strength to the Middle East. We can change this by building relationships of solidarity with Middle Eastern immigrant communities in the US, travelling to the Middle East, learning Arabic and translating information about non-anarchist struggles and histories from that part of the world, and translating anarchist literature into Arabic. Anarchists certainly are not immune to the missionary approach of charities or the co-optive approach of socialists, so we need to emphasize building respectful relationships, supporting rebels who do not call themselves anarchists, learning from what they have to teach us, and accepting that if an anarchist movement does arise in the Middle East, it will not look like Western anarchism.  
+</p><p>Beyond this, what might solidarity with Iraqis in particular look like?  The group Israeli Anarchists Against the Wall provide a possible analogy. Israelis are much like Americans — Westerners protected by a formidable wall of extreme violence living on the backs of an indigenous population, migrant workers, and people of color. But Israelis have the opportunity to travel just a few kilometers to join Palestinians in a demonstration. Israeli Anarchists Against the Wall have joined Palestinians at several villages to protest the construction of the Apartheid Wall the Israeli state is building through the West Bank. Starting small and exhibiting a necessary dose of patience, Israeli Anarchists Against the Wall worked with Palestinian activists and residents in Bil’in and a few other small towns to organize weekly demonstrations against the nearby construction of part of Israel’s “security barrier.” After 117  weeks of protesting (as of 4 May 2007), the Israeli anarchists, working with the Palestine Solidarity Project, another non-hierarchical group, have engaged in direct action by physically removing some of the Israeli government roadblocks that help make life for the Palestinians impossible. International solidarity from anarchists makes the Palestinian struggle more effective, discourages nationalism or fundamentalism in the Palestinian resistance by providing examples of Israelis and Westerners who are their allies, and makes anarchism relevant to the Palestinian situation. This is the type of solidarity action that needs to happen more often. However I should add that we must avoid the racist imposition of nonviolence made by at least some members of Israeli Anarchists (including denunciations of Palestinians throwing rocks, in their own villages mind you, to which the anarchists are outsiders). 
+</p><p>US citizens going to Iraq face much more danger, some people who go will no doubt end up getting killed, and this is more than most people in our ostensibly revolutionary movement are currently willing to accept. I don’t advocate going into a situation where death is likely just for the sake of facing down danger, but with a little imagination we should be able to think up scenarios where our presence would be helpful, as independent journalists, human shields, even humanitarian volunteers. In a situation as bleak as Iraq’s, providing humanitarian assistance really can count as direct action (by helping people meet immediate needs in spite of all the obstacles and privations created by the occupation). And it’s a good starting point, to take advantage of existing programs or donors willing to sponsor humanitarian volunteers, and to build up the experience and knowledge necessary to take on higher risks and form relationships with Iraqi protest and resistance groups. The presence of helpful Americans in Iraq will undermine the fundamentalism and nationalism that are likely responses to the occupation, and the presence of anarchists acting in solidarity will lend anarchist theory the substance it requires for Iraqis to actually notice it as a possibility, and consider whether it can be adapted to meet their needs.
+</p><p>It is up to the Iraqis to wage their armed struggle, but there are certainly useful roles for people whom the occupation would be more hesitant to kill (e.g. white people and Westerners). And human shields who support the struggle and lack any stupid insistence on nonviolence would certainly be better able to engage in a two-way communication of radical ideas concerning the liberation of Iraqis, and everyone else.
+</p><p>We should also recognize two further things: regardless of their political affiliations the Iraqis do not deserve to live under foreign or military occupation and they are right to fight against it, and even if their victory creates another oppressive system it is better that they make their own mistakes than surrender to outside experts or imported ideologies. Second is the fact that a US defeat in Iraq will weaken the current global empire and make revolution more possible. 
+</p><p>In other words, the US government needs to lose in Iraq, and if the Iraqis are to survive this victory, and what is more, make something of it, they will have to become the protagonists of the struggle. If US anarchists are to play any role in this, we will have to become better acquainted with the Iraqi resistance. But if it is true that the resistance is not anarchistic, what exactly is it?  Unfortunately the US anarchist movement suffers from an embarrassing lack of information about the specific resistance groups. It’s even more embarrassing that most of the few English-language sources from which we can find this information are pro-occupation imperialist think tanks like GlobalSecurity.org.<a href="#fn10" class="footnote" id="fn_back10">[10]</a> Even such organizations are clear that the majority of resistance groups in Iraq have spoken out against killing noncombatants, and many of them even oppose killing anyone but foreign occupation troops. The only groups that do not oppose blowing up civilians or worshippers at a mosque are Al Qaida-linked groups whose influence within the resistance is acknowledged to be minimal, and who are also infiltrated and perhaps even run by the Pentagon and CIA.
+</p><p>With a little bit of research, we can also find Iraqi groups that are interesting possibilities for support. One group that has received some attention in Western alternative media for its opposition to the occupation while also maintaining a stand against fundamentalism and sectarianism is the Iraq Freedom Congress (<a href="http://www.ifcongress.com/English/index.htm">www.ifcongress.com</a>), which was formed by several communist, women’s rights, labor, and unemployed organizations (the main communist group involved, incidentally, has been described as anti-Leninist and even libertarian). A number of communists and socialists in the US have recently set up a US chapter of the Iraq Freedom Congress. I don’t care to speculate whether this is a sincere and productive solidarity effort or another attempt to exploit or control other people’s liberation struggles (some US websites that have mentioned the IFC favorably have taken to calling this group that practices armed self-defense “nonviolent,” no doubt to pander to North American comfort levels rather than challenging the hypocrisy of those comfort levels and learning something from a legitimate armed resistance movement). What is more remarkable to me is that I see no comparable efforts of solidarity by anarchists. There’s a ton of energy put into protests in the US, some great organizing against military recruitment, outreach to military veterans, education targeting the public and challenging some of the lies of the war,  and even the occasional act of sabotage, but something is missing from all of this... the Iraqis!  
+</p><p>Insufficient recognition has been given to the fact that only the Iraqis can liberate themselves, that they have to be the protagonists of the anti-war movement. In part, this is a success of the Pentagon’s psychological operations; the Iraqi resistance as a whole has fallen under the shadow of its smallest but most publicized elements, the fundamentalist terrorists. Subsequently, the antiwar movement as a whole, including its anarchist underbelly, have not built sympathy and support for armed Iraqis.
+</p><p>If anarchists get over their purism and form relationships of solidarity with Iraqi groups, even those that are not anarchist, they could at the very least win an opportunity to learn a lot and in a small way help the US lose a significant war. More optimistically, such solidarity could noticeably hamper US psyops, increase the militancy of the US anarchist movement, educate us about liberation struggles, and facilitate the spread of anarchist ideas in the Middle East. 
+</p><p>Over 650,000 Iraqis have been killed by the occupation.<a href="#fn11" class="footnote" id="fn_back11">[11]</a> Hundreds of thousands of others are fighting an armed resistance or supporting the fighters, millions are protesting and surviving. Even US troops are getting pissed off, thousands are avoiding or openly refusing deployment, and veterans making counter-recruitment tours have expressed something other antiwar activists have not: admiration for the resistance. Anarchists in the US need to step up the information war and reveal the people of the Iraqi resistance as freedom fighters and not terrorists. We need to continue our counterrecruiting efforts with the added goal of turning the soldiers against the officers, to make it possible to support both the troops and the resistance (e.g. “liberate Iraq, frag your CO!”)  We need to lay the sorely needed groundwork for two-way communication between US anarchists and activists, dissidents, humanitarian and resistance groups in Iraq. US anarchists have a lot to gain from an effective domestic antiwar movement. The war, when freed from the government-manufactured illusions, can demonstrate the anarchist contention that capitalism and the state are constant warfare against people and the planet, and must be defeated forcefully. It can also build greater domestic support for militant direct action, given that the majority of Americans agree with the anarchists (“full withdrawal now”) rather than with the government (“blah blah blah”) and continued tolerance of government policy means Americans and their loved ones face injury and death. But the fundamental fact of this war is that only the Iraqis can win it. Anarchists can either remain as irrelevant as the peace protestors, or we can learn how to support the resistance.
+</p><p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> The US government’s propaganda wing have revealed this formulation themselves, for example in Thomas Friedman’s 30 October 2003 <em>New York Times</em> opinion piece “It’s Not Vietnam.”  For a contrary view, see “On Supporting the Iraqi Resistance,” <em>The Heathlander</em>, 23 February, 2007. <a href="http://heathlander.wordpress.com/2007/02/23/on-supporting-the-iraqi-resistance/">heathlander.wordpress.com</a>
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Thomas E. Ricks, “Military Plays Up Role of Zarqawi,” <em>Washington Post</em>, 10 April, 2006, p.A01.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> Dahr Jamail, <em>Truthout</em>, 22 September, 2006. The statistic is from a US Defense Intelligence Agency survey of all insurgent attacks in July 2006.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> “How Was Zarqawi Traced?” <em>Middle East Online</em>, 9 June 2006, <a href="http://www.middle-east-online.com/english/?id=16693">www.middle-east-online.com</a> (Viewed 8 May 2007).
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> Qassim Abdul-Zahra, “Iran may be helping Iraqis build bombs,” Associated Press, 11 April 2007
+</p><p class="fnline"><a class="footnotebody" href="#fn_back6" id="fn6">[6]</a> Max Fuller, “Proof of US orchestration of death squad killings in Iraq,” <em>Asheville Global Report</em>, No.428, 29 March 2007
+</p><p class="fnline"><a class="footnotebody" href="#fn_back7" id="fn7">[7]</a> Media Matters, “CBS report on Iraq’s “Wolf Brigades” ignored reports that feared unit engages in torture,” <a href="http://mediamatters.org/items/200512050002">mediamatters.org</a>  5 December 2005. (Viewed 8 May 2007.)
+</p><p class="fnline"><a class="footnotebody" href="#fn_back8" id="fn8">[8]</a> Michael Keefer, “Were British Special Forces Soldiers Planting Bombs in Basra?” <a href="http://www.globalresearch.ca/index.php?context=viewArticle&amp;code=KEE20050925&amp;articleId=994">www.globalresearch.ca</a> 25 September 2005. (Viewed 8 May 2007). Also see my article “An Anarchist Critique of the Iraq War” for more on this subject.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back9" id="fn9">[9]</a> “Through 2005 there were so many indications of growing use of death squads that questions arose as to whether the US command had devised a “Salvador solution”” (p.1). The report quoted goes on to call this scenario unlikely, first falsely stating that there is no evidence of US officials training death squads, but also pointing out that the situation in Iraq differs from El Salvador’s “civil war” in that there are myriad factions each with their own motivations and vendettas. Though this may be true, the report’s own evidence suggests the most prominent death squads are in fact directly connected to the US military. The report lists some of the evidence that the (US-trained and armed) Wolf Brigades operated as a death squad, and admits that they received “full support,” including propaganda support (televised glorification in US-run media) from the US command (p.5). The report also lists the US-trained and “supervised” Public Order Brigades (an Iraqi police unit) as a probable death squad (p.7) though the report gives weight to the Pentagon insistence that such police units run death squads unofficially, without the culpability of their overseers. It is also significant that some of the death squad killings the report chalks up to domestic factionalism, thus not attributable to the occupation troops, have since been claimed as psyops victories by the Pentagon in their campaign to encourage infighting in Iraq (see the 10 April 2006 Washington Post article referenced elsewhere in this essay).  <br />  Jakub Cerny, “Death Squad Operations in Iraq,” <em>Conflict Studies Research Centre</em>, Defence Academy of the United Kingdom, 28 June 2006, ISBN 1-905058-73-X. <a href="http://www.comw.org/warreport/fulltext/0606cerny.pdf">www.comw.org</a> (Viewed 10 May 2007). Note that this report was written for the UK Ministry of Defence.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back10" id="fn10">[10]</a> Iraqi Insurgency Groups, GlobalSecurity.org,  <a href="http://www.globalsecurity.org/military/ops/iraq_insurgency.htm">www.globalsecurity.org</a> (Viewed 6 May, 2007). Also see GlobalPolicy.org <a href="http://www.globalpolicy.org/security/issues/iraq/resist/2004/0919overview.htm">www.globalpolicy.org</a>  Viewed 8 May 2007.
+</p><p class="fnline"><a class="footnotebody" href="#fn_back11" id="fn11">[11]</a> As of mid-2006, an estimated 655,000 Iraqis had been killed in the US war on Iraq, as estimated by a Johns Hopkins Study published in the journal <em>Lancet</em> in October 2006. Though corporate media all attacked this figure, they provided no concrete counter-evidence, scientists agreed that the methodology was sound, and even British government officials secretly accepted this study as “robust.” “British officials privately accepted Iraq deaths study,” <em>Asheville Global Report</em>, No.429, April 5, 2007.
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

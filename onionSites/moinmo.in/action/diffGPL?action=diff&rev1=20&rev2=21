@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta name="verify-v1" content="0WyQ+hn2OtHJ8nIJUihkSAkxCHyVcRg+RXh9VxId8jU=">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
+    t.parentNode.insertBefore(s, t);
+})();
+/* ]]> */
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Diff for "GPL" - MoinMoin</title>
+<script type="text/javascript" src="/moin_static19/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/moin_static19/modernized/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/moin_static19/modernized/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/moin_static19/modernized/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static19/modernized/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="MoinMoin: GPL" href="/action/rss_rc/GPL?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=GPL&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/MoinMoinWiki">
+<link rel="Alternate" title="Wiki Markup" href="/action/raw/GPL?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/action/print/GPL?action=print">
+<link rel="Appendix" title="gnu-head-banner.png" href="/GPL?action=AttachFile&amp;do=view&amp;target=gnu-head-banner.png">
+<link rel="Appendix" title="xorg-x11" href="/GPL?action=AttachFile&amp;do=view&amp;target=xorg-x11">
+<link rel="Search" href="/FindPage">
+<link rel="Index" href="/TitleIndex">
+<link rel="Glossary" href="/WordIndex">
+<link rel="Help" href="/HelpOnFormatting">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+<form id="searchform" method="get" action="/GPL">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<div id="logo"><a href="/MoinMoinWiki"><img src="/moin_static19/common/moinmoin.png" alt="MoinMoin Logo"></a></div>
+<div id="username"><a href="/action/login/GPL?action=login" id="login" rel="nofollow">Login</a></div>
+<h1 id="locationline">
+<span id="interwiki"><a href="/MoinMoinWiki" rel="nofollow">MoinMoin</a><span class="sep">: </span></span>
+<span id="pagelocation">Diff for "GPL"</span>
+</h1>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="/RecentChanges">RecentChanges</a></li><li class="wikilink"><a href="/FindPage">FindPage</a></li><li class="wikilink"><a href="/HelpContents">HelpContents</a></li><li class="current"><a href="/GPL">GPL</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GPL?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GPL?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GPL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div id="content">
+<span class="diff-header">Differences between revisions 20 and 21</span>
+<table class="diff">
+<tr>
+ 
+ <td style="border:0;">
+  <form action="/GPL" method="get">
+   <div style="text-align:left">
+    <input name="action" value="diff" type="hidden">
+    <input name="rev1" value="19" type="hidden">
+    <input name="rev2" value="20" type="hidden">
+    <input value="Previous change" type="submit">
+   </div>
+  </form>
+ </td>
+
+ <td style="border:0">
+   
+ </td>
+ 
+ <td style="border:0;">
+  <form action="/GPL" method="get">
+   <div style="text-align:right">
+    <input name="action" value="diff" type="hidden">
+    <input name="rev1" value="21" type="hidden">
+    <input name="rev2" value="22" type="hidden">
+    <input value="Next change" type="submit">
+   </div>
+  </form>
+ </td>
+
+</tr>
+</table>
+
+<table class="diff">
+<tr><td class="diff-info">
+  <div class="diff-info diff-info-header"><a class="diff-nav-link diff-first-link diff-old-rev" href="/action/diff/GPL?action=diff&amp;rev1=1&amp;rev2=21" title="Diff with oldest revision in left pane">⇤</a> <a class="diff-nav-link diff-prev-link diff-old-rev" href="/action/diff/GPL?action=diff&amp;rev1=19&amp;rev2=21" title="Diff with older revision in left pane">←</a> Revision 20 as of 2011-03-25 21:32:29 <span class="diff-no-nav-link diff-next-link diff-old-rev" title="Can't change to revision newer than in right pane">→</span> </div>
+  <div class="diff-info diff-info-rev-size"><span class="diff-info-caption">Size:</span> <span class="diff-info-value">1092</span></div>
+  <div class="diff-info diff-info-rev-author"><span class="diff-info-caption">Editor:</span> <span class="diff-info-value"><span title="PatrickDGarvey @ pool-71-106-227-147.lsanca.dsl-w.verizon.net[71.106.227.147]"><a href="/PatrickDGarvey" title="PatrickDGarvey @ pool-71-106-227-147.lsanca.dsl-w.verizon.net[71.106.227.147]">PatrickDGarvey</a></span></span></div>
+  <div class="diff-info diff-info-rev-comment"><span class="diff-info-caption">Comment:</span> <span class="diff-info-value">Made the reference to GPLv2 occur in the first instance on the page and in the link so it may not be inferred that MoinMoin is licensed under the most recent GPL, as the link referenced.</span></div>
+</td><td class="diff-info">
+  <div class="diff-info diff-info-header"> <span class="diff-no-nav-link diff-prev-link diff-new-rev" title="Can't change to revision older than revision in left pane">←</span> Revision 21 as of 2011-04-17 20:42:59 <a class="diff-nav-link diff-next-link diff-new-rev" href="/action/diff/GPL?action=diff&amp;rev1=20&amp;rev2=22" title="Diff with newer revision in right pane">→</a> <a class="diff-nav-link diff-last-link diff-old-rev" href="/action/diff/GPL?action=diff&amp;rev1=20&amp;rev2=33" title="Diff with newest revision in right pane">⇥</a></div>
+  <div class="diff-info diff-info-rev-size"><span class="diff-info-caption">Size:</span> <span class="diff-info-value">1104</span></div>
+  <div class="diff-info diff-info-rev-author"><span class="diff-info-caption">Editor:</span> <span class="diff-info-value"><span title="??? @ ool-182fc904.dyn.optonline.net[24.47.201.4]">ool-182fc904</span></span></div>
+  <div class="diff-info diff-info-rev-comment"><span class="diff-info-caption">Comment:</span> <span class="diff-info-value">don't lie to the people; make it more clear what the GPL does and does not do.</span></div>
+</td></tr>
+<tr>
+<td class="diff-removed"><span>Deletions are marked like this.</span></td>
+<td class="diff-added"><span>Additions are marked like this.</span></td>
+</tr>
+
+<tr class="diff-title">
+<td><a href="#line-5">Line 5</a>:</td>
+<td><a href="#line-5">Line 5</a>:</td>
+</tr>
+
+<tr>
+<td class="diff-removed">''Free'' in the context of this license means the ''freedom of the user'' of the software. Basically, the license gives the right to do anything with the software <span>- exce</span>p<span>t making it unfree somehow. C</span>ode licensed under GPL cannot be distributed in pro<span>prietary pro</span>grams.</td>
+<td class="diff-added">''Free'' in the context of this license means the ''freedom of the user'' of the software. Basically, the license gives <span>everyone </span>the right to do anything with the software p<span>rovided they abide by certain (limited) restrictions: c</span>ode licensed under GPL cannot be distributed in <span>closed source </span>programs.</td>
+</tr>
+
+<tr class="diff-title">
+<td><a href="#line-11">Line 11</a>:</td>
+<td><a href="#line-11">Line 11</a>:</td>
+</tr>
+
+<tr>
+<td class="diff-removed"><span>&nbsp;* No vendor lock-in.</span></td>
+<td class="diff-added"><span>&nbsp;* Changes released by the community will be open source</span></td>
+</tr>
+
+<tr class="diff-title">
+<td><a href="#line-13">Line 13</a>:</td>
+<td><a href="#line-13">Line 13</a>:</td>
+</tr>
+
+<tr>
+<td class="diff-removed"><span>&nbsp;* Verification from large community and deployment.</span></td>
+<td class="diff-added"></td>
+</tr>
+</table>
+<div dir="ltr" id="content-below-diff" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><img alt="gnu-head-banner.png" class="attachment" src="/GPL?action=AttachFile&amp;do=get&amp;target=gnu-head-banner.png" title="gnu-head-banner.png" /> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">The <a class="http" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License, version 2</a> (short: GNU GPLv2 or simply GPLv2) is a very popular Free Software License originally written by Richard Stallman for the GNU project and now kept and developed by the <a class="http" href="http://www.fsf.org/">Free Software Foundation</a>. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><em>Free</em> in the context of this license means the <em>freedom of the user</em> of the software. Basically, the license gives everyone the right to do anything with the software provided they abide by certain (limited) restrictions: code licensed under GPL cannot be distributed in closed source programs. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">The <a href="/MoinMoin">MoinMoin</a> code is licensed under the GPLv2 or (at the user's option) any later version (except some 3rd party modules we use that are licensed under other Free Software licenses compatible with the GPL). <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">Consequences of this are, for example: <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><ul><li>Changes released by the community will be open source <span class="anchor" id="line-12"></span></li><li>Encouragement and beneficiary of global collaboration. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li></ul><p class="line874">Note: We also use some code that is licensed under other, but compatible licenses. <span class="anchor" id="line-15"></span><span class="anchor" id="bottom"></span></div></div><p id="pageinfo" class="info" lang="en" dir="ltr">MoinMoin: GPL  (last edited 2011-05-12 10:19:04 by <span title="ThomasWaldmann @ HSI-KBW-078-042-161-030.hsi3.kabel-badenwuerttemberg.de[78.42.161.30]"><a href="/ThomasWaldmann" title="ThomasWaldmann @ HSI-KBW-078-042-161-030.hsi3.kabel-badenwuerttemberg.de[78.42.161.30]">ThomasWaldmann</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="/action/info/GPL?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="/action/AttachFile/GPL?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/GPL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled class="disabled">Delete Cache</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="Load">Load</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
+

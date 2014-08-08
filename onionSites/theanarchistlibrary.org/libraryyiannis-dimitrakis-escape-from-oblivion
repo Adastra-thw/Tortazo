@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Escape from Oblivion (Yiannis Dimitrakis) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/yiannis-dimitrakis-escape-from-oblivion?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=yiannis-dimitrakis-escape-from-oblivion">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Escape from Oblivion
+  </p>
+  
+  <p id="textsubtitle">
+    <strong>Subtitle:</strong>
+    (First Attempt)
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/yiannis-dimitrakis">Yiannis Dimitrakis</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    September 10, 2010
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/greece">Greece</a>
+        <a href="/topics/prison">prison</a>
+        <a href="/topics/robbery">robbery</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    <a href="http://www.non-fides.fr/?Yiannis-Dimitrakis-Escape-from">www.non-fides.fr</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="yiannis-dimitrakis-escape-from-oblivion?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="yiannis-dimitrakis-escape-from-oblivion.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Yiannis Dimitrakis</h2>
+	
+	<h1 id="textttitleh">Escape from Oblivion</h1>
+	
+	<h2>(First Attempt)</h2>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p><em>The following is a translation of the first part of Dimitrakis’ own autobiographical account, recently published in the premier issue of “Storming the Bastille: Voices from the Inside”, which brings together a number of texts and letters written by prisoners in struggle.</em>
+</p><p>I always keep in mind that image of myself, passing by the prison, unconsciously looking up at the high walls and the barbed wire on top. Which prison was it? Whenever I went with some friends by motorcycle to the Nikaia neighborhood, we rode down Grigoriou Lambraki Street, and the stone walls of Korydallos Prison mesmerized me. I don’t know why. Was it because there were times I found myself on the nearby streets — breathing room, but never too close, since all the approaches were completely blocked by the police — simply because of one of the marches in solidarity with comrade prisoners? Or was it perhaps because that enormous, imposing building, so diligently concealing everything going on inside its heart — an entirely unknown world with its own laws and rules, full of heroic stories and human torment — merely piqued my curiosity?
+</p><p>Now that I think about it, I remember another time when I was in front of a prison. It must have been in the spring of 2003, when we were demonstrating outside the Larissa “penitentiary” institution. Yet another dungeon located in the suburbs of that city, next to a school. There, prisoners have the unfortunate privilege of being able to test the Thessaly countryside’s paranoid climate on their own skin. In the summer, you stew in your own juices, with temperatures around 43ºC. And in the winter, you search frantically for a little heat beneath a mountain of blankets in order to escape the cold, which sometimes dips below -10ºC. Pure madness. I learned this first-hand from prisoners who did time there, and Vangelis Pallis confirmed it to me in the summer of 2008, when we were talking to each other every day.
+</p><p>The demonstration was held in the city’s main square, which was surrounded by cafés. I had the impression that the locals were staring at us in bewilderment, as if they were seeing something completely foreign or extraterrestrial. We had come to Larissa because rumors were spreading about the construction of a new prison wing — a solitary confinement wing — intended for the people implicated in the case of the November 17 Revolutionary Organization. This meant that they would be transferred from the special wing at Korydallos, which would cause many problems for them, their families, and their lawyers, given the distance from Athens. It’s not easy to cover 700 kilometers round-trip for an hour-and-a-half visit. I immediately noticed the combative-looking black bloc gathering in the square. Then, the march moved toward the prison. When the demonstration began, it naturally continued to draw stares from the locals. As expected, two or three buses full of riot police — plus rows of green uniforms containing something resembling human beings — were waiting for us at our destination, thus preventing us from getting any closer to the prison.
+</p><p>Our slogans and cries were joined by some loud whistling, and from the other side hands reached out as far as they could between the cell bars to greet us by waving shirts and sheets. Because of the distance, we couldn’t see their faces, so each one of us imagined someone desperately trying to give back what they were receiving. Was it solidarity, or just the simple presence of human beings? Who knows.
+</p><p>The march left us all feeling good. There were plenty of people, and it had “impact,” enthusiasm, and tension. However, what remains etched in my memory of that day is an image I don’t know how many others could have seen. As we were covering the last stretch before the prison — passing the last few houses in the city, our slogans echoing in the air — my gaze fell on a silhouette on the balcony of an old two-story home. Taking a closer look, I was astonished to see a little old man — about 80 years old, and clearly moved — saluting our march with tears in his eyes. Had we perhaps reminded him of something? What kinds of memories had we coaxed from the depths of his mind to make him compare them with what he was seeing at that moment? I don’t know, and it really didn’t matter. What mattered was the event itself and the flood of emotions it unleashed, on all sides. It’s extraordinary to realize that what you do in the present can cause someone you meet by chance in the future to shed at least a few nostalgic tears for their past. You and your comrades are creating and changing the present, yet you also experience it alone, as a separate and unique being within the group.
+</p><p>In the end, regardless of why that image of prison stuck in my mind, “curiosity killed the cat.” And what a cat! Armed to the teeth and ready for anything, or at least that’s what I thought. To tell the truth, as a “promising” young anarchist in the twilight of 1997 and the years to come, I immersed myself in the shock wave of social ferment without giving it too much thought, convinced that they would never catch me. I was just like that cat! Oh, what a mistake! Although, looking back at my record, the cold light of hindsight can confirm that “I was around for a minute,” like they say on the streets. It wasn’t a very long time, but I did hold on for more than eight years, like a fakir walking on hot coals until my skin finally caught fire. I was treading those hot coals in a certain way, and I decided to transform my stride into preparatory work, which in my opinion was necessary to pave the way for the arrival of the eagerly awaited future revolution.
+</p><p>But it didn’t take long for “the worst” to finally catch up with me, which was also partially the result of some bad luck that hung me out to dry at one of the most critical moments of my life — when I had to face three rabid pig bullets that seemed to be engraved with my name, destined to accompany me on a one-way trip. However, like a real cat with nine lives, for some unknown reason I remained on the dock without setting foot on that infamous black-clad boatman’s ferry. Instead, I found myself in the exact place I was so curious about, so curious to see what went on inside. Like I said, it was a place I never expected to enter when I was a promising young anarchist.
+</p><p>Behind bars...
+</p><p>A new chapter in my life opened, and it doesn’t look like it’s going to close anytime soon. They nailed me for a “felony,” according to what their penal code says. A bank robbery worth 110 million euros, expertly framing me for six other similarly mysterious cases and a stack of other crimes that the police jackals will easily be able to charge me with — serving their holy office with the flawless sense of professionalism and decency they’ve always been known for — plus three arrest warrants for my friends and comrades. For Marios, Grigoris, and Simos, who were called my accomplices and in time came to be known as the “master thieves,” the “iron links” that would help “dismantle the armed guerrilla groups.” Who knows what else has been written in the different putrid and “distinguished” newspapers, or said by the “unquestionably noble and ethical” TV reporters — stooges of police propaganda, all of them. The result? In October 2009, the newly-formed parliamentary terrorist organization PASOK put a price of 600,000 euros on the heads of all three, thus making their lives even more difficult, as they were already on the run from the law and hidden from the scrutiny of the prosecutorial organs, refusing to recognize the arrest warrants.
+</p><p>And had the worst stopped there, the difficulties may have certainly continued, but perhaps one would have been able to swallow that bitter pill. But that’s not how things played out, and the devil stuck his foot in again. This time it had nothing to do with me. Rather, it was about Simos. And he didn’t just “stick his foot in.” They actually cut it off entirely. An armed robbery at the Praktiker hardware megastore on Pireos Street in the Gazi neighborhood. Screams, shots, injuries, commotion. The police arrive at the scene of the crime and hear an eyewitness say that “one of the criminals was tall.” A butterfly flaps its wings in Vietnam and a hurricane slams into the Athens neighborhood of Keramikos. Not once but twice, because apart from Simos being found by chance and then seriously wounded and arrested, another friend and comrade, Aris, is caught in the same area and subsequently locked upon totally fabricated and ridiculous charges. The prosecuting authorities bury their findings in the district attorney’s report and delay their disclosure until just before Aris is released thanks to a lack of evidence regarding the charges he was arrested on. And as if robbing him of his liberty at the last minute wasn’t enough, they also deprive him of his father. He was a father to Aris, a comrade to us, and his heart couldn’t bear such injustice, indignation, and rage. He has left us forever. If I’m making an effort to narrate everything that’s happened recently, from the day this wretched 2010 dawned through all the horribly unsettling developments within the anarchist milieu, it’s only because of the names involved. At the very least, it’s a cautionary remembrance, so we don’t forget a single comrade. It’s so we don’t forget Lambros, stripped of his life by yet another police bullet in the alleyways of Dafni while he was expropriating a car for use in the general context of class war. It’s so we don’t forget Haris, Panayiotis, Konstantina, Ilias, Giorgos, Polykarpos, Vangelis, Christos, Alfredo, Pola, Nikos, Vangelis, Costas, Christoforos, and Sarantos.
+</p><p>For now, setting aside the tragically sad appraisal of 2010 and returning to the dark days of my past — to the beginning of a life caged by iron bars — I initiate a “search” of my biological hard drive and find myself at the end of January 2006.
+</p><p>I can still recall that sunny morning in Athens General Hospital, when the pigs notified me that I had to get ready for my transfer to Agios Pavlos Prison Hospital. I remember it well because it had finally stopped snowing. All of Greece was covered in snow that year, prompting chaos and confusion in the urban areas, bringing nearly everything to a standstill, dismantling—although only for a few days — the well-organized infrastructure of the great cities, and halting transportation as well as planned and routine construction and other work throughout the public and private sectors.
+</p><p>We had been waiting for this very snowfall — or at least some spell of bad weather, which according to the news had to arrive — to help us achieve our unholy objective. The goal was to rob the National Bank at the corner of Hippocrates and Solonos. It’s a spot right in the middle of Athens, and we optimistically anticipated a big haul — although clearly accompanied by enormous, almost prohibitive risk. It’s not like we would have postponed the day of our escapade if the storm hadn’t helped us out. We weren’t a bunch of kids. We had already decided on the date: Monday, January 16. It was a rather nasty day to attempt pulling off such a feat, because at the beginning of the week everyone is at their post and ready to do their duty, especially the pigs. Nevertheless, some madness pushed us to the edge of the abyss.
+</p><p>In the end, the storm played a dirty trick on us, and the sun — triumphant, and proud of its victory in the dead of winter — rose to the heights that Monday morning, effortlessly shining its warm rays on the citizens of Attica. On the one hand, this brought everyone out to do their jobs and errands, which worked in favor of our sacrilege since downtown resembled a viscous human river in which you could only get around with difficulty. On the other hand, like the others in the car, I was decked out in a sweater, a winter coat, and the martial tools of expropriation. Flushed and sweaty, I took off my scarf, cursed our bad luck, and watched all the smiling foot patrols march through central Athens under the warm sun.
+</p><p>Pensive and nervous upon seeing the first bad signs, we reached the rendezvous point, from which we had to set off toward our final destination. We met the others there. All of us definitely had the same strange feeling. We were like a little black hole of conspiracy, far away from everything going on around us, alien to the general atmosphere of pure joy radiating from those who had come downtown just because the day was bathed in sunlight. At that moment and in the moments to come, our own universe was light years away from the one everyone else belonged to. In a just few minutes, our universe was going crash into theirs — violently, of course — making our presence visible and disrupting our different yet parallel lives, which rarely crossed. Our lives and theirs. One world’s instant intrusion into another, setting off an uncontrollable chain of events. One more slap in the face of normality, one more slap in the face of the flat, rectilinear, coordinated sequence of things. Something like a multiple-car accident on the highway, when a lapse by some hurried, distracted driver drags the fate of everyone else on the road along with him, disrupting and blocking the flow of traffic all over the place.
+</p><p>The people waiting for us at the rendezvous point had some unpleasant news. As they were coming to meet us, they passed a police checkpoint that was close enough to the site of our action to pose a serious threat to the whole endeavor, making it almost impossible to pull off. The immediate reactions — ranging from “Fuck it, let’s do it and whatever happens happens” to “Let’s put it off and try again some other time” — balanced out, so we decided that some of us would go over to see if the pigs were still there, and we would then take action accordingly. Finally, the pigs were gone, although “gone” is somewhat relative if you’re talking about central Athens, even more so given the location of the bank. One has about as much in common with the other as a frozen supermarket pizza has with a pizza made at a good pizzeria. But like I said, something was pushing us to the edge of the abyss, and since the pigs were “gone,” we decided to go ahead. Of course, what happened next must have had something to do with Murphy’s Law, which says that “if a piece of toast with jam falls on the floor, nine out of ten times it will fall jam-side down.” The fact that everything fell apart is just like the anecdote about the toast — it’s those infernal, incalculable factors that can ruin everything, especially the unpredictability of human nature and behavior. A whirlwind of people and things that, after stopping its maddening twists and turns, overwhelms the cityscape; a stupid bank guard — with a totally mistaken and twisted perception of the extent of his duty — wounded because of his equally stupid and excessive determination to stop the escape of four bank robbers; a car that wouldn’t start; a bag full of weapons and money; three people frenetically scattering into the featureless crowd; and finally me, wounded and in the hands of my pursuers.
+</p><p>The sun that didn’t care about what was going on hundreds of millions of kilometers away, the sun that warmed a winter day in January, was the same sun that appeared again that morning in the hospital, stirring up that parade of memories.
+</p><p>I was waiting to see what would happen. I knew they were applying pressure to get me out of the intensive care unit as soon as possible, and I found out they were in a rush to bring me to the prison hospital and be done with me. My stitches — little pieces of metal in the shape of a Π (Greek “P”), like those things that fasten upholstery to the frame of a couch — were still in, running from my chest to my groin. Generally speaking, I still needed a bit of work, but no matter how strongly I objected to them moving me from the hospital, the pigs already had orders from above. “And if the boss says so, what can I do?” With a lot of pain and effort, I began to gather my things, even though my wounds didn’t allow me to stand upright. Those details didn’t matter to the boss. Evidently, this was also included in the price I now began to pay for my decisions.
+</p><p>Nevertheless, the final touches to my hasty expulsion from the hospital were yet to come. Before the police masterminds could even begin to calculate how many radios, weapons, boots, etc., they would need in order to coordinate the “secure transfer” operation, just at that moment, my mom showed up, arriving very early for the regular visit with her spoiled son.
+</p><p>My mom, Mrs. Eleni, separated from her son by just 17 years. In the 90s, whenever someone from the water or power company came by and we opened our door together, they would always ask: “Is your mother home?” Mrs. Eleni, who almost had a nervous breakdown when she heard the news that I was mixed up in a bank robbery and wounded during the shootout. Although she must have gotten over it, because the pigs at Police Headquarters were ultimately unable to get a single statement from her in the interrogation room due to the fact that she began to wail desperately: “I want to see my son!” Even the pigs were at a loss in the face of my mom’s reaction. What could they do? She was a mother fighting for her son. Beat her up? Send her to the dungeon so they wouldn’t have to listen to her? It would have been like that or worse 60 years ago during the dark civil war period of 1946, or even 35 years ago during the years of the arrogant Junta scum. However, it was now 2006, and we had already been through 30 years of the parliamentary oligarchy’s fake democracy, in which fascist and blatantly authoritarian arrangements were concealed behind other forms of violence — more flexible and perhaps more efficient. In any case, my mom’s wailing brought her — like it or not — to the hospital I was in, and her reaction was a given. That crazy woman wasn’t going to let them forget her!
+</p><p>Feeling that one of her little ones was being threatened or in danger, a woman with strong maternal instincts became a real hyena, a ferocious beast (especially when compared to her day-to-day attitude toward institutions, authority, and codes of conduct). Seemingly unprepared for everything that was going on that morning, she was actually so combative — like any true mother — that she opposed anything that could have endangered my physical and psychological integrity.
+</p><p>As you can easily imagine, the matter of my abduction/transfer to the prison hospital was now up in the air for a while until “the responsible power” — in other words, my mom — could see the doctors who were taking care of me. Like she said, they were the only ones who should decide if I was to be discharged. And that’s how things went. A throng of white coats — flustered and clearly surprised — appeared in the distance with my mother leading the way, heading for the stretcher that was already prepared for departure.
+</p><p>“Who ordered the patient’s transfer?” one of the doctors asked the pigs.
+</p><p>“We have orders from above, sir. It’s not our decision.”
+</p><p>“Perhaps I could speak to your superior?”
+</p><p>“Just a moment, I have to get authorization.”
+</p><p>And while the responsible people in charge were literally fuming, my stretcher was brought back to my room so that — in keeping with the outcome of the battle between the doctors and the pigs — they could take one last look at me. They said they were going to remove the remaining stitches and prescribe some medications that I should keep taking. They also explained that the most difficult and important part of my recovery was over, and now the only thing left was to recover my strength by resting and eating a lot. Incidentally, that was something of a half-truth, or more accurately a lie wrapped up in “not quite ready” packaging. I was able to listen in on the fight between the doctors, my mom, and the pigs, with the doctors insisting that I still wasn’t ready to be transferred, and the pigs monotonously repeating that they were “simply following orders.” “Following orders” obviously won, as expected.
+</p><p>But this wasn’t the first time the scales tipped in favor of the pigs and their fucking orders. Something similar happened before over the issue of guarding me in the intensive care unit, when the medical team managed to resist the pressure of the security forces — who wanted to invade my room — for two days, their basic argument being that such an invasion would pose a danger not just to me but to the other patients as well. Still, it would have been naive to believe that basic human values could prevail over the new “repression and security” dogma.
+</p><p>It was the same when the head of the ICU — shaken and beside himself — came to tell me he couldn’t keep me under his personal supervision anymore, even though my condition required it, because he was being severely pressured by the persecuting authorities, who wanted him to sign off on my release from the 24-hour intensive care unit and approve my transfer to the ophthalmology wing. Why there and not surgery? “Security reasons” again, of course. The pigs were demanding that an entire operating room be cleared and the other patients thrown out, just so they could keep a closer eye on me. They really believed that’s how it had to be, even though it would have been impossible for the hospital. So instead, they brought me to a specially “prepared” room in the ophthalmology wing, which I was told was where Dimitris Koufodinas had his “accommodations” during the hunger strike he carried out to make them remove the security netting that covered the yard of the prison wing he was locked up in. The room was certainly prepared, since there was nothing in it. They had removed or bolted down anything they thought a prisoner could use for an eventual suicide attempt or vigilante attack, and the balcony door was barred, naturally. The rigid logic of heightened stupidity.
+</p><p>Wasn’t it the dogma of security and intimidation that, in the blink of an eye, wiped away the last traces of the room’s dignity and humanity? Wasn’t it pure sadism and vengeance that pushed those subhumans to watch my mother while she cleaned the shit off my bedridden body, without looking away for a single moment? Wasn’t it their harsh behavior the whole time I was in their suffocating “embrace” that led to my being withdrawn, edgy, and exhausted when the interrogator and prosecutor came by to take my statement? Or was it perhaps a sign of compassion when head torturer and prosecutor Diotis, not just ignoring but jeopardizing the disastrous condition I was in at the time — intentionally or not — visited me for my statement while I had a tube stuck down my throat and was visibly incapable of uttering a complete sentence?
+</p><p>These are obviously rhetorical questions, and I ask them not to moan about the trampling of democratic rights, but to reveal the context in which the conflict between two counteracting forces — two completely different worlds — is developing. On one side we have those who dream of a totally subjugated and enslaved society that serves the oligarchic desires of a few insatiable idlers. And on the other side we have those who are fighting for real equality, justice, and freedom; those who are creating a new reality far away from terms like profit, competitiveness, exploitation, and hierarchy.
+</p><p>While the wheels of my stretcher rushed over the little bumps in the hospital floor, each time transferring a sharp pain to my freshly operated-on back, the ruffian herd — in between a shouted stream of orders, and to their great relief — brought me toward my final departure from Athens General Hospital. When the first few rays of warm sunlight struck me in the courtyard — where an ambulance and its packed escort cars were already waiting to securely transfer me to Agios Pavlos Prison Hospital—it felt truly liberating, and seemed to make up for my three weeks of cohabitation with uniformed guard dogs. Those few seconds I spent outside before they put me in the ambulance were my last opportunity to breathe fresh air and see the sun without bars and barbed wire between us. With the sun as my comrade, I bid a final farewell to freedom, and entered the longest winter of my life.
+</p><p>End of installment...
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,711 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Research \& Destroy  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Land and Liberty
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+Against the New City
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+April 15, 2014
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+\section{1.
+}
+
+Debt, wage-labor, rent. These are the three scourges of the modern, fully capitalist world, the three faces of exploitation that confront the proletarian of today. Rent might be the least examined of these terms, the landlord all too easily conflated with banker and boss. Perhaps this is because rent is one of the most naturalized of property relations – a tax one pays for the simple crime of existing in space dimensional, of being a body not always in frantic motion, a body needing rest. The idea that space can be owned in the same way that one can own an object is so strange, if one thinks about it, that it is hardly surprising few of us actually do, that the landlord is forgotten about when we list the enemies we will send up the steps of the guillotine. In the fully capitalist world, the trinity of neoclassical economics – labor, capital, land – is often translated into the simple binary of labor and capital, since the aristocratic, land-owning class that once lived off of ground-rent has vanished and with it, at least in the majority of the world, the peasantry it once terrorized. The owners of land are now all capitalists, and so it is perhaps true that we can call Monsieur Le Capital to account for the crimes of Madame La Terre once the party of disorder takes to the streets. But if we think about what makes life unbearable today, rent is surely at the top of the list, if not in first place. The hardship of life in the metropolis derives directly from the difficulty of making rent, of finding a place to live. This is, in many regards, an effect of the developmental trajectory of capitalism, an effect deriving from its miraculous success in generating an excess of wealth that is experienced by most as an excess of misery.  One result of the massive increase in capitalist productivity has been to bring down the cost of all wage goods, food most especially, relative to shelter. Rent grows simply because it doesn’t shrink. For most proletarians in the US, the largest share of their available income goes to rent or mortgage payments, rather than food, as was the case in the past. Though hunger has hardly been eradicated, and people suffer from lack of food all the time, it is homelessness that today characterizes poverty, that marks the threat of wageless life.
+
+
+Cities are now for the rich. That is the message posted at the city limits of Seattle and San Francisco, Washington DC and New York. They belong to the rich; they belong to the renters who are also rentiers. There was a period in the development of capitalism in which states and capitalists felt constrained to make cities affordable for people, if not livable, to produce infrastructure that would facilitate the reproduction of a working class. But this is no longer the case; such a class is no longer necessary in large numbers in the age of drones and deindustrialization, and whereas previously rent was a necessary weapon to ensure that workers showed up to work the next day, needing to earn something in order to pay for the roof over their heads, today rent is used not to keep workers in cities but to push them out.
+
+
+There is no surer confirmation of the absurdity of capitalism than the fact that one of the chief effects of the economic crisis of 2008, besides persistently high unemployment and an ongoing wave of foreclosures, has been a massive explosion in rent prices across many US cities. In the neighborhoods hit hardest by mortgage crisis, neighborhoods whose composition is primarily black and Latino, those who were not excised by foreclosure are now being squeezed out by rent. To the income lost from unemployment one subtracts a new amount lost to rising rents. Landlord, banker, boss — everyone gets a piece.
+
+
+\section{2.
+}
+
+The explosion of rent prices in the Bay Area is the effect, first, of the massive amount of capital set free by the crisis, unable to find any productive outlet. Once the real estate market began to bottom out, the capital that had been pooling found its level and poured in, buying up all the houses from which people had been evicted. In the new loan-averse banking context, where most people with modest means have a hard time getting a home loan, profit taking in the real-estate market occurs increasingly through rentals. Instead of the mortgage-backed financial instruments that precipitated the crash of 2008, now Wall Street has created a new class of rent-backed assets to funnel capital toward the purchase of houses for rent by big institutional buyers. REO Homes, LLC, an investment firm, has bought up over half of the foreclosures in West Oakland; after making a few repairs, it can rent these out for prices that are at the very top of the range for the area. None of this would be possible without the surge in demand; the main driver of rent inflation is the fact that San Francisco and Santa Clara County together added over 50,000 new tech jobs from 2010 to 2013, jobs that pay a median income of around \$100,000. The effect of this new money on the rental market has been catastrophic. In Oakland, the average price increase is something like 15\%; in San Francisco, 10\%. But these are averages, and we all know areas where rent is easily 50\% higher than it was two years ago. These rent increases encourage real-estate speculation, since they indicate money to be made by landlordage as well as rising home values.
+
+
+Yet we need to abstract still further from these harrowing numbers. The link between growth in tech jobs and rise in rent indexes a fundamental polarization of the labor market. We might take as a parable an illuminating moment at this year’s Academy Awards, which having received more than 20 million dollars from tech giant Samsung for advertising, would feature their Android by Google phone during the show. Selfies are taken. Tweets are sent. It is a Hollywood event but it is possessed by the spirit of the tech industry. Mid-show the host Ellen DeGeneres, blithe spirit that she is, orders pizza for the audience and when it arrives, she brings the delivery person out on stage. He stands there bemused but cheerful in his apron, hoodie, and ball cap, facing 3400 people in tuxedos and ball gowns. They are almost entirely white. He is not. He descends with the host to serve them food. Ellen herself is dressed entirely in white. “C’mon, I’ve never done this,” she says curtly, “you help.” Later, Edgar Martirosyan will claim, “this is really the American dream.” And it is. But it is surely not the dream of the average delivery guy (it would turn out he was the business owner in worker’s drag) and surely not ours. In this dream there are only the wealthy, the powerful, the creme de la creme. They are the whole population, all that remains, the world exists for them, no one else required. Almost. To make it through the gilded evening of history they will need exactly one service worker who will see to their material needs and then get the hell out. It is like a golden pyramid, inverted and resting on a single point, all its weight bearing down.
+
+
+Hollywood, not for the last time, provides an image of the world stood on its head, but an image that for all that still holds a kind of truth. Is this not precisely the dream of San Francisco as it is being remade before our eyes? Already, the pop libertarians and econopundits speak openly of a final polarization, “a mash-up between Downton Abbey and Elysium” in the ready-to-hand language of film and TV: a world in which only 15\% of the population will possess any of the nominal “skills” that are necessary for economic growth, the remaining 85\% automated out of production by intelligent robots, and out of the economically thriving cities now become polished museums and consumption corridors for the super-rich and their remaining courtiers and servants. Against this prospect, these pundits offer the only possible advice: learn to serve the rich, make yourself useful to your new masters. The rise of the machines threatened by a thousand sci-fi films is mere shadow-play, in this vision, for the rise of a new class of techno-elites riding the wealth effect created by the accelerated expulsion of workers from the production process: a new ruling class freed from the dead weight of that old laboring, value-generating class, freed to treat the human remainder with machine-like indifference. The machines in these movies are personifications of the new rich, in cities remade for them and their retinue alone.
+
+
+For better and for worse (and how tremulously close these two positions now hover), such an outcome remains fundamentally impossible as long as distribution of labor and social wealth is organized according to profit and the wage.  A society that bases its measure of value upon human labor cannot reduce its laboring population absolutely without at the same time sawing off the branch upon which it rests. These elites will have banished the laboring classes into a dim outland they will soon explore themselves.
+
+
+In that such visions cannot be a real forecast, they disclose themselves as a tension and tendency within the present, stabilized as an image of the future — the spontaneous ideology of the new elite. San Francisco quite obviously already drifts in this direction. It has the highest median income of any city in the nation, \$75k — and that figure would still need to be half again as high to afford a median home. It is a city, that is to say, in which only the richest of the rich can stay without the most extreme of sacrifice and hardship, those with top tier tech jobs, those with hedge funds and winner startups and venture capital. They will need a service sector, of course, will need line cooks and bus drivers and sex workers and pizza deliveries. But they will need these people to live somewhere else please, somewhere offstage and out of sight. Perhaps in a system of bidonvilles ringing the great city, pushed ever further out by cascading displacements, expected to be grateful for the right to serve the fine ladies and gentlemen busily giving each other awards and high fives, to be recorded and posted no doubt via GoogleGlass. This is not a movie. But neither is it an unassailable reality.
+
+
+That this situation is unsustainable, cannot be stabilized into the boom city that Google and Facebook and Twitter want, is little consolation for those of us who try to hold on to the lives we have made for ourselves, against rising rent and militarized cops, against the cameras and data collection programs that will increasingly police all deviance out of existence, in the name of a “safety” which means to package each atom of space and time in its code. Though many cities continue to be organized according to the wealth distributions of the 20\high{th} century, with a poor urban core and rich suburbs, in places like San Francisco and Seattle, New York and Washington DC, LA and Portland, New Orleans and Atlanta, we are witnessing a profound inversion of the typical logic — poor inner city, rich suburbs — by which cities have been organized for the last few decades. US cities increasingly seem as if they will be organized on a European model, with a fully embourgeoisified inner city surrounded by proletarian suburbs.
+
+
+\section{3.
+}
+
+In the late 19\high{th} and early 20\high{th} century, the dominant urbanizing logic was city as forcing house, concentrator of the new masses of labor power flushed out of the countryside. In the great industrial centers of developing capitalism, the accumulation of capital meant, fundamentally, an accumulation of workers, a multiplication of the toilers who served not only as providers of surplus value but as purchasers of the increased output of industry. During booms, this laboring class expanded rapidly; relaxed immigration laws pulled in workers from Europe and Asia, and internal migration, especially the migration of blacks from the South, continued to draw workers out of the countryside and into the city. Cities were redrawn to accommodate these new masses and maintain the lines of class and race that the ruling whites expected.
+
+
+These new urban enclaves were not simply effects. Though created by racial and class violence, by redlining and the trajectory of freeways, by white mobs and railroads, by the maneuvering of political machines and the keying of certain social classes to natural features of the landscape, these zones were also, at the same time, the product of profound struggles for survival, dignity, autonomy. They were spaces of self-organization and self-determination. To the extent that we can speak about a proletarian class identity or consciousness, it depended upon the institutions, the community, produced in these spaces, in the neighborhoods where proletarians lived, as much as it did upon the solidarities and generalized experience of the industrial workplaces.
+
+
+Class was, of course, merely one of the lines upon which these cities were drawn. These working-class neighborhoods were spaces of ethnic and racial self-organization as well, and in many cities one can narrate the history of a neighborhood through the procession of racial and ethnic groups who lived there. Though created by vectors of money and law, by the location of workplaces, the Jewish and African-American ghettos, the barrios and Chinatowns of the American city were constituted as spaces of counterpower, variously revolutionary or religious, nationalist or mercantile, regulated through a number of venues and institutions: drinking club, church, criminal syndicate, business association, union, communist party. These enterprises rarely offered a clear-cut distinction between organizing on the basis of class identity or some other axis, particularly in places where class identity was experienced primarily in racial terms. Such institutions were especially necessary in the neighborhoods of those who ranked low in the racial hierarchy in economic terms. Because these workers were the last ones hired by the new industrial concerns during booms and the first ones fired when crises hit, and because economic instability often meant a rise in white supremacist pogroms and riots, these neighborhoods needed to be autonomous and self-sufficient to a much greater degree than the neighborhoods where comparatively privileged proletarians lived, providing people the capacity to survive and defend themselves when the flows of income dried-up and the racist mob arrived. As a result, many of these neighborhoods gradually became worlds unto themselves, functionally and culturally autonomous.
+
+
+The gentrification of American cities is quite obviously, by any account, an attack on these spaces of cultural identity and autonomy, an attack on the institutions and infrastructure and community that people have built in order to survive in a world hostile to them. But we would profoundly misunderstand the present moment if we did not see gentrification as the final stage of a sustained attack on these spaces that has been ongoing for over 40 years. Two things happened in the 1970s that changed the disposition of capital and the state toward these spaces. First, it became clear after the political militancy of the 1960s that the autonomy of these neighborhoods — particularly the African-American ghetto and the Latino barrio — meant not merely the self-management of poverty but a threat to the economic and political order of the time. Secondly, a profound process of deindustrialization began which meant that cities no longer needed vast reserves of labor-power. The various institutions that the political class had established to pacify and contain African-Americans in the immediate postwar era (to take the paradigmatic example of this racialized logic) were widely seen as having failed, and a gradual transformation of paternalistic welfare institutions into disciplinary forms of policing, monitoring and incarceration began. The so-called “war on drugs” that replaced the “war on poverty” of the preceding era had the effect of increasing the number of black men in prison by a factor of four. But the restructuring and corporatization of commerce within the city also had a major effect, with the local grocers, hardware stores, bookshops and restaurants that might have given neighborhoods a unitary feeling and provided jobs and revenue replaced by massive supermarkets and chain stores, often located miles away. The result is the creation of “food deserts,” places starved of any retail outlets beyond convenience and liquor stores — a quality that can make the initial effects of gentrification, with new shops and new “security,” seem seductive to a fraction of residents dismayed by the vanished retail and enforced decrepitude. This brief renovation appeal will not last, once it becomes clear the changes mean greater repression and higher rents.
+
+
+If civil rights did little to close the wage gap between blacks and whites, it did allow for the mobility of a new, growing black middle class, such that the petty proprietors who once might have owned these local stores could move out of the ghetto. The post civil-rights era has been characterized by a profound polarization of wealth in the African-American community; a new African-American middle-class seems to have absorbed the meager gains of the last few decades, providing whites with a ready-to-hand image of the defeat of racism. Desegregration and the military assault on black communities effectively weakened the link between the black middle class and poor blacks, creating conditions in which many of those who could leave the police-occupied neighborhoods of the 1980s and 1990s did. All of these changes had the effect of making the American ghettos both less self-sufficient and, paradoxically, more isolated from the surrounding city.
+
+
+\section{4.
+}
+
+But now the very model upon which these ghettos were built is being upended. One effect of the white flight and corresponding criminalization that occurred in the postwar period was to artificially depreciate the value of real estate in cities, creating what is sometimes called a “rent gap.” The cheap rent that resulted was one of the things that offset the increasing poverty in these neighborhoods once the halfway decent jobs vanished in the crisis of the 1970s, never to return. But this process of deindustrialization has also meant that there is a massive volume of excess capital, domestic or foreign, that can’t find sufficiently profitable investment in those vanished productive sectors. Hence, the growth of finance and real-estate over the last few decades. As states respond to the slowing of their economies with an increase in the money supply, the problem accelerates in turn. Though the intention is that increased credit will lead to increased hiring, this is rarely the case these days, and instead the money floods into financial assets and real estate. Sooner or later, it finds its way into the crack between the actual and potential values of properties. Because cities and states rely on taxes from real estate, one of their main purposes is to create institutions that can direct these flows of excess capital into their own cities — every state and city has a network of public and public-private institutions designed to facilitate redevelopment, and as we know from countless scandals, there are few local politicians who do not make their way in the world by way of one shady real-estate transaction or another. Clay Davis of The Wire— sheeeitt — barely rises to the level of caricature; he is simply a type. These politicians are a part of the state-capital redevelopment machine designed to reallocate money and everything else toward the cores of wealth and power. Most of these projects fail, of course. But the cities that succeed — Brooklyn, San Francisco, Oakland, Vancouver, Seattle — find that they’ve started an irreversible process, a chain reaction that admits of little modification or mitigation.
+
+
+People are, of course, not simple utility-maximizers, mindlessly drawn this way or that by the smell of money. There are all kinds of cultural values and subjectivities and affects that have attended these processes, both in the era of white flight and gentrification. Certainly, the 1960s counterculture and its aftermath marked the suburbs as spaces of deep conformity and alienation, whereas the city increasingly became the space of self-realization and freedom. Rejection of marriage and the holy family, of heterosexuality and patriarchy; rejection of conservatism of all sorts meant, by definition, rejection of the suburbs or countryside and affirmation of the city. As people began to have fewer children, as conventional familial forms began to mutate, people moved to cities where it was easier to live. Easier to live as a single man or a single mother, or as a family where both parents work long hours, in places where one can purchase prepared meals and childcare, especially if one has the means. For the middle classes, the city comes to resemble a tech campus: a place owned and operated by highly effective people pulling long work sessions punctuated only by the things that will keep them on the job, a revivifying massage or a quick workout at the climbing gym in their few spare moments before they turn back to making it happen. Perhaps these are what has become of the values that once made the city desirable. But behind this transformation of values there is a rather simple story of money. People had moved to the suburbs because it was comparatively cheap, cheaper than cities. People moved back to the cities because the suburbs had become much more expensive, and were no longer a bargain, especially for those not living in traditional families and especially once you considered the cost of and time spent commuting, the rise in carbon costs, the ongoing collapse of public transit. Add to this the increasing availability of personal services now provided by wage-laborers — a way for the wealthy classes to buy time and purchase their own reproduction, but one that only be exercised only at the scale and density of the city — and the reversal of white flight’s capillary flow takes on a persuasive logic.
+
+
+Thus is the political economic background of gentrification. We have to be careful not to tell this story as a simple narrative of people and territory, as if the mere presence of a white or middle-class person in a neighborhood instantly meant the expulsion of a long-term resident. We must avoid a Malthusian view of the city. There is, for the most part, no shortage of housing stock in places where gentrification is happening. On the contrary. And even if there were, all scarcity is fundamentally artificial — housing isn’t available because its production is subordinated to logic of profit, and builders make more profit from luxury condos than rentals to low-income tenants. There is a whole chain of causes and mediations which link the new arrivant to the expulsion of the long-term resident. In certain contexts, in cities with renter-friendly laws, as exist in Europe, one can have “first-wave” gentrifiers — artists, squatters and punks — move in to areas without causing any subsequent appreciation in rents or displacement at all.
+
+
+Nonetheless, in the US at present, one can only with great naiveté pretend not to know how the story ends. US capitalism is a machine for churning money from every differential, for compelling all difference to be lived as struggle. It is a machine for turning nearly any attempt to avoid the misery of contemporary life into a mechanism for beating down someone else. People who came to the city because they had an idea of liberation — say, of finding a community of artists — discover themselves to be gentrification’s cat’s-paws, their own desire for freedom the lever by which another is pushed toward ever greater unfreedom. In the contemporary American city, with its high rents and low wages, refusal of work is only possible as a refusal of rents, and this will mean, for many, moving into neighborhoods that are either presently gentrifying or will be soon. To the extent that political subcultures and radical milieus exist among those who flee paid work in order to participate in other projects, these groupings will bear a particularly intimate relationship to gentrification, especially in places where there are no meaningful struggles over housing, no viable forms of resistance to the tide of appreciating property values.
+
+
+And yet, we need to demystify the concept of choice underlying this refusal. In a tight rental market, where landlords have their choice of renters, they can name any number of conditions: salary, good credit, lack of criminal record. One may find that, despite one’s ability or willingness to pay a premium to avoid participating in the horrors of gentrification, one can find no place to live except in a gentrifying neighborhood. In any case, one cannot hope to get very far by mobilizing people’s guilt toward different choices; it is akin to fighting ecological collapse by trying to shame people into being vegans or driving fuel-efficient cars. This is not to say that those looking for housing or contemplating a move shouldn’t consider their options (such that they are) carefully and the effects those options will have on those around them. But when people see that the choice of a single person will probably not make much difference one way or another, they are not likely to make the kinds of intense sacrifices that would be necessary to free themselves of complicity in gentrification. At the same time, no one should be surprised when long-term residents display their hatred of the whiter and wealthier arrivals in their neighborhoods. In fact, a campaign to terrorize new arrivants (especially those who act like complete assholes) through violence against person and property would not only be an understandable response to what is happening but one likely to succeed in scaring people away and consequently lowering rents. But then we would be in realm of political force rather than moral suasion.
+
+
+\section{5.
+}
+
+Let us return to the parable one last time. There we are in the Dolby Theater (formerly the Kodak Theater; everything becomes parable), 3400 of us in suits and gowns, one in a service uniform. It is the victory of wealth, of power, of whiteness, of industry, of spectacle. It is the final triumph of the immaterial economy, the R\&D economy, where people make ideas and feelings, entertainments and processes, and beam them elsewhere, to a waiting world.
+
+
+We know that this can be true only in spectacle: that behind the appearance, the rest of the population must be nearby enough to provide the necessary goods and services for life to go on, must be nearby enough to be exploited so as to generate the wealth on which the blessed float. So the immiserated: displaced but still necessarily present, part of the circuit. It’s a contradiction. This explains all the cops.
+
+
+The cops are there in the parable, because the parable is also a fragment of real life. Outside the Dolby theater, hundreds upon hundreds of cops. Beat cops, riot cops, line officers, cops with dogs, cops on the rooftops with sniper rifles covering all the approaches to Hollywood and Highland. A fully militarized polarization of wealth. The newspapers try not to write about it, the cameras try to keep it out frame. But there it is. The gleaming spectacle can only be produced by the heavy presence of the military state; the dream of total wealth can only be forged with firepower. These cops are the blue stain of contradiction, the inevitable mold that fills in the cracks in this reality, or tries.
+
+
+These are the same cops who occupy the cracks between neighborhoods, cracks in neighborhoods, to enforce this ongoing reconfiguration of the social landscape. This is what they are paid to do. Gentrification, scarcity, displacement — these things have a dynamic, but they are not a natural order. The same contradiction is generated time and again: people are fucked over but kept around, priced out of their apartments but still living in the neighborhood, or working there, or walking through to the next neighborhood where they’ve been pushed. Clinging to communities and places and familiars out of love and belonging and the need to stay alive.
+
+
+This is a volatile scenario. It is volatile in part because the new residents, steeped in class privilege and white supremacy, generally imagine the police are their allies — not a mistake the long-term residents are likely to make. It is volatile because developers, for whom structural racism and the abstract magic of property value have long since become a unified way of seeing the world, have these police at their disposal. It is volatile most of all because the imposition of this antagonistic order, this permanent counterrevolution against the poor, is the entirety of the police’s job: because gentrification cannot be reduced to ethnic cleansing, because the displaced population must in some regard be preserved in their immiseration, needed but not wanted. Thus the war appears as a war of control and of visibility: charged with developing an ever intensifying efficiency for capital, the gentrified urban space becomes R\&D City, a city of research and discipline.
+
+
+The discipline has as one side surveillance and as the other the occasional police murder. Behind every rent increase, a line of armed cops; behind every posh storefront, an army of CCTV cameras. Thus the incredible force of videos where cops kill black and brown kids: these images synthesize these two faces of discipline, the picture and the pistol, that combine into an immanent and permanent domination of the lives of the underclass. To a considerable extent, control and visibility flow together. Precisely because “race” seems to be visible, to be the main way that the social polarization and social contradiction appears, the grinding, humming mechanisms of control and violence are premised on a regime of visibility: on endlessly expanding surveillance schemes, on “neighborhood watch” programs which have decided how the neighborhood is supposed to look. This is the fundamental linkage between the new resident calling the cops on a suspicious kid in the park — a young person of color — and the asshole wearing his GoogleGlass on the street, in the bar. It’s not simply that the technology is fancy or expensive or peculiarly visible, a sign of conspicuous consumption, a marker of the class divide. It’s that it is so evidently a working piece of R\&D City, part of the ceaseless force required to stabilize the contradiction that it cannot resolve. Donning the GoogleGlass is not wearing a computer on your face; it is wearing a cop.
+
+
+Rent and the cops. So much of what we have said can be summed up by these two terms. There is nothing inevitable about the process we’ve described; it could be stopped, but only through a profound process of destabilization. An ungovernable city is a city in which no luxury condos are built, a city to which firms are unwilling to relocate their workers, a city in which rents stabilize or fall.  The very first barricades in history were used to block off neighborhoods against social volatility; now the volatility must itself become the barricade. Not just one riot, which by temporarily lowering property values and galvanizing the political class toward new repressive projects, becomes a spur to redevelopment — but a series of riots, year after year, that drive a political polarization equal to the economic, that divide a city into those who love the cops and those who don’t. We think rent, too, provides the opportunity for such polarization. This is where there is a profound difference between early arrivants and late arrivants; between those who moved to a neighborhood because it was what they could afford, and those who move to an already gentrified neighborhood because it offers the consumer options they like. The first group naturally wants to keep rents low, and this creates a potential point of alliance with the long-term residents who are displaced when the second-wave gentrifiers arrive. The second group understands that they are trading high rents for certain desirable qualities, among them “safety.” They are paying for the cops. They will not come if the neighborhood is made ungovernable, if evictions are resisted, if rent strikes are organized, houses are taken over and given to those who have been displaced or otherwise need housing, if the offices of developers and real-estate investment companies are targeted, if new construction projects are constantly sabotaged, if employers whose hiring reflects the increasingly polarized labor market are attacked at every turn. Rent and the cops. R\&D city remakes itself violently with these weapons; they must be unmade, undone. The sides are clear.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Research \& Destroy
+
+
+
+Land and Liberty
+
+
+
+Against the New City
+
+
+
+
+April 15, 2014
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+
+
+Retrieved on July 26, 2014 from http://researchanddestroy.wordpress.com/2014/04/15/land-and-liberty/
+
+
+\stopalignment
+
+\stoptext
+
+

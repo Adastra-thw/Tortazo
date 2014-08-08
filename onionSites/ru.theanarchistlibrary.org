@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://ru.theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://ru.theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://ru.theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://ru.theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Библиотека Анархизма | Архив анархической литературы   </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="Информация о проекте">О сайте</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">На других языках</a>
+	 <ul id="sec-nav-submenu">
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <!--
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   -->
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="Наши продукты">Дистро</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="Помощь, документация, личные страницы, предложения...">
+	   Вики
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Создать PDF-файл">
+	   Конструктор книг
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Случайная статья</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="19" /><br id="full-text-search-separator" />
+		<input type="submit" value="Полнотекстовый поиск" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="Библиотека Анархизма" href="/">
+	      <img 
+		 title="Под библиотекой — брусчатка, под брусчаткой — пляж!"
+		 alt="Библиотека Анархизма" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="Сортировка по авторам">Авторы</a></li>
+	    <li><a href="/library"
+		   
+		   title="Сортировка по названиям">Названия</a></li>
+	    <li><a href="/topics"
+		   
+		   title="Сортировка по темам">Темы</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Загрузить текст в библиотеку">
+		Добавить текст
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+
+
+<p>Наша группа <a href="https://vk.com/anarcholibrary">вконтакте</a> (бегите с этого сайта — архива для фсбшников!)
+</p><p>Ура! Найден новый библиотекарь и в ближайшее время мы заработаем с новыми силами.
+Дорогой незнакомец, если ты заинтересован в поддержании работы
+Библиотеки (то есть самостоятельной загрузки большей части текстов и
+проверки чужих загрузок, перевод платформы, переписка с админом), то
+тебе нужно написать на почту нового библиотекаря rtp (a) riseup.net
+Чтобы быть славным библиотекарем, необходимо обладать следующими
+компетенциями:
+</p>
+<ol>
+<li><p>Много долгого энтузиазма
+</p>
+</li>
+<li><p>Много свободного времени
+</p>
+</li>
+<li><p>Знание английского
+</p>
+</li>
+<li><p>Понимание html-тегов и какая-то минимальная компьютерная грамотность
+</p>
+</li>
+<li><p>Аккуратность (нужно загружать тексты не абы как, а согласно шаблону, чтоб все красиво было).
+</p>
+</li>
+<li><p>Эрудированность в плане анархистской теории, знание имен, дат, терминов, однозначно будет не лишним – отделять зерна от плевел.
+</p>
+</li>
+<li><p>Ну и анархистские убеждения, конечно. (плюралистические, но без всяких там анархокапитализмов и прочего).
+</p>
+</li>
+
+</ol>
+
+
+
+<div id="recenttexts">
+
+<h3>Последние загрузки</h3>
+
+<ul id="listrecenttexts">
+  
+  <li><a href="/library/myurrej-bukchin-ekotopiya">Экотопия</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-k-osvoboditelnym-tehnologiyam">К освободительным технологиям</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-ekologiya-i-revolyucionnaya-mysl">Экология и революционная мысль</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-rekonstrukciya-obschestva">Реконструкция общества</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/maks-nettlau-nujdy-anarhicheskoj-propagandy-v-nashi-dni">Нужды анархической пропаганды в наши дни</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/nestor-ivanovich-mahno-k-voprosu-o-zaschite-revolyucii">К вопросу о защите революции</a>
+     — Нестор Иванович Махно
+  </li>
+  
+  <li><a href="/library/maks-nettlau-protiv-utopij-perehodnogo-perioda">Против утопий «переходного периода»</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-ot-platformy-do-tesnogo-kontakta-s-proletarskim-gosudarstvom-sssr">«От платформы» до «тесного контакта» с «пролетарским государством СССР»</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-p-arshinov-i-probujdenie">П. Аршинов и «Пробуждение»</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-vzaimnaya-otvetstvennost-i-solidarnost">Взаимная ответственность и солидарность</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-nado-izuchat-libertarnye-idei">Надо изучать либертарные идеи</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/erih-myuzam-vozzvanie-k-duhu">Воззвание к духу</a>
+     — Эрих Мюзам
+  </li>
+  
+  <li><a href="/library/maks-nettlau-na-perelome-uhodyaschij-avtoritarnyj-i-voshodyaschij-libertarnyj-vek">На переломе: уходящий авторитарный и восходящий либертарный век</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-federalizm-i-centralizm">Федерализм и централизм</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-jizn-i-deyatelnost-mihaila-bakunina">Жизнь и деятельность Михаила Бакунина</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-krushenie-avtoritarnogo-socializma-na-puti-k-novoj-progressivnoj-deyatelnosti">Крушение авторитарного социализма на пути к новой прогрессивной деятельности</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/igor-podshivalov-vehi-istorii-anarhist-mihail-sajin-na-barrikadah-parijskoj-kommuny">Вехи Истории: анархист Михаил Сажин на баррикадах Парижской коммуны</a>
+     — Игорь Подшивалов
+  </li>
+  
+  <li><a href="/library/kornelius-kastoriadis-samoupravlenie-i-ierarhiya">Самоуправление и иерархия</a>
+     — Корнелиус Касториадис
+  </li>
+  
+  <li><a href="/library/erih-myuzam-anarhiya">Анархия</a>
+     — Эрих Мюзам
+  </li>
+  
+  <li><a href="/library/maks-nettlau-anarhizm-i-religiya">Анархизм и религия</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-anarhizm-i-nacionalizm">Анархизм и национализм</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/maks-nettlau-ispoved-bakunina-caryu-nikolayu-i-1851-g">«Исповедь» Бакунина царю Николаю I (1851 г.)</a>
+     — Макс Неттлау
+  </li>
+  
+  <li><a href="/library/erih-myuzam-vsya-vlast-sovetam">Вся власть Советам</a>
+     — Эрих Мюзам
+  </li>
+  
+  <li><a href="/library/erih-myuzam-svoboda-kak-obschestvennyj-princip">Свобода как общественный принцип</a>
+     — Эрих Мюзам
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-anarhiya-i-organizaciya-pismo-levym">Анархия и организация. Письмо «левым»</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-my-zelenye-my-anarhisty">Мы — зеленые, мы — анархисты!</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-poslushaj-marksist">Послушай, марксист!</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/myurrej-bukchin-my-ne-mojem-spasti-okrujayuschuyu-sredu-bez-perestrojki-obschestva">Мы не можем спасти окружающую среду без перестройки общества</a>
+     — Мюррей Букчин
+  </li>
+  
+  <li><a href="/library/erih-myuzam-bismarksizm">Бисмарксизм</a>
+     — Эрих Мюзам
+  </li>
+  
+  <li><a href="/library/genri-devid-toro-uolden-ili-jizn-v-lesu">Уолден, или Жизнь в лесу</a>
+     — Генри Дэвид Торо
+  </li>
+  
+</ul>
+</div>
+
+</div>
+
+<div id="cloud">
+  <a href="/topics/konsilizm" class="cloud2">консилизм</a>
+<a href="/topics/filosofiya" class="cloud1">философия</a>
+<a href="/topics/sindikalizm" class="cloud1">синдикализм</a>
+<a href="/topics/socializm" class="cloud1">социализм</a>
+<a href="/authors/gi-debor" class="cloud1">Ги Дебор</a>
+<a href="/authors/vadim-dame" class="cloud1">Вадим Дамье</a>
+<a href="/authors/myurrej-bukchin" class="cloud1">Мюррей Букчин</a>
+<a href="/topics/kritika" class="cloud2">критика</a>
+<a href="/topics/anarhiya" class="cloud2">анархия</a>
+<a href="/topics/marksizm" class="cloud1">марксизм</a>
+<a href="/topics/bakunin" class="cloud1">Бакунин</a>
+<a href="/topics/ekologiya" class="cloud1">экология</a>
+<a href="/topics/na-nojah-so-vsem-suschestvuyuschim" class="cloud1">На ножах со всем существующим</a>
+<a href="/authors/erih-myuzam" class="cloud1">Эрих Мюзам</a>
+<a href="/topics/kommunizm" class="cloud2">коммунизм</a>
+<a href="/topics/istoriya" class="cloud5">история</a>
+<a href="/authors/feral-favn" class="cloud2">Ферал Фавн</a>
+<a href="/topics/klassiki" class="cloud1">классики</a>
+<a href="/authors/emma-goldman" class="cloud1">Эмма Гольдман</a>
+<a href="/topics/situacionizm" class="cloud1">ситуационизм</a>
+<a href="/authors/djon-zerzan" class="cloud1">Джон Зерзан</a>
+<a href="/topics/anarhizm" class="cloud3">анархизм</a>
+<a href="/authors/petr-ryabov" class="cloud1">Петр Рябов</a>
+<a href="/topics/biografii" class="cloud1">биографии</a>
+<a href="/topics/organizaciya" class="cloud1">организация</a>
+<a href="/topics/insurrekcionizm" class="cloud3">инсуррекционизм</a>
+<a href="/authors/alfredo-bonanno" class="cloud1">Альфредо Бонанно</a>
+<a href="/authors/jil-dove" class="cloud1">Жиль Дове</a>
+<a href="/authors/nestor-ivanovich-mahno" class="cloud1">Нестор Иванович Махно</a>
+<a href="/topics/nigilizm" class="cloud1">нигилизм</a>
+<a href="/topics/illegalizm" class="cloud1">иллегализм</a>
+<a href="/topics/kritika-civilizacii" class="cloud1">критика цивилизации</a>
+<a href="/topics/vvodnye-teksty" class="cloud2">вводные тексты</a>
+<a href="/topics/primitivizm" class="cloud1">примитивизм</a>
+<a href="/topics/mahno" class="cloud1">Махно</a>
+<a href="/authors/anonim" class="cloud1">Аноним</a>
+<a href="/authors/maks-nettlau" class="cloud3">Макс Неттлау</a>
+<a href="/topics/teoriya" class="cloud5">теория</a>
+<a href="/topics/revolyuciya" class="cloud4">революция</a>
+</div>
+
+
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="Синдикация" id="rssicon" />
+     Синдикация
+   </a>
+ </div>
+</div>
+</body>
+</html>

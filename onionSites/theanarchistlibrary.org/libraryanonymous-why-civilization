@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Why Civilization? (Anonymous) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/anonymous-why-civilization?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=anonymous-why-civilization">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Why Civilization?
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/anonymous">Anonymous</a>
+    
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anti-civ">anti-civ</a>
+        <a href="/topics/primitivist">primitivist</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    from <em>Disorderly Conduct</em> #6
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on 1 January 2011 from www.insurgentdesire.org.uk/whycivilization.htm
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="anonymous-why-civilization.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="anonymous-why-civilization.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="anonymous-why-civilization.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="anonymous-why-civilization.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="anonymous-why-civilization?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="anonymous-why-civilization.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="anonymous-why-civilization.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Anonymous</h2>
+	
+	<h1 id="textttitleh">Why Civilization?</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Communique # 23
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>With all that’s goin’ on in the world, why do these feral fanatics, these rejects of anarchism, these off-the-deep-end ecologists, these granola-munchin’ harbingers of chaos need to spend so much time attacking civilization?
+</p><p>The following communiqué was found at the site of a recently disrupted secret meeting in Dover, Delaware, which was to facilitate a coalition between Chevron, Pepsi-CO, Microsoft, the Sierra Club, the Northern New Jersey Federation of Anarcho-Stalinists, Michael Albert, and the Institute for Social Ecology. This disruption seems to be evidence that insurrectionary green-anarchist and anarcho-primitivist actions and ideas are spreading!
+</p><h4 id="toc1">Communique # 23
+</h4>
+<p>We are often told that our dreams are unrealistic, our demands impossible, that we are basically out of our fuckin’ minds to even propose such a ridiculous concept as the “destruction of civilization”. So, we hope this brief statement may shed some light on why we will settle for nothing less then a completely different reality then what is forced upon us today. We believe that the infinite possibilities of the human experience extends both forwards and backwards. We wish to collapse the discord between these realities. We strive for a “future-primitive” reality, one which all of our ancestors once knew, and one we may come to know: a pre/post-technological, pre/post-industrial, pre/post-colonial, pre/post-capitalist, pre/post-agricultural, and even pre/post-cultural reality — when we were once, and may again be, <strong>wild</strong>!
+</p><p>We feel it is necessary to raise some fundamental questions as to where we are now, how we have gotten to this point, where we are headed, and perhaps most importantly, where we have come from. This should not to be seen as irrefutable evidence, the Answers, or prescriptions for liberation, but instead, as things to consider while you fight against domination or attempt to create another world.
+</p><p>We believe anarchy to be the ultimate liberatory experience and our natural condition. Before, and outside of, civilization (and it’s corrupting influences), humans were, and are, for lack of better terms, anarchistic. For most of our history we lived in small-scale groupings which made decisions face-to-face, without the mediation of government, representation, or even the morality of an abstract thing called culture. We communicated, perceived, and lived in an unmediated, instinctual, and direct way. We knew what to eat, what healed us, and how to survive. We were part of the world around us. There was no artificial separation between the individual, the group, and the rest of life.
+</p><p>In the larger scope of human history, not long ago (some say 10 to 12,000 years ago), for reasons we can only speculate about (but never really know), a shift began to occur in a few groupings of humans. These humans began to trust less in the earth as a “giver of life”, and began to create a distinction between themselves and the earth. This separation is the foundation of civilization. It is not really a physical thing, although civilization has some very real physical manifestations, but it is more of an orientation, a mindset, a paradigm. It is based on the control and domination of the earth and its inhabitants.
+</p><p>Civilization’s main mechanism of control is domestication. It is the controlling, taming, breeding, and modification of life for human benefit (usually for those in power, or those striving for power). The domesticating process began to shift humans away from a nomadic, towards a more sedentary and settled existence, which created points of power (taking on a much different dynamic then the more temporal and organic territorial ground), later to be called property. Domestication creates a totalitarian relationship with plants and animals, and eventually other humans. This mindset sees other life, including other humans, as separate from the domesticater, and is the rationalization for the subjugation of women, children, and for slavery. Domestication is a colonizing force on non-domesticated life, which has brought us to the pathological modern experience of ultimate control of all life, including its genetic structures.
+</p><p>A major step in the civilizing process is the move towards an agrarian society. Agriculture creates a domesticated landscape, a shift from the concept that “the Earth will provide” to “what we will produce from the Earth”. The domesticater begins to work against nature and her cycles, and to destroy those who are still living with and understanding her. We can see the beginnings of patriarchy here. We see the beginnings of not only the hoarding of land, but also of its fruits. This notion of ownership of land and surplus creates never-before experienced power dynamics, including institutionalized hierarchies and organized warfare. We have moved down an unsustainable and disastrous road.
+</p><p>Over the next thousands of years, this disease progresses, with its colonizing and imperialist mentality eventually consuming most of the planet, with, of course, the help of the religious-propagandists, who try to assure the “masses” and the “savages” that this is good and right. For the benefit of the colonizer, peoples are pitted against other peoples. When the colonizer’s words do not suffice, the sword is never far away with it’s genocidal collision. As the class distinctions become more solidified, there becomes only those who have, and those who do not. The takers and the givers. The rulers and the ruled. The walls get raised. This is how we are told it has always been, but most people somehow know this isn’t right, and there have always been those who have fought against it.
+</p><p>The war on women, the war on the poor, the war on indigenous and land-based people, and the war on the wild are all interconnected. In the eyes of civilization, they are all seen as commodities — things to be claimed, extracted, and manipulated for power and control. They are all seen as resources, and when they are of use no longer to the power-structure, they are discarded into the landfills of society. The ideology of patriarchy is one of control over self-determination and sustainability, of reason over instinct and anarchy, and of order over freedom and wildness. Patriarchy is an imposition of death, rather than a celebration of life. These are the motivations of patriarchy and civilization, and for thousands of years they have shaped the human experience on every level from the institutional to the personal, while they have devoured life.
+</p><p>The civilizing process became more refined and efficient as time went on. Capitalism became its mode of operation, and the gauge of the extent of domination and what still needed to be conquered. The entire planet was mapped and lands were enclosed. The nation-state eventually became the proposed societal grouping, and it was to set forth the values and goals of vast numbers of peoples, of course, for the benefit of those in control. Propaganda by the state, and the by now less powerful church, started to replace some (but certainly not most) of the brute force with on-the-surface benevolence and concepts like citizenry and democracy. As the dawn of modernity approached, things were really getting sick.
+</p><p>Throughout its development, technology always played an ever-expanding role. In fact, civilization’s progress has always been directly connected to, and determined by, the development of ever more complex, efficient, and innovative technologies. It is hard to tell whether civilization pushes technology, or vice-versa. Technology, like civilization, can be seen more as a process or complex system then as a physical form. It inherently involves division of labor, resource extraction, and exploitation by power (those with the technology). The interface with, and result of, technology is always an alienated, mediated, and heavily-loaded reality. No, technology is not neutral. The values and goals of those who produce and control technology are always embedded within it. Different from simple tools, technology is connected to a larger process which is infectious and is propelled forward by it’s own momentum. This technological system always advances, and always needs to be inventing new ways to support, fuel, maintain, and sell itself. A key part of the modern-techno-capitalist structure is industrialism, the mechanized system of production built on centralized power and the exploitation of people and nature. Industrialism cannot exist without genocide, ecocide, and imperialism. To maintain it, coercion, land evictions, forced labor, cultural destruction, assimilation, ecological devastation, and global trade is accepted and seen as necessary. Industrialism’s standardization of life objectifies and commodifies it, viewing all life as a potential resource. Technology and industrialism have opened the door to the ultimate domestication of life — the final stage of civilization — the age of neo-life.
+</p><p>So now we are in the post-modern, neo-liberal, bio-tech, cyber-reality, with an apocalyptic future and new world order. Can it really get much worse? Or has it always been this bad? We are almost completely domesticated, except for the few brief moments (riots, creeping through the dark to destroy machinery or civilization’s infrastructure, connecting with other species, swimming naked in a mountain stream, eating wild foods, love-making, ...add your own favorites) when we catch a glimpse of what it would be like to go feral. Their “global village” is more like a global amusement park or global zoo, and it’s not a question of boycotting it ‘cause we’re all in it, and it’s in all of us. And we can’t just break out of our own cages (although we’re helpless unless we start there), but we gotta bust down the whole fuckin’ place, feast on the zoo keepers and those who run and benefit from it, and become wild again (whatever that means to you!). We cannot reform civilization, green it up, or make it more fair. It is rotten to the core. We don’t need more ideology, morality, fundamentalism or better organization to save us. We must save ourselves. We have to live according to our own desires. We have to connect with ourselves, those we care about, and the rest of life. We have to break out of, and break down, this reality. We need Action.
+</p><p>To put it simply, civilization is a war on life, we are fighting for our lives, and we declare war on civilization!
+</p><p>T.H.U.G.
+(Tree Huggin’ Urban Guerrillas)
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

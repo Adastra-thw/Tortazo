@@ -1,0 +1,51 @@
+<?php # -*- PHP -*-
+# Project homepage
+# 
+# Copyright 1999-2000 (c) The SourceForge Crew
+# Copyright 2000-2003 (c) Free Software Foundation
+# Copyright 2002-2005 (c) Mathieu Roy <yeupou--gnu.org>
+# Copyright (C) 2007  Sylvain Beucler
+#
+# This file is part of Savane.
+# 
+# Savane is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+# 
+# Savane is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# The context of this page cannot be guessed later, we have to hardcode it
+define('CONTEXT', 'project');
+require_once('include/init.php');
+
+# Extract the group name
+$pathinfo = basename(ereg_replace("\?.*", "", $_SERVER['REQUEST_URI']));
+
+$res_grp=db_execute("SELECT * FROM groups WHERE unix_group_name=?", array($pathinfo));
+
+
+# group was not found
+
+if (db_numrows($res_grp) < 1) {
+
+	echo db_error();
+	exit_error("Invalid Group","That group does not exist.");
+
+} else {
+
+	# set up the group_id
+        $group=$pathinfo;
+	$group_id=db_result($res_grp,0,'group_id');
+
+	$project=new Project($group_id);
+
+	# now show the project page
+	require('include/project_home.php');
+}

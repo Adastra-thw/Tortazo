@@ -1,0 +1,369 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-bold-italicize-underline-and-use-bullet-points-in-the-survey","l":"zh_TW","id":"kA030000000hhHBCAY"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>&#35373;&#23450;&#25991;&#23383;&#26684;&#24335;</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/How-do-I-bold-italicize-underline-and-use-bullet-points-in-the-survey" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'create'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id83"> 
+            <h1 id="titleBetaEnabled">設定文字格式
+            </h1>
+            <div id="betaTabContainer">
+              <div class="betaTabs">
+                <ul>
+                  <li class="activeBetaTab" id="classicTabHeader">
+                    <span id="classictabtext">&#32147;&#20856;&#35373;&#35336;</span>
+                  </li>
+                  <li id="betaTabHeader">
+                    <span id="betatabtext">&#26032;&#35373;&#35336;</span>
+                  </li>
+                  <span class="tooltip-icon">?</span>
+                  <div class="tooltip-holder">
+                    <div class="tooltip">
+                      <h5>&#32147;&#20856;&#35373;&#35336;&#33287;&#26032;&#35373;&#35336;</h5>
+                      <span class="tooltip-x">D</span><br/><p>經典 Design 是原始的調查問卷設計工具。新型 Design 是新的調查問卷設計工具，目前尚在測試階段。<br/><br/><a href="/articles/zh_TW/kb/Classic-Design-and-New-Design" target="_blank">應該使用哪個版本？ »</a></p>
+                      <span class="tip"></span>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="betaTabsContent" data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text">
+                <div class="betaTabBody" id="classicBody" style="display:block"><p>
+	如果您想要強調調查問卷的特定部分，請使用 HTML 程式碼新增元素 (例如粗體或底線)。這是專業型帳戶才能啟用的進階功能。您必須具有編寫程式碼的知識，因為我們並不提供額外編碼支援。</p>
+<ul><li>
+		若要啟用此功能，請登入您的帳戶，然後按一下 [<b>我的帳戶</b>] 標籤。</li><li>
+		在 [偏好設定] 區段下，按一下 [<b>編輯</b>] 按鈕並按一下 [<b>啟用 HTML</b>]。</li><li>
+		若要關閉此功能，只要按一下 [<b>停用 HTML</b>] 按鈕即可。</li></ul>
+<p>
+	 </p>
+<h3>
+	如何在調查問卷中使用 HTML：</h3>
+<p>
+	在調查問卷設計中您可以藉由輸入程式碼或標籤 (tag)，來輸入問題內容、頁面說明內容、選項、電子郵件邀請函訊息內容和收集器設定中的 [感謝] 頁面的文字。</p>
+<p>
+	<b>注意：</b>如果 HTML 功能啟用之後，調查問卷中還是會出現程式碼，請對每一個問題按一下 [<span style="font-weight: bold;">編輯</span>]，然後再按一下 [<span style="font-weight: bold;">儲存</span>] 以重新載入問卷。</p>
+<ul><li>
+		若您在 [頁面說明] 或 [敘述性文字] 問題中使用 HTML，將會去除我們的自動格式化功能；因此，您必須手動輸入所有換行符和段落。(<i>*請參閱此頁面下方的其他編碼範例。</i>)</li></ul>
+<p>
+	 </p>
+<h3>
+	<b>重要！檢查所有程式碼以正確使用：</b></h3>
+<p>
+	請確定您正確地使用程式碼。如果您沒有關閉標籤或編碼不正確，它們將影響調查問卷設計。</p>
+<p>
+	<img alt="arrow" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <b>正確編碼：</b></p>
+<ul><li>
+		將文字設定為<b>粗體</b>的正確格式：  &lt;b&gt;要設定為粗體的文字&lt;/b&gt;</li><li>
+		將文字設定為<i>斜體<span style="font-style: normal;">的正確格式</span></i>：&lt;i&gt;要設定為斜體的文字&lt;/i&gt;</li><li>
+		將文字加上<u>底線</u>的正確格式：&lt;u&gt;要加上底線的文字&lt;/u&gt;</li></ul>
+<p>
+	<img alt="arrow" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <b>錯誤編碼：</b></p>
+<ul><li>
+		<b>錯誤格式：</b> &lt;b&gt;文字將會錯誤</li><li>
+		<b>錯誤格式：</b> &lt;b&gt;文字將會錯誤&lt;b/&gt;</li><li>
+		<b>錯誤格式：</b> &lt;b&gt;文字將會錯誤&lt;b</li></ul>
+<p>
+	<img alt="arrow" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <span style="font-weight: bold;">編碼限制：</span></p>
+<p>
+	您無法使用進階編碼功能，例如建立您自己的按鈕。</p>
+<ul><li>
+		&lt;form&gt; 元素將無法作用，因為這將影響我們的 &lt;form&gt; 元素。</li><li>
+		無法使用新增 JavaScript。</li></ul>
+<p>
+	 </p>
+<h3>
+	其他選項：</h3>
+<p>
+	想要使用 HTML 功能建立您自訂的邀請訊息嗎？透過我們的電子郵件伺服器傳送訊息時，請檢視下列主題：</p>
+<p>
+	<img alt="arrow" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPsAAI&amp;oid=00D30000001HuKJ"></img> <a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-add-a-logo-image-into-the-body-of-the-Email-Invitation" target="_self">在電子郵件邀請函收集器中使用 HTML 功能</a></p>
+<p>
+	<b>注意：</b>我們僅提供有限的支援。有關 HTML 的示範教學，請參閱以下網站：<a href="http://www.w3schools.com/html/" target="_new">http://www.w3schools.com/html/</a></p>
+<p>
+	 </p>
+<h3>
+	<img alt="lightbulb" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPSAAY&amp;oid=00D30000001HuKJ"></img> SurveyMonkey 中常用的標簽：</h3>
+<p>
+	<b>1. 換行：</b></p>
+<p>
+	插入換行 HTML 程式碼可將問題格式、矩陣列、頁面說明等內容中的長句分行。</p>
+<p>
+	只要將程式碼放在您想要句子中斷或換行的文字之間即可。</p>
+<p>
+	換行程式碼為：<b>&lt;br&gt;</b></p>
+<p>
+	<b>範例：</b></p>
+<p>
+	如果您想要句子在這裡中斷&lt;br&gt;只要把程式碼放在適當位置即可。(程式碼位於「這裡分行」和「只要」之間。)</p>
+<p>
+	 </p>
+<p>
+	<b>2. 段落：</b></p>
+<p>
+	可以使用段落程式碼，以文字區塊來建立新的段落。</p>
+<p>
+	將段落程式碼放在文字前面以建立新的段落，然後將結束標記放在段落結束的位置。</p>
+<p>
+	段落程式碼為：<b>&lt;p&gt;</b> 和 <b>&lt;/p&gt;</b></p>
+<p>
+	<b>範例：</b></p>
+<p>
+	&lt;p&gt;如果您想要此文字區塊自成一個段落，可以在文字前後加上此程式碼。&lt;/p&gt;</p>
+<p>
+	 </p>
+<p>
+	<b>3. 超連結：</b></p>
+<p>
+	若要在設計中或收集器的「感謝」訊息中新增超連結，請使用以下程式碼：</p>
+<p>
+	受訪者可通過 [點擊此處] 以開啟新的視窗載入 「http://www.mysite.com」：</p>
+<p>
+	A.) &lt;a target=&quot;_blank&quot; href=&quot;http://www.mysite.com&quot;&gt;按一下這裡&lt;/a&gt;</p>
+<p>
+	或使用：</p>
+<p>
+	B.) &lt;a target=&quot;window1&quot; href=&quot;http://www.mysite.com&quot;&gt;按一下這裡&lt;/a&gt;</p>
+<p>
+	 </p>
+<p>
+	<b>4. 連結電子郵件地址的超連結：</b></p>
+<p>
+	若要在調查問卷中包含電子郵件地址以供受訪者與您聯絡或詢問問題，請在 [敘述性文字] 問題或其他問題類型的 [問題文字] 方塊中使用下列超連結：</p>
+<p>
+	&lt;a href=&quot;mailto:your@emailaddress.com&quot;&gt;寄電子郵件給我&lt;/a&gt;</p>
+<p>
+	 </p>
+<p>
+	<b>5. 項目符號：</b></p>
+<p>
+	若要建立清單：</p>
+<p>
+	&lt;ul&gt;<br>	&lt;li&gt;蛋&lt;/li&gt;<br>	&lt;li&gt;蘋果&lt;/li&gt;<br>	&lt;li&gt;牛奶&lt;/li&gt;<br>	&lt;/ul&gt;</p>
+<p>
+	這將顯示為：</p>
+<br><ul><li>
+		蛋</li><li>
+		蘋果</li><li>
+		牛奶</li></ul>
+<p>
+	<br>	 </p>
+                </div>
+                <div class="betaTabBody" id="betaBody" style="display:block"><p>
+	您可以使用文字格式設定工具列，以變更調查問卷文字的外觀、新增媒體或其他資訊的連結。請注意，[調查問卷標題]、[頁面標題] 及 [頁面說明] 欄位的文字格式設定選項有所限制。<br>	<br>	下列選項可用於大部分的文字欄位：</p>
+<ul><li>
+		粗體</li><li>
+		底線</li><li>
+		斜體</li><li>
+		靠左對齊、置中對齊、靠右對齊或左右對齊</li><li>
+		字型色彩</li><li>
+		字型體系</li><li>
+		字型大小</li><li>
+		項目符號列表</li><li>
+		編號列表</li><li>
+		<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-add-a-hyperlink-to-additional-information" target="_blank">新增超連結</a></li><li>
+		<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Can-I-add-images-or-pictures-into-the-survey" target="_blank">透過 URL 新增影像</a></li><li>
+		<a href="http://help.surveymonkey.com/articles/zh_TW/kb/How-do-I-add-a-video-or-sound-clip-to-my-survey" target="_blank">新增影片</a></li></ul>
+<p>
+	編輯文字時，按一下格式設定工具列的 <span class="smfont teal-font">.</span>，以存取完整選項。</p>
+<div class="zip" id="zip_1">
+	HTML 格式設定</div>
+<div class="zap" id="zap_1">
+	<p>
+		您無法在新型 Design 中新增自己的 HTML 格式設定。如果您從經典 Design 切換到新型 Design，則任何現有的 HTML 格式設定都會繼續正確顯示，而且您的即時調查問卷也不會受到影響。但是，您用於編輯含有現有 HTML 之問題的選項會有所限制。</p>
+	<p>
+		瞭解詳細資訊：<a href="http://help.surveymonkey.com/articles/zh_TW/kb/Supported-HTML" target="_blank">支援的 HTML</a></p>
+</div>
+<div class="kbtip">
+	<strong>變更預設樣式。</strong> 若要自訂整個調查問卷中的文字格式設定，<a href="http://help.surveymonkey.com/articles/zh_TW/kb/How-can-I-edit-the-survey-theme" target="_blank">請建立自訂背景主題</a>。</div>
+                </div>
+              </div>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-use-HTML-in-the-survey-or-Email-Invitation-message" class="relatedLink">&#22312;&#38651;&#23376;&#37109;&#20214;&#36992;&#35531;&#35338;&#24687;&#20013;&#20351;&#29992; HTML</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Can-I-add-a-hyperlink-to-additional-information" class="relatedLink">&#26032;&#22686;&#36229;&#36899;&#32080;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-can-I-edit-the-survey-theme" class="relatedLink">&#32232;&#36655;&#35519;&#26597;&#21839;&#21367;&#32972;&#26223;&#20027;&#38988;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Available-question-types-and-formatting-options" class="relatedLink">&#21487;&#29992;&#21839;&#38988;&#39006;&#22411;&#33287;&#26684;&#24335;&#36984;&#38917;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/How-do-I-bold-italicize-underline-and-use-bullet-points-in-the-survey';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, '設定文字格式', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

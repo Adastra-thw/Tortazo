@@ -37,7 +37,7 @@ import cookielib
 
 class HiddenSiteSpider(CrawlSpider):
 
-    def __init__(self, localTunnel, onionSite, extractorAllowRules=[r'^/*'], extractorDenyRules=['']):
+    def __init__(self, localTunnel, onionSite, extractorAllowRules=[r'^/*'], extractorDenyRules=[], **kw):
         self.name="TortazoSpider"
         self.onionSite = onionSite
         self.localTunnel = localTunnel
@@ -45,7 +45,7 @@ class HiddenSiteSpider(CrawlSpider):
         self.visitedLinks=[]
         self.deepLinks = None
         #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
-        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), follow=True, callback=self.parse),]
+        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules, deny=extractorDenyRules), callback=self.parse),]
         self.crawlRulesLinks = "//a/@href"
         self.crawlRulesImages = '//img/@src'
         self.dictFile = None

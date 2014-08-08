@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The Tyrant From Below (Andre Lorulot) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/andre-lorulot-the-tyrant-from-below?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=andre-lorulot-the-tyrant-from-below">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The Tyrant From Below
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/andre-lorulot">Andre Lorulot</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1939
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/individualist">individualist</a>
+        <a href="/topics/mass-society">mass society</a>
+        <a href="/topics/voluntary-servitude">voluntary servitude</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    Source: Les Hommes me Dégoutent. [Herblay], L’Idée Libre, 1939; <br /> Translated: for marxists.org by Mitchell Abidor.
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    <a href="http://www.marxists.org/reference/archive/lorulot/1939/tyrant-below.htm">www.marxists.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="andre-lorulot-the-tyrant-from-below.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="andre-lorulot-the-tyrant-from-below.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="andre-lorulot-the-tyrant-from-below.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="andre-lorulot-the-tyrant-from-below.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="andre-lorulot-the-tyrant-from-below?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="andre-lorulot-the-tyrant-from-below.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="andre-lorulot-the-tyrant-from-below.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Andre Lorulot</h2>
+	
+	<h1 id="textttitleh">The Tyrant From Below</h1>
+	
+      </div>
+      
+      
+      <div id="thework">
+	
+<blockquote>
+<p>No, liberty is not for us. We <br /> 
+are too ignorant, too vain, too presumptuous, <br /> 
+too cowardly, too vile, too corrupted
+</p><p>— Marat
+</p></blockquote>
+<p>I have to say it and I will say it.
+</p><p>In taking up the pen I committed myself, all alone, to banishing all forms of partisanship and to refusing to retreat before any truths. Hypocrisy is repugnant to me, if it’s from the Right or the Left. This need for honesty has made me many enemies, even — and how ironic- among “friends” and “brothers.”
+</p><p>Beat up on the capitalist and the fascist: that’s fine. Bravo! You’ll be encouraged, at least verbally (when you have to pay with your own money it’s already more difficult — you end up paying with your skin).
+</p><p>But, loyal man, don’t allow yourself to criticize what is going on in your own house. Reveal the flaws of your neighbor, but close your eyes to the turpitudes of your party.
+</p><p>I never knew how to do this. This is probably why I never wanted to join any party, any church, any sect. My independence is my most precious good.
+</p><p>This is not a comfortable position. You draw much animosity to yourself. The troublemaker. He who refuses to be the accomplice of the ambitious, the traitors, the profiteers. For they exist. And everywhere, everywhere.
+</p><p>I passionately love humanity, and have dedicated my best efforts to the fight for the oppressed. All tyrants disgust me — and all those who put up with them, adulate them, support them. After having brought them down will I make myself a tyrant in their place? I would be disgusted with myself.
+</p><p>People, beware of demagogues. They are your worst enemies. They caress you only so they can better shear you. Deep down they detest and mock you, but your shoulders are necessary to them for carrying their kettledrum (which won’t beat for you). They hate you, and if they could squeeze you for once and for all in the vise, they’d gladly do it. And later maybe they will. For the moment they need your votes, your suffrage, and your dues. So they’ll call you great, noble and beautiful, and that you have both all rights and all virtues.
+</p><p>If you believe them you are an imbecile, and you are lost.
+</p><div class="center"><p>* * *  
+</p></div><p>Telling a worker the truth, the whole truth, even when it is painful, is perhaps the best way of serving his cause and working for his true liberation.
+</p><p>They disgust me, those who tell the people they’ll arrive at complete and universal happiness without having to make an effort or perfecting themselves. They lie — and willfully. It is, incidentally, in their interest — that of the masters, or the aspiring masters — to prevent the masses from educating themselves. Is it not by correcting themselves that they will be capable of progressing and taking in hand the guiding of their own destiny? That day, having become useless, chiefs and leaders will have nothing to do but disappear.
+</p><p>They disgust me, those who refuse the worker the right to the ideal and speak exclusively of his belly.
+</p><p>For them, everything is subordinated to beefsteak.
+</p><p>An ever bigger, ever bloodier, ever easier-to-conquer-beefsteak. The ideal of a wild beast, or a starving dog.
+</p><p>To be sure, one must live. I concede you this. But adding: we must live in order to develop in ourselves the highest and noblest qualities of man: Dignity! Consciousness! Love! Liberty!
+</p><p>What good would it be for me to gorge myself like a bulldog or to digest like a canon if I have to renounce the most elevated aspirations and the purest, most disinterested joys?
+</p><p>Don’t listen to those who want to subordinate everything to the stomach: they insult you. Become capable of fighting for something other than tripe or the wallet. Without detesting them for all that (let’s not go from one extreme to the other) let us mistrust flatterers, professional politicians, phrasemakers. Let us go towards the truth, whatever it might be, with all our heart, without putting on blinders, without stifling anyone’s voice.
+</p><p>I have no particular hatred for the rich. If it happens that I complain of their stupidity or mock their pretentions, I am not jealous of their money.
+</p><p>Must I add that it is not enough to be poor to merit my sympathy?
+</p><p>Money makes stupid or crooked those who have it. But those who don’t have it are generally as cretinous and villainous as the rich. The desire to enrich themselves suffices to stifle in them all generous feelings and any aspiration to justice — and cleanliness.
+</p><p>And those 100% revolutionaries, those organized proletarians, those conscious union members, those pioneers of the future who get as drunk as skunks? Who don’t have ten francs to buy a book but who spend twice that at the bar. Who stumble around the streets and disgorge their wine while climbing the stairs? These are the pioneers of the future, the precursors of the Harmonious City, with their dirty feet, their bestial ignorance, their animalistic pretentions, their appetite for alcohol and bordellos?
+</p><div class="center"><p>* * *  
+</p></div><p>Thanks to a certain minister named Pomaret, since last winter workers who have been employed for 60 consecutive years in the same establishment receive a medal of honor for labor.
+</p><p>You read correctly: they will give a medal to workers who have remained sixty years with the same boss.
+</p><p>It’s hard to more openly make fun of these poor proles.
+</p><p>But they accept the medal (which won’t even be of chocolate). They will be as proud as peacocks and will strive to hold straight their carcasses that have been emptied, worn out, crushed by so much suffering, so much prolonged effort, so much pitiless exploitation.
+</p><p>They’ll go be photographed with their little bauble. As proud, as foolish as those fathers of fourteen whose unintelligent mugs “La Croix” (edited by bachelors) regularly publishes.
+</p><p>The lowest of slaves is he who is happy to be one.
+</p><p>So admit it: in many ways the slave is as repugnant as his master.
+</p><p>If he trembles in a cowardly way before his superior, he avenges himself in a no less cowardly way on his inferior.
+</p><p>A prole who stammers with servility before his factory foreman makes up for it in the evening by beating his wife and kids. Then he stands up straight. And he shouts. Then he’s a real male!
+</p><p>At the factory itself, if he has any apprentices under him, he uses them as whipping boys; he tyrannizes over them wears them out through ill treatment.
+</p><p>Just like the sergeant who works over the recruit at the barracks because the captain yelled at him.
+</p><p>Humanity doesn’t shine too brightly?
+</p><div class="center"><p>* * *  
+</p></div><p>Once we said: the people. Today we say: the masses.
+</p><p>Once we said: your delegates. Today there is the base and the summit.
+</p><p>The delegates, secretaries, etc., we call them the <em>responsables</em>. Does that mean that the voters are all irresponsible? That is, unaware?
+</p><p>What contempt for the individual. Conformism is ever more triumphant. The human personality is neglected. What am I saying: it is disappearing. If it existed it would show itself, it would react, it would complain. It is only capable of bleating out applause and weakly following chiefs who lead it to the slaughterhouse. In the immense leveling of the social herds MAN becomes increasingly rare. And we make life tougher and tougher for him.
+</p><p>With your millions of members, dues-payers, you weren’t capable of saving the Spanish Republic. CGT, Communist and Socialist parties, what did your try that was effective? Serious? All you know are materialistic demands, cash, but the Ideal, the defense of a great disinterested cause? How could your members know about this, since their bad shepherds never spoke to them about it?
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

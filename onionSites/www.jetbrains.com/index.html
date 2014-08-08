@@ -1,0 +1,759 @@
+    <!DOCTYPE html>
+<html>
+<head>
+
+    <title>JetBrains :: World's Leading Vendor of Professional Development Tools</title>
+    <meta charset="utf-8">
+
+    <meta name="robots" content="all"/>
+    <meta name="author" content="JetBrains, Inc., http://www.jetbrains.com"/>
+
+        
+<link rel="canonical" href="http://www.jetbrains.com/" />
+
+
+                  <meta class="local" name="description" content="JetBrains, creator of the best Java IDE - IntelliJ IDEA - is a technology-leading software development firm specializing in the creation of intelligent development tools."/>     
+        <link rel="stylesheet" type="text/css" media="screen" href="styleset1.css?ver=070820141"/>
+
+
+<link rel="stylesheet" type="text/css" media="handheld" href="/styles2/mobile.css"/>
+<link rel="alternate stylesheet" type="text/css" media="screen"
+      href="/styles2/alternate_styles/alternate_style.css" title="textmode"/>
+
+<noscript>
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles2/noscript.css"/>
+</noscript>
+        <script type="text/javascript" src="/js2/css_browser_selector.js"></script>
+<script type="text/javascript" src="/js2/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js2/jquery/highlight.js"></script>
+<script type="text/javascript" src="/js2/html5.js"></script>
+<script type="text/javascript" src="/js2/mkto_function.js"></script>    <script type="text/javascript" src="/js2/common.js"></script>
+                     <script type="text/javascript" src="js2/jquery/ui.core.js"></script>              <script type="text/javascript" src="js2/jquery/ui.widget.js"></script>              <script type="text/javascript" src="js2/jquery/ui.rcarousel.min.js"></script>              <script type="text/javascript">
+        var ui = { set: {} },
+            isMobile = typeof browser_selector != 'undefined' && browser_selector.indexOf('mobile') != -1;
+
+        $(document).ready(function() {
+            function generatePages(carousel) {
+                var $carousel = $(carousel.target),
+                    _total = $carousel.rcarousel( "getTotalPages" ),
+                    $link;
+
+                for ( var i = 0; i < _total; i++ ) {
+                    $link = $( "<a href='#'></a>" );
+                    $link
+                        .bind("click", {page: i},
+                            function( event ) {
+                                $carousel.rcarousel( "goToPage", event.data.page );
+                                event.preventDefault();
+                            })
+                        .addClass( "bullet off" )
+                        .appendTo( "#pages" );
+                }
+
+                // mark first page as active
+                $( "a:eq(0)", "#pages" )
+                    .removeClass( "off" )
+                    .addClass( "on" );
+
+                if (isMobile) initMobileEvents($carousel);
+            }
+
+            function pageLoaded( event, data ) {
+                $( "a.on", "#pages" )
+                    .removeClass( "on" );
+                $( "a", "#pages" )
+                    .eq( data.page )
+                    .addClass( "on" );
+            }
+
+            function initMobileEvents($carousel) {
+                var isIOs = typeof browser_selector != 'undefined' && browser_selector.indexOf('ios') != -1;
+
+                $('#ui-carousel-next, #ui-carousel-prev').hide();
+
+                $('#banners').bind('touchstart', function(e) {
+                    if (e.originalEvent.touches && e.originalEvent.touches.length < 2) {
+                        if (isIOs)
+                            e.stopPropagation();
+                        else
+                            e.preventDefault();
+
+                        var touchStart = {
+                                'pageX' : e.originalEvent.touches[0].pageX,
+                                'pageY' : e.originalEvent.touches[0].pageY
+                            },
+                            touchLast = null;
+
+                        $(document).bind('touchmove', function(e) {
+                            touchLast = {
+                                'pageX' : e.originalEvent.touches[0].pageX,
+                                'pageY' : e.originalEvent.touches[0].pageY
+                            };
+                        });
+                        $(document).bind('touchend', function(e) {
+                            $(document).unbind('touchend touchmove');
+                            checkSwipe();
+                        });
+
+                        function checkSwipe() {
+                            var swipeRight    = touchLast == null ? false : touchLast.pageX - touchStart.pageX > 50,
+                                swipeLeft     = touchLast == null ? false : touchStart.pageX - touchLast.pageX > 50,
+                                swipeVertical = touchLast != null && touchStart.pageY !== touchLast.pageY && (touchStart.pageY - touchLast.pageY < -30 || touchStart.pageY - touchLast.pageY > 30);
+
+                            if (swipeRight)
+                                $carousel.rcarousel( "prev" );
+                            else if (swipeLeft)
+                                $carousel.rcarousel( "next" );
+                            else if (!swipeVertical)
+                                window.location.href = $('.slide a', $carousel).attr('href');
+                        }
+                    }
+                });
+            }
+
+            $("#carousel").rcarousel({
+                visible: 1,
+                step: 1,
+                speed: 500,
+                interval: 20,
+                auto: {enabled: true},
+                width: 1000,
+                height: isMobile ? 200 : 573,
+                start: generatePages,
+                pageLoaded: pageLoaded
+            });
+
+            $(".products-menu__item a").click(function(e){
+                var $this = $(this),
+                    $menuItems = $(".products-menu__item"),
+                    $menuItem = $this.parent(),
+                    $target = $($this.attr("href")),
+                    activeClass = "products-menu__item_active";
+
+                $('.products-block').hide();
+                $target.show();
+
+                $menuItems.removeClass(activeClass);
+                $menuItem.addClass(activeClass);
+
+                return false;
+            });
+        });
+    </script>     
+        
+        
+        <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+</head>
+
+<body id="index">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P98"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+
+<header>
+    <div class="container">
+                    <a class="jb_logo" >JetBrains</a>
+                
+        <ul id="jb_nav">
+            <li class="products"><a href="/products.html" >Products</a></li>
+            <li class="support"><a href="/support/" >Support</a></li>
+            <li class="devnet"><a href="/devnet/" >Community</a></li>
+            <li class="company"><a href="/company/" >Company</a></li>
+            <li class="search">
+                    <form method="get"
+                          action="/search/"
+                          name="formSearch"
+                          class="global-search-form"
+                          id="global-search-form">
+                    <fieldset>
+                        <label><input type="text"
+                                      class="words global-search-form-field search-field"
+                                      id="search-field"
+                                      name="q"
+                                                                            value=""
+                                    >
+                        </label>
+                        <label><input type="submit" class="send global-search-form-submit search-submit"></label>
+                    </fieldset>
+                </form>
+            </li>
+        </ul>
+    </div>
+</header>
+<div id="menu_products">
+    <div class="container">
+    <span class="close" title="Close">&times;</span>
+    <div class="leftfloated block25">
+        <h4>IDEs</h4>
+        <ul>
+            <li class="idea"><a href="/idea" ><i class="icon product-logo logo-idea-grey size1"></i>IntelliJ IDEA</a></li>
+            <li class="ps"><a href="/phpstorm" ><i class="icon product-logo logo-phpstorm-grey size1"></i>PhpStorm</a></li>
+            <li class="pc"><a href="/pycharm" ><i class="icon product-logo logo-pycharm-grey size1"></i>PyCharm</a></li>
+            <li class="ruby"><a href="/ruby" ><i class="icon product-logo logo-rubymine-grey size1"></i>RubyMine</a></li>
+            <li class="ws"><a href="/webstorm" ><i class="icon product-logo logo-webstorm-grey size1"></i>WebStorm</a></li>
+            <li class="objc"><a href="/objc" ><i class="icon product-logo logo-appcode-grey size1"></i>AppCode</a></li>
+        </ul>
+    </div>
+    <div class="leftfloated block20">
+        <h4>.NET</h4>
+        <ul>
+            <li class="rs"><a href="/resharper" ><i class="icon product-logo logo-resharper-grey size1"></i>ReSharper</a></li>
+            <li class="dt"><a href="/profiler" ><i class="icon product-logo logo-dottrace-grey size1"></i>dotTrace</a></li>
+            <li class="dm"><a href="/dotmemory" ><i class="icon product-logo logo-dotmemory-grey size1"></i>dotMemory</a></li>
+            <li class="dc"><a href="/dotcover" ><i class="icon product-logo logo-dotcover-grey size1"></i>dotCover</a></li>
+            <li class="dp"><a href="/dotpeek" ><i class="icon product-logo logo-dotpeek-grey size1"></i>dotPeek</a></li>
+        </ul>
+    </div>
+    <div class="leftfloated block30">
+        <h4>Teamware</h4>
+        <ul>
+            <li class="tc"><a href="/teamcity" ><i class="icon product-logo logo-teamcity-grey size1"></i>TeamCity</a></li>
+            <li class="yt"><a href="/youtrack" ><i class="icon product-logo logo-youtrack-grey size1"></i>YouTrack</a></li>
+        </ul>
+        <h4>Mobile development</h4>
+        <ul>
+            <li class="objc"><a href="/objc" ><i class="icon product-logo logo-appcode-grey size1"></i>AppCode</a></li>
+            <li class="idea"><a href="/idea#community_edition" ><i class="icon product-logo logo-idea-grey size1"></i>IntelliJ IDEA Community Edition</a></li>
+        </ul>
+    </div>
+    <div class="rightfloated block20">
+        <h4>Languages</h4>
+        <ul class="research">
+            <li class="mps"><a href="/mps" ><i class="icon product-logo logo-mps-grey size1"></i>MPS</a></li>
+            <li class="kotlin"><a href="/kotlin" ><i class="icon product-logo logo-kotlin-grey size1"></i>Kotlin</a></li>
+            
+        </ul>
+        <p><a href="/products.html" >View all products &raquo;</a></p>
+    </div>
+    <br class="clr"/>
+</div></div>
+<div id="banners">
+    
+        <div class="container">
+            <div class="carousel">
+            <div id="carousel">
+                <div class="slide" id="slide01">
+                    <a href="products.html" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Banner :: Products']);">
+                        <span class="carousel-image _index"></span>
+                    </a>
+                </div>
+                <div class="slide" id="slide02">
+                    <a href="objc/whatsnew/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Banner :: AppCode']);">
+                        <span class="carousel-image _appcode3"></span>
+                    </a>
+                </div>
+                <div class="slide" id="slide03">
+                    <a href="dotmemory/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Banner :: dotMemory']);">
+                        <span class="carousel-image _dotmemory4"></span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" id="ui-carousel-next"><span>Next</span></a>
+            <a href="#" id="ui-carousel-prev"><span>Prev</span></a>
+            <div id="pages"></div>
+        </div>
+        </div>
+    
+</div>
+<div class="products">
+    
+        <div class="container">
+            <ul class="products-menu">
+                <li class="products-menu__item products-menu__item_active"><a href="#products-featured">Featured</a></li>
+                <li class="products-menu__item"><a href="#products-all">All Products</a></li>
+            </ul>
+            <div class="clr"></div>
+            <div class="products-featured products-block" id="products-featured">
+                <div class="leftfloated products_col">
+                    <h3 class="product-name"><a class="black" href="idea/">
+                        <i class="icon product-logo logo-idea size6"></i>IntelliJ IDEA </a>
+                    </h3>
+                    <p>The most intelligent IDE for Java and other technologies with an exceptional out-of-the-box feature set</p>
+                    <a class="button" href="idea/">more &rsaquo;</a>
+                    <a class="button" href="idea/whatsnew/">what's new in 13 &rsaquo;</a>
+
+                    <h3 class="product-name"><a class="black" href="teamcity/">
+                        <i class="icon product-logo logo-teamcity size6"></i>TeamCity</a>
+                    </h3>
+                    <p>User-friendly continuous integration server and<br/>distributed build management solution</p>
+                    <a class="button" href="teamcity/">more &rsaquo;</a>
+                </div>
+                <div class="leftfloated products_col">
+                    <h3 class="product-name"><a class="black" href="resharper/">
+                        <i class="icon product-logo logo-resharper size6"></i>ReSharper</a>
+                    </h3>
+                    <p>Productivity tool for .NET developers that makes<br/>Microsoft Visual Studio a much better IDE</p>
+                    <a class="button" href="resharper/">more &rsaquo;</a>
+                    <a class="button" href="resharper/whatsnew/">what's new in 8 &rsaquo;</a>
+
+                    <h3 class="product-name"><a class="black" href="ruby/">
+                        <i class="icon product-logo logo-rubymine size6"></i>RubyMine</a>
+                    </h3>
+                    <p>Lightweight and smart IDE providing the most essential tools for coding with Ruby and Rails</p>
+                    <a class="button" href="ruby/">more &rsaquo;</a>
+                </div>
+                <div class="banner rightfloated">
+                    <h4><a href="pycharm/whatsnew">PyCharm 3.4 <small>The intelligent Python IDE</small></a></h4>
+                    <ul class="ndashlist">
+                        <li>Refined remote development support</li>
+                        <li>Django 1.7 support</li>
+                        <li>Multiple carets and selections</li>
+                        <li>Improved debugger</li>
+                        <li>AngularJS support</li>
+                        <li>Enhanced Vim emulation</li>
+                    </ul>
+                    <p><a href="pycharm/whatsnew">Learn more &raquo;</a></p>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="products-all products-block" id="products-all">
+                <div class="leftfloated block25">
+                    <h4>IDEs</h4>
+                    <ul>
+                        <li>
+                            <a href="/idea" class="product-link"  onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: IntelliJ IDEA']);">
+                                <i class="icon product-logo logo-idea size3"></i>
+                                <strong class="product-link__name">IntelliJ IDEA</strong>
+                                The most intellijent Java IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/phpstorm" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: PhpStorm']);">
+                                <i class="icon product-logo logo-phpstorm size3"></i>
+                                <strong class="product-link__name">PhpStorm</strong>
+                                Lightweight PHP IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pycharm" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: PyCharm']);">
+                                <i class="icon product-logo logo-pycharm size3"></i>
+                                <strong class="product-link__name">PyCharm</strong>
+                                Python and Django IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ruby" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: RubyMine']);">
+                                <i class="icon product-logo logo-rubymine size3"></i>
+                                <strong class="product-link__name">RubyMine</strong>
+                                Ruby and Rails IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webstorm" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: WebStorm']);">
+                                <i class="icon product-logo logo-webstorm size3"></i>
+                                <strong class="product-link__name">WebStorm</strong>
+                                The Smartest JavaScript IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/objc" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: AppCode']);">
+                                <i class="icon product-logo logo-appcode size3"></i>
+                                <strong class="product-link__name">AppCode</strong>
+                                Objective-C IDE
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="leftfloated block25">
+                    <h4>.NET</h4>
+                    <ul>
+                        <li>
+                            <a href="/resharper" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: ReSharper']);">
+                                <i class="icon product-logo logo-resharper size3"></i>
+                                <strong class="product-link__name">ReSharper</strong>
+                                Productivity Tool for .NET
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/profiler" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotTrace']);">
+                                <i class="icon product-logo logo-dottrace size3"></i>
+                                <strong class="product-link__name">dotTrace</strong>
+                                Profiling Tool for .NET
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/dotmemory" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotMemory']);">
+                                <i class="icon product-logo logo-dotmemory size3"></i>
+                                <strong class="product-link__name">dotMemory</strong>
+                                .NET Memory Profiler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/dotcover" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotCover']);">
+                                <i class="icon product-logo logo-dotcover size3"></i>
+                                <strong class="product-link__name">dotCover</strong>
+                                .NET Code Coverage Tool
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/dotpeek" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: dotPeek']);">
+                                <i class="icon product-logo logo-dotpeek size3"></i>
+                                <strong class="product-link__name">dotPeek</strong>
+                                Free .NET Decompiler
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="leftfloated block25">
+                    <h4>Teamware</h4>
+                    <ul>
+                        <li>
+                            <a href="/teamcity" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: TeamCity']);">
+                                <i class="icon product-logo logo-teamcity size3"></i>
+                                <strong class="product-link__name">TeamCity</strong>
+                                Continuous Integration Server
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/youtrack" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: YouTrack']);">
+                                <i class="icon product-logo logo-youtrack size3"></i>
+                                <strong class="product-link__name">YouTrack</strong>
+                                Agile Issue&Project Tracker
+                            </a>
+                        </li>
+                    </ul>
+                    <h4>Mobile development</h4>
+                    <ul>
+                        <li>
+                            <a href="/objc" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: AppCode']);">
+                                <i class="icon product-logo logo-appcode size3"></i>
+                                <strong class="product-link__name">AppCode</strong>
+                                Objective-C IDE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/idea#community_edition" class="product-link product-link_inline" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: IntelliJ IDEA Community Edition']);">
+                                <i class="icon product-logo logo-idea size3"></i>
+                                <strong class="product-link__name">
+                                    IntelliJ IDEA
+                                    <em>Community Edition</em>
+                                </strong>
+                                Free Java IDE with Android Module
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="leftfloated block25">
+                    <h4>Languages</h4>
+                    <ul class="research">
+                        <li>
+                            <a href="/mps" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: MPS']);">
+                                <i class="icon product-logo logo-mps size3"></i>
+                                <strong class="product-link__name">MPS</strong>
+                                Meta Programming System
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kotlin" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Site Header :: Kotlin']);">
+                                <i class="icon product-logo logo-kotlin size3"></i>
+                                <strong class="product-link__name">Kotlin</strong>
+                                New language for Kool Koding
+                            </a>
+                        </li>
+                        <!--<li>
+                            <a href="http://eap.jetbrains.com" class="product-link" onclick="_gaq.push(['_trackEvent', 'Follow links', 'External', 'Site Header :: EAPs']);">
+                                <i class="icon product-logo logo-eap size3"></i>
+                                <strong class="product-link__name"> EAPs</strong>
+                                Early Access to Our Latest Tools
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    
+</div>
+
+<div id="content">
+    
+    <div id="news">
+        <div class="container">
+            <ul>
+                <li class="block40">
+                    <strong>ReSharper 8.2</strong> expands TypeScript support and brings a set of important fixes.
+                    <a href="resharper/whatsnew" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'News :: ReSharper']);">Learn more</a>
+                </li>
+                <li class="block40">
+                    <strong>IntelliJ IDEA 13.1</strong> brings you full Java 8 support, the editor enhancements, and many more!
+                    <a href="idea/whatsnew" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'News :: IDEA']);">Try now!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="lab">
+        <div class="container">
+            <h2 class="languages">Smart IDEs and Code Editors</h2>
+            <div class="leftfloated block30">
+                <p>For over 10 years now, our tools have been helping software developers be more efficient, no matter what technologies they use!</p>
+            </div>
+            <div class="rightfloated block65">
+                <ul class="technologies">
+                    <li class="net"><a href="products.html#dotnet"><span class="icon"></span>.NET</a></li>
+                    <li class="java"><a href="products.html#java"><span class="icon"></span>Java</a></li>
+                    <li class="ruby"><a href="products.html#ruby"><span class="icon"></span>Ruby on Rails</a></li>
+                    <li class="php"><a href="products.html#php"><span class="icon"></span>PHP</a></li>
+                    <li class="js"><a href="products.html#javascript"><span class="icon"></span>JavaScript</a></li>
+                    <li class="django"><a href="products.html#python"><span class="icon"></span>Python/Django</a></li>
+                    <li class="android"><a href="products.html#android"><span class="icon"></span>Android</a></li>
+                    <li class="os"><a href="products.html#ios"><span class="icon"></span>iOS</a></li>
+                    <li class="more"><a href="products.html"><span class="icon"></span>more &raquo;</a></li>
+                </ul>
+            </div>
+            <br class="clr"/>
+            <h2 class="you">For You and Your Team</h2>
+            <ul class="your">
+                <li><a href="products.html#IDE_and_editors">Development Environments and code editors</a></li>
+                <li><a href="products.html#CI_and_build">Continuous integration &amp; build management</a></li>
+                <li><a href="products.html#agile">Agile project management and issue tracking</a></li>
+            </ul>
+            <br class="clr"/>
+        </div>
+    </div>
+    <div id="customers">
+        <div class="container">
+            <h2 class="customer">Our Achievements</h2>
+            <div class="leftfloated block30">
+                <p>At JetBrains, we have a passion for making people more productive through smart software.</p>
+            </div>
+            <div class="rightfloated block65">
+                <div class="quote">
+                    <p>
+                        &nbsp;ReSharper is an awesome tool. If you're using it you probably agree and if you aren't you should be.<br>The productivity gains are incredible.
+                        <span class="bubbles"></span>
+                    </p>
+                    <div class="gold autor"><strong>Jaco Pretorius</strong>, ThoughtWorks</div>
+                </div>
+            </div>
+            <br class="clr"/>
+            <div class="leftfloated block25">
+            <div class="block90">
+                <div class="awards">
+                    <h3>awards</h3>
+                    <div class="ribbon right"><span></span></div>
+                    <div class="ribbon left"><span></span></div>
+                    <ul>
+                        <li><a href="company/press/awards.html" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Awards']);"><img src="img/logos/spriteAwards.png" alt="Awards" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="rightfloated block65">
+                <ul class="customers-all">
+                    <li><a href="company/customers/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Customers']);">Customers</a></li>
+                    <li><a href="company/customers/" onclick="_gaq.push(['_trackEvent', 'Follow links', 'Internal', 'Customers']);">Customers</a></li>
+                </ul>
+            </div>
+            <br class="clr"/><br/>
+        </div>
+    </div>
+    
+</div>
+
+<div class="footer-main-emulator"></div>
+<footer class="footer-main">
+     <div class="container footer-long">
+        <div class="leftfloated block30 products">
+        <div class="block75">
+            <h3>all products</h3>
+            <ul>
+                <li><a href="/idea/" >IntelliJ IDEA</a></li>
+                <li><a href="/resharper/" >ReSharper</a></li>
+                <li><a href="/webstorm/" >WebStorm</a></li>
+                <li><a href="/phpstorm/" >PhpStorm</a></li>
+                <li><a href="/pycharm/" >PyCharm</a></li>
+                <li><a href="/ruby/" >RubyMine</a></li>
+                <li><a href="/objc/" >AppCode</a></li>
+                <li><a href="/youtrack/" >YouTrack</a></li>
+                <li><a href="/teamcity/" >TeamCity</a></li>
+                <li><a href="/profiler/" >dotTrace</a></li>
+                <li><a href="/dotmemory/" >dotMemory</a></li>
+                <li><a href="/dotcover/" >dotCover</a></li>
+                <li><a href="/dotpeek/" >dotPeek</a></li>
+                <li><a href="/mps/" >MPS</a></li>
+                <li><a href="/kotlin/" >Kotlin</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="leftfloated block20">
+            <h3>resources</h3>
+            <ul>
+                <li><a href="/devnet/" >Developer Community</a></li>
+                <li><a href="/support/" >Support</a></li>
+                <li><a href="http://tv.jetbrains.net/" >JetBrains TV</a></li>
+                <li><a href="http://blogs.jetbrains.com/" >Blogs</a></li>
+                <li><a href="/devnet/webinars/" >Upcoming Webinars</a></li>
+            </ul>
+        </div>
+        <div class="leftfloated block20">
+            <h3>company</h3>
+            <ul>
+                <li><a href="/company/contacts/" >Contact Us</a></li>
+                <li><a href="/partners/" >Partners</a></li>
+                <li><a href="/company/customers/" >Customer List</a></li>
+                <li><a href="/company/customers/testimonials.html" >Testimonials</a></li>
+                <li><a href="/company/jobs/" >Jobs</a></li>
+            </ul>
+        </div>
+        <div class="rightfloated block25 contacts_sub">
+            <ul class="social">
+                <li class="facebook"><a href="http://www.facebook.com/JetBrains" >Facebook</a></li>
+                <li class="gPlus"><a href="https://plus.google.com/+jetbrains/" >Google+</a></li>
+                <li class="in"><a href="http://www.linkedin.com/company/jetbrains" >LinkedIn</a></li>
+                <li class="twitter"><a href="http://twitter.com/#!/jetbrains" >Twitter</a></li>
+                <li class="weibo"></li>
+                <li class="rss"><a href="/rss.xml" >JetBrains RSS</a></li>
+            </ul>
+            <br class="clr"/>
+                        <div class="newsletter-block">
+                <h6>Get Monthly Newsletter</h6>
+                
+
+<script type='text/javascript' src='/eforms/dwr/interface/SubscriptionService.js'></script>
+<script type='text/javascript' src='/eforms/dwr/engine.js'></script>
+<script type="text/javascript">
+    function trim(str) {
+        return str.replace(/^\s+|\s+$/g, '');
+    }
+    function errMsg(state) {
+        var msg = document.getElementById('error-msg');
+        if (state)msg.style.display = 'block';
+        else msg.style.display = 'none';
+    }
+    function validateEmail(valfield) {
+        var tfld = trim(valfield.value);
+        var email = /^[^@]+@[^@.]+\.[^@]*\w\w$/  ;
+        if (!email.test(tfld)) {
+            errMsg(true);
+            return false;
+        }
+        errMsg(false);
+        return true;
+    }
+    function Proceed() {
+        var el = document.getElementById('emaiForSubscription');
+        if (!validateEmail(el)) {
+            el.focus();
+            return;
+        }
+        document.getElementById('sForm').style.display = "none";
+        document.getElementById('progress').style.display = "block";
+        var request = {
+            email: document.getElementById('emaiForSubscription').value,
+            topic: "jb.community.newsletter"
+        };
+        SubscriptionService.submitSubscriptionRequest(request, {
+            callback: function (result) {
+                setMessage(result ? "You request has been processed! Please check your mailbox." : "Internal error.");
+            },
+            timeout: 30000,
+            errorHandler:function(message) {
+                setMessage("Oops: " + message);
+            }
+        });
+        function setMessage(text) {
+            var span = document.getElementById("formContainer");
+            span.style.display = "block";
+            span.innerHTML = text;
+            document.getElementById('progress').style.display = "none";
+        }
+    }
+    function doBlurOn(el) {
+        if (el.value == '') {
+            el.value = 'E-mail JetBrains news to me';
+            el.style.color = '#bcbcbc';
+        }
+    }
+    function doFocusOn(el) {
+        if (el.value == 'E-mail JetBrains news to me') {
+            el.value = '';
+            el.style.color = '#333';
+        }
+    }
+</script>
+<dl id="submitionContent" class="newsletter">
+    <dd id="formContainer">
+        <form action="javascript:get();" name="sForm" id="sForm">
+            <input class="text required" name="emaiForSubscription" id="emaiForSubscription" value="E-mail JetBrains news to me" onblur="doBlurOn(this)" onfocus="doFocusOn(this)"/>
+            <input type="submit" class="submit" id="button" value="Subscribe" onclick="Proceed();"/>
+            <span class="msg" id="error-msg" style="display:none;">Incorrect e-mail address</span>
+        </form>
+    </dd>
+    <dd id="progress" style="display:none;"></dd>
+</dl>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#sForm').submit(function() {
+            var mail = $('#emaiForSubscription').val();
+            if (mail) {
+                var mktoData = {};
+                mktoData[MKTO_SOURCE_FIELD] = 'email-subscription';
+                mktoDoAsync(mail, mktoData);
+            }
+            return false;
+        });
+    });
+</script>
+
+                <br class="clr"/>
+            </div>
+                        <h6 class="contacts">Contacts:</h6>
+            <ul>
+                <li><a href="/company/contacts/">Sales Team</a></li>
+                <li><a href="mailto:marketing@jetbrains.com">Marketing Team</a></li>
+                <li><a href="mailto:webmaster@jetbrains.com">Webmaster</a></li>
+            </ul>
+        </div>
+        <br class="clr"/>
+    </div>
+    <div class="container footer-short">
+        <p class="rightfloated gray right-align">&copy; 2000-2014 JetBrains s.r.o. All rights reserved<br/>Developed with <a href="/webstorm">WebStorm</a></p>
+        <ul class="block35">
+            <li><a href="/company/privacy.html">Privacy Policy</a></li>
+            <li><a href="/company/useterms.html">Terms of Use</a></li>
+            <li><a href="/map.html">Site map</a></li>
+        </ul>
+        <br class="clr"/>
+    </div>
+</footer>
+                
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/6939.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script><script type="text/javascript">
+(function() {
+  var didInit = false;
+    function initMunchkin() {
+        if(didInit === false) {
+            didInit = true;
+            Munchkin.init('426-QVD-114');
+        }
+    }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script></body>
+</html>

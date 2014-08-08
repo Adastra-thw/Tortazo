@@ -1,0 +1,2691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<!-- start of server/head-include-1.html -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:webmasters@gnu.org" />
+<link rel="icon" type="image/png" href="/graphics/gnu-head-mini.png" />
+<meta name="ICBM" content="42.355469,-71.058627" />
+<meta name="DC.title" content="gnu.org" />
+<!-- end of server/head-include-1.html -->
+
+<!-- end of server/header.html -->
+
+<!-- Parent-Version: 1.77 -->
+<title>Various Licenses and Comments about Them
+- GNU Project - Free Software Foundation</title>
+<!-- begin translist file -->
+
+
+<!-- end translist file -->
+
+
+<style type="text/css" media="print,screen">
+<!--
+/* These statements are commented out in HTML to
+   make them untranslatable.  */
+/* Definitions for color-coded border */
+#content dl.green, #content dl.orange,
+ #content dl.red, #content dl.blue {
+   padding-left: 1em;
+   margin-left: 0;
+   margin-top: 2em;
+}
+
+#content dl.green { border-left: .4em solid green; }
+#content dl.orange { border-left: .4em dashed orange; }
+#content dl.red { border-left: .4em dotted red; }
+#content dl.blue { border-left: .4em double  blue; }
+
+/* Disable legend for CSS1-only browsers:
+   they don't support :before and :after */
+#content div#legend { display: none; }
+/* Enable legend for CSS2+ browsers. */
+@media print,screen {
+#content div#legend { display: block; }
+}
+#content div#legend {
+   float: right;
+   width: auto; max-width: 100%;
+   font-style: normal;
+   padding: 0 1em 1em 1em;
+   margin: 2.5em 1.5em 1.5em 1.5em;
+   background: #f0f2f4;
+   border: 1px solid #c9cccf;
+}
+
+#content div#legend dl { margin: 1em 0 0 0; }
+#content div#legend dt { padding: 1em 0; margin: 0; }
+#content div#legend dd { margin: 0; }
+
+#legend blockquote { font-size: 1.3em; font-style: normal; text-align: center; font-weight: bold; }
+#legend dl.green dt:after, #legend dl.orange dt:after,
+#legend dl.red dt:after, #legend dl.blue dt:after { font-weight: normal; }
+-->
+</style>
+<!-- These statements are split between different <style> elements,
+     and their contents aren't commented out on purpose:
+     they should be translated, preferably as separate strings.  -->
+<style type="text/css" media="print,screen">
+#legend blockquote:before { content: "Code for the left border"; }
+</style>
+<style type="text/css" media="print,screen">
+#legend dl.green dt:after {
+   content: "Free licenses, compatible with the GNU GPL or FDL";
+}
+</style>
+<style type="text/css" media="print,screen">
+#legend dl.orange dt:after {
+   content: "Free licenses, incompatible with the GNU GPL and FDL";
+}
+</style>
+<style type="text/css" media="print,screen">
+#legend dl.red dt:after { content: "Nonfree licenses"; }
+</style>
+<style type="text/css" media="print,screen">
+#legend dl.blue dt:after { content: "Licenses for works stating a viewpoint"; }
+</style>
+
+<!-- start of server/banner.html -->
+<!-- start of head-include-2.html -->
+
+<link rel="stylesheet" href="/combo.css" media="screen" />
+<link rel="stylesheet" href="/mini.css" media="handheld" />
+<link rel="stylesheet" href="/layout.css" media="screen" />
+
+<link rel="stylesheet" href="/print.css" media="print" />
+
+<!-- end of head-include-2.html -->
+
+</head>
+<body>
+<div class="inner">
+<!-- start of server/body-include-1.html -->
+
+<div id="toplinks">
+ <a href="#content">Skip to main text</a>
+</div> <!-- /toplinks -->
+
+<div id="searcher">
+ <form method="get" action="//www.gnu.org/cgi-bin/estseek.cgi">
+  <div>
+  <input name="phrase" id="phrase" type="text" size="18" accesskey="s"
+         value="Why GNU/Linux?" onfocus="this.value=''" />
+  <input type="submit" value="Search" />
+  </div>
+ </form>
+</div><!-- /searcher -->
+
+<div id="translations">
+<p>
+<span dir="ltr" class="original"><a lang="en" hreflang="en" href="/licenses/license-list.en.html">English</a>&nbsp;[en]</span> &nbsp;
+<span dir="ltr"><a lang="ca" hreflang="ca" href="/licenses/license-list.ca.html">català</a>&nbsp;[ca]</span> &nbsp;
+<span dir="ltr"><a lang="cs" hreflang="cs" href="/licenses/license-list.cs.html">Česky</a>&nbsp;[cs]</span> &nbsp;
+<span dir="ltr"><a lang="de" hreflang="de" href="/licenses/license-list.de.html">Deutsch</a>&nbsp;[de]</span> &nbsp;
+<span dir="ltr"><a lang="es" hreflang="es" href="/licenses/license-list.es.html">español</a>&nbsp;[es]</span> &nbsp;
+<span dir="ltr"><a lang="fr" hreflang="fr" href="/licenses/license-list.fr.html">français</a>&nbsp;[fr]</span> &nbsp;
+<span dir="ltr"><a lang="it" hreflang="it" href="/licenses/license-list.it.html">italiano</a>&nbsp;[it]</span> &nbsp;
+<span dir="ltr"><a lang="ja" hreflang="ja" href="/licenses/license-list.ja.html">日本語</a>&nbsp;[ja]</span> &nbsp;
+<span dir="ltr"><a lang="pl" hreflang="pl" href="/licenses/license-list.pl.html">polski</a>&nbsp;[pl]</span> &nbsp;
+<span dir="ltr"><a lang="pt-br" hreflang="pt-br" href="/licenses/license-list.pt-br.html">português&nbsp;do&nbsp;Brasil</a>&nbsp;[pt-br]</span> &nbsp;
+<span dir="ltr"><a lang="ru" hreflang="ru" href="/licenses/license-list.ru.html">русский</a>&nbsp;[ru]</span> &nbsp;
+</p>
+</div>
+
+<!-- end of server/body-include-1.html -->
+
+<!-- start of server/body-include-2 -->
+
+<div id="header">
+<div id="fsf-frame">
+<p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">JOIN&nbsp;THE&nbsp;FSF</a></p>
+<div id="fssbox">
+<p><a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
+<form action="https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31" method="post">
+ <div>
+  <input name="postURL" type="hidden" value="" />
+  <input type="hidden" name="group[25]" value="1" />
+  <input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+  <input name="_qf_default" type="hidden" value="Edit:cancel" />
+ </div>
+ <p>
+  <input type="text" id="frmEmail" name="email-Primary" size="18" maxlength="80"
+         value="email address" onfocus="this.value=''"/>
+  <input type="submit" name="_qf_Edit_next" value="Sign up" />
+ </p>
+</form>
+</div><!-- /fssbox -->
+</div><!-- /fsf-frame -->
+
+<div id="gnu-banner">
+ <a href="/">
+ <img src="/graphics/heckert_gnu.small.png" alt=" [A GNU head] " /><strong>GNU</strong> Operating System</a>
+</div><!-- /gnu-banner -->
+
+<p id="fsf-support">Sponsored by the <a href="#mission-statement">Free Software Foundation</a></p>
+
+</div><!-- /header -->
+
+<div id="ghm-banner"
+     style="overflow: hidden; background: #ccc; border: font-size: large; padding: 5px">
+  <p style="font-size: x-large; font-weight: bold;">
+    Meet the GNU contributors in person at the
+    <a href="http://www.gnu.org/ghm">GNU Hackers' Meeting</a>!
+  </p>
+  <p>
+    The <a href="http://www.gnu.org/ghm/upcoming.html">8th GNU Hackers' Meeting</a>
+    takes place in Munich, Germany from 15&ndash;17&nbsp;August
+    2014. It spans three days, and comprises talks about new GNU
+    programs, status of the GNU system and news from the free software
+    community.
+  </p>
+  <p>
+    <a href="http://www.gnu.org/ghm/register">Register</a>
+    <strong>now</strong> to secure your place.
+  </p>
+</div>
+
+<div id="navigation">
+
+ <ul>
+  <li id="tabAboutGNU"><a href="/gnu/gnu.html">About&nbsp;GNU</a></li>
+  <li id="tabPhilosophy"><a href="/philosophy/philosophy.html">Philosophy</a></li>
+  <li id="tabLicenses"><a href="/licenses/licenses.html">Licenses</a></li>
+  <li id="tabEducation"><a href="/education/education.html">Education</a></li>
+  <li id="tabSoftware"><a href="/software/software.html">Software</a></li>
+  <li id="tabDoc"><a href="/doc/doc.html">Documentation</a></li>
+  <li id="tabHelp"><a href="/help/help.html">Help&nbsp;GNU</a></li>
+ </ul>
+
+</div><!--  /navigation -->
+<!-- end of server/body-include-2 -->
+
+<div id="content">
+<!-- end of server/banner.html -->
+
+<h2>Various Licenses and Comments about Them</h2>
+
+<div class="toc">
+
+<h3 id="TableOfContents">Table of Contents</h3>
+
+<ul>
+<li><a href="#Introduction">Introduction</a></li>
+
+<li><a href="#SoftwareLicenses">Software Licenses</a>
+  <ul>
+  <li><a href="#GPLCompatibleLicenses">
+      GPL-Compatible Free Software Licenses</a></li>
+  <li><a href="#GPLIncompatibleLicenses">
+      GPL-Incompatible Free Software Licenses</a></li>
+  <li><a href="#NonFreeSoftwareLicenses">Nonfree Software Licenses</a></li>
+  </ul>
+</li>
+
+<li><a href="#DocumentationLicenses">Licenses For Documentation</a>
+  <ul>
+  <li><a href="#FreeDocumentationLicenses">Free Documentation Licenses</a></li>
+  <li><a href="#NonFreeDocumentationLicenses">
+      Nonfree Documentation Licenses</a></li>
+  </ul>
+</li>
+
+<li><a href="#OtherLicenses">Licenses for Other Works</a>
+  <ul>
+  <li><a href="#OtherLicenses">Licenses for Works of Practical Use
+      besides Software and Documentation</a></li>
+  <li><a href="#Fonts">Licenses for Fonts</a></li>
+  <li><a href="#OpinionLicenses">Licenses for Works stating a Viewpoint
+      (e.g., Opinion or Testimony)</a></li>
+  </ul>
+</li>
+</ul>
+
+</div> <!-- /class="toc" -->
+
+<div class="big-section">
+<h3  id="Introduction">
+    Introduction</h3>
+</div>
+<div style="clear: left;"></div>
+<blockquote class="note" id="fsf-licensing"><p style="font-size: 80%">This page is maintained by the Free Software Foundation's Licensing and Compliance Lab. You can support our efforts by <a href="http://donate.fsf.org">making a donation</a> to the FSF. Have a question not answered here? Check out some of our other <a href="http://www.fsf.org/licensing">licensing resources</a> or contact the Compliance Lab at <a href="mailto:licensing@fsf.org">licensing@fsf.org</a>.</p></blockquote>
+
+<p>We classify a license according to certain key criteria:</p>
+
+<ul>
+<li>Whether it qualifies as a
+<a href="/philosophy/free-sw.html">free software</a> license.</li>
+
+<li>Whether it is a <a href="/copyleft/copyleft.html">copyleft</a>
+license.</li>
+
+<li>Whether it is
+<a href="/licenses/gpl-faq.html#WhatDoesCompatMean">compatible with
+the GNU GPL</a>.  Unless otherwise specified, compatible licenses are
+compatible with both GPLv2 and GPLv3.</li>
+
+<li>Whether it causes any particular practical problems.</li>
+</ul>
+
+<p>We try to list the most commonly encountered free software license on
+this page, but cannot list them all; we'll try our best to answer
+questions about free software licenses whether or not they are listed
+here.  The licenses are more or less in alphabetical order within each
+section.</p>
+
+<p>If you believe you have found a violation of one of our licenses,
+please refer to our <a href="/licenses/gpl-violation.html">license
+violation page</a>.</p>
+
+<p>If you've started a new project and you're not sure what license to
+use, <a href="/licenses/license-recommendations.html">&ldquo;How to
+choose a license for your own work&rdquo;</a> details our
+recommendations in an easy-to-follow guide.</p>
+
+<a id="LicensingEmailAddress"></a>
+<p>If you have questions about free software licenses, you can email
+us
+at <a href="mailto:licensing@fsf.org">&lt;licensing@fsf.org&gt;</a>.
+Because our resources are limited, we do not answer questions that are
+meant to assist proprietary software development or distribution, and
+you'll likely get an answer faster if you ask a specific question that
+isn't already covered here or in <a href="/licenses/gpl-faq.html">our
+FAQ</a>.  We
+<a href="http://www.fsf.org/volunteer">welcome knowledgeable
+volunteers</a> who want to help answer licensing questions.</p>
+
+<p>If you are contemplating writing a new license, please also contact
+us at <a
+href="mailto:licensing@fsf.org">&lt;licensing@fsf.org&gt;</a>. The
+proliferation of different free software licenses is a significant
+problem in the free software community today, both for users and
+developers.  We will do our best to help you find an existing free
+software license that meets your needs.</p>
+
+<p>If you are wondering what license a particular software package is using, 
+please visit the <a href="http://directory.fsf.org">Free Software Directory</a>. 
+The Free Software Directory catalogues over 6000 free software packages and 
+their licensing information.</p>
+
+
+<div id="legend">
+<blockquote></blockquote>
+<dl class="green"><dt></dt><dd></dd></dl>
+<dl class="orange"><dt></dt><dd></dd></dl>
+<dl class="red"><dt></dt><dd></dd></dl>
+<dl class="blue"><dt></dt><dd></dd></dl>
+</div>
+
+<div class="big-section">
+<h3 id="SoftwareLicenses">
+     Software Licenses</h3>
+</div>
+<div style="clear: left;"></div>
+
+<div class="big-subsection">
+<h4 id="GPLCompatibleLicenses">
+    <span id="FreeLicenses"></span>
+    GPL-Compatible Free Software Licenses</h4>
+<span class="anchor-reference-id">
+    (<a href="#GPLCompatibleLicenses">#GPLCompatibleLicenses</a>)</span>
+</div>
+
+<p><strong>The following licenses qualify as <a
+href="/philosophy/free-sw.html">free software</a>
+licenses, and are compatible with the <a href="#GNUGPL">GNU
+GPL</a>.</strong></p>
+
+
+<dl class="green">
+
+<dt><a id="GNUGPL"></a>  <!-- both generic and version-specific anchors -->
+    <a id="GNUGPLv3" href="/licenses/gpl.html">
+    GNU General Public License (GPL) version 3</a>
+    <span class="anchor-reference-id">
+      (<a href="#GNUGPL">#GNUGPL</a>)
+      (<a href="#GNUGPL">#GNUGPLv3</a>)
+    </span></dt>
+<dd>
+<p>This is the latest version of the GNU GPL: a free software license, and
+a copyleft license.  We recommend it for most software packages.</p>
+
+<p>Please note that GPLv3 is not compatible with GPLv2 by itself.
+However, most software released under GPLv2 allows you to use the
+terms of later versions of the GPL as well.  When this is the case,
+you can use the code under GPLv3 to make the desired combination.  To
+learn more about compatibility between GNU licenses,
+please <a href="/licenses/gpl-faq.html#AllCompatibility">see our
+FAQ</a>.</p></dd>
+
+
+<dt><a id="GPLv2" href="/licenses/old-licenses/gpl-2.0.html">
+    GNU General Public License (GPL) version 2</a>
+    <span class="anchor-reference-id">(<a href="#GPLv2">#GPLv2</a>)</span></dt>
+<dd>
+<p>This is the previous version of the GNU GPL: a free software license, and
+a copyleft license.  We recommend <a href="#GNUGPL">the latest version</a>
+for most software.</p>
+
+<p>Please note that GPLv2 is, by itself, not compatible with GPLv3.
+However, most software released under GPLv2 allows you to use the
+terms of later versions of the GPL as well.  When this is the case,
+you can use the code under GPLv3 to make the desired combination.  To
+learn more about compatibility between GNU licenses,
+please <a href="/licenses/gpl-faq.html#AllCompatibility">see our
+FAQ</a>.</p></dd>
+
+
+<dt><a id="LGPL"></a>
+    <a id="LGPLv3" href="/licenses/lgpl.html">
+    GNU Lesser General Public License (LGPL) version 3</a>
+    <span class="anchor-reference-id">
+      (<a href="#LGPL">#LGPL</a>)
+      (<a href="#LGPL">#LGPLv3</a>)</span></dt>
+<dd>
+<p>This is the latest version of the LGPL: a free software license, but not
+a strong copyleft license, because it permits linking with nonfree
+modules.  It is compatible with GPLv3.  We recommend it for <a
+href="/licenses/why-not-lgpl.html">special circumstances
+only</a>.</p>
+
+<p>Please note that LGPLv3 is not compatible with GPLv2 by itself.
+However, most software released under GPLv2 allows you to use the
+terms of later versions of the GPL as well.  When this is the case,
+you can use the code under GPLv3 to make the desired combination.  To
+learn more about compatibility between GNU licenses,
+please <a href="/licenses/gpl-faq.html#AllCompatibility">see our
+FAQ</a>.</p></dd>
+
+
+<dt><a id="LGPLv2.1" href="/licenses/old-licenses/lgpl-2.1.html">
+    GNU Lesser General Public License (LGPL) version 2.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#LGPLv2.1">#LGPLv2.1</a>)</span></dt>
+<dd>
+<p>This is the previous version of the LGPL: a free software license,
+but not a strong copyleft license, because it permits linking with
+nonfree modules.  It is compatible with GPLv2 and GPLv3.  We
+generally recommend <a href="#LGPL">the latest version of the
+LGPL</a>, <a href="/licenses/why-not-lgpl.html">for special
+circumstances only</a>.  To learn more about how LGPLv2.1 is
+compatible with other GNU licenses,
+please <a href="/licenses/gpl-faq.html#AllCompatibility">see our
+FAQ</a>.</p></dd>
+
+
+<dt><a id="AGPL"></a>
+    <a id="AGPLv3.0" href="/licenses/agpl.html">
+    GNU Affero General Public License (AGPL) version 3</a>
+    <span class="anchor-reference-id">
+       (<a href="#AGPL">#AGPL</a>)
+       (<a href="#AGPLv3.0">#AGPLv3.0</a>)</span></dt>
+<dd>
+<p>This is a free software, copyleft license.  Its terms effectively
+consist of the terms of GPLv3, with an additional paragraph in section 13
+to allow users who interact with the licensed software over a network to
+receive the source for that program.  We recommend that developers consider
+using the GNU AGPL for any software which will commonly be run over a
+network.</p>
+
+<p>Please note that the GNU AGPL is not compatible with GPLv2.  It is
+also technically not compatible with GPLv3 in a strict sense: you
+cannot take code released under the GNU AGPL and convey or modify it
+however you like under the terms of GPLv3, or vice versa.  However,
+you are allowed to combine separate modules or source files released
+under both of those licenses in a single project, which will provide
+many programmers with all the permission they need to make the
+programs they want.  See section 13 of both licenses for
+details.</p></dd>
+
+
+<dt><a id="GNUAllPermissive"
+       href="/prep/maintain/html_node/License-Notices-for-Other-Files.html">
+    GNU All-Permissive License</a>
+    <span class="anchor-reference-id">
+       (<a href="#GNUAllPermissive">#GNUAllPermissive</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive free software license, compatible with
+the GNU GPL, which we recommend GNU packages use for README and other
+small supporting files.  All developers can feel free to use it in
+similar situations.</p>
+
+<p>Older versions of this license did not have the second sentence with
+the express warranty disclaimer.  This same analysis applies to both
+versions.</p></dd>
+
+
+<dt><a id="apache2" href="http://directory.fsf.org/wiki/License:Apache2.0">
+    Apache License, Version 2.0</a>
+    <span class="anchor-reference-id">(<a href="#apache2">#apache2</a>)</span>
+    </dt>
+<dd>
+<p>This is a free software license, compatible with version 3 of the
+GNU GPL.</p>
+
+<p>Please note that this license is not compatible with GPL version 2,
+because it has some requirements that are not in that GPL version.
+These include certain patent termination and indemnification
+provisions.  The patent termination provision is a good thing, which
+is why we recommend the Apache 2.0 license for substantial programs
+over other lax permissive licenses.</p></dd>
+
+<dt><a id="ArtisticLicense2"
+       href="http://directory.fsf.org/wiki/License:ArtisticLicense2.0">
+    Artistic License 2.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#ArtisticLicense2">#ArtisticLicense2</a>)</span></dt>
+<dd>
+<p>This license is a free software license, compatible with the GPL
+thanks to the relicensing option in section 4(c)(ii).</p></dd>
+
+<dt><a href=
+  "http://gianluca.dellavedova.org/2011/01/03/clarified-artistic-license/">
+    Clarified Artistic License</a></dt>
+<dd>
+<p>This license is a free software license, compatible with the GPL.  It
+is the minimal set of changes needed to correct the vagueness of the <a
+href="#ArtisticLicense">Artistic License 1.0</a>.</p></dd>
+
+
+<dt><a id="BerkleyDB"></a> <!-- misspelled id, leave for compatibility -->
+    <a id="BerkeleyDB"
+       href="http://directory.fsf.org/wiki/License:Sleepycat">
+    Berkeley Database License</a>
+    (a.k.a. the Sleepycat Software Product License)
+    <span class="anchor-reference-id">
+      (<a href="#BerkeleyDB">#BerkeleyDB</a>)</span></dt>
+<dd>
+<p>This is a free software license, compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="boost" href="http://directory.fsf.org/wiki/License:Boost1.0">
+    Boost Software License</a>
+    <span class="anchor-reference-id">(<a href="#boost">#boost</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="ModifiedBSD" href="http://directory.fsf.org/wiki/License:BSD_3Clause">
+    Modified BSD license</a>
+    <span class="anchor-reference-id">
+      (<a href="#ModifiedBSD">#ModifiedBSD</a>)</span></dt>
+<dd>
+<p>This is the original BSD license, modified by removal of the
+advertising clause.  It is a lax, permissive non-copyleft free
+software license, compatible with the GNU GPL.</p>
+
+<p>This license is sometimes referred to as the 3-clause BSD license.</p>
+
+<p>The modified BSD license is not bad, as lax permissive licenses go,
+though the Apache 2.0 license is preferable.  However, it is risky to
+recommend use of &ldquo;the BSD license&rdquo;, even for special cases
+such as small programs, because confusion could easily occur and lead
+to use of the flawed <a href="#OriginalBSD"><em>original</em> BSD
+license</a>.  To avoid this risk, you can suggest the X11 license
+instead.  The X11 license and the modified revised BSD license are
+more or less equivalent.</p>
+
+<p>However, the Apache 2.0 license is better for substantial programs,
+since it prevents patent treachery.</p></dd>
+
+
+<dt><a id="CC0"
+       href="http://directory.fsf.org/wiki/License:CC0">
+    CC0</a>
+    <span class="anchor-reference-id">(<a href="#CC0">#CC0</a>)</span></dt>
+<dd>
+<p>CC0 is a public domain dedication from Creative Commons.  A
+work released under CC0 is dedicated to the public domain to the
+fullest extent permitted by law.  If that is not possible for any
+reason, CC0 also provides a lax, permissive license as a fallback.
+Both public domain works and the lax license provided by CC0 are
+compatible with the GNU GPL.</p>
+
+<p>If you want to release your work to the public domain, we recommend
+you use CC0.</p></dd>
+
+
+<dt><a id="CeCILL" href="http://www.cecill.info/licences.en.html">
+    CeCILL version 2</a>
+    <span class="anchor-reference-id">(<a href="#CeCILL">#CeCILL</a>)</span>
+    </dt>
+<dd>
+<p>The CeCILL is a free software license, explicitly compatible with the
+GNU GPL.</p>
+
+<p>The text of the CeCILL uses a couple of biased terms that ought to be
+avoided: <a
+href="/philosophy/not-ipr.html">&ldquo;intellectual property&rdquo;</a>
+and <a href="/philosophy/words-to-avoid.html#Protection">
+&ldquo;protection&rdquo;</a>; this decision
+was unfortunate, because reading the license tends to spread the
+presuppositions of those terms.  However, this does not cause any
+particular problem for the programs released under the CeCILL.</p>
+
+<p>Section 9.4 of the CeCILL commits the program's developers to certain
+forms of cooperation with the users, if someone attacks the program
+with a patent.  You might look at that as a problem for the developer;
+however, if you are sure you would want to cooperate with the users in
+those ways anyway, then it isn't a problem for you.</p></dd>
+
+
+<dt><a id="clearbsd"
+       href="http://directory.fsf.org/wiki/License:ClearBSD">
+       The Clear BSD License</a>
+    <span class="anchor-reference-id">
+       (<a href="#clearbsd">#clearbsd</a>)</span></dt>
+<dd>
+<p>This is a free software license, compatible with both GPLv2 and
+GPLv3.  It is based on the <a href="#ModifiedBSD">modified BSD
+license</a>, and adds a term expressly stating it does not grant you
+any patent licenses.  Because of this, we encourage you to be careful
+about using software under this license; you should first consider
+whether the licensor might want to sue you for patent infringement.
+If the developer is refusing users patent licenses to set up a trap
+for you, it would be wise to avoid the program.</p></dd>
+
+
+<dt><a id="CryptixGeneralLicense" href="http://directory.fsf.org/wiki/License:CryptixGL">
+    Cryptix General License</a>
+    <span class="anchor-reference-id">
+      (<a href="#CryptixGeneralLicense">#CryptixGeneralLicense</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with the GNU GPL.  It is very similar to the X11 license.</p></dd>
+
+
+<dt><a id="ecfonts"
+       href="http://directory.fsf.org/wiki/License:LaTeX_ecfonts">License
+       of the ec fonts for LaTeX</a>
+    <span class="anchor-reference-id">(<a href="#ecfonts">#ecfonts</a>)</span></dt>
+<dd>
+<p>This license covers the European Computer Modern Fonts and Text
+Companion Fonts, commonly used with LaTeX.  Depending on how it is
+used, it may be free or not.  If the package says that some fonts in
+the package may not be modified, then the package is nonfree.
+Otherwise the package is free.  The original fonts have no
+restrictions on modification, so they are free.</p>
+
+<p>Much like <a href="#LPPL-1.2">the LaTeX Project Public
+License 1.2</a>, this license requires modified versions of the work
+to use a name that's different from the name of any prior version.
+This is acceptable for work meant to be used with LaTeX, since TeX
+allows you to create filename mappings for your programs, but it's
+very annoying and could be overly burdensome in other contexts.</p>
+</dd>
+
+
+<dt><a id="eCos20"></a>  <!-- without decimal, leave for compatibility -->
+    <a id="eCos2.0" href="http://directory.fsf.org/wiki/License:ECos2.0">
+    eCos license version 2.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#eCos20">#eCos2.0</a>)</span></dt>
+<dd>
+<p>The eCos license version 2.0 is a GPL-compatible free software
+license.  It consists of the GPL, plus an exception allowing linking to
+software not under the GPL.  This license has the same <a
+href="/philosophy/why-not-lgpl.html">disadvantages</a>
+as the LGPL.</p></dd>
+
+
+<dt><a id="ECL2.0"
+       href="http://directory.fsf.org/wiki/License:ECL2.0">
+    Educational Community License 2.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#ECL2.0">#ECL2.0</a>)</span></dt>
+<dd>
+<p>This is a free software license, and it is compatible with
+GPLv3.  It is based on the <a href="#apache2">Apache License
+2.0</a>; the scope of the patent license has changed so that when
+an organization's employee works on a project, the organization
+does not have to license all of its patents to recipients.  This
+patent license and the indemnification clause in section&nbsp;9 make
+this license incompatible with GPLv2.</p></dd>
+
+
+<dt><a id="Eiffel" href="http://directory.fsf.org/wiki/License:EFLv2">
+    Eiffel Forum License, version 2</a>
+    <span class="anchor-reference-id">
+       (<a href="#Eiffel">#Eiffel</a>)</span></dt>
+<dd>
+<p>This is a free software license, compatible with the GNU GPL.  <a
+href="http://www.eiffel-nice.org/license/forum.txt">Previous
+releases</a> of the Eiffel license are not compatible with the
+GPL.</p></dd>
+
+
+<dt><a id="EUDataGrid"
+       href="http://directory.fsf.org/wiki/License:EUDataGrid">
+    EU DataGrid Software License</a>
+    <span class="anchor-reference-id">
+       (<a href="#EUDataGrid">#EUDataGrid</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="Expat" href="http://directory.fsf.org/wiki/License:Expat">
+    Expat License</a>
+    <span class="anchor-reference-id">(<a href="#Expat">#Expat</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with the GNU GPL.  It is sometimes ambiguously referred to as
+the <em>MIT License</em>.</p>
+
+<p>For substantial programs it is better to use the Apache 2.0 license
+since it blocks patent treachery.</p></dd>
+
+<dt><a id="FreeBSD"
+       href="http://directory.fsf.org/wiki?title=License:FreeBSD">
+    FreeBSD license</a>
+    <span class="anchor-reference-id">
+       (<a href="#FreeBSD">#FreeBSD</a>)</span></dt>
+<dd>
+<p>This is the original BSD license with the advertising clause and
+another clause removed.  (It is also sometimes called the
+&ldquo;2-clause BSD license&rdquo;.)  It is a lax, permissive
+non-copyleft free software license, compatible with the GNU GPL.</p>
+
+<p>Our comments about the <a href="#ModifiedBSD">Modified BSD license</a>
+apply to this license too.</p></dd>
+
+
+<dt><a id="freetype" href="http://directory.fsf.org/wiki/License:FreeType">
+    Freetype Project License</a>
+    <span class="anchor-reference-id">
+       (<a href="#freetype">#freetype</a>)</span></dt>
+<dd>
+<p>This is a free software license, and compatible with GPLv3.  It has
+some attribution requirements which make it incompatible with
+GPLv2.</p></dd>
+
+
+<dt><a id="iMatix" href="http://directory.fsf.org/wiki?title=License:SFL">
+       License of the iMatix Standard Function Library</a>
+    <span class="anchor-reference-id">
+       (<a href="#iMatix">#iMatix</a>)</span></dt>
+<dd>
+<p>This is a free software license and is GPL compatible.</p></dd>
+
+
+<dt><a id="imlib"
+       href="http://directory.fsf.org/wiki/License:Imlib2">
+    License of imlib2</a>
+    <span class="anchor-reference-id">(<a href="#imlib">#imlib</a>)</span></dt>
+<dd>
+<p>This is a free software license, and GPL-compatible.  The author has
+explained to us that the GPL's options for providing source all mean the
+source has been &quot;made available publicly&quot; in their
+words.</p></dd>
+
+
+<dt><a id="ijg"
+       href="http://directory.fsf.org/wiki?title=License:JPEG">
+    Independent JPEG Group License</a>
+    <span class="anchor-reference-id">(<a href="#ijg">#ijg</a>)</span></dt>
+<dd>
+<p>This is a free software license, and compatible with the GNU GPL.
+The authors have assured us that developers who document changes as
+required by the GPL will also comply with the similar requirement in
+this license.</p></dd>
+
+
+<dt><a id="informal">
+    Informal license</a>
+    <span class="anchor-reference-id">(<a href="#informal">#informal</a>)</span></dt>
+<dd>
+<p>An &ldquo;informal license&rdquo; means a statement such as
+&ldquo;do whatever you like with this&rdquo; or &ldquo;you can
+redistribute this code and change it.&rdquo;</p>
+
+<p>In the United States, these licenses are supposed to be interpreted
+based on what the author seems to intend.  So they probably mean what
+they appear to mean.  That would make them non-copyleft free software
+licenses and compatible with the GNU GPL.  However, an unlucky choice
+of wording could give it a different meaning.</p>
+
+<p>However, many other countries have a more rigid approach to
+copyright licenses.  There is no telling what courts in those
+countries might decide an informal statement means.  Courts might
+even decide that it is not a license at all.</p>
+
+<p>If you want your code to be free, don't invite gratuitous trouble
+for your users.  Please choose and apply an established free software
+license.  We offer <a href="/licenses/license-recommendations.html">
+recommendations</a> that we suggest you follow.</p></dd>
+
+
+<dt><a id="intel"
+      href="http://directory.fsf.org/wiki/License:IntelACPI">
+    Intel Open Source License</a>
+    <span class="anchor-reference-id">(<a href="#intel">#intel</a>)</span></dt>
+<dd>
+<p>This is a free software license, compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="ISC" href="http://directory.fsf.org/wiki/License:ISC">
+    ISC License</a>
+    <span class="anchor-reference-id">(<a href="#ISC">#ISC</a>)</span></dt>
+<dd>
+<p>This license is sometimes also known as the OpenBSD License.  It is a
+lax, permissive free software license, and compatible with the GNU GPL.</p>
+
+<p>This license does have an unfortunate wording choice: it provides
+recipients with &quot;Permission to use, copy, modify, and/or distribute
+this software&hellip;&quot; This is roughly the same language from the
+license of Pine that the University of Washington later claimed
+prohibited people from distributing modified versions of the
+software.</p>
+
+<p>ISC has told us they do not share the University of Washington's
+interpretation, and we have every reason to believe them.  Thus, there's
+no reason to avoid software released under this license.  However, to
+help make sure this language cannot cause any trouble in the future, we
+encourage developers to choose a different license for their own works.
+The <a href="#Expat">Expat License</a> and <a href="#FreeBSD">FreeBSD
+License</a> are similarly permissive and brief.</p></dd>
+
+
+<dt><a id="MPL-2.0"
+       href="http://directory.fsf.org/wiki/License:MPLv2.0">Mozilla Public
+       License (MPL) version 2.0</a>
+    <span class="anchor-reference-id">(<a href="#MPL-2.0">#MPL-2.0</a>)</span></dt>
+<dd>
+<p>This is a free software license.  Section 3.3 provides indirect
+compatibility between this license and the GNU GPL version 2.0, the
+GNU LGPL version 2.1, the GNU AGPL version 3.0, and all later versions
+of those licenses.  When you receive work under MPL 2.0,
+you may make a &ldquo;Larger Work&rdquo; that combines that work with
+work under those GNU licenses.  When you do, section 3.3 gives
+you permission to distribute the MPL-covered work under the terms of
+the same GNU licenses, with one condition: you must make sure that the
+files that were originally under the MPL are still available under the
+MPL's terms as well.  In other words, when you make a combination this
+way, the files that were originally under the MPL will be dual
+licensed under the MPL and the GNU license(s).  The end result is that
+the Larger Work, as a whole, will be covered under the GNU license(s).
+People who receive that combination from you will have the option to
+use any files that were originally covered by the MPL under that
+license's terms, or distribute the Larger Work in whole or in part
+under the GNU licenses' terms with no further restrictions.</p>
+
+<p>It's important to understand that the condition to distribute files
+under the MPL's terms only applies to the party that first creates and
+distributes the Larger Work.  If it applied to their recipients as well, it
+would be a further restriction and incompatible with the GPL and AGPL.
+That said, when you make contributions to an existing project, we usually
+<a href="/licenses/license-recommendations.html#contributing">recommend that you keep your changes under the same license</a>,
+even when you're not required to do so.  If you receive a work under a GNU
+license where some files are also under the MPL, you should only remove the
+MPL from those files when there's a strong reason to justify it.</p>
+
+<p>Check the license notices on the MPL-covered software before you make
+a Larger Work this way.  Parties who release original work under
+MPL 2.0 may choose to opt out of this compatibility by
+including a sentence in the license notices that says that the work is
+&ldquo;Incompatible With Secondary Licenses.&rdquo; Any software that
+includes this notice is <strong>not</strong> compatible with the GPL
+or AGPL.</p>
+
+<p>Software under previous versions of the MPL can be upgraded to version
+2.0, but any software that isn't already available under one of the
+listed GNU licenses <strong>must</strong> be marked as Incompatible With Secondary
+Licenses.  This means that software that's only available under
+previous versions of the MPL is still incompatible with the GPL and AGPL.</p>
+</dd>
+
+<dt><a id="NCSA" href="http://directory.fsf.org/wiki/License:IllinoisNCSA">
+    NCSA/University of Illinois Open Source License</a>
+    <span class="anchor-reference-id">(<a href="#NCSA">#NCSA</a>)</span></dt>
+<dd>
+<p>This license is based on the terms of the <a href="#Expat">Expat</a>
+and <a href="#ModifiedBSD">modified BSD</a> licenses.  It is a lax,
+permissive non-copyleft free software license, compatible with the GNU
+GPL.</p></dd>
+
+
+<dt><a id="NetscapeJavascript"></a> <!-- lc `s', leave for compatibility -->
+    <a id="NetscapeJavaScript"></a>
+    License of Netscape JavaScript
+    <span class="anchor-reference-id">
+       (<a href="#NetscapeJavaScript">#NetscapeJavaScript</a>)</span></dt>
+<dd>
+<p>This is the disjunction of the <a href="#NPL">Netscape Public
+License</a> and the <a href="/licenses/gpl.html">GNU GPL</a>.  Because
+of that, it is a free software license, compatible with the GNU GPL, but
+not a strong copyleft.</p></dd>
+
+
+<dt><a id="newOpenLDAP"
+       href="http://directory.fsf.org/wiki/License:OpenLDAPv2.7">
+    OpenLDAP License, Version 2.7</a>
+    <span class="anchor-reference-id">
+       (<a href="#newOpenLDAP">#newOpenLDAP</a>)</span></dt>
+<dd>
+<p>This is a permissive non-copyleft free software license that is
+compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="PerlLicense">License of Perl 5 and below</a>
+    <span class="anchor-reference-id">
+       (<a href="#PerlLicense">#PerlLicense</a>)</span></dt>
+<dd>
+<p>This license is the disjunction of the <a
+href="#ArtisticLicense">Artistic License 1.0</a> and the <a
+href="/licenses/gpl.html">GNU GPL</a>&mdash;in other words,
+you can choose either of those two licenses.  It qualifies as a free
+software license, but it may not be a real copyleft.  It is compatible
+with the <a href="/licenses/gpl.html">GNU GPL</a>
+because the GNU GPL is one of the alternatives.</p>
+
+<p>We recommend you use this license for any Perl 4 or Perl 5 package
+you write, to promote coherence and uniformity in Perl programming.
+Outside of Perl, we urge you not to use this license; it is better to
+use just the GNU GPL.</p></dd>
+
+
+<dt><a id="PublicDomain"
+       href="http://directory.fsf.org/wiki/License:PublicDomain">
+    Public Domain</a>       
+    <span class="anchor-reference-id">
+       (<a href="#PublicDomain">#PublicDomain</a>)</span></dt>
+<dd>
+<p>Being in the public domain is not a license; rather, it means the
+material is not copyrighted and no license is needed.  Practically
+speaking, though, if a work is in the public domain, it might as well
+have an all-permissive non-copyleft free software license.  Public
+domain material is compatible with the GNU GPL.</p>
+
+<p>If you want to release your work to the public domain, we encourage
+you to use formal tools to do so.  We ask people who make small
+contributions to GNU to sign a disclaimer form; that's one solution.
+If you're working on a project that doesn't have formal contribution
+policies like that, <a href="#CC0">CC0</a> is a good tool that anyone
+can use.  It formally dedicates your work to the public domain, and
+provides a fallback license for cases where that is not legally
+possible.</p></dd>
+
+<dt><a id="Python" href="http://directory.fsf.org/wiki?title=License:Python2.0.1">
+    License of Python 2.0.1, 2.1.1, and newer versions</a>
+    <span class="anchor-reference-id">
+       (<a href="#Python">#Python</a>)</span></dt>
+<dd>
+<p>This is a free software license and is compatible with the GNU GPL.
+Please note, however, that intermediate versions of Python (1.6b1,
+through 2.0 and 2.1) are under a different license (<a
+href="#PythonOld">see below</a>).</p></dd>
+
+
+<dt><a id="Python1.6a2"
+    href="http://directory.fsf.org/wiki?title=License:Python1.6a2">
+    License of Python 1.6a2 and earlier versions</a>
+    <span class="anchor-reference-id">
+       (<a href="#Python1.6a2">#Python1.6a2</a>)</span></dt>
+<dd>
+<p>This is a free software license and is compatible with the GNU GPL.
+Please note, however, that newer versions of Python are under other
+licenses (see above and below).</p></dd>
+
+
+<dt><a id="Ruby" href="http://directory.fsf.org/wiki/License:Ruby">
+    License of Ruby</a>
+    <span class="anchor-reference-id">(<a href="#Ruby">#Ruby</a>)</span></dt>
+<dd>
+<p>This is a free software license, compatible with the GPL via an
+explicit dual-licensing clause.</p></dd>
+
+
+<dt><a id="SGIFreeB" href="http://directory.fsf.org/wiki/License:SGIFreeBv2">
+    SGI Free Software License B, version 2.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#SGIFreeB">#SGIFreeB</a>)</span></dt>
+<dd>
+<p>The SGI Free Software License B version 2.0 is a free software
+license.  It is essentially identical to the <a href="#X11License">X11
+License</a>, with an optional alternative way of providing license
+notices.</p>
+
+<p>Previous versions of the SGI Free Software License B were not free
+software licenses, despite their name.  However, they all included
+clauses that allow you to upgrade to new versions of the license, if you
+choose to do so.  As a result, if a piece of software was released under
+any version of the SGI Free License B, you can use it under the terms of
+this free version.</p></dd>
+
+
+<dt><a id="StandardMLofNJ"
+       href="http://directory.fsf.org/wiki/License:StandardMLofNJ">
+    Standard ML of New Jersey Copyright License</a>
+    <span class="anchor-reference-id">
+       (<a href="#StandardMLofNJ">#StandardMLofNJ</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="Unicode" href="http://directory.fsf.org/wiki/License:Unicode">
+       Unicode, Inc. License Agreement for Data Files and Software</a>
+    <span class="anchor-reference-id">
+       (<a href="#Unicode">#Unicode</a>)</span></dt>
+<dd>
+<p>This is a license that Unicode, Inc. has applied to the Unicode
+Character Database&mdash;various data files that developers can use to
+help implement the Unicode standard in their own programs.  It is a
+lax permissive license, compatible with all versions of the GPL.</p>
+
+<p>If you want to use files covered by this License Agreement in your
+own software, that shouldn't be any problem, but we recommend that
+you also include a full copy of its text.  Some of the files contain
+alternative license terms which are nonfree, or no licensing
+information at all, so including a copy of the License Agreement
+will help avoid confusion when others want to distribute your
+software.  Of course, you'll also need to follow the conditions in
+this License Agreement for distributing the files, but those are
+very straightforward.</p>
+
+<p>Please take care to ensure that the files you are using are covered
+by this License Agreement.  Other files published by Unicode,
+Inc. are covered by the Unicode Terms of Use, a different, nonfree
+license that appears on the same page but covers different files.  A
+short explanation at the top of this License Agreement details
+which files it covers.</p>
+
+<p>Please do not use this License Agreement for your own software.  If
+you want to use a lax permissive license for your project, please use
+the <a href="#Expat">Expat license</a> for a small program and the
+Apache 2.0 license for a substantial program.  These are far more
+common, and widely recognized in the free software community.</p></dd>
+
+
+<dt><a id="Unlicense" href="http://directory.fsf.org/wiki/License:TheUnlicense">
+    The Unlicense</a>
+    <span class="anchor-reference-id">
+       (<a href="#Unlicense">#Unlicense</a>)</span></dt>
+<dd>
+<p>The Unlicense is a public domain dedication.  A work released
+under the Unlicense is dedicated to the public domain to the fullest
+extent permitted by law, and also comes with an additional lax
+license that helps cover any cases where the dedication is inadequate.
+Both public domain works and the lax license provided by the
+Unlicense are compatible with the GNU GPL.</p>
+
+<p>If you want to release your work to the public domain, we recommend
+you use <a href="#CC0">CC0</a>.  CC0 also provides a public domain
+dedication with a fallback license, and is more thorough and
+mature than the Unlicense.</p></dd>
+
+<dt><a id="Vim" href="http://directory.fsf.org/wiki/License:Vim7.2">
+    License of Vim, Version 6.1 or later</a>
+    <span class="anchor-reference-id">(<a href="#Vim">#Vim</a>)</span></dt>
+<dd>
+<p>This is a free software license, partially copyleft but not
+really. It is compatible with the GPL, by an explicit conversion
+clause.</p></dd>
+
+
+<dt><a id="W3C"
+    href="http://directory.fsf.org/wiki/License:W3C_31Dec2002">
+    W3C Software Notice and License</a>
+    <span class="anchor-reference-id">(<a href="#W3C">#W3C</a>)</span></dt>
+<dd>
+<p>This is a free software license and is GPL compatible.</p></dd>
+
+
+<dt><a id="WebM" href="http://directory.fsf.org/wiki/License:WebM">
+    License of WebM</a>
+    <span class="anchor-reference-id">(<a href="#WebM">#WebM</a>)</span></dt>
+<dd>
+<p>Google's WebM implementation is covered by the <a
+href="#ModifiedBSD">Modified BSD License</a>.  Google also provides a
+separate patent license (confusingly called an &ldquo;Additional IP
+Rights Grant&rdquo;) for patents that Google owns or controls that are
+necessarily infringed by their implementation of WebM.  GPL-covered
+software can be distributed in compliance with this license's terms: it
+allows distributors to exercise all of the rights granted by the GPL,
+while fulfilling all its conditions.  Thus, all of WebM's license is
+free and GPL-compatible.</p></dd>
+
+
+<dt><a id="WTFPL" href="http://sam.zoy.org/wtfpl/COPYING">
+    WTFPL, Version 2</a>
+    <span class="anchor-reference-id">(<a href="#WTFPL">#WTFPL</a>)</span></dt>
+<dd>
+<p>This is lax permissive non-copyleft free software license,
+compatible with the GNU GPL.</p>
+
+<p>We do not recommend this license.  If you want a lax permissive
+license for a small program, we recommend
+the <a href="#X11License">X11 license</a>.  A larger program usually
+ought to be copyleft; but if you are set on using a lax permissive
+license for one, we recommend the Apache 2.0 license since it protects
+users from patent treachery.</p></dd>
+
+<dt><a id="Wx"></a>WxWidgets License <span class="anchor-reference-id">(<a href="#Wx">#Wx</a>)</span></dt>
+<dd>
+<p>The WxWidgets license is a GPL-compatible free software license. It
+consists of the  <a href="/licenses/old-licenses/lgpl-2.0.html">LGPL 2.0</a> 
+or any later version, plus an additional permission allowing binary
+distributions that use the library to be licensed under terms of the
+distributor's choice (including proprietary). Like the LGPL it is a
+weak copyleft license, so we recommend it <a
+href="/licenses/why-not-lgpl.html"> only in special
+circumstances</a>.</p>
+</dd>
+
+<dt><a id="X11License" href="http://directory.fsf.org/wiki/License:X11">
+    X11 License</a>
+    <span class="anchor-reference-id">
+       (<a href="#X11License">#X11License</a>)</span></dt>
+<dd>
+<p>This is a lax permissive non-copyleft free software license,
+compatible with the GNU GPL.  Older versions of XFree86 used the same
+license, and some of the current variants of XFree86 also do.  Later
+versions of XFree86 are distributed under the <a
+href="#XFree861.1License">XFree86 1.1 license</a>.</p>
+
+<p>This license is sometimes called the <em>MIT license</em>, but that
+term is misleading, since MIT has used many licenses for
+software.</p>
+
+<p>This is a fine license for a small program.  A larger program
+usually ought to be copyleft; but if you are set on a lax permissive
+license for one, we recommend the Apache 2.0 license since it protects
+users from patent treachery.</p></dd>
+
+
+<dt><a id="XFree861.1License"
+       href="http://directory.fsf.org/wiki/License:XFree86_1.1">
+       XFree86 1.1 License</a>
+    <span class="anchor-reference-id">
+       (<a href="#XFree861.1License">#XFree861.1License</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license,
+compatible with version 3 of the GPL.</p>
+
+<p>Please note that this license is incompatible with version 2 of the GPL,
+because of its requirements that apply to all documentation in the
+distribution that contain acknowledgements.</p>
+
+<p>There are currently several variants of XFree86, and only some of
+them use this license.  Some continue to use the <a
+href="#X11License">X11 license</a>.</p></dd>
+
+
+<dt><a id="ZLib" href="http://directory.fsf.org/wiki/License:Zlib">
+    License of ZLib</a>
+    <span class="anchor-reference-id">(<a href="#ZLib">#ZLib</a>)</span></dt>
+<dd>
+<p>This is a free software license, and compatible with the GPL.</p></dd>
+
+
+<dt><a id="Zope20"></a>  <!-- without decimal, leave for compatibility -->
+    <a id="Zope2.0" href="http://directory.fsf.org/wiki?title=License:ZopePLv2.1">
+    Zope Public License, versions 2.0 and 2.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#Zope2.0">#Zope2.0</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license
+which is compatible with the GNU GPL.</p></dd>
+
+</dl> <!-- end class="green" -->
+
+<hr class="separator" />
+
+<div class="big-subsection">
+<h4 id="GPLIncompatibleLicenses">
+    GPL-Incompatible Free Software Licenses</h4>
+<span class="anchor-reference-id">
+    (<a href="#GPLIncompatibleLicenses">#GPLIncompatibleLicenses</a>)</span>
+</div>
+
+<p><strong>The following licenses
+are <a href="/philosophy/free-sw.html">free software</a> licenses, but
+are <a href="/licenses/gpl-faq.html#WhatIsCompatible"><em>not
+compatible</em></a> with the <a href="#GNUGPL">GNU GPL</a>.</strong></p>
+
+<dl class="orange">
+
+<dt><a id="AGPLv1.0" href="http://directory.fsf.org/wiki/License:AGPLv1">
+    Affero General Public License version 1</a>
+    <span class="anchor-reference-id">
+       (<a href="#AGPLv1.0">#AGPLv1.0</a>)</span></dt>
+<dd>
+<p>The Affero General Public License is a free software license,
+copyleft, and incompatible with the GNU GPL.  It consists of the GNU GPL
+version 2, with one additional section that Affero added with FSF
+approval.  The new section, 2(d), covers the distribution of application
+programs through web services or computer networks.</p>
+
+<p>This license has been succeeded by the <a href="#AGPLv3.0">GNU Affero
+General Public License version 3</a>; please use that instead.</p></dd>
+
+<!-- Published primarily by www.opensource.org -->
+<dt><a id="AcademicFreeLicense"
+       href="http://directory.fsf.org/wiki/License:AFLv3">
+    Academic Free License, all versions through 3.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#AcademicFreeLicense">#AcademicFreeLicense</a>)</span></dt>
+<dd>
+<p>The Academic Free License is a free software license, not copyleft, and
+incompatible with the GNU GPL.  Recent versions contain contract clauses
+similar to the <a href="#OSLRant">Open Software License</a>, and should be
+avoided for the same reasons.</p></dd>
+
+
+<dt><a id="apache1.1" href="http://directory.fsf.org/wiki/License:Apache1.1">
+    Apache License, Version 1.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#apache1.1">#apache1.1</a>)</span></dt>
+<dd>
+<p>This is a permissive non-copyleft free software license.  It has a few
+requirements that render it incompatible with the GNU GPL, such as strong
+prohibitions on the use of Apache-related names.</p></dd>
+
+
+<dt><a id="apache1" href="http://directory.fsf.org/wiki/License:Apache1.0">
+    Apache License, Version 1.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#apache1">#apache1</a>)</span></dt>
+<dd>
+<p>This is a lax, permissive non-copyleft free software license with an
+advertising clause.  This creates <a
+href="/philosophy/bsd.html">practical problems</a> like
+those of the original BSD license, including incompatibility with the GNU
+GPL.</p></dd>
+
+
+<dt><a id="apsl2" href="http://directory.fsf.org/wiki/License:APSLv2.0">
+    Apple Public Source License (APSL), version 2</a>
+    <span class="anchor-reference-id">(<a href="#apsl2">#apsl2</a>)</span></dt>
+<dd>
+<p>This is a free software license, incompatible with the GNU GPL.  We
+recommend that you not use this license for new software that you write,
+but it is ok to use and improve the software released under this
+license.  <a href="/philosophy/apsl.html">More
+explanation.</a></p></dd>
+
+
+<dt><a id="bittorrent"
+       href="http://directory.fsf.org/wiki/License:BitTorrentOSL1.1">
+    BitTorrent Open Source License</a>
+    <span class="anchor-reference-id">
+       (<a href="#bittorrent">#bittorrent</a>)</span></dt>
+
+<dd><p>This is a free software license, but incompatible with the GPL,
+for the same reasons as the <a href="#josl">Jabber Open Source
+License</a>.</p></dd>
+
+
+<dt><a id="OriginalBSD" href="http://directory.fsf.org/wiki/License:BSD_4Clause">
+    Original BSD license</a>
+    <span class="anchor-reference-id">
+       (<a href="#OriginalBSD">#OriginalBSD</a>)</span></dt>
+<dd>
+<p>This license is also sometimes called the
+&ldquo;4-clause BSD license&rdquo;.</p>
+
+<p>This is a lax, permissive non-copyleft free software license with
+a serious flaw: the &ldquo;obnoxious BSD advertising clause&rdquo;.  The
+flaw is not fatal; that is, it does not render the software nonfree.
+But it does cause <a
+href="/philosophy/bsd.html">practical problems</a>,
+including incompatibility with the GNU GPL.</p>
+
+<p>We urge you not to use the original BSD license for software you
+write.  If you want to use a lax, permissive non-copyleft free
+software license, it is much better to use the <a
+href="#ModifiedBSD">modified BSD license</a>, the X11 license
+or the Expat license.  Even better, for a substantial program,
+use the Apache 2.0 license since it takes action against patent treachery.</p>
+
+<p>However, there is no reason not to use programs that have been released
+under the original BSD license.</p></dd>
+
+
+<dt><a id="CDDL"
+       href="http://directory.fsf.org/wiki/License:CDDLv1.0">
+    Common Development and Distribution License (CDDL), version 1.0</a>
+    <span class="anchor-reference-id"> (<a href="#CDDL">#CDDL</a>)</span></dt>
+<dd>
+<p>This is a free software license.  It has a copyleft with a scope that's
+similar to the one in the Mozilla Public License, which makes it
+incompatible with the <a href="/licenses/gpl.html">GNU GPL</a>.  This means
+a module covered by the GPL and a module covered by the CDDL cannot legally
+be linked together.  We urge you not to use the CDDL for this reason.</p>
+
+<p>Also unfortunate in the CDDL is its use of the term &ldquo;<a
+href="/philosophy/not-ipr.html">intellectual
+property</a>&rdquo;.</p></dd>
+
+
+<dt><a id="CPAL" href="https://www.socialtext.net/open/cpal_license_in_wikitext">
+    Common Public Attribution License 1.0 (CPAL)</a>
+    <span class="anchor-reference-id"> (<a href="#CPAL">#CPAL</a>)</span></dt>
+<dd>
+<p>This is a free software license.  It is based on the <a
+href="#MPL">Mozilla Public License</a> version 1, and is incompatible with the GPL
+for the same reasons: it has several requirements for modified versions
+that do not exist in the GPL.  It also requires you to publish the
+source of the program if you allow others to use it.</p></dd>
+
+
+<dt><a id="CommonPublicLicense10"
+       href="http://directory.fsf.org/wiki/License:CPLv1.0">
+    Common Public License Version 1.0</a>
+    <span class="anchor-reference-id">
+      (<a href="#CommonPublicLicense10">#CommonPublicLicense10</a>)</span></dt>
+<dd>
+<p>This is a free software license.  Unfortunately, its weak copyleft
+and choice of law clause make it incompatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="Condor"
+       href="http://directory.fsf.org/wiki?title=License:Condor1.1">
+    Condor Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#Condor">#Condor</a>)</span></dt>
+<dd>
+<p>Recent versions of Condor (from 6.9.5 on) are released under the <a
+href="#apache2">Apache License 2.0</a>.  Only older versions of Condor
+use this license.</p>
+
+<p>The Condor Public License is a free software license.  It has a
+couple of requirements that make it incompatible with the GNU GPL,
+including strong restrictions on the use of Condor-related names, and
+requires redistributors to &ldquo;represent and warrant&rdquo; that
+they will comply with United States export laws.  (If it made
+compliance an actual condition of the license, it would not be a free
+software license.)</p></dd>
+
+<dt><a id="EPL" href="http://directory.fsf.org/wiki/License:EPLv1.0">
+    Eclipse Public License Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#EPL">#EPL</a>)</span></dt>
+<dd>
+<p>The Eclipse Public License is similar to the <a
+href="#CommonPublicLicense10">Common Public License</a>, and our
+comments on the CPL apply equally to the EPL.  The only change is that
+the EPL removes the broader patent retaliation language regarding patent
+infringement suits specifically against Contributors to the EPL'd
+program.</p></dd>
+
+
+<dt><a id="EUPL" href="http://directory.fsf.org/wiki/License:EUPLv1.1">
+    European Union Public License (EUPL) version 1.1</a>
+    <span class="anchor-reference-id">(<a href="#EUPL">#EUPL</a>)</span></dt>
+<dd>
+<p>This is a free software license.  By itself, it has a copyleft
+comparable to the GPL's, and incompatible with it.  However, it gives
+recipients ways to relicense the work under the terms of other
+selected licenses, and some of those&mdash;the <a href="#EPL">Eclipse
+Public License</a> and the <a href="#CommonPublicLicense10">Common
+Public License</a> in particular&mdash;only provide a weaker copyleft.
+Thus, developers can't rely on this license to provide a strong
+copyleft.</p>
+
+<p>The EUPL allows relicensing to GPLv2, because that is listed as one
+of the alternative licenses that users may convert to.  It also,
+indirectly, allows relicensing to GPL version 3, because there is a
+way to relicense to the CeCILL v2, and the CeCILL v2 gives a way to
+relicense to any version of the GNU GPL.</p>
+
+<p>To do this two-step relicensing, you need to first write a piece of
+code which you can license under the CeCILL v2, or find a
+suitable module already available that way, and add it to the
+program.  Adding that code to the EUPL-covered program provides
+grounds to relicense it to the CeCILL v2.  Then you need to write a
+piece of code which you can license under the GPLv3+, or find a
+suitable module already available that way, and add it to the program.
+Adding that code to the CeCILL-covered program provides grounds to
+relicense it to GPLv3+.</p></dd>
+
+<dt><a id="gnuplot"
+       href="http://directory.fsf.org/wiki/License:Gnuplot">
+    Gnuplot license</a>
+    <span class="anchor-reference-id">(<a href="#gnuplot">#gnuplot</a>)</span></dt>
+<dd><p>This is a free software license, incompatible with the GNU GPL.</p></dd>
+
+<dt><a id="IBMPL"
+       href="http://directory.fsf.org/wiki/License:IBMPLv1.0">
+    IBM Public License, Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#IBMPL">#IBMPL</a>)</span></dt>
+<dd>
+<p>This is a free software license.  Unfortunately, it has a choice of law
+clause which makes it incompatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="josl"
+       href="http://directory.fsf.org/wiki/License:JabberOSLv1.0">
+    Jabber Open Source License, Version 1.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#josl">#josl</a>)</span></dt>
+<dd>
+<p>The license is a free software license, incompatible with the GPL.
+It permits relicensing under a certain class of licenses, those which
+include all the requirements of the Jabber license.  The GPL is not a
+member of that class, so the Jabber license does not permit relicensing
+under the GPL.  Therefore, it is not compatible.</p></dd>
+
+
+<dt><a id="LPPL-1.3a" href="http://directory.fsf.org/wiki/License:LPPLv1.3a">
+    LaTeX Project Public License 1.3a</a>
+    <span class="anchor-reference-id">
+       (<a href="#LPPL-1.3a">#LPPL-1.3a</a>)</span></dt>
+<dd>
+<p>We have not written a full analysis of this license, but it is a free
+software license, with less stringent requirements on distribution than
+LPPL&nbsp;1.2 (described next).  It is still incompatible with the GPL
+because some modified versions must include a copy of or pointer to an
+unmodified version.</p></dd>
+
+
+<dt><a id="LPPL-1.2" href="http://directory.fsf.org/wiki/License:LPPLv1.2">
+    LaTeX Project Public License 1.2</a>
+    <span class="anchor-reference-id">
+       (<a href="#LPPL-1.2">#LPPL-1.2</a>)</span></dt>
+<dd>
+<p>This license is an incomplete statement of the distribution terms
+for LaTeX.  As far as it goes, it is a free software license, but
+incompatible with the <a
+href="/licenses/gpl.html">GPL</a> because it has
+many requirements that are not in the GPL.</p>
+
+<p>This license contains complex and annoying restrictions on how to
+publish a modified version, including one requirement that falls just
+barely on the good side of the line of what is acceptable: that any
+modified file must have a new name.</p>
+
+<p>The reason this requirement is acceptable for LaTeX is that TeX has
+a facility to allow you to map file names, to specify &ldquo;use file
+bar when file foo is requested&rdquo;.  With this facility, the
+requirement is merely annoying; without the facility, the same
+requirement would be a serious obstacle, and we would have to conclude
+it makes the program nonfree.</p>
+
+<p>This condition may cause trouble with some major modifications.
+For example, if you wanted to port an LPPL-covered work to another
+system that lacked a similar remapping facility, but still required
+users to request this file by name, you would need to implement a
+remapping facility too to keep this software free.  That would be a
+nuisance, but the fact that a license would make code nonfree if
+transplanted into a very different context does not make it nonfree in
+the original context.</p>
+
+<p>The LPPL says that some files, in certain versions of LaTeX, may have
+additional restrictions, which could render them nonfree.  For this
+reason, it may take some careful checking to produce a version of
+LaTeX that is free software.</p>
+
+<p>The LPPL makes the controversial claim that simply having files on a
+machine where a few other people could log in and access them in
+itself constitutes distribution.  We believe courts would not uphold
+this claim, but it is not good for people to start making the claim.</p>
+
+<p>Please do not use this license for any other project.</p>
+
+<p>Note: These comments are for version 1.2 (3 Sep 1999) of the LPPL.</p></dd>
+
+
+<dt><a id="lucent102" href="http://directory.fsf.org/wiki/License:LucentPLv1.02">
+    Lucent Public License Version 1.02 (Plan 9 license)</a>
+    <span class="anchor-reference-id">
+       (<a href="#lucent102">#lucent102</a>)</span></dt>
+<dd>
+<p>This is a free software license, but it is incompatible with the GNU GPL
+because of its choice of law clause.  We recommend that you not use this
+license for new software that you write, but it is ok to use and improve
+Plan&nbsp;9 under this license.</p></dd>
+
+
+<dt><a id="ms-pl"
+       href="http://directory.fsf.org/wiki/License:MsPL">
+    Microsoft Public License (Ms-PL)</a>
+    <span class="anchor-reference-id">(<a href="#ms-pl">#ms-pl</a>)</span></dt>
+<dd>
+<p>This is a free software license; it has a copyleft that is not
+strong, but incompatible with the GNU GPL.  We urge you not to use
+the Ms-PL for this reason.</p></dd>
+
+
+<dt><a id="ms-rl"
+       href="http://directory.fsf.org/wiki/License:MsRL">
+    Microsoft Reciprocal License (Ms-RL)</a>
+    <span class="anchor-reference-id">(<a href="#ms-rl">#ms-rl</a>)</span></dt>
+<dd>
+<p>This is a free software license.  It's based on the <a
+href="#ms-pl">Microsoft Public License</a>, and has an additional clause
+to make the copyleft just a little bit stronger.  It's also incompatible
+with the GNU GPL, and we urge you not to use the Ms-RL for this
+reason.</p></dd>
+
+
+<dt><a id="MPL" href="http://directory.fsf.org/wiki/License:MPLv1.1">
+     Mozilla Public License (MPL) version 1.1</a>
+    <span class="anchor-reference-id">(<a href="#MPL">#MPL</a>)</span></dt>
+<dd>
+<p>This is a free software license which is not a strong copyleft;
+unlike the <a href="#X11License">X11 license</a>, it has some complex
+restrictions that make it incompatible with
+the <a href="/licenses/gpl.html">GNU GPL</a>.  That is, a module
+covered by the GPL and a module covered by the MPL cannot legally be
+linked together.  We urge you not to use the MPL 1.1 for this
+reason.</p>
+
+<p>However, MPL 1.1 has a provision (section 13) that allows a program
+(or parts of it) to offer a choice of another license as well.  If part
+of a program allows the GNU GPL as an alternate choice, or any other
+GPL-compatible license as an alternate choice, that part of the program
+has a GPL-compatible license.</p>
+
+<p>MPL version 2.0 has a number of improvements, including
+GPL-compatibility by default.  <a href="#MPL-2.0">See that entry</a>
+for details.</p></dd>
+
+
+<dt><a id="NOSL" href="http://directory.fsf.org/wiki/License:NOSLv1.0">
+    Netizen Open Source License (NOSL), Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#NOSL">#NOSL</a>)</span></dt>
+<dd>
+<p>This is a free software license that is essentially the same as the
+Mozilla Public License version 1.1.  Like the MPL, the NOSL has some
+complex restrictions that make it incompatible with the GNU GPL.  That
+is, a module covered by the GPL and a module covered by the NOSL cannot
+legally be linked together.  We urge you not to use the NOSL for this
+reason.</p></dd>
+
+
+<dt><a id="NPL" href="http://directory.fsf.org/wiki?title=License:NPLv1.1">
+    Netscape Public License (NPL)</a>, versions 1.0 and 1.1
+    <span class="anchor-reference-id">(<a href="#NPL">#NPL</a>)</span></dt>
+<dd>
+<p>This is a free software license, not a strong copyleft, and
+incompatible with the GNU GPL.  It consists of the Mozilla Public
+License version 1.1 with an added clause that permits Netscape to use
+your added code <em>even in their proprietary versions of the
+program</em>.  Of course, they do not give <em>you</em> permission to
+use <em>their</em> code in the analogous way.  We urge you not to use
+the NPL.</p></dd>
+
+
+<dt><a id="Nokia" href="http://directory.fsf.org/wiki/License:NokOSv1.0a">
+    Nokia Open Source License</a>
+    <span class="anchor-reference-id">(<a href="#Nokia">#Nokia</a>)</span></dt>
+<dd>
+<p>This is similar to the Mozilla Public License version 1: a free
+software license incompatible with the GNU GPL.</p></dd>
+
+
+<dt><a id="oldOpenLDAP" href="http://directory.fsf.org/wiki/License:OpenLDAPv2.3">
+    Old OpenLDAP License, Version 2.3</a>
+    <span class="anchor-reference-id">
+       (<a href="#oldOpenLDAP">#oldOpenLDAP</a>)</span></dt>
+<dd>
+<p>This is a permissive non-copyleft free software license with a few
+requirements (in sections 4 and 5) that render it incompatible with
+the GNU GPL.  Note that the latest version of OpenLDAP has
+a <a href="#newOpenLDAP">different license</a> that is compatible with
+the GNU GPL.</p>
+
+<p>We urge you not to use the older OpenLDAP license for software you
+write.  However, there is no reason to avoid running programs that have
+been released under this license.</p></dd>
+
+<!-- Published primarily by www.opensource.org -->
+<dt><a id="OSL" href="http://directory.fsf.org/wiki/License:OSLv3.0">
+    Open Software License, all versions through 3.0</a>
+    <span class="anchor-reference-id">(<a href="#OSL">#OSL</a>)</span></dt>
+<dd>
+<p>The Open Software License is a free software license.  It is
+incompatible with the GNU GPL in several ways.</p>
+
+<p><a id="OSLRant"></a>Recent versions of the Open Software License have
+a term which requires distributors to try to obtain explicit assent to
+the license.  This means that distributing OSL software on ordinary FTP
+sites, sending patches to ordinary mailing lists, or storing the
+software in an ordinary version control system, is arguably a violation
+of the license and would subject you to possible termination of the
+license.  Thus, the Open Software License makes it very difficult to
+develop software using the ordinary tools of free software development.
+For this reason, and because it is incompatible with the GPL, we
+recommend that no version of the OSL be used for any software.</p>
+
+<p>We urge you not to use the Open Software License for software you
+write.  However, there is no reason to avoid running programs that
+have been released under this license.</p></dd>
+
+
+<dt><a id="OpenSSL" href="http://directory.fsf.org/wiki/License:OpenSSL">
+    OpenSSL license</a>
+    <span class="anchor-reference-id">
+       (<a href="#OpenSSL">#OpenSSL</a>)</span></dt>
+<dd>
+<p>The license of OpenSSL is a conjunction of two licenses, one of them
+being the license of SSLeay.  You must follow both.  The combination
+results in a copyleft free software license that is incompatible with
+the GNU GPL.  It also has an advertising clause like the <a
+href="#OriginalBSD">original BSD license</a> and the <a
+href="#apache1">Apache&nbsp;1 license</a>.</p>
+
+<p>We recommend using GNUTLS instead of OpenSSL in software you write.
+However, there is no reason not to use OpenSSL and applications that
+work with OpenSSL.</p></dd>
+
+
+<dt><a id="Phorum" href="http://directory.fsf.org/wiki/License:Phorum2.0">
+    Phorum License, Version 2.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#Phorum">#Phorum</a>)</span></dt>
+<dd>
+<p>This is a free software license but it is incompatible with the <a
+href="/licenses/gpl.html">GPL</a>.  Section 5 makes
+the license incompatible with the GPL.</p></dd>
+
+
+<dt><a id="PHP-3.01" href="http://directory.fsf.org/wiki/License:PHPv3.01">
+    PHP License, Version 3.01</a>
+    <span class="anchor-reference-id">
+       (<a href="#PHP-3.01">#PHP-3.01</a>)</span></dt>
+<dd>
+<p>This license is used by most of PHP4.  It is a non-copyleft free
+software license.  It is incompatible with the GNU GPL because it
+includes strong restrictions on the use of &ldquo;PHP&rdquo; in the
+name of derived products.</p>
+
+<p>We recommend that you not use this license for anything except PHP
+add-ons.</p></dd>
+
+
+<dt><a id="PythonOld"
+       href="http://directory.fsf.org/wiki/License:Python1.6b1">
+    License of Python 1.6b1 through 2.0 and 2.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#PythonOld">#PythonOld</a>)</span></dt>
+<dd>
+<p>This is a free software license but is incompatible with the GNU GPL.
+The primary incompatibility is that this Python license is governed by the
+laws of the State of Virginia, in the USA, and the GPL does not permit
+this.</p></dd>
+
+
+<dt><a id="QPL" href="http://directory.fsf.org/wiki/License:QPLv1.0">
+    Q Public License (QPL), Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#QPL">#QPL</a>)</span></dt>
+<dd>
+<p>This is a non-copyleft free software license which is incompatible with
+the GNU GPL.  It also causes major practical inconvenience, because modified
+sources can only be distributed as patches.</p>
+
+<p>We recommend that you avoid using the QPL for anything that you write,
+and use QPL-covered software packages only when absolutely necessary.
+However, this avoidance no longer applies to Qt itself, since Qt is
+now also released under the GNU GPL.</p>
+
+<p>Since the QPL is incompatible with the GNU GPL, you cannot take a
+GPL-covered program and QPL-covered program and link them together, no
+matter how.</p>
+
+<p>However, if you have written a program that uses QPL-covered library
+(called FOO), and you want to release your program under the GNU GPL,
+you can easily do that.  You can resolve the conflict <em>for your
+program</em> by adding a notice like this to it:</p>
+<pre>
+  As a special exception, you have permission to link this program
+  with the FOO library and distribute executables, as long as you
+  follow the requirements of the GNU GPL in regard to all of the
+  software in the executable aside from FOO.
+</pre>
+
+<p>You can do this, legally, if you are the copyright holder for the
+program.  Add it in the source files, after the notice that says
+the program is covered by the GNU GPL.</p></dd>
+
+
+<dt><a id="RPSL"
+       href="http://directory.fsf.org/wiki/License:RPSLv1.0">
+       RealNetworks Public Source License (RPSL), Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#RPSL">#RPSL</a>)</span></dt>
+<dd>
+<p>The RPSL is a free software license that is GPL-incompatible for a
+number of reasons: it requires that derivative works be licensed under the
+terms of the RPSL, and mandates that any litigation take place in Seattle,
+Washington.</p> </dd>
+
+
+<dt><a id="SISSL"
+       href="http://www.openoffice.org/licenses/sissl_license.html">
+       Sun Industry Standards Source License 1.0</a>
+    <span class="anchor-reference-id">(<a href="#SISSL">#SISSL</a>)</span></dt>
+<dd>
+<p>This is a free software license, not a strong copyleft, which is
+incompatible with the GNU GPL because of details rather than any
+major policy.</p></dd>
+
+
+<dt><a id="SPL" href="http://directory.fsf.org/wiki/License:SPLv1.0">
+    Sun Public License</a>
+    <span class="anchor-reference-id">(<a href="#SPL">#SPL</a>)</span></dt>
+<dd>
+<p>This is essentially the same as the Mozilla Public License version 1: a free
+software license incompatible with the GNU GPL.  Please do not confuse
+this with the <a href="#SunCommunitySourceLicense">Sun Community Source
+License</a>, which is not a free software license.</p></dd>
+
+
+<dt><a id="xinetd"
+       href="http://directory.fsf.org/wiki/License:Xinetd">
+    License of xinetd</a>
+    <span class="anchor-reference-id">
+       (<a href="#xinetd">#xinetd</a>)</span></dt>
+<dd>
+<p>This is a copyleft free software license, incompatible with the GPL.
+It is incompatible because it places extra restrictions on
+redistribution of modified versions that contradict the redistribution
+requirements in the GPL.</p></dd>
+
+
+<dt><a id="Yahoo"
+       href="http://www.zimbra.com/license/yahoo_public_license_1.1.html">
+    Yahoo! Public License 1.1</a>
+    <span class="anchor-reference-id">(<a href="#Yahoo">#Yahoo</a>)</span></dt>
+<dd>
+<p>This is a free software license.  It has a copyleft similar to the
+one found in the Mozilla Public License.  It also has a choice of law
+clause in section&nbsp;7.  These features both make the license
+GPL-incompatible.  The license also unfortunately uses the term
+&ldquo;<a href="/philosophy/not-ipr.html">intellectual
+property</a>&rdquo;.</p></dd>
+
+
+<dt><a id="Zend" href="http://directory.fsf.org/wiki/License:ZELv2.0">
+    Zend License, Version 2.0</a>
+    <span class="anchor-reference-id">(<a href="#Zend">#Zend</a>)</span></dt>
+<dd>
+<p>This license is used by one part of PHP4.  It is a non-copyleft free
+software license which is incompatible with the GNU GPL, and has <a
+href="/philosophy/bsd.html">practical problems</a>
+like those of the original BSD license.</p>
+
+<p>We recommend that you not use this license for anything you write.</p></dd>
+
+
+<dt><a id="Zimbra"
+       href="http://www.zimbra.com/license/zimbra-public-license-1-3.html">
+    Zimbra Public License 1.3</a>
+    <span class="anchor-reference-id">
+       (<a href="#Zimbra">#Zimbra</a>)</span></dt>
+<dd>
+<p>This license is identical to the <a href="#Yahoo">Yahoo! Public
+License 1.1</a>, except that the license is provided by VMWare instead
+of Yahoo!.  Our comments there apply here as well; this is a
+GPL-incompatible, partial copyleft free software license.</p></dd>
+
+
+<dt><a id="Zope"
+href="http://web.archive.org/web/20000816090640/http://www.zope.org/Resources/ZPL">
+    Zope Public License version 1</a>
+    <span class="anchor-reference-id">
+       (<a href="#Zope">#Zope</a>)</span></dt>
+<dd>
+<p>This is a lax, fairly permissive non-copyleft free software
+license with <a href="/philosophy/bsd.html">practical
+problems</a> like those of the original BSD license, including
+incompatibility with the <a
+href="/licenses/gpl.html">GNU GPL</a>.</p>
+
+<p>We urge you not to use the ZPL version 1 for software you write.
+However, there is no reason to avoid running programs that have been
+released under this license, such as previous versions of Zope.</p>
+<p><a href="#Zope20">Version 2.0 of the Zope Public License</a> is
+GPL-compatible.</p></dd>
+
+</dl> <!-- end class="orange" -->
+
+<hr class="separator" />
+
+<div class="big-subsection">
+<span id="NonFreeSoftwareLicense"></span>
+<h4 id="NonFreeSoftwareLicenses">
+    Nonfree Software Licenses</h4>
+<span class="anchor-reference-id">
+    (<a href="#NonFreeSoftwareLicenses">#NonFreeSoftwareLicenses</a>)</span>
+</div>
+
+<p><strong>The following licenses <em>do not qualify</em> as <a
+href="/philosophy/free-sw.html">free software</a>
+licenses.  A nonfree license is automatically incompatible with the <a
+href="#GNUGPL">GNU GPL</a>.</strong></p>
+
+<p>Of course, we urge you to avoid using nonfree software licenses, and
+to avoid nonfree software in general.</p>
+
+<p>There is no way we could list all the known nonfree software
+licenses here; after all, every proprietary software company has its
+own.  We focus here on licenses that are often mistaken for free
+software licenses but are, in fact, <strong>not</strong> free software
+licenses.</p>
+
+<p>We have provided links to these licenses when we can do so without
+violating our general policy: that we do not make links to sites that
+promote, encourage or facilitate the use of nonfree software packages.
+The last thing we want to do is give any nonfree program some gratis
+publicity that might encourage more people to use it.  For the same
+reason, we have avoided naming the programs for which a license is used,
+unless we think that for specific reasons it won't backfire.</p>
+
+
+<dl class="red">
+
+<dt><a id="NoLicense">No license</a>
+    <span class="anchor-reference-id">
+       (<a href="#NoLicense">#NoLicense</a>)</span></dt>
+<dd>
+<p>If source code does not carry a license to give users the four
+essential freedoms, then unless it has been explicitly and validly
+placed in the public domain, it is not free software.</p>
+
+<p>Some developers think that code with no license is
+automatically <a href="#PublicDomain">in the public domain</a>.  That
+is not true under today's copyright law; rather, all copyrightable
+works are copyrighted by default.  This includes programs.  Absent a
+license to grant users freedom, they don't have any.  In some
+countries, users that download code with no license may infringe
+copyright merely by compiling it or running it.</p>
+
+<p>In order for a program to be free, its copyright holders must
+explicitly grant users the <a href="/philosophy/free-sw.html"> four
+essential freedoms</a>.  The document with which they do so is called
+a <em>free software license</em>.  This is what free software
+licenses are for.</p>
+
+<p>Some countries allow authors to put code in the public domain, but
+that requires explicit action.  If you wish to do that, the method we
+recommend is to use <a href="#CC0">CC0</a>, which also works in other
+countries by putting on a license that is more or less equivalent to
+public domain.  However, in most cases it
+is <a href="/licenses/license-recommendations.html"> better to
+copyleft your code</a> to assure that freedom reaches all users of the
+code.</p>
+
+<p>Code written by employees of the US government is a special
+exception, since US copyright law explicitly puts that in the public
+domain; but this does not apply to works that the US pays a company to
+write.  It also does not apply to other countries, many of which do
+allow the state to have a copyright on government writings.</p>
+</dd>
+
+<dt><a id="Aladdin">Aladdin Free Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#Aladdin">#Aladdin</a>)</span></dt>
+<dd>
+<p>Despite its name, this is not a free software license because it
+does not allow charging for distribution, and largely prohibits simply
+packaging software licensed under it with anything for which a charge
+is made.</p></dd>
+
+
+<dt><a id="apsl1" href=
+    "http://directory.fsf.org/wiki/License:APSLv1.x">
+    Apple Public Source License (APSL), version 1.x</a>
+    <span class="anchor-reference-id">(<a href="#apsl1">#apsl1</a>)</span></dt>
+<dd>
+<p>Versions 1.0, 1.1 and 1.2 are <a
+href="/philosophy/historical-apsl.html">not free
+software licenses</a>.  Please
+don't use these licenses, and we urge you to avoid any software that has
+been released under them.  <a href="#apsl2">Version 2.0 of the APSL</a>
+is a free software license.</p></dd>
+
+
+<dt><a id="ArtisticLicense" href="http://directory.fsf.org/wiki/License:Artistic_v1.0">Artistic License 1.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#ArtisticLicense">#ArtisticLicense</a>)</span></dt>
+<dd>
+<p>We cannot say that this is a free software license because it is too
+vague; some passages are too clever for their own good, and their meaning is
+not clear.  We urge you to avoid using it, except as part of
+<a href="#PerlLicense">the disjunctive license of Perl</a>.</p></dd>
+
+
+<dt><a id="ATTPublicLicense">AT&amp;T Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#ATTPublicLicense">#ATTPublicLicense</a>)</span></dt>
+<dd>
+<p>The AT&amp;T Public License is a nonfree license.  It has several
+serious problems:</p>
+
+<ol>
+<li>The patent license is voided by any modification, no matter how
+small, of the pertinent code.</li>
+<li>You must demand a written agreement when you distribute the
+sources or patches.</li>
+<li>It requires notifying AT&amp;T if you distribute a patch.</li>
+<li>Your license can be terminated through no fault of yours, under
+section 8/3.</li>
+<li>It makes compliance with export control laws a condition
+of the license.</li>
+<li>Some versions of the license require you to provide support.</li>
+<li>Some versions of the license say you cannot sell a copy of the
+software for more than the expense of distribution.</li>
+</ol>
+
+<p>The license has two other obnoxious features:</p>
+<ol>
+<li>It has a very broad reverse license to AT&amp;T, which goes far beyond
+the use of your code, even your code modified.</li>
+<li>It asserts one needs a license from AT&amp;T to make a link to their
+web site.  This is not an immediate practical problem, since the
+license says it gives permission to make such a link.  (Anyway, people
+shouldn't make links to sites about nonfree software.)  But such
+a claim should not be made or propagated.</li>
+</ol><p></p></dd>
+
+
+<dt><a id="cpol">Code Project Open License, version 1.02</a>
+    <span class="anchor-reference-id">
+       (<a href="#cpol">#cpol</a>)</span></dt>
+<dd>
+<p>The Code Project Open License is not a free software license.
+Section 5.6 restricts how you can use the work.  Section 5.4 prohibits
+commercial distribution of the software by itself&mdash;and depending
+on how you read section 3.4, you may not have permission to distribute
+the software by itself at all.</p></dd>
+
+<dt><a id="eCos11" href="http://directory.fsf.org/wiki/License:ECosPLv1.1">eCos Public License, version 1.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#eCos11">#eCos11</a>)</span></dt>
+<dd>
+<p>This was the old license of eCos.  It is not a free software
+license, because it requires sending every published modified version
+to a specific initial developer.  There are also some other words in
+this license whose meaning we're not sure of that might also be
+problematic.</p>
+
+<p>Today <a href="#eCos20">eCos is available</a> under the GNU GPL with
+additional permission for linking with nonfree programs.</p></dd>
+
+
+<dt><a id="DOR"
+ href="http://dorepository.org/download.html">
+   CNRI Digital Object Repository License Agreement</a>
+    <span class="anchor-reference-id">
+       (<a href="#DOR">#DOR</a>)</span></dt>
+<dd>
+<p>This license is non-free because of Article 3, which arguably
+includes a requirement not to violate the license of <em>any</em>
+program that the user runs&mdash;even proprietary programs.</p></dd>
+
+<dt><a id="GPL-PA"
+ href="http://directory.fsf.org/wiki/License:GPL-PA">
+   GPL for Computer Programs of the Public Administration</a>
+    <span class="anchor-reference-id">
+       (<a href="#GPL-PA">#GPL-PA</a>)</span></dt>
+<dd>
+<p>The GPL-PA (whose original name in Portuguese is
+&ldquo;Licen&ccedil;a P&uacute;blica Geral para
+Administra&ccedil;&atilde;o P&uacute;blica&rdquo;) is nonfree for
+several reasons:</p>
+
+<ul>
+<li>It permits use only in &ldquo;normal circumstances&rdquo;.</li>
+<li>It does not allow distribution of source code without binaries.</li>
+<li>Its permissions lapse after 50 years.</li>
+</ul><p></p></dd>
+
+
+<dt><a id="HESSLA" href="http://www.hacktivismo.com/about/hessla.php">
+    Hacktivismo Enhanced-Source Software License Agreement</a> (HESSLA)
+    <span class="anchor-reference-id">
+       (<a href="#HESSLA">#HESSLA</a>)</span></dt>
+<dd>
+<p>This is not a free software license, because it <a
+href="/licenses/hessla.html">restricts what jobs
+people can use the software for, and restricts in substantive ways what
+jobs modified versions of the program can do</a>.</p></dd>
+
+
+<dt><a id="Jahia" href="http://web.archive.org/web/20050317081359/http://www.jahia.org/jahia/page145.html">
+    Jahia Community Source License</a>
+    <span class="anchor-reference-id">(<a href="#Jahia">#Jahia</a>)</span></dt>
+<dd>
+<p>The Jahia Community Source License is not a free software license.  Use
+of the source code is limited to research purposes.</p></dd>
+
+
+<dt><a id="JSON" href="http://directory.fsf.org/wiki/License:JSON">
+    The JSON License</a>
+    <span class="anchor-reference-id">(<a href="#JSON">#JSON</a>)</span></dt>
+<dd>
+<p>This is the license of the original implementation of the JSON data
+interchange format.  This license uses the Expat license as a base,
+but adds a clause mandating: &ldquo;The Software shall be used for Good, not
+Evil.&rdquo;  This is a restriction on usage and thus conflicts with freedom
+0.  The restriction might be unenforcible, but we cannot presume that.
+Thus, the license is nonfree.</p></dd>
+
+
+<dt><a id="ksh93">Old license of ksh93</a>
+    <span class="anchor-reference-id">(<a href="#ksh93">#ksh93</a>)</span></dt>
+<dd>
+<p>ksh93 used to be shipped with an original license that was not a free
+software license.  One reason for this is that it required that all changes
+be sent to the developer.</p>
+
+<p>ksh93 is now released under the <a href="#CommonPublicLicense10">Common
+Public License</a>.</p></dd>
+
+
+<dt><a id="Lha" href=
+ "http://directory.fsf.org/wiki/License:Lha">
+    License of Lha</a>
+    <span class="anchor-reference-id">(<a href="#Lha">#Lha</a>)</span></dt>
+<dd>
+<p>The lha license must be considered nonfree because it is so vague that
+you cannot be sure what permissions you have.</p></dd>
+
+
+<dt><a id="Ms-SS" href=
+     "http://directory.fsf.org/wiki/License:Ms-SS">
+    Microsoft's Shared Source CLI, C#, and Jscript License</a>
+    <span class="anchor-reference-id">(<a href="#Ms-SS">#Ms-SS</a>)</span></dt>
+<dd>
+<p>This license does not permit commercial distribution, and only allows
+commercial use under certain circumstances.</p>
+
+<p>Microsoft has other licenses which it describes as &ldquo;Shared
+Source&rdquo;, some of which have different restrictions.</p></dd>
+
+
+<dt><a id="NASA" href="http://directory.fsf.org/wiki/License:NASA-OSA_v1.3">
+    NASA Open Source Agreement</a>
+    <span class="anchor-reference-id">(<a href="#NASA">#NASA</a>)</span></dt>
+<dd>
+<p>The NASA Open Source Agreement, version 1.3, is not a free software
+license because it includes a provision requiring changes to be your
+&ldquo;original creation&rdquo;.  Free software development depends on
+combining code from third parties, and the NASA license doesn't permit
+this.</p>
+
+<p>We urge you not to use this license.  In addition, if you are a
+United States citizen, please write to NASA and call for the use of a
+truly free software license.</p></dd>
+
+
+<dt><a id="OPL"></a> <!-- old id, leave for compatibility -->
+    <a id="OpenPublicL" href="http://directory.fsf.org/wiki/License:OpenPLv1.0">
+    Open Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#OpenPublicL">#OpenPublicL</a>)</span></dt>
+<dd>
+<p>This is not a free software license, because it requires sending
+every published modified version to a specific initial developer.
+There are also some other words in this license whose meaning we're
+not sure of that might also be problematic.</p></dd>
+
+
+<dt><a id="PPL" href="http://directory.fsf.org/wiki/License:PPL">Peer-Production License</a>
+    <span class="anchor-reference-id">(<a href="#PPL">#PPL</a>)</span></dt>
+<dd>
+<p>The Peer-Production License is not a free software license because
+it restricts who can redistribute the program and for what purpose.
+It also does not give anyone permission to run the program.</p>
+
+<p>The PPL has several provisions designed specifically for artistic
+performances, and we have nothing against its use for art works;
+however, people reportedly advocate its use for software too.  The PPL
+should not be used for software, manuals, or other works that ought to
+be free.</p></dd>
+
+<dt><a id="PINE" href="http://directory.fsf.org/wiki/License:PINE">License of PINE</a>
+    <span class="anchor-reference-id">(<a href="#PINE">#PINE</a>)</span></dt>
+<dd>
+<p>The license of PINE is not a free software license because it mostly
+prohibits the distribution of modified versions.  It also restricts the
+media that can be used for <a
+href="/philosophy/selling.html">selling
+copies</a>.</p>
+
+<p>Please note that a successor to Pine, Alpine, is released under the <a
+href="#apache2">Apache License, version 2.0</a>.</p></dd>
+
+
+<dt><a id="Plan9">Old Plan 9 license</a>
+    <span class="anchor-reference-id">(<a href="#Plan9">#Plan9</a>)</span></dt>
+<dd>
+<p>This is not a free software license; it lacks essential freedoms such
+as the right to make and use private changes.  Of course you should not
+use this license, and we urge you to avoid any software that has been
+released under it.  <a
+href="/philosophy/plan-nine.html">A detailed
+discussion of this license is also available</a>.</p>
+
+<p>In September 2002 it was observed that the published license for
+Plan&nbsp;9 had been modified, adding more restrictions to it, although
+its date still said 09/20/00.  However, a <a href="#lucent102">further
+license change in 2003 made Plan&nbsp;9 free software</a>.</p></dd>
+
+
+<dt><a id="RPL"
+    href="http://directory.fsf.org/wiki/License:ReciprocalPLv1.3">
+    Reciprocal Public License</a>
+    <span class="anchor-reference-id">(<a href="#RPL">#RPL</a>)</span></dt>
+<dd>
+<p>The Reciprocal Public License is a nonfree license because of three
+problems.  1.&nbsp;It puts limits on prices charged for an initial copy.
+2.&nbsp;It requires notification of the original developer for
+publication of a modified version.  3.&nbsp;It requires publication of
+any modified version that an organization uses, even privately.</p></dd>
+
+
+<dt><a id="Scilab" href="http://directory.fsf.org/wiki/License:Scilab-old">Scilab license</a>
+    <span class="anchor-reference-id">
+       (<a href="#Scilab">#Scilab</a>)</span></dt>
+<dd>
+<p>This is not a free software license because it does not allow
+commercial distribution of a modified version.  Thankfully, starting from version 5.0.0, the Scilab software is free software, released under CeCILL version&nbsp;2.</p></dd>
+
+
+<dt><a id="Scratch" href="http://directory.fsf.org/wiki/License:Scratch">Scratch</a>
+    <span class="anchor-reference-id">
+       (<a href="#Scratch">#Scratch</a>)</span></dt>
+<dd>
+<p>This is not a free software license because it does not allow
+commercial redistribution.  In addition, condition 4 substantively
+restricts the functionality of modified versions.</p></dd>
+
+
+<dt><a id="SML" href="http://directory.fsf.org/wiki/License:SimpleM">
+    Simple Machines License</a>
+    <span class="anchor-reference-id">(<a href="#SML">#SML</a>)</span></dt>
+<dd><p>Despite the name, this is a software license, and it's nonfree
+for several reasons:</p>
+<ul><li>You must get the licensor's permission before distributing the
+software.</li>
+<li>You <a href="/philosophy/selling.html">cannot sell copies of the
+software</a>.</li>
+<li>It's possible that your license can be terminated if you received
+the software from someone who did not obey the license's terms.</li>
+</ul><p></p></dd>
+
+
+<dt><a id="Squeak" href="http://directory.fsf.org/wiki/License:Squeak-old">Old Squeak license</a>
+    <span class="anchor-reference-id">
+       (<a href="#Squeak">#Squeak</a>)</span></dt>
+<dd>
+<p>The original Squeak license, as applied to software, is not a free
+software license because it requires all users in whatever country to
+obey US export control laws.  As applied to fonts, it also does not
+permit modification.</p>
+
+<p>In addition, it has a requirement for users to indemnify the
+developer, which is enough to make many users think twice about using it
+at all.</p>
+
+<p>Recent versions of Squeak (from 4.0 on) are released under an
+<a href="#Expat">Expat-style License</a> with some portions of the code
+under the <a href="#apache2">Apache License&nbsp;2.0</a>.</p></dd>
+
+
+<dt><a id="SunCommunitySourceLicense" href="http://directory.fsf.org/wiki/License:SunCSLv2.8">Sun Community Source License</a>
+    <span class="anchor-reference-id">
+       (<a href="#SunCommunitySourceLicense">#SunCommunitySourceLicense</a>)
+    </span></dt>
+<dd>
+<p>This is not a free software license; it lacks essential freedoms such
+as publication of modified versions.  Please don't use this license, and
+we urge you to avoid any software that has been released under
+it.</p></dd>
+
+<dt><a id="SunSolarisSourceCode">
+    Sun Solaris Source Code (Foundation Release) License, Version 1.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#SunSolarisSourceCode">#SunSolarisSourceCode</a>)</span></dt>
+<dd>
+<p>This is not a free software license.  The license prohibits
+redistribution, prohibits commercial use of the software, and can be
+revoked.</p></dd>
+
+
+<dt><a id="Sybase"></a>
+    <a id="Watcom" href="http://www.openwatcom.org/index.php/Open_Watcom_Public_License">
+    Sybase Open Watcom Public License version 1.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#Watcom">#Watcom</a>)</span></dt>
+<dd>
+<p>This is not a free software license. It requires you to publish the
+source code publicly whenever you &ldquo;Deploy&rdquo; the covered
+software, and &ldquo;Deploy&rdquo; is defined to include many kinds of
+private use.</p></dd>
+
+
+<dt><a id="SystemC-3.0"
+    href="http://www.accellera.org/about/policies/SystemC_Open_Source_License.pdf">
+    SystemC &ldquo;Open Source&rdquo; License, Version 3.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#SystemC-3.0">#SystemC-3.0</a>)</span></dt>
+<dd>
+<p>This license requires all recipients to proactively help the licensor
+enforce its trademarks.  This is an unreasonable condition to place on
+users' rights, so the license is nonfree.  It also has other practical
+problems: some of the requirements are vague, and it uses the term <a
+href="/philosophy/not-ipr.html">&ldquo;intellectual
+property&rdquo;</a>.</p>
+
+<p>Despite the name, it is not clear whether this license would
+qualify as &ldquo;open source&rdquo;.  However, our judgment of it is
+not based on that.
+</p></dd>
+
+
+<dt><a id="Truecrypt-3.0"
+    href="http://directory.fsf.org/wiki/License:TrueCrypt">
+    Truecrypt license 3.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#Truecrypt-3.0">#Truecrypt-3.0</a>)</span></dt>
+<dd>
+<p>This license is nonfree for several reasons.  It says that if you
+don't understand the license you may not use the program.  It puts
+conditions on allowing others to run your copy.  It puts conditions on
+separate programs that &ldquo;depend on&rdquo; Truecrypt.  The
+trademark condition applies to &ldquo;associated materials&rdquo;.
+</p>
+<p>There are other points in the license which seem perhaps
+unacceptable, and in our uncertainty about them we delayed in posting
+our evaluation.  We have posted it now to explain why we do not mourn
+the demise of Truecrypt.  There
+are <a href="http://directory.fsf.org/wiki?search=disk+encryption">free
+programs that do the same job</a>.</p></dd>
+
+
+<dt><a id="UtahPublicLicense"
+       href="http://www.cs.utah.edu/~gk/teem/txt/LICENSE.txt">
+    University of Utah Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#UtahPublicLicense">#UtahPublicLicense</a>)</span></dt>
+<dd>
+<p>The University of Utah Public License is a nonfree license because
+it does not allow commercial redistribution.  It also purports to
+restrict commercially running the software and even commercially giving
+consultation about it.  Those restrictions are probably not legally
+enforceable under US copyright law, but they might be in some countries;
+even asserting them is outrageous.</p>
+
+<p>The use of this license by the University of Utah exemplifies a <a
+href="http://www.colorado.edu/Sociology/gimenez/papers/keptu.html">dangerous
+trend for universities to restrict knowledge</a> rather than
+contributing it to the public.</p>
+
+<p>If a university tries to impose a license like this on the software
+you are writing, don't give up hope.  <a
+href="/philosophy/university.html">With persistence
+and firmness, and some forethought, it is possible to prevail over
+money-grabbing university administrators.</a></p>
+
+<p>The earlier you raise the issue, the better.</p></dd>
+
+
+<dt><a id="YaST">
+    YaST License</a>
+    <span class="anchor-reference-id">(<a href="#YaST">#YaST</a>)</span></dt>
+<dd>
+<p>This is not a free software license.  The license prohibits
+distribution for a fee, and that makes it impossible for the software to
+be included in the many CD-ROM free software collections that are sold
+by companies and by organizations.</p>
+
+<p>There may be another problem in section 2a, but a word seems to be
+missing there, so it is hard to be sure what meaning is really
+intended.</p>
+
+<p>(The YaST software itself no longer uses this nonfree YaST license;
+happily, it is now free software, released under the GNU GPL.)</p></dd>
+
+</dl> <!-- end class="red" -->
+
+<div class="big-section">
+<h3 id="DocumentationLicenses">
+    Licenses For Documentation</h3>
+</div>
+<div style="clear: left;"></div>
+
+<div class="big-subsection">
+<h4 id="FreeDocumentationLicenses">
+    Free Documentation Licenses</h4>
+<span class="anchor-reference-id">
+    (<a href="#FreeDocumentationLicenses">#FreeDocumentationLicenses</a>)
+    </span>
+</div>
+
+<p><strong>The following licenses qualify as <a
+href="/philosophy/free-doc.html">free
+documentation</a> licenses.</strong></p>
+
+
+<dl class="green">
+
+<dt><a id="FDL" href="/licenses/fdl.html">
+    GNU Free Documentation License</a>
+    <span class="anchor-reference-id">(<a href="#FDL">#FDL</a>)</span></dt>
+<dd>
+<p>This is a license intended for use on copylefted free documentation.
+We plan to adopt it for all GNU manuals.  It is also suitable for other
+kinds of useful works (such as textbooks and dictionaries, for
+instance).  Its applicability is not limited to textual works
+(&ldquo;books&rdquo;).</p></dd>
+
+
+<dt><a id="FreeBSDDL"
+       href="http://directory.fsf.org/wiki?title=License:FreeBSD">
+    FreeBSD Documentation License</a>
+    <span class="anchor-reference-id">
+       (<a href="#FreeBSDDL">#FreeBSDDL</a>)</span></dt>
+<dd>
+<p>This is a permissive non-copyleft free documentation license that is
+compatible with the GNU FDL.</p></dd>
+
+</dl> <!-- end class="green" -->
+<dl class="orange">
+
+
+<dt><a id="ACDL"
+       href="http://fedoraproject.org/wiki/Licensing/Common_Documentation_License">
+    Apple's Common Documentation License, Version 1.0</a>
+    <span class="anchor-reference-id">(<a href="#ACDL">#ACDL</a>)</span></dt>
+<dd>
+<p>This is a free documentation license that is incompatible with the
+GNU FDL.  It is incompatible because Section&nbsp;(2c) says &ldquo;You
+add no other terms or conditions to those of this License&rdquo;, and
+the GNU FDL has additional terms not accounted for in the Common
+Documentation License.</p></dd>
+
+
+<dt><a id="RealOPL"></a>  <!-- old id, leave for compatibility -->
+    <a id="OpenPublicationL" href="http://opencontent.org/openpub/">
+    Open Publication License, Version 1.0</a>
+    <span class="anchor-reference-id">
+       (<a href="#OpenPublicationL">#OpenPublicationL</a>)</span></dt>
+<dd>
+<p>This license <strong>can</strong> be used as a free documentation
+license.  It is a copyleft free documentation license
+<strong>provided</strong> the copyright holder does not exercise any of
+the &ldquo;LICENSE OPTIONS&rdquo; listed in Section VI of the license.
+But if either of the options is invoked, the license becomes
+nonfree.  In any case, it is incompatible with the GNU FDL.</p>
+
+<p>This creates a practical pitfall in using or recommending this
+license: if you recommend &ldquo;Use the Open Publication License, Version
+1.0 but don't enable the options&rdquo;, it would be easy for the second
+half of that recommendation to get forgotten; someone might use the
+license with the options, making a manual nonfree, and yet think he
+or she is following your advice.</p>
+
+<p>Likewise, if you use this license without either of the options to
+make your manual free, someone else might decide to imitate you, then
+change his or her mind about the options thinking that that is just a
+detail; the result would be that his or her manual is nonfree.</p>
+
+<p>Thus, while manuals published under this license do qualify as free
+documentation if neither license option was used, it is better to use the
+GNU Free Documentation License and avoid the risk of leading someone else
+astray.</p>
+
+<p>Please note that this license is not the same as the <a
+href="#OCL">Open Content License</a>.  These two licenses are frequently
+confused, as the Open Content License is often referred to as the
+&ldquo;OPL&rdquo;.  For clarity, it is better not to use the
+abbreviation &ldquo;OPL&rdquo; for either license.  It is worth spelling
+their names in full to make sure people understand what you say.</p></dd>
+
+</dl> <!-- end class="orange" -->
+
+<hr class="separator" />
+
+<div class="big-subsection">
+<h4 id="NonFreeDocumentationLicenses">
+    Nonfree Documentation Licenses</h4>
+<span class="anchor-reference-id">
+    (<a href="#NonFreeDocumentationLicenses">#NonFreeDocumentationLicenses</a>)
+    </span>
+</div>
+
+<p><strong>The following licenses <em>do not qualify</em>
+as free documentation licenses:</strong></p>
+
+
+<dl class="red">
+
+<dt><a id="OCL"></a> <!-- brief id, leave for compatibility -->
+    <a id="OpenContentL" href="http://opencontent.org/opl.shtml">
+    Open Content License, Version 1.0</a>
+    <span class="anchor-reference-id">
+      (<a href="#OpenContentL">#OpenContentL</a>)</span></dt>
+<dd>
+<p>This license does not qualify as free, because there are restrictions on
+charging money for copies.  We recommend you do not use this license.</p>
+<p>Please note that this license is not the same as the <a
+href="#RealOPL">Open Publication License</a>.  The practice of
+abbreviating &ldquo;Open Content License&rdquo; as &ldquo;OPL&rdquo;
+leads to confusion between them.  For clarity, it is better not to use
+the abbreviation &ldquo;OPL&rdquo; for either license.  It is worth
+spelling their names in full to make sure people understand what you
+say.</p></dd>
+
+</dl> <!-- end class="red" -->
+
+<div class="big-section">
+<h3 id="OtherLicenses">Licenses for Other Works</h3>
+</div>
+<div style="clear: left;"></div>
+
+<div class="big-subsection">
+<h4>Licenses for Works of Practical Use
+    besides Software and Documentation</h4>
+<span class="anchor-reference-id">
+    (<a href="#OtherLicenses">#OtherLicenses</a>)</span>
+</div>
+
+<dl class="green">
+
+<dt><a id="GPLOther" href="/licenses/gpl.html">
+    GNU General Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#GPLOther">#GPLOther</a>)</span></dt>
+<dd>
+<p>The GNU GPL <strong>can</strong> be used for general data which is
+not software, as long as one can determine what the definition of
+&ldquo;source code&rdquo; refers to in the particular case.  As it turns
+out, the DSL (see below) also requires that you determine what the
+&ldquo;source code&rdquo; is, using approximately the same definition
+that the GPL uses.</p></dd>
+
+
+<dt><a id="FDLOther" href="/licenses/fdl.html">
+    GNU Free Documentation License</a>
+    <span class="anchor-reference-id">
+       (<a href="#FDLOther">#FDLOther</a>)</span></dt>
+<dd>
+<p>The GNU FDL is recommended for textbooks and teaching materials for
+all topics.  (&ldquo;Documentation&rdquo; simply means textbooks and
+other teaching materials for using equipment or software.)  We also
+recommend the GNU FDL for dictionaries, encyclopedias, and any other
+works that provide information for practical use.</p></dd>
+
+</dl> <!-- end class="green" -->
+<dl  class="orange">
+
+
+<dt><a id="ccby" href="http://creativecommons.org/licenses/by/2.0/legalcode">
+    Creative Commons Attribution 2.0 license</a>
+    (a.k.a. CC&nbsp;BY)
+    <span class="anchor-reference-id">(<a href="#ccby">#ccby</a>)</span></dt>
+<dd>
+<p>This is a non-copyleft free license that is good for art and
+entertainment works, and educational works.  Please don't use it for
+software or documentation, since it is incompatible with the GNU GPL
+and with the GNU FDL.</p>
+
+<p id="which-cc">
+<span class="anchor-reference-id">(<a href="#which-cc">#which-cc</a>)</span>
+Creative Commons publishes many licenses which are
+very different.  Therefore, to say that a work &ldquo;uses a Creative
+Commons license&rdquo; is to leave the principal questions about the
+work's licensing unanswered.  When you see such a statement in a work,
+please ask the author to change the work to state clearly and
+visibly <em>which</em>of the Creative Commons license it uses.  And if
+someone proposes to &ldquo;use a Creative Commons license&rdquo; for a
+certain work, it is vital to ask &ldquo;Which Creative Commons
+license?&rdquo; before proceeding any further.</p></dd>
+
+
+<dt><a id="ccbysa"
+       href="http://creativecommons.org/licenses/by-sa/2.0/legalcode">
+    Creative Commons Attribution-Sharealike 2.0 license</a>
+   (a.k.a. CC&nbsp;BY-SA)
+    <span class="anchor-reference-id">
+       (<a href="#ccbysa">#ccbysa</a>)</span></dt>
+<dd>
+<p>This is a copyleft free license that is good for artistic and
+entertainment works, and educational works.  Please don't use it for
+software or documentation, since it is incompatible with the GNU GPL
+and with the GNU FDL.</p>
+
+<p>Please <a href="#which-cc">be specific about which Creative
+Commons license is being used</a>.</p></dd>
+
+
+<dt><a id="dsl" href="/licenses/dsl.html">
+    Design Science License (DSL)</a>
+    <span class="anchor-reference-id">(<a href="#dsl">#dsl</a>)</span></dt>
+<dd>
+<p>This is a free and copyleft license meant for general data.
+Please don't use it for software or documentation, since it is
+incompatible with the GNU GPL and with the GNU FDL; however, it is
+fine to use for other kinds of data.</p></dd>
+
+
+<dt><a id="FreeArt" href="//directory.fsf.org/wiki/License:Free-Art-L-v1.3">
+    Free Art License</a>
+    <span class="anchor-reference-id">
+       (<a href="#FreeArt">#FreeArt</a>)</span></dt>
+<dd>
+<p>This is a free and copyleft license meant for artistic works. It permits commercial distribution, as any free license must.  It is  a copyleft license because any larger work that includes part of the work you received must be released, as a whole, either under the same license or under a similar license that meets stated criteria.  Please don't use it for software or documentation, since it is incompatible with the GNU GPL and with the GNU FDL.</p></dd>
+
+<dt><a id="ODbl" href="http://directory.fsf.org/wiki/License:ODbl">
+    Open Database license</a>
+    <span class="anchor-reference-id">
+       (<a href="#ODbl">#ODbl</a>)</span></dt>
+
+<dd><p>This is a free and copyleft license meant for data.  It is
+incompatible with the GNU GPL. Please don't use it for software or
+documentation, since it is incompatible with the GNU GPL and with the
+GNU FDL. It makes inconvenient requirements about signing contracts
+which try to create an effect like copyleft for data that is not
+copyrightable, so we don't recommend using it; however, there is no
+reason to avoid using data released this way.</p></dd>
+
+</dl> <!-- end class="orange" -->
+
+<div class="big-subsection">
+<h4 id="Fonts">
+    Licenses for Fonts</h4>
+<span class="anchor-reference-id">
+    (<a href="#Fonts">#Fonts</a>)</span>
+</div>
+
+<p>The licenses below apply to an instantiation of a design in a computer
+file, not the artistic design.  As far as we know, an implementation of
+a design is always copyrightable.  The legal status of the artistic
+design is complex, and varies by jurisdiction.</p>
+
+<dl class="green">
+
+<dt><a id="GPLFonts" href="/licenses/gpl.html">
+    GNU General Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#GPLFonts">#GPLFonts</a>)</span></dt>
+<dd>
+<p>The GNU GPL <strong>can</strong> be used for fonts.  However, note
+that it does not permit embedding the font in a document unless that
+document is also licensed under the GPL.  If you want to allow this, use
+the <a
+href="/licenses/gpl-faq.html#FontException">font
+exception</a>.  See also this <a
+href="http://www.fsf.org/blogs/licensing/20050425novalis">explanatory
+essay about the GPL Font Exception</a>.</p></dd>
+
+</dl> <!-- end class="green" -->
+<dl  class="orange">
+
+<dt><a id="Arphic"
+       href="http://ftp.gnu.org/gnu/non-gnu/chinese-fonts-truetype/LICENSE">
+    Arphic Public License</a>
+    <span class="anchor-reference-id">
+       (<a href="#Arphic">#Arphic</a>)</span></dt>
+<dd>
+<p>This is a copyleft free software license, incompatible with the
+GPL. Its normal use is for fonts, and in that use, the
+incompatibility does not cause a problem.</p></dd>
+
+
+<dt><a id="SILOFL" href="http://scripts.sil.org/OFL_web">
+    SIL Open Font License 1.1</a>
+    <span class="anchor-reference-id">
+       (<a href="#SILOFL">#SILOFL</a>)</span></dt>
+<dd>
+<p>The Open Font License (including its original release, version 1.0)
+is a free copyleft license for fonts.  Its only unusual requirement is
+that fonts be distributed with some computer program, rather than alone.
+Since a simple Hello World program will satisfy the requirement, it is
+harmless.  Neither we nor SIL recommend the use of this license for
+anything other than fonts.</p></dd>
+
+</dl> <!-- end class="orange" -->
+
+<div class="big-subsection">
+<h4 id="OpinionLicenses">
+    Licenses for Works stating a Viewpoint (e.g., Opinion or Testimony)</h4>
+<span class="anchor-reference-id">
+    (<a href="#OpinionLicenses">#OpinionLicenses</a>)</span>
+</div>
+
+<p>Works that express someone's opinion&mdash;memoirs, editorials, and
+so on&mdash;serve a fundamentally different purpose than works for
+practical use like software and documentation.  Because of this, we
+expect them to provide recipients with a different set of permissions:
+just the permission to copy and distribute the work verbatim.
+<a href="/philosophy/copyright-and-globalization.html#opinions"
+title="Richard Stallman discusses what rights the public should have
+ for works of opinion">Richard Stallman discusses this</a> frequently
+in his speeches.</p>
+
+<p>Because so many licenses meet these criteria, we cannot list them
+all.  If you are looking for one to use yourself, however, there are
+two that we recommend:</p>
+
+
+<dl class="blue">
+
+<dt><a id="GNUVerbatim" href="/licenses/licenses.html#VerbatimCopying">
+    GNU Verbatim Copying License</a>
+    <span class="anchor-reference-id">
+       (<a href="#GNUVerbatim">#GNUVerbatim</a>)</span></dt>
+
+<dd><p>This was the license used throughout the GNU web site for many
+years.  It is very simple, and especially well-suited to written
+works.</p></dd>
+
+
+<dt><a id="ccbynd"
+       href="http://creativecommons.org/licenses/by-nd/3.0/legalcode">
+    Creative Commons Attribution-NoDerivs 3.0 license
+    (a.k.a. CC&nbsp;BY-ND)</a>
+    <span class="anchor-reference-id">
+       (<a href="#ccbynd">#ccbynd</a>)</span></dt>
+
+<dd><p>This is the license used throughout the GNU and FSF web sites.
+This license provides much the same permissions as our verbatim
+copying license, but it's much more detailed.  We particularly
+recommend it for audio and/or video works of opinion.
+Please <a href="#which-cc">be specific about which Creative Commons
+license is being used</a>.</p></dd>
+
+</dl> <!-- end class="blue" -->
+
+<hr class="separator" />
+
+
+<p class="back"><strong><a href="/licenses/licenses.html">More about licenses</a></strong></p>
+</div><!-- for id="content", starts in the include above -->
+
+              <!-- begin server/footer-text.html -->
+<div id="fsf-links">
+ <ul>
+  <li><a href="/">GNU&nbsp;home&nbsp;page</a></li>
+  <li><a href="http://www.fsf.org/">FSF&nbsp;home&nbsp;page</a></li>
+  <li><a href="/graphics/graphics.html">GNU&nbsp;Art</a></li>
+  <li><a href="/fun/fun.html">GNU&nbsp;Fun</a></li>
+  <li><a href="/people/people.html">GNU's&nbsp;Who?</a></li>
+  <li><a href="http://directory.fsf.org">Free&nbsp;Software&nbsp;Directory</a></li>
+  <li><a href="/server/sitemap.html">Site&nbsp;map</a></li>
+ </ul>
+</div><!-- /fsf-links -->
+
+<div id="mission-statement">
+
+<blockquote>
+<p><a href="http://www.fsf.org"><img id="fsfbanner"
+src="/graphics/fsf-logo-notext.png" alt=" [FSF logo] "/></a><strong>&ldquo;Our
+mission is to preserve, protect and promote the freedom to use, study,
+copy, modify, and redistribute computer software, and to defend the
+rights of Free Software users.&rdquo;</strong></p>
+</blockquote>
+
+<p>The <a href="http://www.fsf.org">Free Software Foundation</a> is
+the principal organizational sponsor of the GNU Operating System.
+<strong>Support GNU and the FSF</strong> by <a
+href="http://shop.fsf.org/">buying manuals and gear</a>, <a
+href="https://my.fsf.org/associate/support_freedom?referrer=4052">
+<strong>joining the FSF</strong></a> as an associate member, or making
+a <strong>donation</strong>, either <a
+href="http://donate.fsf.org/">directly to the FSF</a> or <a
+href="http://flattr.com/thing/313733/gnuproject-on-Flattr">via
+Flattr</a>.</p>
+
+<p id="backtotop"><a href="#header">back to top</a></p>
+
+</div><!-- /mission-statement -->
+<!-- end server/footer-text.html -->
+
+
+<div id="footer">
+<div class="unprintable">
+
+<p>Please send general FSF &amp; GNU inquiries to <a
+href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.  There are also <a
+href="/contact/">other ways to contact</a> the FSF.  Broken links and other
+corrections or suggestions can be sent to <a
+href="mailto:webmasters@gnu.org">&lt;webmasters@gnu.org&gt;</a>.</p>
+
+<p><!-- TRANSLATORS: Ignore the original text in this paragraph,
+        replace it with the translation of these two:
+
+        We work hard and do our best to provide accurate, good quality
+        translations.  However, we are not exempt from imperfection.
+        Please send your comments and general suggestions in this regard
+        to <a href="mailto:web-translators@gnu.org">
+        &lt;web-translators@gnu.org&gt;</a>.</p>
+
+        <p>For information on coordinating and submitting translations of
+        our web pages, see <a
+        href="/server/standards/README.translations.html">Translations
+        README</a>. -->
+Please see the <a
+href="/server/standards/README.translations.html">Translations README</a> for
+information on coordinating and submitting translations of this article.</p>
+</div>
+
+<p>Copyright &copy; 2014 Free Software Foundation, Inc.</p>
+
+<p>This page is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nd/3.0/us/">Creative
+Commons Attribution-NoDerivs 3.0 United States License</a>.</p>
+
+<!-- start of server/bottom-notes.html -->
+<div class="unprintable">
+<p><a href="http://www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+
+
+</div>
+<!-- end of server/bottom-notes.html -->
+
+
+<p class="unprintable">Updated:
+<!-- timestamp start -->
+$Date: 2014/07/27 22:05:03 $
+<!-- timestamp end -->
+</p>
+</div>
+</div>
+</body>
+</html>

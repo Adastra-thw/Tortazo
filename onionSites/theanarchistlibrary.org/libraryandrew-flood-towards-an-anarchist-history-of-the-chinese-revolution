@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Towards an anarchist history of the Chinese revolution (Andrew Flood) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Towards an anarchist history of the Chinese revolution
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/andrew-flood">Andrew Flood</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2010
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/asia">Asia</a>
+        <a href="/topics/china">China</a>
+        <a href="/topics/colonialism">colonialism</a>
+        <a href="/topics/history">history</a>
+        <a href="/topics/leninism">Leninism</a>
+        <a href="/topics/marxism">marxism</a>
+        <a href="/topics/national-liberation">national liberation</a>
+        <a href="/topics/russia">Russia</a>
+    
+  </p>
+    
+  <p id="preamblenotes">
+    <strong>Notes:</strong>
+    This article is the text as submitted to the <em>North Eastern Anarchist</em> in late 2007. A version was published in Issue 14, Spring 2009 which post-editing may differ somewhat from the text here. This article was used as the base for the video / audio presentation Anarchism &amp; the Chinese Revolution (<a href="http://anarchism.pageabode.com/andrewnflood/anarchism-the-chinese-revoltion-video-and-audio">anarchism.pageabode.com</a>)
+  </p>
+  
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on Febuary 1, 2010 from <a href="http://anarchism.pageabode.com/andrewnflood/anarchist-history-chinese-revolution">anarchism.pageabode.com</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="andrew-flood-towards-an-anarchist-history-of-the-chinese-revolution.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Andrew Flood</h2>
+	
+	<h1 id="textttitleh">Towards an anarchist history of the Chinese revolution</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Local revolutionary origins
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">The need to modernize
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Origins of the republican movement
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">Republican ‘victory’
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">The New Culture Movement
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">The conditions of Chinese workers
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">Conditions for the peasants
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc8">The Russian revolution and the emergence of the CCP
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc9">The continued attraction of anarchism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc10">The CCP — KMT alliance
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc11">The KMT turns on the CCP
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc12">The end of Leninist orthdoxy
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc13">The new alliance with the KMT
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc14">The failure of the KMT
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc15">CCP victory
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Outside of a few events including the Long March and the Shanghai commune the development of the Chinese revolution is relatively unknown on the western left in comparison with the revolutions in Russia in 1917, Spain in 1936 or even the Paris spring of 1968. Those sections of that left influenced by or proclaiming themselves to be Maoist haven’t helped that situation much. Their histories have tended towards simple tales focusing on the role of one man and collapsed a 100-year history of revolution into the events important to him.
+</p><p>This article is a preliminary sketch of the Chinese revolutions from an anarchist perspective. It does not set out to be a history of Chinese anarchism although it draws on some of the histories of that movement which for twenty key years dominated the formation of the left in China. A real history of that movement in English will depend not only on the translation of vast quantities of texts from the early twentieth century but also on detailed local research to uncover a history that has both been deliberately buried and forgotten.
+</p><h4 id="toc1">Local revolutionary origins
+</h4>
+<p>The modern revolutionary tradition can be said to start in China with the Taiping rebellion of 1850. Over the course of 14 years hundreds of thousands of peasant insurrectionaries conquered much of south and central China in a civil war that cost some 20 million lives.
+</p><p>Although those who led the rebellion installed themselves as absolute monarchs the rebellion had a number of features which became typical of the republican and left rebellions and revolutions of the next 100 years. There were:
+</p>
+<ol>
+<li><p>It was the first rebellion not to use the traditional Confucian argument that the current Emperor had lost the ‘Mandate of Heaven’ and should be replaced. It opposed Confucianism, which had been the ideological foundation of the Chinese state for hundreds of years.
+</p>
+</li>
+<li><p>It proclaimed the equality of women, mobilized women in its army and banned foot binding.
+</p>
+</li>
+<li><p>It abolished private ownership, all land being held and distributed by the state.
+</p>
+</li>
+<li><p>Imperialism intervened in support of the ruling regime and against the rebellion.
+</p>
+</li>
+
+</ol>
+<p>By the time of the rebellion the power of the Chinese state was in a period of rapid decline under pressure from western imperialism. The first Opium war of 1839–42 had ended not only with China being forced to allow the importation of opium from British occupied India but also with Britain getting control of five Chinese ports including Hong Kong. During the later years of the Taiping rebellion the Ch’ing (Manchu) regime lost a second ‘Opium War’ with the west. As the ideology of the Chinese court had placed China at the centre of civilization for thousands of years these defeats and the ongoing encroachment of imperialism caused a major ideological crisis in the elite.
+</p><h4 id="toc2">The need to modernize
+</h4>
+<p>When after a long struggle that required western help, the Ch’ing had defeated the Taiping rebellion even they recognized that the traditional Chinese state would have to modernize if it was going to retain any independence. Their problem was that the vast majority of the ruling classes were opposed to the basic steps needed because modernization threatened many of their positions. The periods of attempted modernization from above that followed were characterized by seeking to preserve traditional values while accepting ‘western ideas’ only in limited military and industrial technologies. This was too little, too late and in 1894 Japan which had undergone a much more sweeping modernization defeated China in the first of which was to be a series of wars of imperialist conquest.
+</p><p>The Chinese court had previously referred disparagingly to the Japanese as ‘dwarves’ so defeat at the hands of the Japanese state deepened the ideological crisis and highlighted the need for more far reaching reforms. When a modernizing wing of the bureaucracy managed to get a reform program agreed by the emperor there was a brief period of escalated reform but after ‘a hundred days’ the traditional majority staged a palace coup bringing that brief period to an end with the execution of six of the reformers.
+</p><p>The helplessness of the Chinese state in the face of western and Japanese imperialism was to become the great themes of elite discussion in China in the next 60 years but although the Ch’ing were later to be presented as simply giving the imperialists what they wanted the reality was more complex. At the end of the century they made a desperate attempt to reverse the tide, first in encouraging the ‘Boxer’ (<em>“The Righteous and Harmonious Society Movement”</em>) rebellion of 1900 and then in June 1901 by actually declaring war on the imperialist powers when it looked like that rebellion had some chance of success.
+</p><p>The Boxer rank and file consisted of poor peasants who had been driven off the land and marginal groups threatened by modernization but the most conservative officials led them. Its anti-imperialism has been described as being close to xenophobia <a href="#fn1" class="footnote" id="fn_back1">[1]</a> and the vast majority of those the Boxers killed were Chinese converts to Christianity. The rebels lacked the weapons to defeat organized imperialist forces. Their rebellion was crushed and served as the pretext for the imperialist powers to break down the last barriers to the Chinese interior. The brutality they used in doing so, especially the order of Kaiser Wilhelm II to <em>“make the name German remembered in China for a thousand years so that no Chinaman will ever again dare to even squint at a German”</em> further increased resentment of the imperialist powers.
+</p><h4 id="toc3">Origins of the republican movement
+</h4>
+<p>The Ch’ing reacted to defeat by escalating the reform progress. But these reforms far from saving the regime escalated its downfall as they helped to create the modern institutions from which a new cadre of republican revolutionaries emerged. Well into the 1920’s these revolutionaries came almost exclusively from a very narrow layer of Chinese society, that is those sections of the upper and middle classes who favoured modernisation, that is students, young officers, port merchants and overseas Chinese. Principally among these new institutions was the army and the university at Beijing. These added to the system of Model Schools that had already spread across China to educate the sons of the gentry following western rather than Confucion methods.
+</p><p>The experience of going abroad, most often as a student to either Japan or Europe, was a common part of the political development of many of those who were to become key revolutionary figures in the years ahead. From 1905 there were Chinese exile anarchist groups in both Paris and Tokyo. These and the returning students brought back radical ideas, and set up papers and organisations to propagate them. In general the anarchists were also part of the broader revolutionary republican movement led by Sun Yat-sen.
+</p><p>Sun Yat-sen was the key republican insurrectionary who would briefly become President of the Republic after many failed insurrections, the first of these in Kwangtung in 1885. He had studied maths abroad and after the Kwangtung insurrection fled to London and then Japan. There in Tokyo in 1905 he formed the Revolutionary Alliance which would become the Kuomintang (KMT). It was a very broad organisation and many of the anarchists also joined it, a process Sun Yat-sen encouraged, as late as 1924 when he said “that the ultimate goal of his Principle of People’s Livelihood was <em>“communism and anarchism.” </em><a href="#fn2" class="footnote" id="fn_back2">[2]</a>
+</p><h4 id="toc4">Republican ‘victory’
+</h4>
+<p>October 10 1911 is remembered as the birth of republic day in China because it was on this day that the governour of Wuchang fled from a local rising. Discontent with the Ch’ing regime had been spreading among the privileged classes so this flight set in motion a snowball of events over the following months up to and including rebellion at the court. The Ch’ing regime was brought crashing down not by a unified movement with an agreed program of change but by the weight of its own unpopularity.
+</p><p>This left a vaccum. Sun Yat-sen was initally declared president at the start of 1912 but he was unable to halt the fragmentation of the country that had begun in the aftermath of the collapse of the Ch’ing and so by February 13 in the interests of unity was replaced by Yuan Shih-k’ai. Yuan was a traditionalist military figure who had joined the rebellion simply because he had fallen out of favour with the Ch’ing. In 1911 Yuan had fought for the Ch’ing and carried out massacres of captured republicans. He may have changed sides but he had not changed his views, before his death in 1916 he would try and restore the empire with himself at the head. This split the county and Sun Yat-sen led a new KMT republican movement in the south against the Beijing inherators of Yuan Shih-k’ai.
+</p><p>This was the warlord period which was to last into the 1930’s. No one power ruled China, instead the KMT fought the communists and a number of regional warlords, who they sometimes allied with against the communists and later against the Japanese. Warfare was a constant feature of life with rival armies conscripting peasants, levelling crippling taxes on conquered areas and famine sweeping many of the war torn provinces.
+</p><p>The lesson drawn by many young revolutionaries was that traditional Chinese society would have to be actively smashed before real progress could be made. This was the position the Paris anarchists had been arguing since 1907 in their journal ‘New Era’, 100 issues of which had been published. Credit for these ideas is traditionally given to Chen Duxiu’s publication ‘New Youth’ which appeared in late 1915, probably because Chen would later found the CCP but at this point he worked closely with anarchists. He argued that Confucion morality had to be turned upside down to laud youth and innovation over age and tradition. The traditional subjection to ruler, father and husband had to be rejected in favour of science and democracy.
+</p><h4 id="toc5">The New Culture Movement
+</h4>
+<p>These were ideas that the anarchists had been promoting in the previous decade. Arif Dirlik in his study of Chinese anarchism lists the anarchist contributions to the growing revolutionary movement as being;<a href="#fn3" class="footnote" id="fn_back3">[3]</a>
+</p>
+<ul>
+<li><p>In the vanguard of calls for universal education, transformation of the family and emancipation of women;
+</p>
+</li>
+<li><p>The founders of the first modern labour unions in China in 1917;
+</p>
+</li>
+<li><p>Spearheading the transmission of the revolutionary movement to rural areas;
+</p>
+</li>
+<li><p>The first to experiment with new forms of eduction and news ways of organising production.
+</p>
+</li>
+
+</ul>
+<p>For a long period, as late as 1925, the majority of the radical end of the revolutionary movement were anarchists rather than Marxists. Many anarchist texts were translated by the time of the 1911 revolution but translations of Marx were uncommon until 1920. <a href="#fn4" class="footnote" id="fn_back4">[4]</a> Dirlik says <em>“There was no ‘marxist left’ to speak of in China until 1920–21 .. most of those who were to emerge as leaders of the Communist movement in China went through an anarchist phase before they became marxists.”</em> <a href="#fn5" class="footnote" id="fn_back5">[5]</a>
+</p><p>A ‘mass’ intellectual revolutionary movement, the New Culture Movement, formed in the top 5% of Chinese society in the period of the First World War. This came to be known as the May 4<sup>th</sup> Movement after the outbreak of student protest on May 4<sup>th</sup> 1919. Kuang Husheng, the student who threw open the gates of Foreign Ministry officals Cao Rulin house on that day, was an anarchist.<a href="#fn6" class="footnote" id="fn_back6">[6]</a> This May 4<sup>th</sup> Movement was very pro-western in the fight against tradition, 50% of most publications consisted of translations of western texts, but it was also fiercly anti-imperialist in relation to western and Japenese ‘humilitation of China’. The students protests of May 1919 which characterised the movement broke out in Bejing as a direct consequence of the post-war Paris Peace Conference awarded the German concessions in China to Japan.
+</p><h4 id="toc6">The conditions of Chinese workers
+</h4>
+<p>Up to this point and indeed beyond it to 1925 the struggle for modernisation was one conducted within and between the elite. It was still a mass struggle of sorts as this elite numbered many millions. But in general the peasants and the tiny working class played either a passive part or were simply conscripted into one or the other armies.
+</p><p>By 1920 the population of China was in the region of 450 million of whom only 6% lived in the cities. The working class was tiny, in 1919 there were 1 million factory workers, 2 million in mining and construction, 10 million in transportation and 12 million in handicraft production.<a href="#fn7" class="footnote" id="fn_back7">[7]</a> So even in the broadest sense when you exclude the peasantry only 5% of the population were workers and of these only 0.5% were industrial workers.
+</p><p>Working conditions were often brutal. Workers included children as young as six and in 1920 Shanghai a 12 hour day was the norm with 13 days out of every 14 being worked. Many worked 18-hour days, collapsing at the end to sleep in a corner of their workplace. Attempts to organize were brutally put down, there were only 152 strikes recorded from 1900 to 1919.
+</p><p>The anarchists were the significant force at the start of the organized Labor movement in China. Liang Bingxian an associate of the anarchist ‘Society for the Study of Socialism’ published the first Labour journal, ‘Labour’ in 1918. Guangzhou (Canton) was the centre of the developing movement and Guangzhou anarchists in 1918 helped organise the Guangzhou Teahouse Labor Union which had 11,000 members, the following year they helped organise the barbers. Xie Yingbo was an influential labour leader connected with the anarchists and through him they were also influential in the mechanics union. <a href="#fn8" class="footnote" id="fn_back8">[8]</a> By 1921 the anarchists in Guangzhou had organized at least forty unions and some like the brother of the prominent anarchist Shifu and Liu Shixin were labour leaders <a href="#fn9" class="footnote" id="fn_back9">[9]</a> Dirlik says the first National Labour Conference in Guanghzhou in 1922<em> “revealed the extent of anarchist influence in labor organizations in the south.”</em><a href="#fn10" class="footnote" id="fn_back10">[10]</a> In 1922 two anarchist union organizers would be hacked to death after leading a strike in Changsha.
+</p><h4 id="toc7">Conditions for the peasants
+</h4>
+<p>Conditions for peasants varied considerably from one part of China to another but in general huge numbers were working tiny amounts of land so that even rich peasants had very small holdings. Most of the land was owned by 10% of the population. A Chinese Communist Party (CCP) study of the 1930’s divided the rural land owning population as follows
+</p>
+<ul>
+<li><p>Poor peasants who were defined by having such small land plots that they had to work for others in order to live. These were 68% of the population and only owned 22% of the land.
+</p>
+</li>
+<li><p>The Middle peasants were those who could get by on the land they owned and work it without having to employ others on a long term basis. This was 22% of the population holding 25% of the land.
+</p>
+</li>
+<li><p>The Rich peasants also worked the land but they had so much land that they needed others to work for them on a continuous basis. They made up 7% of the population and held 27% of the land.
+</p>
+</li>
+<li><p>Finally there were the Gentry who were comprised of intellectuals, local government officals, moneylenders and landlords. They were 3% of the population and held 26% of the land. <a href="#fn11" class="footnote" id="fn_back11">[11]</a>
+</p>
+</li>
+
+</ul>
+<p>Efforts had been made at rural organization. Waves of anarchists had ‘gone to the countryside’ especially in the May 4<sup>th</sup> period. Before 1920 due to anarchist efforts part of Fuijan had become known as <em>“the Soviet Russia of Southern Fujian”</em> <a href="#fn12" class="footnote" id="fn_back12">[12]</a>. Even in the late 1920’s anarchists in Fujian prepared an insurrection where they were joined by anarchists from Japan and Korean <em>“who believed that Fujian could serve as the base for an East Asian anarchist insurrection.”</em> <a href="#fn13" class="footnote" id="fn_back13">[13]</a>
+</p><p>In the period from 1900 to 1940 conditions were probably getting worse for the peasants. There had been a very long period of population growth. The end of the traditional Confucian system also meant the end of paternalistic social relations in the village and its replacement in many regions with ruthless market based absentee landlords or even corporations acting through local agents. Rent could take 45% of production and then a range of irregular land taxes which could be collected for years ahead took an unpredictable chunk of the rest. Massive famines and death by starvation were not uncommon outcomes of extreme weather and crop failure. Even if this was avoided survival meant borrowing from the local money lender and very often the subsequent loss of some or all of the land when repayments could not be made.
+</p><h4 id="toc8">The Russian revolution and the emergence of the CCP
+</h4>
+<p>By 1919 the republican revolutionaries had grown disillusioned with western liberalism, in particular because of the way China had been treated at the Paris Peace conference. Although not widely understood the Russian Revolution seemed to offer a new successful path to modernization. The Bolsheviks under Lenin were emphasizing anti-imperialism in order to appeal to the Eastern peoples so Leninism seemed to offer not only a western modernization program, a successful revolutionary model but also one, which rejected western imperialism.
+</p><p>In China the Russian Revolution was initally understood as being anarchist because of the lack of a revolutionary marxist tradition in China. The anarchist edited ‘Labour’ was the first journal to discuss the revolution in depth and it did so in a way that Dirlik concludes portrayed it as <em>“a revolution in perfect harmony with anarchist aspirations.”</em> <a href="#fn14" class="footnote" id="fn_back14">[14]</a> This was a widespread opinion so initally the Russian revolution resulted in a further boost for the anarchist movement.
+</p><p>There was however also an initally slow growth of Leninism. Chen Duxiu had become a Marxist and in 1921 called the first Congress of the Chinese Communist Party (CCP). Some 13 delegates attended representing 57 members. Many of these were actually anarchists, the loose nature of the party at this stage being further illustrated by the failure of this Shanghai conference to issue a manifesto and perhaps more tellingly the fact that two of the dozen delegates became ministers in the pro-Japanese Nanking government during the war.<a href="#fn15" class="footnote" id="fn_back15">[15]</a> Anarchists also made up many of the members of the first Marxist study groups; the Guangzhou group was initially comprised only of anarchists and two Moscow representatives!
+</p><p>The CCP was just one such initative among many, Jung Chang &amp; Jon Halliday claim <em>“There were many other communist groups in China at the time — at least seven between 1920 and 1922, one claiming as many as 11,000 members.”</em> <a href="#fn16" class="footnote" id="fn_back16">[16]</a> As early as 1913 when the Chinese Socialist Party was banned it claimed 200 branches and 400,000 members. But importantly the CCP was the one recognised by Moscow, so that between October 1921 and June 1922 94% of the CCP funding came from Moscow.<a href="#fn17" class="footnote" id="fn_back17">[17]</a> This allowed almost all of its active members to become full time organisers and for bookshops to be opened and papers subsidised. One of these organisers was the son of a rich peasant from Hunan, Mao Tse-Tung, who gave up his job to work full time for the party.
+</p><h4 id="toc9">The continued attraction of anarchism
+</h4>
+<p>Anarchist numbers continued to grow, even in the early 20’s. After 4<sup>th</sup> May there were anarchist societies in Beijing, Shanghai, Nanjing, Tianjin, Guanghzhou, Zhangzhou, Hankou, Chengdu and Changsha as well as France, Singapore, the Philippines, San Francisco and Vancouver. Between 1910 and 1928 92 anarchist societes were established, often with their own publications. The peak of the movement was in the 1922 — 1923 period when over 70 anarchist publications appeared. Print runs for books ran to 5,000 and for postcards of famous anarchists to 50,000 <a href="#fn18" class="footnote" id="fn_back18">[18]</a> However the numbers of anarchists were never that great relative to the population, Xiao Xing writing in ‘Mutual Aid Monthly’ in 1923 estimated there were then several thousand anarchists in China. <a href="#fn19" class="footnote" id="fn_back19">[19]</a>
+</p><p>Once the real story of what was happening in Russia emerged and the anarchists became critical of the Bolsheviks the strength of the anarchists was a concern to the CCP. In 1922 Chen Duxiu responded to a proposal to move the CCP HQ to Guangzhou by saying “<em>Anarchists are all over this place, spreading slanderous rumors about us,. How can we move to Guangzhou?”</em> <a href="#fn20" class="footnote" id="fn_back20">[20]</a> The failure of the anarchists to build large, coherent organizations seemed unimportant so long as they were the main force on the revolutionary left. In the early 1920’s this remained the case.
+</p><p>Yet despite their much longer period of activity and greater number the anarchists failed to get any sort of national or even strong regional co-ordination going. There were attempts, a couple of small conferences and federations. Part of the reason for this failure was government repression but the major factor was the failure of all Chinese anarchists to take organizational coherence seriously. Dirlik argues that in the 20’s Chinese <em>“anarchists, philosophically suspicious of political organization, were not able to coordinate their activities sufficently to compete with the Communists for any length of time.”</em> <a href="#fn21" class="footnote" id="fn_back21">[21]</a> Because anarchism failed to provide an organizational solution to the intensifying revolutionary situation many of those anarchists who remained active ended up in one or the other of the developing revolutionary poles, the KMT and the CCP.
+</p><h4 id="toc10">The CCP — KMT alliance
+</h4>
+<p>In 1922 the CCP, on Moscows orders, merged into the KMT. This alliance was to end in massacre but it immediately allowed the CCP to grow from 195 members in July 1922 to 58,000 by the Spring of 1927, becoming by far the largest left revolutionary force. The KMT for its part military support and training from Moscow, in particular the Russians trained an officer core in modern military techniques around which the KMT army was formed. One of these Russian trained officers was Chiang Kai-shek, who also made a trip to Moscow.
+</p><p>The CCP gained considerable credibilty as a serious force from this alliance, something that aided it in taking the leadership of mass organizations from the comparatively disorganized anarchists.. In the 1923–27 period the fledgling working class organisations in the cities which had often been formed with anarchist help, grew, came under the control of the CCP and then as a consequence of CCP policy were decimated to the extent that the CCP never recovered that level of support from the urban working class.
+</p><p>CCP strategy was to work inside the KMT and in particular the left faction of the KMT to gain power. The CCP Soviet Advisor Brodin told the CCP its task was to “<em>do coolie service for the Kuomintang.”</em> They were confident that the Russian role in the officer training program at Whampoa military academy would allow them considerable control over the army, however in many cases, including that of Chiang Kai-shek, they badly over estimated their influence. They had some success, when the CCP-KMT split happened some army officers and their units would come over to the CCP.
+</p><p>In military terms the alliance was quickly successful. The better trained and disciplined KMT army proved capable of defeating the armies of the warlords and the Beijing regime. The CCP was anble to further aid these victories through mass mobilizations of the workers and peasants in the areas through which the ‘Northern Expedition’ advanced. The Northern Expedition with Chiang Kai-shek as commader quickly started to achieve its objectives.
+</p><p>The summer of 1925 saw general strikes in Shanghai, Hong Kong and Guangzhou in response to the killing of 12 striking workers by British police at the end of May in Shangai. In Shanghai the CCP was in control and led the strike through its control of the General Labour Union. In Guangzhou and nearby Hong Kong however the CCP did not yet have that level of control. There a Delegate Council of strikers on the basis of one delegate for every 50 workers took over public adminstration for the course of the strike. These events not only demonstrated the growing influence of the CCP but also show that the working class in the cities was becoming a major political force in its own right.
+</p><h4 id="toc11">The KMT turns on the CCP
+</h4>
+<p>The first major indications of trouble within the KMT — CCP alliance came when Chiang Kai-shek launched a surprise attack on the left and CCP in Guangzhou in March of 1926 in response to the growing influence of the left and Labor movement in the city. At the May KMT conference that year this Guangzhou coup was ratified and Chiang Kai-shek was appointed head of the forthcoming Northern Expedition. Limits were also put on the influence of the CCP.
+</p><p>The CCP response was to stay quiet and try to continue to build influence via the KMT left. News of what happened in Guangzhou was suppressed in Moscow. Faced with a growing wave of peasant rebellions the CCPs main reaction was condemning peasant excesses, which it feared would just serve to alienate the progressive bourgeoise. Chen warned that <em>“An agrarian policy which is too radical would create a contradiction between the army and the government in which the CCP is participating. The majority of army officers come from a background of small landowners who would be the first people to suffer in an agrarian reform.”</em> <a href="#fn22" class="footnote" id="fn_back22">[22]</a>
+</p><p>When the Northern Offensive began in July 1926 the CCP was able to mobilize some two million peasants and workers in support of the offensive. In September 1926 they took Wuhan where the government established was of the left KMT and under the influence of the Bolshevik advisor Borodin. The influence of the left culminated in March 21 1927 with a huge general strike in Shanghai, which rapidly took control of the city some 6 days before the arrival of Chiang Kai-shek. This threw the imperialist powers that used Shanghai as their main base in China into panic and also panicked the local capitalists and gentry.
+</p><p>Chiang Kai-shek may have had an easy victory but he also recognized the growing power of the CCP and decided to put an end to it. On arrival in Shanghai he received funds from local merchants and bankers and incorporated into his army officers from the defeated northern army. On April 6<sup>th</sup> a raid on the Soviet embassy in Beijing had resulted in documents detailing the degree of infiltration achieved in the KMT, it had also captured 19 CCP members, including the new party leader, who were executed. On April 12<sup>th</sup> Chiang Kai-shek in alliance with local gangsters (with whom he had a long standing relationship) and the police of the French quarter launched a vicious attack in Shanghai on the CCP and working class organization in general. Thousands of workers and party members were killed in the fighting or executed afterwards, both the CCP and the unions were smashed.
+</p><p>The little comfort the CCP could take from a successful left-KMT coup in Wuhan that July was shortlived as the KMT left then expelled the CCP. Disaster followed disaster for the rest of that year as Moscow, desperate to salvage something, ordered rising after rising, all of which failed and simply resulted in the destruction of local CCP organisation. The order for the last rising at Guangzhou was actually opposed by the local CCP leader Chang T’ai-lei who wrote <em>“An uprising in Guangzhou is out of the question at this time”.</em> Stalin ordered it anyway, as much for ammunition with his feud with Trotsky as anything else, and 6,000 were massacred. But it lasted long enough to be presented as a victory at the 15<sup>th</sup> Bolshevik conference.
+</p><h4 id="toc12">The end of Leninist orthdoxy
+</h4>
+<p>The period from the setting up of the CCP in 1921 to the disasters of 1927 can be seen as an orthodox period when the CCP implemented with considerable success a line coming from Moscow that allowed it to become the primary revolutionary force in China. That strategy was to base itself around the industrial working class and to build an alliance with the ‘anti-imperialist’ bourgoise in the shape of the KMT. In theory this would bring the CCP to power on the back of the bourgoise revolution, in practise a base limited to the industrial working class proved too narrow in China where that class was half of one percent of the population.
+</p><p>By 1927 anarchists were a spent force in China. A remanent even ended up entering the KMT after the suppression of the communists in the hope of being able to direct once more the mass movements that the CCP had taken over. A forlorn hope, by 1928 when the KMT had once more unified most of the country it had no more need for mass movements and suppressed these ‘KMT anarchists’ as well.
+</p><p>The KMT still did not control some of the more isolated rural areas and it was to these that the CCP now retreated. Although as we have seen CCP strategy was to dampen down class struggle in the countryside in 1927 a CCP member and former anarchist fellow traveller, P’eng P’ai, took part in the formation of peasant soviets in eastern Kwangtung. <a href="#fn23" class="footnote" id="fn_back23">[23]</a>. Somewhat earlier during the 1926 rising in Hunan Mao had produced a <em>“Report of an investigation into the Peasant Movement in Hunan”</em>. It was this brief report which encapsulated the change of strategy that would be followed for the next ten years.
+</p><p>Some two million peasants were involved in the Hunan rising. Mao’s report opened with the bold statement that <em>“In a very short time, in China’s central, southern and northern provinces, several hundred million peasants will rise like a mighty storm, like a hurricane, a force so swift and violent that no power, however great, will be able to hold it back. They will smash all the trammels’ that bind them and rush forward along the road to liberation.” </em><a href="#fn24" class="footnote" id="fn_back24">[24]</a> Far from following the party line and condemning peasant excesses he wrote<em> “What the peasants are doing is absolutely right; what they are doing is fine!”</em> and that <em>“To put it bluntly, it is necessary to create terror for a while in every rural area.”</em>
+</p><p>Mao’s strategy was one of encouraging a class war in the villages where the poor peasants would be encouraged to publicly terrorize, torture and often kill the gentry and landlords. Doing so would burn their bridges with the old regime who would be sure to punish those involved if it retook the area. The CCP would build ‘Red Armies’ to defend the peasants and in this way the peasants would depend on the CCP into the future and swell its ranks.
+</p><p>Mao established a ‘base area’ in the Chingkangshan mountains on the border of Hunan. With the defeat of the CCP in the cities this and other base areas provided a haven for both the surviving CCP leadership and the KMT units they had convinced to mutiny and form the ‘Red Army’ with. Such units, along with local bandits, formed an initial force of 10,000 men (but with only 2,000 rifles). This area was successful at resisting KMT ‘extermination campaigns’ and the army grew to 65,000 by July 1930.
+</p><p>The base areas were in isolated regions and rugged terrain which made it difficult for the KMT armies to mobilise against them. Initally the KMT was unable to deal with the gurella method of warfare. Four so called ‘extermination campaigns’ ended in failure. In Novermber 1931 the founding of the Chinese Soviet Republic was even declared. However the KMT military learnt from the failures and the fifth campign of 1934, based on creeping wall of small fortifications, forced the CCP to abandon Chingkangshan.
+</p><p>This retreat became the famous ‘Long March’ in which the remanents of the Red Army marched 10,000 km across China to a new base area in Shensi. The conventional history of the march is that it involved <em>“a skirmish every day, a battle every two weeks”</em> although recently Jung Chang &amp; Jon Halliday have argued that Chiang Kai-shek let the Red Army go and that at least some of the battles were propaganda inventions. However there is little argument that conditions on the march were horrendous. Of the 90 to 100 thousand who set out only 7 to 8 thousand arrived. Those who survived the march went on to form the future cadre of the CCP and the Chinese state. <a href="#fn25" class="footnote" id="fn_back25">[25]</a>
+</p><h4 id="toc13">The new alliance with the KMT
+</h4>
+<p>The international situation was changing during the Long March with the growth of fascism in the west and as a consequence Stalins search for ‘anti-fascist’ allies. Also from 1931 China had come under periodic attack from Japanese militarism which bit off chunk after chunk to construct puppet states. Aware of the backward state of China’s armies in comparison with Japans Chiang Kai-shek was using the slogan <em>“Unification and then resistance”</em> meaning that the KMT would only fight the Japanese once the internal enemies including the CCP had been conquered. He also said he was trading <em>“Space for time”</em> in the war with Japan. However when time ran out and the war with Japan openly erupted in July of 1937 the KMT soon lost all the key cities to Japan and all credibility with nationalist Chinese.
+</p><p>In this context and in line with Comintern policy the CCP at its congress during the Long March had raised the demand for a ‘United Front from Below’. This meant a united front not with Chiang Kai-shek but with the rank and file members of the KMT under CCP leadership. Unsurprizingly this demand made little progress at the time. However shortly afterwards in May of 1936 a National Salvation Alliance was formed with Sun Yat-sen’s widow as the president. This called for an end to the civil war and a United Front against the Japenese. In the summer of 1936 the CCP changed its demand to an alliance with the Chiang Kai-shek leadership of the KMT as the local implementaion of the new ‘Popular Front’ policy coming from Moscow.
+</p><p>Although at this stage the CCP looked to be in a very weak position, hemmed into a poor border province, the reality was that the KMT was in a lot of trouble. Before the open war with the Japanese the KMT had a period of almost ten years where it controled much of China and so had the chance to demonstrate that it could modernise the country. It had failed to do so because like the previous regimes a modernisation would inevitably mean attacking the classes, in particular the landlords, that flocked to its banner after its 1928 victory and formed its base in most localities. For instance although laws limited rents were passed the local courts were controlled by KMT landlords and so they were not enforced except in CCP dominated areas.
+</p><h4 id="toc14">The failure of the KMT
+</h4>
+<p>Agricultural production only increased 1% from 1932 to 1935, a rate slower than the growth in population. There had been growth in both railways and modern industry but from such a low base that the change was almost invisible. Legal reform to outlaw corruption and limit rent increases were meaningless as official positions continued to be sold in some areas and the landlords simply ignored the law. By 1934 Chang-Kei Shek had retreated so far on the political front as to restore Confucianism as the state religion.
+</p><p>The war with Japan saved the CCP because Chiang Kai-shek was literally forced to end his war with them and enter into a United Front. This became official in September 1937 with joint declarations from the KMT and CCP. Because the KMT army was incapable of effective resistance against the Japenese the CCP was able to present its limited guerrilla war alongside its better adminstrative record as proof that it was most capable of looking after China’s national interests. In addition the Japanese anti-guerrilla ’3 alls’ policy of collective punishment, <em>“burn all, kill all, loot all”</em>, meant that peasants were pushed into the Red Army in order to defend themselves.
+</p><p>Starting out from Shensi the CCP expanded its area of control through gurella war. In reality it often controlled areas by night and the Japanese controlled them by day but this was enough to set up the Border Region Government. The BRG was not politically radical, after the Long March the CCP had abandoned its radical program in order to build the United Front with the KMT. But the simple act of enforcing existing KMT rent control laws and controlling interest rates won over the peasantry.
+</p><p>The KMT areas also suffered from hyper inflation similar to that of Weimar Germany. Conscripts in the KMT armies were treated as badly as conscripts had always been treated in China’s armies — it was quite possible for them to starve through lack of supplies. This in turn meant they often robbed and even murdered the local peasants. The Red Army on the other hand treated its own members in a more reasonable manner and strongly discouraged any mistreatment of the peasantry.
+</p><h4 id="toc15">CCP victory
+</h4>
+<p>In this context there is no mystery why in the course of the war almost all the classes in China came to see the CCP as offering much better hope for the future than the KMT. To the elite the CCP appeared to be leading a long sought after wave of modernisation and delivering effective government. For the peasants it was keeping the landlords and money lenders under control. Unlike the KMT it was not obviously corrupt and not in league with western imperialism, during and after the war the US supplied the KMT with arms and transported its troops. Indeed when the CCP came to power in 1949 and Mao declared victory from the Tiananmen gate he did so in nationalist terms, China he declared had <em>“stood up”</em> and officialy 1949 was described as the <em>“victory of the national bourgeois democratic revolution.”</em> The four smaller stars on the Chinese flag represent the alliance that brough victory, the workers, peasants, middle class and progressive (i.e. nationalist) capitalists.
+</p><p>There is no need anymore to argue over whether Maoism offered freedom for Chinese workers and peasants. Mao’s own record demonstrates that it did not and China today has become a vital part of the global capitalist economy. Mao came to power because he was able to follow the paths that maximised the growth, prestige and power of the CCP at key periods, particularly in 1927 and 1936. He had a keen understanding of the twists and turns need to bring the CCP to power and keep it there, this defining characteristic is represented in his once popular title as the ‘Great Helmsman’.
+</p><p>From an anarchist persepective the more interesting and greatly unexplored question is the failure of Chinese anarchism to provide an alternative despite the fact that in 1920 it had everything going for it. Primarly it appears it failed to break out of its origins, as an ideology of the most radical section of republican elite. There were anarchists who successfully built labour organisations, there were anarchists who went to the country side and organised amongst peasants but the movement as a whole refused to organize itself beyond this and paid the price for this failure.
+</p><p> 
+</p><p class="fnline"><a class="footnotebody" href="#fn_back1" id="fn1">[1]</a> Lucien Bianca, <em>Origins of the Chinese Revolution</em>, 1915–49, Stanford University Press, 1971, p4
+</p><p class="fnline"><a class="footnotebody" href="#fn_back2" id="fn2">[2]</a> Arif Dirlik, <em>Anarchism in the Chinese Revolution</em>, University of California Press, p34
+</p><p class="fnline"><a class="footnotebody" href="#fn_back3" id="fn3">[3]</a> <em>Anarchism in the Chinese Revolution</em>, p27
+</p><p class="fnline"><a class="footnotebody" href="#fn_back4" id="fn4">[4]</a> James P Harrison, <em>The Long March to Power: A history of the Chinese Communist Party, 1921–72</em>, Praeger Publishers, 1972, p16
+</p><p class="fnline"><a class="footnotebody" href="#fn_back5" id="fn5">[5]</a> <em>Anarchism in the Chinese Revolution</em>, p2
+</p><p class="fnline"><a class="footnotebody" href="#fn_back6" id="fn6">[6]</a> <em>Anarchism in the Chinese Revolution</em>, p148
+</p><p class="fnline"><a class="footnotebody" href="#fn_back7" id="fn7">[7]</a> James P Harrison, <em>The Long March to Power</em>, p9
+</p><p class="fnline"><a class="footnotebody" href="#fn_back8" id="fn8">[8]</a> <em>Anarchism in the Chinese Revolution</em>, p170
+</p><p class="fnline"><a class="footnotebody" href="#fn_back9" id="fn9">[9]</a> <em>Anarchism in the Chinese Revolution</em>, p15
+</p><p class="fnline"><a class="footnotebody" href="#fn_back10" id="fn10">[10]</a> <em>Anarchism in the Chinese Revolution</em>, p18
+</p><p class="fnline"><a class="footnotebody" href="#fn_back11" id="fn11">[11]</a> Lucien Bianco, <em>Origins of the Chinese Revolution</em>, p95
+</p><p class="fnline"><a class="footnotebody" href="#fn_back12" id="fn12">[12]</a> <em>Anarchism in the Chinese Revolution</em>,  p170
+</p><p class="fnline"><a class="footnotebody" href="#fn_back13" id="fn13">[13]</a> <em>Anarchism in the Chinese Revolution</em>, p26
+</p><p class="fnline"><a class="footnotebody" href="#fn_back14" id="fn14">[14]</a> <em>Anarchism in the Chinese Revolution</em>,  p178
+</p><p class="fnline"><a class="footnotebody" href="#fn_back15" id="fn15">[15]</a> Lucien Bianco, <em>Origins of the Chinese Revolution</em>, p54
+</p><p class="fnline"><a class="footnotebody" href="#fn_back16" id="fn16">[16]</a> <em>Mao: The Unknown story</em>, Jung Chang &amp; Jon Halliday, Jonathan Cape 2005, p28
+</p><p class="fnline"><a class="footnotebody" href="#fn_back17" id="fn17">[17]</a> <em>Mao: The Unknown story</em>, p28
+</p><p class="fnline"><a class="footnotebody" href="#fn_back18" id="fn18">[18]</a> <em>Anarchism in the Chinese Revolution</em>, p154
+</p><p class="fnline"><a class="footnotebody" href="#fn_back19" id="fn19">[19]</a> <em>Anarchism in the Chinese Revolution</em>, p13
+</p><p class="fnline"><a class="footnotebody" href="#fn_back20" id="fn20">[20]</a> <em>Anarchism in the Chinese Revolution</em>, p153
+</p><p class="fnline"><a class="footnotebody" href="#fn_back21" id="fn21">[21]</a> <em>Anarchism in the Chinese Revolution</em>, p147
+</p><p class="fnline"><a class="footnotebody" href="#fn_back22" id="fn22">[22]</a> Cited in ‘Theses on the Chinese Revolution’, <em>Solidarity</em>, (1967) online at <a href="http://struggle.ws/disband/solidarity/china_rev2.html">struggle.ws</a>
+</p><p class="fnline"><a class="footnotebody" href="#fn_back23" id="fn23">[23]</a> Lucien Bianco, <em>Origins of the Chinese Revolution</em>, p62
+</p><p class="fnline"><a class="footnotebody" href="#fn_back24" id="fn24">[24]</a> <em>Report on an Investigation of the Peasant Movement in Hunan</em>, March 1927, Online at <a href="http://www.fordham.edu/halsall/mod/1927mao.html">www.fordham.edu</a>
+</p><p class="fnline"><a class="footnotebody" href="#fn_back25" id="fn25">[25]</a> Lucien Bianco, <em>Origins of the Chinese Revolution</em>, p68
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

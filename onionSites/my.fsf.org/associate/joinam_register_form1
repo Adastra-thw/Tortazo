@@ -1,0 +1,673 @@
+<!--
+FSF Associate Membership System
+Copyright (C) 2004 Free Software Foundation, Inc.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+-->
+
+
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en">
+
+
+  <head>
+    <meta http-equiv="Content-Type"
+          content="text/html;charset=utf-8" />
+
+    <title>Join - </title>
+
+    
+      
+        <base href="https://my.fsf.org/associate/join/" />
+      
+    
+
+    <meta name="generator" content="Plone - http://plone.org" />
+<link rel="alternate" title="FSF News" href="http://www.fsf.org/news/RSS" type="application/rss+xml" />
+<link rel="alternate" title="FSF Blogs" href="http://www.fsf.org/blogs/RSS" type="application/rss+xml" />
+<link rel="alternate" title="Free Software Jobs" href="http://www.fsf.org/resources/jobs/RSS/" type="application/rss+xml" />
+<link rel="alternate" title="GNU Project News" href="http://www.gnu.org/rss/whatsnew.rss" type="application/rss+xml" />
+<link rel="alternate" title="New Free Software" href="http://www.gnu.org/rss/quagga.rss" type="application/rss+xml" />
+
+    <meta content="root" name="DC.creator" />
+    <meta content="2004-08-09 15:24:39"
+          name="DC.date.created" />
+    <meta content="2004-08-09 15:24:39"
+          name="DC.date.modified" />
+    <meta content="Folder" name="DC.type" />
+    <meta content="text/html" name="DC.format" />
+
+    <!-- Basic crude style for Netscape4.x - This can be removed
+         if you don't want the special NS4 look - it will still work,
+         just be plain text instead. Column layout for Netscape4.x included -->
+    <link rel="Stylesheet" type="text/css"
+          href="https://my.fsf.org/ploneNS4.css" />
+
+    <!-- Column style sheet. -->
+    <style type="text/css" media="all">@import url(https://my.fsf.org/ploneColumns.css);</style>
+
+    <!-- Main style sheets for CSS2 capable browsers -->
+    <style type="text/css" media="screen"> @import url(https://my.fsf.org/plone.css);</style>
+
+    <!-- Old style sheet from Plone 1.0, remove tal:condition="nothing" if you need to use the old styles.
+         Will be removed in Plone 2.1. -->
+    
+
+  
+    <!-- Custom style sheet if available -->
+    <style type="text/css" media="all">@import url(https://my.fsf.org/ploneCustom.css);</style>
+
+    <!-- Style sheet used for printing -->
+    <link rel="stylesheet" type="text/css" media="print"
+          href="https://my.fsf.org/plonePrint.css" />
+
+    <!-- Internet Explorer CSS Fixes -->
+    <!--[if IE]>
+    <style type="text/css" media="all">@import url(https://my.fsf.org/ploneIEFixes.css);</style>
+    <![endif]-->
+
+    <link rel="search" href="https://my.fsf.org/search_form"
+          title="Search this site" />
+
+    
+    <link rel="up" href="https://my.fsf.org/associate"
+          title="Up one level" />
+    <link rel="copyright" href="copyright"
+          title="Copyright information" />
+    <link rel="author" href="author"
+          title="Author information" />
+
+    
+
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    
+      <!-- A slot where you can insert CSS in the header from a template -->
+      
+    
+
+    
+
+      
+  
+  
+  
+  
+  
+  
+
+
+      
+      <!-- A slot where you can insert elements in the header from a template -->
+    
+
+    
+      <!-- A slot where you can insert javascript in the header from a template -->
+      
+<script>
+/*                                                                                                                                                            
+The only JavaScript code we have right now is the piwik statistics
+                                                                                                                                                              
+|@licstart The following is the entire license notice for the
+JavaScript code in this page.|                                                                                                                                
+
+    Copyright 2012 Matthieu Aubry.                                                                                                                            
+
+    This program is free software: you can redistribute it and/or modify                                                                                      
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or                                                                                         
+    (at your option) any later version.
+                                                                                                                                                              
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see https://www.gnu.org/licenses/.
+
+|@licend The above is the entire license notice
+for the JavaScript code in this page.|
+*/
+</script>
+    
+
+    <!-- Common Plone ECMAScripts -->
+
+    <!-- Pull-down ECMAScript menu, only active if logged in -->
+    
+
+    <!-- Define dynamic server-side variables for javascripts in this one  -->
+    
+
+    
+
+    
+
+      <!-- Old JS from Plone 1.0, remove tal:condition="nothing" if you need to use the old pop-ups.
+           Will be removed in Plone 2.1 -->
+      
+
+    
+  </head>
+
+  <body>
+
+   <div style="width: 975px; margin: 0 auto;">
+
+      <div id="portal-top">
+
+        <a class="hiddenStructure"
+           href="https://my.fsf.org/associate/join/am_register_form1#documentContent">Skip to content.</a>
+
+           <h1 id="portal-logo">
+    <a href="http://www.fsf.org/"></a>
+</h1>
+
+
+
+           <div id="join-button">
+           <a href="/associate/support_freedom" title="Join the Free Software Foundation!"><img src="https://static.fsf.org/nosvn/join.en.png" alt="Join now" /></a>
+           </div> 
+
+      </div>
+      </div>
+
+<div id="navi">
+
+<div>
+
+<nav>
+<ul>
+  <li id="tab-about"><a href="http://www.fsf.org/about/">About</a></li>
+  <li id="tab-campaigns"><a href="http://www.fsf.org/campaigns/">Campaigns</a></li>
+  <li id="tab-licensing"><a href="http://www.fsf.org/licensing/">Licensing</a></li>
+  <li id="tab-membership"><a href="http://www.fsf.org/associate/">Membership</a></li>
+  <li id="tab-resources"><a href="http://www.fsf.org/resources/">Resources</a></li>
+  <li id="tab-community"><a href="http://www.fsf.org/campaigns/libreplanet/">Community</a></li>
+  <li id="tab-donate"><a href="/donate/">Donate</a></li>
+  <li id="tab-shop"><a href="http://shop.fsf.org">Shop</a></li>
+</ul>
+
+</nav>
+
+</div>
+</div>
+
+    <div id="visual-portal-wrapper">
+
+
+
+
+      <!-- The wrapper table. It contains the three columns. There's a table-less
+           alternative in the plone_tableless skin layer that you can use if you
+           prefer layouts that don't use tables. -->
+      <table id="portal-columns">
+        <tbody>
+          <tr>
+            <!-- start of the left (by default at least) column -->
+
+            <!-- end of the left (by default at least) column -->
+
+            <!-- start of main content block -->
+            <td id="portal-column-content">
+
+           <div id="portal-breadcrumbs">
+    
+    <span>
+        
+            <a href="https://my.fsf.org/associate/"
+               accesskey="b">associate</a>
+            <span class="breadcrumbSeparator"> &rarr; </span>
+            
+         
+    </span>
+    <span>
+        
+            <a href="https://my.fsf.org/associate/join/"
+               accesskey="b">Join</a>
+            <span class="breadcrumbSeparator"> &rarr; </span>
+            
+         
+    </span>
+    <span>
+        
+            
+            
+            <span>am_register_form1</span>
+         
+    </span>
+</div>
+	      
+              
+                <div id="content" class="">
+
+                  
+
+                  <div class="documentContent" id="region-content">
+
+                    <a name="documentContent"></a>
+
+                    
+
+                    
+
+                    <div>
+      <div>
+
+    <h1>Registration Form</h1>
+
+    <form action="am_register_form1" method="post">
+
+            
+            <input type="hidden" name="last_visit:date"
+                   value="2014/08/07 19:57:03.903 GMT-4" />
+            <input type="hidden" name="prev_visit:date"
+                   value="2014/08/07 19:57:03.904 GMT-4" />
+            <input type="hidden" name="came_from_prefs" />
+
+            
+
+	    
+
+
+        <fieldset>
+
+            <legend>Contact Information</legend>
+    
+            <div class="field">
+                
+                <label>Full Name</label>
+    
+                <span class="fieldRequired" title="Required">(Required)</span>
+
+                <div class="formHelp">
+                Enter full name, eg. John Smith.
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="fullname" size="30"
+                       tabindex="1" />
+    
+            </div>
+                   
+            <div class="field">
+    
+                <label>E-mail</label>
+    
+                <span class="fieldRequired" title="Required">(Required)</span>
+    
+                <div class="formHelp">
+                Enter an email address. This is necessary in case the password
+                is lost. 
+		<a href="http://www.fsf.org/donate/privacypolicy.html" target="new">We respect your privacy</a>, and will not give the address
+                away to any third parties or expose it anywhere.
+                </div>
+    
+                <div></div>
+    
+                <input type="text" name="email" size="30"
+                       tabindex="2" />
+            </div>
+
+        </fieldset>
+        <fieldset>
+
+            <legend>Account Creation</legend>
+
+            <div class="field">
+                
+                <label>User Name</label>
+    
+                <span class="fieldRequired" title="Required">(Required)</span>
+    
+                <div class="formHelp">
+Account names are always lowercase, may contain only numbers and digits, and must be no more than 8 characters long.
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="username" size="8"
+                       maxlength="8" tabindex="3" />
+            </div>
+
+
+            <div class="field">
+    
+                <label>Password</label>
+    
+                <span class="fieldRequired" title="Required">(Required)</span>
+    
+                <div class="formHelp">
+Passwords are case sensitive and must be at least 5 characters.
+                </div>
+    	       
+                <div></div>
+    
+                <input type="password" name="password"
+                       size="10" tabindex="4" />
+            </div>
+    
+            <div class="field">
+                             
+                <label>Confirm Password</label>
+    
+                <span class="fieldRequired" title="Required">(Required)</span>
+    
+                <div class="formHelp">
+                Re-enter the password. Make sure the passwords are identical.
+                </div>
+                
+                <div></div>
+    
+                <input type="password" name="confirm"
+                       size="10" tabindex="5" />
+            </div>
+        </fieldset>
+        <fieldset>
+	  <legend>Optional Information</legend>       
+
+            <div class="field">
+                             
+                <label>School</label>
+    
+                <div class="formHelp">
+		  If you are a student, please tell us what school or institution you attend.
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="school" size="30"
+                       tabindex="6" />
+            </div>
+
+	    
+            <div class="field">
+                             
+                <label>School Domain Name</label>
+    
+                <div class="formHelp">
+		  (i.e. mit.edu)
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="schooldn" size="30"
+                       tabindex="7" />
+            </div>
+	    
+
+            <div class="field">
+                             
+                <label>Organization</label>
+    
+                <div class="formHelp">
+		  Please tell us if you are affiliated with an organization or
+		  company. It will help us coordinate more effective
+		  free software actions and events.  
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="organization"
+                       size="30" tabindex="8" />
+            </div>
+
+            <div class="field">
+                             
+                <label>Organization Domain Name</label>
+    
+                <div class="formHelp">
+		  (i.e. foobar.org)
+                </div>
+                
+                <div></div>
+    
+                <input type="text" name="organizationdn"
+                       size="30" tabindex="9" />
+            </div>
+	    
+	</fieldset>
+
+            <div class="formControls">
+                <input class="context" type="submit"
+                       tabindex="10"
+                       name="form.button.Continue"
+                       value="Continue..." />
+            </div>
+
+
+	<input type="hidden" name="form.submitted" value="1" />
+
+    </form>
+</div>
+
+    </div>
+
+                    
+                      <div class="discussion">
+
+    
+
+</div>
+                    
+
+                  </div>
+
+                </div>
+
+              
+            </td>
+            <!-- end of main content block -->
+
+            <!-- start of right (by default at least) column -->
+            <td id="portal-column-two">
+
+              <div class="portlet" id="portletPersonal">
+                 
+
+<h5>Personal tools</h5>
+
+<ul>
+    
+
+    <li>
+              You are not logged in
+    </li>
+
+       
+    
+        <li>
+            <a href="https://my.fsf.org/login_form"
+               accesskey="u">
+               Log in
+            </a>
+        </li>
+    
+    
+        <li>
+            <a href="https://my.fsf.org/register_form"
+               accesskey="u">
+               Register
+            </a>
+        </li>
+    
+
+   
+
+   
+
+    <li>
+              <a href="/mail_password_form">I forgot my password</a>
+    </li>
+
+</ul>
+
+              </div>
+
+              <div class="visualPadding">
+                
+                  
+
+    
+
+        
+            <div>
+     
+    <div class="portlet" id="portlet-search" style="background-color: white;">
+
+        <div class="portletBody">
+
+        <p class="formHelp">Looking for something?</p>
+    
+    <form name="searchform"
+          action="https://my.fsf.org/search">
+        <label for="gadget" class="hiddenStructure">Search</label>
+        <p>
+        <input id="gadget" name="SearchableText" type="text"
+               size="18" alt="Search" title="Search"
+               accesskey="s" class="visibility:visible"
+               tabindex="10001" /></p><p>
+        <input type="submit" value="Search" accesskey="s"
+               tabindex="10002" />
+        </p>
+    </form>
+    
+
+        </div>
+
+    </div>
+   
+</div>
+        
+
+        
+    
+    
+
+        
+            <div>
+     
+    <div class="portlet" id="portlet-fss">
+
+        <h5>Subscribe</h5>
+
+        <div class="portletBody">
+    
+    <form action="https://crm.fsf.org/civicrm/profile/create&amp;reset=1&amp;gid=31" method="post">
+<p>Sign up today to receive the monthly newsletter, the <a href="http://www.fsf.org/free-software-supporter/">Free Software Supporter</a></p>
+
+<p><small>Enter your email address (ie. matt@example.com)</small></p>
+
+<p><input id="frmEmail" type="text" name="email-Primary" size="18" maxlength="80" /></p>
+<p><input type="submit" name="_qf_Edit_next" value="Subscribe me" /></p>
+<div><input name="postURL" type="hidden" value="" />
+<input type="hidden" name="group[25]" value="1" />
+<input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+<input name="_qf_default" type="hidden" value="Edit:cancel" />
+</div>
+</form>
+    
+
+        </div>
+
+    </div>
+   
+</div>
+        
+
+        
+    
+
+                
+                &nbsp;
+              </div>
+            </td>
+            <!-- end of the right (by default at least) column -->
+          </tr>
+        </tbody>
+      </table>
+      <!-- end column wrapper -->
+
+      <div class="visualClear">&nbsp;</div>
+
+
+      <hr class="netscape4" />
+
+      
+	<div id="footer">
+
+<p style="font-size: 120%; text-align: center;"><span class="highlight">Questions or feedback?</span> <a href="mailto:info@fsf.org">info@fsf.org</a>.</p>
+
+<p>The FSF is a charity with a worldwide mission to advance software freedom &mdash; <a href="http://www.fsf.org/about">learn about our history and work.</a></p>
+
+<p>Copyright &copy; 2004-2014 <a href="http://www.fsf.org/about/contact.html">Free Software Foundation</a>, Inc. <a href="https://my.fsf.org/donate/privacypolicy.html">Privacy Policy</a>.</p>
+
+  <p>This work is licensed under a <a href="http://www.fsf.org/licensing/licenses/#OpinionLicenses">Creative
+  Commons Attribution-No Derivative Works 3.0 license (or later
+  version)</a></p>
+
+<p style="font-size: 16px; letter-spacing: 1px; font-weight: bold;">The FSF also has sister organizations in <a href="http://www.fsffrance.org/index.en.html">France</a>, <a href="http://www.fsfla.org/">Latin America</a>, <a href="http://www.fsfe.org">Europe</a> and <a href="http://fsf.org.in/">India</a>.</p>
+
+</div>
+
+	<div id="portal-colophon">
+      <!--
+
+	Please keep the Plone Powered button (or a textual link to us) if you use
+	Plone on your site. It's a nice token of gratitude, and we appreciate your
+	help in promoting the Plone name.
+
+	Plone is powered by the combined forces of Zope and CMF, two absolutely
+	great systems made by Zope Corporation (http://zope.com) and they in turn
+	are based on the best programming language in the world - Python
+	(http://www.python.org). We owe these guys a lot, thanks for making Plone
+	possible!
+
+      -->
+
+      <a href="http://plone.org">
+        <img src="https://static.fsf.org/nosvn/plone.png" alt="Powered by Plone" />
+      </a>
+
+    </div>
+      
+
+    </div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsf.org/" : "http://piwik.fsf.org/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 8);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="//piwik.fsf.org/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+  </body>
+</html>
+
+
+

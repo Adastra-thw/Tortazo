@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     Violence (Sébastien Faure) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/sebastien-faure-violence?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=sebastien-faure-violence">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    Violence
+  </p>
+  
+  <p id="textsubtitle">
+    <strong>Subtitle:</strong>
+    from the Anarchist Encyclopedia — S. Faure
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/sebastien-faure">Sébastien Faure</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    1934
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anarchist-encyclopedia">Anarchist Encyclopedia</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on November 15, 2011 from <a href="http://marxists.org/reference/archive/faure/1934/encyclopedia.htm">marxists.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="sebastien-faure-violence.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="sebastien-faure-violence.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="sebastien-faure-violence.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="sebastien-faure-violence.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="sebastien-faure-violence?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="sebastien-faure-violence.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="sebastien-faure-violence.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Sébastien Faure</h2>
+	
+	<h1 id="textttitleh">Violence</h1>
+	
+	<h2>from the Anarchist Encyclopedia — S. Faure</h2>
+	
+      </div>
+      
+      
+      <div id="thework">
+	<p><strong>Violence</strong>: The anarchists are tender, affectionate, sensitive. As such, they hate violence. If it were possible for them to hope that they would realize through gentleness and persuasion their concept of universal peace, mutual aid and free agreement, they would repudiate all recourse to violence and would energetically combat even the idea of having recourse to it.
+</p><p>But being practical and realistic — whatever their interested or ignorant detractors might say — the anarchists don’t believe in the magical virtue, the miraculous power of persuasion and gentleness. They have the well thought out certainty that in order to make a living reality of their admirable dream, they must before anything else have done with the world of cupidity, lies, and domination on the ruins of which they will build the Libertarian City. They have the conviction that in order to smash the forces of exploitation and oppression it will be necessary to employ violence.
+</p><p>This conviction is based on the impartial study of History, on Nature’s example, and on Reason.
+</p><p>History — I’m not talking about the history that the thurifers of triumphant force and despotic Power have written, but of that whose furrow the people has dug during the long centuries — that History teaches us that the tears and blood of the disinherited has abundantly flowed, that piled up there are the wounded bodies of countless and heroic victims of revolt; that every reform, amelioration, and improvement has been paid for with bloody battles placing the oppressed against the oppressors; that the masters have never renounced a parcel of their tyrannical power, that the rich have never abandoned a part of their thefts, a fraction of their privileges unless the revolutionary action of the enslaved and despoiled has obliged them to cede to threat, intimidation, or exacerbated public strength. That only riots, insurrections, and bloody revolutions have even a little weakened the chains with which the Powerful weigh down the Weak, the Great the Small, and Chiefs the Subjects.
+</p><p>Such is the lesson that can be drawn from a careful, impartial study of history.
+</p><p>Nature unites its great voice to that of History by placing before our eyes at a given moment the incessant spectacle of violence smashing the resistances that serve as obstacles to the birth or the development of the forces in the process of being transformed and of the forms constantly being renewed which comprises the eternal evolution of beings and things...
+</p><p>Finally, the data of Reason confirm those of Nature and History.
+</p><p>Elementary and simple Reason proclaim that counting on the good will of governments and the rich is pure folly. That the latter and the former, feeling that their privileges are just and that their safeguarding is indispensable for the public good, consider and treat those who attempt to take Power and Fortune from them as evildoers. That if they surround themselves with policemen, gendarmes and soldiers, it’s in order to throw them against their class enemies at the least sign of revolt. That if by chance they consent to curtail anything at all of their exploitation or domination, it’s in order to give up what has to be given up in order to save the rest. But never will they consent to lose everything, and consequently sooner or later this must be taken from them by force. This is what Reason says, in agreement on all points with Nature and History...
+</p><p>I could justify the recourse to anarchist violence by all the considerations tied to cases of legitimate defense.
+</p><p>I could demonstrate that in propagating the spirit of revolt in its many expressions, not excluding that of armed revolt, I remain faithful to the most distant origins of the anarchist movement and its constant tradition.
+</p><p>I could prove that the violence daily exercised by all governments is of a ferocity that could never be surpassed by that whose necessity we call for, and that it causes more misery, sufferings and death than could the most furiously unleashed anarchist violence which we call for.
+</p><p>I could cite the example of a surgeon who, in order to save the entire body amputates a member, and who no one would think of accusing of cruelty.
+</p><p>I could cite that lapidary declaration, that cynical but precise avowal, known by the whole world: Between the partisans and the enemies of the current regime it is nothing but a question of force.”
+</p><p>— S Faure
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

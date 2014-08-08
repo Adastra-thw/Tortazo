@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The Marxist Paradox: An Anarchist Critique (Wayne Price) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/wayne-price-the-marxist-paradox-an-anarchist-critique?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=wayne-price-the-marxist-paradox-an-anarchist-critique">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The Marxist Paradox: An Anarchist Critique
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/wayne-price">Wayne Price</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    December 2013
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/anarkismo">Anarkismo</a>
+        <a href="/topics/critique">critique</a>
+        <a href="/topics/marxism">marxism</a>
+        <a href="/topics/review">review</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on July 2, 2014 from http://anarkismo.net/article/26583?search_text=wayne%20price&amp;print_page=true
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="wayne-price-the-marxist-paradox-an-anarchist-critique.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Wayne Price</h2>
+	
+	<h1 id="textttitleh">The Marxist Paradox: An Anarchist Critique</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Conclusions
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">The State, the Commune, and the Dictatorship
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">The Critique of Political Economy
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">The Philosophy of Marxism
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Anarchist Conclusions about the Paradox of Marxism
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<p>Review of Ronald D. Tabor, The Tyranny of Theory: A Contribution to the Anarchist Critique of Marxism (2013). 349 pages.
+</p>
+<blockquote>
+<p>This is a review of Ronald D. Tabor, <em>The Tyranny of Theory: A Contribution to the Anarchist Critique of Marxism</em> (2013).
+</p><p>Marxism, like anarchism, came out of movements for democracy, socialism, and working class liberation. Its goals were for a free, cooperative, classless, stateless, and nonoppressive society. Yet Marxism ended up establishing totalitarian, mass murdering, state capitalist, regimes. This is the paradox of Marxism. Why did this happen? An attempt to analyze this is made in this new book by Ron Tabor, a former Marxist and now an anarchist. wayne discusses Ron’s ideas.
+</p></blockquote>
+<p>There is a paradox to Marxism, a central contradiction. Like anarchism, it originated in the 19<sup>th</sup> century movements for democracy, socialism, and working class liberation. Its stated goals were the end of capitalism, of classes, of the state, and of all other oppressions. Hundreds of millions of workers, peasants, and others have mobilized under its program, aiming for a better world.
+</p><p>But what was the result? The first Marxist movement resulted in the social-democratic parties of Europe and elsewhere. These ended up supporting capitalism and opposing revolutions. They supported the existing state, bourgeois democracy, and Western imperialism and its wars. Currently they have abandoned all pretense of advocating a new social system.
+</p><p>Lenin, Trotsky, and others sought to return to revolutionary Marxism. Their activities resulted in “Stalinism”: a series of monstrous, state capitalist, tyrannies, which killed millions of workers and peasants (and thousands of Communists). Currently these have collapsed into traditional capitalism.
+</p><p>How did Marxism start off so well and end so badly? No doubt there have been “objective forces,” as the capitalist system pressures and distorts even the most liberatory doctrine. But isn’t this to be expected under capitalism? Which aspects of Marxism made it most vulnerable to these pressures? What was there in the original Marxism of Marx and Engels which lent itself to these terrible results?
+</p><p>Ron Tabor is a good theorist to examine this vital question. For most of his adult life he was a Marxist. He was the leader of the unorthodox-Trotskyist Revolutionary Socialist League (1973—1989). Unlike most ex-Marxists, he has not turned to the right (to liberalism or neoconservatism) but to the left, becoming an anarchist. (Note: I was also a member of the RSL and knew Ron for many years. Personally, I went from anarchist-pacifism to unorthodox Trotskyism to revolutionary anarchism. Sometimes I refer to myself as a “Marxist-informed anarchist.”)
+</p><h4 id="toc1">Conclusions
+</h4>
+<p>Ron’s conclusion is “Marxism, as I now see it, is a totalitarian doctrine and every attempt to implement the Marxian program, no matter how well-intentioned, will lead to the creation of authoritarian and state-dominated, if not totalitarian, societies” (pp. 9—10). Marxism’s basic totalitarianism, he claims, is especially rooted in its program to use the state to establish socialism, and in its Hegelian-derived philosophy.
+</p><p>“Totalitarian” is a somewhat controversial term. What I think Ron means by it is a capitalist system, such as Nazi Germany or Stalinist Russia, in which the state is ruled by a single party with a set ideology, which seeks to (totally) dominate every aspect of society. It is unlike previous monarchies or police states which had let people alone if they did not challenge the government.
+</p><p>Essentially I am in agreement with Ron’s argument, at least some of which I will attempt to summarize in this review (despite Ron’s clear style, this is a big and dense book, but I will do my best). However, I feel his argument has two limitations.
+</p><p>The first comes early on when he points out that some Marxists try to defend their doctrine by arguing that there are valuable aspects of Marxism, such as “the class analysis of society, the analysis of capitalism,…the notions of ‘fetishism’ and ‘reification’…” (p. 20). Ron argues that even if parts of Marxism are true, this does not validate Marxism as a whole, as a total world view which encompasses all aspects of social and natural existence. “The apparent validity of many of these ideas does not mean that Marxism itself is correct, or is not at bottom totalitarian” (p. 20).
+</p><p>This is true (that is, I agree with it). But he does not go on to state the obverse, which is also true: to say that Marxism as a whole world-view is incorrect and totalitarian does not mean that “many of these ideas” are not valid in themselves (that is, useful in practice for anarchists and others). In particular, I believe that Marx’s critique of political economy can be very useful for anarchists (and wrote a book saying so; price 2013). Actually, Ron repeatedly comes close to admitting this in sections of the book (as I will show), but he does not say it clearly; his focus is on discrediting Marxism.
+</p><p>As a comparison, revolutionary anarchists reject liberalism as a total political philosophy. From John Stewart Mill to John Dewey, liberalism has advocated gradually working within the established system, never challenging the state or capitalism, in effect rationalizing an exploitative society. Anarchists strongly reject this. But liberalism has also advocated freedom of speech and association, political democracy, equality of races and genders, and other rights and freedoms. These, we anarchists have always agreed with. The failure of liberalism as a total program does not cause us to reject the good parts of its program (as many Marxists have, sneering at “bourgeois democratic rights”). Neither do the virtues of these positive ideas lead us to accept liberalism as a whole.
+</p><p>A second, related, problem is that Ron does not recognize that there is a radically democratic side to Marxism, as expressed in its original goals of a classless, stateless, society. Otherwise, Ron and I would never have been attracted to Marxism in the first place. If this were not true, there would be no “paradox” to Marxism. After all, Ron would not bother to write a big book demonstrating that Nazism, say, was really totalitarian! The Nazis openly, proudly, announced it.
+</p><p>From William Morris to Rosa Luxemburg and onwards, there has been a distinct minority (but only a minority) which interpreted Marxism in a way which was libertarian, democratic, humanistic, and working class. This included the council communists, the “Johnson-Forrest Tendency,” the early Socialisme ou Barbarie, autonomous Marxists, and “Left Communists.” I do not believe that this tendency is Marxistically “correct” while the authoritarian social democrats and Marxist-Leninists are “wrong”. Yet it is empirical reality that some people have regarded themselves as Marxists while holding a politics very close to anarchism. As an anarchist, I would argue that the libertarian and the authoritarian Marxists each base themselves in real, if contradictory, aspects of Marxism.
+</p><h4 id="toc2">The State, the Commune, and the Dictatorship
+</h4>
+<p>Marx agreed with the anarchists that the state was essentially a repressive institution which served a ruling class, and oppressed the rest of society. A cooperative, free and equal, society would have abandoned the state altogether. From there they differ.
+</p><p>Marx held that the working class and its allies would seize the state, or would abolish the existing state and create its own state. The state would repress the capitalists and their supporters. The state of the workers would take over the economy, building on the concentration, centralization, and statification of capitalism. It would nationalize all or most of the economy into a centralized system (centralization implies a few at the center and most people at the periphery). Over time, this centralized state would supposedly cease to be a “state.” It would become a noncoercive, benevolent, institution, doing “the administration of things, not people” (as if things could be administered without dominating people).
+</p><p>It is not surprising that such a program, when put into practice, has repeatedly resulted in totalitarianism. As Ron says, if a revolutionary party puts all its efforts into building a new state, while expecting that state to eventually dissolve automatically (without anyone working at dissolving it), then what will result will be…a state. Instead, anarchists proposed the federation of self-managed industries, cooperatives, and communes.
+</p><p>Kropotkin warned in 1910, “…To hand over to the state all the main sources of economic life…as also the management of all the main branches of industry…would mean to create a new instrument of tyranny. State capitalism would only increase the power of bureaucracy and capitalism” (1975; pp 109—110).
+</p><p>Ron comments on Marx’s writings about the uprising of the Paris Commune in 1871. Marx endorsed the Commune’s radically democratic structure as a forerunner of the communist revolution. Engels called it an example of the “dictatorship of the proletariat.” This is frequently cited as a libertarian-democratic aspect of Marx’s Marxism.
+</p><p>Like other anarchists, Ron downplays the significance of the Commune for Marxism. “Marx slides over the contradiction between his and Engels commitment to centralization and the Commune’s commitment to decentralization….Marx and Engels’ attempt to amalgamate the Commune with their idea of the dictatorship of the proletariat is questionable, at best” (pp. 73—74).
+</p><p>Unlike Ron and many other anarchists, I do not doubt Marx’s sincerity in his praise of the very democratic Paris Commune, or the Marxists who base their politics on it. But I think that there are limitations to Marx’s interpretation. I would add to Ron’s criticism, that Marx praised it only as an extremely democratic version of representative democracy (election and recall of officials by neighborhood sections; workers’ wages for officials; etc.). At no time (ever) did Marx or Engels raise the value of face-to-face, local, direct democracy (in the sections or in the worker-managed industries). Anarchists are not necessarily against the election of representatives or delegates, but insist that this be limited and be rooted in a thriving direct democracy at the local level.
+</p><p>Further, no sooner was the Commune crushed, then Marx redoubled his efforts to get the First International to promote workers’ electoral parties throughout Europe, to run in elections and try to take over existing states. This seems to me to be the opposite of the revolutionary-libertarian meaning of the Paris Commune. Several times Marx and Engels said that it was possible for current states (of England, the US, or France) to be peacefully and legally taken over by the workers through elections (although they sometimes modified this by saying that the bourgeoisie would probably respond with a violent attempt at counterrevolution). Like anarchists, libertarian Marxists generally reject electoral strategies.
+</p><p>Ron attacks Marx and Engels use of the term “dictatorship of the proletariat” as advocacy of “a dictatorial state” (p. 286). Here I must disagree with Ron. Marx lived at a time when it was not uncommon to refer to the “dictatorship” of a parliament, or of “the people” or “the Democracy.” The term did not necessarily mean the tyranny of one person or of a party. Hal Draper (1986) has checked each of the 12 times Marx or Engels used the term, and he concluded that they meant essentially “the rule of the working class,” neither more nor less. They did not mean any specific (despotic) form of state. In fact Marx raised the idea of the “dictatorship” (rule) of a whole class precisely in opposition to the Blanquists’ goal of a dictatorship by their minority revolutionary party.
+</p><p>However, as time went on, the original term changed its meaning (even though Engels had specifically tied the term to the radically-democratic Paris Commune). If not a one-party dictatorship, Marx had advocated a centralized state. As Ron points out, “…a centralized state run directly and democratically by the entirety or even by the majority of the working class, is a contradiction in terms and impossible to achieve” (p. 308).
+</p><p>Virtually all the Marxists after Engels interpreted “dictatorship of the proletariat” to mean repressive rule. This was especially true after the Russian Revolution, when the phrase became a justification for the Bolsheviks’ police state. There was only the significant exception of Rosa Luxemburg, who still used the old, democratic, class meaning (Draper 1987).
+</p><p>In brief, Ron is right to say that Marx’s program of taking state power and statifying the economy points toward totalitarianism. Yet I think there remain some genuine democratic and libertarian aspects of Marxism. (Anarchists are not against the idea of the workers and their allies “taking power” in the sense of setting up a non-state federation of workplace councils, neighborhood assemblies, and popular militias. These would get rid of the state and capitalism, and would organize a new society. What anarchists oppose is the creation of a new socially-alienated, bureaucratic-military, state. Many libertarian Marxists agree with this approach.)
+</p><h4 id="toc3">The Critique of Political Economy
+</h4>
+<p>Ron follows his “political” discussion with chapters on Marx’s economic theory. At times he writes rather favorably about it. “Marxism…offers a detailed analysis of capitalism which has never been approached, let alone equaled, in its cogency, breadth, and depth” (p. 8). “It contains reasonable explanations of a great many aspects of capitalism…” (p. 336). “Marx deserves credit for developing a model of capitalism…that is critical of the system, in contrast to the apologetic character of most economic theory” (p. 169).
+</p><p>Yet Ron has specific criticisms of many aspects of Marx’s theory, such as the labor theory of value, as well as an overall criticism. He claims that Marx took his theories too seriously, as really-existing objective laws rather than as some kind of metaphors. He states that Marx left important things out of his theory, such as the forces of nature and science-and-technology. He says that Marx developed his economic concepts and then assumed that they were true, without really proving them.
+</p><p>For example, Ron says, “Marx defines the value of a commodity as the amount of socially necessary labor embodied in the commodity, while commodities are said to be congelations of labor,” instead of saying that “commodities are products of labor” (p. 101). I assume that Marx is using a vivid image to demonstrate how commodities’ values are a result of the overall labor in society. Ron does not agree; he interprets Marx as being literal, meaning that value “…is a kind of ethereal, non-material substance that reposes…” in the commodity (same). This supposedly demonstrates that Marx’s economic theory is a philosophical, idealistic, construct, derived from Hegel, in which Marx took his concepts as realities. But Ron was right in his first definition: value is not the “embodiment” of the amount of labor which went into a specific commodity; it is the amount of socially necessary labor which went into it (that is, the average amount of labor in the industry which goes into making such commodities). Even more, if the amount of socially necessary labor changes (a new machine makes it possible to produce this commodity faster and therefore cheaper), while the commodity is unsold and is still on the market, then its value will change (decrease). So its value does not depend on the specific labor which went into the object (as it would if Marx meant “embodiment” literally) but on the overall conditions of production of the object.
+</p><p>It is not clear what, if anything, Ron would accept as “proof” of the labor theory of value or other aspects of the theory (given that this is a social, not a physical, science). In my opinion, the “proof” of the economic concepts is the overall validity of the total economic theory. By “validity” I mean that it is useful in organizing the data (what Ron called “reasonable explanations of aspects of capitalism”), makes predictions which mostly come true, and provides guidance for action. This is as compared with alternate theories (such as classical political economy, neoclassical economics, Keynesianism, etc.) which, as he says, are mostly “apologetic.”
+</p><p>As to that, Ron writes, “…much of capitalist evolution that has occurred since Marx wrote (including the current global crisis of capitalism) is consistent with and apparently explained by his analysis, much is not…” (p. 130).
+</p><p>What is not “explained by his analysis”? Mostly, I would say, the resilience and longitivity of capitalism, which has lasted a century or so after Marx expected it to end. Especially, there was the prosperity which followed World War II (analyzed in price 2013). There was also the unexpected emergence of the “Communist” collectivized, non-bourgeois, ruling class which ran state capitalist regimes for an extended period of time. (Anarchists had raised the possibility.) Most important of all was the failure of the industrial working class in the imperial countries to make successful socialist revolutions. (Anarchism was no more successful than Marxism in leading to such revolutions.)
+</p><p>What was “apparently explained by his analysis”? Unexpected by bourgeois economic models, has been the continuation of the business cycle, with its periodic crashes (even during the post-war “prosperity”). Also unexpected, have been the growth of larger and larger capitalist enterprises, in semi-monopolistic form, dominating national and international economies, even while continuing to compete in distorted ways. There has been the extention of the world market, until it includes all nations and peoples. Unemployment (the “reserve army of labor”) has continued. There has been an integration of capitalist semi-monopolies with the state, in broader or narrower forms. There has been a long term tendency of the rate of profit to fall, as demonstrated at least in the last four decades by increasing stagnation in economic growth. There has been the vast growth of financial and “fictitious” capital. There has been a growing separation of financial affairs and supervision of industry, which results, Marx said, in the “…development of a numerous class of industrial and commercial managers…” (Marx, 1967; p. 389; this is contrary to Ron’s reading of Marx). Marx predicted, also contrary to Ron, ecological disasters, a “metabolic rift” between human society and nature, created by capitalist production (see Foster 2000).
+</p><p>Most importantly of all, Marx expected on-going class conflict, from on-the-job dissatisfaction to minor job actions to strikes to attempted revolutions. He did not say that the workers would constantly have a revolutionary consciousness, but he expected class conflict to show itself repeatedly. (Not counting the “other” side of class conflict, namely the capitalists’ attacks on the working class!) In its approximately two hundred years of existence, the modern working class has rebelled more and fought more than previous oppressed classes, serfs, slaves, etc., did over thousands of years. Whether this will end in successful revolutions cannot be known, but history is not yet over.
+</p><p>It was because of Marxist economic analysis that Ron Tabor was able, in the 1970s, to say that the post-war prosperity was over and not returning. “As we’ve discussed for six years, the political, economic, and social structure of post-war capitalism is unraveling and at an increasingly rapid rate… We will experience a wave-like downward motion toward a 1930s-type depression” (1980; pp. 1 &amp; 3). The truth of this analysis is clear for all to see, in what Ron refers to as “the current global crisis of capitalism.” (An updated version of Ron’s original analysis, applied to current conditions, may be found at Daum &amp; Richardson 2010.)
+</p><p>Marx’s economic theory — his critique of political economy — has proven itself as an overall analysis of how capitalism functions (although how well the theory works always depends on the skill of the theorist using it). Aside from this, I am tempted to go over Ron’s criticisms of several aspects of Marx’s theory, but time and space are too limited. Several of his topics are further discussed in my book (price 2013). For his discussion of science-and-technology (which he holds refutes the labor theory of value), see Mattick (1972) and Caffentzis (2013). For the relation between the forces of nature and the law of value, see Burkett (1999).
+</p><p>Marx’s economic theory is usually placed within the broader concept of “historical materialism” (or the “materialist conception of history”). Here again, Ron makes a distinction which lets him have two opinions. He accepts that “economic” factors (relations of production, classes, technology, etc.) have an enormous impact on all areas of social life: individual and group consciousness, politics and the state, family relations, and religion, art, and culture. Class structure and productive processes interact with all other areas, influencing and being influenced by them. But he rejects (rightfully in my opinion) the notion that “economic” factors are the only important factors, and the sole determinant (even in the long run) of everything else.
+</p><p>He denies that relations of production are the “base” of society to which everything else is merely the “superstructure.” I agree with the Marxist historian, Ellen Meiksins Wood, “The base/superstructure metaphor has always been more trouble than it is worth….It has been made to bear a theoretical weight far beyond its limited capacities…” (1995; p. 49—50).
+</p><h4 id="toc4">The Philosophy of Marxism
+</h4>
+<p>Many Marxists, especially libertarian Marxists, believe that the solution to Marxism’s totalitarian tendencies is to return to the Hegelian roots of Marx’s thought. Ron fundamentally disagrees. He sees Hegelian philosophy as a major cause of Marxist totalitarianism. He rejects what has come to be called the philosophy of “dialectical materialism” (or the “materialist dialectic”).
+</p><p>(I am going to skip over Ron’s attack on philosophical materialism. He develops his own version of philosophical idealism--which is yet non-supernaturalist. As a naturalist, I do not find his arguments convincing nor his discussion really relevant.)
+</p><p>On “dialectics,” as on other matters, Ron can see two sides. It can be, he feels, a useful heuristic, a way of looking at the world, seeing nature and society as on-going processes, rather than static objects. It can be a way of seeing connections among apparently distinct things and seeing antagonistic conflicts even within things, and of seeing the unity of thought and objective reality through human activity (“praxis”).
+</p><p>But he rightly rejects an attempt to make up “laws of dialectics” which explain how all of reality works. I would add that the Hegelian (and Engelsian) dialectic leaves out the concept of structure (gestalt). It asserts that the only way to go from one quality to a new quality is through an increase in quantity. Actually a new quality can be created by reorganizing the existing material, without a change in quantity (as a pile of bricks is turned into a house, or a restructuring of atoms changes a molecule’s chemistry).
+</p><p>What Ron really objects to is the determinism and teleology of Hegelian-Marxist dialectics and he is right to do so. He rejects the idea that history moves on automatically, forced by the laws of dialectic and matter, toward an inevitable culmination in workers’ revolution, a “workers’ state,” and communism. By this account, history is not something people do but something which happens to them. Social understanding means accepting what we have to do. Then there is no freedom if the workers make a socialist revolution, because there is no choice, Ron says; they are merely doing what they must. He points out that “Marx and Engels use the terms ‘inevitable,’ ‘inexorable,’ ‘necessary,’ and ‘historical necessity’ throughout their writings” (p. 298).
+</p><p>I would add, if the future is inevitable, then morality is irrelevant. What will be will be. The workers will fight for socialism because they will fight for socialism. While Marx was clearly driven by moral feelings, he never wrote that people should be for socialism, let alone why. Instead he denounced anarchists and others for raising moral reasons for the proletarian struggle.
+</p><p>Further, if someone knows what will “inevitably” and “inexorably” happen, no matter what, then that person (Marx) in effect knows the Absolute Truth. As Ron argues, thinking that you know the Absolute Truth leads to a totalitarian mindset (however democratic Marx was subjectively). If you think you know what is inevitable, then you can feel justified in trying to force everyone around you to follow your policies. Lenin certainly had this consciousness.
+</p><p>However, I think that there is the danger of going to the opposite extreme, of believing that everything is accidental, uncaused, and unpredictable. Anything can happen because there are no trends pushing history in any direction at all. This is fundamental to the liberal perspective. Time and again, it has been shown that the capitalist class will not give up a significant part of its power without being forced to. Yet liberals act as if this history is meaningless. Perhaps this time, they think, the capitalists will abandon their profits for the good of the people!
+</p><p>More philosophically, if social development is completely arbitrary and accidental, then there can be no freedom either. Unless we can knowingly make a decision which will have foreseeable consequences, there are no choices and no freedom. (Which is why I find much of Ron’s discussion of determinism and contingency to be irrelevant; the issue is whether we can make real choices.)
+</p><p>While Marx and Engels often wrote of “inevitability,” etc., “there are passages in Marx and Engels’ writings which imply a contingent view of history” (p. 299). (I add that, throughout his economic writings, Marx made clear that he regards his stated “laws” as “tendencies.” He said they are constantly modified, mediated, and interfered with by various factors.) Ron quotes from the Communist Manifesto as well as Luxemburg’s famous phrase of “socialism or barbarism.”
+</p><p>Engels also wrote, in his Anti-Duhring, that for the capitalist class, “its own productive forces have grown beyond its control, and…are driving the whole of bourgeois society toward ruin or revolution” (1956; p. 228). When the capitalist system turns peasants into proletarians, “it creates the power which, under penalty of its own destruction, is forced to accomplish this revolution” (same, p. 388). And similar statements. This rejects the possibility (or, rather, probability) of capitalism surviving indefinitely, but it raises two possible paths, “socialism or barbarism,” “ruin or revolution.” Similarly, Murray Bookchin wrote that the alternative now, given the looming ecological catastrophe, is “anarchism or annihilation.”
+</p><p>Ron blames Marx and Marxists for trying to have it both ways. Marxism “combines two different standpoints that are philosophically distinct, even opposed — an interpretive, contingent, one, and a predictive, deterministic, one — between which Marxists shift when applying or defending their outlook” (p. 235). But instead of acting like a shifty Marxist, why not chose one or the other standpoint? The official Marxism of the social democrats and Stalinists was heavily on the deterministic, inevitablistic, standpoint. But people influenced by Marx can reject that view and choose the open-ended, contingent, standpoint with Luxemburg.
+</p><h4 id="toc5">Anarchist Conclusions about the Paradox of Marxism
+</h4>
+<p>Reading Ron Tabor’s book has led me to think through questions about Marx’s theory and program. Even when I disagreed with Ron, I found reading his book to be a rewarding experience.
+</p><p>Why has Marxism ended up in authoritarianism or totalitarianism? Plainly, there are totalitarian aspects of Marx’s basic views. This especially includes his belief that socialism can be implemented through the state — a centralized, repressive, state supposedly of the workers, which nationalizes the economy. Tied to this is a philosophical outlook which leads to belief that we can know the Absolute Truth, as a guide to action. These are fundamental aspects of Marx’s Marxism and lead in a totalitarian direction.
+</p><p>Yet there is also another side of Marx’s work, which, while not dominant, may be made use of by libertarian socialists — and sometimes have been. He did agree with anarchists that the state is a repressive class instrument which should be done away with. He did sincerely believe in democratic working class rule, not a narrow dictatorship. If we chose, we can interpret his philosophical views in a contingent, open-ended, multi-factoral fashion. Even Ron admits that much of his economic theory is useful; although I think that Ron underestimates the validity of this theory overall.
+</p><p>Ron writes little here about Marx’s view of the working class. Yet, if anything was central to Marx’s view of capitalism, it was his concept of the working class and its class struggle. And the most important overlap between Marxism and revolutionary, class-struggle, anarchism is their joint belief in the importance of the workers’ class struggle, together with the workers’ potential allies among all the oppressed. These are the people who have the potential to make revolutions which will save the world (see Wood 1998). It is not inevitable that such revolutions will happen, before capitalism causes economic collapse, ecological catastrophe, and/or nuclear war. But Marx demonstrated that there are forces pushing in that direction in the very operation of capitalism. Will they succeed in time? We do not know. It is a matter of commitment, not of absolute knowledge.
+</p><p><strong>References</strong>
+</p><p>Burkett, Paul (1999). <em>Marx and Nature: A Red and Green Perspective</em>. NY: St. Martin’s Press.
+</p><p>Caffentzis, George (2013). <em>In Letters of Fire and Blood: Work, Machines, and the Crisis of Capitalism</em>. Oakland CA: PM Press.
+</p><p>Daum, Walter, &amp; Richardson, Matthew (2010). “Marxist Analysis of the Capitalist Crisis: Bankrupt System Drives Toward Depression.” <em>Proletarian Revolution</em>. No. 82. Pp. 48, 35—45. <a href="http://lrp-cofi.org/pdf.html">http://lrp-cofi.org/pdf.html</a>
+</p><p>Draper, Hal (1986). <em>Karl Marx’s Theory of Revolution: Vol. III; “The Dictatorship of the Proletariat.”</em> NY: Monthly Review Press.
+</p><p>Draper, Hal (1987). <em>The “Dictatorship of the Proletariat”: From Marx to Lenin</em>. NY: Monthly Review Press.
+</p><p>Engels, Friedrich (1954). <em>Anti-Duhring: Herr Eugen Duhring’s Revolution in Science</em>. Moscow: Foreign Languages Publishing.
+</p><p>Foster, John Bellamy (2000). <em>Marx’s Ecology: Materialism and Nature</em>. NY: Monthly Review Press.
+</p><p>Kropotkin, Peter (1975). <em>The Essential Kropotkin</em>. (Eds.: Emile Capouya &amp; Keitha Tompkins.) NY: Liveright.
+</p><p>Marx, Karl (1967). <em>Capital: A Critique of Political Economy: Vol. III.</em> (ed.: F. Engels). NY: International Publishers.
+</p><p>Mattick, Paul, Sr. (1972). <em>Critique of Marcuse</em>. NY: Herder and Herder.
+</p><p>price, wayne (2013). <em>The Value of Radical Theory; An Anarchist Introduction to Marx’s Critique of Political Economy</em>. Oakland CA: AK Press.
+</p><p>Taber, Ron (1980). <em>Capitalism in Crisis</em>. NY: Revolutionary Socialist League Pamphlet.
+</p><p>Tabor, Ronald D. (2013). <em>The Tyranny of Theory: A Contribution to the Anarchist Critique of Marxism</em>. Edmonton, Alberta, Canada: Black Cat Press.
+</p><p>Wood, Ellen Meiksins (1998). <em>The Retreat From Class: A New “True” Socialism</em>. London/NY: Verso.
+</p><p>Wood, Ellen Meiksins (1995). <em>Democracy Against Capitalism</em>. Cambridge, UK: Cambridge University Press.
+</p><p><em><strong>*written for www.Anarkismo.net</strong></em>
+</p>
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

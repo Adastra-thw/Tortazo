@@ -1,0 +1,141 @@
+
+<link rel="stylesheet" type="text/css" href="CSS/SH_Styles_Print.css" media="print"  /> 
+<link rel="stylesheet" type="text/css" href="CSS/sh_stylesheet.css" /> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Safe Harbor - Organization Information
+</title></head>
+<body>
+    <form name="form1" method="post" action="companyinfo.aspx?id=22714" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="aLyFZK709KYdYvBAus9OnFXckJB4wmYSvHtiB7yn4UO+tkWjvmFXSaAUgt1cUcfFwOJfqztbc13ScQnUHrj1i6wxnusv33ld17Hco8k5Ex5TDhSTHu9b57r+ae4=" />
+</div>
+        <div style="text-align:right;">
+            <input type="submit" name="ctl01" value="Print" onclick="window.print();" class="donotshow" />
+            
+        </div>
+      
+        <span id="lblContent1" class="heading">Organization Information:</span>
+        <br/>
+        <img src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+
+        <span id="lblOrgName" style="display:inline-block;border-width:0px;">3 Story Software</span><br />
+        <span id="lbladdress" title="63 Bridge St" style="display:inline-block;border-width:0px;">63 Bridge St</span><br />
+        <span id="lblcity" style="display:inline-block;border-width:0px;">New Milford</span>,
+        <span id="lblstate" style="display:inline-block;border-width:0px;">Connecticut</span>-
+        <span id="lblzip" style="display:inline-block;border-width:0px;">06776</span><br />        
+        Phone: <span id="lblPhone" style="display:inline-block;border-width:0px;">860 946 8340</span><br />
+        Fax: <span id="lblFax" style="display:inline-block;border-width:0px;">860 799 6246</span><br />
+        <a id="hplinkwebsite" href="http://www.3storysoftware.com" target="_blank">http://www.3storysoftware.com</a>
+        <br /><br />
+        <span id="lblContent2" class="heading">Organization Contact:</span>        
+        <br />
+        <img id="Image1" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcontactoff">Contact Office:</span>
+        <span id="lblcontactoff1">3 Story Software, LLC</span><br />
+        <span id="lblcontactname">Name:</span>
+        <span id="lblcontactname1">Jay Gojuk</span>
+        , <span id="lblcontacttitle1">SVP, Technology</span><br />
+        <span id="lblcontactphone">Phone:</span>
+        <span id="lblcontactphone1">860 799 6367</span><br />
+        <span id="lblcontactfax">Fax:</span>
+        <span id="lblcontactfax1">860 799 6246</span><br />
+        <span id="lblcontactemail">Email:</span>
+        <span id="lblcontactemail1">jgojuk@3storysoftware.com</span><br />
+        <br/>
+        <span id="lblContent3" class="heading">Corporate Officer:</span>
+        <br />
+        <img id="Image2" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcorpoffname">Corporate Officer:</span>
+        <span id="lblcorpoffname1">Bradley Pierson</span>
+        , <span id="lblcorpofftitle1">Chief Executive Officer</span><br />
+        <span id="lblcorpoffphone">Phone:</span>
+        <span id="lblcorpoffphone1">860 799 6370</span><br />
+        <span id="lblcorpofffax">Fax:</span>
+        <span id="lblcorpofffax1">860 799 6246</span><br />
+        <span id="lblcorpoffemail">Email:</span>
+        <span id="lblcorpoffemail1">bpierson@3storysoftware.com</span>
+        
+        <br /><br />
+        <span id="lblContent4" class="heading">Safe Harbor Information:</span>
+        <br />
+        <img id="Image3" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br /><br />
+        
+        <span id="lblContent5_13">Certification Status: </span>    
+        <span id="lblCertificationStatus" style="color:Black;">Current</span>     
+        <br />                   
+        <span id="lblsignup">Original Certification: </span>
+        <span id="lblsignupdate">5/13/2013</span>
+        <br />
+        <span id="Label1">Next Certification: </span>
+        <span id="lblnextcertification">5/13/2015</span>
+        <br /><br />
+        <span id="lblContent4_1">Personal Information Received from the EU/EEA and/or Switzerland:</span><br />
+        <span id="lblactivities" style="display:inline-block;border-style:None;width:780px;">Personal Information Received from the EU/EEA and/or Switzerland:
+3 Story Software is an application service provider for our customers who upload their staffing and other data (including personal information of prospective job candidates and employees) to the 3 Story Software hosted environment. Once the data is stored, our customers access our solution and their data for staffing and reporting purposes. Individuals involved in these recruitment, staffing and reporting activities interact directly with 3 Story Software’s customers, rather than with 3 Story Software. 3 Story Software is a data “processor” for our customers who operate as “controllers” of personal information. Additionally, 3 Story Software maintains personal information pertaining to persons who have submitted their personal data in order to receive information about 3 Story Software products.</span>
+        <br />
+        <span id="lblContent5_1">Privacy Policy Effective: </span>        
+        <span id="lblppdate">5/1/2013</span>        
+        <br />                                                                                                      
+        <span id="lblContent5_2">Location: </span>        
+        
+        <span id="lblPPLoc"><a href ='http://www.3storysoftware.com/saas-privacy-policy' target=_blank>http://www.3storysoftware.com/saas-privacy-policy</a> </span>
+        
+        <br />                
+        
+                          
+        <br />
+        <span id="lblContent5_4">Regulated By: </span>
+        <span id="lblstatutorybody">Federal Trade Commission</span>
+        
+        <br /><br />
+        <span id="lblContent5_5">Privacy Programs: </span>
+        <br />
+        <span id="lblprivacyprograms" style="display:inline-block;border-style:None;width:780px;">None</span>
+        <br /><br />
+        <span id="lblContent5_6">Verification: </span>
+        <span id="lblorgverification">In-House</span>
+        <br /><br />
+        <span id="lblContent5_7">Dispute Resolution: </span>
+        <br />        
+        <span id="lblrecoursemech" style="display:inline-block;border-style:None;width:780px;">EU Data Protection Authorities and Swiss Federal Data Protection and Information Commissioner</span>
+        <br /><br />
+        <span id="lblContent5_8">Personal Data Covered: </span>                
+        <span id="lblpersonaldata">Off-line, on-line, manually processed data, human resources data.</span>
+        <br />
+        <span id="lblContent5_9">Organization Human Resource Data Covered: </span>        
+        <span id="lblhrdata">Yes</span>        
+        <br />
+        <span id="lblContent5_10">Agrees to Cooperate and Comply with the EU and/or Swiss Data Protection Authorities: </span>        
+        <span id="lbleuprotection">Yes</span>                
+        <br /><br />
+        <span id="lblContent5_11">Relevant Countries from which Personal Information is Received: </span>        
+        <br />
+        <span id="lbleucountries">Austria, Belgium, Bulgaria, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, United Kingdom</span>
+        <br /><br />
+        <span id="lblContent5_12">Industry Sectors: </span><br />
+        <span id="lblindustrysector">Employment Services - (EMP)<br /></span>        
+        <br />
+                
+                        
+
+        
+    </form>
+</body>
+</html>
+
+
+

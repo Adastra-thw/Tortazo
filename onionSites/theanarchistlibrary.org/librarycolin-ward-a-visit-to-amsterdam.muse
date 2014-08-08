@@ -1,0 +1,65 @@
+#author Colin Ward
+#SORTauthors Colin Ward
+#title A Visit to Amsterdam
+#LISTtitle Visit to Amsterdam
+#lang en
+#SORTtopics Europe, Freedom, Netherlands, squatting, United Kingdom
+#source Retrieved on 1 January 1999 from [[http://www.tao.ca/~freedom/ams.html][www.tao.ca]]
+#notes From <em>Freedom</em>
+
+
+
+Explaining the British political climate to Lewis Mumford in the summer of 1945, Frederic Osborn wrote that “In the last few weeks there has been organised squatting in empty mansions, with enough public approval to force the government and the authorities into more active requisitioning — a score for the anarchists”. Nearly a quarter of a century later, squatting was revived in the London boroughs because of the scandal of publicly-owned housing left empty for years awaiting future redevelopment that frequently failed to happen. It was met with ruthless mayhem by ‘bailiffs’ employed by councils and the deliberate wrecking by council employees of habitable houses.
+
+Then some local authorities aimed at a more constructive policy. It is significant that Ron Bailey, one of the initiators of the 1968 squats, dedicates his recent book <em>Homelessness: What Can Be Done?</em> to a Conservative local politician “in admiration of the astonishing courage and vision he showed in entering into the first legal agreement with squatters in 1969”, and he goes on to say that “as a result of his action, tens of thousands of homes that would otherwise have stayed empty have been brought back into use and hundreds of thousands of homeless people given new hope and dignity”.
+
+This provides interesting insights into the ‘threshold of tolerance’ of politicians, for since the early 1970s governments of both major parties have sought to update the laws of 1381 and 1623 relating to squatting and to shift it from the realm of civil law to that of criminal law, finally (so the government thinks) settled by the inclusion of a clause about Aggravated Trespass in the Criminal Justice Act of 1994.
+
+It is always useful to make international comparisons and the first of these that occurs to most people is that of Copenhagen where the big area now called Christiania has been a squat for almost a quarter of a century. A visit to its variegated site is by now part of the tourist agenda.
+
+But it is Amsterdam, for many people the most enjoyable city in Europe, that provides the most interesting lessons about squatting. As in London, there were always people who were squatters ‘on the quiet’, not wanting to be seen as unofficial inhabitants, but the public phase began with that interesting movement, first called Provo and then called the Kabouters, who pioneered the occupation of empty property in the old city.
+
+Much more recently Edward W. Soja, who teaches urban and regional planning at the University of California, came to the University of Amsterdam as a visiting professor and in a lecture sponsored by the City at the Centre for Metropolitan Research there, he talked about the Stimulus of a little Conffesion. He took this phrase from an account of the Netherlands by Henry James in 1875, and as his text a passage from Simon Schama’s great book on the evolution of Dutch culture. Schama says in explaining his historical theme:
+
+<quote>
+
+‘What, then, is the Dutch culture offered here? An allegiance that was fashioned as the consequence, not the cause, of freedom, and that was defined by common habits rather than legislated by institutions. It was a manner of sharing a peculiar — very peculiar — space at a particular time ... the product of the encounter between fresh historical experience and the constraints of geography.’
+
+</quote>
+
+It is in this light that Soja sees Amsterdam’s squatters, “a remarkably successful example of gentrification by the youthful poor”, and he notes that:
+
+<quote>
+
+“... the squatter movement was more than just an occupation of abandoned offices, factories, warehouses and some residences. It was a fight for the rights to the city itself, especially for the young and for the poor. Nowhere has this struggle been more successful than in Amsterdam. Nowhere has it been less successful than in Los Angeles.”
+
+</quote>
+
+But as our failiar property boom and the lust for lucrative redevelopment hit Amsterdam too, pressure for law-and-order came from the development industry. In 1980, which was coronation year in the Netherlands, street battles between police and squatters brought a great wave of public sympathy, not for the state’s over-reaction but for the young and lawless. In the Centrum, squatters displaced by new office blocks were provided with alternative sites “in an accomplished give and take trade-off with the urban authorities”, and Sojapraises the new accommodation between the city and its squatters, which he calls “highly regulated urban anarchism”. This is precisely the kind of deal that Ron Bailey attributes to the wisdom of the late Councillor Herbert Eames of Lewisham.
+
+In steps another witness. David Carr-Smith as spent five years watching squats in abandoned industrial buildings in Amsterdam, not in the central Spuistraat district studied by Soja, but in the waterside equivalent of say, London’s Docklands, full of vast buildings outmoded by economic change. On 28<sup>th</sup> November at the University of North London, he dazzled an audience of designers by showing 200 slides to demonstrate the aesthetic qualities of this improvised architecture, which provides “the vitality of a modern urban-vernacular based on recycling of rich-city refuse, improvisational intelligence and individualistic self-interest, enabled and sustained by its context of co-operation”. He went on to illustrate how these buildings have engendered:
+
+<quote>
+
+‘... an astonishingly rich variety of self-invented architecture: living-places, apartments and indeed whole houses build within the vast and simple or labyrinthine factory spaces. Improvised from basic construction products and the detritus of their sites and the surrounding city, they evolve from simple enclosures through stages of increasing complexity — some become ‘expressive’ espousing daring structural inventions, others develop into ‘aesthetically superb city-apartments’ or complete little ‘family-homes’ bizarrely nested within the impersonal factory spaces.”
+
+</quote>
+
+He showed pictures of Tetterode as a place where the squat had evolved from huge living-spaces into self-contained family dwellings as the occupants had children and were alert to their needs. Both sides in the arguments over squatting had learned from the battles over the site now occupied by Holiday Inn, and the unofficial occupiers of Tetterode won a collective 50-year lease with collective mortgage terms in their favour.
+
+And he showed slides of a site of long former railway sheds near the central station which had been converted by its occupants into a waterside idyll of little houses, and of another huge grain warehouse, Silo, transformed into “an enormous warren of cave-like spaces”. Despite the lessons of the past, these sites are threatened. Carr-Smith had seen the members of the City Redesign Team walking around the northern edge of the city without noticing these creative transformations since their minds were fixed on redevelopment proposals, as in similar areas of Bntish cities, for office blocks, up-market residences and appropriate boutiques and restaurants. He doesn’t envisage the confrontations of the past, but thinks that very inadequate alternative sites will be offered to these creative squatters. In British terms, the very thought of negotiations with squatters belongs to the past — ‘licensed squats’ and short-term housing co-ops and Ron Bailey’s negotiations with councillors. Government has settled for the Criminal Justice Act. Our assumptions about the nature of urban living have been shrivelled down to the quick-buck culture of the property development industry, and it is left to the disinherited young to protest against the loss of the stimulus of a little confusion.
+
+Now I’m aware of course that there are anarchists around who regarded Ron Bailey and people like him as renegades for entering into deals with local authorities for licensed squats, even though there are housing co-ops in London today which grew out of them. These critics would rather that the squatters had gone down fighting under the banner of ‘No Surrender’. Maybe they have their equivalent in Amsterdam too.
+
+I don’t share this view. When Bailey had the chance to write a book on <em>The Squatters</em> his publishers, Penguin Books, cut out his chapter called ‘In Defence of Direct Action’ which, no doubt, they thought was only of interest to a partisan audience. He eventually got it published in 1974, and in it he explained that:
+
+<quote>
+
+“In the squatters movement I have worked with ordinary non-political people for admittedly small gains, and we achieved a large measure of success. Ordinary people acted and won; and ordinary people manage the houses in which they now live. So when councils offered to hand over houses, we accepted these rather than fight over them unnecessarily. And I make no apology for this, for a number of reasons: first it achieved the immediate aim of the squatters, a decent place in which to live, and secondly it achieved more — additional houses were handed over to the squatters. What do those who claim that these deals were a sell-out suggest we should have done? Should we have refused to accept the houses and so leave them empty? Or perhaps we should have insisted that the squatting in them remained unlawful so that a confrontation could occur.”
+
+</quote>
+
+His belief was that the squatters’ movement of those days “demonstrates daily the message that badly housed people are capable of organising their own lives. This is the kind of message that revolutionaries should be seeking to get across day after day month after month”.
+
+Bailey was writing twenty years ago, and the appalling thing to my mind is that public attitudes towards the squatters have shifted in harmony with those of politicians and bureaucrats. My Dutch friends always chide me for having too optimistic a view of the culture which enjoys the stimulus of a little confusion. But that’s because they haven’t experienced the descent into claustrophobia of British politics in the 1990s. They haven’t experienced a piece of legislation like the Criminal Justice Act.
+

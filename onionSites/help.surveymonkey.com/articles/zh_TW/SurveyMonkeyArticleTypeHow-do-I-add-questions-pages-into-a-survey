@@ -1,0 +1,256 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+  <script id="vs">
+    var vs = '{"path":"/a_id","params":{"oldURL":"/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-add-questions-pages-into-a-survey","l":"zh_TW","id":"kA030000000hhHcCAI"},"nav":[{"subcats":[],"name":"getting-started","label":"基本功能與開始使用"},{"subcats":[],"name":"creating-designing-surveys","label":"設計調查問卷"},{"subcats":[],"name":"distributing-surveys-getting-responses","label":"發佈調查問卷及取得回覆"},{"subcats":[],"name":"analyzing-results","label":"分析回覆"},{"subcats":[],"name":"managing-account","label":"管理帳戶"},{"subcats":[],"name":"contact-us","label":"聯絡支援"}],"language":"zh_TW"}',
+        helpstatic = '/resource/1406928229000/helpstatic',
+        debug = {};
+  </script>
+  <script id="st" type="text/javascript">
+    var resultForLabel = '[term]共找到[num]个搜索结果';
+    var showingForLabel = '目前顯示的是以下字詞的搜尋結果：[term]';
+    var loadingLabel = 'Loading...';
+    var dymLabel = '您是不是要查：[term]';
+    var stKey = 'JhfAwdrfjMscLC4Q-sLo';
+    var sumLen = 300;
+    var bodyLen = 200;
+    var resPerPage = 10;
+    var pageLim = 5;
+  </script>
+  <script src="/resource/1406928229000/helpstatic/js/lib/swfobject.js"></script>
+  <link href="/resource/1406928229000/helpstatic/css/sm-help.css" rel="stylesheet" type="text/css" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="/resource/1354136283000/sm_favicon" rel="shortcut icon" />
+  <link href="/resource/1406928229000/helpstatic/css/createdocs.css" rel="stylesheet" type="text/css" />
+  <title>&#22914;&#20309;&#22312;&#35519;&#26597;&#21839;&#21367;&#20013;&#26032;&#22686;&#21839;&#38988;/&#38913;&#38754;&#65311;</title>
+  <link href="http://help.surveymonkey.com/articles/zh_TW/kb/How-do-I-add-questions-pages-into-a-survey" rel="canonical" />
+  <!--[if lt IE 9]><script type="text/javascript" src="/resource/1372531921000/sm_help_css/js/html5.min.js"></script><![endif]-->
+  <script src="/resource/1406928229000/helpstatic/js/app.js"></script>
+
+<script type="text/javascript">
+(function() {
+ var language = 'zh_TW';
+ var cx = '013440216857884837477:gsskhx_usva';
+ var gcse = document.createElement('script');
+ gcse.type = 'text/javascript';
+ gcse.async = true;
+ gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+ var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<script type="text/javascript">var bt={userid:"",logged_in:"0",language_id:"zh_TW"};</script>
+<script type="text/javascript">(function(){var tagjs=document.createElement("script");var s=document.getElementsByTagName("script")[0];tagjs.text="{'site':'z6BmjGS'}";tagjs.async=true;tagjs.src="//s.btstatic.com/tag.js";s.parentNode.insertBefore(tagjs,s)}());</script>
+<noscript><iframe frameborder="0" height="1" marginheight="0" marginwidth="0" scrolling="no" src="//s.thebrighttag.com/iframe?c=z6BmjGS" width="1"></iframe></noscript>
+</head>
+<!--[if lt IE 7 ]><body class="ie6 zh_TW"><![endif]-->
+<!--[if IE 7 ]><body class="ie7 zh_TW"><![endif]-->
+<!--[if IE 8 ]><body class="ie8 zh_TW"><![endif]-->
+<!--[if IE 9 ]><body class="ie9 zh_TW"><![endif]-->
+<!--[if gt IE 9]><body class="zh_TW"><![endif]-->
+<body class="zh_TW">
+  <header>
+  <div class="base-header auth-header" id="hd">
+    <div class="inner-header clearfix">
+      <ol class="user-area">
+        <li class="last">
+          <a href="https://zh.surveymonkey.com/user/sign-in/?pid=G24N" id="sign-in">&#30331;&#20837;</a>
+        </li>
+      </ol>
+      <div class="tiny-search">
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td class="search-input"><input id="st-search-input" type="text" /></td>
+          <td class="st-search-button"><input class="st-search-button" src="/resource/1406928229000/helpstatic/images/search_box_icon.png" title="search" type="image" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+      </div>
+      <div class="inner-header-top clearfix">
+        <a class="helpcenter-logo-zh_TW" href="/">SurveyMonkey&reg; Help Center</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <div class="bd logged-in-bd">
+    <div class="container group" id="container">
+      <noscript>
+        <div class="ErrorMessage" style="margin:15px 0 15px 0; padding:10px; background:#CC0000;font-weight:bold;">Javascript is required for this site to function, please enable.
+        </div>
+      </noscript>
+  <div id="collapseLabel" style="display:none">&#25910;&#21512;&#25152;&#26377;&#27573;&#33853;</div>
+  <div id="expandLabel" style="display:none">&#23637;&#38283;&#25152;&#26377;&#27573;&#33853;</div>
+        <nav class="left-nav"></nav>
+        <div class="article_wrapper">
+	<div class="main-content">
+		<div class="module standard no-inset min-height">
+			<div class="margin">
+        <script>var bT = 'none'</script>
+        <article><span id="j_id0:j_id1:j_id74:j_id75:j_id77"> 
+            <h1 id="top">如何在調查問卷中新增問題/頁面？
+            </h1>
+            <div data-swiftype-index="true" data-swiftype-name="body" data-swiftype-type="text"><p>
+	將問題新增至調查問卷很簡單！請觀看我們的影片來開始進行，或是依照下列指示進行。(注意：這部影片目前只有英文版本)。<br>	<br>	<iframe frameborder="0" allowfullscreen="" height="315" src="http://www.youtube.com/embed/0J6FxRquo1A?list=PLtEFX3upuUcOk69Xhhc8JX5RZDpESQ-rZ&amp;wmode=opaque" width="450"></iframe><br>	<br>	 </p>
+<p>
+	<b>步驟 1</b>：<b>存取 [建立調查問卷] 標籤</b></p>
+<p>
+	在您準備好開始建立調查問卷時，按一下頁面標題中的<b>建立調查問卷</b>标签。</p>
+<p>
+	在下列選項中選擇：</p>
+<ul><li>
+		從草稿建立新調查問卷。</li><li>
+		利用調查問卷範本建立調查問卷。</li><li>
+		利用帳戶中現有的調查問卷建立調查問卷。</li></ul>
+<p>
+	為調查問卷命名，您便可以開始建立調查問卷！</p>
+<p>
+	 </p>
+<p>
+	<b>步驟 2</b>：<b>新增問題和頁面</b></p>
+<p>
+	為調查問卷命名之後，便會立即開啟<b>編輯調查問卷</b>頁面。</p>
+<ul><li>
+		您會看到預設區段。</li><li>
+		按一下 [<b>在此處新增問題</b>] 按鈕來插入您的第一個問題。</li></ul>
+<p>
+	若要在調查問卷中新增頁面，只要在想插入頁面的位置按一下 [<b>在此處新增頁面</b>] 按鈕即可。</p>
+<p>
+	 </p>
+<p>
+	<b>步驟 3</b>：<b>選擇問題類型和功能</b></p>
+<p>
+	在您開始建立調查問卷，以及每次新增問題時，便會在調查問卷設計器中開啟一個視窗。實際的調查問卷設計頁面的顏色將會變淡，並隱藏在視窗背後。</p>
+<p>
+	在這裡：</p>
+<ul><li>
+		從下拉式功能表中選擇問題類型。</li><li>
+		將問題輸入到提供的文字方塊中。</li><li>
+		在提供的文字方塊中輸入選項 (每個選擇必須位於其本身的一行)。</li><li>
+		選擇新增任何額外的功能 (例如隨機化選擇、設定為必須回答等)。</li><li>
+		完成時按一下 [<b>儲存變更</b>] 按鈕。</li></ul>
+<p>
+	<strong>注意：</strong>您在任何時候離開此調查問卷編輯器以瀏覽帳戶，以及當您需要重新進入編輯調查問卷模式時，按一下標題右側的 [<b>設計</b>] 圖示 <img alt="design" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzRKAAY&amp;oid=00D30000001HuKJ"></img>。</p>
+<p>
+	 </p>
+<h3>
+	在即時調查問卷中新增問題或頁面：</h3>
+<p>
+	在調查問卷中新增問題並不會變更目前的連結。您也不需要重新傳送它。所有變更皆會立即全域更新。</p>
+<p>
+	如需瞭解有關編輯即時調查問卷的訊息，以及您可以或無法執行的作業的詳細資訊，請檢視以下主題：<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Am-I-able-to-edit-a-live-survey-and-does-this-change-the-link" target="_self">編輯調查問卷</a></p>
+<p>
+	 </p>
+<h3>
+	<img alt="lightbulb" src="https://na1.salesforce.com/servlet/servlet.ImageServer?id=01530000002fzPSAAY&amp;oid=00D30000001HuKJ"></img> 設計提示：</h3>
+<p>
+	想要瞭解有關建立有效調查問卷的詳細資訊嗎？請檢視以下主題，瞭解有關問題類型、需避免的專業術語、配置考量等等的詳細資訊：<a href="http://help2.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/Writing-Survey-Questions-Tips-for-effective-and-relevant-questions" target="_self">編寫問題的提示</a></p>
+<br>
+            </div></span>
+        </article>
+			</div>
+		</div>
+	</div><span id="j_id0:j_id1:j_id98" style="display: none;"></span><span id="j_id0:j_id1:j_id101" style="display: none;"></span>
+        </div>
+        <div class="sidebar"><span id="j_id0:j_id1:j_id118" style="display: none;"></span><span id="j_id0:j_id1:j_id121">
+<div class="module no-inset standard group">
+  <div class="margin">
+    <h4>&#30637;&#35299;&#35443;&#24773;</h4><span id="j_id0:j_id1:j_id121:j_id122:j_id124">
+
+      <ul>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/What-is-Random-Assignment" class="relatedLink">A/B &#29256;&#26412;&#36984;&#38917; (&#38568;&#27231;&#25351;&#23450;)</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-to-create-a-survey" class="relatedLink">&#22914;&#20309;&#24314;&#31435;&#35519;&#26597;&#21839;&#21367;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-add-a-video-or-sound-clip-to-my-survey" class="relatedLink">&#26032;&#22686;&#24433;&#29255;</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="http://help.surveymonkey.com/articles/zh_TW/SurveyMonkeyArticleType/How-do-I-bold-italicize-underline-and-use-bullet-points-in-the-survey" class="relatedLink">&#35373;&#23450;&#25991;&#23383;&#26684;&#24335;</a></li>
+      </ul></span>
+  </div>
+</div></span>
+
+	<div class="module no-inset upgrade group">
+		<div class="margin">
+			<img class="fRt phone-icon" height="36" src="/resource/1372531921000/sm_help_css/images/phone-support.png" width="37" />
+			<h4>&#38651;&#35441;&#25903;&#25588;</h4>
+			<p>
+				&#21319;&#32026;&#21363;&#21487;&#23384;&#21462;&#38651;&#35441;&#25903;&#25588; (&#20677;&#38480;&#33521;&#25991;) &#31561;&#20986;&#33394;&#21151;&#33021;&#12290;
+			</p>
+			<a class="upgrade-button-yellow" href="https://zh.surveymonkey.com/pricing/upgrade/?ut_source=help_center&amp;ut_source2=phone_sup">&#21319;&#32026;</a>
+		</div>
+	</div>
+        </div>
+    </div>
+  </div>
+  <footer><div id="j_id0:j_id1:j_id145:j_id146:ft" class="base-footer help-center-footer"><div id="j_id0:j_id1:j_id145:j_id146:j_id147" class="inner-ft"><div id="j_id0:j_id1:j_id145:j_id146:j_id148" class="ft-c">
+      <ul class="link-list">
+				<li class="link-list-label">&#35486;&#35328;&#65306;</li>
+				<li><a href="/?l=en_US">English</a></li>
+				<li><a href="/?l=es">Espa&ntilde;ol</a></li>
+				<li><a href="/?l=pt_BR">Portugu&ecirc;s</a></li>
+				<li><a href="/?l=de">Deutsch</a></li>
+				<li><a href="/?l=nl_NL">Nederlands</a></li>
+				<li><a href="/?l=fr">Fran&ccedil;ais</a></li>
+				<li><a href="/?l=ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
+				<li><a href="/?l=it">Italiano</a></li>
+				<li><a href="/?l=ja">&#26085;&#26412;&#35486;</a></li>
+				<li><a href="/?l=ko">&#54620;&#44397;&#50612;</a></li>
+				<li><a href="/?l=zh_TW">&#20013;&#25991;(&#32321;&#39636;)</a></li>
+				<li><a href="/?l=tr">T&uuml;rk&ccedil;e</a></li>
+			</ul></div><div id="j_id0:j_id1:j_id145:j_id146:j_id186" class="grid ft-bottom"><div id="j_id0:j_id1:j_id145:j_id146:j_id187" class="col grid-u-2-5">
+				<ul class="link-list">
+					<li><a href="https://zh.surveymonkey.com" target="_blank">SurveyMonkey</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/aboutus/" target="_blank">&#38364;&#26044;&#25105;&#20497;</a></li>
+					<li><a href="https://zh.surveymonkey.com/mp/policy/privacy-policy/" target="_blank">&#38577;&#31169;&#27402;&#25919;&#31574;</a></li>
+					
+					
+					<li><a href="/contact-us">&#32879;&#32097;&#25105;&#20497;</a></li>
+				</ul>
+				<span class="copy">&#33879;&#20316;&#27402;&#25152;&#26377; &copy; 1999-2014 SurveyMonkey</span></div><div id="j_id0:j_id1:j_id145:j_id146:j_id192" class="col grid-u-3-5">
+				<ul class="security">
+					<li><a class="link-bbonline" href="http://www.bbb.org/oregon/business-reviews/market-survey-companies/surveymonkeycom-in-portland-or-22010900" target="_blank" title="Click to verify BBB accreditation and to see a BBB report.">BBOnline</a></li>
+				</ul></div></div></div></div>
+  </footer>
+  <div id="templates" style="display: none;"></div>
+
+<script type="text/javascript">
+;(function() {
+var url = window.location.toString();
+
+if (window.history.replaceState) {
+  if (true) {
+    var pattern = /articles\/zh_TW\/kb\/.*$/;
+    if (!url.match(pattern)) {
+      var articleUrl = '/articles/zh_TW/kb/How-do-I-add-questions-pages-into-a-survey';
+      if (window.location.hash) articleUrl += window.location.hash;
+      window.history.replaceState(articleUrl, '如何在調查問卷中新增問題/頁面？', articleUrl);
+    }
+  } else if (/app\/ask(.*)$/.test(url) || /app\/home(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/ci\/pta\/login\/redirect\/home(.*)$/.test(url) || /ci\/pta\/login\/redirect\/ask(.*)$/.test(url)) {
+    window.history.replaceState('', '', '/');
+  } else if (/sm_hc_contact_us(.*)$/.test(url)) {
+    window.history.replaceState({}, 'contact-us', url.replace(/(sm_hc_contact_us)(.*)$/, "contact-us$2"));
+  }
+}
+}());
+</script>
+</body>
+</html>

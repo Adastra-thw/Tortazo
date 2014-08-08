@@ -1,0 +1,776 @@
+% -*- mode: tex -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                STANDARD                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enabletrackers[fonts.missing]
+\definefontfeature[default][default]
+                  [protrusion=quality,
+                    expansion=quality,
+                    script=latn]
+\setupalign[hz,hanging]
+\setuptolerance[tolerant]
+\setbreakpoints[compound]
+\setupindenting[yes,1em]
+\setupfootnotes[way=bychapter,align={hz,hanging}]
+\setupbodyfont[modern] % this is a stinky workaround to load lmodern
+\setupbodyfont[libertine,11pt]
+
+\setuppagenumbering[alternative=singlesided,location={footer,middle}]
+\setupcaptions[width=fit,align={hz,hanging},number=no]
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setuppagenumbering[alternative=doublesided]
+\stopmode
+
+\setupbodyfontenvironment[default][em=italic]
+
+
+\setupheads[%
+  sectionnumber=no,number=no,
+  align=flushleft,
+  align={flushleft,nothyphenated,verytolerant,stretch},
+  indentnext=yes,
+  tolerance=verytolerant]
+
+\definehead[awikipart][chapter]
+
+\setuphead[awikipart]
+          [%
+            number=no,
+            footer=empty,
+            style=\bfd,
+            before={\blank[force,2*big]},
+            align={middle,nothyphenated,verytolerant,stretch},
+            after={\page[yes]}
+          ]
+
+% h3
+\setuphead[chapter]
+          [style=\bfc]
+
+\setuphead[title]
+          [style=\bfc]
+
+
+% h4
+\setuphead[section]
+          [style=\bfb]
+
+% h5
+\setuphead[subsection]
+          [style=\bfa]
+
+% h6
+\setuphead[subsubsection]
+          [style=bold]
+
+
+\setuplist[awikipart]
+          [alternative=b,
+            interaction=all,
+            width=0mm,
+            distance=0mm,
+            before={\blank[medium]},
+            after={\blank[small]},
+            style=\bfa,
+            criterium=all]
+\setuplist[chapter]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            before={\blank[small]},
+            style=bold,
+            criterium=all]
+\setuplist[section]
+          [alternative=c,
+            interaction=all,
+            width=1mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsection]
+          [alternative=c,
+            interaction=all,
+            width=8mm,
+            distance=0mm,
+            style=\tf,
+            criterium=all]
+\setuplist[subsubsection]
+          [alternative=c,
+            interaction=all,
+            width=15mm,
+            style=\tf,
+            criterium=all]
+
+
+% center
+
+\definestartstop
+  [awikicenter]
+  [before={\blank[line]\startalignment[middle]},
+   after={\stopalignment\blank[line]}]
+
+% right
+
+\definestartstop
+  [awikiright]
+  [before={\blank[line]\startalignment[flushright]},
+   after={\stopalignment\blank[line]}]
+
+
+% blockquote
+
+\definestartstop
+  [blockquote]
+  [before={\blank[big]
+    \setupnarrower[middle=1em]
+    \startnarrower
+    \setupindenting[no]
+    \setupwhitespace[medium]},
+  after={\stopnarrower
+    \blank[big]}]
+
+% verse
+
+\definestartstop
+  [awikiverse]
+  [before={\blank[big]
+      \setupnarrower[middle=2em]
+      \startnarrower
+      \startlines},
+    after={\stoplines
+      \stopnarrower
+      \blank[big]}]
+
+\definestartstop
+  [awikibiblio]
+  [before={%
+      \blank[big]
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower
+      \blank[big]}]
+                
+% same as above, but with no spacing around
+\definestartstop
+  [awikiplay]
+  [before={%
+      \setupnarrower[left=1em]
+      \startnarrower[left]
+        \setupindenting[yes,-1em,first]},
+    after={\stopnarrower}]
+
+
+
+% interaction
+% we start the interaction only if it's not an imposed format.
+\startnotmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc]
+  \setupinteraction[state=start,color=black,contrastcolor=black,style=bold]
+  \placebookmarks[awikipart,chapter,section,subsection,subsubsection][force=yes]
+  \setupinteractionscreen[option=bookmark]
+\stopnotmode
+
+
+
+\setupexternalfigures[%
+  maxwidth=\textwidth,
+  maxheight=\textheight,
+  factor=fit]
+
+\setupitemgroup[itemize][each][packed][indenting=no]
+
+\definemakeup[titlepage][pagestate=start,doublesided=no]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                IMPOSER                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startusercode
+
+function optimize_signature(pages,min,max)
+   local minsignature = min or 40
+   local maxsignature = max or 80
+   local originalpages = pages
+
+   -- here we want to be sure that the max and min are actual *4
+   if (minsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The minsig you provided is not a multiple of 4, rounding up")
+      minsignature = minsignature + (4 - (minsignature % 4))
+   end
+   if (maxsignature%4) ~= 0 then
+      global.texio.write_nl('term and log', "The maxsig you provided is not a multiple of 4, rounding up")
+      maxsignature = maxsignature + (4 - (maxsignature % 4))
+   end
+   global.assert((minsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+   global.assert((maxsignature % 4) == 0, "I suppose something is wrong, not a n*4")
+
+   --set needed pages to and and signature to 0
+   local neededpages, signature = 0,0
+
+   -- this means that we have to work with n*4, if not, add them to
+   -- needed pages 
+   local modulo = pages % 4
+   if modulo==0 then
+      signature=pages
+   else
+      neededpages = 4 - modulo
+   end
+
+   -- add the needed pages to pages
+   pages = pages + neededpages
+   
+   if ((minsignature == 0) or (maxsignature == 0)) then 
+      signature = pages -- the whole text
+   else
+      -- give a try with the signature
+      signature = find_signature(pages, maxsignature)
+      
+      -- if the pages, are more than the max signature, find the right one
+      if pages>maxsignature then
+	 while signature<minsignature do
+	    pages = pages + 4
+	    neededpages = 4 + neededpages
+	    signature = find_signature(pages, maxsignature)
+	    --         global.texio.write_nl('term and log', "Trying signature of " .. signature)
+	 end
+      end
+      global.texio.write_nl('term and log', "Parameters:: maxsignature=" .. maxsignature ..
+		   " minsignature=" .. minsignature)
+
+   end
+   global.texio.write_nl('term and log', "ImposerMessage:: Original pages: " .. originalpages .. "; " .. 
+	 "Signature is " .. signature .. ", " ..
+	 neededpages .. " pages are needed, " .. 
+	 pages ..  " of output")
+   -- let's do it
+   tex.print("\\dorecurse{" .. neededpages .. "}{\\page[empty]}")
+
+end
+
+function find_signature(number, maxsignature)
+   global.assert(number>3, "I can't find the signature for" .. number .. "pages")
+   global.assert((number % 4) == 0, "I suppose something is wrong, not a n*4")
+   local i = maxsignature
+   while i>0 do
+      -- global.texio.write_nl('term and log', "Trying " .. i  .. "for max of " .. maxsignature)
+      if (number % i) == 0 then
+	 return i
+      end
+      i = i - 4
+   end
+end
+
+\stopusercode
+
+\define[1]\fillthesignature{
+  \usercode{optimize_signature(#1, 40, 80)}}
+
+
+\define\alibraryflushpages{
+  \page[yes] % reset the page
+  \fillthesignature{\the\realpageno}
+}
+
+
+% various papers 
+\definepapersize[halfletter][width=5.5in,height=8.5in]
+\definepapersize[halfafour][width=148.5mm,height=210mm]
+\definepapersize[quarterletter][width=4.25in,height=5.5in]
+\definepapersize[halfafive][width=105mm,height=148mm]
+\definepapersize[generic][width=210mm,height=279.4mm]
+
+%% this is the default ``paper'' which should work with both letter and a4
+
+\setuppapersize[generic][generic]
+\setuplayout[%
+  backspace=42mm,
+  topspace=31mm,% 176 / 15
+  height=195mm,%130mm,
+  footer=9mm, %
+  header=0pt, % no header
+  width=126mm] % 10.5 x 11
+
+\startmode[libertine]
+  \usetypescript[libertine]
+  \setupbodyfont[libertine,11pt]
+\stopmode
+
+\startmode[pagella]
+  \setupbodyfont[pagella,11pt]
+\stopmode
+
+\startmode[antykwa]
+  \setupbodyfont[antykwa-poltawskiego,11pt]
+\stopmode
+
+\startmode[iwona]
+  \setupbodyfont[iwona-medium,11pt]
+\stopmode
+
+\startmode[helvetica]
+  \setupbodyfont[heros,11pt]
+\stopmode
+
+\startmode[century]
+  \setupbodyfont[schola,11pt]
+\stopmode
+
+\startmode[modern]
+  \setupbodyfont[modern,11pt]
+\stopmode
+
+\startmode[charis]
+  \setupbodyfont[charis,11pt]
+\stopmode        
+
+\startmode[mini]
+  \setuppapersize[S33][S33] % 176 × 176 mm
+  \setuplayout[%
+    backspace=20pt,
+    topspace=15pt,% 176 / 15
+    height=280pt,%130mm,
+    footer=20pt, %
+    header=0pt, % no header
+    width=260pt] % 10.5 x 11
+\stopmode
+
+% for the plain A4 and letter, we use the classic LaTeX dimensions
+% from the article class
+\startmode[a4]
+  \setuppapersize[A4][A4]
+  \setuplayout[%
+    backspace=42mm,
+    topspace=45mm,
+    height=218mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+\startmode[letter]
+  \setuppapersize[letter][letter]
+  \setuplayout[%
+    backspace=44mm,
+    topspace=46mm,
+    height=199mm,
+    footer=10mm,
+    header=0pt, % no header
+    width=126mm]
+\stopmode
+
+
+% A4 imposed (A5), with no bc
+
+\startmode[a4imposed]
+% DIV=15 148 × 210: these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 147x210
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[%
+    backspace=10.8mm, % 146/15 = 9.8 + 1
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=117.6mm] % 9.8 x 12
+\stopmode
+
+% A4 imposed (A5), with bc
+\startmode[a4imposedbc]
+  \setuppapersize[halfafour][halfafour]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+
+\startmode[letterimposedbc] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15 8mm binding corr, => 132 x 216
+  \setuplayout[%
+    backspace=16.8mm, % 8.8 + 8
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=105.6mm] % 8.8 x 12
+\stopmode
+
+\startmode[letterimposed] % 139.7mm x 215.9 mm
+  \setuppapersize[halfletter][halfletter]
+  % DIV=15, 1mm binding correction. => 138.7x215.9
+  \setuplayout[%
+    backspace=10.3mm, % 9.24 + 1
+    topspace=14.4mm, % 216/15 =  14.4
+    height=187.2mm, % 15.4 x 11 + 15 of the footer
+    footer=14.4mm, %
+    header=0pt, % no header
+    width=111mm] % 9.24 x 12
+\stopmode
+
+%%% new formats for mini books
+%%% \definepapersize[halfafive][width=105mm,height=148mm]
+
+\startmode[a5imposed]
+% DIV=12 105x148 : these are meant not to have binding correction,
+  % but just to play safe, let's say 1mm => 104x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=9.6mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=78.8mm] % 9.8 x 12
+\stopmode
+
+% A5 imposed (A6), with bc
+\startmode[a5imposedbc]
+% DIV=12 105x148 : with binding correction,
+  % let's say 8mm => 96x148
+  \setuppapersize[halfafive][halfafive]
+  \setuplayout[%
+    backspace=16mm,
+    topspace=12.3mm,
+    height=123.5mm, % 14 x 12 + 14 of the footer
+    footer=12.3mm, %
+    header=0pt, % no header
+    width=72mm] % 9.8 x 12
+\stopmode
+
+%%% \definepapersize[quarterletter][width=4.25in,height=5.5in]
+
+% DIV=12 width=4.25in (108mm),height=5.5in (140mm) 
+\startmode[halfletterimposed] % 107x140
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=10mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=80mm] % 9.24 x 12
+\stopmode
+
+\startmode[halfletterimposedbc]
+  \setuppapersize[quarterletter][quarterletter]
+  \setuplayout[%
+    backspace=15.4mm,
+    topspace=11.6mm,
+    height=116mm,
+    footer=11.6mm,
+    header=0pt, % no header
+    width=76mm] % 9.24 x 12
+\stopmode
+
+\startmode[quickimpose]
+  \setuppapersize[A5][A4,landscape]
+  \setuparranging[2UP]
+  \setuppagenumbering[alternative=doublesided]
+  \setuplayout[% 14 mm was a bit too near to the spine, using the glue binding
+    backspace=17.3mm,  % 140/15 + 8 =
+    topspace=14mm, % 210/15 =  14
+    height=182mm, % 14 x 12 + 14 of the footer
+    footer=14mm, %
+    header=0pt, % no header
+    width=112mm] % 9.333 x 12
+\stopmode
+
+\startmode[tenpt]
+  \setupbodyfont[10pt]
+\stopmode
+
+\startmode[twelvept]
+  \setupbodyfont[12pt]
+\stopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            DOCUMENT BEGINS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainlanguage[en]
+
+
+\starttext
+
+\starttitlepagemakeup
+  \startalignment[middle,nothanging,nothyphenated,stretch]
+
+
+  \switchtobodyfont[18pt] % author
+  {\bf \em
+
+Ted Kaczynski  \par}
+  \blank[2*big]
+  \switchtobodyfont[24pt] % title
+  {\bf
+
+Answer to Some Comments Made in Green Anarchist
+
+\par}
+  \blank[big]
+  \switchtobodyfont[20pt] % subtitle
+  {\bf 
+
+\par}
+  \vfill
+  \stopalignment
+  \startalignment[middle,bottom,nothyphenated,stretch,nothanging]
+  \switchtobodyfont[global]
+
+  \stopalignment
+\stoptitlepagemakeup
+
+
+
+\title{Contents}
+
+\placelist[awikipart,chapter,section,subsection]
+
+
+
+\page[yes,right]
+
+\awikipart{Answer to Some Comments Made in Green Anarchist
+}
+
+I would like to comment on some statements that were made in reference to the Unabomber’s manifesto in GA 40–41. In an article on pages 21–22, Anti-Authoritarians Anonymous wrote:
+
+
+
+\startblockquote
+[A] return to undomesticated autonomous ways of living would not be achieved by the removal of industrialism alone. Such removal would still leave domination of nature, subjugation of women, war, religion, the state, and division of labour, to cite some basic social pathologies. It is civilization itself that must be undone to go where Unabomber wants to go.
+
+
+
+\stopblockquote
+I agree with much of this. But there is the question of feasibility. As was pointed out in Industrial Society and Its Future (ISIF), paragraphs 208–210, modern technology depends on a high level of social organization. If this social organization is sufficiently disrupted, then the technology breaks down, consequently whatever is left of the social organization collapses and we return to a pre-industrial state of society. To rebuilt the technology and the corresponding form of social organization would take centuries. Because the techno-industrial system is sick and is likely to get sicker, its destruction is a goal that we can reasonably hope to attain during the next several decades.
+
+
+But the removal of civilization itself is a far more difficult proposition, because civilization in its pre-industrial forms does not require an elaborate and highly-organized technological structure. A pre-industrial civilization requires only a relatively simple technology, the most important element of which is agriculture.
+
+
+How does one prevent people from practicing agriculture? And given that people practice agriculture, how does one prevent them from living in densely-populated communities and forming social hierarchies? It is a very difficult matter and I don’t see any way of accomplishing it.
+
+
+I am not suggesting that the elimination of civilization should be abandoned as an ideal or as an {\em eventual} goal. I merely point out that no one knows of any plausible means of reaching that goal in the foreseeable future. In contrast, the elimination of the industrial system is a plausible goal for the next several decades, and, in a general way, we can see how to go about attaining it. Therefore, the goal on which we should set our sights for the present is the destruction of the industrial system. {\em After} that has been accomplished we can think about eliminating civilization.
+
+
+Even if civilization cannot be eliminated, the removal of the industrial system will accomplish a great deal. (See ISIF, paragraph 184.)
+
+
+First of all, large areas of the Earth are unsuitable for agriculture, and in the absence of the modern technology that makes possible mass transport of agricultural products, these areas would have to revert to a pastoral or a hunting-and-gathering economy (supplemented, no doubt, by a limited amount of trade with the agricultural areas).
+
+
+Second (as was implied in ISIF, paragraphs 184, 198), modern man’s domination of nature depends on his technology. Reversion to a pre-industrial technology would vastly reduce man’s power to dominate nature, though it would not eliminate that power entirely.
+
+
+Third, while war can exist in non-industrial societies, it is nowhere near as destructive as modern warfare.
+
+
+Fourth, while the elimination of modern technology would not necessarily destroy the state, it would greatly reduce the power of the state.
+
+
+Fifth, though division of labor can exist in non-industrial societies, labor is divided much less in such societies than in modern society. That is, work is far less specialized in non-industrial societies.
+
+
+Thus the elimination of the industrial system, besides being a realistic goal, would be a very long step in the right direction. But if ending industrialism is a realistic goal it does not necessarily follow that that goal will be easily reached. On the contrary, it is all too likely that winning this battle will require our utmost exertions. We can’t afford to stretch ourselves too thin by concerning ourselves with other goals. Instead, we must make the destruction of the industrial system the single overriding objective toward which all our efforts are directed. (ISIF, paragraph 200)
+
+
+In the article “Neither Left Nor Right But Forwards,” GA 40–41, pages 26–27, Shadow Fox writes that according to FC/Unabomber, “militant greens/primitivists should actively distance themselves from ‘Leftist’ ideologues. This inevitably will include the dinosaur ideology of class conflict.
+
+
+This is answered in an unsigned article, “Greens, Get Real,” in the same issue of GA, pages 27–28:
+
+
+
+\startblockquote
+In {\em Industrial Society \& Its Future}, class, race, gender and other oppressions are recognized, even if only as subsidiary to technocratic oppression—FC takes issue with ideological leftists that make a ‘cause’ of others [sic.] oppression.
+
+
+
+\stopblockquote
+It was Shadow Fox who came closest to interpreting correctly the meaning of ISIF. The struggle against the industrial system can possibly be understood as a class war, but, if so, it is not a class war of the traditional kind. In traditional class war the workers struggle against the bourgeoisie for control of the system, or to get a larger share of the material benefits that the system offers. Thus traditional class war is inconsistent with our goal, which is to {\em destroy} the system. Social classes in the traditional sense are irrelevant to our goal. From our point of view only two social classes are relevant: one class consists of the technocratic elite and the other class consists of everyone else. The struggle against the system could be viewed as a class war against the technocratic elite, but it is better to view it as a struggle against technology, because in viewing it as a class war w risk slipping into the illusion that what we have to get rid of is merely a particular {\em class of people}. Of course, if we got rid of the present technocratic elite but retained the technology, a new technocratic elite would soon arise. We must focus on the technology rather than on the social class that controls it, so that we will never forget that it is the technology itself that has to be eliminated.
+
+
+In eliminating the technology we will in a sense be winning all class wars, because the elimination of modern technology will destroy the present form of social organization, so that all of the present social classes will cease to exist. This does not guarantee that no new social classes will arise later, but such classes will exist in an entirely different kind of society and the problems they present will have to be dealt with in entirely different terms.
+
+
+I insist that the revolution against technology should not address issues of race, gender, sexual orientation, etc. There are several reasons for this.
+
+
+
+\startitemize[N]\relax
+\item[] Even if all inequities of race, gender, etc. were eliminated, this would accomplish nothing toward the destruction of the techno-industrial system. In fact, doing away with race and gender discrimination would be {\em good} for the existing system because it would eliminate conflicts that interfere with the functioning of the system and would facilitate the process of integrating black people, women, etc. as obedient cogs in the social machine. Why do you think the mass media constantly feed us propaganda about equality of races, sexes, etc.? (See ISIF paragraphs 28, 29, and Note 4.)
+
+
+
+
+ \item[] Race, gender, and gay rights activism divert attention and energy from the main goal, which is once again, destruction of the techno-industrial system.
+
+
+
+
+ \item[] If you had an old car that you wanted to junk, would you start fixing it up to make it run better? If you did start fixing it up, I would have to suspect that your intention to junk it was not quite sincere. We want to junk the whole techno-industrial system, so why should we bother trying to patch up its defects? Why should be work to give black people an equal opportunity to become corporation executives or scientists when we want a world in which there will be no corporation executives or scientists? After the system has been eliminated there may well be problems of race, gender, etc., but those problems will have to be solved in the context of the new society that will then exist. Any solutions that we might arrive at now, in the context of industrial society, will become useless when industrial society no longer exists.
+
+
+It would be futile to try to plan out now a non-industrial society that would be free of racism, etc. We can destroy industrial society, but we cannot predict or control the form that the new society will take. (See ISIF paragraphs 100–108.) We do not know what kind of race or gender problems may exist in the new society or what can be done about them. Those problems will have to be left to the people who will live in that society.
+
+
+
+
+ \item[] Any group or movement that makes race or gender problems an important part of its program is bound to attract many people of the psychological type that we have called “leftist.” ISIF (paragraphs 213–230) discusses at length the danger that this presents. It is essential for anti-technological revolutionaries to separate themselves rigorously from leftism.
+
+
+
+
+ \item[] People will not stop discriminating against minorities just because you preach about it. To end discrimination you would have to have some means of enforcing fair treatment. This would imply some sort of strong, widespread organization capable of carrying out the enforcement, and it is likely that such an organization would itself become tyrannical and oppressive. Moreover, to carry out its work such an organization would need rapid, long-distance transportation and communication, hence all the technology needed to maintain the transportation and communication systems; which means in practice that it would have to retain the whole technological system. (See ISIF paragraphs 200, 201.) Thus the effort to end social injustice would make it much more difficult to dispense with technology.
+
+
+{\em After} the techno-industrial system has been eliminated, people can and should fight injustice wherever they find it. But, realistically, we can never hope to end all social injustice, we can only hope to alleviate it.
+
+
+Social injustice has always existed, even in some primitive societies, and the people of each society have had to deal with their particular forms of injustice as best they could. But the problem that the techno-industrial system presents us with is vastly greater and entirely new. Either the unrestrained growth of technology will lead to a disaster of magnitude unprecedented in the history of the human race, or it will permanently enslave no only the human body but the human mind and the natural world as well (see ISIF, paragraphs 143, 144, 169, 170–178). By comparison, the problem of injustice in the traditional sense shrinks into insignificance. Our objective must be not social justice but the destruction of the techno-industrial system.
+
+
+
+
+ 
+\stopitemize
+—Theodore J. Kaczynski
+
+
+Footnote for those who doubt that the problem of technology is incomparably greater than the age-old problem of social injustice:
+
+
+
+\startblockquote
+I believe that artificial intelligence stands on the brink of success.
+
+
+Cougals B. Lenat, {\em Scientific American}, September, 1995, page 80.
+
+
+
+\stopblockquote
+When the technocrats are armed with computers of superhuman intelligence, will they not be able to outsmart us at every step?
+
+
+
+\startblockquote
+[R]obots that serve us personally in the near future\unknown{}[are] not science fiction. We have the capability now—solid engineering is all that is required.
+
+
+Joseph F. Engelberger, {\em Scientific American}, September, 1995, page 166.
+
+
+
+\stopblockquote
+Robots and intelligent computers will make human labor obsolete, so that the technocrats will no longer have any need of ordinary people to work for them. Armies and police forces of robots will be incorruptibly loyal to their masters, giving the technocrats absolute power over us.
+
+
+
+\startblockquote
+To lengthen our lives and improve our minds, we will need to change our bodies and brains\unknown{}[W]e must imagine ways in which novel replacements for worn body parts might solve our problems of failing health\unknown{}Eventually, using nanotechnology, we will entirely replace our brains\unknown{}The sciences needed to enact this transition are already in the making\unknown{}Individuals now are conceived by chance. Someday, instead, they could be ‘composed’ in accord with considered desires and designs\unknown{}Traditional systems of ethical thought are focused mainly on individuals\unknown{}Obviously, we must also consider the rights and the roles of larger-scale beings—such as the superpersons we term cultures and the great, growing systems called sciences\unknown{}Will robots inherit the earth? Yes, but they will be our children.
+
+
+Marvin Minsky, {\em Scientific American}, October, 1994, pages 109–113.
+
+
+
+\stopblockquote
+More precisely, the robots will be the children of the technocrats who create them. They won’t be your children or my children.
+
+
+
+\startblockquote
+Ralph E. Gomory, the former director of research for IBM who is now president of the Alfred P. Sloan Foundation\unknown{}has a suggestion for mitigating science’s task: make the world more artificial. Artificial systems, Gomory states, tend to be more predictable than natural ones. For example, to simplify weather forecasting, engineers might encase the earth in a transparent dome.
+
+
+{\em Scientific American}, August, 1994, page 22.
+
+
+
+\stopblockquote
+It is doubtful whether this particular scheme will ever be technically feasibly, but it gives an idea of the kind of future that the technocrats have in store for us.
+
+
+
+
+
+
+
+
+
+\page[yes]
+
+%%%% backcover
+
+\startmode[a4imposed,a4imposedbc,letterimposed,letterimposedbc,a5imposed,%
+  a5imposedbc,halfletterimposed,halfletterimposedbc,quickimpose]
+\alibraryflushpages
+\stopmode
+
+\page[blank]
+
+\startalignment[middle]
+{\tfa The Anarchist Library
+\blank[small]
+Anti-Copyright}
+\blank[small]
+\currentdate
+\stopalignment
+
+\blank[big]
+\framed[frame=off,location=middle,width=\textwidth]
+       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+
+\vfill
+\setupindenting[no]
+\setsmallbodyfont
+
+\startalignment[middle,nothyphenated,nothanging,stretch]
+
+\blank[line]
+% \framed[frame=off,location=middle,width=\textwidth]
+%       {\externalfigure[logo][width=0.25\textwidth]}
+
+
+Ted Kaczynski
+
+
+
+Answer to Some Comments Made in Green Anarchist
+
+
+
+
+
+
+
+\stopalignment
+\blank[line]
+
+\startalignment[hyphenated,middle]
+
+
+The following documents, {\em Reaction to various commentaries on Unabomber’s Manifesto}, come from Box 65 of the University of Michigan’s Special Collection’s Library (Labadie Collection).
+
+
+
+University of Michigan’s Special Collection’s Library (Labadie Collection)
+
+
+\stopalignment
+
+\stoptext
+
+

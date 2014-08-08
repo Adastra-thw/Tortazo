@@ -1,0 +1,140 @@
+
+<link rel="stylesheet" type="text/css" href="CSS/SH_Styles_Print.css" media="print"  /> 
+<link rel="stylesheet" type="text/css" href="CSS/sh_stylesheet.css" /> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Safe Harbor - Organization Information
+</title></head>
+<body>
+    <form name="form1" method="post" action="companyinfo.aspx?id=22675" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="2QxB4Xqd7ugr1asEXXBCscidgrAf5ZhiIUeBK+npL4UjWtdMVE7z06maz/WBieoVJwcnkbKnoFyr5IH+g8ZdDr4Y4Hwm4j7r9pjSzVqpImIWe+5nN1lcAqFuvZA=" />
+</div>
+        <div style="text-align:right;">
+            <input type="submit" name="ctl01" value="Print" onclick="window.print();" class="donotshow" />
+            
+        </div>
+      
+        <span id="lblContent1" class="heading">Organization Information:</span>
+        <br/>
+        <img src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+
+        <span id="lblOrgName" style="display:inline-block;border-width:0px;">3dna Corporation, Inc. dba NationBuilder</span><br />
+        <span id="lbladdress" title="448 South Hill St., Suite 200" style="display:inline-block;border-width:0px;">448 South Hill St., Suite 200</span><br />
+        <span id="lblcity" style="display:inline-block;border-width:0px;">Los Angeles</span>,
+        <span id="lblstate" style="display:inline-block;border-width:0px;">California</span>-
+        <span id="lblzip" style="display:inline-block;border-width:0px;">90013</span><br />        
+        Phone: <span id="lblPhone" style="display:inline-block;border-width:0px;">213-873-8300</span><br />
+        Fax: <span id="lblFax" style="display:inline-block;border-width:0px;">213-986-8844</span><br />
+        <a id="hplinkwebsite" href="http://nationbuilder.com" target="_blank">http://nationbuilder.com</a>
+        <br /><br />
+        <span id="lblContent2" class="heading">Organization Contact:</span>        
+        <br />
+        <img id="Image1" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcontactoff">Contact Office:</span>
+        <span id="lblcontactoff1">Los Angeles</span><br />
+        <span id="lblcontactname">Name:</span>
+        <span id="lblcontactname1">Theodore Kinch</span>
+        , <span id="lblcontacttitle1">General Counsel</span><br />
+        <span id="lblcontactphone">Phone:</span>
+        <span id="lblcontactphone1">213-873-8316</span><br />
+        <span id="lblcontactfax">Fax:</span>
+        <span id="lblcontactfax1">213-986-8844</span><br />
+        <span id="lblcontactemail">Email:</span>
+        <span id="lblcontactemail1">privacy@nationbuilder.com</span><br />
+        <br/>
+        <span id="lblContent3" class="heading">Corporate Officer:</span>
+        <br />
+        <img id="Image2" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcorpoffname">Corporate Officer:</span>
+        <span id="lblcorpoffname1">Theodore Kinch</span>
+        , <span id="lblcorpofftitle1">General Counsel</span><br />
+        <span id="lblcorpoffphone">Phone:</span>
+        <span id="lblcorpoffphone1">213-873-8316</span><br />
+        <span id="lblcorpofffax">Fax:</span>
+        <span id="lblcorpofffax1">213-986-8844</span><br />
+        <span id="lblcorpoffemail">Email:</span>
+        <span id="lblcorpoffemail1">privacy@nationbuilder.com</span>
+        
+        <br /><br />
+        <span id="lblContent4" class="heading">Safe Harbor Information:</span>
+        <br />
+        <img id="Image3" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br /><br />
+        
+        <span id="lblContent5_13">Certification Status: </span>    
+        <span id="lblCertificationStatus" style="color:Black;">Current</span>     
+        <br />                   
+        <span id="lblsignup">Original Certification: </span>
+        <span id="lblsignupdate">4/16/2012</span>
+        <br />
+        <span id="Label1">Next Certification: </span>
+        <span id="lblnextcertification">4/16/2015</span>
+        <br /><br />
+        <span id="lblContent4_1">Personal Information Received from the EU/EEA and/or Switzerland:</span><br />
+        <span id="lblactivities" style="display:inline-block;border-style:None;width:780px;">NationBuilder provides services to campaigns, nonprofits, business entities and individuals, including supporter and volunteer management software, bulk email, online fundraising and content management, as part of a community organizing system. NationBuilder’s services are marketed to organizations and campaigns, and NationBuilder operates as a data processor for its clients. NationBuilder does not independently control the use of personal data it processes on behalf of its clients, and acts only upon instruction in a customer service model. NationBuilder provides privacy information to the individuals and organizations responsible for providing notice to their constituents consistent with the seven principle of the Safe Harbor provisions: notice, choice, onward transfer, security, data integrity, access and enforcement.</span>
+        <br />
+        <span id="lblContent5_1">Privacy Policy Effective: </span>        
+        <span id="lblppdate">3/28/2011</span>        
+        <br />                                                                                                      
+        <span id="lblContent5_2">Location: </span>        
+        
+        <span id="lblPPLoc"><a href ='http://nationbuilder.com/privacy' target=_blank>http://nationbuilder.com/privacy</a> </span>
+        
+        <br />                
+        
+                          
+        <br />
+        <span id="lblContent5_4">Regulated By: </span>
+        <span id="lblstatutorybody">Federal Trade Commission</span>
+        
+        <br /><br />
+        <span id="lblContent5_5">Privacy Programs: </span>
+        <br />
+        <span id="lblprivacyprograms" style="display:inline-block;border-style:None;width:780px;">None.</span>
+        <br /><br />
+        <span id="lblContent5_6">Verification: </span>
+        <span id="lblorgverification">In-house</span>
+        <br /><br />
+        <span id="lblContent5_7">Dispute Resolution: </span>
+        <br />        
+        <span id="lblrecoursemech" style="display:inline-block;border-style:None;width:780px;">NationBuilder works with JAMS to resolve privacy disputes.</span>
+        <br /><br />
+        <span id="lblContent5_8">Personal Data Covered: </span>                
+        <span id="lblpersonaldata">Consumer data, digitally processed.</span>
+        <br />
+        <span id="lblContent5_9">Organization Human Resource Data Covered: </span>        
+        <span id="lblhrdata">No</span>        
+        <br />
+        <span id="lblContent5_10">Agrees to Cooperate and Comply with the EU and/or Swiss Data Protection Authorities: </span>        
+        <span id="lbleuprotection">Yes</span>                
+        <br /><br />
+        <span id="lblContent5_11">Relevant Countries from which Personal Information is Received: </span>        
+        <br />
+        <span id="lbleucountries">Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, United Kingdom</span>
+        <br /><br />
+        <span id="lblContent5_12">Industry Sectors: </span><br />
+        <span id="lblindustrysector">Computer Software - (CSF)<br />Information Services - (INF)<br /></span>        
+        <br />
+                
+                        
+
+        
+    </form>
+</body>
+</html>
+
+
+

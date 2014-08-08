@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Anarchist Mirror!</title>
+  </head>
+  <body>
+	<P>
+	 An emergency mirror for the following projects:
+	</P>
+    <ul>
+      <li>
+        <a href="./atr/index.html">Tabula Rasa</a>
+      </li>
+      <li>
+        <a href="./yu/titles.html">Anarhistička Biblioteka</a>
+		(<a href="./yu/authors.html">autori</a>
+		i <a href="./yu/topics.html">teme</a>)
+      </li>
+	  <li>
+		<a href="./en/titles.html">The Anarchist Library</a>
+		(<a href="./en/authors.html">authors</a>
+		and <a href="./en/topics.html">topics</a>)
+	  </li>
+      <li>
+        <a href="./es/titles.html">Biblioteca Anarquista</a>
+		(<a href="./es/authors.html">autores</a> — 
+		<a href="./es/topics.html">temas</a>)
+      </li>
+      <li>
+        <a href="./fi/titles.html">Anarkistinen kirjasto</a>
+		(<a href="./fi/authors.html">Kirjoittajat</a> — 
+		<a href="./fi/topics.html">Tekstit</a>)
+      </li>
+      <li>
+        <a href="./ru/titles.html">Библиотека Анархизма</a>
+		(<a href="./ru/authors.html">Авторы</a> — 
+		<a href="./ru/topics.html">Названия</a>)
+      </li>
+      <li>
+        <a href="./mk/titles.html">Анархистичка библиотека</a>
+		(<a href="./mk/authors.html">Автори</a> — 
+		<a href="./mk/topics.html">Теми</a>)
+      </li>
+    </ul>
+	<p>
+	  Here you will find all the published texts, with all the
+	  formats, but no search engine and no uploading/editing (as it is
+	  an emergency solution).
+	</p>
+<p>
+This mirror is provided by <a href="http://www.bastardarchive.org">Bastard Archive</A>.
+</p>
+
+
+  </body>
+</html>
+

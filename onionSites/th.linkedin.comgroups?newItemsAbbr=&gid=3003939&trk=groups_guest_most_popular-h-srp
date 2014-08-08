@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="ie ie6 lte9 lte8 lte7 os-other"> <![endif]-->
+<!--[if IE 7]> <html lang="en" class="ie ie7 lte9 lte8 lte7 os-other"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie ie8 lte9 lte8 os-other"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie ie9 lte9 os-other"> <![endif]-->
+<!--[if gt IE 9]> <html lang="en" class="os-other"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="os-other"> <!--<![endif]-->
+<head>
+<script src="http://static.licdn.com:80/scds/common/u/lib/fizzy/fz-1.3.6-min.js" type="text/javascript"></script><script type="text/javascript">fs.config({"failureRedirect":"http://th.linkedin.com/nhome/","uniEscape":true,"xhrHeaders":{"X-FS-Origin-Request":"/groups?newItemsAbbr=&gid=3003939&trk=groups_guest_most_popular-h-srp","X-FS-Page-Id":"groups/guest/item_list_abbreviated"}});</script><script></script>
+<meta name="lnkd-track-json-lib" content="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=2jds9coeh4w78ed9wblscv68v-ebbt2vixcc5qz0otts5io08xv">
+<meta name="lnkd-track-lib" content="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=ebbt2vixcc5qz0otts5io08xv">
+<meta name="appName" content="leo">
+<meta name="lnkd-track-error" content="/lite/ua/error?csrfToken=ajax%3A2338449297904858954">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="pageImpressionID" content="9d15cc56-3a8a-4b12-84a8-8e47c5f284de">
+<meta name="pageKey" content="groups/guest/item_list_abbreviated">
+<meta name="analyticsURL" content="/analytics/noauthtracker">
+<link rel="openid.server" href="">
+<link rel="apple-touch-icon-precomposed" href="http://s.c.lnkd.licdn.com/scds/common/u/img/icon/apple-touch-icon.png">
+<!--[if lte IE 8]>
+  <link rel="shortcut icon" href="http://s.c.lnkd.licdn.com/scds/common/u/images/logos/favicons/v1/16x16/favicon.ico">
+<![endif]-->
+<!--[if IE 9]>
+  <link rel="shortcut icon" href="http://s.c.lnkd.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+<![endif]-->
+<link rel="icon" href="http://s.c.lnkd.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+<meta name="msapplication-TileImage" content="http://s.c.lnkd.licdn.com/scds/common/u/images/logos/linkedin/logo-in-win8-tile-144_v1.png"/>
+<meta name="msapplication-TileColor" content="#0077B5"/>
+<meta name="application-name" content="LinkedIn"/>
+<link rel="stylesheet" type="text/css" href="http://s.c.lnkd.licdn.com/scds/concat/common/css?h=3bifs78lai5i0ndyj1ew7316e-c8kkvmvykvq2ncgxoqb13d2by-95xknohzchgiqewqdn10w97eq-7mxyksftlcjzimz2r05hd289r-4uu2pkz5u0jch61r2nhpyyrn8-7poavrvxlvh0irzkbnoyoginp-4om4nn3a2z730xs82d78xj3be-29rwei6xdu369y7kdzx9njvdy-ct4kfyj4tquup0bvqhttvymms-83892l068mw9yvt4t3qj386b0-9zbbsrdszts09by60it4vuo3q-8ti9u6z5f55pestwbmte40d9-dro7ip2owrag9avfjalkgrvj8-3pwwsn1udmwoy3iort8vfmygt-b1019pao2n44df9be9gay2vfw-4a92ix3idj6dqt0yxs5c9own4-ab01tg8funn2n1exayaej7367">
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=3nuvxgwg15rbghxm1gpzfbya2-35e6ug1j754avohmn1bzmucat-mv3v66b8q0h1hvgvd3yfjv5f-14k913qahq3mh0ac0lh0twk9v-1odoqm6uqzmutse6kyk5satus-b7ksroocq54owoz2fawjb292y-62og8s54488owngg0s7escdit-c8ha6zrgpgcni7poa5ctye7il-8gz32kphtrjyfula3jpu9q6wl-51dv6schthjydhvcv6rxvospp-e9rsfv7b5gx0bk0tln31dx3sq-2r5gveucqe4lsolc3n0oljsn1-8v2hz0euzy8m1tk5d6tfrn6j-3eh5zbf8m3976frnzqqz8r2md-73i7ia1nx5zzwu00y71dahe04-1l6r5aklcrehj1n7wy2v08xoy-8zc7dy7k0uqxxso1zmcx40mxo-a7br995b5xb4ztral63cjods4-rftdnvfzuncra9644jbr38ht-8s85e76fq22lk42rfavbckpvb-39kuwv80yvqr74w4oe9bge0md-ejfdcbibyn0amjrpy1bw898cw-2ktfa1kftfo63s0zzwtqt9mf0-b0otj9zjsih2zu4s3gxjejik2-czstax4e6y68hymdvqxpwe5so-3g8gynfr7fip2svw23i5ixnw3"></script>
+<script type="text/javascript">
+ LI.define('UrlPackage');
+ LI.UrlPackage.containerCore = 
+ ["http://s.c.lnkd.licdn.com/scds/concat/common/js?h=d7z5zqt26qe7ht91f8494hqx5"]
+ [0];
+ </script>
+<script type="text/javascript">
+      if (typeof LI === 'undefined' || !LI) {
+        // Explicit global scope
+        window.LI = {};
+      }
+      LI.JSContentBasePath = "http://s.c.lnkd.licdn.com/scds/concat/common/js?v=build-1192_8_37887-prod";
+      LI.CSSContentBasePath = "http://s.c.lnkd.licdn.com/scds/concat/common/css?v=build-1192_8_37887-prod";
+      LI.injectRelayHtmlUrl = "http://s.c.lnkd.licdn.com/scds/common/u/lib/inject/0.4.2/relay.html";
+      LI.injectRelaySwfUrl = "http://s.c.lnkd.licdn.com/scds/common/u/lib/inject/0.4.2/relay.swf";
+      LI.comboBaseUrl = "http://s.c.lnkd.licdn.com/scds/concat/common/css?v=build-1192_8_37887-prod";
+      LI.staticUrlHashEnabled = true;
+    </script>
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=25kaepc6rgo1820ap1rglmzr4-39m26cyluvvg09z6pvsh1e2z2-b6pywrj7tjq8qgs5770lcm6ph-c19zsujfl1pg46iqy33ubhqc5-jg2geo9vvgi07uxonjwzcd6y-8dsj0i05aa9so2un8dmci2gmx-ascppxxu6dqpt5sppka77kdt0-39o2kw4renyd4i8pt5n9x0qaz-28yt9dz78enxj3756l075s8j6-9cttgd1ueltkur8cb164nt1vt-35b6d44bfxo2cvy5hbzc0zsgl-amjylk8w8039f2lwlov2e4nmc-47qp7uw3i5i1pqeovirlcc070-6xw4rwcqlk3kict9ouk5wjzxs-3qsk2peor188gw7gmh2irlhe5-78bwuml1uwwm9yb9sr3bw68qb-9xms7fd8xdfrly2skx89dmkyc-737qvlzqtyapsgwkydpsrbyum"></script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-1",{event:"before",type:"html"});</script><meta name="remote-nav-init-marker" content="true"/>
+<link rel="stylesheet" type="text/css" href="http://s.c.lnkd.licdn.com/scds/concat/common/css?h=83892l068mw9yvt4t3qj386b0-waq5avr4evzggzxij8x6v24b">
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=ditm8xdycl29ta8gqk5tpmxf8-czstax4e6y68hymdvqxpwe5so"></script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-1",{event:"after",type:"html"});</script>
+<script type="text/javascript" src="https://www.linkedin.com/uas/authping"></script>
+<title>All Discussions | LinkedIn</title>
+<link rel="stylesheet" type="text/css" href="http://s.c.lnkd.licdn.com/scds/concat/common/css?h=d4i6ml7377ojtbk73hp8en3ne-dh1tv6ahv1zo5r3pa2rwa08pl-9isvvzw61fpveso9doy1mzsas-aze4ooami6s3kk293iv0zfky1">
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=4zslye83akez5s4mf91hrq425-95d8d303rtd0n9wj4dcjbnh2c-b0i2ltvivggf15dlzc359ook3"></script>
+<link rel="stylesheet" type="text/css" href="http://s.c.lnkd.licdn.com/scds/concat/common/css?h=93h89b9e48djuekwctg4l9jc6-bdeuhwrggdmvppejwy1usenky-95j0h73g5zj5k3c3bydn6g3tk-3f51h0ylyqmgblvtzkkn49jxp-50fpvzqw3z7pey0w0f24wmjmh-4tj1exju6vnbj0h1orky4tqt1-3ckxvwwkfdwptqylzglszd0qh">
+</head>
+<body dir="ltr" class="guest v2 user-groups subnav-anet-search chrome-v5 chrome-v5-responsive sticky-bg guest" id="pagekey-groups/guest/item_list_abbreviated">
+<input id="inSlowConfig" type="hidden" value="false"/>
+<script type="text/javascript">document.body.className += " js ";</script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-2",{event:"before",type:"html"});</script><div id="a11y-menu" class="a11y-skip-nav-container">
+<div class="a11y-skip-nav a11y-hidden">
+<a href="#a11y-content" id="a11y-skip-nav-link">Skip to main content</a>
+</div>
+<script id="control-http-12274-exec-15226273-1" type="linkedin/control" class="li-control">
+ 
+ /* extlib: _a11ymenu */
+ 
+ 
+ 
+ LI.Controls.addControl('control-http-12274-exec-15226273-1', 'A11yMenu', {
+ jumpToText: 'Jump to: <strong>Summary<\/strong>',
+ skipToText: 'Skip to: <strong>Search<\/strong>',
+ feedbackText: 'Accessibility Feedback',
+ closeText: 'close',
+ anchorText: 'Content Follows:',
+ moreText: 'More in-page navigation options below',
+ smallPageText: 'Not much to look at here. Go directly to content.',
+ searchUrl: '/vsearch/f'
+ });
+ </script>
+<script id="control-http-12274-exec-15226273-2" type="linkedin/control" class="li-control">
+ 
+ /* extlib: _kb_shortcuts */
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+
+      
+      
+    
+    
+  
+
+    
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+    
+
+
+     
+      
+    
+    
+  
+
+      
+      
+        
+          
+            
+                
+              
+          
+        
+      
+    
+    
+
+LI.KbDialogDependencies = {
+  jsFiles: 
+      
+        
+            
+              
+              
+                ["http://s.c.lnkd.licdn.com/scds/concat/common/js?h=37zc8dm8vu14f1neta1ponx0o"]
+              
+            
+          
+        
+      
+    ,
+  cssFiles: 
+      
+        
+            
+              
+              
+                ["http://s.c.lnkd.licdn.com/scds/concat/common/css?h=9qwmbyyfabl3upqh3cyzbhd49"]
+              
+            
+          
+        
+      
+    
+};
+
+ 
+ 
+ LI.Controls.addControl('control-http-12274-exec-15226273-2', 'kb.shortcuts', {
+ homepageUrl: 'http:\/\/th.linkedin.com\/nhome\/?trk=global_kb',
+ profileUrl: 'http:\/\/www.linkedin.com\/profile\/view?trk=global_kb',
+ editProfileUrl: 'http:\/\/th.linkedin.com\/profile\/edit?trk=global_kb',
+ inboxUrl: 'http:\/\/th.linkedin.com\/inbox\/#messages?trk=global_kb',
+ jobsUrl: 'http:\/\/th.linkedin.com\/job\/home?trk=global_kb',
+ settingsUrl: 'https:\/\/th.linkedin.com\/secure\/settings?req=&trk=global_kb',
+ influencerUrl: 'http:\/\/th.linkedin.com\/influencers?trk=global_kb'
+ });
+ </script>
+</div>
+<div id="header" class="global-header responsive-header nav-v5-2-header responsive-1 remote-nav" role="banner">
+<div id="top-header">
+<div class="wrapper">
+<h2 class="logo-container">
+<a href="http://th.linkedin.com/" class="logo" id="li-logo">
+LinkedIn Home
+</a>
+</h2>
+<ul class="nav main-nav guest-nav" role="navigation">
+<li class="nav-item">
+<a href="/static?key=what_is_linkedin&amp;trk=hb_what" class="nav-link">
+What is LinkedIn?
+</a>
+</li>
+<li class="nav-item">
+<a href="https://www.linkedin.com/reg/join?trk=hb_join" class="nav-link" rel="nofollow">
+Join Today
+</a>
+</li>
+<li class="nav-item">
+<a href="https://www.linkedin.com/uas/login?goback=&amp;trk=hb_signin" class="nav-link" rel="nofollow">
+Sign In
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="a11y-content">
+<a name="a11y-content" tabindex="0" id="a11y-content-link">Main content starts below.</a>
+</div>
+</div>
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=62og8s54488owngg0s7escdit-8gz32kphtrjyfula3jpu9q6wl-aujmp9r1kj9k9x4ezyk8ahfbk-62cjxbtqyt2o85tawwwz12otx-a2blfu8y091887ailkls7jxq3-d25t3jwqpgzv7njh2nak0ihfd-1pa3tpaab6s85oxj5wgz5m0p7-6tyvplvemczf4qdrlxny6lq8d-9es290kzyvaep15qy7w7hhj6w-3i7ubdukif1jevuf29ftmtvjs-ukgkg4rtwlz74z78bt35jocx-c5gwmsdzuvdho9bhvcxqt3a0x-5cmfpe4jqrweez449s97ldikg-85irzxzbd5halvkstu9vwbyf6"></script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-2",{event:"after",type:"html"});</script>
+<div id="body" class="" role="main">
+<div class="top-bar with-wide-image with-nav">
+<div class="header">
+<a href="/groups?home=&amp;gid=3003939&amp;trk=groups_guest_item_list_abbreviated-h-logo" class="image-wrapper">
+<img src="http://m.c.lnkd.licdn.com/media/p/3/000/058/2b1/2236fb9.png" width="100" height="50" alt="Entertainment Industry experts" title="Entertainment Industry experts" class="image">
+</a>
+<div class="left-entity">
+<div class="content-wrapper">
+<h1 class="group-name public">
+<span>Entertainment Industry experts</span>
+</h1>
+</div>
+</div>
+<div class="right-entity">
+<div class="content-wrapper">
+<span class="member-count">8,980 members</span>
+<ul class="top-bar-actions">
+<li>
+<a href="/groupRegistration?gid=3003939&amp;csrfToken=ajax%3A2338449297904858954&amp;trk=groups_guest_item_list_abbreviated-h-join&amp;goback=%2Egna_3003939" class="top-bar-action spotlight">
+Join
+</a>
+</li>
+<li>
+<a href="/groups?about=&amp;gid=3003939" title="Information and settings" class="view-group-info">
+<span>Information and settings</span>
+</a>
+</li>
+</div>
+</div>
+</div>
+<div class="drawer group-info state-viewmore guest">
+<span class="loading-spinner"></span>
+<span role="presentation" class="caret"></span>
+</div>
+<script id="control-http-12220-1326124-1" type="linkedin/control" class="li-control">
+            
+        /* extlib: _viewstatetoggle */
+        
+    
+            LI.Controls.addControl('control-http-12220-1326124-1', 'ViewStateToggle', {
+      triggerSelector : '.top-bar .view-group-info',
+      contentURL: '\/groups?groupProfileSnippet=&gid=3003939&goback=%2Egna_3003939',
+      animate: true
+    });
+          </script>
+<div class="header-nav">
+<ul id="nav-secondary">
+<li id="nav-anet-overview" class=""><a href="/groups/Entertainment-Industry-experts-3003939?trk=groups_guest_item_list_abbreviated-h-dsc&amp;goback=%2Egna_3003939" title="Home">Discussions</a></li>
+<li id="nav-anet-promos" class=""><a href="/groups?promosList=&amp;gid=3003939&amp;trk=groups_guest_item_list_abbreviated-h-promos"><span>Promotions</span></a></li>
+<li id="nav-anet-jobs" class=""><a href="/groups?jobs=&amp;gid=3003939&amp;trk=groups_guest_item_list_abbreviated-h-jobs"><span>Jobs</span></a></li>
+<li id="nav-anet-search" class="active"><a href="/groups?newItemsAbbr=&amp;gid=3003939&amp;trk=groups_guest_item_list_abbreviated-h-srp">Search</a></li>
+</ul>
+</div>
+</div>
+<div class="wrapper hp-nus-wrapper">
+<div id="global-error">
+</div>
+<div id="main" class="anet full-page split-content-right">
+<div class="sidebar">
+<h3 class="page-title">Search
+</h3>
+<div class="anet-navbox">
+<form action="/groups" novalidate="novalidate" method="POST" accept-charset="UTF-8" name="anetAnswerSearchForm" class="group-search form"> <input type="hidden" name="csrfToken" value="ajax:2338449297904858954">
+<input type="text" name="searchKeywords" value="" id="searchKeywords-anetAnswerSearchForm" class="txtinpt">
+<!--[if IE]><input type="text" style="display: none;" disabled="disabled" size="20" value="ignore" /><![endif]-->
+<input type="submit" name="search" value="Search" class="search-go icon-search">
+<input type="hidden" name="gid" value="3003939" id="gid-anetAnswerSearchForm"><input type="hidden" name="searchOrderBy" value="byRel" id="searchOrderBy-anetAnswerSearchForm"><input type="hidden" name="goback" value=".gna_3003939"></form>
+<ul class="">
+<li class="selected"><a href="/groups?newItemsAbbr=&amp;gid=3003939&amp;goback=%2Egna_3003939">All Discussions</a></li>
+<li class=""><a href="/groups?featured=&amp;gid=3003939">Manager's Choice</a></li>
+</ul>
+</div>
+</div>
+<div class="contain">
+<h2 class="groups">
+All Discussions
+</h2>
+<div id="content" class="abbreviated">
+<div class="discussion-item" data-li-item_id="5902773884641357828" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=121868954&goback=%2Egna_3003939" title="Andrew C.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/3/000/120/3a3/1499653.jpg" alt="Andrew C." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_qBarfNX8fE7T_3Q779vMuOccOwLVXKlMsiJrXQXXwmWsJ3nAMuLRKLWH2sebE3Ql&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Hey-guys-check-out-my-3003939%2ES%2E5902773884641357828?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Andrew C.</a>
+</strong></span>
+<a href="/groups/Hey-guys-check-out-my-3003939%2ES%2E5902773884641357828?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Hey guys check out my Loop profile.</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=qSZC8jMs9Yc7bGovfaTIhiluGwQ%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VL5xUNJkUlv8v3U40y2tQlVRIHXAWT_RXb1p8qCYnfuetqcZLOioFUVeykHkQUsJa__">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Etheloop%2Ecom%2Eau%2Fadlcross%2Fportfolio&amp;urlhash=1y0J" target="_blank" alt="view details for this item">Andrew Cross&#39;s Portfolio - Events Producer - The Loop</a>
+<span class="content-source">theloop.com.au</span>
+</h4>
+</div>
+<p class="article-summary">Andrew Cross portfolio on The Loop. Andrew is a Events Producer working in Events based in Sydney.</p>
+<ul class="item-actions">
+<li class="timestamp last">
+1 day ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5902558594338934787" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=101937531&goback=%2Egna_3003939" title="Todd S.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/7/000/216/135/0982967.jpg" alt="Todd S." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_qBarfNX8fE7T_3Q779vMuOFxO4tn3IHcDMr-4ZILThasJ3nAMuLRKLWH2sebE3Ql&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/REMINDER-Summer-is-Almost-Over-3003939%2ES%2E5902558594338934787?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Todd S.</a>
+</strong></span>
+<a href="/groups/REMINDER-Summer-is-Almost-Over-3003939%2ES%2E5902558594338934787?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">REMINDER: Summer is Almost Over - Time to Schedule Cleaning &amp; Repairl</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=dGp5XmMkJq0QfC5%2FzIRmuS3XA08%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VCuhRoUwRkl9KaErFui4VRCV5TVAWXiRXb1p8rZPSa-LITAeeOgoQsRLSRSmAQwLuf8RWGwRpHtf97nLtpzg8PlIpD6bBcB">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2EAdvancedTheatreServices%2Ecom&amp;urlhash=Or3I" target="_blank" alt="view details for this item">Advanced Theatre Services - Specialty Maintenance &amp; Repair Services...</a>
+<span class="content-source">advancedtheatreservices.com</span>
+</h4>
+</div>
+<p class="article-summary">Check out http://advancedtheatreservices.com! Advanced Theatre Services - Specialty Maintenance and Repair of Movie Theatre Screens, Movie Theater Screen and Masking repairs, Sound-folds, Seating Systems, Carpet, Tile and...</p>
+<ul class="item-actions">
+<li class="timestamp last">
+1 day ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5902486047140380675" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=91027297&goback=%2Egna_3003939" title="Viorica B.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/2/000/094/3aa/251a3b8.jpg" alt="Viorica B." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_7wZGBIzcNllO8RcbrgSuhTbJU0qB0WlhadJ8Zaj-N6J5LGkFgXL-J_29GMPFFchs&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Magic-night-e-fontane-danzanti-3003939%2ES%2E5902486047140380675?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Viorica B.</a>
+</strong></span>
+<a href="/groups/Magic-night-e-fontane-danzanti-3003939%2ES%2E5902486047140380675?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">&quot;Magic night e fontane danzanti&quot;</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=M%2B6W7VM%2BqSoQAb%2FG78XN4%2BXQ%2BWw%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0Ua9hFUfwRMl5aKNqFmx6EtOC5bKTWP8GDrtusjTPymtLJmbZvfh-AJHLG8ekgQze_CoSC_kD_HlbdvyKYktluC0ZsS1KwEJfRMxl2hJ5dB2PRBpmZWzF-q9RC9D2-1WZGLoY-nxNAVqRC8n-g">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eecodellevalli%2Etv%2Fcms%2F147877%2Friva-del-garda-magic-night-shopping-museo-e-fontane-danzanti%2F&amp;urlhash=Ip_0" target="_blank" alt="view details for this item">Magic night: shopping, museo, e fontane danzanti</a>
+<span class="content-source">ecodellevalli.tv</span>
+</h4>
+</div>
+<p class="article-summary">Ci penser&#xe0; &quot;Magic night e fontane danzanti&quot; a ravvivare, venerd&#xec; 8 agosto 2014, il gi&#xe0; di per s&#xe9; frequentatissimo centro storico di Riva del Garda.</p>
+<ul class="item-actions">
+<li class="timestamp last">
+2 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5902433720844967936" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=38968712&goback=%2Egna_3003939" title="David O.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/2/000/1a5/0aa/17b068b.jpg" alt="David O." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_7wZGBIzcNllO8RcbrgSuhY_HJPrMWD7pmiaVs2f4O-xJUEqmzQK-pe3nuyrUy9NX&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/CONGRATS-PLAYTIME-MAKING-TIME-PLAY-3003939%2ES%2E5902433720844967936?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">David O.</a>
+</strong></span>
+<a href="/groups/CONGRATS-PLAYTIME-MAKING-TIME-PLAY-3003939%2ES%2E5902433720844967936?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">CONGRATS PLAYTIME - MAKING TIME FOR PLAY DOWN UNDER!!!</a>
+</h3>
+</div>
+<div class="referenced-item">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eplaytime%2Ecom%2Fblog%2Fmake-time-play-%25E2%2580%2593-down-under&amp;urlhash=YkC8" target="_blank" alt="view details for this item">Make Time for Play &#x2013; Down Under!</a>
+<span class="content-source">playtime.com</span>
+</h4>
+</div>
+<p class="article-summary">Make Time for Play &#x2013; Down Under! By Grant Sonju PLAYTIME has installed soft play areas in 25 countries. Whoa. I have to lean back and take a breather on that one. 25 countries! That&#x2019;s a...</p>
+<ul class="item-actions">
+<li class="timestamp last">
+2 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5902182739725033474" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=55706691&goback=%2Egna_3003939" title="Brian S.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/3/005/05f/08b/36a26e7.jpg" alt="Brian S." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_7wZGBIzcNllO8RcbrgSuh-NMxaafg7qNmIKlakJZtwHfJDxOmKrfEV1N2HaqM-_t&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Brittanys-Ghost-Girls-will-be-3003939%2ES%2E5902182739725033474?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Brian S.</a>
+</strong></span>
+<a href="/groups/Brittanys-Ghost-Girls-will-be-3003939%2ES%2E5902182739725033474?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Brittany&#39;s Ghost Girls will be one of the interviews this Wednesday on The BTS Radio Show.</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=hrVwtALxFLpUlqGUU0o1bqhVyL0%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0Vjkig8Tzxtv46GM4lm5qxF4a9rGUm7wPCXL5Y3BNCK_KIKDPaz75Ao">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fyoutu%2Ebe%2F6_N8z0naW0Q&amp;urlhash=Dq3m" target="_blank" alt="view details for this item">AHR - Brittany&#39;s Ghost Girls WEB TV Series Promo 2014</a>
+<span class="content-source">youtu.be</span>
+</h4>
+</div>
+<p class="article-summary">Airing Sat Nights beginning August 23rd 2014 at 8:30pm est on www.americanheartsradio.com &amp; www.harmonybooking.com Web TV Reality Series , The Ghost Girls are part of 4 Generations of family living in a funeral home. Guiding...</p>
+<ul class="item-actions">
+<li class="timestamp last">
+2 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5901818538460483588" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=57478741&goback=%2Egna_3003939" title="Raymond A. L.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/4/000/136/367/1b3476f.jpg" alt="Raymond A. L." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_7wZGBIzcNllO8RcbrgSuhR9xm5m_XMaW03IkW1xHdkrfJDxOmKrfEV1N2HaqM-_t&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Im-Branding-Hamptons-Whos-IN-3003939%2ES%2E5901818538460483588?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Raymond A. L.</a>
+</strong></span>
+<a href="/groups/Im-Branding-Hamptons-Whos-IN-3003939%2ES%2E5901818538460483588?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">I&#39;m Branding &quot;The Hamptons&quot;...Who&#39;s IN???</a>
+</h3>
+<p>Please show your love and support for my new venture, Hamptonites Brand! Here&#39;s the link to my crowd funding campaign. Anything you can contribute will be beyond greatly appreciated. http://rkthb.co/46673</p>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=FVIp84BSpK5J49mlXq6OToyMUEQ%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VX7hxgK2hss9L-DvUvhqkRLSpfYBHL-BWG0pIDEfy60KJCKOq2lolsRezMAlAQ0duurRzXkD8_tad26Y4Yx3A">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Frkthb%2Eco%2F46673&amp;urlhash=c2Qs" target="_blank" alt="view details for this item">Hamptonites Brand, The Official Signature Brand Of The Hamptons</a>
+<span class="content-source">rkthb.co</span>
+</h4>
+</div>
+<p class="article-summary">Need to raise $50,000+ in start-up costs for product, retail space &amp; TV Production.</p>
+<ul class="item-actions">
+<li class="timestamp last">
+3 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5901558294375317506" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=129092886&goback=%2Egna_3003939" title="Leo O.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/6/000/1ef/16e/3551bbc.jpg" alt="Leo O." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_qBarfNX8fE7T_3Q779vMuTvoH-HCt5cn3KR4rUSwLaOsJ3nAMuLRKLWH2sebE3Ql&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Crowd-Funding-is-easy-help-3003939%2ES%2E5901558294375317506?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Leo O.</a>
+</strong></span>
+<a href="/groups/Crowd-Funding-is-easy-help-3003939%2ES%2E5901558294375317506?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Crowd Funding is easy with help!</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=v8UmO2I3Y29B0vlIJ%2BExL2Zx7rc%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunVUJxxkl4aCFvl-x9kwJRo3RTXP4H3Dp5YHVNiasJYPAL-v98R4JO2hIzFFxYKzsCWy0fdf5dtizP8MxzsW5fcP7cxQDew95kDgbtYhpdj8tspyySN_4dSNMnOZIag">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eseedandspark%2Ecom%2Fstudio%2Fcross%3Finside_scoop%3Dproject-update-4916-4747&amp;urlhash=ydy9" target="_blank" alt="view details for this item">FIGHT!!!</a>
+<span class="content-source">seedandspark.com</span>
+</h4>
+</div>
+<p class="article-summary">Yesterday, the CROSS crew held its first training session for our climamactic boxing match. Check out the video below to see how it all went down, cut in the style of a ROCKY training montage....</p>
+<ul class="item-actions">
+<li class="timestamp last">
+4 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5901019459774066692" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=38968712&goback=%2Egna_3003939" title="David O.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/2/000/1a5/0aa/17b068b.jpg" alt="David O." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_7wZGBIzcNllO8RcbrgSuhY_HJPrMWD7pmiaVs2f4O-xJUEqmzQK-pe3nuyrUy9NX&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Happy-Birthday-Colorado-PLAYTIME-is-3003939%2ES%2E5901019459774066692?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">David O.</a>
+</strong></span>
+<a href="/groups/Happy-Birthday-Colorado-PLAYTIME-is-3003939%2ES%2E5901019459774066692?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Happy Birthday Colorado! PLAYTIME is proud to be a &quot;Colorado Made&quot; company!</a>
+</h3>
+</div>
+<div class="referenced-item">
+<img src="http://m.c.lnkd.licdn.com/media-proxy/ext?w=50&amp;h=40&amp;hash=jwR%2B9JIw7GilAZQrChV9KkRF394%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R66kQhU1gso7anPrkC9q0pCQYvdTULlUkzVgaz5EQaYZIaJG6z75AocJH1Dx1E">
+<h4 class="article-title">
+<a href="http://www.linkedin.com/redirect?url=https%3A%2F%2Ftwitter%2Ecom%2FPLAYTIME_LLC%2Fstatus%2F495211485107585024&amp;urlhash=plGw" target="_blank" alt="view details for this item">Twitter / PLAYTIME_LLC: Happy B-Day CO! #ColoradoMade ...</a>
+<span class="content-source">twitter.com</span>
+</h4>
+</div>
+<p class="article-summary">Happy B-Day CO! #ColoradoMade #138birthday...</p>
+<ul class="item-actions">
+<li class="timestamp last">
+6 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5900908594865393667" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=347177862&goback=%2Egna_3003939" title="Polina U.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/5/005/06b/10a/370e5f7.jpg" alt="Polina U." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_qBarfNX8fE7T_3Q779vMuWshEjS-gapPgEc8LXGXFRpJUEqmzQK-pe3nuyrUy9NX&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Russian-Promoter-is-looking-show-3003939%2ES%2E5900908594865393667?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Polina U.</a>
+</strong></span>
+<a href="/groups/Russian-Promoter-is-looking-show-3003939%2ES%2E5900908594865393667?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Russian Promoter is looking for a show</a>
+</h3>
+<p>Hello everybody! We are promoter company &#x201c;Road of art entertainment&#x201d; from Moscow, Russia. We specialize in making tours across Russia. We work with theatres, dancers and performers. We are looking for full time shows...</p>
+</div>
+<p class="article-summary"></p>
+<ul class="item-actions">
+<li class="timestamp last">
+6 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="discussion-item" data-li-item_id="5900907866541273088" data-li-item_type="member">
+<div class="entity">
+<a href="http://www.linkedin.com/profile/view?id=347177862&goback=%2Egna_3003939" title="Polina U.">
+<img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_40_40/p/5/005/06b/10a/370e5f7.jpg" alt="Polina U." width="40" height="40" class="groups photo">
+</a>
+</div>
+<div class="discussion-content">
+<div class="user-contributed">
+<h3 class="groups">
+<span class="miniprofile-container /miniprofile?_ed=0_qBarfNX8fE7T_3Q779vMuWshEjS-gapPgEc8LXGXFRpJUEqmzQK-pe3nuyrUy9NX&amp;view" data-tracking="anet_mlist_profile"><strong>
+<a href="/groups/Russian-Promoter-is-looking-show-3003939%2ES%2E5900907866541273088?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="poster">Polina U.</a>
+</strong></span>
+<a href="/groups/Russian-Promoter-is-looking-show-3003939%2ES%2E5900907866541273088?qid=be009230-8cbc-4d47-9f68-6795c72dc452&amp;goback=%2Egna_3003939" class="discussion-title">Russian Promoter is looking for a show</a>
+</h3>
+<p>Hello everybody! We are promoter company &#x201c;Road of art entertainment&#x201d; from Moscow, Russia. We specialize in making tours across Russia. We work with theatres, dancers and performers. We are looking for full time shows...</p>
+</div>
+<p class="article-summary"></p>
+<ul class="item-actions">
+<li class="timestamp last">
+6 days ago
+</li>
+</ul>
+</div>
+</div>
+<div class="more-feed">
+<ul class="pagination has-more">
+<li class='next'><a href="/groups?newItemsAbbr=&amp;gid=3003939&amp;split_page=2&amp;ajax=ajax">Next page</a></li>
+</ul>
+</div>
+</div><!--end content-->
+</div>
+<script id="control-http-12220-1326233-2" type="linkedin/control" class="li-control">
+            
+        /* extlib: _anet_widget_abbreviateddiscussionitems */
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    
+LI.i18n.register( 'abbrItemError', 'An error occurred during your request. Please try again later.' );
+LI.i18n.register( 'abbrItemDeleteSuccess', 'The item was successfully deleted.' );
+LI.i18n.register( 'abbrItemRepostSuccess', 'The item was successfully reposted.' );
+LI.i18n.register( 'abbrItemMoveBackSuccess', 'The item was successfully moved back.' );
+LI.i18n.register( 'abbrItemFlagSuccess', 'The item was successfully flagged as inappropriate <a class=\"undo\" href=\"\/groupItem?unflag=&csrfToken=ajax%3A2338449297904858954\">Undo<\/a>.' );
+LI.i18n.register( 'abbrItemFlagPromotionSuccess', 'The item was successfully flagged as a promotion <a class=\"undo\" href=\"\/groupItem?unflag=&csrfToken=ajax%3A2338449297904858954\">Undo<\/a>.' );
+LI.i18n.register( 'abbrItemFlagJobSuccess', 'The item was successfully flagged as a job <a class=\"undo\" href=\"\/groupItem?unflag=&csrfToken=ajax%3A2338449297904858954\">Undo<\/a>.' );
+
+LI.i18n.register( 'abbrItemLike', 'Like' );
+LI.i18n.register( 'abbrItemUnlike', 'Unlike' );
+LI.i18n.register( 'abbrItemFollow', 'Follow' );
+LI.i18n.register( 'abbrItemUnfollow', 'Unfollow' );
+
+
+LI.Anet = LI.Anet || {};
+LI.Anet.Bootstrap = LI.Anet.Bootstrap || {'urls':{}};
+LI.Anet.Bootstrap.urls.register = "https://www.linkedin.com/secure/register?goback=%2Egna_3003939&trk=reg-pub-groups";
+
+
+        
+    
+            LI.Controls.addControl('control-http-12220-1326233-2', 'Anet.Widget.AbbreviatedDiscussionItems', {});
+          </script>
+</div>
+</div>
+</div>
+<script type="text/javascript">LI.Controls.processQueue();</script>
+<script type="text/javascript">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LI_WCT([
+ "control-http-12220-1326124-1",
+ "control-http-12220-1326233-2",
+ ]);
+ 
+ 
+ 
+ </script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-3",{event:"before",type:"html"});</script><div id="footer" class="remote-nav">
+<div class="wrapper">
+<ul class="nav-footer">
+<li>
+<a href="http://help.linkedin.com/app/home/loc/ft/trk/groups/guest/item_list_abbreviated/" target="_blank" rel="nofollow" class="cust-svc-link">Help Center</a>
+</li>
+<li><a href="/about-us?trk=hb_ft_about">About</a></li>
+<li><a href="/redir/redirect?url=http%3A%2F%2Fpress%2Elinkedin%2Ecom%2F%3Ftrk%3Dhb_ft_press&amp;urlhash=wdPK" target="_blank">Press</a></li>
+<li><a href="/redir/redirect?url=http%3A%2F%2Fblog%2Elinkedin%2Ecom%2F%3Ftrk%3Dhb_ft_blog&amp;urlhash=5qfF" target="_blank">Blog</a></li>
+<li><a href="/company/linkedin/careers?trk=hb_ft_work">Careers</a></li>
+<li><a href="/advertising?src=en-all-el-li-hb_ft_ads&amp;trk=hb_ft_ads">Advertising</a></li>
+<li><a href="/redir/redirect?url=http%3A%2F%2Fbusiness%2Elinkedin%2Ecom%2Ftalent-solutions%3Fsrc%3Dli-footer%26trk%3Dhb_ft_talent&amp;urlhash=_Y5C" target="_blank">Talent Solutions</a></li>
+<li><a href="/redir/redirect?url=http%3A%2F%2Fsmallbusiness%2Elinkedin%2Ecom%2F%3Ftrk%3Dlnkd_footer%26utm_source%3Dlinkedin%26utm_medium%3Dfooter%26utm_content%3D%26utm_campaign%3Dlifooter&amp;urlhash=zrGO" target="_blank">Small Business</a></li>
+<li><a href="/mobile?trk=hb_ft_mobile" target="_blank">Mobile</a></li>
+<li><a href="/redir/redirect?url=http%3A%2F%2Fdeveloper%2Elinkedin%2Ecom%2F%3Ftrk%3Dhb_ft_dev&amp;urlhash=zv5s" target="_blank">Developers</a></li>
+<li id="nav-utility-lang" class="">
+<a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang">Language</a>
+<form name="languageSelectorForm" action="/languageSelector" method="POST" accept-charset="UTF-8" novalidate="novalidate">
+<ul id="lang-list">
+<li class="in"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="in_ID"><span>Bahasa Indonesia</span></a></li>
+<li class="ms"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="ms_MY"><span>Bahasa Malaysia</span></a></li>
+<li class="cs"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="cs_CZ"><span>Čeština</span></a></li>
+<li class="da"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="da_DK"><span>Dansk</span></a></li>
+<li class="de"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="de_DE"><span>Deutsch</span></a></li>
+<li class="selected en"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="en_US"><strong>English</strong></a></li>
+<li class="es"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="es_ES"><span>Español</span></a></li>
+<li class="zh"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="zh_TW"><span>正體中文</span></a></li>
+<li class="fr"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="fr_FR"><span>Français</span></a></li>
+<li class="ko"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="ko_KR"><span>한국어</span></a></li>
+<li class="it"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="it_IT"><span>Italiano</span></a></li>
+<li class="zh"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="zh_CN"><span>简体中文</span></a></li>
+<li class="nl"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="nl_NL"><span>Nederlands</span></a></li>
+<li class="ja"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="ja_JP"><span>日本語</span></a></li>
+<li class="no"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="no_NO"><span>Norsk</span></a></li>
+<li class="pl"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="pl_PL"><span>Polski</span></a></li>
+<li class="pt"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="pt_BR"><span>Português</span></a></li>
+<li class="ro"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="ro_RO"><span>Română</span></a></li>
+<li class="ru"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="ru_RU"><span>Русский</span></a></li>
+<li class="sv"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="sv_SE"><span>Svenska</span></a></li>
+<li class="tl"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="tl_PH"><span>Tagalog</span></a></li>
+<li class="th"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="th_TH"><span>ภาษาไทย</span></a></li>
+<li class="tr"><a href="https://www.linkedin.com/secure/settings?trk=hb_ft_lang" lang="tr_TR"><span>Türkçe</span></a></li>
+</ul>
+<input type="hidden" name="i18nLang" value="">
+<input type="hidden" name="currenturl" value="http%3A%2F%2Fth%2Elinkedin%2Ecom%2Fgroups%3FnewItemsAbbr%3D%26gid%3D3003939%26trk%3Dgroups_guest_most_popular-h-srp%26urlhash%3DiqRV">
+</form>
+</li>
+<li class="last"><a href="/redir/redirect?url=http%3A%2F%2Fwww%2Eslideshare%2Enet&amp;urlhash=nLLC" target="_blank">SlideShare</a></li>
+</ul>
+<ul class="nav-footer">
+<li><a href="http://www.linkedin.com/in/updates?trk=hb_ft_liup">LinkedIn Updates</a></li>
+<li><a href="http://www.linkedin.com/today/post/whoToFollow?trk=hb_ft_influencers">LinkedIn Influencers</a></li>
+<li><a href="http://www.linkedin.com/job/?trk=hb_ft_jobs">LinkedIn Jobs</a></li>
+<li><a href="https://www.linkedin.com/directory/jobs/?trk=hb_ft_jobsdir">Jobs Directory</a></li>
+<li><a href="http://www.linkedin.com/directory/pulse?trk=hb_ft_pulse_dir">Pulse Directory</a></li>
+<li><a href="http://www.linkedin.com/directory/companies?trk=hb_ft_companies_dir">Company Directory</a></li>
+<li><a href="http://www.linkedin.com/directory/groups/?trk=hb_ft_groups_dir">Groups Directory</a></li>
+<li><a href="http://www.linkedin.com/directory/universities?trk=hb_ft_universities_dir">Universities Directory</a></li>
+<li class="last"><a href="http://www.linkedin.com/directory/title/?trk=hb_ft_title_dir">Title Directory</a></li>
+</ul>
+<p id="copyright" class="guest"><span>LinkedIn Corporation</span> <em>&copy; 2014</em></p>
+<ul id="nav-legal">
+<li><a href="/legal/user-agreement?trk=hb_ft_userag">User Agreement</a></li>
+<li><a href="/legal/privacy-policy?trk=hb_ft_priv">Privacy Policy</a></li>
+<li>
+<a href="http://help.linkedin.com/app/answers/detail/a_id/34593/loc/na/trk/groups/guest/item_list_abbreviated/" target="_blank" rel="nofollow">Community Guidelines</a>
+</li>
+<li><a href="/legal/cookie-policy?trk=hb_ft_cookie">Cookie Policy</a></li>
+<li class="last"><a href="/legal/copyright-policy?trk=hb_ft_copy">Copyright Policy</a></li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+
+
+
+ if(LI.showAllDeferredImg){
+ LI.showAllDeferredImg( 'header', false );
+ LI.showAllDeferredImg( 'footer', false );
+ }
+
+
+ if ( typeof( oUISettings ) !== 'undefined' ) {
+ oUISettings.saveSettingsURL = "/lite/ui-settings-save-old?csrfToken=ajax%3A2338449297904858954";
+ }
+
+ if ( typeof( WebTracking ) !== 'undefined' ) {
+ WebTracking.saveWebActionTrackURL = "/lite/web-action-track?csrfToken=ajax%3A2338449297904858954";
+ }
+</script>
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=3i7ubdukif1jevuf29ftmtvjs-ukgkg4rtwlz74z78bt35jocx-dlcimwl96rttjyfr26x4i92ol-1m7sfcez3isjwlg5yrudwy1mz-85irzxzbd5halvkstu9vwbyf6"></script>
+<script type="text/javascript">fs._server.fire("0084556b09428813d0bf6a1f8f2b0000-3",{event:"after",type:"html"});</script>
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=5nccf2l0s6sx33q8rxgr9lg73-9t8kuspsvkr9x9idyawoejfbv"></script>
+<script type="text/javascript">
+
+      if (!window.LI) { window.LI = {}; }
+      LI.RUM = LI.RUM || {};
+
+      (function(RUM, win) {
+
+        var doc = win.document;
+
+        RUM.flags = RUM.flags || {};
+        RUM.flags['host-flag'] = "control";
+        RUM.flags['pop_beacons_frequency'] = "n50";
+
+        RUM.urls = RUM.urls || {};
+        RUM.urls['rum-track'] = "/lite/rum-track?csrfToken=ajax%3A2338449297904858954";
+        RUM.urls['boomerang-bw-img'] = "http://s.c.lnkd.licdn.com/scds/common/u/lib/boomerang/0.9.edge.4ab208445a/img/";
+
+        RUM.base_urls = RUM.base_urls || {};
+        RUM.base_urls['permanent_content'] = "http://s.c.lnkd.licdn.com/scds/common/u/";
+        RUM.base_urls['versioned_content'] = "http://s.c.lnkd.licdn.com/scds/concat/common/";
+        RUM.base_urls['media_proxy'] = "http://m.c.lnkd.licdn.com/media-proxy/";
+
+        
+          
+          
+          RUM.serverStartTime = 1.407447491828E12;
+        
+
+        RUM.enabled = true;
+
+        
+        function getRumScript() {
+          var node = doc.body || doc.head || doc.getElementsByTagName('head')[0],
+              script = doc.createElement('script');
+          script.src = 
+      
+        
+            
+              
+              
+                ["http://s.c.lnkd.licdn.com/scds/concat/common/js?h=ed29nkjpsa16bhrjq4na16owq-1mucgfycc664m7vmhpjgqse65-1l5rurej3h44qodo5rn0cdvyn-8om6v2ckrxsbnwf40t9ta8a7e-6twiyur1ifxc26u5qq77bm02p-cz8o4v1lqi6hq7gyskasifgyo-aac54ic1fmca5xz1yvc5t9nfe-bnn4cs5bhbf0p4j9vdbdu80ig"]
+              
+            
+          
+        
+      
+    [0];
+          node.appendChild(script);
+        }
+
+        
+        if (win.addEventListener) {
+          win.addEventListener('load', getRumScript);
+        }
+        else {
+          win.attachEvent('onload', getRumScript);
+        }
+
+      }(LI.RUM, window));
+
+    </script>
+<script id="localChrome"></script>
+<script type="text/javascript" src="http://s.c.lnkd.licdn.com/scds/concat/common/js?h=b6tlthirqun8s54mdo3rwqei2-bi7v093xs2maserpnkqqxme5n-c1l12hhq65hu3oc3j0shkmr8z-5cevc4po64y8x5l8xw2lvqdb-kipl3hzq34dpqq2fvwb5u6cf"></script>
+<script type="text/javascript">
+          YEvent.onDOMReady(function() {
+            LI.log("defer:js execution for "+YAHOO.lang.dump([
+              'http:\/\/s.c.lnkd.licdn.com\/scds\/concat\/common\/js?h=71usve2px363b1c5pfj9fl3m3-7jsf2hgsjrsktriwkbyq01imu-108mwuhnqxlqizq4wh0bh6pd4-6rcob2qfjiii99be0mzfdyrpo-5pe2ztcmseew0tdea17903s3t-6y9mbi0r2o6usgrmm8vm1vw4k-bsb4tnh42n9hyqlxy69of23xq-w1xajp7uxkl58lmb4u5luo1u-e17zy6z51dugr6fy4su92o7de',
+            ]), "defer-js", "shared.tmpl");
+            YAHOO.util.Get.script([
+              'http:\/\/s.c.lnkd.licdn.com\/scds\/concat\/common\/js?h=71usve2px363b1c5pfj9fl3m3-7jsf2hgsjrsktriwkbyq01imu-108mwuhnqxlqizq4wh0bh6pd4-6rcob2qfjiii99be0mzfdyrpo-5pe2ztcmseew0tdea17903s3t-6y9mbi0r2o6usgrmm8vm1vw4k-bsb4tnh42n9hyqlxy69of23xq-w1xajp7uxkl58lmb4u5luo1u-e17zy6z51dugr6fy4su92o7de',
+            ], {
+              onSuccess: function() {
+                LI.log("defer:js call successful", "defer-js", "shared.tmpl");
+                LI.Controls.processQueue();
+              },
+              onFailure: function() {
+                LI.log("defer:js call failed", "defer-js", "shared.tmpl");
+              }
+            });
+          });
+        </script>
+<script type="text/javascript">
+  YEvent.on( window, 'load', function() {
+    YAHOO.util.Get.script( 'http://www.google-analytics.com/ga.js', { onSuccess: function() {
+      var pageTracker = _gat._getTracker("UA-3242811-1");
+      
+      pageTracker._setDomainName(".linkedin.com");
+      pageTracker._setVar("guest");
+      pageTracker._trackPageview("groups/guest/item_list_abbreviated");
+    } });
+  });
+</script>
+<script type="text/javascript">/* <![CDATA[ */
+(function() {
+
+  var bcookie = escape( LI.readCookie("bcookie") ),
+    newTrkInfo = '3003939,',
+    alias_secure = 'https://www.linkedin.com/analytics/noauthtracker?type=leo%2EpageTracking&pageType=full_page&pageKey=groups%2Fguest%2Fitem_list_abbreviated_jsbeacon&trkInfo=REPLACEME',
+    alias_normal = '/analytics/noauthtracker?type=leo%2EpageTracking&pageType=full_page&pageKey=groups%2Fguest%2Fitem_list_abbreviated_jsbeacon&trkInfo=REPLACEME',
+    is_secure = false,
+    url = (is_secure) ? alias_secure : alias_normal;
+
+  url = url.replace("REPLACEME", newTrkInfo);
+
+  if (bcookie) {
+    if(window.$ && $.ajax){
+      $.ajax(url);
+    } else {
+      YAHOO.util.Connect.asyncRequest( 'get', url, {} );
+    }
+  }
+
+})();
+/* ]]> */</script>
+<script type="text/javascript">LI.Controls.processQueue();</script>
+<script type="text/javascript">
+  LI.define('Tracking.Comscore');
+  LI.Tracking.Comscore = function() {
+    YAHOO.util.Get.script( 'http://b.scorecardresearch.com/beacon.js', {
+      onSuccess: function() {
+        COMSCORE.beacon({ c1:2, c2:6402952, c3:"", c4:"", c5:"", c6:"", c15:"" });
+      }
+    });
+  };
+  YEvent.on( window, 'load', LI.Tracking.Comscore);
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/b?c1=2&amp;c2=6402952&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=1.3&amp;cj=1" style="display:none" width="0" height="0" alt="">
+</noscript>
+<script type="text/javascript">
+  LI.define('Tracking.Quantcast');
+  LI.Tracking.Quantcast = function() {
+    _qoptions = { qacct:"p-b3sGjMtCFrexE" };
+    YAHOO.util.Get.script( 'http://edge.quantserve.com/quant.js' );
+  };
+  YEvent.on( window, 'load', LI.Tracking.Quantcast);
+</script>
+<noscript>
+<a href="http://www.quantcast.com/p-b3sGjMtCFrexE" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-b3sGjMtCFrexE.gif" style="display: none;" height="1" width="1" alt=""></a>
+</noscript>
+<script type="text/javascript">
+  YEvent.on( window, 'load', function() {
+    (function () {
+      var protocol = 'http:';
+      var d = new Image(1, 1);
+      d.onerror = d.onload = function () { d.onerror = d.onload = null; };
+      d.src = [
+        protocol,
+        "//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603751h&cg=0&cc=1&si=",
+        escape(window.location.href),
+        "&ts=compact&rnd=",
+        (new Date()).getTime()
+      ].join('');
+    })();
+  });
+</script>
+<noscript>
+<img src="http://secure-us.imrworldwide.com/cgi-bin/m?ci=us-603751h&cg=0&cc=1&ts=noscript" width="1" height="1" alt="" style="display:none">
+</noscript>
+</body>
+</html>

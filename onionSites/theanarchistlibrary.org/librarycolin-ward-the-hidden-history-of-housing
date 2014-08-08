@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     The hidden history of housing (Colin Ward) | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/library/colin-ward-the-hidden-history-of-housing?edit">
+		Edit this text
+	      </a>
+	      
+	      
+	    </li>
+	    <li>
+	      
+	      <a href="/bookbuilder?addme=colin-ward-the-hidden-history-of-housing">
+		 Add this text to your book
+	      </a>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+
+<div id="page">
+
+<div id="preamble">
+  <p id="texttitle">
+    <strong>Title:</strong>
+    The hidden history of housing
+  </p>
+  
+  <p id="authors">
+    <strong>Author(s):</strong>
+        <a href="/authors/colin-ward">Colin Ward</a>
+    
+  </p>
+  
+  <p id="textdate">
+    <strong>Date:</strong>
+    2004
+  </p>
+  
+  <p id="ourtopics">
+    <strong>Topics:</strong>
+        <a href="/topics/cities">cities</a>
+        <a href="/topics/housing">housing</a>
+        <a href="/topics/squatting">squatting</a>
+    
+  </p>
+    
+  
+  <p id="preamblesrc">
+    <strong>Source:</strong>
+    Retrieved on September 25, 2010 from <a href="http://www.historyandpolicy.org/papers/policy-paper-25.html">www.historyandpolicy.org</a>
+  </p>
+  
+</div>
+
+<!-- end preamble -->
+
+<div id="downloadformats">
+  <p><strong>Downloads:</strong><br />
+    <span id="pdfgeneric">
+      <a href="colin-ward-the-hidden-history-of-housing.pdf" class="pdflinks">
+	<img src="/images/pdf-gen.png" alt="plain PDF" title="plainPDF" 
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="pdfa4imp">
+      <a href="colin-ward-the-hidden-history-of-housing.a4.pdf" class="pdflinks">
+	<img src="/images/pdf-a4-imposed.png"
+	     alt="A4 imposed PDF"
+	     title="A4 imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="letterimp">
+      <a href="colin-ward-the-hidden-history-of-housing.lt.pdf" class="pdflinks">
+	<img src="/images/pdf-letter-imposed.png"
+	     alt="Letter imposed PDF"
+	     title="PDF Letter imposed"
+	     class="pdfmyicons" /></a> 
+    </span>
+    <span id="downloadepub">
+      <a href="colin-ward-the-hidden-history-of-housing.epub">
+	<img src="/images/epub.png" alt="EPUB"
+	     title="EPUB (for mobile devices)" class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadhtml">
+      <a href="colin-ward-the-hidden-history-of-housing?print">
+	<img src="/images/pf-html.png" alt="clean HTML"
+	     title="Standalone HTML (printer-friendly)"
+	     class="pdfmyicons" />
+      </a>
+    </span>
+    <span id="downloadtex">
+      <a href="colin-ward-the-hidden-history-of-housing.tex">
+	<img src="/images/tex.png" alt="TeX" title="ConTeXt source"
+	     class="pdfmyicons" /></a>
+    </span>
+    <span id="downloadsrc">
+      <a href="colin-ward-the-hidden-history-of-housing.muse">
+	<img src="/images/muse.png" alt="source" title="plain text source"
+	     class="pdfmyicons" /></a>
+    </span>
+  </p>
+</div>
+
+<!-- end formats -->
+<!-- START BARE TEXT MARKER: do not remove -->
+
+    <div id="textwithoutmetadata">
+      <div id="pagemaintitle">
+	<h2>Colin Ward</h2>
+	
+	<h1 id="textttitleh">The hidden history of housing</h1>
+	
+      </div>
+      
+      
+      <div id="tableofcontents">
+	
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc1">Executive summary
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc2">Introduction
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc3">Plotlanders in the early-twentieth century
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc4">Squatters in the post-war years
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc5">Travellers and settlers today
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc6">Conclusions
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc7">Further Reading
+</a></p>
+
+<p class="tableofcontentline toclevel4"><span class="tocprefix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#toc8">Useful links
+</a></p>
+
+      </div>
+      
+      <div id="thework">
+	<h4 id="toc1">Executive summary
+</h4>
+
+<ul>
+<li><p>Up to 1945 ‘plotlanders’ were able to make use of small patches of land not needed for agriculture, gradually building up weekend shacks into permanent residences, by using their own time and labour rather than large sums of money. 
+</p>
+</li>
+<li><p>Immediately after the Second World War, homeless people in their thousands squatted in recently-vacated military camps, organizing their own communal services. Then, in the 1960s and 1970s, a similar movement erupted across vacant local-authority properties, evolving into long-term housing co-operatives. 
+</p>
+</li>
+<li><p>Today various kinds of travellers are attempting to settle on their own land, living outside the formal economy and experimenting with a wide range of unconventional dwelling types. 
+</p>
+</li>
+<li><p>This sort of self-help housing provision is flexible, cheap and creative. It tends to use human capital rather than financial capital, and to evolve slowly from the most basic provision by devising ingenious new solutions. 
+</p>
+</li>
+<li><p>We should allow this to flourish, by restraining government’s impulse to outlaw unconventional behaviour through such legislation as the Criminal Justice Act 1994. 
+</p>
+</li>
+<li><p>In addition, planning authorities should be more sympathetic to experimentation, perhaps even reviving the idea of relaxed planning zones associated with some of the New Towns in the 1960s. 
+</p>
+</li>
+
+</ul>
+<h4 id="toc2">Introduction
+</h4>
+<p>My purpose in this paper is to explore aspects of the history of housing, in terms of housing based on local and popular initiative, self-help and mutual aid. It is important to remember that most of the world’s population lives in houses built by themselves, their parents and grandparents and that the world’s most widely used building materials are grass in its various forms from straw to bamboo, and mud in its innumerable forms from rammed earth to brick.
+</p><p>In English history, a key event we have to grapple with is that of the Enclosure of the common fields, common lands and wastes, which was not a sudden transformation in the eighteenth century, but a continuous process over centuries, culminating in the Parliamentary Enclosures of 1750–1850. But there were plenty of places, particularly in the hinterland of towns where the process of enclosure was less important than the accessibility of small patches of land where a living could be made in a variety of industries meeting the needs of town-dwellers, whether in keeping chickens or cows, growing vegetables, or in quarrying stone or making bricks, or taking in laundry. There were in other words a lot of people who scraped a living in several, often seasonal, occupations including cultivating their own patch.
+</p><p>Headington Quarry, just outside Oxford, was one of the few such settlements whose story was gathered from survivors before it disappeared in the usual suburban expansion. Raphael Samuel provided a careful link between oral recollections and archives which revealed a community of squatters which had both stone and clay, and skills to meet the city’s demands, and these, with the equivocal legal ownership of land, led to house-building and the sharing-out of constructional skills. Every family had an allotment garden and used an involved series of gathering techniques to exchange within the community or to sell to the farmers or the city. The importance of this vast variety of activities was that, however poor, Quarry people stayed alive outside the official system of poor relief. Staying outside these hated and feared institutions was a remarkable achievement, and this was also, as Samuel noted, a village which had arisen singularly free of landlords: ‘for centuries it had enjoyed what was virtually an extra-parochial existence, a kind of anarchy, in which the villagers were responsible to nobody but themselves.’
+</p><p>Communities of this type not only survived until the end of the nineteenth century, but continued to re-emerge in new circumstances throughout the twentieth century. In the rest of this paper I will examine three examples in more detail: the plotlanders of the inter-war years, the squatters of the post-war years, in the 1940s and again in the 1960s, and the various kinds of travellers still exploring unconventional ways of living today.
+</p><h4 id="toc3">Plotlanders in the early-twentieth century
+</h4>
+<p>The word ‘plotlands’ was coined by planners for those places where, until 1939, land was divided into small plots and sold, often in unorthodox ways, to people wanting to build their holiday home, country retreat or would-be smallholding. It evokes a landscape of a grid-iron of grassy tracks, sparsely filled with bungalows made from army huts, old railway coaches, sheds, shanties and chalets, slowly evolving into ordinary suburban development.
+</p><p>The plotlands were the result of several factors. First, the agricultural decline that began in the 1870s and continued until 1939, with a break in the First World War, forced the sale of bankrupt farms at throw-away prices. Added to this was the spread down the social scale of the holiday habit and the ‘weekend’ idea. Before the 1938 Holidays With Pay Act, those who took a holiday without being paid for that week or fortnight were likely to seek a cheap one, and a glance at newspapers in the 1930s shows that the cheapest holiday available was to rent a plotland bungalow. Finally there was the idea of a property-owning democracy. The owner-occupied house is now the commonest mode of tenure in this country, but even when most families, rich or poor, rented their dwellings, the attraction of possessing a few square yards of England had its appeal.
+</p><p>The plotlands had several characteristics in common. They were invariably on marginal land. The Essex plotlands were on the heavy clay known to farmers as ‘three-horse land’, which was the first to go out of cultivation in the agricultural depression; others grew up on vulnerable coastal sites like Jaywick Sands and Canvey Island. Another characteristic was that the plotlanders wanted their holiday homes to stay in the same family and eventually to become the owners’ retirement home. What seemed to the outside observer to be inconvenient, substandard and far from the shops, was for them loaded with memories of happy summer days when the children were small. Finally, the plotlands tended to be upgraded over time. Extensions, the addition of bathrooms, partial or total rebuilding, the provision of mains services and the making-up of roads are part of the continuous improvement process in any old settlement that has not been economically undermined or subjected to the restraint on improvements known as planners’ blight.
+</p><p>When Dennis Hardy and I were enabled to explore the plotlands, while plenty of the original settlers were still living, what struck us was their enormous attachment to their homes, their defensive independence and their strong community bonds. The residents of Jaywick Sands, for example, had for decades organised a service for emptying Elsan closets, known locally as the ‘Bisto Kids’, until, after fifty years, a sewer was built. Our overwhelming impression was of the way that the plotland self-builders, who started with very little, over the years turned their own labour and ingenuity into capital, with no help at all from local councils, building societies or any other financial institutions.
+</p><p>In the post-war decades, what have planning authorities done about the plotlands? Sometimes their aim was to eliminate them totally and return the land, if not to agriculture, to public recreational use. In most places this policy has failed and resulted in empty scrubby wasteland between those plots still occupied by obstinate people who fought planning decisions. In some places it has succeeded. At Havering Park, Essex, the Greater London Council bought and demolished all plotland dwellings to make a country park. Nearby, the new town of Basildon was designated in 1949 to make some kind of urban entity out of Pitsea and Laindon, where by the end of the war there was a settled population of about 25,000 served by 75 miles of grass-track roads, mostly with no sewers and with standpipes for water supply.
+</p><p>The Second World War and the overwhelming powers to control development given to planning authorities by the 1947 Town and Country Planning Act and its successors put an end to this kind of self-help house-building in Britain. Even self-build housing, which provides more homes annually today than any of the multiple ‘volume house-builders’, has to produce a fully-finished, fully-serviced house right from the start. Otherwise there is no planning permission, no approval under the Building Regulations and no mortgage loan to pay for the site and materials.
+</p><h4 id="toc4">Squatters in the post-war years
+</h4>
+<p>In the post-war decades the word ‘squatting’ has been used to describe the unauthorised occupation of empty property (almost invariably publicly-owned) by homeless people. It seems to me that squatting can be seen as ideological or pragmatic. What I mean by this is that when Winstanley and the Diggers settled on land at Walton-on-Thames in Surrey in 1649, they were ideologists, dramatising a century of unauthorised encroachments by landlords. But there have also always been pragmatic squatters, relying on distant and absentee property-owners, to allow them the occupation of premises by default. The last thing they desired was publicity and the thing they most desired was a rent-book and security of tenure.
+</p><p>At the end of the Second World War this kind of squatting started with what was known as the ‘Vigilante campaign’ which spread from Brighton to other seaside towns like Hastings and Southend. Committees of, largely, ex-servicemen, under cover of night, installed homeless families and their furniture in unoccupied houses — usually successfully, since no action could be taken to evict them once they were in, until the usually absentee property-owners could initiate legal proceedings against them.
+</p><p>In the following years the campaign grew because of the anomaly of the emptying-out of hundreds of army and air-force camps during the worst housing shortage the country had known. Spontaneous individual actions began in Scunthorpe, spread quickly to two other camps in Lincolnshire, and were followed by the occupation of several camps around Sheffield, where settlers formed a Squatters’ Protection Society and linked up with the pioneer squatters at Scunthorpe. These events were rapidly followed by the seizure of hundreds of camps everywhere in Britain. The authorities who at first disclaimed any responsibility for the squatters — passing the buck from one department to another — were forced to recognise the occupations, and local authorities were instructed to turn on water and electricity supplies. Later in the year the Ministry of Works, which had previously declared itself ‘not interested’ found it possible to offer the Ministry of Health (then the department responsible for housing) 850 former service camps.
+</p><p>The government announced on 11<sup>th</sup> October 1946 that 1,038 camps in England and Wales had been occupied by 39,535 people, and on 5<sup>th</sup> September it was stated that four thousand people had squatted in Scotland. Since the government could not destroy the movement, it tried to absorb it, and expressed itself confident that the settlers would ‘see reason’ and ‘move out when the situation had been explained to them’. On Saturday 14<sup>th</sup> September, the Minister of Health, Aneurin Bevan, just back from his holiday in Switzerland, had instructed local authorities to cut off gas and electricity supplies to property under their control occupied by squatters. But in fact, by this time, councils were already directing homeless people to occupy empty huts where settlers were organising communal cooking and nursery facilities and forming rotas to stoke the boilers left behind by the armed forces. In October 1946, Bevan still sought to turn public feeling against the camp squatters by suggesting that they were ‘jumping their place in the housing queue’, when in fact they were jumping out of the housing queue by moving into buildings which would not otherwise have been used for housing purposes. It took most of them years to get into that ‘housing queue’. Thus in one case over a hundred families who in 1946 occupied a camp called Field Farm in Oxfordshire, stayed together and over ten years later in 1958–9 were re-housed in the new village of Berinsfield on the same site.
+</p><p>In practice the squatters had won, and before long central government was criticising local authorities for not housing homeless families in former military camps. But needless to say, pragmatic squatting continued, especially as local councils acquired vast tracts of urban housing for eventual comprehensive redevelopment. It re-emerged as a public issue in 1968 thanks to two activists, Ron Bailey and Jim Radford. They were busy agitating about the failure of local authorities to comply with their statutory duty to the homeless, trying after long and bitter campaigns to draw public attention to conditions in hostels for homeless families in Kent and Essex and in the London County Council area. So they installed homeless families in unoccupied houses which had been publicly acquired and earmarked for demolition in the future for projected road improvements, or car parking or municipal offices.
+</p><p>This outraged the local authorities, who responded violently. They used thugs described as ‘private investigators’ as their agents to terrorise and intimidate the squatting families. This was widely reported and photographed in the press and on television, and this in turn drew public opinion towards support for the squatters, as did the policy of deliberately wrecking the interiors of empty houses to keep the squatters out. However, after this over-reaction the councils, apparently ashamed of their mismanagement of the empty housing they owned, gladly entered into agreements for short-life housing co-operatives, some of which, because of the changed climate of housing policy, have had a very long life. For example in London, some of the most successful housing co-ops have grown out of squatting groups.
+</p><p>Local politicians may have come to agreements with squatters, but central government politicians of both major parties have been unremittingly hostile. Once they discovered that squatting was a civil, rather than a criminal offence, governed by legislation dating back to the year 1381, they set about changing the situation. The Law Commission responded in 1974 with a document on Criminal Law Offences of Entering and Remaining on Property, which was incorporated into legislation by the Criminal Law Act of 1977. This failed to deter this country’s 50,000 or so squatters, and in practice, so has its Conservative successor, the Criminal Justice Act of 1994. The government ignored the representation of those who had tried to seek some accommodation for the homeless in official policy, and the 1994 act incorporated an eclectic range of legislation directed against the poor.
+</p><p>What squatters seek, and have always sought, is security of tenure, and indeed personal security. However, there has been a marked deterioration in the public mood which enabled local authorities in the 1940s and again in the 1960s and 1970s to make creative deals with squatters, but in the 1990s led central government, relying for support on what it saw as the self-protective instincts of a property-owning democracy, to adopt policies which have had the effect of criminalising them.
+</p><h4 id="toc5">Travellers and settlers today
+</h4>
+<p>All through English history there have always been travelling people with an indispensable role in the traditional labour-intensive rural economy in seasonal work at harvest-time, and even today, when arable farmers aim to do without any permanent labour force, they have a vital place in potato-lifting, fruit-picking, and in hopfields and orchards. Planning legislation, allocating an approved use to every patch of land, has added to the problems faced by travelling people. It was recognition of these dilemmas for a minority that led to the passing of the Caravan Sites Act of 1968, which required local councils to provide sites for gypsies with a 100 per cent grant from central government. Less than two-fifths of them actually did so and the Act was not enforced. In 1978 the government asked the late Professor Gerald Wibberley, a much respected authority on countryside planning, to report on its workings. He concluded that ‘the Act is working, slowly, but quite well in a few areas, even though councils and the government didn’t have their heart in it’.
+</p><p>However, on 18<sup>th</sup> August 1992, when parliament was in recess Sir George Young, then Minister of State for Housing and Planning, announced his intention to make it a criminal offence to park a caravan or similar vehicle on any land, without the landowner’s consent, and to remove the obligation on local authorities to provide sites. Sir George said, with a straight face, that it was up to travellers to acquire their own land for sites and to apply for planning consent. These proposals were then incorporated in the Criminal Justice Act of 1994, and there were a series of test cases through the rest of the decade which have shown just how difficult it can be to get planning consent.
+</p><p>One gypsy, Richard Oakley, who had used the council site outside Bury St Edmund’s in Suffolk, bought a nearby plot where he had grazed his horses, and installed his mobile home and touring caravan there. However, the council’s committee refused him planning permission and the planning Inspector dismissed his appeal, as his premises ‘were entirely inappropriate features in a Special Landscape Area ... and the conifer hedge, trimmed in neat, suburban style, was totally out of place in the Suffolk countryside’. Similarly, near Norton Sub Hamdon in Somerset, a group of New Age Travellers applied for planning permission for seven benders and tents to accommodate up to twelve adults on a 40-acre woodland site which included a 1,000 tree apple orchard, some farm animals and organic allotments on land that they already owned. South Somerset District Council refused permission and, in spite of a planning inspector recommending that an appeal against this decision be allowed, the then Secretary of State, John Gummer, dismissed it on the grounds that ‘the provision of groups of tents or similar residential accommodation in the open countryside, merely to provide a subsistence living for the occupants, is not a practical pattern of land use’. Having won the day, the council subsequently changed its mind and in 1998 granted a 5-year permission for this use of the land. At the time of writing, in 2004, no decision has yet been reached on the application to renew this consent, but the vociferous local objectors of the mid-1990s seem to have melted away, no doubt because their fears of noise, nuisance etc. turned out to be unfounded. There are hopes that ‘Tinker’s Bubble’, as it is known, may become a permanent feature of the local landscape.
+</p><p>But Tinker’s Bubble is a rare exception to the rule and there is still much truth in the comment of Simon Fairlie, one of the Somerset settlers, that ‘it is the planning system, rather than ownership, that is now the main way in which ordinary people are prevented from “reclaiming the land”’. Drawing upon the experience of the pre-war plotlands, I took up this theme some years ago when I had the chance to address members of the New Town hierarchy in 1975. I urged that since the then still existing New Town Development Corporations controlled very large areas of land, one of them should sponsor an experiment in the relaxation of planning and building controls to make it possible for those who wanted to, to experiment in alternative ways of building and servicing houses, and in permitting a dwelling to be occupied in a most rudimentary condition for gradual completion. I argued that it should be possible to operate some kind of ‘usufruct’, some sort of leasehold with safeguards against purely cynical exploitation, which would enable people to house themselves in their own style while not draining immense sums from central or local government.
+</p><p>The notion gained some support within Milton Keynes Development Corporation and there were endless negotiations with a local body, the Green Town Group, and the Town and Country Planning Association. It all came to nothing because it was a matter of principle for the Development Corporation to avoid argument with the local planning authority, the County Council. As Don Ritson of the Development Corporation remarked: ‘We can’t get planning permission, even in outline, without a clear statement of what is to happen on the site, but if we specify what is to happen we are limiting in advance the aspirations of the people we expect to settle there. And the whole idea is to give them the freedom of choice.’ Meanwhile, the concept was taken up at Telford New Town for a site that had been ravaged by old coal workings and was unsuitable for ordinary development. At Lightmoor, fourteen families, intended to be the first of four hundred, built their own homes and did their own thing. The terrible irony was that the activities of these original pioneers so upgraded the value of the intended extension that in the changed economic climate the site became considered too valuable for such a marginal settlement.
+</p><p>As in the case of the squatters of the 1960s, something has to yield. The Criminal Justice Act is too vindictive and punitive a law to become the determinant of who is entitled to live where. And in planning procedures there has to be some kind of an accommodation between the ideology of ‘Nimbyism’ — Not in My Back Yard- and the ordinary basic needs of the people excluded from the enterprise economy.
+</p><h4 id="toc6">Conclusions
+</h4>
+<p>In the post-war decades popular mythology held that every acre of Britain was precious in the interests of agriculture. Farmers were free to destroy woodlands and hedges, drain wetlands and pollute rivers and water supplies in the interests of increased production. Now that the bubble of over-production has burst, the same people are subsidised for not growing and for returning habitats to what is seen as nature. This results in golf courses and publicly-financed set-aside.
+</p><p>Unofficial settlements are seen as a threat to wildlife, which is sacrosanct. The planning system is the vehicle that supports four-wheel-drive Range Rovers, but not the local economy, and certainly not those travellers and settlers seeking their own modest place in the sun. These people have bypassed the sacred rights of tenure, but still find their modest aspirations frustrated by the operations of planning legislation. Nobody actually planned such a situation. No professional planner would claim that his or her task was to grind unofficial housing out of existence, and nor would any of the local enforcers of the Building Regulations.
+</p><p>But all these unhappy confrontations are the direct result of public policy. Something has to be done to change it, and the hidden history of twentieth-century housing offers some currently unconventional models.
+</p>
+<blockquote>
+<p>September 2004
+</p></blockquote>
+<h4 id="toc7">Further Reading
+</h4>
+
+<ul>
+<li><p>Ron Bailey, <em>The Squatters</em> (1973).
+</p>
+</li>
+<li><p>Ron Bailey, <em>Homelessness: What can be done? An Immediate Programme of Self-Help and Mutual Aid</em> (1994).
+</p>
+</li>
+<li><p>Dennis Hardy and Colin Ward, <em>Arcadia for All. The Legacy of a Makeshift Landscape</em> (1984).
+</p>
+</li>
+<li><p>Raphael Samuel, ‘Quarry roughs: life and labour in Headington Quarry, 1860–1920 — an essay in oral history’, in Raphael Samuel (ed.), <em>Village Life and Labour</em> (1975).
+</p>
+</li>
+<li><p>Colin Ward, ‘The early squatters’, in Nick Wates (ed.), <em>Squatting. The Real Story</em> (1980).
+</p>
+</li>
+<li><p>Colin Ward, ‘The do it yourself New Town’, in <em>Talking Houses</em> (1990) 
+</p>
+</li>
+
+</ul>
+<h4 id="toc8">Useful links
+</h4>
+<p>Further information on some of the groups active in this area is available from the following websites:
+</p>
+<ul>
+<li><p>Chapter 7. The Planning Office of The Land Is Ours: <a href="http://www.tlio.org.uk/chapter7/">www.tlio.org.uk</a> 
+</p>
+</li>
+<li><p>Walter Segal Self Build Trust: <a href="http://www.segalselfbuild.co.uk/">www.segalselfbuild.co.uk</a> 
+</p>
+</li>
+
+</ul>
+
+
+      </div>
+    </div>
+
+<!-- STOP BARE TEXT MARKER: do not remove -->
+
+<!-- side icons -->
+<div id="toctoggler">
+    <p id="toctooglerbutton">&nbsp;</p>
+</div>
+<script type="text/javascript">
+      <!--
+	  if ($("#tableofcontents").length > 0) {
+	    $("p#toctooglerbutton").append(
+	    "<img src=\"http://theanarchistlibrary.org/images/toc.png\" alt=\"toogle ToC\" title=\"show/hide the Table of Contents\" />");
+	  };
+	  $("p#toctooglerbutton").click(function () {
+	    $("#tableofcontents").slideToggle("slow");
+	  });
+	  //-->
+</script>
+
+</div>
+   
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

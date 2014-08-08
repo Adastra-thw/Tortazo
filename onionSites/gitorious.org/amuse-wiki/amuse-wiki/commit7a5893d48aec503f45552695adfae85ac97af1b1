@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adaptive layout - Gitorious</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href="/assets/application-37097a3fd997addfa7c0945020dec21f.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="/dist/bootstrap/css/bootstrap.min.css?1407404048" rel="stylesheet" type="text/css">
+      <link href="/dist/bootstrap/css/bootstrap-responsive.min.css?1407404048" rel="stylesheet" type="text/css">
+      <link href="/dist/css/gitorious3.min.css?1407404048" rel="stylesheet" type="text/css">
+      <link href="/ui3/js/lib/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" type="text/css">
+      <link href="/assets/issues/application.css" rel="stylesheet" type="text/css">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52238-3']);
+_gaq.push(['_setDomainName', '.gitorious.org'])
+_gaq.push(['_trackPageview']);
+(function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="page-content">
+        <div class="gts-masthead navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              
+              <a href="/" class="gts-logo"><img src="/dist/images/gitorious2013.png" alt="Gitorious" title="Gitorious"></a>
+              <ul class="nav">
+                <li>
+                  <a href="/activities">Activities</a>
+                </li>
+                <li>
+                  <a href="/projects">Projects</a>
+                </li>
+                <li>
+                  <a href="/groups">Teams</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+              </ul>
+              <div class="pull-right">
+                <form action="/search" class="navbar-search pull-left" method="get">
+                  <input type="search" placeholder="Search" class="search-query span2" name="q">
+                </form>
+                <div class="pull-right btn-group login_button">
+                  <a href="/login" class="btn btn-inverse">
+                    <i class="icon-user icon-white"></i> Sign in
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+          <div class="gts-site-header" data-gts-env-repository-view-state-path="/users/view_state/repository/116621.json">
+  <div class="container">
+    <div class="row">
+                <h3 class="span">
+            <a href="/amuse-wiki">amuse-wiki</a> /
+            <a class="gts-repository-name-ph" href="/amuse-wiki/amuse-wiki">amuse-wiki</a>
+          </h3>
+
+      <div class="pull-right">
+                <div class="btn-group gts-repo-urls">
+          <a class="btn gts-repo-url active" href="git@gitorious.org:amuse-wiki/amuse-wiki.git">SSH</a>
+          <a class="btn gts-repo-url" href="https://git.gitorious.org/amuse-wiki/amuse-wiki.git">HTTPS</a>
+          <a class="btn gts-repo-url" href="git://gitorious.org/amuse-wiki/amuse-wiki.git">Git</a>
+          <input class="span4 gts-current-repo-url gts-select-onfocus" type="url" value="git@gitorious.org:amuse-wiki/amuse-wiki.git">
+          <button data-toggle="collapse" data-target="#repo-url-help" class="gts-repo-url-help btn">?</button>
+        </div>
+
+      </div>
+      <div id="repo-url-help" class="collapse gts-help pull-right">
+                  <div class="alert alert-info span pull-right">
+            <p>
+              To <strong>clone</strong> this repository:
+            </p>
+            <pre class="prettyprint">git clone git@gitorious.org:amuse-wiki/amuse-wiki.git</pre>
+            <p>
+              To <strong>push</strong> to this repository:
+            </p>
+            <pre class="prettyprint"># Add a new remote
+git remote add origin git@gitorious.org:amuse-wiki/amuse-wiki.git
+
+# Push the master branch to the newly added origin, and configure
+# this remote and branch as the default:
+git push -u origin master
+
+# From now on you can push master to the "origin" remote with:
+git push</pre>
+          </div>
+
+      </div>
+    </div>
+                <ul class="nav nav-tabs gts-header-nav gts-pjax" data-gts-active="commits">
+            <li><a href="/amuse-wiki/amuse-wiki/source/master:">Source code</a></li><li><a href="/amuse-wiki/amuse-wiki/activities">Activities</a></li><li class="active"><a href="/amuse-wiki/amuse-wiki/commits/HEAD">Commits</a></li><li><a href="/amuse-wiki/amuse-wiki/merge_requests">Merge requests <span class="count gts-mr-count-ph"></span></a></li><li><a href="/amuse-wiki/amuse-wiki/community">Community</a></li>
+            <li class="gts-repository-admin-ph gts-placeholder"></li>
+            <li class="gts-request-merge-ph gts-placeholder"></li>
+          </ul>
+
+  </div>
+</div>
+
+<div class="container gts-body">
+
+  
+<div class="gts-commit">
+  <blockquote>
+    <p class="gts-commit-sha1">Commit: <a href="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1">#7a5893d</a></p>
+    <p class="gts-commit-sha1 gts-commit-parent">
+      Parent:
+      <a href="/amuse-wiki/amuse-wiki/commit/9aed49d3bd5cef14403082a699bbc76ecb2a60e2">#9aed49d</a>
+    </p>
+    <div class="gts-commit-message">
+      <h2>Adaptive layout</h2>
+    </div>
+  </blockquote>
+
+  <p class="gts-commit-meta">
+      <img alt="avatar" class="gts-avatar" height="24" src="https://secure.gravatar.com/avatar/f7d6d0774d3e84ac6987041ce05c0ce4&amp;amp;default=https://gitorious.org//images/default_face.gif&amp;amp;size=24" width="24" />
+      <a>
+        marco@theanarchistlibrary.org        &lt;marco @theanarch&hellip;ibrary.org&gt;      </a>
+    <span class="datetime" title="2013-12-14 18:16:39 UTC">
+      8 months ago
+    </span>
+  </p>
+</div>
+    <div class="pull-box-container"><div class="pull-box-header"><h3>Summary</h3></div><div class="pull-box-content">
+      <ul class="gts-diff-summary"><li><a href="#AmuseWiki/public/css/adaptive.css">AmuseWiki/public/css/adaptive.css</a> (142) <span class="gts-diff-rm"></span><span class="gts-diff-add">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></li><li><a href="#AmuseWiki/public/css/style.css">AmuseWiki/public/css/style.css</a> (2) <span class="gts-diff-rm">-</span><span class="gts-diff-add">+</span></li><li><a href="#AmuseWiki/views/layouts/main.tt">AmuseWiki/views/layouts/main.tt</a> (3) <span class="gts-diff-rm">-</span><span class="gts-diff-add">++</span></li><li><a href="#AmuseWiki/views/postform.tt">AmuseWiki/views/postform.tt</a> (20) <span class="gts-diff-rm">----</span><span class="gts-diff-add">++++++++++++++++</span></li></ul></div></div>          <ul class="nav nav-tabs">
+        <li class="active"><a>Inline diffs</a></li><li><a href="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1?diffmode=sidebyside">Side by side diffs</a></li>
+               <li><a href="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1.diff">Raw diff</a></li>
+       <li><a href="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1.patch">Raw patch</a></li>
+
+      </ul>
+      <div class="gts-file" id="AmuseWiki/public/css/adaptive.css">
+  <ul class="breadcrumb">
+    <li class="gts-diff-summary">
+      <a href="/amuse-wiki/amuse-wiki/source/7a5893d48aec503f45552695adfae85ac97af1b1:AmuseWiki/public/css/adaptive.css">
+        <i class="icon icon-file"></i>
+        <span class="gts-path">AmuseWiki/public/css/adaptive.css</span>
+      </a>
+      (<span class="gts-diff-add">+141</span>/<span class="gts-diff-rm">-0</span>)
+    </li>
+  </ul>
+  <div class="gts-code-listing-wrapper">
+    <table class="gts-code-listing">
+                <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L1">1</td>
+            <td class="gts-code"><code>/* adaptive layout for the poor bastards using phones to browse the archive */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L2">2</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L3">3</td>
+            <td class="gts-code"><code>/*****************************************************************************</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L4">4</td>
+            <td class="gts-code"><code> *  pretty large: regular pages are fine, but while editing the              *</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L5">5</td>
+            <td class="gts-code"><code> *  cheatsheet stays in the way, so put it at the bottom to be less annoying *</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L6">6</td>
+            <td class="gts-code"><code> *****************************************************************************/</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L7">7</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L8">8</td>
+            <td class="gts-code"><code>@media only screen and (max-width: 991px) {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L9">9</td>
+            <td class="gts-code"><code>    div#cheattoggler {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L10">10</td>
+            <td class="gts-code"><code>        display: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L11">11</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L12">12</td>
+            <td class="gts-code"><code>    div#cheatsheet {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L13">13</td>
+            <td class="gts-code"><code>        position: relative;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L14">14</td>
+            <td class="gts-code"><code>        bottom: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L15">15</td>
+            <td class="gts-code"><code>        right: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L16">16</td>
+            <td class="gts-code"><code>        margin: 10px 10px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L17">17</td>
+            <td class="gts-code"><code>        padding: 10px 10px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L18">18</td>
+            <td class="gts-code"><code>        width: 95%;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L19">19</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L20">20</td>
+            <td class="gts-code"><code>    div#uploadform {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L21">21</td>
+            <td class="gts-code"><code>        width: 95%;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L22">22</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L23">23</td>
+            <td class="gts-code"><code>}</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L24">24</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L25">25</td>
+            <td class="gts-code"><code>@media only screen and (max-width: 767px) {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L26">26</td>
+            <td class="gts-code"><code>    /* this should match the top bar */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L27">27</td>
+            <td class="gts-code"><code>    #vwbanner {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L28">28</td>
+            <td class="gts-code"><code>        min-width: 570px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L29">29</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L30">30</td>
+            <td class="gts-code"><code>    /* force the width of the banner image */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L31">31</td>
+            <td class="gts-code"><code>    img#title-banner-img {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L32">32</td>
+            <td class="gts-code"><code>        padding-left: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L33">33</td>
+            <td class="gts-code"><code>        width: 380px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L34">34</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L35">35</td>
+            <td class="gts-code"><code>    /* remove the logo, it's stealing room */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L36">36</td>
+            <td class="gts-code"><code>    div#wbanner {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L37">37</td>
+            <td class="gts-code"><code>        background: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L38">38</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L39">39</td>
+            <td class="gts-code"><code>    /* fix the lower navbar */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L40">40</td>
+            <td class="gts-code"><code>    #nav ul {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L41">41</td>
+            <td class="gts-code"><code>        padding-left: 30px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L42">42</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L43">43</td>
+            <td class="gts-code"><code>}</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L44">44</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L45">45</td>
+            <td class="gts-code"><code>/* and here come the poor bastards */</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L46">46</td>
+            <td class="gts-code"><code>@media only screen and (max-width: 580px) {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L47">47</td>
+            <td class="gts-code"><code>    br#full-text-search-separator {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L48">48</td>
+            <td class="gts-code"><code>        display:none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L49">49</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L50">50</td>
+            <td class="gts-code"><code>    #vwbanner {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L51">51</td>
+            <td class="gts-code"><code>        min-width: 240px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L52">52</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L53">53</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L54">54</td>
+            <td class="gts-code"><code>    #wbanner {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L55">55</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L56">56</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L57">57</td>
+            <td class="gts-code"><code>    div#banner {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L58">58</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L59">59</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L60">60</td>
+            <td class="gts-code"><code>    img#title-banner-img {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L61">61</td>
+            <td class="gts-code"><code>        width: 240px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L62">62</td>
+            <td class="gts-code"><code>        padding: 8px 0px 8px 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L63">63</td>
+            <td class="gts-code"><code>        margin-top: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L64">64</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L65">65</td>
+            <td class="gts-code"><code>    #sec-sub-menu {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L66">66</td>
+            <td class="gts-code"><code>        display: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L67">67</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L68">68</td>
+            <td class="gts-code"><code>    div#tableofcontents {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L69">69</td>
+            <td class="gts-code"><code>        position: relative;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L70">70</td>
+            <td class="gts-code"><code>        margin: 10px 10px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L71">71</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L72">72</td>
+            <td class="gts-code"><code>        right: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L73">73</td>
+            <td class="gts-code"><code>        bottom: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L74">74</td>
+            <td class="gts-code"><code>        width: 90%;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L75">75</td>
+            <td class="gts-code"><code>        display: block;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L76">76</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L77">77</td>
+            <td class="gts-code"><code>    div#toctoggler {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L78">78</td>
+            <td class="gts-code"><code>        display:none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L79">79</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L80">80</td>
+            <td class="gts-code"><code>    div#page {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L81">81</td>
+            <td class="gts-code"><code>        width: 100%;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L82">82</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L83">83</td>
+            <td class="gts-code"><code>    div#cloud {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L84">84</td>
+            <td class="gts-code"><code>        width: 100%;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L85">85</td>
+            <td class="gts-code"><code>        margin-bottom: 50px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L86">86</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L87">87</td>
+            <td class="gts-code"><code>    div#nav {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L88">88</td>
+            <td class="gts-code"><code>        background-color: #333;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L89">89</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L90">90</td>
+            <td class="gts-code"><code>        padding-bottom: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L91">91</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L92">92</td>
+            <td class="gts-code"><code>    #nav ul {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L93">93</td>
+            <td class="gts-code"><code>        height: auto;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L94">94</td>
+            <td class="gts-code"><code>        padding-left: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L95">95</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L96">96</td>
+            <td class="gts-code"><code>    #nav ul li a {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L97">97</td>
+            <td class="gts-code"><code>        white-space: nowrap;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L98">98</td>
+            <td class="gts-code"><code>        color: #bbb;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L99">99</td>
+            <td class="gts-code"><code>        font-weight: bolder;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L100">100</td>
+            <td class="gts-code"><code>        padding: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L101">101</td>
+            <td class="gts-code"><code>        background-color: #333;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L102">102</td>
+            <td class="gts-code"><code>        color: #bbb;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L103">103</td>
+            <td class="gts-code"><code>        margin: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L104">104</td>
+            <td class="gts-code"><code>        padding-left: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L105">105</td>
+            <td class="gts-code"><code>        padding-right: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L106">106</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L107">107</td>
+            <td class="gts-code"><code>    div#nav ul li a:hover {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L108">108</td>
+            <td class="gts-code"><code>        color: #fff;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L109">109</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L110">110</td>
+            <td class="gts-code"><code>    #nav a#current {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L111">111</td>
+            <td class="gts-code"><code>        padding-left: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L112">112</td>
+            <td class="gts-code"><code>        padding-right: 5px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L113">113</td>
+            <td class="gts-code"><code>        color: #fff;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L114">114</td>
+            <td class="gts-code"><code>        background-color: #333;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L115">115</td>
+            <td class="gts-code"><code>        border: 0px none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L116">116</td>
+            <td class="gts-code"><code>        boder-bottom: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L117">117</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L118">118</td>
+            <td class="gts-code"><code>    #sec-nav-submenu {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L119">119</td>
+            <td class="gts-code"><code>        display: inline;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L120">120</td>
+            <td class="gts-code"><code>        position: relative;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L121">121</td>
+            <td class="gts-code"><code>        top: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L122">122</td>
+            <td class="gts-code"><code>        left: 0px;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L123">123</td>
+            <td class="gts-code"><code>        background-color: #333;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L124">124</td>
+            <td class="gts-code"><code>        color: #eee;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L125">125</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L126">126</td>
+            <td class="gts-code"><code>    ul#sec-nav-submenu li {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L127">127</td>
+            <td class="gts-code"><code>        display: inline;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L128">128</td>
+            <td class="gts-code"><code>        list-style-type: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L129">129</td>
+            <td class="gts-code"><code>        white-space: nowrap;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L130">130</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L131">131</td>
+            <td class="gts-code"><code>    #sec-nav-submenu a {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L132">132</td>
+            <td class="gts-code"><code>        display: inline;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L133">133</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L134">134</td>
+            <td class="gts-code"><code>    ul#sec-nav-submenu {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L135">135</td>
+            <td class="gts-code"><code>        display: inline;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L136">136</td>
+            <td class="gts-code"><code>        list-style-type: none;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L137">137</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L138">138</td>
+            <td class="gts-code"><code>    #sec-men-ul a {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L139">139</td>
+            <td class="gts-code"><code>        white-space: nowrap;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L140">140</td>
+            <td class="gts-code"><code>    }</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L141">141</td>
+            <td class="gts-code"><code>}</code></td>
+          </tr>
+
+    </table>
+  </div>
+</div>
+
+      <div class="gts-file" id="AmuseWiki/public/css/style.css">
+  <ul class="breadcrumb">
+    <li class="gts-diff-summary">
+      <a href="/amuse-wiki/amuse-wiki/source/7a5893d48aec503f45552695adfae85ac97af1b1:AmuseWiki/public/css/style.css">
+        <i class="icon icon-file"></i>
+        <span class="gts-path">AmuseWiki/public/css/style.css</span>
+      </a>
+      (<span class="gts-diff-add">+1</span>/<span class="gts-diff-rm">-1</span>)
+    </li>
+  </ul>
+  <div class="gts-code-listing-wrapper">
+    <table class="gts-code-listing">
+                <tr class="gts-diff-unmod">
+            <td class="linenum L390">390</td>
+            <td class="linenum L390">390</td>
+            <td class="gts-code"><code>    background-color: #ddd;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L391">391</td>
+            <td class="linenum L391">391</td>
+            <td class="gts-code"><code>}</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L392">392</td>
+            <td class="linenum L392">392</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L393">393</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>div#toctoggler<span class="idiff"></span> {</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L393">393</td>
+            <td class="gts-code"><code>div#toctoggler<span class="idiff">, div#cheattoggler</span> {</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L394">394</td>
+            <td class="linenum L394">394</td>
+            <td class="gts-code"><code>    margin: 0 0;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L395">395</td>
+            <td class="linenum L395">395</td>
+            <td class="gts-code"><code>    padding: 0 0;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L396">396</td>
+            <td class="linenum L396">396</td>
+            <td class="gts-code"><code>    text-align: right;</code></td>
+          </tr>
+
+    </table>
+  </div>
+</div>
+
+      <div class="gts-file" id="AmuseWiki/views/layouts/main.tt">
+  <ul class="breadcrumb">
+    <li class="gts-diff-summary">
+      <a href="/amuse-wiki/amuse-wiki/source/7a5893d48aec503f45552695adfae85ac97af1b1:AmuseWiki/views/layouts/main.tt">
+        <i class="icon icon-file"></i>
+        <span class="gts-path">AmuseWiki/views/layouts/main.tt</span>
+      </a>
+      (<span class="gts-diff-add">+2</span>/<span class="gts-diff-rm">-1</span>)
+    </li>
+  </ul>
+  <div class="gts-code-listing-wrapper">
+    <table class="gts-code-listing">
+                <tr class="gts-diff-unmod">
+            <td class="linenum L52">52</td>
+            <td class="linenum L52">52</td>
+            <td class="gts-code"><code>   &lt;/script&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L53">53</td>
+            <td class="linenum L53">53</td>
+            <td class="gts-code"><code>   &lt;% END %&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L54">54</td>
+            <td class="linenum L54">54</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L55">55</td>
+            <td class="gts-code"><code>   &lt;link rel=&#34;stylesheet&#34; media=&#34;all&#34; href=&#34;&lt;% request.uri_base %&gt;/css/adaptive.css&#34; /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L55">55</td>
+            <td class="linenum L56">56</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L56">56</td>
+            <td class="linenum L57">57</td>
+            <td class="gts-code"><code>   &lt;%# title block, templates should pass the shared hash %&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L57">57</td>
+            <td class="linenum L58">58</td>
+            <td class="gts-code"><code>   &lt;title&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L140">140</td>
+            <td class="linenum L140">140</td>
+            <td class="gts-code"><code>	  &lt;div id=&#34;searchbox&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L141">141</td>
+            <td class="linenum L141">141</td>
+            <td class="gts-code"><code>	    &lt;form id=&#34;formsearchbox&#34; action=&#34;/search&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L142">142</td>
+            <td class="linenum L142">142</td>
+            <td class="gts-code"><code>	      &lt;p id=&#34;searchp&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L143">143</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>		&lt;input type=&#34;text&#34; name=&#34;query&#34; value=&#34;&#34; size=&#34;12&#34; /&gt;&lt;br <span class="idiff"></span>/&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L143">143</td>
+            <td class="gts-code"><code>		&lt;input type=&#34;text&#34; name=&#34;query&#34; value=&#34;&#34; size=&#34;12&#34; /&gt;&lt;br <span class="idiff">id=&#34;full-text-search-separator&#34; </span>/&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L144">144</td>
+            <td class="linenum L144">144</td>
+            <td class="gts-code"><code>		&lt;input type=&#34;submit&#34; value=&#34;Full text search&#34; /&gt;&lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L145">145</td>
+            <td class="linenum L145">145</td>
+            <td class="gts-code"><code>	    &lt;/form&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L146">146</td>
+            <td class="linenum L146">146</td>
+            <td class="gts-code"><code>	  &lt;/div&gt;</code></td>
+          </tr>
+
+    </table>
+  </div>
+</div>
+
+      <div class="gts-file" id="AmuseWiki/views/postform.tt">
+  <ul class="breadcrumb">
+    <li class="gts-diff-summary">
+      <a href="/amuse-wiki/amuse-wiki/source/7a5893d48aec503f45552695adfae85ac97af1b1:AmuseWiki/views/postform.tt">
+        <i class="icon icon-file"></i>
+        <span class="gts-path">AmuseWiki/views/postform.tt</span>
+      </a>
+      (<span class="gts-diff-add">+16</span>/<span class="gts-diff-rm">-4</span>)
+    </li>
+  </ul>
+  <div class="gts-code-listing-wrapper">
+    <table class="gts-code-listing">
+                <tr class="gts-diff-unmod">
+            <td class="linenum L43">43</td>
+            <td class="linenum L43">43</td>
+            <td class="gts-code"><code>&lt;form action=&#34;&lt;%- upload_url  -%&gt;&#34; method=&#34;post&#34; enctype=&#34;multipart/form-data&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L44">44</td>
+            <td class="linenum L44">44</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L45">45</td>
+            <td class="linenum L45">45</td>
+            <td class="gts-code"><code>&lt;textarea rows=&#34;30&#34; cols=&#34;80&#34; id=&#34;hitme&#34; name=&#34;hitme&#34;&gt;&lt;/textarea&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L46">46</td>
+            <td class="gts-code"><code>&lt;/fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L47">47</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L46">46</td>
+            <td class="linenum L48">48</td>
+            <td class="gts-code"><code>&lt;h4&gt;The magic question&lt;/h4&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L47">47</td>
+            <td class="linenum L49">49</td>
+            <td class="gts-code"><code>&lt;div&gt;&lt;% settings.amusewiki_antispam_question  %&gt;&lt;br /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L48">48</td>
+            <td class="linenum L50">50</td>
+            <td class="gts-code"><code>&lt;input type=&#34;text&#34; name=&#34;magicquestion&#34; maxlength=&#34;30&#34;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L85">85</td>
+            <td class="linenum L85">85</td>
+            <td class="gts-code"><code>    centered and right-aligned paragraphs, indexing, nested lists and</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L86">86</td>
+            <td class="linenum L86">86</td>
+            <td class="gts-code"><code>    much, much more.</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L87">87</td>
+            <td class="linenum L87">87</td>
+            <td class="gts-code"><code>  &lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L88">88</td>
+            <td class="gts-code"><code>&lt;/fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L89">89</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L88">88</td>
+            <td class="linenum L90">90</td>
+            <td class="gts-code"><code>&lt;textarea rows=&#34;30&#34; cols=&#34;80&#34; id=&#34;maintextarea&#34; name=&#34;maintextarea&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L89">89</td>
+            <td class="linenum L91">91</td>
+            <td class="gts-code"><code>&lt;%- IF params.maintextarea %&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L90">90</td>
+            <td class="linenum L92">92</td>
+            <td class="gts-code"><code>&lt;% HTML.escape(params.maintextarea) %&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L109">109</td>
+            <td class="linenum L109">109</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L110">110</td>
+            <td class="linenum L110">110</td>
+            <td class="gts-code"><code>&lt;% END -%&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L111">111</td>
+            <td class="linenum L111">111</td>
+            <td class="gts-code"><code>&lt;/textarea&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L112">112</td>
+            <td class="gts-code"><code>&lt;/fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L113">113</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L114">114</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L112">112</td>
+            <td class="linenum L115">115</td>
+            <td class="gts-code"><code>&lt;p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L113">113</td>
+            <td class="linenum L116">116</td>
+            <td class="gts-code"><code>&lt;input type=&#34;checkbox&#34; name=&#34;notypography&#34;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L114">114</td>
+            <td class="linenum L117">117</td>
+            <td class="gts-code"><code>       &lt;%- IF params.notypography %&gt; checked=&#34;checked&#34;&lt;% END %&gt; /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L126">126</td>
+            <td class="linenum L126">126</td>
+            <td class="gts-code"><code>&lt;fieldset id=&#34;preview-or-commit&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L127">127</td>
+            <td class="linenum L127">127</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L128">128</td>
+            <td class="linenum L128">128</td>
+            <td class="gts-code"><code>&lt;p&gt;Please leave a message. It will be stored in the history of this page &lt;br /&gt;(max 500 characters, which is roughly 6 lines)&lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L129">129</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>&lt;textarea rows=&#34;3&#34; cols=&#34;<span class="idiff">8</span>0&#34; id=&#34;messagetolibs&#34; name=&#34;messagetolibs&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L129">129</td>
+            <td class="gts-code"><code>&lt;textarea rows=&#34;3&#34; cols=&#34;<span class="idiff">6</span>0&#34; id=&#34;messagetolibs&#34; name=&#34;messagetolibs&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L130">130</td>
+            <td class="linenum L130">130</td>
+            <td class="gts-code"><code>&lt;%- HTML.escape(params.messagetolibs) -%&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L131">131</td>
+            <td class="linenum L131">131</td>
+            <td class="gts-code"><code>&lt;/textarea&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L132">132</td>
+            <td class="gts-code"><code>&lt;/fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L133">133</td>
+            <td class="gts-code"><code>&lt;br /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L134">134</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L132">132</td>
+            <td class="linenum L135">135</td>
+            <td class="gts-code"><code>&lt;p&gt;Please give us a username. It should &lt;strong&gt;not&lt;/strong&gt; be a mail address. Just a fancy name, so we can know that multiple uploads come from the same person.</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L133">133</td>
+            <td class="linenum L136">136</td>
+            <td class="gts-code"><code>If you're wondering, we will not be able to contact you. It's up to you to make contact with us. LINKS HERE&lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L134">134</td>
+            <td class="linenum L137">137</td>
+            <td class="gts-code"><code>&lt;input type=&#34;text&#34; name=&#34;usernameforgit&#34; maxlength=&#34;30&#34;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L141">141</td>
+            <td class="linenum L141">141</td>
+            <td class="gts-code"><code>       value=&#34;&lt;% HTML.escape(params.usernameforgit) %&gt;&#34; /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L142">142</td>
+            <td class="linenum L142">142</td>
+            <td class="gts-code"><code>       &lt;%- END -%&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L143">143</td>
+            <td class="linenum L143">143</td>
+            <td class="gts-code"><code>&lt;br /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L144">144</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>&lt;<span class="idiff">label</span>&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L144">144</td>
+            <td class="gts-code"><code>&lt;<span class="idiff">/fieldset</span>&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L145">145</td>
+            <td class="gts-code"><code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L146">146</td>
+            <td class="gts-code"><code>&lt;p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L145">145</td>
+            <td class="linenum L147">147</td>
+            <td class="gts-code"><code>If you want to be contacted if there are problems in your submission, leave a mail address here. It's sent to the librarians and not stored in the history</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L148">148</td>
+            <td class="gts-code"><code>&lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L146">146</td>
+            <td class="linenum L149">149</td>
+            <td class="gts-code"><code>&lt;input type=&#34;text&#34; name=&#34;uploaderemail&#34; maxlength=&#34;100&#34;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L147">147</td>
+            <td class="linenum L150">150</td>
+            <td class="gts-code"><code>       value=&#34;&lt;% HTML.escape(params.uploaderemail) %&gt;&#34; /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L148">148</td>
+            <td class="linenum L151">151</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L149">149</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>&lt;/label&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L150">150</td>
+            <td class="linenum L152">152</td>
+            <td class="gts-code"><code>&lt;br /&gt;&lt;br /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L151">151</td>
+            <td class="linenum L153">153</td>
+            <td class="gts-code"><code>&lt;input type=&#34;submit&#34; name=&#34;preview&#34; value=&#34;Preview&#34; /&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L152">152</td>
+            <td class="linenum L154">154</td>
+            <td class="gts-code"><code>&lt;% IF canupload %&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-sepline">
+            <td class="linenum">…</td>
+            <td class="linenum">…</td>
+            <td class="gts-code"></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L455">455</td>
+            <td class="linenum L455">455</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L456">456</td>
+            <td class="linenum L456">456</td>
+            <td class="gts-code"><code>&lt;div&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L457">457</td>
+            <td class="linenum L457">457</td>
+            <td class="gts-code"><code></code></td>
+          </tr>
+          <tr class="gts-diff-rm">
+            <td class="linenum L458">458</td>
+            <td class="linenum"></td>
+            <td class="gts-code"><code>&lt;div id=&#34;<span class="idiff">toc</span>toggler&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-add">
+            <td class="linenum"></td>
+            <td class="linenum L458">458</td>
+            <td class="gts-code"><code>&lt;div id=&#34;<span class="idiff">cheat</span>toggler&#34;&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L459">459</td>
+            <td class="linenum L459">459</td>
+            <td class="gts-code"><code>    &lt;p id=&#34;toctooglerbutton&#34;&gt;&amp;nbsp;&lt;/p&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L460">460</td>
+            <td class="linenum L460">460</td>
+            <td class="gts-code"><code>&lt;/div&gt;</code></td>
+          </tr>
+          <tr class="gts-diff-unmod">
+            <td class="linenum L461">461</td>
+            <td class="linenum L461">461</td>
+            <td class="gts-code"><code>&lt;script type=&#34;text/javascript&#34;&gt;</code></td>
+          </tr>
+
+    </table>
+  </div>
+</div>
+
+  <br/>
+  <div class="gts-commit-comments"
+    data-gts-env-commit-comments-url="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1/comments.json"
+    data-gts-env-create-commit-comment-url="/amuse-wiki/amuse-wiki/commit/7a5893d48aec503f45552695adfae85ac97af1b1/comments.json"
+  >
+    
+  <h3 class="gts-legend">Comments</h3>
+<div class="comments-container"></div>
+
+<p class="comment-login-prompt">
+  <a href="/sessions/new">Login</a> or
+  <a href="/users/new">create an account</a> to post a comment.
+</p>
+
+
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="footer">
+      
+<div class="container">
+  <p class="pull-right gts-powered-by">
+    <a href="http://getgitorious.com">
+      <img alt="Powered by Gitorious" src="/assets/poweredby.png" title="Powered by Gitorious">
+    </a>
+  </p>
+  <div class="row-fluid">
+      <div class="span3">
+        <ul>
+          <li><a href="/about">About Gitorious</a></li>
+          <li><a href="http://groups.google.com/group/gitorious">Discussion group</a></li>
+          <li><a href="http://blog.gitorious.org">Blog</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <ul>
+          <li><a href="http://en.gitorious.org/tos">Terms of Service</a></li>
+          <li><a href="http://en.gitorious.org/privacy_policy">Privacy Policy</a></li>
+          <li><a href="http://gitorious.com">Professional Gitorious Services</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <ul>
+          <li><a href="http://en.gitorious.org/security">Security</a></li>
+        </ul>
+      </div>
+  </div>
+  <p>
+    Gitorious is free software licensed under
+    the <a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero
+      General Public License (AGPL)</a> unless noted otherwise.
+    GIT is a trademark of Software Freedom Conservancy and Gitorious' use of
+    "GIT" is under license.
+  </p>
+  <p class="gts-com-plug">
+    <a href="http://gitorious.com">Professional Gitorious services</a> - Git
+    hosting at your company, custom features, support and more.
+    <a href="http://gitorious.com">gitorious.com</a>.
+  </p>
+</div>
+
+    </div>
+    <script data-gts-env-user-view-state-path="/users/view_state.json"></script>
+      <script src="/dist/js/gitorious3.min.js?1407404048"></script>
+      <script src="/ui3/js/lib/jquery-ui/ui/jquery.ui.menu.js"></script>
+      <script src="/ui3/js/lib/jquery-ui/ui/jquery.ui.autocomplete.js"></script>
+      <script src="/ui3/js/lib/jquery-ui/ui/jquery.ui.datepicker.js"></script>
+      <script src="/assets/issues/application.js"></script>
+    <script src="/assets/application-eaceeb63db29f26f453ee8456e38c74a.js" type="text/javascript"></script>
+    
+    
+    <script>
+      $(function() { $('.alert').append('<a class="close" data-dismiss="alert" href="#">&times;</a>').alert(); });
+      gts.enableJS(document.documentElement);
+    </script>
+  </body>
+</html>

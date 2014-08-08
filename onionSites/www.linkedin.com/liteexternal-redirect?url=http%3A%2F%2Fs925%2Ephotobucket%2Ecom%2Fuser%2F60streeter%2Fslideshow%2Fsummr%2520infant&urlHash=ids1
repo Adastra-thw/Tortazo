@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head title="Redirecting...">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="pagekey" content="lite-external-redirect" />
+  <!--In order to pass referrer when users navigate from https to http, add meta referrer-->
+  <meta name="referrer" content="origin" />
+  <style type="text/css" media="screen">
+    body { backgrTound: #fff; color: #000; font: 13px Arial, Helvetica, "Nimbus Sans L", sans-serif; margin: 0; padding: 0 0 10px; text-align: center; }
+    h1 { border: 0; color: #9C9C9C; font-size: 24px; font-weight: normal; margin: 20px 0 0; padding: 0; }
+  </style>
+  
+</head>
+<body>
+
+
+  <h1>Redirecting...</h1>
+
+  
+  <script type="text/javascript">window.location.replace('http:\/\/s925.photobucket.com\/user\/60streeter\/slideshow\/summr%20infant');</script>
+  <noscript><meta http-equiv="Refresh" content="0;URL=http://s925.photobucket.com/user/60streeter/slideshow/summr%20infant"></noscript>
+
+  <p>If you are not automatically redirected, please <a id="manual_redirect_link" href="http://s925.photobucket.com/user/60streeter/slideshow/summr%20infant">click here</a></p>
+
+
+</body>
+</html>

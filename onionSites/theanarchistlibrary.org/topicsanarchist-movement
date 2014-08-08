@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-type" content="application/xhtml+xml; charset=utf-8" />
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/style.css" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="alternate" type="application/rss+xml" title="The Anarchist Library" href="http://theanarchistlibrary.org/rss.xml" />
+
+   
+   <script type="text/javascript"
+	   src="http://theanarchistlibrary.org/js/jquery.js"></script>
+   <script type="text/javascript" >
+    $(document).ready(function() {
+	$('a#sec-sub-menu').click(function() {
+	    $('ul#sec-nav-submenu').slideToggle('medium');
+	});
+    });
+   </script>
+   
+
+   <link rel="stylesheet" media="all" href="http://theanarchistlibrary.org/css/adaptive.css" />
+
+   
+   <title>
+     
+     anarchist movement | The Anarchist Library
+        </title>
+   
+ </head>
+ <body>
+   
+   <div id="secondary-menu">
+     <ul id="sec-men-ul">
+       <li><a href="/special/about"
+	      
+	      title="info and contacts">About</a>
+       </li>
+       <li>
+	 <a href="#" id="sec-sub-menu">Other languages</a>
+	 <ul id="sec-nav-submenu">
+	   <!--
+	   <li>
+	     <a href="http://theanarchistlibrary.org">English</a>
+	   </li>
+	   -->
+           <li>
+             <a href="http://mk.theanarchistlibrary.org">Македонски</a>
+           </li>
+	   <li>
+	     <a href="http://ru.theanarchistlibrary.org">Русский</a>
+	   </li>
+	   <li>
+	     <a href="http://anarhisticka-biblioteka.net/">Srpsko-hrvatski</a>
+	   </li>
+	   <li>
+	     <a href="http://fi.theanarchistlibrary.org">Suomi</a>
+	   </li>
+	   <li>
+	     <a href="http://es.theanarchistlibrary.org">Español</a>
+	   </li>
+	 </ul>
+       </li>
+       <li><a href="/special/distro" 
+	      
+	      title="distribution">Distro</a>
+       </li>
+       <li>
+	 <a href="http://bookshelf.theanarchistlibrary.org"
+	    title="general help, documentation, personal pages...">
+	   Wiki
+	 </a>
+       </li>
+       <li>
+	 <a href="/bookbuilder"
+	    
+	    title="Create custom PDFs (almost) on the fly">
+	   Book builder
+	 </a>
+       </li>
+       <li>
+	 <a href="/random">Random text</a>
+       </li>
+     </ul>
+   </div>
+    <div id="vwbanner">
+      <div id="wbanner">
+	<div id="banner">
+	  <div id="searchbox">
+	    <form id="formsearchbox" action="/search">
+	      <p id="searchp">
+		<input type="text" name="query" value="" size="12" /><br id="full-text-search-separator" />
+		<input type="submit" value="Full text search" /></p>
+	    </form>
+	  </div>
+	  <div id="bannerimage">
+	    <a title="The Anarchist Library" href="/">
+	      <img 
+		 title="Beneath the Library the stones, beneath the stones the beach!"
+		 alt="The Anarchist Library" src="/images/titlebanner.png"
+		 id="title-banner-img" />
+	    </a>
+	  </div>
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li><a href="/authors"
+		   
+		title="texts sorted by author">Authors</a></li>
+	    <li><a href="/library"
+		   
+		   title="texts sorted by title">Titles</a></li>
+	    <li><a href="/topics"
+		   id="current"
+		   title="texts sorted by topics">Topics</a></li>
+	    <li>
+	      
+	      <a href="/new"
+		   
+		   title="Add a new text to the library">
+		Add to Library
+	      </a>
+	      
+	    </li>
+	    <li>
+	      
+	    </li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div id="container">
+
+
+   
+   
+ <div id="widepage">
+     
+<h3 id="anarchist-movement">anarchist movement</h3>
+<ol>
+
+  <li>
+   <a href="/library/anonymous-a-difficult-subject">
+   A difficult subject
+   </a>
+  
+  
+      
+          (<a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/david-wieck-anarchism-anarchy-anarchists">
+   Anarchism, Anarchy, Anarchists
+   </a>
+  
+  
+      
+          (<a href="/authors/david-wieck">David Wieck</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/john-crump-the-anarchist-movement-in-japan-1906-1996">
+   The Anarchist Movement in Japan, 1906–1996
+   </a>
+  
+  
+      
+          (<a href="/authors/john-crump">John Crump</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anonymous-the-broken-teapot">
+   The Broken Teapot
+   </a>
+  
+  
+      
+      
+      
+      
+      
+          (<a href="/authors/alex-gorrion">Alex Gorrion</a>, <a href="/authors/angustia-celeste">Angustia Celeste</a>, <a href="/authors/anonymous">Anonymous</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/tasos-theofilou-concerning-the-trial">
+   Concerning The Trial
+   </a>
+  
+  
+      
+          (<a href="/authors/tasos-theofilou">Tasos Theofilou</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alkis-december-is-a-result-of-social-and-political-processes-going-back-many-years">
+   December is a result of social and political processes going back many years
+   </a>
+  
+  
+      
+          (<a href="/authors/alkis">Alkis</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/anti-system-cores-for-mass-struggle-and-subversion">
+   For Mass Struggle and Subversion
+   </a>
+  
+  
+      
+          (<a href="/authors/anti-system-cores">Anti-System Cores</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/gabriel-kuhn-the-meaning-of-anarchism">
+   The Meaning of Anarchism
+   </a>
+  
+  
+      
+          (<a href="/authors/gabriel-kuhn">Gabriel Kuhn</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/amberraekelly-prioritizing-kids-in-the-anarchist-community">
+   Prioritizing Kids in the Anarchist Community
+   </a>
+  
+  
+      
+          (<a href="/authors/amberraekelly">amberraekelly</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/erik-buelinckx-proudhon-s-influence-in-belgium-nationalism-and-culture">
+   Proudhon’s influence in Belgium: nationalism and culture
+   </a>
+  
+  
+      
+          (<a href="/authors/erik-buelinckx">Erik Buelinckx</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/various-authors-reply-by-several-russian-anarchists-to-the-platform">
+   Reply by several Russian Anarchists to the ‘Platform’
+   </a>
+  
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          (<a href="/authors/lia">Lia</a>, <a href="/authors/molly-steimer">Molly Steimer</a>, <a href="/authors/roman-ervantian">Roman Ervantian</a>, <a href="/authors/schwartz">Schwartz</a>, <a href="/authors/senya-fleshin">Senya Fleshin</a>, <a href="/authors/sobol">Sobol</a>, <a href="/authors/voline">Voline</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/m-dashar-the-revolutionary-movement-in-spain">
+   The Revolutionary Movement in Spain
+   </a>
+  
+  
+      
+          (<a href="/authors/m-dashar">M. Dashar</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/angela-beallor-sexism-in-the-anarchist-movement">
+   Sexism In The Anarchist Movement
+   </a>
+  
+  
+      
+          (<a href="/authors/angela-beallor">Angela Beallor</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alessio-l-the-spring-of-social-centres">
+   The Spring of Social Centres
+   </a>
+  
+  
+      
+          (<a href="/authors/alessio-l">Alessio L.</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/beggar-towards-the-creation-of-an-anarchist-movement-from-reactive-politics-to-proactive-strugg">
+   Towards the Creation of an Anarchist Movement: From Reactive Politics to Proactive Struggle
+   </a>
+  
+  
+      
+          (<a href="/authors/beggar">Beggar</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/shawn-hattingh-venezuela-and-the-bolivarian-revolution-beacon-of-hope-or-smoke-and-mirrors">
+   Venezuela and the “Bolivarian Revolution”: Beacon of hope or smoke and mirrors?
+   </a>
+  
+  
+      
+          (<a href="/authors/shawn-hattingh">Shawn Hattingh</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/editorial-collective-of-el-libertario-and-individual-anarchists-venezuela-now-more-than-ever">
+   Venezuela — Now more than ever
+   </a>
+  
+  
+      
+      
+      
+          (<a href="/authors/el-libertario">El Libertario</a>, <a href="/authors/various-authors">various authors</a>)
+   
+  </li>
+   
+  <li>
+   <a href="/library/alfredo-m-bonanno-why-insurrection">
+   Why Insurrection?
+   </a>
+  
+  
+      
+          (<a href="/authors/alfredo-m-bonanno">Alfredo M. Bonanno</a>)
+   
+  </li>
+   
+</ol>
+
+
+
+
+
+ </div>
+ <div id="footer">
+   <a href="/rss.xml">
+     <img src="/images/feed-icon-28x28.png" alt="syndicate" id="rssicon" />
+     RSS
+   </a>
+ </div>
+</div>
+</body>
+</html>

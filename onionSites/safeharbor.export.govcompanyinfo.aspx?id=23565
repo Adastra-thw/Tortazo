@@ -1,0 +1,144 @@
+
+<link rel="stylesheet" type="text/css" href="CSS/SH_Styles_Print.css" media="print"  /> 
+<link rel="stylesheet" type="text/css" href="CSS/sh_stylesheet.css" /> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Safe Harbor - Organization Information
+</title></head>
+<body>
+    <form name="form1" method="post" action="companyinfo.aspx?id=23565" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="USJ4aJrFD9wkIayKq42UozJAd3YgJX1O8PKV6LxMyDTVbMhp5bOb3JYWBBnIzcDxbevo3TxEU0WaVSaqe1cwHUEWkhnwgOsiTnb3QvJ06eMK7pZo5AMa98AroXM=" />
+</div>
+        <div style="text-align:right;">
+            <input type="submit" name="ctl01" value="Print" onclick="window.print();" class="donotshow" />
+            
+        </div>
+      
+        <span id="lblContent1" class="heading">Organization Information:</span>
+        <br/>
+        <img src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+
+        <span id="lblOrgName" style="display:inline-block;border-width:0px;">3Cinteractive, LLC</span><br />
+        <span id="lbladdress" title="750 Park of Commerce Blvd., Ste 400" style="display:inline-block;border-width:0px;">750 Park of Commerce Blvd., Ste 400</span><br />
+        <span id="lblcity" style="display:inline-block;border-width:0px;">Boca Raton</span>,
+        <span id="lblstate" style="display:inline-block;border-width:0px;">Florida</span>-
+        <span id="lblzip" style="display:inline-block;border-width:0px;">33487</span><br />        
+        Phone: <span id="lblPhone" style="display:inline-block;border-width:0px;">561-443-5505</span><br />
+        Fax: <span id="lblFax" style="display:inline-block;border-width:0px;">561-443-5506</span><br />
+        <a id="hplinkwebsite" href="http://www.3cinteractive.com" target="_blank">www.3cinteractive.com</a>
+        <br /><br />
+        <span id="lblContent2" class="heading">Organization Contact:</span>        
+        <br />
+        <img id="Image1" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcontactoff">Contact Office:</span>
+        <span id="lblcontactoff1">3Cinteractive</span><br />
+        <span id="lblcontactname">Name:</span>
+        <span id="lblcontactname1">John Ceraolo</span>
+        , <span id="lblcontacttitle1">Chief Security Officer</span><br />
+        <span id="lblcontactphone">Phone:</span>
+        <span id="lblcontactphone1">561-886-4818</span><br />
+        <span id="lblcontactfax">Fax:</span>
+        <span id="lblcontactfax1">561-443-5506</span><br />
+        <span id="lblcontactemail">Email:</span>
+        <span id="lblcontactemail1">jceraolo@3cinteractive.com</span><br />
+        <br/>
+        <span id="lblContent3" class="heading">Corporate Officer:</span>
+        <br />
+        <img id="Image2" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br />
+        <span id="lblcorpoffname">Corporate Officer:</span>
+        <span id="lblcorpoffname1">Mark Smith</span>
+        , <span id="lblcorpofftitle1">COO</span><br />
+        <span id="lblcorpoffphone">Phone:</span>
+        <span id="lblcorpoffphone1">561-443-5505</span><br />
+        <span id="lblcorpofffax">Fax:</span>
+        <span id="lblcorpofffax1">561-443-5506</span><br />
+        <span id="lblcorpoffemail">Email:</span>
+        <span id="lblcorpoffemail1">msmith@3cinteractive.com</span>
+        
+        <br /><br />
+        <span id="lblContent4" class="heading">Safe Harbor Information:</span>
+        <br />
+        <img id="Image3" src="images/line.jpg" style="width:50%;border-width:0px;" />        
+        <br /><br />
+        
+        <span id="lblContent5_13">Certification Status: </span>    
+        <span id="lblCertificationStatus" style="color:Black;">Current</span>     
+        <br />                   
+        <span id="lblsignup">Original Certification: </span>
+        <span id="lblsignupdate">7/20/2011</span>
+        <br />
+        <span id="Label1">Next Certification: </span>
+        <span id="lblnextcertification">7/20/2015</span>
+        <br /><br />
+        <span id="lblContent4_1">Personal Information Received from the EU/EEA and/or Switzerland:</span><br />
+        <span id="lblactivities" style="display:inline-block;border-style:None;width:780px;">Mobile application service provider:
+
+3Cinteractive may collect various types of personal information including name, address,telephone number, credit card number or other billing information, email address, and other information that, either alone or in combination with other kinds of information, may personally
+identify Customers or Users. 3Cinteractive may collect personally identifiable information from Customers or Users in a variety of ways, including through online forms for ordering products and services, and other instances where Customers or Users are invited to volunteer such information. 3Cinteractive may also collect information about how Customers or Users use our Website. While not all of the information that we collect from Customers or Users is personally identifiable, it may be associated with personally identifiable information provided to us through
+our Website.</span>
+        <br />
+        <span id="lblContent5_1">Privacy Policy Effective: </span>        
+        <span id="lblppdate">4/1/2014</span>        
+        <br />                                                                                                      
+        <span id="lblContent5_2">Location: </span>        
+        
+        <span id="lblPPLoc"><a href ='http://www.3cinteractive.com/Privacy/' target=_blank>http://www.3cinteractive.com/Privacy/</a> </span>
+        
+        <br />                
+        
+                          
+        <br />
+        <span id="lblContent5_4">Regulated By: </span>
+        <span id="lblstatutorybody">Federal Trade Commission</span>
+        
+        <br /><br />
+        <span id="lblContent5_5">Privacy Programs: </span>
+        <br />
+        <span id="lblprivacyprograms" style="display:inline-block;border-style:None;width:780px;">TRUSTe Privacy Seal</span>
+        <br /><br />
+        <span id="lblContent5_6">Verification: </span>
+        <span id="lblorgverification">Third Party/TRUSTe</span>
+        <br /><br />
+        <span id="lblContent5_7">Dispute Resolution: </span>
+        <br />        
+        <span id="lblrecoursemech" style="display:inline-block;border-style:None;width:780px;">TRUSTe</span>
+        <br /><br />
+        <span id="lblContent5_8">Personal Data Covered: </span>                
+        <span id="lblpersonaldata">Personal identifiable information, UID</span>
+        <br />
+        <span id="lblContent5_9">Organization Human Resource Data Covered: </span>        
+        <span id="lblhrdata">No</span>        
+        <br />
+        <span id="lblContent5_10">Agrees to Cooperate and Comply with the EU and/or Swiss Data Protection Authorities: </span>        
+        <span id="lbleuprotection">No</span>                
+        <br /><br />
+        <span id="lblContent5_11">Relevant Countries from which Personal Information is Received: </span>        
+        <br />
+        <span id="lbleucountries">Sweden, United Kingdom</span>
+        <br /><br />
+        <span id="lblContent5_12">Industry Sectors: </span><br />
+        <span id="lblindustrysector">Computer Software - (CSF)<br />Telecommunications Services - (TES)<br /></span>        
+        <br />
+                
+                        
+
+        
+    </form>
+</body>
+</html>
+
+
+
