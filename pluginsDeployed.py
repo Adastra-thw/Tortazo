@@ -22,6 +22,7 @@ plugins = {
 
                    #ATTACK PLUGINS.
                    "heartBleed"    : "plugins.attack.heartBleedPlugin.heartBleedPlugin",
+                   "hiddenService" : "plugins.attack.maliciousHiddenServicePlugin.maliciousHiddenServicePlugin",
 
                    #BRUTERFORCE PLUGINS.
                    "bruter"    : "plugins.bruteforce.bruterPlugin.bruterPlugin"

@@ -1,0 +1,5 @@
+sudo javac Gifar.java
+sudo jar -cf Gifar.jar Gifar.class
+sudo cat troll.jpg Gifar.jar > GifarImage.gif
+sudo keytool -genkey -alias Tortazov11 -validity 365 -v
+sudo jarsigner Gifar.jar Tortazov11 -verbose

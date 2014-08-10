@@ -28,11 +28,13 @@ However, if you want to use the development version located in the GIT repositor
 * IPython: http://ipython.org/
 * PyNessus-rest: https://github.com/Adastra-thw/pynessus-rest
 * PySNMP: http://pysnmp.sourceforge.net/
-* topia.termextract: https://pypi.python.org/pypi/topia.termextract/
+* IRLib: https://github.com/gr33ndata/irlib
 * Jinja2: http://jinja.pocoo.org/docs/intro/
 * BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
 * Scrapy: http://scrapy.org/
 * PyFiglet: https://github.com/pwaller/pyfiglet
+* Twisted: https://twistedmatrix.com/trac/
+* Txtorcon: https://txtorcon.readthedocs.org/
 
 =================
 Other Dependencies    

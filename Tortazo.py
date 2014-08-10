@@ -102,6 +102,7 @@ class Cli(cli.Application):
     mode = None
     runCommand = None
     pluginManagement = None
+    pluginArguments =  None
     torLocalInstance = None
     scanIdentifier = None
     workerThreads = 10
@@ -176,12 +177,21 @@ class Cli(cli.Application):
         '''
         self.runCommand = runCommand
 
-    @cli.switch(["-P", "--use-plugin"], str, help='Execute a plugin (or list) included in the plugins directory. for instance: "-P simplePlugin:simplePrinter,argName1=arg1,argName2=arg2,argNameN=argN;anotherSimplePlugin:anotherSimpleExecutor,argName1=arg1,argName2=arg2,argNameN=argN" where simplePlugin is the module, simplePrinter is a class which inherites from BasePlugin class and argName1=argValue1,argName2=argValue2,argNameN=argValueN are arguments used for this plugin. Multiple plugins should be separated by ";" and you can get the help banner for a plugin executing "pluginName:help". Check the documentation for more detailed information')
+    @cli.switch(["-P", "--use-plugin"], str, help='Execute a plugin. To see the available plugins, execute Tortazo with switch -L / --list-plugins')
     def plugin_management(self, pluginManagement):
         '''
         Plugin Management.
         '''
         self.pluginManagement = pluginManagement
+
+    @cli.switch(["-A", "--plugin-arguments"], str, requires=["--use-plugin"],  help='Args to execute the specified plugin with the switch -P / --use-plugin. List of key/value pairs separated by colon. Example= nessusHost=127.0.0.1,nessusPort=8843,nessusUser=adastra,nessusPassword=adastra')
+    def plugin_arguments(self, pluginArguments):
+        '''
+        Plugin Arguments.
+        '''
+        self.pluginArguments = pluginArguments
+
+
 
     @cli.switch(["-T", "--tor-localinstance"], str, help='Start a new local TOR instance with the "torrc" file specified. DO NOT RUN TORTAZO WITH THIS OPTION AS ROOT!')
     def tor_localinstance(self, torLocalInstance):
@@ -435,7 +445,7 @@ class Cli(cli.Application):
 
                 #Check if there's any plugin to execute!
                 if self.pluginManagement != None:
-                    self.loadAndExecute(self.pluginManagement, self.exitNodes)
+                    self.loadAndExecute(self.pluginManagement, self.exitNodes, self.pluginArguments)
 
         #If TOR process has been started, it should be stopped.
         if hasattr(self, 'torProcess') and self.torProcess is not None:
@@ -443,12 +453,19 @@ class Cli(cli.Application):
             self.torProcess.kill()
         self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
 
-    def loadAndExecute(self, listPlugins, torNodesFound):
-        #simplePlugin:simplePrinter
+    def loadAndExecute(self, listPlugins, torNodesFound, pluginArguments=None):
         if listPlugins is None:
             self.logger.warn((term.format("[-] You should specify a plugin with the option -P/--use-plugin", term.Color.YELLOW)))
             return
         try:
+            pluginArgs = {}
+            if pluginArguments != None:
+                arguments = pluginArguments.split(',')
+                for argument in arguments:
+                    key, value = argument.split('=')
+                    print key, value
+                    pluginArgs[key] = value
+
             import pluginsDeployed
             self.logger.debug((term.format("[+] Loading plugin...", term.Color.GREEN)))
 
@@ -464,6 +481,7 @@ class Cli(cli.Application):
                     self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
                     reference = module(torNodesFound)
                     reference.serviceConnector.setSocksProxySettings(self.socksHost, self.socksPort)
+                    reference.setPluginArguments(pluginArgs)
                     reference.serviceConnector.cli = self
                     reference.cli = self
                 else:
@@ -472,6 +490,7 @@ class Cli(cli.Application):
                     self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
                     reference = module(torNodesFound)
                     reference.serviceConnector.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
+                    reference.setPluginArguments(pluginArgs)
                     reference.serviceConnector.cli = self
                     reference.cli = self
                 reference.runPlugin()

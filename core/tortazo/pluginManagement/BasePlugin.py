@@ -107,6 +107,9 @@ class BasePlugin():
         self.version = version
         self.author = author
 
+    def setPluginArguments(self, pluginArguments):
+        self.pluginArguments = pluginArguments
+
 
     def help(self):
         pass
