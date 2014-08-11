@@ -43,7 +43,11 @@ class niktoPlugin(BasePlugin):
                 if len(openPorts) > 0:
                     self.niktoData[torNode.host] = openPorts
             print self.niktoData
-
+            self.validPluginArgs= []
+            
+    def processPluginArguments(self):
+        pass
+    
     def executeByIP(self, ipAddress, switches):
         if self.niktoData.has_key(ipAddress) == False:
             print "[-] IP Adress %s not found in the relays" %(ipAddress)

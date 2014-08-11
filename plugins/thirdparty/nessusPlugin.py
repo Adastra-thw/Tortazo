@@ -42,8 +42,11 @@ class nessusPlugin(BasePlugin):
             self.nessusClient = NessusClient(config.nessusHost, config.nessusPort)
             self.nessusClient.login(config.nessusUser, config.nessusPass)
             self.info("[*] NessusPlugin Initialized!")
+        self.validPluginArgs= ["nessusUser", "nessusPassword", "nessusHost", "nessusPort"]
 
 
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -55,97 +58,114 @@ class nessusPlugin(BasePlugin):
         nessusConverter.feedToStructure()
 
         print "[*] Basic Feed Information"
-        tableBasicFeed = PrettyTable(["Feed", "Plugin Rules", "Expiration", "UI Version", "Server Version", "WebServer Version"])
-        tableBasicFeed.padding_width = 1
-        tableBasicFeed.add_row([nessusConverter.nessusStructure.feed.feed,
-                                nessusConverter.nessusStructure.feed.pluginRules,
-                                nessusConverter.nessusStructure.feed.expiration,
-                                nessusConverter.nessusStructure.feed.uiVersion,
-                                nessusConverter.nessusStructure.feed.serverVersion,
-                                nessusConverter.nessusStructure.feed.webServerVersion])
-        print tableBasicFeed
+        tableBasicFeed = Texttable()
+        tableBasicFeed.set_cols_align(["l", "l", "l", "l", "l", "l"])
+        tableBasicFeed.set_cols_valign(["m", "m", "m","m", "m", "m"])
+        tableBasicFeed.set_cols_width([40,55,55,55,55,55])
+        rows = [["Feed", "Plugin Rules", "Expiration", "UI Version", "Server Version", "WebServer Version"],
+                [nessusConverter.nessusStructure.feed.feed, nessusConverter.nessusStructure.feed.pluginRules,nessusConverter.nessusStructure.feed.expiration,
+                 nessusConverter.nessusStructure.feed.uiVersion,nessusConverter.nessusStructure.feed.serverVersion, nessusConverter.nessusStructure.feed.webServerVersion]]
+        tableBasicFeed.add_rows(rows)
+        print tableBasicFeed.draw()+"\n"
+        
         print "\n[*] Other Information"
-        tableOtherFeed = PrettyTable(["Nessus Type", "Diff","Expiration Time","Report Email", "Tags", "MSP", "Multi-Scanner","Loaded PluginSet"])
-        tableOtherFeed.padding_width = 1
-        tableOtherFeed.add_row([nessusConverter.nessusStructure.feed.nessusType,
-                                nessusConverter.nessusStructure.feed.diff,
-                                nessusConverter.nessusStructure.feed.expirationTime,
-                                nessusConverter.nessusStructure.feed.reportEmail,
-                                nessusConverter.nessusStructure.feed.tags,
-                                nessusConverter.nessusStructure.feed.msp,
-                                nessusConverter.nessusStructure.feed.multiScanner,
-                                nessusConverter.nessusStructure.feed.loadedPluginSet])
-        print tableOtherFeed
+        tableOtherFeed = Texttable()
+        tableOtherFeed.set_cols_align(["l", "l", "l", "l", "l", "l", "l", "l"])
+        tableOtherFeed.set_cols_valign(["m", "m", "m","m", "m", "m","m","m"])
+        tableOtherFeed.set_cols_width([40,55,55,55,55,55,55,55])
+        rowsOther = [["Nessus Type", "Diff","Expiration Time","Report Email", "Tags", "MSP", "Multi-Scanner","Loaded PluginSet"],
+                [nessusConverter.nessusStructure.feed.nessusType, nessusConverter.nessusStructure.feed.diff,nessusConverter.nessusStructure.feed.expirationTime,
+                 nessusConverter.nessusStructure.feed.reportEmail, nessusConverter.nessusStructure.feed.tags, nessusConverter.nessusStructure.feed.msp,
+                 nessusConverter.nessusStructure.feed.multiScanner, nessusConverter.nessusStructure.feed.loadedPluginSet]
+                ]
+        tableOtherFeed.add_rows(rowsOther)
+        print tableOtherFeed.draw()+"\n"
 
     def serverSecureSettingsList(self):
         nessusConverter = NessusConverter(self.nessusClient.securesettingsList(method="POST"))
         nessusConverter.secureSettingsListToStructure()
 
         print "[*] Nessus Secure Settings"
-
-        tableNessusSecureSettings = PrettyTable(["Proxy Password", "Proxy Port", "Custom Host", "Proxy Username", "User Agent", "Proxy"])
-        tableNessusSecureSettings.padding_width = 1
-        tableNessusSecureSettings.add_row([nessusConverter.nessusStructure.secureSettings.proxyPassword,
-                                nessusConverter.nessusStructure.secureSettings.proxyPort,
-                                nessusConverter.nessusStructure.secureSettings.customHost,
-                                nessusConverter.nessusStructure.secureSettings.proxyUserName,
-                                nessusConverter.nessusStructure.secureSettings.userAgent,
-                                nessusConverter.nessusStructure.secureSettings.proxy])
-        print tableNessusSecureSettings
+        tableNessusSecureSettings = Texttable()
+        tableNessusSecureSettings.set_cols_align(["l", "l", "l", "l", "l", "l"])
+        tableNessusSecureSettings.set_cols_valign(["m", "m", "m", "m", "m", "m"])
+        tableNessusSecureSettings.set_cols_width([40,55,55,55,55,55])
+        
+        rows = [["Proxy Password", "Proxy Port", "Custom Host", "Proxy Username", "User Agent", "Proxy"],
+                [nessusConverter.nessusStructure.secureSettings.proxyPassword, nessusConverter.nessusStructure.secureSettings.proxyPort,
+                 nessusConverter.nessusStructure.secureSettings.customHost,nessusConverter.nessusStructure.secureSettings.proxyUserName,
+                 nessusConverter.nessusStructure.secureSettings.userAgent,nessusConverter.nessusStructure.secureSettings.proxy]
+                ]
+        tableNessusSecureSettings.add_rows(rows)
+        print tableNessusSecureSettings.draw()+"\n"
 
     def serverSecureSettings(self):
         nessusConverter = NessusConverter(self.nessusClient.securesettings())
         nessusConverter.secureSettingsListToStructure()
         print "[*] Nessus Secure Settings Updated"
-        tableNessusSecureSettings = PrettyTable(["Preferences"])
-        tableNessusSecureSettings.padding_width = 1
-        tableNessusSecureSettings.add_row([nessusConverter.nessusStructure.secureSettings.preferences])
-        print tableNessusSecureSettings
+        tableNessusSecureSettings = Texttable()
+        tableNessusSecureSettings.set_cols_align(["l"])
+        tableNessusSecureSettings.set_cols_valign(["m"])
+        tableNessusSecureSettings.set_cols_width([55])
+        rows [["Preferences"],[nessusConverter.nessusStructure.secureSettings.preferences]]
+        tableNessusSecureSettings.add_rows(rows)
+        print tableNessusSecureSettings.draw()+"\n"
 
     def serverUpdate(self):
         nessusConverter = NessusConverter(self.nessusClient.serverUpdate())
         nessusConverter.serverUpdateToStructure()
 
         print "[*] Server Update"
-        tableNessusSecureSettings = PrettyTable(["Server Update"])
-        tableNessusSecureSettings.padding_width = 1
-        tableNessusSecureSettings.add_row([nessusConverter.nessusStructure.serverUpdate])
-        print tableNessusSecureSettings
+        tableNessusServerUpdate = Texttable()
+        tableNessusServerUpdate.set_cols_align(["l"])
+        tableNessusServerUpdate.set_cols_valign(["m"])
+        tableNessusServerUpdate.set_cols_width([55])
+        rows = [["Server Update"],[nessusConverter.nessusStructure.serverUpdate]]
+        tableNessusServerUpdate.add_rows(rows)
+        print tableNessusServerUpdate.draw()+"\n"
 
     def serverRegister(self, nessusCode):
         nessusConverter = NessusConverter(self.nessusClient.serverRegister(nessusCode))
         nessusConverter.serverUpdateToStructure()
 
         print "[*] Server Register"
-        tableNessusServerRegister = PrettyTable(["Server Register"])
-        tableNessusServerRegister.padding_width = 1
-        tableNessusServerRegister.add_row([nessusConverter.nessusStructure.serverRegistration])
-        print tableNessusServerRegister
+        tableNessusServerRegister = Texttable()
+        tableNessusServerRegister.set_cols_align(["l"])
+        tableNessusServerRegister.set_cols_valign(["m"])
+        tableNessusServerRegister.set_cols_width([55])
+        rows = [["Server Register"],[nessusConverter.nessusStructure.serverRegistration]]
+        tableNessusServerRegister.add_rows(rows)
+        print tableNessusServerRegister.draw()+"\n"
 
     def serverLoad(self):
         nessusConverter = NessusConverter(self.nessusClient.serverLoad(method="POST"))
         nessusConverter.serverLoadToStructure()
 
         print "[*] Server Load"
-        tableNessusServerLoad = PrettyTable(["Scans", "Sessions","Hosts","TCP Sessions", "Load AVG", "Platform"])
-        tableNessusServerLoad.padding_width = 1
-        tableNessusServerLoad.add_row([nessusConverter.nessusStructure.serverLoad.numScans,
-                                       nessusConverter.nessusStructure.serverLoad.numSessions,
-                                       nessusConverter.nessusStructure.serverLoad.numHosts,
-                                       nessusConverter.nessusStructure.serverLoad.numTcpSessions,
-                                       nessusConverter.nessusStructure.serverLoad.loadAvg,
-                                       nessusConverter.nessusStructure.serverLoad.platform])
-        print tableNessusServerLoad
+        tableNessusServerLoad = Texttable()
+        tableNessusServerLoad.set_cols_align(["l","l","l","l","l","l"])
+        tableNessusServerLoad.set_cols_valign(["m","m","m","m","m","m"])
+        tableNessusServerLoad.set_cols_width([55,55,55,55,55,55])
+        rows = [["Scans", "Sessions","Hosts","TCP Sessions", "Load AVG", "Platform"],
+                [nessusConverter.nessusStructure.serverLoad.numScans,nessusConverter.nessusStructure.serverLoad.numSessions,
+                 nessusConverter.nessusStructure.serverLoad.numHosts,nessusConverter.nessusStructure.serverLoad.numTcpSessions,
+                 nessusConverter.nessusStructure.serverLoad.loadAvg,nessusConverter.nessusStructure.serverLoad.platform]
+               ]
+        tableNessusServerLoad.add_rows(rows)
+        print tableNessusServerLoad.draw()+"\n"
 
 
     def serverUuid(self):
         nessusConverter = NessusConverter(self.nessusClient.serverUuid())
         nessusConverter.serverUuidToStructure()
 
-        tableUuid = PrettyTable(["UUID"])
-        tableUuid.padding_width = 1
-        tableUuid.add_row([nessusConverter.nessusStructure.uuid])
-        print tableUuid
+        tableNessusServerUuid = Texttable()
+        tableNessusServerUuid.set_cols_align(["l"])
+        tableNessusServerUuid.set_cols_valign(["m"])
+        tableNessusServerUuid.set_cols_width([55])
+        rows = [["UUID"],[nessusConverter.nessusStructure.uuid]]
+        tableNessusServerUuid.add_rows(rows)
+        print tableNessusServerUuid.draw()+"\n"
 
     def userAdd(self, userName, password, admin=1):
         administrator = False
@@ -155,13 +175,17 @@ class nessusPlugin(BasePlugin):
         nessusConverter.userToStructure()
 
         print "[*] User Created"
-        tableUsers = PrettyTable(["Name", "Admin", "Idx", "Last-Login"])
-        tableUsers.padding_width = 1
-        tableUsers.add_row([nessusConverter.nessusStructure.nessusUser.name,
-                            nessusConverter.nessusStructure.nessusUser.admin,
-                            nessusConverter.nessusStructure.nessusUser.idx,
-                            nessusConverter.nessusStructure.nessusUser.lastLogin])
-        print tableUsers
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l","l","l"])
+        tableUsers.set_cols_valign(["m","m","m","m"])
+        tableUsers.set_cols_width([55,55,55,55])
+        
+        rows = [["Name", "Admin", "Idx", "Last-Login"],
+                [nessusConverter.nessusStructure.nessusUser.name,nessusConverter.nessusStructure.nessusUser.admin,
+                 nessusConverter.nessusStructure.nessusUser.idx,nessusConverter.nessusStructure.nessusUser.lastLogin]
+               ]
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
     def userEdit(self, userName, password, admin=1):
         administrator = False
@@ -171,50 +195,70 @@ class nessusPlugin(BasePlugin):
         nessusConverter.userToStructure()
 
         print "[*] User Edited"
-        tableUsers = PrettyTable(["Name", "Admin", "Idx", "Last-Login"])
-        tableUsers.padding_width = 1
-        tableUsers.add_row([nessusConverter.nessusStructure.nessusUser.name,
-                            nessusConverter.nessusStructure.nessusUser.admin,
-                            nessusConverter.nessusStructure.nessusUser.idx,
-                            nessusConverter.nessusStructure.nessusUser.lastLogin])
-        print tableUsers
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l","l","l"])
+        tableUsers.set_cols_valign(["m","m","m","m"])
+        tableUsers.set_cols_width([55,55,55,55])
+        rows = [["Name", "Admin", "Idx", "Last-Login"],
+                [nessusConverter.nessusStructure.nessusUser.name,
+                 nessusConverter.nessusStructure.nessusUser.admin,
+                 nessusConverter.nessusStructure.nessusUser.idx,
+                 nessusConverter.nessusStructure.nessusUser.lastLogin]
+               ]
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
     def userDelete(self, userName):
         nessusConverter = NessusConverter(self.nessusClient.usersDelete(userName))
         nessusConverter.userToStructure()
 
         print "[*] User Removed"
-        tableUsers = PrettyTable(["Name", "Admin", "Idx", "Last-Login"])
-        tableUsers.padding_width = 1
-        tableUsers.add_row([nessusConverter.nessusStructure.nessusUser.name,
-                            nessusConverter.nessusStructure.nessusUser.admin,
-                            nessusConverter.nessusStructure.nessusUser.idx,
-                            nessusConverter.nessusStructure.nessusUser.lastLogin])
-        print tableUsers
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l","l","l"])
+        tableUsers.set_cols_valign(["m","m","m","m"])
+        tableUsers.set_cols_width([55,55,55,55])
+        rows = [["Name", "Admin", "Idx", "Last-Login"],
+                [nessusConverter.nessusStructure.nessusUser.name,
+                 nessusConverter.nessusStructure.nessusUser.admin,
+                 nessusConverter.nessusStructure.nessusUser.idx,
+                 nessusConverter.nessusStructure.nessusUser.lastLogin]
+               ]
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
     def userChpasswd(self, userName, password):
         nessusConverter = NessusConverter(self.nessusClient.usersChpasswd(userName,password))
         nessusConverter.userToStructure()
 
         print "[*] User Password Changed"
-        tableUsers = PrettyTable(["Name", "Admin", "Idx", "Last-Login"])
-        tableUsers.padding_width = 1
-        tableUsers.add_row([nessusConverter.nessusStructure.nessusUser.name,
-                            nessusConverter.nessusStructure.nessusUser.admin,
-                            nessusConverter.nessusStructure.nessusUser.idx,
-                            nessusConverter.nessusStructure.nessusUser.lastLogin])
-        print tableUsers
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l","l","l"])
+        tableUsers.set_cols_valign(["m","m","m","m"])
+        tableUsers.set_cols_width([55,55,55,55])
+        rows = [["Name", "Admin", "Idx", "Last-Login"],
+                [nessusConverter.nessusStructure.nessusUser.name,
+                 nessusConverter.nessusStructure.nessusUser.admin,
+                 nessusConverter.nessusStructure.nessusUser.idx,
+                 nessusConverter.nessusStructure.nessusUser.lastLogin]
+               ]
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
     def usersList(self):
         nessusConverter = NessusConverter(self.nessusClient.usersList())
         nessusConverter.userToStructure()
 
         print "[*] User List"
-        tableUsers = PrettyTable(["Name", "Admin", "Idx", "Last-Login"])
-        tableUsers.padding_width = 1
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l","l","l"])
+        tableUsers.set_cols_valign(["m","m","m","m"])
+        tableUsers.set_cols_width([55,55,55,55])
+        rows = [["Name", "Admin", "Idx", "Last-Login"]]
+                
         for nessusUser in nessusConverter.nessusStructure.nessusUsers:
-            tableUsers.add_row([nessusUser.name,nessusUser.admin,nessusUser.idx,nessusUser.lastLogin])
-        print tableUsers
+            rows.append([nessusUser.name,nessusUser.admin,nessusUser.idx,nessusUser.lastLogin])
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
 
     def pluginsList(self):
@@ -222,49 +266,75 @@ class nessusPlugin(BasePlugin):
         nessusConverter.pluginsListToStructure()
 
         print "[*] Plugins List"
-        tablePlugins = PrettyTable(["Family Member", "Family Name"])
-        tablePlugins.padding_width = 1
+        tableUsers = Texttable()
+        tableUsers.set_cols_align(["l","l"])
+        tableUsers.set_cols_valign(["m","m"])
+        tableUsers.set_cols_width([55,55])
+        
+        rows = [["Family Member", "Family Name"]]
         for nessusPlugin in nessusConverter.nessusStructure.pluginsList:
-            tablePlugins.add_row([nessusPlugin.familyMembers, nessusPlugin.familyName])
-        print tablePlugins
+            rows.append([nessusPlugin.familyMembers, nessusPlugin.familyName])
+        tableUsers.add_rows(rows)
+        print tableUsers.draw()+"\n"
 
     def pluginAttributesList(self):
         nessusConverter = NessusConverter(self.nessusClient.pluginsAttributesList())
         nessusConverter.pluginsAttributesToStructure()
         print "[*] Plugins Attributes List"
-        tablePluginsAttributes = PrettyTable(["Readable Name", 'Readable Regex', 'List'])
+        tablePluginsAttributes = Texttable()
+        tablePluginsAttributes.set_cols_align(["l","l","l"])
+        tablePluginsAttributes.set_cols_valign(["m","m","m"])
+        tablePluginsAttributes.set_cols_width([55,55,55])
+        
+        rows = [["Readable Name", 'Readable Regex', 'List']]
+        
         for pluginsAttribute in nessusConverter.nessusStructure.pluginsAttributes:
-            tablePluginsAttributes.add_row([pluginsAttribute.readableName, pluginsAttribute.control.readableRegex,
-                                            pluginsAttribute.control.list ])
-
-        print tablePluginsAttributes
+            rows.append([pluginsAttribute.readableName, pluginsAttribute.control.readableRegex,pluginsAttribute.control.list])
+        tablePluginsAttributes.add_rows(rows)
+        print tablePluginsAttributes.draw()+"\n"
 
     def pluginListsFamily(self, familyName):
         nessusConverter = NessusConverter(self.nessusClient.pluginsListFamily(familyName))
         nessusConverter.pluginListFamilyToStructure()
         print "[*] Plugins List Family"
-        tablePluginsListFamily = PrettyTable(["Plugin ID", "Plugin Name", "Plugin Family", 'Plugin FileName'])
+        tablePluginsListFamily = Texttable()
+        tablePluginsListFamily.set_cols_align(["l","l","l","l"])
+        tablePluginsListFamily.set_cols_valign(["m","m","m","m"])
+        tablePluginsListFamily.set_cols_width([55,55,55,55])
+
+
+        rows = [["Plugin ID", "Plugin Name", "Plugin Family", 'Plugin FileName']]
         for pluginFamily in nessusConverter.nessusStructure.pluginsListFamily:
-            tablePluginsListFamily.add_row([pluginFamily.pluginId,
-                                            pluginFamily.pluginName,
-                                            pluginFamily.pluginFamily,
-                                            pluginFamily.pluginFileName])
-        print tablePluginsListFamily
+            rows.append([pluginFamily.pluginId,pluginFamily.pluginName,pluginFamily.pluginFamily,pluginFamily.pluginFileName])
+        tablePluginsListFamily.add_rows(rows)
+        print tablePluginsListFamily.draw()+"\n"
 
     def pluginDescription(self, fileNamePlugin):
         nessusConverter = NessusConverter(self.nessusClient.pluginsDescription(fileNamePlugin))
         nessusConverter.pluginsDescriptionToStructure()
         print "[*] Plugin Description"
-        tablePluginDescription = PrettyTable(["Plugin ID", "Plugin Name", "Plugin Family"])
-        tablePluginDescription.add_row([nessusConverter.nessusStructure.pluginsDescription.pluginId,
-                                        nessusConverter.nessusStructure.pluginsDescription.pluginName,
-                                        nessusConverter.nessusStructure.pluginsDescription.pluginFamily,])
-        print tablePluginDescription
+        tablePluginDescription = Texttable()
+        tablePluginDescription.set_cols_align(["l","l","l"])
+        tablePluginDescription.set_cols_valign(["m","m","m"])
+        tablePluginDescription.set_cols_width([55,55,55])
+
+        
+        rowsPluginDescription = [ ["Plugin ID", "Plugin Name", "Plugin Family"],
+                                  [nessusConverter.nessusStructure.pluginsDescription.pluginId,nessusConverter.nessusStructure.pluginsDescription.pluginName,
+                                   nessusConverter.nessusStructure.pluginsDescription.pluginFamily,]
+                                ]
+        tablePluginDescription.add_rows(rowsPluginDescription)
+        print tablePluginDescription.draw()+"\n"
         print "\n"
         print "[*] Plugin Attributes"
-        tablePluginAttributes = PrettyTable(["Vuln Date", "Risk Factor", "CVSS", 'Type', 'Patch Date', 'CVSS Score', 'CVE', 'BID', 'CPE'])
+        tablePluginAttributes = Texttable()
+        tablePluginAttributes.set_cols_align(["l","l","l","l","l","l","l","l","l"])
+        tablePluginAttributes.set_cols_valign(["m","m","m","m","m","m","m","m","m"])
+        tablePluginAttributes.set_cols_width([55,55,55,55,55,55,55,55,55])
+        
+        rowsPluginAttributes = [["Vuln Date", "Risk Factor", "CVSS", 'Type', 'Patch Date', 'CVSS Score', 'CVE', 'BID', 'CPE']]
         if nessusConverter.nessusStructure.pluginsDescription is not None:
-            tablePluginAttributes.add_row([nessusConverter.nessusStructure.pluginsDescription.vulnPublicationDate,
+            rowsPluginAttributes.append([nessusConverter.nessusStructure.pluginsDescription.vulnPublicationDate,
                                         nessusConverter.nessusStructure.pluginsDescription.riskFactor,
                                         nessusConverter.nessusStructure.pluginsDescription.cvssBaseScore,
                                         nessusConverter.nessusStructure.pluginsDescription.pluginType,
@@ -273,7 +343,8 @@ class nessusPlugin(BasePlugin):
                                         nessusConverter.nessusStructure.pluginsDescription.cve,
                                         nessusConverter.nessusStructure.pluginsDescription.bid,
                                         nessusConverter.nessusStructure.pluginsDescription.cpe,])
-        print tablePluginAttributes
+        tablePluginAttributes.add_rows(rowsPluginAttributes)
+        print tablePluginAttributes.draw()+"\n"
 
 
 
@@ -281,9 +352,12 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.pluginsAttributesFamilySearch(filter0Quality,filterSearchType,filter0Value,filter0Filter))
         nessusConverter.pluginsAttributeFamilySearchToStructure()
         print "[*] Family Search"
-        tablePluginAttributes = PrettyTable(["Family"])
-        tablePluginAttributes.add_row([nessusConverter.nessusStructure.pluginsAttributeFamilySearch])
-        print tablePluginAttributes
+        tablePluginAttributes = Texttable()
+        tablePluginAttributes.set_cols_align(["l"])
+        tablePluginAttributes.set_cols_valign(["m"])
+        tablePluginAttributes.set_cols_width([55])
+        tablePluginAttributes.add_row([["Family"], [nessusConverter.nessusStructure.pluginsAttributeFamilySearch]])
+        print tablePluginAttributes.draw()+"\n"
 
 
 
@@ -291,59 +365,96 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.pluginsAttributesPluginSearch(filter0quality,filterSearchType,filter0Value,filter0Filter, family))
         nessusConverter.pluginsAttributePluginSearchToStructure()
         print "[*] Plugin Search"
-        tablePluginAttributes = PrettyTable(["Family", "FileName", "Plugin ID", "Plugin Name"])
+        tablePluginAttributes = Texttable()
+        tablePluginAttributes.set_cols_align(["l","l","l"])
+        tablePluginAttributes.set_cols_valign(["m","m","m"])
+        tablePluginAttributes.set_cols_width([55,55,55])
+        
+        rows = [["Family", "FileName", "Plugin ID", "Plugin Name"]]
+        
         if nessusConverter.nessusStructure.pluginsAttributePluginSearch is not None:
-            tablePluginAttributes.add_row([nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginFamily,
-                                       nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginFileName,
-                                       nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginId,
-                                       nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginName])
-        print tablePluginAttributes
+            rows.append([nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginFamily,
+                         nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginFileName,
+                         nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginId,
+                         nessusConverter.nessusStructure.pluginsAttributePluginSearch.pluginName])
+        tablePluginAttributes.add_rows(rows)
+        print tablePluginAttributes.draw()+"\n"
 
     def pluginsMd5(self):
         nessusConverter = NessusConverter(self.nessusClient.pluginsMd5())
         nessusConverter.md5StructureToStructure()
         print "[*] Plugins MD5"
-        tableMD5 = PrettyTable(["FileName", "MD5 Hash"])
+        tableMD5 = Texttable()
+        tableMD5.set_cols_align(["l","l"])
+        tableMD5.set_cols_valign(["m","m"])
+        tableMD5.set_cols_width([55,55])
+        
+        rows = [["FileName", "MD5 Hash"]]
         for md5 in nessusConverter.nessusStructure.md5Structure:
-            tableMD5.add_row([md5.fileName, md5.md5])
-        print tableMD5
+            rows.append([md5.fileName, md5.md5])
+        tableMD5.add_rows(rows)
+        print tableMD5.draw()+"\n"
 
     def policyPreferencesList(self):
         nessusConverter = NessusConverter(self.nessusClient.policyPreferencesList())
         nessusConverter.serverPolicyPreferenceToStructure()
         print "[*] Policy Preferences List"
-        tablePreference = PrettyTable(["Name", "Value"])
+        tablePreference = Texttable()
+        tablePreference.set_cols_align(["l","l"])
+        tablePreference.set_cols_valign(["m","m"])
+        tablePreference.set_cols_width([55,55])
+        
+        rows = [["Name", "Value"]]
         for preference in nessusConverter.nessusStructure.policyPreferences:
-            tablePreference.add_row([preference.name, preference.value])
-        print tablePreference
+            rows.append([preference.name, preference.value])
+        tablePreference.add_rows(rows)
+        print tablePreference.draw()+"\n"
 
 
     def policyList(self):
         nessusConverter = NessusConverter(self.nessusClient.policyList())
         nessusConverter.policyStructureToStructure()
         print "[*] Policy List"
-        tablePolicies = PrettyTable(["Id", "Name","Owner","Visibility"])
+        tablePolicies = Texttable()
+        tablePolicies.set_cols_align(["l","l","l","l"])
+        tablePolicies.set_cols_valign(["m","m","m","m"])
+        tablePolicies.set_cols_width([55,55,55,55])
+        
+        rows = [["Id", "Name","Owner","Visibility"]]
         for policy in nessusConverter.nessusStructure.nessusPolicies:
-            tablePolicies.add_row([policy.policyId, policy.policyName, policy.policyOwner, policy.policyVisibility])
-        print tablePolicies
+            rows.append([policy.policyId, policy.policyName, policy.policyOwner, policy.policyVisibility])
+        tablePolicies.add_rows(rows)
+        print tablePolicies.draw()+"\n"
 
     def policyDelete(self, policyId):
         nessusConverter = NessusConverter(self.nessusClient.policyDelete(policyId))
         nessusConverter.policyDeletedToStructure()
         print "[*] Policy Deleted"
-        tablePolicies = PrettyTable(["Policy Deleted"])
+        tablePolicies = Texttable()
+        tablePolicies.set_cols_align(["l"])
+        tablePolicies.set_cols_valign(["m"])
+        tablePolicies.set_cols_width([55])
+        
+        rows = [["Policy Deleted"]]
         for policy in nessusConverter.nessusStructure.nessusPolicies:
-            tablePolicies.add_row([nessusConverter.nessusStructure.policyDeleted])
-        print tablePolicies
+            rows.append([nessusConverter.nessusStructure.policyDeleted])
+        tablePolicies.add_rows(rows)
+        print tablePolicies.draw()+"\n"
 
     def policyCopy(self, policyId):
         nessusConverter = NessusConverter(self.nessusClient.policyCopy(policyId))
         nessusConverter.policyStructureToStructure()
         print "[*] Policy Copy"
-        tablePolicies = PrettyTable(["Id", "Name","Owner","Visibility"])
+        tablePolicies = Texttable()
+        tablePolicies.set_cols_align(["l","l","l","l"])
+        tablePolicies.set_cols_valign(["m","m","m","m"])
+        tablePolicies.set_cols_width([55,55,55,55])
+        
+        rows = [["Id", "Name","Owner","Visibility"]]
         for policy in nessusConverter.nessusStructure.nessusPolicies:
-            tablePolicies.add_row([policy.name, policy.value])
-        print tablePolicies
+            rows.append([policy.policyId, policy.policyName, policy.policyOwner, policy.policyVisibility])
+        tablePolicies.add_rows(rows)
+        print tablePolicies.draw()+"\n"
 
 
     def policyDownload(self, policyId, fileName):
@@ -365,16 +476,24 @@ class nessusPlugin(BasePlugin):
             targets +=node.host+"\n"
         nessusConverter = NessusConverter(self.nessusClient.scanNew(targets, policyId, scanName, method="POST"))
         nessusConverter.scanToStructure()
-        tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-        tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
-                           nessusConverter.nessusStructure.scan.scanName,
-                           nessusConverter.nessusStructure.scan.startTime,
-                           nessusConverter.nessusStructure.scan.uuid,
-                           nessusConverter.nessusStructure.scan.readableName,
-                           nessusConverter.nessusStructure.scan.status,
-                           nessusConverter.nessusStructure.scan.completionCurrent,
-                           nessusConverter.nessusStructure.scan.completionTotal])
-        print tableScan
+
+        tableScan = Texttable()
+        tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+        tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+
+        rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
+                [nessusConverter.nessusStructure.scan.owner,
+                 nessusConverter.nessusStructure.scan.scanName,
+                 nessusConverter.nessusStructure.scan.startTime,
+                 nessusConverter.nessusStructure.scan.uuid,
+                 nessusConverter.nessusStructure.scan.readableName,
+                 nessusConverter.nessusStructure.scan.status,
+                 nessusConverter.nessusStructure.scan.completionCurrent,
+                 nessusConverter.nessusStructure.scan.completionTotal]
+               ]
+        tableScan.add_rows(rows)
+        print tableScan.draw()+"\n"
 
 
     def scanByRelay(self, policyId, scanName, relay):
@@ -388,16 +507,22 @@ class nessusPlugin(BasePlugin):
             nessusConverter = NessusConverter(self.nessusClient.scanNew(relay, policyId, scanName, method="POST"))
             nessusConverter.scanToStructure()
             print "[*] Nessus scan using the relay %s " %(relay)
-            tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-            tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
-                               nessusConverter.nessusStructure.scan.scanName,
-                               nessusConverter.nessusStructure.scan.startTime,
-                               nessusConverter.nessusStructure.scan.uuid,
-                               nessusConverter.nessusStructure.scan.readableName,
-                               nessusConverter.nessusStructure.scan.status,
-                               nessusConverter.nessusStructure.scan.completionCurrent,
-                               nessusConverter.nessusStructure.scan.completionTotal])
-            print tableScan
+            tableScan = Texttable()
+            tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+            tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+            tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+            rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
+                    [nessusConverter.nessusStructure.scan.owner,
+                     nessusConverter.nessusStructure.scan.scanName,
+                     nessusConverter.nessusStructure.scan.startTime,
+                     nessusConverter.nessusStructure.scan.uuid,
+                     nessusConverter.nessusStructure.scan.readableName,
+                     nessusConverter.nessusStructure.scan.status,
+                     nessusConverter.nessusStructure.scan.completionCurrent,
+                     nessusConverter.nessusStructure.scan.completionTotal]
+                    ]
+            tableScan.add_rows(rows)
+            print tableScan.draw()+"\n"
         else:
             print ["[-] The relay specified is not found."]
 
@@ -405,58 +530,85 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.scanStop(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan stopped."
-        tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-        tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
-                           nessusConverter.nessusStructure.scan.scanName,
-                           nessusConverter.nessusStructure.scan.startTime,
-                           nessusConverter.nessusStructure.scan.uuid,
-                           nessusConverter.nessusStructure.scan.readableName,
-                           nessusConverter.nessusStructure.scan.status,
-                           nessusConverter.nessusStructure.scan.completionCurrent,
-                           nessusConverter.nessusStructure.scan.completionTotal])
-        print tableScan
+        tableScan = Texttable()
+        tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+        tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+
+        rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
+                [nessusConverter.nessusStructure.scan.owner,
+                 nessusConverter.nessusStructure.scan.scanName,
+                 nessusConverter.nessusStructure.scan.startTime,
+                 nessusConverter.nessusStructure.scan.uuid,
+                 nessusConverter.nessusStructure.scan.readableName,
+                 nessusConverter.nessusStructure.scan.status,
+                 nessusConverter.nessusStructure.scan.completionCurrent,
+                 nessusConverter.nessusStructure.scan.completionTotal]
+               ]
+        tableScan.add_rows(rows)
+        print tableScan.draw()+"\n"
 
     def scanResume(self, scanUuid):
         nessusConverter = NessusConverter(self.nessusClient.scanResume(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan Resumed."
-        tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-        tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
-                           nessusConverter.nessusStructure.scan.scanName,
-                           nessusConverter.nessusStructure.scan.startTime,
-                           nessusConverter.nessusStructure.scan.uuid,
-                           nessusConverter.nessusStructure.scan.readableName,
-                           nessusConverter.nessusStructure.scan.status,
-                           nessusConverter.nessusStructure.scan.completionCurrent,
-                           nessusConverter.nessusStructure.scan.completionTotal])
-        print tableScan
+        tableScan = Texttable()
+        tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+        tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+
+        rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
+                [nessusConverter.nessusStructure.scan.owner,
+                 nessusConverter.nessusStructure.scan.scanName,
+                 nessusConverter.nessusStructure.scan.startTime,
+                 nessusConverter.nessusStructure.scan.uuid,
+                 nessusConverter.nessusStructure.scan.readableName,
+                 nessusConverter.nessusStructure.scan.status,
+                 nessusConverter.nessusStructure.scan.completionCurrent,
+                 nessusConverter.nessusStructure.scan.completionTotal]
+               ]
+        tableScan.add_rows(rows)
+        print tableScan.draw()+"\n"
 
     def scanPause(self, scanUuid):
         nessusConverter = NessusConverter(self.nessusClient.scanPause(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan Paused."
-        tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
-        tableScan.add_row([nessusConverter.nessusStructure.scan.owner,
-                           nessusConverter.nessusStructure.scan.scanName,
-                           nessusConverter.nessusStructure.scan.startTime,
-                           nessusConverter.nessusStructure.scan.uuid,
-                           nessusConverter.nessusStructure.scan.readableName,
-                           nessusConverter.nessusStructure.scan.status,
-                           nessusConverter.nessusStructure.scan.completionCurrent,
-                           nessusConverter.nessusStructure.scan.completionTotal])
-        print tableScan
+        tableScan = Texttable()
+        tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+        tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+
+        rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
+                [nessusConverter.nessusStructure.scan.owner,
+                 nessusConverter.nessusStructure.scan.scanName,
+                 nessusConverter.nessusStructure.scan.startTime,
+                 nessusConverter.nessusStructure.scan.uuid,
+                 nessusConverter.nessusStructure.scan.readableName,
+                 nessusConverter.nessusStructure.scan.status,
+                 nessusConverter.nessusStructure.scan.completionCurrent,
+                 nessusConverter.nessusStructure.scan.completionTotal]
+               ]
+        tableScan.add_rows(rows)
+        print tableScan.draw()+"\n"
 
     def scanList(self):
         nessusConverter = NessusConverter(self.nessusClient.scanList(method="POST"))
         nessusConverter.scanListToStructure()
         print "[*] Nessus scan List."
-        tableScan = PrettyTable(["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"])
+        tableScan = Texttable()
+        tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
+        tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
+        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+
+        rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"]]
         if len(nessusConverter.nessusStructure.scanList) > 0:
             for scan in nessusConverter.nessusStructure.scanList:
-                tableScan.add_row([scan.owner, scan.scanName, scan.startTime, scan.uuid,
-                                   scan.readablename, scan.status,
-                                   scan.completionCurrent, scan.completionTotal])
-        print tableScan
+                rows.append([scan.owner, scan.scanName, scan.startTime, scan.uuid,
+                             scan.readablename, scan.status,
+                             scan.completionCurrent, scan.completionTotal])
+        tableScan.add_rows(rows)
+        print tableScan.draw()+"\n"
 
     def scanTemplateAllRelays(self, policyId, templateName):
         targets = ''
@@ -465,13 +617,20 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateNew(policyId,targets,templateName))
         nessusConverter.scanTemplateToStructure()
         print "[*] Nessus scan Template New."
-        tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
-        tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
+        tableTemplate = Texttable()
+        tableTemplate.set_cols_align(["l","l","l","l","l"])
+        tableTemplate.set_cols_valign(["m","m","m","m","m"])
+        tableTemplate.set_cols_width([55,55,55,55,55])
+        
+        rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"],
+                [nessusConverter.nessusStructure.nessusScanTemplate.owner,
                                nessusConverter.nessusStructure.nessusScanTemplate.readablename,
                                nessusConverter.nessusStructure.nessusScanTemplate.target,
                                nessusConverter.nessusStructure.nessusScanTemplate.name,
-                               nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-        print tableTemplate
+                               nessusConverter.nessusStructure.nessusScanTemplate.policyId]]
+        
+        tableTemplate.add_rows(rows)
+        print tableTemplate.draw()+"\n"
 
     def scanTemplateByRelay(self,policyId,relay,templateName):
         found = False
@@ -484,13 +643,18 @@ class nessusPlugin(BasePlugin):
             nessusConverter = NessusConverter(self.nessusClient.scanTemplateNew(policyId,relay,templateName))
             nessusConverter.scanTemplateToStructure()
             print "[*] Nessus scan Template New."
-            tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
-            tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
-                               nessusConverter.nessusStructure.nessusScanTemplate.readablename,
-                               nessusConverter.nessusStructure.nessusScanTemplate.target,
-                               nessusConverter.nessusStructure.nessusScanTemplate.name,
-                               nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-            print tableTemplate
+            tableTemplate = Texttable()
+            tableTemplate.set_cols_align(["l","l","l","l","l"])
+            tableTemplate.set_cols_valign(["m","m","m","m","m"])
+            tableTemplate.set_cols_width([55,55,55,55,55])
+            rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"],
+                    [nessusConverter.nessusStructure.nessusScanTemplate.owner,
+                     nessusConverter.nessusStructure.nessusScanTemplate.readablename,
+                     nessusConverter.nessusStructure.nessusScanTemplate.target,
+                     nessusConverter.nessusStructure.nessusScanTemplate.name,
+                     nessusConverter.nessusStructure.nessusScanTemplate.policyId]]
+            tableTemplate.add_rows(rows)
+            print tableTemplate.draw()+"\n"
 
 
     def scanTemplateEditAllRelays(self, templateEdit, templateNewName, policyId):
@@ -500,14 +664,23 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateEdit(templateEdit,templateNewName,policyId,targets))
         nessusConverter.scanTemplateToStructure()
         print "[*] Nessus scan Template Edit."
-        tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
+        tableTemplate = Texttable()
+        tableTemplate.set_cols_align(["l","l","l","l","l"])
+        tableTemplate.set_cols_valign(["m","m","m","m","m"])
+        tableTemplate.set_cols_width([55,55,55,55,55])
+        rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
         if nessusConverter.nessusStructure.nessusScanTemplate is not  None:
-            tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
-                               nessusConverter.nessusStructure.nessusScanTemplate.readablename,
-                               nessusConverter.nessusStructure.nessusScanTemplate.target,
-                               nessusConverter.nessusStructure.nessusScanTemplate.name,
-                               nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-        print tableTemplate
+            rows.append([nessusConverter.nessusStructure.nessusScanTemplate.owner,
+                         nessusConverter.nessusStructure.nessusScanTemplate.readablename,
+                         nessusConverter.nessusStructure.nessusScanTemplate.target,
+                         nessusConverter.nessusStructure.nessusScanTemplate.name,
+                         nessusConverter.nessusStructure.nessusScanTemplate.policyId])
+            
+        tableTemplate.add_rows(rows)
+        print tableTemplate.draw()+"\n"
+
+        
+        
 
     def scanTemplateEditByRelay(self,templateEdit, templateNewName, policyId, relay):
         found = False
@@ -520,54 +693,78 @@ class nessusPlugin(BasePlugin):
             nessusConverter = NessusConverter(self.nessusClient.scanTemplateEdit(templateEdit,templateNewName,policyId,relay))
             nessusConverter.scanTemplateToStructure()
             print "[*] Nessus scan Template Edit."
-            tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
+            tableTemplate = Texttable()
+            tableTemplate.set_cols_align(["l","l","l","l","l"])
+            tableTemplate.set_cols_valign(["m","m","m","m","m"])
+            tableTemplate.set_cols_width([55,55,55,55,55])
+            rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
+
             if nessusConverter.nessusStructure.nessusScanTemplate is not None:
-                tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
-                                   nessusConverter.nessusStructure.nessusScanTemplate.readablename,
-                                   nessusConverter.nessusStructure.nessusScanTemplate.target,
-                                   nessusConverter.nessusStructure.nessusScanTemplate.name,
-                                   nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-            print tableTemplate
+                rows.append([nessusConverter.nessusStructure.nessusScanTemplate.owner,
+                             nessusConverter.nessusStructure.nessusScanTemplate.readablename,
+                             nessusConverter.nessusStructure.nessusScanTemplate.target,
+                             nessusConverter.nessusStructure.nessusScanTemplate.name,
+                             nessusConverter.nessusStructure.nessusScanTemplate.policyId])
+            tableTemplate.add_rows(rows)
+            print tableTemplate.draw()+"\n"
 
     def scanTemplateDelete(self, templateUuid):
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateDelete(templateUuid))
         nessusConverter.scanTemplateToStructure()
         print "[*] Nessus scan Template Deleted."
-        tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
+        tableTemplate = Texttable()
+        tableTemplate.set_cols_align(["l","l","l","l","l"])
+        tableTemplate.set_cols_valign(["m","m","m","m","m"])
+        tableTemplate.set_cols_width([55,55,55,55,55])
+        rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
+        
         if nessusConverter.nessusStructure.nessusScanTemplate is not None:
-            tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
-                               nessusConverter.nessusStructure.nessusScanTemplate.readablename,
-                               nessusConverter.nessusStructure.nessusScanTemplate.target,
-                               nessusConverter.nessusStructure.nessusScanTemplate.name,
-                               nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-        print tableTemplate
+            rows.append([nessusConverter.nessusStructure.nessusScanTemplate.owner,
+                         nessusConverter.nessusStructure.nessusScanTemplate.readablename,
+                         nessusConverter.nessusStructure.nessusScanTemplate.target,
+                         nessusConverter.nessusStructure.nessusScanTemplate.name,
+                         nessusConverter.nessusStructure.nessusScanTemplate.policyId])
+        tableTemplate.add_rows(rows)
+        print tableTemplate.draw()+"\n"
 
     def scanTemplateLaunch(self, templateName):
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateLaunch(templateName))
         #Nessus will return an scan structure.
         nessusConverter.scanToStructure()
         print "[*] Nessus scan Template Launch."
-        tableTemplate = PrettyTable(["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"])
+        tableTemplate = Texttable()
+        tableTemplate.set_cols_align(["l","l","l","l","l"])
+        tableTemplate.set_cols_valign(["m","m","m","m","m"])
+        tableTemplate.set_cols_width([55,55,55,55,55])
+        rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
+        
         if nessusConverter.nessusStructure.nessusScanTemplate is not None:
-            tableTemplate.add_row([nessusConverter.nessusStructure.nessusScanTemplate.owner,
-                               nessusConverter.nessusStructure.nessusScanTemplate.readablename,
-                               nessusConverter.nessusStructure.nessusScanTemplate.target,
-                               nessusConverter.nessusStructure.nessusScanTemplate.name,
-                               nessusConverter.nessusStructure.nessusScanTemplate.policyId])
-        print tableTemplate
+            rows.append([nessusConverter.nessusStructure.nessusScanTemplate.owner,
+                         nessusConverter.nessusStructure.nessusScanTemplate.readablename,
+                         nessusConverter.nessusStructure.nessusScanTemplate.target,
+                         nessusConverter.nessusStructure.nessusScanTemplate.name,
+                         nessusConverter.nessusStructure.nessusScanTemplate.policyId])
+        tableTemplate.add_rows(rows)
+        print tableTemplate.draw()+"\n"
 
     def reportList(self):
         nessusConverter = NessusConverter(self.nessusClient.reportList())
         nessusConverter.reportToStructure()
         print "[*] Nessus Report List."
-        tableReport = PrettyTable(["Status","Readable Name", "UUID", "Timestamp"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l","l","l"])
+        tableReport.set_cols_valign(["m","m","m","m"])
+        tableReport.set_cols_width([55,55,55,55])
+        rows = [["Status","Readable Name", "UUID", "Timestamp"]]
+        
         if nessusConverter.nessusStructure.reportList is not None:
             for report in nessusConverter.nessusStructure.reportList:
-                tableReport.add_row([report.status,
-                                     report.readablename,
-                                     report.name,
-                                     report.timestamp])
-        print tableReport
+                rows.append([report.status,
+                             report.readablename,
+                             report.name,
+                             report.timestamp])
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
     def reportDelete(self, reportUuid):
         nessusConverter = NessusConverter(self.nessusClient.reportDelete(reportUuid))
@@ -579,80 +776,109 @@ class nessusPlugin(BasePlugin):
         nessusConverter = NessusConverter(self.nessusClient.reportHosts(reportUuid))
         nessusConverter.reportHostToStructure()
         print "[*] Nessus Report Hosts List."
-        tableReport = PrettyTable(["Hostname","Num. Checks", "Total Checks", "Scan Progress Current", "Scan Progress Total", "Severity"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l","l","l","l","l"])
+        tableReport.set_cols_valign(["m","m","m","m","m","m"])
+        tableReport.set_cols_width([55,55,55,55,55,55])
+        
+        rows = [["Hostname","Num. Checks", "Total Checks", "Scan Progress Current", "Scan Progress Total", "Severity"]]
+        
         if nessusConverter.nessusStructure.reportHosts is not None:
             for reportHost in nessusConverter.nessusStructure.reportHosts:
-                tableReport.add_row([reportHost.hostname,
-                                     reportHost.numchecksconsidered,
-                                     reportHost.totalchecksconsidered,
-                                     reportHost.scanprogresscurrent,
-                                     reportHost.scanprogresstotal,
-                                     reportHost.severity])
-        print tableReport
+                rows.append([reportHost.hostname,
+                             reportHost.numchecksconsidered,
+                             reportHost.totalchecksconsidered,
+                             reportHost.scanprogresscurrent,
+                             reportHost.scanprogresstotal,
+                             reportHost.severity])
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
     def reportPorts(self, reportUuid, hostname):
         nessusConverter = NessusConverter(self.nessusClient.reportPorts(reportUuid, hostname))
         nessusConverter.reportPortToStructure()
         print "[*] Nessus Report Ports."
-        tableReport = PrettyTable(["Port Number","Protocol", "Severity", "SVC Name"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l","l","l"])
+        tableReport.set_cols_valign(["m","m","m","m"])
+        tableReport.set_cols_width([55,55,55,55])
+        
+        rows = [["Port Number","Protocol", "Severity", "SVC Name"]]
         if nessusConverter.nessusStructure.reportPortList is not None:
             for reportPort in nessusConverter.nessusStructure.reportPortList:
-                tableReport.add_row([reportPort.portNumber,
-                                     reportPort.protocol,
-                                     reportPort.severity,
-                                     reportPort.svcName])
-        print tableReport
+                rows.append([reportPort.portNumber,
+                             reportPort.protocol,
+                             reportPort.severity,
+                             reportPort.svcName])
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
     def reportDetails(self,reportUuid, hostname,port,protocol):
         nessusConverter = NessusConverter(self.nessusClient.reportDetails(reportUuid,hostname,port,protocol))
         nessusConverter.reportPortDetailToStructure()
         print "[*] Nessus Report Details."
-        tableReport = PrettyTable(["Port", "Severity", "Plugin Id", "Plugin Name", "BID", "CPE","CVE","CVSS Base Score","CVSS Temporal Score","Description", "FName"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l","l","l","l","l","l","l","l","l","l","l"])
+        tableReport.set_cols_valign(["m","m","m","m","m","m","m","m","m","m","m","m"])
+        tableReport.set_cols_width([55,55,55,55,55,55,55,55,55,55,55,55])
+        
+        rows = [["ItemId", "Port", "Severity", "Plugin Id", "Plugin Name", "BID", "CPE","CVE","CVSS Base Score","CVSS Temporal Score","Description", "FName"]]
         if nessusConverter.nessusStructure.reportPortDetail is not None:
             for reportPort in nessusConverter.nessusStructure.reportPortDetail:
-                tableReport.add_row([reportPort.itemId,
-                                     reportPort.port,
-                                     reportPort.severity,
-                                     reportPort.pluginId,
-                                     reportPort.pluginName,
-                                     reportPort.bid,
-                                     reportPort.cpe,
-                                     reportPort.cve,
-                                     reportPort.cvss_base_score,
-                                     reportPort.cvss_temporal_score,
-                                     reportPort.description,
-                                     reportPort.fname])
-        else:
-            print "[*] No results."
-
-        print tableReport
+                rows.append([reportPort.itemId,
+                             reportPort.port,
+                             reportPort.severity,
+                             reportPort.pluginId,
+                             reportPort.pluginName,
+                             reportPort.bid,
+                             reportPort.cpe,
+                             reportPort.cve,
+                             reportPort.cvss_base_score,
+                             reportPort.cvss_temporal_score,
+                             reportPort.description,
+                             reportPort.fname])
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
     def reportTags(self, reportUuid, hostname):
         nessusConverter = NessusConverter(self.nessusClient.reportTags(reportUuid, hostname))
         nessusConverter.tagToNessusStructure()
         print "[*] Nessus Tags."
-        tableReport = PrettyTable(["Tag Name","Tag Value"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l"])
+        tableReport.set_cols_valign(["m","m"])
+        tableReport.set_cols_width([55,55])
+        
+        tableReport = [["Tag Name","Tag Value"]]
         if nessusConverter.nessusStructure.nessusTags is not None:
             for tag in nessusConverter.nessusStructure.nessusTags:
-                tableReport.add_row([tag.name, tag.value])
+                rows.append([tag.name, tag.value])
         else:
             print "[*] No results."
-        print tableReport
+
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
     def reportAttributesList(self,reportUuid):
         nessusConverter = NessusConverter(self.nessusClient.reportAttributesList(reportUuid))
         nessusConverter.reportAttributesToStructure()
         print "[*] Nessus Report Attributes."
-        tableReport = PrettyTable(["Name","Readable Name","Readable Regex", "Operators"])
+        tableReport = Texttable()
+        tableReport.set_cols_align(["l","l","l","l"])
+        tableReport.set_cols_valign(["m","m","m","m"])
+        tableReport.set_cols_width([55,55,55,55])
+        
+        rows = [["Name","Readable Name","Readable Regex", "Operators"]]
         if nessusConverter.nessusStructure.nessusReportAttributes is not None:
             for reportAttribute in nessusConverter.nessusStructure.nessusReportAttributes:
-                tableReport.add_row([reportAttribute.name,
+                rows.append([reportAttribute.name,
                                      reportAttribute.readableName,
                                      reportAttribute.nessusControl.readableRegex,
                                      reportAttribute.operators])
-        tableReport.align["Operators"] = "l"
+        tableReport.add_rows(rows)
+        print tableReport.draw()+"\n"
 
-        print tableReport
+        
 
     def help(self):
         print "[*] Functions availaible available in the Plugin...\n"

@@ -43,6 +43,10 @@ class deepWebDirBruterPlugin(BasePlugin):
                 if len(openPorts) > 0:
                     self.bruteForceData[torNode.host] = openPorts
         self.separator = ":"
+        self.validPluginArgs= []
+
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:

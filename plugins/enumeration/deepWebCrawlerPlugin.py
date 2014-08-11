@@ -48,6 +48,10 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.crawlRulesLinks = '//a/@href'
         self.crawlRulesImages = '//img/@src'
         self.dictFile = None
+        self.validPluginArgs= []
+        
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:

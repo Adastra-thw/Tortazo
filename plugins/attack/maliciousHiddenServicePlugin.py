@@ -58,6 +58,10 @@ class maliciousHiddenServicePlugin(BasePlugin):
         self.setPluginDetails('maliciousHiddenServicePlugin', 'Creates a malicious hidden service in TOR network and tries to de-anonimyze the users.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] maliciousHiddenServicePlugin Initialized!")
+        self.validPluginArgs= []
+
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -86,7 +90,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         reactor.addSystemEventTrigger('before', 'shutdown', functools.partial(txtorcon.util.delete_file_or_tree, tempDir))
         return tempDir
 
-    #chromium-browser --proxy-server=socks5://127.0.0.1:9150
+    #chromium-browser --proxy-server=socks5://127.0.0.1:9152
     def startHTTPHiddenService(self, serviceDir, servicePort=8080, hiddenserviceDir=None, hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000):
         self.hiddenservicePort = hiddenservicePort
         config = txtorcon.TorConfig()

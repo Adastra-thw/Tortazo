@@ -482,6 +482,7 @@ class Cli(cli.Application):
                     reference = module(torNodesFound)
                     reference.serviceConnector.setSocksProxySettings(self.socksHost, self.socksPort)
                     reference.setPluginArguments(pluginArgs)
+                    reference.processPluginArguments()
                     reference.serviceConnector.cli = self
                     reference.cli = self
                 else:
@@ -491,6 +492,7 @@ class Cli(cli.Application):
                     reference = module(torNodesFound)
                     reference.serviceConnector.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
                     reference.setPluginArguments(pluginArgs)
+                    reference.processPluginArguments()
                     reference.serviceConnector.cli = self
                     reference.cli = self
                 reference.runPlugin()

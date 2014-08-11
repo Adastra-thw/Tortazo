@@ -35,7 +35,10 @@ class shodanPlugin(BasePlugin):
         self.setPluginDetails('shodanPlugin', 'Plugin to gather information using the Shodan Database.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] shodanPlugin Initialized!")
+        self.validPluginArgs= []
 
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:

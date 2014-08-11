@@ -45,8 +45,11 @@ class w3afPlugin(BasePlugin):
             self.w3afCorePlugin.plugins.init_plugins()
             self.w3afCorePlugin.plugins.zero_enabled_plugins()
             self.miscSettings = MiscSettings()
+        self.validPluginArgs= []
 
-
+    def processPluginArguments(self):
+        pass
+    
     def __del__(self):
         if len(self.torNodes) > 0:
             self.info("[*] w3afPlugin Destroyed!")
@@ -57,36 +60,68 @@ class w3afPlugin(BasePlugin):
     '''
     def showPluginsByType(self, type):
         pluginByType = self.w3afCorePlugin.plugins.get_plugin_list(type)
-        tablePlugins = PrettyTable(["[*] Plugins for %s "%(type)])
+        tablePlugins = Texttable()
+        tableVulns.set_cols_align(["l"])
+        tableVulns.set_cols_valign(["m"])
+        tableVulns.set_cols_width([55])
+        rows = [ ["[*] Plugins for %s "%(type)] ]
         for plugin in pluginByType:
-            tablePlugins.add_row([plugin])
-        print tablePlugins
+            rows.append([plugin])
+            
+        tableVulns.add_rows(rows)       
+        print tableVulns.draw() + "\n"
+
 
     def showPluginTypes(self):
         types = self.w3afCorePlugin.plugins.get_plugin_types()
-        tableTypes = PrettyTable(["[*] Plugin Types"])
-        for plugin in types:
-            tableTypes.add_row([plugin])
-        print tableTypes
+
+        tableTypes = Texttable()
+        tableTypes.set_cols_align(["l"])
+        tableTypes.set_cols_valign(["m"])
+        tableTypes.set_cols_width([55])
+        rows = [ ["[*] Plugins Types"] ]
+        for plugintype in types:
+            rows.append([plugintype])
+        tableTypes.add_rows(rows)       
+        print tableTypes.draw() + "\n"
 
     def getEnabledPluginsByType(self, type):
         enabled = self.w3afCorePlugin.plugins.get_enabled_plugins(type)
-        tableTypes = PrettyTable(["[*] Enabled plugins by type %s" %(type)])
+        tablePluginsEnabled = Texttable()
+        tablePluginsEnabled.set_cols_align(["l"])
+        tablePluginsEnabled.set_cols_valign(["m"])
+        tablePluginsEnabled.set_cols_width([55])
+        rows = [ ["[*] Enabled plugins by type %s" %(type)] ]
         for plugin in enabled:
-            tableTypes.add_row([plugin])
-        print tableTypes
+            rows.append([plugin])
+        tablePluginsEnabled.add_rows(rows)       
+        print tablePluginsEnabled.draw() + "\n"
 
     def getPluginTypeDescription(self, type):
-        tableTypes = PrettyTable(["[*] Type %s" %(type)])
-        tableTypes.add_row([self.w3afCorePlugin.plugins.get_plugin_type_desc(type)])
-        print tableTypes
+        tablePluginsEnabled = Texttable()
+        tablePluginsEnabled.set_cols_align(["l"])
+        tablePluginsEnabled.set_cols_valign(["m"])
+        tablePluginsEnabled.set_cols_width([55])
+        
+        rows = [ ["[*] Type %s" %(type)],
+                 [self.w3afCorePlugin.plugins.get_plugin_type_desc(type)] ]
+        
+        tablePluginsEnabled.add_rows(rows)
+        print tablePluginsEnabled.draw() + "\n"
 
     def getAllEnabledPlugins(self):
         enabledPlugins = self.w3afCorePlugin.plugins.get_all_enabled_plugins()
-        tableTypes = PrettyTable(["Type", "Plugins" ])
+        tableTypes = Texttable()
+        tableTypes.set_cols_align(["l", "l"])
+        tableTypes.set_cols_valign(["m", "m"])
+        tableTypes.set_cols_width([40, 55])
+        rows = [ ["Type", "Plugins" ] ]
+        
         for type in enabledPlugins.keys():
-            tableTypes.add_row([type,enabledPlugins[type]])
-        print tableTypes
+            rows.append([type,enabledPlugins[type]])
+
+        tableTypes.add_rows(rows)
+        print tableTypes.draw() + "\n"
 
 
     def enablePlugin(self, pluginName, type):
@@ -121,10 +156,18 @@ class w3afPlugin(BasePlugin):
     def getPluginOptions(self, pluginType, pluginName):
         optList = self.w3afCorePlugin.plugins.get_plugin_options(pluginType,pluginName)
         print "[*] Plugin Options for %s " %(pluginName)
-        tablePluginOptions = PrettyTable(["Name","Value", "Type"])
+
+        tablePluginOptions = Texttable()
+        tablePluginOptions.set_cols_align(["l", "l", "l"])
+        tablePluginOptions.set_cols_valign(["m", "m", "m"])
+        tablePluginOptions.set_cols_width([40, 55, 55])
+        rows = [ ["Name","Value", "Type"] ]
+        
         for item in optList._internal_opt_list:
-            tablePluginOptions.add_row([item.get_name(),item.get_value(),item.get_type()])
-        print tablePluginOptions
+            rows.append([item.get_name(),item.get_value(),item.get_type()])        
+
+        tablePluginOptions.add_rows(rows)
+        print tablePluginOptions.draw() + "\n"
 
 
     def setPluginOptions(self, pluginType, pluginName, pluginSettingType, pluginSetting, pluginSettingValue):
@@ -181,10 +224,17 @@ class w3afPlugin(BasePlugin):
     def listMiscConfigs(self):
         optList = self.miscSettings.get_options()
         print "[*] MiscSettings List"
-        tableMiscOptions = PrettyTable(["Name","Value", "Type"])
+
+        tableMiscOptions = Texttable()
+        tableMiscOptions.set_cols_align(["l", "l", "l"])
+        tableMiscOptions.set_cols_valign(["m", "m", "m"])
+        tableMiscOptions.set_cols_width([40, 55, 55])
+        rows = [ ["Name","Value", "Type"] ]
+        
         for item in optList._internal_opt_list:
-            tableMiscOptions.add_row([item.get_name(),item.get_value(),item.get_type()])
-        print tableMiscOptions
+            rows.append([item.get_name(),item.get_value(),item.get_type()])
+        tableMiscOptions.add_rows(rows)
+        print tableMiscOptions.draw() + "\n"
 
     def setMiscConfig(self,setting,value):
         opt_list = OptionList()
@@ -204,12 +254,19 @@ class w3afPlugin(BasePlugin):
         valid_profiles, invalid_profiles = self.w3afCorePlugin.profiles.get_profile_list()
         print "[*] List of profiles."
         print "\n"
-        tableProfiles = PrettyTable(["Description", "Profile File", "Name"])
+
+        tableProfiles = Texttable()
+        tableProfiles.set_cols_align(["l", "l", "l"])
+        tableProfiles.set_cols_valign(["m", "m", "m"])
+        tableProfiles.set_cols_width([40, 55, 55])
+        rows = [ ["Description", "Profile File", "Name"] ]
+
         for profile in valid_profiles:
-            tableProfiles.add_row([profile.get_desc(),
-                                   profile.get_profile_file(),
-                                   profile.get_name()])
-        print tableProfiles
+            rows.append([profile.get_desc(),
+                         profile.get_profile_file(),
+                         profile.get_name()])
+        tableProfiles.add_rows(rows)
+        print tableProfiles.draw() +"\n"
 
 
 
@@ -221,20 +278,34 @@ class w3afPlugin(BasePlugin):
     def createProfileWithCurrentConfig(self, profileName, profileDescription):
         print "[*] Creating profile %s " %(profileName)
         profile = self.w3afCorePlugin.profiles.save_current_to_new_profile(profileName, profileDescription)
-        tableProfiles = PrettyTable(["Description","Profile File", "Name"])
-        tableProfiles.add_row([profile.get_desc(),profile.get_profile_file(),profile.get_name()])
-        print tableProfiles
+
+        tableProfiles = Texttable()
+        tableProfiles.set_cols_align(["l", "l", "l"])
+        tableProfiles.set_cols_valign(["m", "m", "m"])
+        tableProfiles.set_cols_width([40, 55, 55])
+        rows = [ ["Description", "Profile File", "Name"],
+                 [profile.get_desc(),profile.get_profile_file(),profile.get_name()] ]
+        
+        tableProfiles.add_rows(rows)
+        print tableProfiles.draw()+"\n"
 
 
     def modifyProfileWithCurrentConfig(self, profileName, profileDescription):
         print "[*] Updating profile %s with the current configuration" %(profileName)
         profile = self.w3afCorePlugin.profiles.save_current_to_profile(profileName,profileDescription)
-        tableProfile = PrettyTable(["Profile File", "Name", "Target", "Description"])
-        tableProfile.add_row([profile.get_profile_file(),
-                               profile.get_name(),
-                               profile.get_target(),
-                               profile.get_desc()])
-        print tableProfile
+
+        tableProfiles = Texttable()
+        tableProfiles.set_cols_align(["l", "l", "l", "l"])
+        tableProfiles.set_cols_valign(["m", "m", "m", "m"])
+        tableProfiles.set_cols_width([40, 55, 55, 55])
+        rows = [["Profile File", "Name", "Target", "Description"]]
+        
+        rows.append([profile.get_profile_file(),
+                     profile.get_name(),
+                     profile.get_target(),
+                     profile.get_desc()])
+        tableProfiles.add_rows(rows)
+        print tableProfiles.draw()+"\n"
 
     def removeProfile(self,profileName):
         removed = self.w3afCorePlugin.profiles.remove_profile(profileName)
@@ -250,14 +321,21 @@ class w3afPlugin(BasePlugin):
     def listShells(self):
         shells = kb.get_all_shells()
         print "[*] List of shells."
-        tableShells = PrettyTable(["Id","OS","System","User","System Name"])
+
+        tableShells = Texttable()
+        tableShells.set_cols_align(["l", "l", "l", "l", "l"])
+        tableShells.set_cols_valign(["m", "m", "m", "m", "m"])
+        tableShells.set_cols_width([40, 55, 55, 55, 55])
+        
+        rows = [ ["Id","OS","System","User","System Name"] ]
         for shell in shells:
-            tableShells.add_row([shell.id,
-                                 shell.get_remote_os(),
-                                 shell.get_remote_system(),
-                                 shell.get_remote_user(),
-                                 shell.get_remote_system_name()])
-        print tableShells
+            rows.append([shell.id,
+                         shell.get_remote_os(),
+                         shell.get_remote_system(),
+                         shell.get_remote_user(),
+                         shell.get_remote_system_name()])
+        tableShells.add_rows(rows)
+        print tableShells.draw()+"\n"
 
     def executeCommand(self,shellId, command,params):
         shells = kb.get_all_shells()
@@ -280,22 +358,34 @@ class w3afPlugin(BasePlugin):
     def listInfos(self):
         infos = kb.get_all_infos()
         print "[*] List of Infos."
-        tableInfos = PrettyTable(["Id","Name","Method","Description","Plugin Name"])
+
+        tableInfos = Texttable()
+        tableInfos.set_cols_align(["l", "l", "l", "l", "l"])
+        tableInfos.set_cols_valign(["m", "m", "m", "m", "m"])
+        tableInfos.set_cols_width([40, 55, 55, 55, 55])
+        rows = [["Id","Name","Method","Description","Plugin Name"]]
         for info in infos:
-            tableInfos.add_row([info.get_id(),
-                                 info.get_name(),
-                                 info.get_method(),
-                                 info.get_desc(),
-                                 info.get_plugin_name()])
-        print tableInfos
+            rows.append([info.get_id(),
+                         info.get_name(),
+                         info.get_method(),
+                         info.get_desc(),
+                         info.get_plugin_name()])
+        tableInfos.add_rows(rows)
+        print tableInfos.draw()+"\n"
 
     def listVulnerabilities(self):
         vulns = kb.get_all_vulns()
         print "[*] List of Vulns."
-        tableVulns = PrettyTable(["Severity","Description"])
+        tableVulns = Texttable()
+        tableVulns.set_cols_align(["l", "l"])
+        tableVulns.set_cols_valign(["m", "m"])
+        tableVulns.set_cols_width([40, 55])
+        
+        rows = [["Severity","Description"]]
         for vuln in vulns:
-            tableVulns.add_row([vuln.get_severity(),vuln.get_desc()])
-        print tableVulns
+            rows.append([vuln.get_severity(),vuln.get_desc()])
+        tableVulns.add_rows(rows)
+        print tableVulns.draw()+"\n"
 
     def exploitAllVulns(self,pluginExploit):
         print "[*] Checking the vulnerability and plugin to exploit..."
@@ -343,7 +433,7 @@ class w3afPlugin(BasePlugin):
                                 ['getPluginStatus', 'Check if the specified plugin is enabled.', 'self.getPluginStatus("audit","eval")']                                
                               ])
         
-        print tablePlugins.draw() + "\\n"
+        print tablePlugins.draw() + "\n"
 
         print "[*] Attack Functions..."
         tableAttack = Texttable()
@@ -356,7 +446,7 @@ class w3afPlugin(BasePlugin):
                                ['startAttack', 'Starts the attack.', 'self.startAttack()']
                               ])
         
-        print tableAttack.draw() + "\\n"
+        print tableAttack.draw() + "\n"
 
         print "[*] Misc Settings Functions..."
         tableMisc = Texttable()
@@ -368,7 +458,7 @@ class w3afPlugin(BasePlugin):
                                ['setMiscConfig', 'Sets a Misc Settings', 'self.setMiscConfig("msf_location","/opt/msf")']                             
                               ])
         
-        print tableMisc.draw() + "\\n"
+        print tableMisc.draw() + "\n"
 
         print "[*] Profile Management Functions"
         tableProfile = Texttable()
@@ -383,7 +473,7 @@ class w3afPlugin(BasePlugin):
                                ['removeProfile', 'Removes an existing profile', 'self.removeProfile("profileName")']
                               ])
         
-        print tableProfile.draw() + "\\n"
+        print tableProfile.draw() + "\n"
 
         print "[*] Shell Management Functions"
         tableShell = Texttable()
@@ -394,7 +484,7 @@ class w3afPlugin(BasePlugin):
                                 ['listShells', 'List of Shells', 'self.listShells()'],
                                 ['executeCommand', 'Executes a command in the specified shell', 'self.executeCommand(1,"lsp")']                                
                               ])
-        print tableShell.draw() + "\\n"
+        print tableShell.draw() + "\n"
 
         print "[*] Vulns and Info Management Functions"
         tableVulns = Texttable()
@@ -409,4 +499,4 @@ class w3afPlugin(BasePlugin):
                                 ['exploitAllVulns', 'Exploits all vulns in the Knowledge Base of W3AF', 'self.exploitVulns("sqli")'],
                                 ['exploitVuln', 'Exploits the specified Vuln in the Knowledge Base of W3AF', 'self.exploitVulns("sqli",18)']
                               ])
-        print tableVulns.draw() + "\\n"    
+        print tableVulns.draw() + "\n"    

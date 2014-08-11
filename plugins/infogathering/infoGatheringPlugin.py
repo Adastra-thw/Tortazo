@@ -35,7 +35,10 @@ class infoGatheringPlugin(BasePlugin):
         self.setPluginDetails('infoGatheringPlugin', 'Information Gathering of Tor relays.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] infoGatheringPlugin Initialized!")
+        self.validPluginArgs= []
 
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:

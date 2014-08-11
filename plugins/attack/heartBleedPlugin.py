@@ -35,6 +35,11 @@ class heartBleedPlugin(BasePlugin):
         self.setPluginDetails('heartBleedPlugin', 'Performs the HeartBleed vulnerability test against a single target or all TOR exit nodes found.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] heartBleedPlugin Initialized!")
+        self.validPluginArgs= []
+
+    def processPluginArguments(self):
+        pass
+
 
     def __del__(self):
         if len(self.torNodes) > 0:

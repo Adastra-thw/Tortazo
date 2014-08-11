@@ -42,7 +42,10 @@ class deepWebStemmingPlugin(BasePlugin):
             #self.metric = Metrics()
             self.info("[*] deepWebStemmingPlugin Initialized!")
             self.webPorts = [80,443,8080]
+        self.validPluginArgs= []
 
+    def processPluginArguments(self):
+        pass
 
     def __del__(self):
         if len(self.torNodes) > 0:
