@@ -49,10 +49,12 @@ class bruterPlugin(BasePlugin):
                 if len(openPorts) > 0:
                     self.bruteForceData[torNode.host] = openPorts
         self.separator = ":"
-        self.validPluginArgs= []
+        self.pluginConfigs= {}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
 
     def __del__(self):
         if len(self.torNodes) > 0:

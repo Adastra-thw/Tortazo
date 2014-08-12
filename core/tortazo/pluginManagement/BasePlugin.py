@@ -98,8 +98,8 @@ class BasePlugin():
         else:
             cfg = Config()
             nested = 1
-        tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
-        tortazoShell()
+        self.tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
+        self.tortazoShell()
 
     def setPluginDetails(self,name,desc,version,author):
         self.name = name
@@ -110,6 +110,9 @@ class BasePlugin():
     def setPluginArguments(self, pluginArguments):
         self.pluginArguments = pluginArguments
 
-
+    def processPluginArguments(self):
+        for validConfig in self.pluginConfigs.keys():
+            if validConfig in self.pluginArguments:
+                self.pluginConfigs[validConfig] = self.pluginArguments[validConfig]
     def help(self):
         pass

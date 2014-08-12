@@ -89,7 +89,6 @@ class Cli(cli.Application):
     cleanDatabase = cli.Flag(["-C", '--clean-database'], help="Tortazo will delete all records stored in database when finished executing. This option will delete every record stored, included the data from previous scans.")
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
     useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")
-    activateOnionRepositoryMode = cli.Flag(["-R", "--onion-repository"], help="Start Tortazo in Onion Repository Mode.")
 
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
@@ -105,6 +104,7 @@ class Cli(cli.Application):
     pluginArguments =  None
     torLocalInstance = None
     scanIdentifier = None
+    activateOnionRepositoryMode = None
     workerThreads = 10
     onionRepositoryMode = ""
     validchars ='234567' + string.lowercase
@@ -214,12 +214,21 @@ class Cli(cli.Application):
         '''
         self.onionRepositoryMode = onionRepositoryMode
 
+    @cli.switch(["-R", "--onion-repository"], str, cli.Set("ssh", "ftp", "http", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
+    def activateOnionRepository_Mode(self, activateOnionRepositoryMode):
+        '''
+        Onion repository mode.
+        '''
+        self.activateOnionRepositoryMode = activateOnionRepositoryMode
+
     @cli.switch(["-W", "--workers-repository"], int, requires=["--onion-repository"], help="Number of threads used to process the ONION addresses generated.")
     def workers_repository(self, workers_repository):
         '''
         Worker Threads for processing the ONION addresses generated.
         '''
         self.workerThreads = workers_repository
+
+
 
 
     @cli.switch(["-V", "--validchars-repository"], str, help="Valid characters to use in the generation process of onion addresses. Default: All characters between a-z and digits between 2-7")
@@ -268,49 +277,6 @@ class Cli(cli.Application):
             self.logger.info(term.format("[+] Cleaning database... Deleting all records.", term.Color.YELLOW))
             self.database.initDatabase()
             self.database.cleanDatabaseState()
-
-        if self.activateOnionRepositoryMode:
-            #Tortazo should start a process and the goes to sleep. In this mode should not be other actions to be performed.
-            #This switch will invalidate the other switches, just repository mode should be started.
-            # Setup and start the simulation
-            try:
-                serviceConnector = ServiceConnector(self)
-                self.logger.info(term.format("[+] Entering in Onion Repository Mode. This process could take a lot of time depending what you know of the hidden service to discover...", term.Color.YELLOW))
-                if tortazoConfiguration.loadKnownOnionSites:
-                    self.logger.info(term.format("[+] Reading the file of known hidden services located in 'db/knwonOnionSites.txt'. Tortazo will try to feed the local database with that information. If you want to avoid this behavior, set to False the property: 'loadKnownOnionSites' in the 'config/config.py' configuration file ...", term.Color.YELLOW))
-                if self.onionRepositoryMode.lower() == 'random':
-                    self.logger.info(term.format("[+] Random address generator selected ...", term.Color.YELLOW))
-                else:
-                    self.logger.info(term.format("[+] Incremental address generator selected ...", term.Color.YELLOW))
-                    self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
-                    if len(self.onionRepositoryMode) == 0:
-                        self.logger.warn(term.format("[+] Consider to use the switches -O / --onionpartial-address or -V / --validchars-repository to filter the results. ", term.Color.YELLOW))
-                    if len(self.onionRepositoryMode) <= 10:
-                        self.logger.warn(term.format("[+] You've entered an address with 10 or less characters [just %s chars]. The number of combinations will be very huge. You'll need a considerable process capacity in this machine and let run this process for hours, days or even weeks! If you're sure, let this process run" %(str(len(self.onionRepositoryMode))), term.Color.YELLOW))
-                        sys.stdout.write('%s [y/n]\n' %('Are you sure?'))
-                        while True:
-                            try:
-                                input = raw_input
-                                if strtobool(input().lower()) == True:
-                                    break
-                                else:
-                                    return
-                            except NameError:
-                                pass
-                            except ValueError:
-                                sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
-
-                self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
-                repository.startGenerator(tortazoConfiguration.loadKnownOnionSites)
-                self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                return
-
-            except KeyboardInterrupt:
-                print "Interrupted!"
-            #repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
-            #repository.startGenerator()
-            #return
 
         if self.listPlugins:
             print "[*] Plugins list... "
@@ -369,6 +335,49 @@ class Cli(cli.Application):
                     self.logger.warn(term.format("Traceback: %s " %(str(exc_traceback)), term.Color.RED))
             else:
                 self.logger.warn(term.format("The specified torrc file is not valid: %s " %(str(self.torLocalInstance)), term.Color.RED))
+
+        if self.activateOnionRepositoryMode != None:
+            #Tortazo should start a process and the goes to sleep. In this mode should not be other actions to be performed.
+            #This switch will invalidate the other switches, just repository mode should be started.
+            # Setup and start the simulation
+            try:
+                serviceConnector = ServiceConnector(self)
+                self.logger.info(term.format("[+] Entering in Onion Repository Mode. This process could take a lot of time depending what you know of the hidden service to discover...", term.Color.YELLOW))
+                if tortazoConfiguration.loadKnownOnionSites:
+                    self.logger.info(term.format("[+] Reading the file of known hidden services located in 'db/knwonOnionSites.txt'. Tortazo will try to feed the local database with that information. If you want to avoid this behavior, set to False the property: 'loadKnownOnionSites' in the 'config/config.py' configuration file ...", term.Color.YELLOW))
+                if self.onionRepositoryMode.lower() == 'random':
+                    self.logger.info(term.format("[+] Random address generator selected ...", term.Color.YELLOW))
+                else:
+                    self.logger.info(term.format("[+] Incremental address generator selected ...", term.Color.YELLOW))
+                    self.onionRepositoryMode = (self.onionRepositoryMode.replace('http://', '')).replace('.onion', '')
+                    if len(self.onionRepositoryMode) == 0:
+                        self.logger.warn(term.format("[+] Consider to use the switches -O / --onionpartial-address or -V / --validchars-repository to filter the results. ", term.Color.YELLOW))
+                    if len(self.onionRepositoryMode) <= 10:
+                        self.logger.warn(term.format("[+] You've entered an address with 10 or less characters [just %s chars]. The number of combinations will be very huge. You'll need a considerable process capacity in this machine and let run this process for hours, days or even weeks! If you're sure, let this process run" %(str(len(self.onionRepositoryMode))), term.Color.YELLOW))
+                        sys.stdout.write('%s [y/n]\n' %('Are you sure?'))
+                        while True:
+                            try:
+                                input = raw_input
+                                if strtobool(input().lower()) == True:
+                                    break
+                                else:
+                                    return
+                            except NameError:
+                                pass
+                            except ValueError:
+                                sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
+
+                self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
+                repository.startGenerator(tortazoConfiguration.loadKnownOnionSites)
+                self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                return
+            except KeyboardInterrupt:
+                print "Interrupted!"
+            return
+            #repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
+            #repository.startGenerator()
+            #return
 
 
         if self.zombieMode is None and self.useDatabase is False and self.mode is None:
@@ -476,26 +485,29 @@ class Cli(cli.Application):
                 components = completeModulePath.split('.')
                 for comp in components[1:]:
                     module = getattr(module, comp)
-                if self.socksHost is not None and self.socksPort is not None and self.useLocalTorInstance:
-                    self.logger.info((term.format("[+] You've started a TOR local instance and specified the -U/--use-localinstance option. The plugin loaded will use the following options to connect with TOR and Hidden Services in the deep web: " , term.Color.YELLOW)))
-                    self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
-                    reference = module(torNodesFound)
-                    reference.serviceConnector.setSocksProxySettings(self.socksHost, self.socksPort)
-                    reference.setPluginArguments(pluginArgs)
-                    reference.processPluginArguments()
-                    reference.serviceConnector.cli = self
-                    reference.cli = self
-                else:
-                    self.logger.info((term.format("[+] If you want to connect with Hidden Services in the deep web using the loaded plugin, you must start a TOR local instance manually. The default configuration used to connect with the TOR Socks Server is: " , term.Color.YELLOW)))
-                    self.logger.info((term.format("[+] Host=%s , Port=%s" %(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort), term.Color.YELLOW)))
-                    self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
-                    reference = module(torNodesFound)
-                    reference.serviceConnector.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
-                    reference.setPluginArguments(pluginArgs)
-                    reference.processPluginArguments()
-                    reference.serviceConnector.cli = self
-                    reference.cli = self
-                reference.runPlugin()
+                try:
+                    if self.socksHost is not None and self.socksPort is not None and self.useLocalTorInstance:
+                        self.logger.info((term.format("[+] You've started a TOR local instance and specified the -U/--use-localinstance option. The plugin loaded will use the following options to connect with TOR and Hidden Services in the deep web: " , term.Color.YELLOW)))
+                        self.logger.info((term.format("[+] Host=%s , Port=%s" %(self.socksHost, self.socksPort), term.Color.YELLOW)))
+                        reference = module(torNodesFound)
+                        reference.serviceConnector.setSocksProxySettings(self.socksHost, self.socksPort)
+                        reference.setPluginArguments(pluginArgs)
+                        reference.processPluginArguments()
+                        reference.serviceConnector.cli = self
+                        reference.cli = self
+                    else:
+                        self.logger.info((term.format("[+] If you want to connect with Hidden Services in the deep web using the loaded plugin, you must start a TOR local instance manually. The default configuration used to connect with the TOR Socks Server is: " , term.Color.YELLOW)))
+                        self.logger.info((term.format("[+] Host=%s , Port=%s" %(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort), term.Color.YELLOW)))
+                        self.logger.info((term.format("[+] You can change this configuration editing the 'socksHost' and 'socksPort' properties in 'config.py' module. Also, you can use -T/--tor-localinstance with your 'torrc' file and Tortazo will start a TOR instance for you and then, if you use the -U/--use-localinstance Tortazo will use the TOR local instance started to connect with hidden services in the deep web.", term.Color.YELLOW)))
+                        reference = module(torNodesFound)
+                        reference.serviceConnector.setSocksProxySettings(tortazoConfiguration.socksHost, tortazoConfiguration.socksPort)
+                        reference.setPluginArguments(pluginArgs)
+                        reference.processPluginArguments()
+                        reference.serviceConnector.cli = self
+                        reference.cli = self
+                    reference.runPlugin()
+                except StandardError as standarError:
+                    self.logger.warn((term.format(standarError.message, term.Color.RED)))
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
             else:
                 self.logger.warn((term.format("[-] The plugin specified is unknown... Check the available plugins with -L/--list-plugins option", term.Color.RED)))

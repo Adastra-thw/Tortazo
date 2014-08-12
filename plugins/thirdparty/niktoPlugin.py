@@ -43,10 +43,12 @@ class niktoPlugin(BasePlugin):
                 if len(openPorts) > 0:
                     self.niktoData[torNode.host] = openPorts
             print self.niktoData
-            self.validPluginArgs= []
-            
+        self.pluginConfigs= {}
+
+
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
     
     def executeByIP(self, ipAddress, switches):
         if self.niktoData.has_key(ipAddress) == False:

@@ -26,6 +26,7 @@ from config import config
 from pynessus.rest.client.NessusClient import NessusClient
 from pynessus.rest.data.NessusStructure import NessusConverter
 from plugins.texttable import Texttable
+import requests
 import sys
 
 class nessusPlugin(BasePlugin):
@@ -38,15 +39,25 @@ class nessusPlugin(BasePlugin):
     def __init__(self,torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'nessusPlugin')
         self.setPluginDetails('NessusPlugin', 'Plugin developed to interact with the REST API of Nessus. Uses pynessus-rest library', '1.0', 'Adastra: @jdaanial')
-        if len(torNodes) > 0:
-            self.nessusClient = NessusClient(config.nessusHost, config.nessusPort)
-            self.nessusClient.login(config.nessusUser, config.nessusPass)
-            self.info("[*] NessusPlugin Initialized!")
-        self.validPluginArgs= ["nessusUser", "nessusPassword", "nessusHost", "nessusPort"]
+        self.info("[*] NessusPlugin Initialized!")
+        self.pluginConfigs= {"nessusUser":config.nessusUser, "nessusPassword":config.nessusPass,
+                               "nessusHost":config.nessusHost, "nessusPort":config.nessusPort}
 
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+        self.__login()
+
+    def __login(self):
+        try:
+            self.nessusClient = NessusClient(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"])
+            contents = self.nessusClient.login(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"])
+            if contents['reply']['status'] != 'OK':
+                raise StandardError("[+] Autentication Failed. The credentials used were: user=%s and password=%s. Please, check those values. " %(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"]))
+        except requests.exceptions.ConnectionError:
+            raise StandardError("[-] Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]))
+
+
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -61,7 +72,7 @@ class nessusPlugin(BasePlugin):
         tableBasicFeed = Texttable()
         tableBasicFeed.set_cols_align(["l", "l", "l", "l", "l", "l"])
         tableBasicFeed.set_cols_valign(["m", "m", "m","m", "m", "m"])
-        tableBasicFeed.set_cols_width([40,55,55,55,55,55])
+        tableBasicFeed.set_cols_width([20,20,20,20,20,20])
         rows = [["Feed", "Plugin Rules", "Expiration", "UI Version", "Server Version", "WebServer Version"],
                 [nessusConverter.nessusStructure.feed.feed, nessusConverter.nessusStructure.feed.pluginRules,nessusConverter.nessusStructure.feed.expiration,
                  nessusConverter.nessusStructure.feed.uiVersion,nessusConverter.nessusStructure.feed.serverVersion, nessusConverter.nessusStructure.feed.webServerVersion]]
@@ -72,7 +83,7 @@ class nessusPlugin(BasePlugin):
         tableOtherFeed = Texttable()
         tableOtherFeed.set_cols_align(["l", "l", "l", "l", "l", "l", "l", "l"])
         tableOtherFeed.set_cols_valign(["m", "m", "m","m", "m", "m","m","m"])
-        tableOtherFeed.set_cols_width([40,55,55,55,55,55,55,55])
+        tableOtherFeed.set_cols_width([20,20,20,20,20,20,20,20])
         rowsOther = [["Nessus Type", "Diff","Expiration Time","Report Email", "Tags", "MSP", "Multi-Scanner","Loaded PluginSet"],
                 [nessusConverter.nessusStructure.feed.nessusType, nessusConverter.nessusStructure.feed.diff,nessusConverter.nessusStructure.feed.expirationTime,
                  nessusConverter.nessusStructure.feed.reportEmail, nessusConverter.nessusStructure.feed.tags, nessusConverter.nessusStructure.feed.msp,
@@ -89,7 +100,7 @@ class nessusPlugin(BasePlugin):
         tableNessusSecureSettings = Texttable()
         tableNessusSecureSettings.set_cols_align(["l", "l", "l", "l", "l", "l"])
         tableNessusSecureSettings.set_cols_valign(["m", "m", "m", "m", "m", "m"])
-        tableNessusSecureSettings.set_cols_width([40,55,55,55,55,55])
+        tableNessusSecureSettings.set_cols_width([20,20,20,20,20,20])
         
         rows = [["Proxy Password", "Proxy Port", "Custom Host", "Proxy Username", "User Agent", "Proxy"],
                 [nessusConverter.nessusStructure.secureSettings.proxyPassword, nessusConverter.nessusStructure.secureSettings.proxyPort,
@@ -107,7 +118,7 @@ class nessusPlugin(BasePlugin):
         tableNessusSecureSettings.set_cols_align(["l"])
         tableNessusSecureSettings.set_cols_valign(["m"])
         tableNessusSecureSettings.set_cols_width([55])
-        rows [["Preferences"],[nessusConverter.nessusStructure.secureSettings.preferences]]
+        rows = [["Preferences"],[nessusConverter.nessusStructure.secureSettings.preferences]]
         tableNessusSecureSettings.add_rows(rows)
         print tableNessusSecureSettings.draw()+"\n"
 
@@ -145,7 +156,7 @@ class nessusPlugin(BasePlugin):
         tableNessusServerLoad = Texttable()
         tableNessusServerLoad.set_cols_align(["l","l","l","l","l","l"])
         tableNessusServerLoad.set_cols_valign(["m","m","m","m","m","m"])
-        tableNessusServerLoad.set_cols_width([55,55,55,55,55,55])
+        tableNessusServerLoad.set_cols_width([20,20,20,20,20,20])
         rows = [["Scans", "Sessions","Hosts","TCP Sessions", "Load AVG", "Platform"],
                 [nessusConverter.nessusStructure.serverLoad.numScans,nessusConverter.nessusStructure.serverLoad.numSessions,
                  nessusConverter.nessusStructure.serverLoad.numHosts,nessusConverter.nessusStructure.serverLoad.numTcpSessions,
@@ -178,7 +189,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l","l","l"])
         tableUsers.set_cols_valign(["m","m","m","m"])
-        tableUsers.set_cols_width([55,55,55,55])
+        tableUsers.set_cols_width([20,20,20,20])
         
         rows = [["Name", "Admin", "Idx", "Last-Login"],
                 [nessusConverter.nessusStructure.nessusUser.name,nessusConverter.nessusStructure.nessusUser.admin,
@@ -198,7 +209,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l","l","l"])
         tableUsers.set_cols_valign(["m","m","m","m"])
-        tableUsers.set_cols_width([55,55,55,55])
+        tableUsers.set_cols_width([20,20,20,20])
         rows = [["Name", "Admin", "Idx", "Last-Login"],
                 [nessusConverter.nessusStructure.nessusUser.name,
                  nessusConverter.nessusStructure.nessusUser.admin,
@@ -216,7 +227,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l","l","l"])
         tableUsers.set_cols_valign(["m","m","m","m"])
-        tableUsers.set_cols_width([55,55,55,55])
+        tableUsers.set_cols_width([20,20,20,20])
         rows = [["Name", "Admin", "Idx", "Last-Login"],
                 [nessusConverter.nessusStructure.nessusUser.name,
                  nessusConverter.nessusStructure.nessusUser.admin,
@@ -234,7 +245,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l","l","l"])
         tableUsers.set_cols_valign(["m","m","m","m"])
-        tableUsers.set_cols_width([55,55,55,55])
+        tableUsers.set_cols_width([20,20,20,20])
         rows = [["Name", "Admin", "Idx", "Last-Login"],
                 [nessusConverter.nessusStructure.nessusUser.name,
                  nessusConverter.nessusStructure.nessusUser.admin,
@@ -252,7 +263,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l","l","l"])
         tableUsers.set_cols_valign(["m","m","m","m"])
-        tableUsers.set_cols_width([55,55,55,55])
+        tableUsers.set_cols_width([20,20,20,20])
         rows = [["Name", "Admin", "Idx", "Last-Login"]]
                 
         for nessusUser in nessusConverter.nessusStructure.nessusUsers:
@@ -269,7 +280,7 @@ class nessusPlugin(BasePlugin):
         tableUsers = Texttable()
         tableUsers.set_cols_align(["l","l"])
         tableUsers.set_cols_valign(["m","m"])
-        tableUsers.set_cols_width([55,55])
+        tableUsers.set_cols_width([40,40])
         
         rows = [["Family Member", "Family Name"]]
         for nessusPlugin in nessusConverter.nessusStructure.pluginsList:
@@ -284,7 +295,7 @@ class nessusPlugin(BasePlugin):
         tablePluginsAttributes = Texttable()
         tablePluginsAttributes.set_cols_align(["l","l","l"])
         tablePluginsAttributes.set_cols_valign(["m","m","m"])
-        tablePluginsAttributes.set_cols_width([55,55,55])
+        tablePluginsAttributes.set_cols_width([30,30,30])
         
         rows = [["Readable Name", 'Readable Regex', 'List']]
         
@@ -300,7 +311,7 @@ class nessusPlugin(BasePlugin):
         tablePluginsListFamily = Texttable()
         tablePluginsListFamily.set_cols_align(["l","l","l","l"])
         tablePluginsListFamily.set_cols_valign(["m","m","m","m"])
-        tablePluginsListFamily.set_cols_width([55,55,55,55])
+        tablePluginsListFamily.set_cols_width([20,20,20,20])
 
 
         rows = [["Plugin ID", "Plugin Name", "Plugin Family", 'Plugin FileName']]
@@ -316,7 +327,7 @@ class nessusPlugin(BasePlugin):
         tablePluginDescription = Texttable()
         tablePluginDescription.set_cols_align(["l","l","l"])
         tablePluginDescription.set_cols_valign(["m","m","m"])
-        tablePluginDescription.set_cols_width([55,55,55])
+        tablePluginDescription.set_cols_width([20,20,20])
 
         
         rowsPluginDescription = [ ["Plugin ID", "Plugin Name", "Plugin Family"],
@@ -330,7 +341,7 @@ class nessusPlugin(BasePlugin):
         tablePluginAttributes = Texttable()
         tablePluginAttributes.set_cols_align(["l","l","l","l","l","l","l","l","l"])
         tablePluginAttributes.set_cols_valign(["m","m","m","m","m","m","m","m","m"])
-        tablePluginAttributes.set_cols_width([55,55,55,55,55,55,55,55,55])
+        tablePluginAttributes.set_cols_width([10,10,10,10,10,10,10,10,10])
         
         rowsPluginAttributes = [["Vuln Date", "Risk Factor", "CVSS", 'Type', 'Patch Date', 'CVSS Score', 'CVE', 'BID', 'CPE']]
         if nessusConverter.nessusStructure.pluginsDescription is not None:
@@ -356,7 +367,7 @@ class nessusPlugin(BasePlugin):
         tablePluginAttributes.set_cols_align(["l"])
         tablePluginAttributes.set_cols_valign(["m"])
         tablePluginAttributes.set_cols_width([55])
-        tablePluginAttributes.add_row([["Family"], [nessusConverter.nessusStructure.pluginsAttributeFamilySearch]])
+        tablePluginAttributes.add_rows([["Family"], [nessusConverter.nessusStructure.pluginsAttributeFamilySearch]])
         print tablePluginAttributes.draw()+"\n"
 
 
@@ -368,7 +379,7 @@ class nessusPlugin(BasePlugin):
         tablePluginAttributes = Texttable()
         tablePluginAttributes.set_cols_align(["l","l","l"])
         tablePluginAttributes.set_cols_valign(["m","m","m"])
-        tablePluginAttributes.set_cols_width([55,55,55])
+        tablePluginAttributes.set_cols_width([30,30,30])
         
         rows = [["Family", "FileName", "Plugin ID", "Plugin Name"]]
         
@@ -418,7 +429,7 @@ class nessusPlugin(BasePlugin):
         tablePolicies = Texttable()
         tablePolicies.set_cols_align(["l","l","l","l"])
         tablePolicies.set_cols_valign(["m","m","m","m"])
-        tablePolicies.set_cols_width([55,55,55,55])
+        tablePolicies.set_cols_width([30,30,30,30])
         
         rows = [["Id", "Name","Owner","Visibility"]]
         for policy in nessusConverter.nessusStructure.nessusPolicies:
@@ -448,7 +459,7 @@ class nessusPlugin(BasePlugin):
         tablePolicies = Texttable()
         tablePolicies.set_cols_align(["l","l","l","l"])
         tablePolicies.set_cols_valign(["m","m","m","m"])
-        tablePolicies.set_cols_width([55,55,55,55])
+        tablePolicies.set_cols_width([30,30,30,30])
         
         rows = [["Id", "Name","Owner","Visibility"]]
         for policy in nessusConverter.nessusStructure.nessusPolicies:
@@ -480,7 +491,7 @@ class nessusPlugin(BasePlugin):
         tableScan = Texttable()
         tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
         tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+        tableScan.set_cols_width([20,20,20,20,20,20,20,20])
 
         rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
                 [nessusConverter.nessusStructure.scan.owner,
@@ -510,7 +521,7 @@ class nessusPlugin(BasePlugin):
             tableScan = Texttable()
             tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
             tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-            tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+            tableScan.set_cols_width([20,20,20,20,20,20,20,20])
             rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
                     [nessusConverter.nessusStructure.scan.owner,
                      nessusConverter.nessusStructure.scan.scanName,
@@ -533,7 +544,7 @@ class nessusPlugin(BasePlugin):
         tableScan = Texttable()
         tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
         tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+        tableScan.set_cols_width([20,20,20,20,20,20,20,20])
 
         rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
                 [nessusConverter.nessusStructure.scan.owner,
@@ -555,7 +566,7 @@ class nessusPlugin(BasePlugin):
         tableScan = Texttable()
         tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
         tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+        tableScan.set_cols_width([20,20,20,20,20,20,20,20])
 
         rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
                 [nessusConverter.nessusStructure.scan.owner,
@@ -577,7 +588,7 @@ class nessusPlugin(BasePlugin):
         tableScan = Texttable()
         tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
         tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+        tableScan.set_cols_width([20,20,20,20,20,20,20,20])
 
         rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"],
                 [nessusConverter.nessusStructure.scan.owner,
@@ -599,7 +610,7 @@ class nessusPlugin(BasePlugin):
         tableScan = Texttable()
         tableScan.set_cols_align(["l","l","l","l","l","l","l","l"])
         tableScan.set_cols_valign(["m","m","m","m","m","m","m","m"])
-        tableScan.set_cols_width([55,55,55,55,55,55,55,55])
+        tableScan.set_cols_width([20,20,20,20,20,20,20,20])
 
         rows = [["Owner", "Scan Name", "Start Time", "UUID", "Readable Name", "Status", "Completion Current","Completion Total"]]
         if len(nessusConverter.nessusStructure.scanList) > 0:
@@ -620,7 +631,7 @@ class nessusPlugin(BasePlugin):
         tableTemplate = Texttable()
         tableTemplate.set_cols_align(["l","l","l","l","l"])
         tableTemplate.set_cols_valign(["m","m","m","m","m"])
-        tableTemplate.set_cols_width([55,55,55,55,55])
+        tableTemplate.set_cols_width([20,20,20,20,20])
         
         rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"],
                 [nessusConverter.nessusStructure.nessusScanTemplate.owner,
@@ -646,7 +657,7 @@ class nessusPlugin(BasePlugin):
             tableTemplate = Texttable()
             tableTemplate.set_cols_align(["l","l","l","l","l"])
             tableTemplate.set_cols_valign(["m","m","m","m","m"])
-            tableTemplate.set_cols_width([55,55,55,55,55])
+            tableTemplate.set_cols_width([20,20,20,20,20])
             rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"],
                     [nessusConverter.nessusStructure.nessusScanTemplate.owner,
                      nessusConverter.nessusStructure.nessusScanTemplate.readablename,
@@ -667,7 +678,7 @@ class nessusPlugin(BasePlugin):
         tableTemplate = Texttable()
         tableTemplate.set_cols_align(["l","l","l","l","l"])
         tableTemplate.set_cols_valign(["m","m","m","m","m"])
-        tableTemplate.set_cols_width([55,55,55,55,55])
+        tableTemplate.set_cols_width([20,20,20,20,20])
         rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
         if nessusConverter.nessusStructure.nessusScanTemplate is not  None:
             rows.append([nessusConverter.nessusStructure.nessusScanTemplate.owner,
@@ -696,7 +707,7 @@ class nessusPlugin(BasePlugin):
             tableTemplate = Texttable()
             tableTemplate.set_cols_align(["l","l","l","l","l"])
             tableTemplate.set_cols_valign(["m","m","m","m","m"])
-            tableTemplate.set_cols_width([55,55,55,55,55])
+            tableTemplate.set_cols_width([20,20,20,20,20])
             rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
 
             if nessusConverter.nessusStructure.nessusScanTemplate is not None:
@@ -715,7 +726,7 @@ class nessusPlugin(BasePlugin):
         tableTemplate = Texttable()
         tableTemplate.set_cols_align(["l","l","l","l","l"])
         tableTemplate.set_cols_valign(["m","m","m","m","m"])
-        tableTemplate.set_cols_width([55,55,55,55,55])
+        tableTemplate.set_cols_width([20,20,20,20,20])
         rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
         
         if nessusConverter.nessusStructure.nessusScanTemplate is not None:
@@ -735,7 +746,7 @@ class nessusPlugin(BasePlugin):
         tableTemplate = Texttable()
         tableTemplate.set_cols_align(["l","l","l","l","l"])
         tableTemplate.set_cols_valign(["m","m","m","m","m"])
-        tableTemplate.set_cols_width([55,55,55,55,55])
+        tableTemplate.set_cols_width([20,20,20,20,20])
         rows = [["Owner", "Readable Name", "Target", "Scan Name", "Policy ID"]]
         
         if nessusConverter.nessusStructure.nessusScanTemplate is not None:
@@ -754,7 +765,7 @@ class nessusPlugin(BasePlugin):
         tableReport = Texttable()
         tableReport.set_cols_align(["l","l","l","l"])
         tableReport.set_cols_valign(["m","m","m","m"])
-        tableReport.set_cols_width([55,55,55,55])
+        tableReport.set_cols_width([20,20,20,20])
         rows = [["Status","Readable Name", "UUID", "Timestamp"]]
         
         if nessusConverter.nessusStructure.reportList is not None:
@@ -779,7 +790,7 @@ class nessusPlugin(BasePlugin):
         tableReport = Texttable()
         tableReport.set_cols_align(["l","l","l","l","l","l"])
         tableReport.set_cols_valign(["m","m","m","m","m","m"])
-        tableReport.set_cols_width([55,55,55,55,55,55])
+        tableReport.set_cols_width([20,20,20,20,20,20])
         
         rows = [["Hostname","Num. Checks", "Total Checks", "Scan Progress Current", "Scan Progress Total", "Severity"]]
         
@@ -801,7 +812,7 @@ class nessusPlugin(BasePlugin):
         tableReport = Texttable()
         tableReport.set_cols_align(["l","l","l","l"])
         tableReport.set_cols_valign(["m","m","m","m"])
-        tableReport.set_cols_width([55,55,55,55])
+        tableReport.set_cols_width([20,20,20,20])
         
         rows = [["Port Number","Protocol", "Severity", "SVC Name"]]
         if nessusConverter.nessusStructure.reportPortList is not None:
@@ -820,7 +831,7 @@ class nessusPlugin(BasePlugin):
         tableReport = Texttable()
         tableReport.set_cols_align(["l","l","l","l","l","l","l","l","l","l","l","l"])
         tableReport.set_cols_valign(["m","m","m","m","m","m","m","m","m","m","m","m"])
-        tableReport.set_cols_width([55,55,55,55,55,55,55,55,55,55,55,55])
+        tableReport.set_cols_width([10,10,10,10,10,10,10,10,10,10,10,10])
         
         rows = [["ItemId", "Port", "Severity", "Plugin Id", "Plugin Name", "BID", "CPE","CVE","CVSS Base Score","CVSS Temporal Score","Description", "FName"]]
         if nessusConverter.nessusStructure.reportPortDetail is not None:
@@ -849,7 +860,7 @@ class nessusPlugin(BasePlugin):
         tableReport.set_cols_valign(["m","m"])
         tableReport.set_cols_width([55,55])
         
-        tableReport = [["Tag Name","Tag Value"]]
+        rows = [["Tag Name","Tag Value"]]
         if nessusConverter.nessusStructure.nessusTags is not None:
             for tag in nessusConverter.nessusStructure.nessusTags:
                 rows.append([tag.name, tag.value])
@@ -866,7 +877,7 @@ class nessusPlugin(BasePlugin):
         tableReport = Texttable()
         tableReport.set_cols_align(["l","l","l","l"])
         tableReport.set_cols_valign(["m","m","m","m"])
-        tableReport.set_cols_width([55,55,55,55])
+        tableReport.set_cols_width([30,30,30,30])
         
         rows = [["Name","Readable Name","Readable Regex", "Operators"]]
         if nessusConverter.nessusStructure.nessusReportAttributes is not None:
@@ -908,13 +919,13 @@ class nessusPlugin(BasePlugin):
                          ['policyList', 'List of available policies, policy settings and default values.', "self.policyList()"],
                          ['policyDelete', 'Delete the policy specified.', "self.policyDelete(POLICY_ID)"],
                          ['policyCopy', 'Copies an existing policy to a new policy.', "self.policyCopy(POLICY_ID)"],
-                         ['policyDownload', 'Download the policy from the server to the local system.', "self.policyDownload(POLICY_ID, /home/user/policy.nessus)"],
-                         ['scanAllRelays', 'Create a new scan with all relays loaded.', "self.scanAllRelays(<POLICY_ID>, 'newScan')"],
-                         ['scanByRelay', 'Create a new scan with the specified relay.', "self.scanAllRelays(<POLICY_ID>, 'newScan', <IP_OR_NICKNAME>)"],
+                         ['policyDownload', 'Download the policy from the server to the local system.', "self.policyDownload(POLICY_ID, '/home/user/policy.nessus')"],
+                         #['scanAllRelays', 'Create a new scan with all relays loaded.', "self.scanAllRelays(<POLICY_ID>, 'newScan')"],
+                         #['scanByRelay', 'Create a new scan with the specified relay.', "self.scanAllRelays(<POLICY_ID>, 'newScan', <IP_OR_NICKNAME>)"],
                          ['scanStop', 'Stops the specified started scan.', "self.scanStop(<SCAN_UUID>)"],
                          ['scanResume', 'Resumes the specified paused scan.', "self.scanResume(<SCAN_UUID>)"],
                          ['scanPause', 'Pauses the specified actived scan.', "self.scanPause(<SCAN_UUID>)"],
-                         ['scanList', 'List of scans.', "self.scanList()"],
+                         ['scanList', 'List of finished scans.', "self.scanList()"],
                          ['scanTemplateAllRelays', 'Create a new scan template (scheduled) with all relays loaded.', "self.scanTemplateAllRelays(<POLICY_ID>,<TEMPLATE_NAME>)"],
                          ['scanTemplateByRelay', 'Create a new scan template (scheduled) with the specified relay.', "self.scanTemplateByRelay(<POLICY_ID>,<TEMPLATE_NEW_NAME>,<IP_OR_NICKNAME>)"],
                          ['scanTemplateEditAllRelays', 'Edit the scan template specified with all relays loaded.', "self.scanTemplateEditAllRelays(<POLICY_ID>,<TEMPLATE_NEW_NAME>)"],

@@ -35,10 +35,12 @@ class infoGatheringPlugin(BasePlugin):
         self.setPluginDetails('infoGatheringPlugin', 'Information Gathering of Tor relays.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] infoGatheringPlugin Initialized!")
-        self.validPluginArgs= []
+        self.pluginConfigs= {}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -46,8 +48,12 @@ class infoGatheringPlugin(BasePlugin):
 
     def printRelaysFound(self):
         #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
-        tableRelays = PrettyTable(["NickName", "Host", "State", "Reason", "Open Ports"])
-        tableRelays.padding_width = 1
+        table = Texttable()
+        table.set_cols_align(["l", "l", "l", "l", "l"])
+        table.set_cols_valign(["m", "m", "m","m", "m", "m"])
+        table.set_cols_width([20,20,20,20,20])
+
+        rows = [["NickName", "Host", "State", "Reason", "Open Ports"]]
         openPorts = None
 
         for torNode in self.torNodes:
@@ -56,16 +62,16 @@ class infoGatheringPlugin(BasePlugin):
                 openPorts += str(port.reason)+':'+str(port.port)
 
             if openPorts is None:
-                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
+                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
             else:
-                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
+                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
             openPorts = None
-        print tableRelays.get_string(sortby='NickName')
+
 
     def checkOutdateRelays(self, torVersion='0.2.3.0'):
         print "Checking relays with TOR version equals or less to %s " %(torVersion)
         for torNode in self.torNodes:
-            if torNode.torVersion < Version('0.2.3.0'):
+            if torNode.torVersion < Version(torVersion):
                 print "[*] Older version of TOR detected: %s Nickname of the Relay %s IP Address reported %s" %(torNode.torVersion,torNode.nickName,torNode.host)
 
 

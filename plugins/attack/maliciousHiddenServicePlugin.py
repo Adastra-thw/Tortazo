@@ -58,10 +58,12 @@ class maliciousHiddenServicePlugin(BasePlugin):
         self.setPluginDetails('maliciousHiddenServicePlugin', 'Creates a malicious hidden service in TOR network and tries to de-anonimyze the users.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] maliciousHiddenServicePlugin Initialized!")
-        self.validPluginArgs= []
+        self.pluginConfigs= {}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
 
     def __del__(self):
         if len(self.torNodes) > 0:

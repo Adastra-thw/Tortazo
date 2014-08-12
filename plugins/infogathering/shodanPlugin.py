@@ -35,10 +35,12 @@ class shodanPlugin(BasePlugin):
         self.setPluginDetails('shodanPlugin', 'Plugin to gather information using the Shodan Database.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] shodanPlugin Initialized!")
-        self.validPluginArgs= []
+        self.pluginConfigs= {}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -58,15 +60,22 @@ class shodanPlugin(BasePlugin):
             shodanApi = shodan.Shodan(self.apiKey)
             results = shodanApi.search(basicSearch)
             count = 0
-            tableShodan = PrettyTable(["Data"])
+            table = Texttable()
+            table.set_cols_align(["l"])
+            table.set_cols_valign(["m"])
+            table.set_cols_width([55])
+
+            rows = [["Data"]]
+
             for service in results['matches']:
                 if count == limit:
                     break
                 else:
                     count += 1
-                    tableShodan.padding_width = 1
-                    tableShodan.add_row([service['ip_str']+"\n"+service['data']])
-            print tableShodan
+                    rows.append([service['ip_str']+"\n"+service['data']])
+            table.add_rows(rows)
+            print table.draw() + "\n"
+
         else:
             print "[*] Shodan API key not set. This is mandatory to perform searches using Shodan"
 
@@ -75,14 +84,20 @@ class shodanPlugin(BasePlugin):
             shodanApi = shodan.Shodan(self.apiKey)
             for node in self.torNodes:
                 results = shodanApi.search(basicSearch+"net:"+node.host)
-                tableShodan = PrettyTable(["Data"])
+
+                table = Texttable()
+                table.set_cols_align(["l"])
+                table.set_cols_valign(["m"])
+                table.set_cols_width([55])
+
+                rows = [["Data"]]
                 if len(results['matches']) > 0:
                     print results
                     print "[*] Data for: %s " %(node.host)
                     for service in results['matches']:
-                        tableShodan.padding_width = 1
-                        tableShodan.add_row([service['ip_str']+"\n"+service['data']])
-                    print tableShodan
+                        rows.append([service['ip_str']+"\n"+service['data']])
+                    table.add_rows(rows)
+                    print table.draw() + "\n"
                 else:
                     print "[*] No results for: %s " %(node.host)
         else:
@@ -94,14 +109,18 @@ class shodanPlugin(BasePlugin):
             for node in self.torNodes:
                 if relay is not None and node.host == relay:
                     results = shodanApi.search(basicSearch+"net:"+node.host)
-                    tableShodan = PrettyTable(["Data"])
+                    table = Texttable()
+                    table.set_cols_align(["l"])
+                    table.set_cols_valign(["m"])
+                    table.set_cols_width([55])
+                    rows = [["Data"]]
                     if len(results['matches']) > 0:
                         print results
                         print "[*] Data for: %s " %(node.host)
                         for service in results['matches']:
-                            tableShodan.padding_width = 1
-                            tableShodan.add_row([service['ip_str']+"\n"+service['data']])
-                        print tableShodan
+                            rows.append([service['ip_str']+"\n"+service['data']])
+                        table.add_rows(rows)
+                        print table.draw() + "\n"
                     else:
                         print "[*] No results for: %s " %(node.host)
         else:
@@ -113,14 +132,18 @@ class shodanPlugin(BasePlugin):
             for node in self.torNodes:
                 if nickname is not None and node.nickName == nickname:
                     results = shodanApi.search(basicSearch+"net:"+node.host)
-                    tableShodan = PrettyTable(["Data"])
+                    table = Texttable()
+                    table.set_cols_align(["l"])
+                    table.set_cols_valign(["m"])
+                    table.set_cols_width([55])
+                    rows = [["Data"]]
                     if len(results['matches']) > 0:
                         print results
                         print "[*] Data for: %s " %(node.host)
                         for service in results['matches']:
-                            tableShodan.padding_width = 1
-                            tableShodan.add_row([service['ip_str']+"\n"+service['data']])
-                        print tableShodan
+                            rows.append([service['ip_str']+"\n"+service['data']])
+                        table.add_rows(rows)
+                        print table.draw() + "\n"
                     else:
                         print "[*] No results for: %s " %(node.host)
         else:

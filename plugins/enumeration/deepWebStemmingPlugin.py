@@ -42,10 +42,12 @@ class deepWebStemmingPlugin(BasePlugin):
             #self.metric = Metrics()
             self.info("[*] deepWebStemmingPlugin Initialized!")
             self.webPorts = [80,443,8080]
-        self.validPluginArgs= []
+        self.pluginConfigs= {"timeOutRequests":config.timeOutRequests}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
 
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -56,7 +58,7 @@ class deepWebStemmingPlugin(BasePlugin):
 
         for node in self.torNodes:
             if portNumber is not None and portNumber in node.openPorts:
-                response = requests.get(node.host+":"+port, timeout=config.timeOutRequests)
+                response = requests.get(node.host+":"+port, timeout=self.pluginConfigs['timeOutRequests'])
                 self.validateResponse(response, queryTerms)
             else:
                 for port in node.openPorts:

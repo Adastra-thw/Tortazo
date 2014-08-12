@@ -45,10 +45,12 @@ class w3afPlugin(BasePlugin):
             self.w3afCorePlugin.plugins.init_plugins()
             self.w3afCorePlugin.plugins.zero_enabled_plugins()
             self.miscSettings = MiscSettings()
-        self.validPluginArgs= []
+        self.pluginConfigs= {}
+
 
     def processPluginArguments(self):
-        pass
+        BasePlugin.processPluginArguments(self)
+
     
     def __del__(self):
         if len(self.torNodes) > 0:
@@ -61,15 +63,15 @@ class w3afPlugin(BasePlugin):
     def showPluginsByType(self, type):
         pluginByType = self.w3afCorePlugin.plugins.get_plugin_list(type)
         tablePlugins = Texttable()
-        tableVulns.set_cols_align(["l"])
-        tableVulns.set_cols_valign(["m"])
-        tableVulns.set_cols_width([55])
+        tablePlugins.set_cols_align(["l"])
+        tablePlugins.set_cols_valign(["m"])
+        tablePlugins.set_cols_width([55])
         rows = [ ["[*] Plugins for %s "%(type)] ]
         for plugin in pluginByType:
             rows.append([plugin])
             
-        tableVulns.add_rows(rows)       
-        print tableVulns.draw() + "\n"
+        tablePlugins.add_rows(rows)
+        print tablePlugins.draw() + "\n"
 
 
     def showPluginTypes(self):

@@ -274,6 +274,8 @@ class RepositoryProcess:
             if response.status_code not in range(400,499):
                 self.onionQueueResponses.put((response,onionDescription))
         except Exception as exc:
+            #import sys
+            #print sys.exc_info()
             if exc.message == 'connection timeout':
                 print "[-] Connection Timeout to: "+httpAddress
                 pass
