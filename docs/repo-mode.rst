@@ -75,18 +75,18 @@ This mechanism will reduce the memory usage, but sadly, not the complexity and t
 Usage examples for the Onion Repository in Incremental mode
 =================
 Try to generate and analize the combinations using the partial onion address dfrh5uig61u6
-* -R / --onion-repository:      Activate the onion repository in Tortazo.
+* -R / --onion-repository:      Activate the onion repository in Tortazo and performs HTTP connections.
 * -O / --onionpartial-address   Specify the partial onion address for the Incremental mode in the Onion repository mode.
 * -W / --workers-repository     Specify the number of worker processes to use in the onion repository. ::
 
-    python Tortazo -v -R -O dfrh5uig61u6 -W 15
+    python Tortazo -v -R http -O dfrh5uig61u6 -W 15
 
 Try to generate and analize the combinations using the partial onion address dfrh5uig
-* -R / --onion-repository:      Activate the onion repository in Tortazo.
+* -R / --onion-repository:      Activate the onion repository in Tortazo and performs HTTP connections.
 * -O / --onionpartial-address   Specify the partial onion address for the Incremental mode in the Onion repository mode.
 * -W / --workers-repository     Specify the number of worker processes to use in the onion repository. ::
 
-    python Tortazo -v -R -O dfrh5uig -W 15
+    python Tortazo -v -R http -O dfrh5uig -W 15
 
 
 =================
@@ -96,7 +96,7 @@ If you just want to gather onion addresses without any pattern or information ab
 This mode is like having a gun and fired into the air to a sky full of ducks, there is no guarantee to succeed, but if you're lucky, you’ll get a correct answer.
 To activate the random mode, just use the keywork "RANDOM" as value of the switch "-O  /  --onionpartial-address" ::
 
-    python Tortazo -v -R -O RANDOM -W 10
+    python Tortazo -v -R ftp -O RANDOM -W 10
 
     
 =================
@@ -106,3 +106,9 @@ The onion addresses are very important to perform enumerations or perform attack
 Due there's a lot of onion addresses known in internet or in the deep web searchers, have sense to load those addresses in database to use them from any plugin.
 In Tortazo, the file <TORTAZO_DIR>/db/knownOnionAddresses.txt contains 400+ onion addresses which by default are loaded in the local database when the user activates the onion repository mode with the switch "-R  /  --onion-repository".
 If you want to disable this behaviour, set to False the property "loadKnownOnionSites" in the configuration file <TORTAZO_DIR>/config/config.py 
+
+=================
+Searching for specific services:
+=================
+The onion repository mode, allows to perform connections to services like HTTP, SSH and FTP. So you can discover hidden services which use that kind of protocols. Also, if you specify "onionup" as argument of the "-R" switch, Tortazo will perform HTTP Requests to the service https://onionup.com to check if the specified address contains a hidden service up and running.
+

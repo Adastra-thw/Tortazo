@@ -89,8 +89,8 @@ class ServiceConnector():
                 ftpFile.close()
                 return True
         except ftplib.socket.gaierror as sockerror:
-            print "An error ocurred. See the full trace: "
-            print sys.exc_info()
+            #print "An error ocurred. See the full trace: "
+            #print sys.exc_info()
             raise sockerror
         except ftplib.all_errors, e:
             errorcode_string = str(e).split(None, 1)
@@ -170,11 +170,11 @@ class ServiceConnector():
             print "[-] Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort)
             raise proxyExc
         except paramiko.SSHException as sshExc:
-            print "[-] Seems that the Hidden Service is not running. Please, check that before running the bruteforce attack."
+            # Seems that the Hidden Service is not running. 
             raise sshExc
         except Exception as exc:
-            print "[-] An error ocurred. See the full trace: "
-            print sys.exc_info()
+            #print "[-] An error ocurred. See the full trace: "
+            #print sys.exc_info()
             raise exc
 
         if client:

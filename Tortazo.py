@@ -214,7 +214,7 @@ class Cli(cli.Application):
         '''
         self.onionRepositoryMode = onionRepositoryMode
 
-    @cli.switch(["-R", "--onion-repository"], str, cli.Set("ssh", "ftp", "http", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
+    @cli.switch(["-R", "--onion-repository"], str, cli.Set("ssh", "ftp", "http", "onionup", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
     def activateOnionRepository_Mode(self, activateOnionRepositoryMode):
         '''
         Onion repository mode.
@@ -366,12 +366,14 @@ class Cli(cli.Application):
                                 pass
                             except ValueError:
                                 sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
-
-                self.logger.info(term.format("[+] Starting the Onion repository mode ...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
-                repository.startGenerator(tortazoConfiguration.loadKnownOnionSites)
-                self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                return
+                try:
+                    self.logger.info(term.format("[+] Starting the Onion repository mode against "+self.activateOnionRepositoryMode+" services...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                    repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
+                    repository.startGenerator(tortazoConfiguration.loadKnownOnionSites, self.activateOnionRepositoryMode)
+                    self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                except StandardError as standardExcept:
+                    self.logger.warn((term.format(standarError.message, term.Color.RED)))
+                
             except KeyboardInterrupt:
                 print "Interrupted!"
             return
