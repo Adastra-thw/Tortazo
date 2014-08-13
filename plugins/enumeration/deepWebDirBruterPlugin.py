@@ -132,4 +132,4 @@ class deepWebDirBruterPlugin(BasePlugin):
                          ['dirBruterOnAllRelays', 'Try to discover web resources in the relays stored in database. If the dictionary is not specified, Tortazo will use FuzzDB.', "self.dirBruterOnAllRelays(port=8080,dictFile='/home/user/dictFile.txt')"],
                          ['dirBruterOnHiddenService', 'Try to discover web resources in the specified hidden service. If the dictionary is not specified, Tortazo will use FuzzDB.', 'self.dirBruterOnHiddenService("http://awjrc4y7j9po3ke3.onion")']
                         ])
-        print table.draw() + "\\n"
+        print table.draw() + "\n"

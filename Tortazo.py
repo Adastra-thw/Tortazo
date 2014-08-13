@@ -39,6 +39,7 @@ from distutils.util import strtobool
 import string
 import random
 from pyfiglet import Figlet
+import time
 
 #
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
@@ -269,8 +270,6 @@ class Cli(cli.Application):
         if self.verbose:
             self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
             self.logger.debug(term.format("[+] Verbose mode activated.", term.Color.GREEN))
-        else:
-            self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.WARN)
         self.logger.info(term.format("[+] Process started at " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
 
         if self.cleanDatabase:
@@ -314,6 +313,7 @@ class Cli(cli.Application):
                     for config in torConfig.keys():
                         self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
                     self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.logsTorInstance)
+                    time.sleep(5)
                     if self.torProcess > 0:
                         #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
                         self.logger.debug(term.format("[+] TOR Process created. PID %s " %(self.torProcess.pid),  term.Color.GREEN))
@@ -338,6 +338,7 @@ class Cli(cli.Application):
                     if hasattr(self,"torProcess") and self.torProcess is not None:
                         self.logger.info(term.format("[+] Stopping the TOR process.", term.Color.YELLOW))
                         self.torProcess.kill()
+
             else:
                 self.logger.warn(term.format("The specified torrc file is not valid: %s " %(str(self.torLocalInstance)), term.Color.RED))
 

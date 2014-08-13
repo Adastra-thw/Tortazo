@@ -153,7 +153,8 @@ class ServiceConnector():
             return True
 
     def performSSHConnectionHiddenService(self, onionService, port, user, passwd):
-        self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=self.cli.logger.ERROR)
+        if hasattr(self, "cli") and self.cli != None:
+            self.cli.logger.basicConfig(format="%(levelname)s: %(message)s", level=self.cli.logger.ERROR)
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         proxyCommand = os.getcwd()+'/plugins/utils/connect-socks -S '+self.socksHost+':'+str(self.socksPort)+' '+onionService+' '+str(port)
@@ -167,7 +168,6 @@ class ServiceConnector():
         except paramiko.AuthenticationException:
             return False
         except paramiko.ProxyCommandFailure as proxyExc:
-            print "[-] Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort)
             raise proxyExc
         except paramiko.SSHException as sshExc:
             # Seems that the Hidden Service is not running. 

@@ -24,6 +24,8 @@ selectTorScan="select id, scanDate from Scan limit ?"
 selectTorScanIdentifier="select id, scanDate from Scan where id = ?"
 nextIdHostNodeData="select max(node.id) from TorNodeData as node"
 selectOnionRepositoryProgress="select id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet from OnionRepositoryProgress WHERE endDate IS NULL AND partialOnionAddress = ? AND validChars = ?"
+selectOnionRepositoryResponses="select onionAddress, responseCode, responseHeaders,onionDescription, serviceType from OnionRepositoryResponses LIMIT ? OFFSET ? "
+countOnionRepositoryResponses="select count(*) from OnionRepositoryResponses "
 
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, scanId) values(?, ?, ?, ?, ?, ?, ?, ?)"

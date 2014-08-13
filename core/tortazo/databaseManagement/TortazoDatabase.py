@@ -53,7 +53,7 @@ class TortazoDatabase:
 ################################################################################################################################################
 ################################################################################################################################################
 ####                                                                                                                                        ####
-####          DATABASE FUNCTIONS FOR INFO. GATERHING MODE                                                                                   ####
+####          DATABASE FUNCTIONS FOR INFO. GATHERING MODE                                                                                   ####
 ####                                                                                                                                        ####
 ################################################################################################################################################
 ################################################################################################################################################
@@ -195,6 +195,26 @@ class TortazoDatabase:
         else:
             self.cursor.execute(database.insertOnionRepositoryProgress, (onionAddress, validChars, datetime.now(), endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet))
         self.connection.commit()
+
+    def searchOnionRepository(self, start=1, maxResults=30):
+        onionAddresses = []
+        if self.cursor is None:
+            self.initDatabase()
+
+        self.cursor.execute(database.selectOnionRepositoryResponses, (maxResults, start) )
+        for row in self.cursor.fetchall():
+            onionAddress, responseCode, responseHeaders,onionDescription, serviceType = row
+            onionAddresses.append( (onionAddress, responseCode, responseHeaders,onionDescription, serviceType) )
+        return  onionAddresses
+
+    def countOnionRepositoryResponses(self):
+        if self.cursor is None:
+            self.initDatabase()
+        self.cursor.execute(database.countOnionRepositoryResponses)
+        return self.cursor.fetchone()[0]
+
+
+
 
 
 

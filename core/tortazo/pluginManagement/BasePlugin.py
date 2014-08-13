@@ -26,11 +26,13 @@ import logging as log
 from stem.util import term
 from IPython.config.loader import Config
 from IPython.terminal.embed import InteractiveShellEmbed
-from prettytable import PrettyTable
 
 from core.tortazo.pluginManagement.utils.FuzzDBReader import FuzzDBReader
+from core.tortazo.databaseManagement.TortazoDatabase import TortazoDatabase
 from core.tortazo.utils.ServiceConnector import ServiceConnector
-
+from plugins.texttable import Texttable
+from distutils.util import strtobool
+import sys
 
 class BasePlugin():
     '''
@@ -41,6 +43,7 @@ class BasePlugin():
         '''
         Constructor for the Base plugin class.
         '''
+        self.db = TortazoDatabase()
         self.logger = log
         self.torNodes = []
         self.pluginArguments = {}
@@ -54,6 +57,7 @@ class BasePlugin():
         self.cli = None
         self.serviceConnector = ServiceConnector(self.cli)
         self.fuzzDBReader = FuzzDBReader()
+        self.numberOnionSitesRegistered = self.db.countOnionRepositoryResponses()
 
 
     def info(self, message):
@@ -82,6 +86,42 @@ class BasePlugin():
                 tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
             openPorts = None
         print tableRelays.get_string(sortby='NickName')
+
+
+    def printOnionRepository(self, start=1, maxResults=30):
+        #Start-1. Indexes in database starts from 0.
+        start = start-1
+        onionAddresses = self.db.searchOnionRepository(start,maxResults)
+        table = Texttable()
+        table.set_cols_align(["l", "l", "l", "l" , "l", "l"])
+        table.set_cols_valign(["m", "m", "m", "m", "m", "m"])
+        table.set_cols_width([5,35,55,15,15, 55])
+        rows = [ ["#", "Onion Adress", "Description", "Service Type", "Response", "Headers"], ]
+        for rowid, address in enumerate(onionAddresses):
+            (onionAddress, responseCode, responseHeaders, onionDescription, serviceType) = address
+            rows.append( [rowid, onionAddress, onionDescription, serviceType, responseCode, responseHeaders] )
+        table.add_rows(rows)
+        print table.draw() + "\n"
+
+        if start+maxResults <=  self.numberOnionSitesRegistered:
+            sys.stdout.write('%s [y/n]\n' %('Print more onion addresses?'))
+            while True:
+                try:
+                    input = raw_input
+                    if strtobool(input().lower()) == True:
+                        break
+                    else:
+                        return
+                except NameError:
+                    pass
+                except ValueError:
+                    sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
+            self.printOnionRepository(start+maxResults, maxResults)
+
+
+
+
+
 
     def runPlugin(self):
         '''
