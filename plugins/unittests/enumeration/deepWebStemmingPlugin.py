@@ -59,7 +59,7 @@ class deepWebStemmingPlugin(BasePlugin):
         for node in self.torNodes:
             if portNumber is not None and portNumber in node.openPorts:
                 response = requests.get(node.host+":"+port, timeout=self.pluginConfigs['timeOutRequests'])
-                self.__validateResponse(response, queryTerms)
+                self.validateResponse(response, queryTerms)
             else:
                 for port in node.openPorts:
                     if port.port in self.webPorts:
@@ -73,10 +73,10 @@ class deepWebStemmingPlugin(BasePlugin):
 
     def stemmingHiddenService(self, webSite, queryTerms):
         response = self.serviceConnector.performHTTPConnectionHiddenService(webSite, method="GET")
-        self.__validateResponse(response, queryTerms)
+        self.validateResponse(response, queryTerms)
 
 
-    def __validateResponse(self, response, queryTerms):
+    def validateResponse(self, response, queryTerms):
         from bs4 import BeautifulSoup
 
         if response.status_code == 200:
@@ -111,7 +111,7 @@ class deepWebStemmingPlugin(BasePlugin):
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],
-                         ['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugin. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer hitman")'],
+                         ['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugins. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer hitman")'],
                          ['stemmingHiddenService', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")']
                         ])
         print table.draw() + "\\n"
