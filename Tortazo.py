@@ -294,6 +294,7 @@ class Cli(cli.Application):
                 print "Plugin Description: %s" %(inst.desc)
                 print "Plugin Version: %s" %(inst.version)
                 print "Plugin Author: %s" %(inst.author)
+                print "Plugin Arguments Available: %s" %(inst.pluginConfigs.keys())
                 print "\n"
             return
 
@@ -323,7 +324,7 @@ class Cli(cli.Application):
                         if torConfig.has_key('SocksPort'):
                             self.socksPort = torConfig['SocksPort']
                         else:
-                            self.socksPort = '9050'
+                            self.socksPort = '9150'
                 except OSError, ose:
                     print sys.exc_info()
                     #OSError: Stem exception raised. Tpically, caused because the "tor" command is not in the path.
@@ -333,6 +334,10 @@ class Cli(cli.Application):
                     self.logger.warn(term.format("Type: %s " %(str(exc_type)), term.Color.RED))
                     self.logger.warn(term.format("Value: %s " %(str(exc_value)), term.Color.RED))
                     self.logger.warn(term.format("Traceback: %s " %(str(exc_traceback)), term.Color.RED))
+                finally:
+                    if hasattr(self,"torProcess") and self.torProcess is not None:
+                        self.logger.info(term.format("[+] Stopping the TOR process.", term.Color.YELLOW))
+                        self.torProcess.kill()
             else:
                 self.logger.warn(term.format("The specified torrc file is not valid: %s " %(str(self.torLocalInstance)), term.Color.RED))
 
@@ -372,7 +377,7 @@ class Cli(cli.Application):
                     repository.startGenerator(tortazoConfiguration.loadKnownOnionSites, self.activateOnionRepositoryMode)
                     self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 except StandardError as standardExcept:
-                    self.logger.warn((term.format(standarError.message, term.Color.RED)))
+                    self.logger.warn((term.format(standardExcept.message, term.Color.RED)))
                 
             except KeyboardInterrupt:
                 print "Interrupted!"

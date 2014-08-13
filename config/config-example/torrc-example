@@ -18,3 +18,4 @@ ORPort 4443
 RelayBandwidthBurst 10485760
 RelayBandwidthRate 5242880
 UseMicrodescriptors 0
+SocksPort 9150

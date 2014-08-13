@@ -26,6 +26,9 @@ import string, itertools
 import requests
 import random
 from config import config
+import paramiko
+from bs4 import BeautifulSoup
+import ftplib
 
 #https://mail.python.org/pipermail/tutor/2012-September/091595.html
 
@@ -140,22 +143,11 @@ class RepositoryGenerator:
             if iterations == 0:
                 #The user enters the full onion address (16 chars).
                 print "[+] Entered full address (16 characters). Nothing to found."
-                try:
-                    httpAddress = "http://"+(''.join(self.partialOnionAddress))+".onion/"
-                    print httpAddress
-                    response = self.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
-                    print "[+] Found response from Hidden Service! %s  : %s " %(httpAddress, response)
-                    if response.status_code not in range(400,499):
-                        self.process.onionQueueResponses.put(response)
-                    self.process.onionQueueResponses.join()
-                except requests.exceptions.Timeout as timeout:
-                    print timeout
-                except Exception as exc:
-                    print exc
-
-
-                return
-            if iterations == 1:
+                self.__createProcess(self.partialOnionAddress+'.onion')
+                self.process.onionQueue.join()
+                self.process.onionQueueResponses.join()
+                self.finishedScan = True
+            elif iterations == 1:
                 #User enters 12 chars, left 4 chars.
                 #print "User enters 12 chars, left 4 chars."
                 self.__loopFromFourthQuartet(self.partialOnionAddress, addressesQuartetComplete)
@@ -220,7 +212,14 @@ class RepositoryGenerator:
         finally:
             if self.partialOnionAddress.lower() != 'random':
                 #Save incremental progress.
-                self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
+                import sqlite3
+                try:
+                    self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
+                except sqlite3.IntegrityError:
+                    if self.finishedScan:
+                        raise StandardError("[+] This scan was finisihed in a previous execution.")
+
+
 
 
 
@@ -260,8 +259,8 @@ class RepositoryProcess:
         while True:
             onionUrl,onionDescription,typeService = self.onionQueue.get()
             onionUrl = onionUrl.replace("http://", '')
-            print onionUrl,onionDescription
-            
+            print onionUrl+" , Desc: "+str(onionDescription)
+
 
             if typeService.lower() == "http":
                 if onionDescription != None:
@@ -271,24 +270,23 @@ class RepositoryProcess:
                     httpAddress = "http://"+(''.join(onionUrl))+"/"
                 self.httpConnection(httpAddress,onionDescription)
             elif typeService.lower() == "ssh":
-                self.sshConnection(httpAddress,onionDescription)
+                self.sshConnection(onionUrl,onionDescription)
             elif typeService.lower() == "ftp":
-                self.ftpConnection(httpAddress,onionDescription)
+                self.ftpConnection(onionUrl,onionDescription)
             elif typeService.lower() == "onionup":
                 response = requests.get(config.onionupUrl+onionUrl, verify=False)
                 if response.status_code == 200:
+                    print "[+] Connected to onionup and parsing the response ... "
                     soup = BeautifulSoup(response.text)
                     if len(soup.findAll(text="looks down")):
                         #Onion address is down in ONIONUP Service. Continue to the next address.
+                        print "[+] The onion address is down for onionup service. Continuing with the next address ... "
                         pass
                     else:
-                        if onionDescription != None:
-                            #Onion address known. Reading the file knownOnionSites.txt
-                            httpAddress = onionUrl
-                        else:
-                            httpAddress = "http://"+(''.join(onionUrl))+"/"
-                        self.httpConnection(httpAddress,onionDescription)
-                        
+                        print "[+] The onion address has a service up and running for onionup. Verifying using an HTTP connection to the hidden service ... "
+                        httpAddress = "http://"+(''.join(onionUrl))+"/"
+                        self.httpConnection(httpAddress,"Service discovered using OnionUP.com")
+
             self.onionQueue.task_done()
         self.onionQueueResponses.join()
 
@@ -297,7 +295,7 @@ class RepositoryProcess:
             response = self.repositoryGenerator.serviceConnector.performHTTPConnectionHiddenService(httpAddress, method="HEAD")
             print "[+] Found response from HTTP Hidden Service! %s  : %s " %(httpAddress, response)
             if response.status_code not in range(400,499):
-                self.onionQueueResponses.put((response,onionDescription,"http"))
+                self.onionQueueResponses.put( (response, onionDescription, "http"), )
         except Exception as exc:
             #import sys
             #print sys.exc_info()
@@ -312,7 +310,7 @@ class RepositoryProcess:
             print "[+] Found response from SSH Hidden Service! %s  " %(sshAddress)
             if status != None:
                 #There's a response. Then there's an FTP Service running.
-                self.onionQueueResponses.put((status,onionDescription,"ssh"))
+                self.onionQueueResponses.put( (status,onionDescription,"ssh"), )
         except paramiko.ProxyCommandFailure as proxyExc:
             raise StandardError("[-] Proxy Failure. The settings used are: Host=%s and Port=%s. Check your TOR Socks proxy if you haven't used the options -T and -U." %(self.socksHost,self.socksPort))
         except paramiko.SSHException as sshExc:
@@ -329,7 +327,7 @@ class RepositoryProcess:
             if status != None:
                 print "[+] Found response from FTP Hidden Service! %s  " %(ftpAddress)
                 #Status is just True/False depending on the anonymous auth result. 
-                self.onionQueueResponses.put((status,onionDescription,"ftp"))        
+                self.onionQueueResponses.put( (status,onionDescription,"ftp"), )
         except ftplib.socket.gaierror as sockerror:
             return
             
@@ -343,6 +341,8 @@ class RepositoryProcess:
             headers = ''
             for key in response.headers.keys():
                 headers = headers + key +' : '+ response.headers[key] +'\n'
-
-            self.repositoryGenerator.databaseConnection.insertOnionRepositoryResult(response.url, response.status_code, headers, onionDescription, serviceType)
+            if serviceType.lower() == 'http':
+                self.repositoryGenerator.databaseConnection.insertOnionRepositoryResult(response.url, response.status_code, headers, onionDescription, serviceType)
+            else:
+                self.repositoryGenerator.databaseConnection.insertOnionRepositoryResult(str(response), response.status_code, headers, onionDescription, serviceType)
             self.onionQueueResponses.task_done()
