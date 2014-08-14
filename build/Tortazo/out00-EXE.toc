@@ -1,9 +1,0 @@
-('/media/MyPassport/Tortazov1.1/Tortazo/build/Tortazo/Tortazo',
- True,
- False,
- None,
- '1.1',
- [],
- None,
- False,
- 1408049906)
