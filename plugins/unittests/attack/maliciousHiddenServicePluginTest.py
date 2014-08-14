@@ -25,9 +25,8 @@ from plugins.attack.maliciousHiddenServicePlugin import maliciousHiddenServicePl
 from config import unittests 
 import unittest
 
-class maliciousHiddenServicePluginTest:
-
-
+class maliciousHiddenServicePluginTest(unittest.TestCase):
+    
     def __init__(self):
         self.plugin = maliciousHiddenServicePlugin()
         self.pluginArgs = []        

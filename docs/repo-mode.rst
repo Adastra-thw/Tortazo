@@ -1,4 +1,4 @@
-.. _database-mode-label:
+.. _repository-mode-label:
 
 ****************************************************
 Repository mode in Tortazo

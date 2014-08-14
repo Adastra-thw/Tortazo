@@ -84,4 +84,4 @@ Repository Mode
 =================
 In this mode, Tortazo will try to generate ONION addresses and then tests if the generated addresses point to a hidden service in the deep web. 
 Every onion address is composed by 16 characters and the valid chars are the full alphabet in lowercase and the digits between 2 and 7, as you can imagine, the amount of ONION addresses that could be generated is *VERY, VERY HUGE* and this is why the repository execution mode will not finish in few hours. This could take days or even weeks to generate and test every "possible" onion address. Actually, the execution of this mode, depends *A LOT* of the information that you have about of an onion address and the processing capacity of your machine. If you represents a government, maybe this kind of limitations related to processing capacity are less severe compared with the restrictions of any natural person.
-Read more about the development and usage of plugins in Tortazo :ref:`repo-mode.rst`
+Read more about the development and usage of plugins in Tortazo :ref:`repository-mode-label`

@@ -36,9 +36,6 @@ class heartBleedPluginTest(unittest.TestCase):
         reference.setPluginArguments(self.pluginArgs)
         reference.processPluginArguments()
 
-    def __failure(self):
-        
-
     def test_setTarget(self):
         self.assertRaises(Exception, self.plugin.setTarget, None)
         self.assertRaises(Exception, self.plugin.setTarget, 'INVALID_IP')
