@@ -243,8 +243,15 @@ class Cli(cli.Application):
         '''
         Shows the Logs for the TOR startup.
         '''
-        if "Bootstrapped " in log:
-            self.logger.debug(term.format(log, term.Color.GREEN))
+        self.logger.debug(term.format(log, term.Color.GREEN))
+
+    def __killTorProcess(self):
+        #If TOR process has been started, it should be stopped.
+        if hasattr(self, 'torProcess') and self.torProcess is not None:
+            self.logger.info(term.format("[+] Killing TOR process with PID %s " %(self.torProcess.pid), term.Color.YELLOW))
+            self.torProcess.kill()
+        self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
+
 
     def main(self):
         '''
@@ -302,42 +309,46 @@ class Cli(cli.Application):
             if os.path.exists(self.torLocalInstance) and os.path.isfile(self.torLocalInstance):
                 torrcFile = open(self.torLocalInstance,'r')
                 torConfig = {}
-                for line in torrcFile:
-                    if line.startswith("#", 0, len(line)) is False and len(line.split()) > 0:
-                        torOptionName = line.split()[0]
-                        if len(line.split()) > 1:
-                            torOptionValue = line[len(torOptionName)+1 : ]
-                        torConfig[torOptionName] = torOptionValue
-                try:
-                    self.logger.info(term.format("[+] Starting TOR Local instance with the following options: ", term.Color.YELLOW))
-                    for config in torConfig.keys():
-                        self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
-                    self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.logsTorInstance)
-                    time.sleep(5)
-                    if self.torProcess > 0:
-                        #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
-                        self.logger.debug(term.format("[+] TOR Process created. PID %s " %(self.torProcess.pid),  term.Color.GREEN))
-                        if torConfig.has_key('SocksListenAddress'):
-                            self.socksHost = torConfig['SocksListenAddress']
-                        else:
-                            self.socksHost = '127.0.0.1'
-                        if torConfig.has_key('SocksPort'):
-                            self.socksPort = torConfig['SocksPort']
-                        else:
-                            self.socksPort = '9150'
-                except OSError, ose:
-                    print sys.exc_info()
-                    #OSError: Stem exception raised. Tpically, caused because the "tor" command is not in the path.
-                    exc_type, exc_value, exc_traceback = sys.exc_info()
-                    self.logger.warn(term.format("Exception raised during the startup of TOR Local instance.... "+str(ose), term.Color.RED))
-                    self.logger.warn(term.format("Details Below: \n", term.Color.RED))
-                    self.logger.warn(term.format("Type: %s " %(str(exc_type)), term.Color.RED))
-                    self.logger.warn(term.format("Value: %s " %(str(exc_value)), term.Color.RED))
-                    self.logger.warn(term.format("Traceback: %s " %(str(exc_traceback)), term.Color.RED))
-                finally:
-                    if hasattr(self,"torProcess") and self.torProcess is not None:
-                        self.logger.info(term.format("[+] Stopping the TOR process.", term.Color.YELLOW))
-                        self.torProcess.kill()
+                import pwd
+
+                if pwd.getpwuid(os.getuid()).pw_uid != 0:
+                    #Running TOR as non-root user. GOOD!
+                    for line in torrcFile:
+                        if line.startswith("#", 0, len(line)) is False and len(line.split()) > 0:
+                            torOptionName = line.split()[0]
+                            if len(line.split()) > 1:
+                                torOptionValue = line[len(torOptionName)+1 : ]
+                                torConfig[torOptionName] = torOptionValue
+                    try:
+                        self.logger.info(term.format("[+] Starting TOR Local instance with the following options: ", term.Color.YELLOW))
+                        for config in torConfig.keys():
+                            self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
+                        self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.logsTorInstance)
+                        time.sleep(5)
+                        if self.torProcess > 0:
+                            #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
+                            self.logger.debug(term.format("[+] TOR Process created. PID %s " %(self.torProcess.pid),  term.Color.GREEN))
+                            if torConfig.has_key('SocksListenAddress'):
+                                self.socksHost = torConfig['SocksListenAddress']
+                            else:
+                                self.socksHost = '127.0.0.1'
+                            if torConfig.has_key('SocksPort'):
+                                self.socksPort = torConfig['SocksPort']
+                            else:
+                                #Starting TOR from the command "tor". The default Socks port in that case is '9050'. If you run tor with tor bundle, the default socks port is '9150'
+                                self.socksPort = '9050'
+                    except OSError, ose:
+                        print sys.exc_info()
+                        #OSError: Stem exception raised. Tipically, caused because the "tor" command is not in the path.
+                        exc_type, exc_value, exc_traceback = sys.exc_info()
+                        self.logger.warn(term.format("Exception raised during the startup of TOR Local instance.... "+str(ose), term.Color.RED))
+                        self.logger.warn(term.format("Details Below: \n", term.Color.RED))
+                        self.logger.warn(term.format("Type: %s " %(str(exc_type)), term.Color.RED))
+                        self.logger.warn(term.format("Value: %s " %(str(exc_value)), term.Color.RED))
+                        self.logger.warn(term.format("Traceback: %s " %(str(exc_traceback)), term.Color.RED))
+                else:
+                    self.logger.warn(term.format("You cannot run TOR as root user! Please, use an account with limited privileges ", term.Color.RED))
+                    return
 
             else:
                 self.logger.warn(term.format("The specified torrc file is not valid: %s " %(str(self.torLocalInstance)), term.Color.RED))
@@ -372,16 +383,20 @@ class Cli(cli.Application):
                                 pass
                             except ValueError:
                                 sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
-                try:
-                    self.logger.info(term.format("[+] Starting the Onion repository mode against "+self.activateOnionRepositoryMode+" services...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                    repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
-                    repository.startGenerator(tortazoConfiguration.loadKnownOnionSites, self.activateOnionRepositoryMode)
-                    self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-                except StandardError as standardExcept:
-                    self.logger.warn((term.format(standardExcept.message, term.Color.RED)))
-                
+                if hasattr(self, "socksHost") and hasattr(self, "socksPort"):
+                    if self.socksPort.isdigit():
+                        serviceConnector.setSocksProxySettings(self.socksHost, int(self.socksPort))
+                self.logger.info(term.format("[+] Starting the Onion repository mode against "+self.activateOnionRepositoryMode+" services...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+                repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
+                repository.startGenerator(tortazoConfiguration.loadKnownOnionSites, self.activateOnionRepositoryMode)
+                self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
+
             except KeyboardInterrupt:
                 print "Interrupted!"
+            except StandardError as standardExcept:
+                self.logger.warn((term.format(standardExcept.message, term.Color.RED)))
+
+            self.__killTorProcess()
             return
             #repository = RepositoryGenerator('',self.generatorThreads,self.workerThreads)
             #repository.startGenerator()
@@ -465,10 +480,7 @@ class Cli(cli.Application):
                     self.loadAndExecute(self.pluginManagement, self.exitNodes, self.pluginArguments)
 
         #If TOR process has been started, it should be stopped.
-        if hasattr(self, 'torProcess') and self.torProcess is not None:
-            self.logger.info(term.format("[+] Killing TOR process with PID %s " %(self.torProcess.pid), term.Color.YELLOW))
-            self.torProcess.kill()
-        self.logger.info((term.format("[+] Process finished at "+ strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW)))
+        self.__killTorProcess(self)
 
     def loadAndExecute(self, listPlugins, torNodesFound, pluginArguments=None):
         if listPlugins is None:
