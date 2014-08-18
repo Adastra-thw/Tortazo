@@ -9,17 +9,18 @@ About Tortazo - Gentle Introduction.
 What?
 =============================
 
-Tortazo is a python tool to perform pentesting activities throught the TOR's deep web. Allows the integration with other well known frameworks available in the market and any python developer could write plugins to execute attacks against hidden services.
+Tortazo is a tool written in Python to perform pentesting activities through the TOR deep web. Allows the integration with other well known frameworks available in the market and any python developer could write plugins to execute attacks against hidden services and relays in TOR.
 
 
 How?
 =============================
-Tortazo is written in Python language using a lot of libraries written in Python to perform pentesting activities. This project is almost entirely "I+D" because there's so few tools publicly available in the market focused to pentesting TOR hidden services or even TOR relays. The researching and innovative ideas are much appreciated because, there's a lot of work and things to implement in Tortazo.
+Tortazo is written in Python language using a lot of libraries to perform pentesting activities. This project is almost entirely "I+D" because there's few tools publicly available to audit the hidden services or relays in TOR. The researching and innovative ideas are much appreciated because, there's a lot of work and things to implement in Tortazo.
 
 
 Why?
 =============================
-Anonymous networks are the favorite "tool" of criminals and this is a shame because networks like TOR, I2P or Freenet weren't designed to protect assessins, pedofiles, narcotraficants and that kind of people. The initial idea of this project, was develop a tool to compromise the identity of that people. ¿How? A lot of them, usually are not aware of the vulnerabilities included in their boxes. A lot of them, just uses tools and publish hidden services with the "defaults" because they're not security profesionals and usually are just end-users with basic knowledge about computing. A lot of them just start TOR and expose their machines as relays in the TOR network or setup websites as TOR hidden services without any security consideration. This is a good "starting point" to try to expose them and the pourpose of Tortazo is to include a lot of features to find that kind of flaws. 
+The anonymous networks are the favorite "tool" of criminals and this is a shame because networks like TOR, I2P or Freenet weren't designed to protect killers, narcos, pedofiles and that kind of people. 
+The initial idea of this project, is develop a tool to compromise the identity of that kind people. ¿How? A lot of them, usually are not aware of the vulnerabilities included in their boxes. A lot of them, just exposes hidden services with the "defaults" because they're not security professionals and usually they are just end-users with basic knowledge about computing. A lot of them just starts TOR and exposes their machines as relays in the TOR network or creates websites as TOR hidden services without any security consideration. This is a good "starting point" to try to expose them and the purpose of Tortazo is to include a lot of features to find that kind of flaws and bring a bridge between the TOR network and the "good" hackers.
 
 
 When?
@@ -43,7 +44,7 @@ What I like:
 * I like to find and fix bugs in code.
 * I like to improve code.
 * I like the reverse engineering.
-* I like to talk with people about things that matters. (not about football, politics, tv shows and other bullshit).
+* I like to talk with people about things that matter. (obviously, this exclude football, politics, tv shows and other bullshit).
 * I like the freedom. Everyone should be free to do anything, but without affecting the freedom of others.
 
 What I dislike:
@@ -53,17 +54,17 @@ What I dislike:
 * I dislike the people lazy.
 * I dislike the mediocrity.
 * I dislike the authoritarianism. 
-* I dislike some rock stars "selling smoke" in conferences and other events. We need more mentors and less security rock stars. Sadly, this is the worst thing that I've found in the infosec environment.
+* I dislike some rock stars "selling smoke" in conferences and other events. We need more mentors and less security rock stars. Sadly, this is the worst thing that I've found in the infosec environment in my country and other places.
 
 
 Contact?
 =============================
-Sure, just write an email to: debiadastra [at] gmail.com I'll reply as soon as possible.
+Sure, writes an email to: debiadastra [at] gmail.com I'll reply as soon as possible.
 Also, you can follow me in Twitter. @jdaanial
 
 Legal Warning!!
 =============================
-I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool. If you found vulnerabilities or any kind of flaw in any non-malicious exit node of TOR Network, please, send the report to the admin, in this way you can contribute to build solid and secure TOR circuits for all of us.
+I've developed this tool to improve my knowledge about TOR and Python. I'm a security enthusiast and I hope that you use this tool with responsibility, but if that is not the case, I'm not responsible for the use (or misuse) of this tool. If you found vulnerabilities or any kind of flaw in any non-malicious exit node of TOR, please, send the report to the admin of the relay, in this way you can contribute to build solid and secure TOR circuits for all of us.
 
 
 OK, are you ready? Go and read about Tortazo and start to use it
