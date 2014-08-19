@@ -32,6 +32,8 @@ import os
 from twisted.internet.endpoints import TCP4ServerEndpoint
 import json
 from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import is_valid_port, is_valid_ipv4_address, is_valid_ipv6_address
+from config import config as tortazoConfig
 
 class GatherInformation(resource.Resource):
 
@@ -95,6 +97,30 @@ class maliciousHiddenServicePlugin(BasePlugin):
 
     #chromium-browser --proxy-server=socks5://127.0.0.1:9152
     def startHTTPHiddenService(self, serviceDir, servicePort=8080, hiddenserviceDir=None, hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000):
+        if is_valid_ipv4_address(serviceInterface) == False and is_valid_ipv6_address(serviceInterface) == False:
+            print '[-] The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface". '
+            raise PluginException(message='The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface" ', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+
+
+        if is_valid_port(hiddenservicePort) == False:
+            print "[-] The hidden service port is invalid. "
+            raise PluginException(message='The hidden service port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+
+        if is_valid_port(socksPort) == False:
+            print "[-] The socks port is invalid. "
+            raise PluginException(message='The socks port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+
+
+        if is_valid_port(orPort) == False:
+            print "[-] The OR port is invalid. "
+            raise PluginException(message='The OR port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+
+        if is_valid_port(servicePort) == False:
+            print "[-] The Service port is invalid. "
+            raise PluginException(message='The Service port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+
+
+
         self.hiddenservicePort = hiddenservicePort
         config = txtorcon.TorConfig()
         config.SOCKSPort = socksPort
@@ -107,7 +133,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
             print "[+] The HiddenServiceDir specified does not exists... Generating a temporal file."
             hiddenserviceDir = self.__createTemporal()
 
-        if os.path.exists(serviceDir) == False:
+        if serviceDir is None or os.path.exists(serviceDir) == False:
             print "[-] The specified Server directory is not valid. You must specify a valid directory where resources like HTML pages, images, CSS and stuff like that are located. The directory will be used to start a simple HTTP Server."
             raise PluginException("The specified Server directory is not valid.", trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir,str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort) , str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
 
@@ -120,11 +146,16 @@ class maliciousHiddenServicePlugin(BasePlugin):
         site = server.Site(root)
         hs_endpoint = TCP4ServerEndpoint(reactor, servicePort, interface=serviceInterface)
         hs_endpoint.listen(site)
+        try:
+            d = txtorcon.launch_tor(config, reactor, progress_updates=self.__updates, )
+        except txtorcon.TorNotFound as torBinaryNotFound:
+            print "[-] Tor binary not found in the system path. Using the property 'torExecutablePath' located in the config/config.py file."
+            d = txtorcon.launch_tor(config, reactor, tor_binary=tortazoConfig.torExecutablePath, progress_updates=self.__updates, )
 
-        d = txtorcon.launch_tor(config, reactor, progress_updates=self.__updates)
         d.addCallback(functools.partial(self.__setup_complete, config))
         d.addErrback(self.__setup_failed)
         reactor.run()
+        return True
 
 
     def help(self):
@@ -135,6 +166,6 @@ class maliciousHiddenServicePlugin(BasePlugin):
         table.set_cols_width([40,55,55])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
-                         ['startHTTPHiddenService', 'Starts a hidden service with the specified settings. serviceDir=Directory where the resources are located (html pages, js script, css, images, etc.) ', '']
+                         ['startHTTPHiddenService', 'Starts a hidden service with the specified settings. serviceDir=Directory where the resources are located (html pages, js script, css, images, etc.) ', 'self.startHTTPHiddenService(serviceDir="/opt/Tortazo/plugins/attack/utils/hiddenServiceTest")']
                         ])
         print table.draw() + "\n"

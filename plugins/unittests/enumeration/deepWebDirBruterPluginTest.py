@@ -21,23 +21,26 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from requests.exceptions import ConnectionError
-from requests.exceptions import Timeout
-from requests.exceptions import InvalidURL
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
 import os
-from plugins.texttable import Texttable
+import  sys
 import unittest
+from plugins.enumeration.deepWebDirBruterPlugin import deepWebDirBruterPlugin
+from config import unittests
+from config import config
 
 class deepWebDirBruterPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = deepWebDirBruterPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     def dirBruterOnRelay(self, site, dictFile='', proxy=False):
         pass
@@ -47,3 +50,6 @@ class deepWebDirBruterPluginTest(unittest.TestCase):
 
     def dirBruterOnHiddenService(self, hiddenService, dictFile=''):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

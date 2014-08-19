@@ -21,25 +21,32 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from prettytable import PrettyTable
-from collections import Counter
-from config import config
-from plugins.texttable import Texttable
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+import os
+import  sys
 import unittest
+from plugins.enumeration.deepWebDirBruterPlugin import deepWebDirBruterPlugin
+from config import unittests
+from config import config
 
 class deepWebStemmingPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = deepWebDirBruterPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", portNumber=None):
         pass
     
     def stemmingHiddenService(self, webSite, queryTerms):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

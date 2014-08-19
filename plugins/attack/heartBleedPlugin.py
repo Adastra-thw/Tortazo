@@ -51,7 +51,7 @@ class heartBleedPlugin(BasePlugin):
 
     def setTarget(self, relayIp):
         if relayIp is not None and relayIp != '':
-            if is_valid_ipv4_address(relayIp) or is_valid_ipv6_address(relayIp):
+            if is_valid_ipv4_address(relayIp) and is_valid_ipv6_address(relayIp):
                 self.hbExploit = HeartBleedExploit(relayIp)
                 print "[+] Target %s setted." %(relayIp)
                 return True
@@ -63,7 +63,7 @@ class heartBleedPlugin(BasePlugin):
 
     def setTargetWithPort(self, relayIp, relayPort):
         if relayIp is not None and relayIp != '':
-            if is_valid_ipv4_address(relayIp) or is_valid_ipv6_address(relayIp):
+            if is_valid_ipv4_address(relayIp) and is_valid_ipv6_address(relayIp):
                 if is_valid_port(relayPort):
                     self.hbExploit = HeartBleedExploit(relayIp, relayPort)
                     print "[+] Target %s with port %s setted." %(relayIp,relayPort)

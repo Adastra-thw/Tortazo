@@ -21,20 +21,26 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from plugins.texttable import Texttable
-import shodan
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+import os
+import  sys
 import unittest
+from plugins.infogathering.shodanPlugin import shodanPlugin
+from config import unittests
+from config import config
 
 class shodanPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = shodanPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
         
     def setApiKey(self, apiKey):
         pass
@@ -53,3 +59,6 @@ class shodanPluginTest(unittest.TestCase):
 
     def basicSearchByNickname(self,basicSearch, nickname):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

@@ -20,32 +20,26 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from plugins.texttable import Texttable
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
 import os
-import difflib
-import signal
-from scrapy.crawler import Crawler
-from scrapy.utils.project import get_project_settings
-from plugins.enumeration.utils.hiddenSiteSpider import HiddenSiteSpider
-from twisted.internet import reactor
-from time import sleep
-import socket
-from scrapy import signals
-from scrapy.xlib.pydispatch import dispatcher
-import urllib
 import  sys
 import unittest
+from plugins.enumeration.deepWebCrawlerPlugin import deepWebCrawlerPlugin
+from config import unittests
+from config import config
 
 class deepWebCrawlerPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = deepWebCrawlerPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     def setExtractorRulesAllow(self, extractorRulesAllow):
         pass
@@ -75,3 +69,6 @@ class deepWebCrawlerPluginTest(unittest.TestCase):
                          useRandomUserAgents=True, deepLinks=None,
                          bruterOnProtectedResource=False):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

@@ -480,7 +480,7 @@ class Cli(cli.Application):
                     self.loadAndExecute(self.pluginManagement, self.exitNodes, self.pluginArguments)
 
         #If TOR process has been started, it should be stopped.
-        self.__killTorProcess(self)
+        self.__killTorProcess()
 
     def loadAndExecute(self, listPlugins, torNodesFound, pluginArguments=None):
         if listPlugins is None:

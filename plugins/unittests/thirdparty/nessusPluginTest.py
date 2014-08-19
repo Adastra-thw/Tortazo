@@ -21,24 +21,26 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from config import config
-from pynessus.rest.client.NessusClient import NessusClient
-from pynessus.rest.data.NessusStructure import NessusConverter
-from plugins.texttable import Texttable
-import requests
 import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+import os
+import  sys
 import unittest
+from plugins.thirdparty.nessusPlugin import nessusPlugin
+from config import unittests
+from config import config
 
 class nessusPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = nessusPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     def feed(self):
         pass
@@ -169,3 +171,6 @@ class nessusPluginTest(unittest.TestCase):
 
     def reportAttributesList(self,reportUuid):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

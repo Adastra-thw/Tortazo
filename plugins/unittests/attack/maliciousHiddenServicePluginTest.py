@@ -34,7 +34,7 @@ import unittest
 
 class maliciousHiddenServicePluginTest(unittest.TestCase):
     
-    def __init__(self):
+    def setUp(self):
         self.plugin = maliciousHiddenServicePlugin()
         self.pluginArgs = []        
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
@@ -47,12 +47,23 @@ class maliciousHiddenServicePluginTest(unittest.TestCase):
         print "Testing startHTTPHiddenService with args: serviceDir=%s " %(None)
         self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=None)
 
+        print "Testing startHTTPHiddenService with args: serviceDir=%s , servicePort=%s " %(unittests.maliciousHiddenServicePlugin_serviceDir, None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir, servicePort=None)
 
+        print "Testing startHTTPHiddenService with args: serviceDir=%s , hiddenservicePort=%s " %(unittests.maliciousHiddenServicePlugin_serviceDir, None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir, hiddenservicePort=None)
 
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, servicePort=None)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, servicePort=unittests.maliciousHiddenServicePlugin_servicePort)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, hiddenserviceDir=None)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, hiddenserviceDir=unittests.maliciousHiddenServicePlugin_hsserviceDir)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, hiddenservicePort=None)
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, hiddenservicePort=unittests.maliciousHiddenServicePlugin_hsservicePort)  
+        print "Testing startHTTPHiddenService with args: serviceDir=%s , socksPort=%s " %(unittests.maliciousHiddenServicePlugin_serviceDir, None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir , socksPort=None)
+
+        print "Testing startHTTPHiddenService with args: serviceDir=%s , orPort=%s " %(unittests.maliciousHiddenServicePlugin_serviceDir, None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir  , orPort=None)
+
+        print "Testing startHTTPHiddenService with args: serviceDir=%s , serviceInterface=%s " %(unittests.maliciousHiddenServicePlugin_serviceDir , None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir , serviceInterface=None)
+
+        print "Testing startHTTPHiddenService with args: serviceDir=%s hiddenServiceDir=%s" %(unittests.maliciousHiddenServicePlugin_serviceDir , unittests.maliciousHiddenServicePlugin_hsserviceDir)
+        self.assertTrue(self.plugin.startHTTPHiddenService(serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir, hiddenserviceDir=unittests.maliciousHiddenServicePlugin_hsserviceDir))
+
+if __name__ == '__main__':
+    unittest.main()

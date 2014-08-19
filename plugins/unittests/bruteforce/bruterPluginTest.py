@@ -20,29 +20,26 @@ You should have received a copy of the GNU General Public License
 along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
-
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from plugins.texttable import Texttable
-from plugins.bruteforce.bruterPlugin import bruterPlugin
-import socket
-import os
 import sys
-import time
-from socket import error as socket_error
-import signal
-import paramiko
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+from plugins.bruteforce.bruterPlugin import bruterPlugin
 import unittest
+from config import unittests
+from config import config
+import os.path
 from config import unittests
 
 class bruterPluginTest(unittest.TestCase):
 
-    def __init__(self):
+    def setUp(self):
         self.plugin = bruterPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SSH BRUTEFORCE ATTACKS.#########################################################################
@@ -124,7 +121,7 @@ class bruterPluginTest(unittest.TestCase):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SNMP BRUTEFORCE ATTACKS.########################################################################
     ################################################################################################################################################
-    def test_snmpBruterOnRelay(self, host, port=161, dictFile=None):
+    def test_snmpBruterOnRelay(self):
         self.assertRaises(Exception, self.plugin.snmpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portSNMP,dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.snmpBruterOnRelay, host=unittests.bruterPlugin_relayInvalid, port=unittests.bruterPlugin_portSNMP,dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.snmpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portInvalid,dictFile=unittests.bruterPlugin_dictFile)
@@ -135,7 +132,7 @@ class bruterPluginTest(unittest.TestCase):
         self.assertRaises(Exception, self.plugin.snmpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portSNMP,dictFile=None)
 
 
-    def test_snmpBruterOnAllRelays(self, port=161, dictFile=None):
+    def test_snmpBruterOnAllRelays(self):
         self.assertRaises(Exception, self.plugin.snmpBruterOnAllRelays, port=unittests.bruterPlugin_portSNMP, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.snmpBruterOnAllRelays, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.snmpBruterOnAllRelays, port=unittests.bruterPlugin_portSNMP, dictFile=unittests.bruterPlugin_dictFileInvalid)
@@ -148,7 +145,7 @@ class bruterPluginTest(unittest.TestCase):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SMB BRUTEFORCE ATTACKS.#########################################################################
     ################################################################################################################################################
-    def test_smbBruterOnRelay(self, host, port=139, dictFile=None):
+    def test_smbBruterOnRelay(self):
         self.assertRaises(Exception, self.plugin.smbBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portSMB,dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.smbBruterOnRelay, host=unittests.bruterPlugin_relayInvalid, port=unittests.bruterPlugin_portSMB,dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.smbBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portInvalid,dictFile=unittests.bruterPlugin_dictFile)
@@ -159,15 +156,15 @@ class bruterPluginTest(unittest.TestCase):
         self.assertRaises(Exception, self.plugin.snmpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portSMB,dictFile=None)
 
             
-    def test_smbBruterOnAllRelays(self, port=139, dictFile=None):
-        self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portSNB, dictFile=unittests.bruterPlugin_dictFile)
+    def test_smbBruterOnAllRelays(self):
+        self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portSMB, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portSMB, dictFile=unittests.bruterPlugin_dictFileInvalid)
         
         self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=None,dictFile=None)
         self.assertRaises(Exception, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portSMB, dictFile=None)
 
-    def test_smbBruterOnHiddenService(self, onionService, servicePort=139, localPort=139, dictFile=None):
+    def test_smbBruterOnHiddenService(self):
         self.assertRaises(Exception, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portFTP, dictFile=unittests.bruterPlugin_dictFile, localPort=unittests.bruterPlugin_localportSMB)
         self.assertRaises(Exception, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionserviceInvalid, port=unittests.bruterPlugin_portSMB, dictFile=unittests.bruterPlugin_dictFile, localPort=unittests.bruterPlugin_localportSMB)
         self.assertRaises(Exception, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile, localPort=unittests.bruterPlugin_localportSMB)
@@ -183,7 +180,7 @@ class bruterPluginTest(unittest.TestCase):
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM HTTP BRUTEFORCE ATTACKS.########################################################################
     ################################################################################################################################################
-    def test_httpBruterOnSite(self, url, dictFile=None, proxy=False):
+    def test_httpBruterOnSite(self):
         self.assertRaises(Exception, self.plugin.httpBruterOnSite, url=unittests.bruterPlugin_urlSite, port=unittests.bruterPlugin_portHTTP,dictFile=unittests.bruterPlugin_dictFile, proxy=False)
         self.assertRaises(Exception, self.plugin.httpBruterOnSite, url=unittests.bruterPlugin_urlSite, port=unittests.bruterPlugin_portHTTP,dictFile=unittests.bruterPlugin_dictFile, proxy=False)
         self.assertRaises(Exception, self.plugin.httpBruterOnSite, url=unittests.bruterPlugin_urlSite, port=unittests.bruterPlugin_portInvalid,dictFile=unittests.bruterPlugin_dictFile, proxy=False)
@@ -196,7 +193,7 @@ class bruterPluginTest(unittest.TestCase):
 
 
 
-    def test_httpBruterOnHiddenService(self, onionService, dictFile=None):
+    def test_httpBruterOnHiddenService(self):
         self.assertRaises(Exception, self.plugin.httpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portHTTP, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.httpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionserviceInvalid, port=unittests.bruterPlugin_portHTTP, dictFile=unittests.bruterPlugin_dictFile)
         self.assertRaises(Exception, self.plugin.httpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile)
@@ -206,3 +203,6 @@ class bruterPluginTest(unittest.TestCase):
         self.assertRaises(Exception, self.plugin.httpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=None, dictFile=None)
         self.assertRaises(Exception, self.plugin.httpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portHTTP, dictFile=None)
         
+
+if __name__ == '__main__':
+    unittest.main()

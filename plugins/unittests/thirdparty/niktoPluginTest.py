@@ -21,20 +21,27 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from plugins.texttable import Texttable
-import subprocess
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+import os
+import  sys
 import unittest
+from plugins.thirdparty.niktoPlugin import niktoPlugin
+from config import unittests
+from config import config
+
 
 class niktoPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = niktoPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     
     def executeByIP(self, ipAddress, switches):
@@ -51,3 +58,6 @@ class niktoPluginTest(unittest.TestCase):
 
     def executeByIPOnPort(self, ipAddress, port, switches):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

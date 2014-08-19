@@ -21,26 +21,26 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
-from w3af.core.data.parsers.url import URL as URL_KLASS
-from plugins.texttable import Texttable
-from core.tortazo.pluginManagement.BasePlugin import BasePlugin
-from w3af.core.controllers.w3afCore import w3afCore
-from w3af.core.data.options.option_list import OptionList
-from w3af.core.data.options.opt_factory import opt_factory
-from w3af.core.data.kb.knowledge_base import kb
-from w3af.core.controllers.misc_settings import MiscSettings
-import w3af.core.data.kb.config as cf
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+import os
+import  sys
 import unittest
+from plugins.thirdparty.w3afPlugin import w3afPlugin
+from config import unittests
+from config import config
 
 class w3afPluginTest(unittest.TestCase):
 
-    def __init__(self):
-        self.plugin = heartBleedPlugin()
+    def setUp(self):
+        self.plugin = w3afPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     '''
     PLUGIN MANAGEMENT FUNCTIONS.
@@ -146,3 +146,6 @@ class w3afPluginTest(unittest.TestCase):
 
     def exploitVuln(self,pluginExploit,vulnId):
         pass
+
+if __name__ == '__main__':
+    unittest.main()

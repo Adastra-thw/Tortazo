@@ -9,9 +9,9 @@
 ################################################################################################################################################
 
 
-maliciousHiddenServicePlugin_serviceDir='/opt/webappDir'
+maliciousHiddenServicePlugin_serviceDir='/opt/Tortazo/plugins/attack/utils/hiddenServiceTest'
 maliciousHiddenServicePlugin_servicePort=8080
-maliciousHiddenServicePlugin_hsserviceDir='/opt/torData/hiddenService'
+maliciousHiddenServicePlugin_hsserviceDir='/home/adastra/Escritorio/hidden_service_django'
 maliciousHiddenServicePlugin_hsservicePort=80
 
 ################################################################################################################################################
@@ -23,7 +23,7 @@ maliciousHiddenServicePlugin_hsservicePort=80
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
-bruterPlugin_relay="88.20.30.40"
+bruterPlugin_Relay="88.20.30.40"
 bruterPlugin_relayInvalid="INVALID"
 bruterPlugin_portSSH=22
 bruterPlugin_portHTTP=80
