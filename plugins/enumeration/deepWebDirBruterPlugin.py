@@ -27,6 +27,7 @@ from requests.exceptions import Timeout
 from requests.exceptions import InvalidURL
 import os
 from plugins.texttable import Texttable
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebDirBruterPlugin(BasePlugin):
 

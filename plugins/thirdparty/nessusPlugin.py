@@ -28,6 +28,7 @@ from pynessus.rest.data.NessusStructure import NessusConverter
 from plugins.texttable import Texttable
 import requests
 import sys
+from core.tortazo.exceptions.PluginException import PluginException
 
 class nessusPlugin(BasePlugin):
     '''

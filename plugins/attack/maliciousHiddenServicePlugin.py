@@ -31,6 +31,7 @@ import txtorcon
 import os
 from twisted.internet.endpoints import TCP4ServerEndpoint
 import json
+from core.tortazo.exceptions.PluginException import PluginException
 
 class GatherInformation(resource.Resource):
 
@@ -108,7 +109,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
 
         if os.path.exists(serviceDir) == False:
             print "[-] The specified Server directory is not valid. You must specify a valid directory where resources like HTML pages, images, CSS and stuff like that are located. The directory will be used to start a simple HTTP Server."
-            return
+            raise PluginException("The specified Server directory is not valid.", trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir,str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort) , str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
 
 
         config.HiddenServices = [txtorcon.HiddenService(config, hiddenserviceDir, ["%s %s:%s" %(str(hiddenservicePort), serviceInterface, str(servicePort))] )]

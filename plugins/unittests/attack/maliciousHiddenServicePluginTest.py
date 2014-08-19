@@ -21,8 +21,15 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
+import os.path
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
+
 from plugins.attack.maliciousHiddenServicePlugin import maliciousHiddenServicePlugin
-from config import unittests 
+from core.tortazo.exceptions.PluginException import PluginException
+from config import unittests
+from config import config
 import unittest
 
 class maliciousHiddenServicePluginTest(unittest.TestCase):
@@ -31,13 +38,17 @@ class maliciousHiddenServicePluginTest(unittest.TestCase):
         self.plugin = maliciousHiddenServicePlugin()
         self.pluginArgs = []        
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
 
 
-    def test_startHTTPHiddenService():
-        self.assertRaises(Exception, self.plugin.startHTTPHiddenService, serviceDir=None)
+    def test_startHTTPHiddenService(self):
+        print "Testing startHTTPHiddenService with args: serviceDir=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.startHTTPHiddenService, serviceDir=None)
+
+
+
         self.assertRaises(Exception, self.plugin.startHTTPHiddenService, serviceDir=unittests.maliciousHiddenServicePlugin_serviceDir)
         self.assertRaises(Exception, self.plugin.startHTTPHiddenService, servicePort=None)
         self.assertRaises(Exception, self.plugin.startHTTPHiddenService, servicePort=unittests.maliciousHiddenServicePlugin_servicePort)

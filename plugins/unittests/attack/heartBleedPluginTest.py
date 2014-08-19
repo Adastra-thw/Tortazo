@@ -21,38 +21,49 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
+import os.path
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
 from plugins.attack.heartBleedPlugin import heartBleedPlugin
 from config import config
 from config import unittests 
 import unittest
+from core.tortazo.exceptions.PluginException import PluginException
 
 class heartBleedPluginTest(unittest.TestCase):
 
-    def __init__(self):
+    def setUp(self):
         self.plugin = heartBleedPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
-        reference.setPluginArguments(self.pluginArgs)
-        reference.processPluginArguments()
+        self.plugin.setPluginArguments(self.pluginArgs)
+        self.plugin.processPluginArguments()
 
     def test_setTarget(self):
-        self.assertRaises(Exception, self.plugin.setTarget, None)
-        self.assertRaises(Exception, self.plugin.setTarget, 'INVALID_IP')
-        self.assertRaises(Exception, self.plugin.setTarget, '87.11.2.145')
+        print "Testing setTarget with args: relayIp=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setTarget, relayIp=None)
+        print "Testing setTarget with args: relayIp=%s " %("INVALID_IP")
+        self.assertRaises(PluginException, self.plugin.setTarget, relayIp='INVALID_IP')
+        print "Testing setTarget with args: relayIp=%s " %('87.11.2.145')
+        self.assertTrue(self.plugin.setTarget(relayIp='87.11.2.145'))
+        print "Testing startAttack "
+        self.assertTrue(self.plugin.startAttack() )
 
     def test_setTargetWithPort(self):
-        self.assertRaises(Exception, self.plugin.setTargetWithPort, None, None)
-        self.assertRaises(Exception, self.plugin.setTargetWithPort, 'INVALID_IP', 'INVALID PORT')
+        print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %(None, None)
+        self.assertRaises(PluginException, self.plugin.setTargetWithPort, None, None)
+        print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %('INVALID_IP', 'INVALID PORT')
+        self.assertRaises(PluginException, self.plugin.setTargetWithPort, 'INVALID_IP', 'INVALID PORT')
+        print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %('INVALID_IP', "80")
         self.assertRaises(Exception, self.plugin.setTargetWithPort, 'INVALID_IP', 80)
+        print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %('87.11.2.145', 'INVALID_PORT')
         self.assertRaises(Exception, self.plugin.setTargetWithPort, '87.11.2.145', 'INVALID_PORT')
-        self.assertRaises(Exception, self.plugin.setTargetWithPort, '87.11.2.145', 80)
-
-    def test_startAttack(self):
-        self.assertRaises(Exception, self.plugin.startAttack, )
-
-    def test_startAttackAllRelays(self):
-        self.assertRaises(Exception, self.plugin.startAttackAllRelays, )
+        print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %('87.11.2.145', '80')
+        self.assertTrue(self.plugin.setTargetWithPort('87.11.2.145', 80))
+        print "Testing startAttackAllRelays "
+        self.assertTrue(self.plugin.startAttackAllRelays() )
 
 if __name__ == '__main__':
     unittest.main()

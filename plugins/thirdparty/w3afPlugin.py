@@ -30,6 +30,7 @@ from w3af.core.data.options.opt_factory import opt_factory
 from w3af.core.data.kb.knowledge_base import kb
 from w3af.core.controllers.misc_settings import MiscSettings
 import w3af.core.data.kb.config as cf
+from core.tortazo.exceptions.PluginException import PluginException
 
 class w3afPlugin(BasePlugin):
     '''

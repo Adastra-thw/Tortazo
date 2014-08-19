@@ -26,6 +26,7 @@ from prettytable import PrettyTable
 from collections import Counter
 from config import config
 from plugins.texttable import Texttable
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebStemmingPlugin(BasePlugin):
     '''

@@ -30,6 +30,7 @@ import time
 from socket import error as socket_error
 import signal
 import paramiko
+from core.tortazo.exceptions.PluginException import PluginException
 
 class bruterPlugin(BasePlugin):
     '''

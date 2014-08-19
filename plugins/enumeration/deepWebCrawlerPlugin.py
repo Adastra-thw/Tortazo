@@ -35,6 +35,7 @@ from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
 import urllib
 import  sys
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebCrawlerPlugin(BasePlugin):
 

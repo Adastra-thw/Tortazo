@@ -33,6 +33,8 @@ from core.tortazo.utils.ServiceConnector import ServiceConnector
 from plugins.texttable import Texttable
 from distutils.util import strtobool
 import sys
+from core.tortazo.exceptions.PluginException import PluginException
+
 
 class BasePlugin():
     '''
@@ -70,9 +72,12 @@ class BasePlugin():
         self.logger.debug(term.format(message, term.Color.GREEN))
 
     def printRelaysFound(self):
-        #tableRelays = PrettyTable(["Host", "State", "Reason", "NickName", "Open Ports"])
-        tableRelays = PrettyTable(["NickName", "Host", "State", "Reason", "Open Ports"])
-        tableRelays.padding_width = 1
+        rows = [["Host", "State", "Reason", "NickName", "Open Ports"]]
+        tableRelays = Texttable()
+        tableRelays.set_cols_align(["l", "l", "l", "l" , "l"])
+        tableRelays.set_cols_valign(["m", "m", "m", "m", "m"])
+        tableRelays.set_cols_width([25,25,25,25,25])
+
         openPorts = None
 
         for torNode in self.torNodes:
@@ -81,11 +86,11 @@ class BasePlugin():
                 openPorts += str(port.reason)+':'+str(port.port)
 
             if openPorts is None:
-                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
+                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
             else:
-                tableRelays.add_row([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
+                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
             openPorts = None
-        print tableRelays.get_string(sortby='NickName')
+        print tableRelays.draw() + "\n"
 
 
     def printOnionRepository(self, start=1, maxResults=30):
@@ -138,8 +143,16 @@ class BasePlugin():
         else:
             cfg = Config()
             nested = 1
-        self.tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
-        self.tortazoShell()
+        try:
+            self.tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
+            self.tortazoShell()
+        except PluginException as pluginExc:
+            print "[-] Exception raised executing the plugin. Please, check the arguments used in the function called. Details below."
+            print "Message: %s " (pluginExc.getMessage())
+            print "Plugin: %s " (pluginExc.getPlugin())
+            print "Method: %s " (pluginExc.getMethod())
+            print "Trace: %s " (pluginExc.getTrace())
+
 
     def setPluginDetails(self,name,desc,version,author):
         self.name = name

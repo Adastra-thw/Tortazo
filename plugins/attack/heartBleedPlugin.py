@@ -24,6 +24,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from plugins.attack.utils.exploit32745 import HeartBleedExploit
 from plugins.texttable import Texttable
+from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import is_valid_ipv4_address, is_valid_ipv6_address, is_valid_port
 
 class heartBleedPlugin(BasePlugin):
     '''
@@ -48,21 +50,42 @@ class heartBleedPlugin(BasePlugin):
             self.info("[*] heartBleedPlugin Destroyed!")
 
     def setTarget(self, relayIp):
-        self.hbExploit = HeartBleedExploit(relayIp)
-        print "[+] Target %s setted." %(relayIp)
+        if relayIp is not None and relayIp != '':
+            if is_valid_ipv4_address(relayIp) or is_valid_ipv6_address(relayIp):
+                self.hbExploit = HeartBleedExploit(relayIp)
+                print "[+] Target %s setted." %(relayIp)
+                return True
+            else:
+                raise PluginException(message='IP Address is Invalid ', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget")
+        else:
+            raise PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget")
 
 
     def setTargetWithPort(self, relayIp, relayPort):
-        self.hbExploit = HeartBleedExploit(relayIp, relayPort)
-        print "[+] Target %s with port %s setted." %(relayIp,relayPort)
+        if relayIp is not None and relayIp != '':
+            if is_valid_ipv4_address(relayIp) or is_valid_ipv6_address(relayIp):
+                if is_valid_port(relayPort):
+                    self.hbExploit = HeartBleedExploit(relayIp, relayPort)
+                    print "[+] Target %s with port %s setted." %(relayIp,relayPort)
+                    return True
+                else:
+                    raise PluginException(message='The port is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+
+            else:
+                raise PluginException(message='IP Address is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+        else:
+            raise PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+
 
     def startAttack(self):
         self.hbExploit.startAttack()
+        return True
 
     def startAttackAllRelays(self):
         for torNode in self.torNodes:
             self.hbExploit = HeartBleedExploit(torNode.host)
             self.hbExploit.startAttack()
+        return True
 
 
     def help(self):
