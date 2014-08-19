@@ -2,7 +2,7 @@
 Available Plugins in Tortazo
 ****************************************************
 
-There’s some plugins integrated in Tortazo and you can use them immediately just by loading the plugin in the interpreter using the switch “-P  / --use-plugin”. In this version, the following plugins are available to use.
+There’s some plugins integrated in Tortazo and you can use them immediately just by loading the plugin in the interpreter using the switch “-P  / --use-plugin”. 
 
 =================
 Plugins to Gather Information and enumeration of hidden services and TOR relays
@@ -17,7 +17,7 @@ infoGathering. TODO IN 1.2!
 
    *Description:*		
 
-   Plugin with some functions to gather information about the relays loaded in the plugin context. The source of the information loaded could be from the last scan performed by Tortazo or Database records stored by previous scans.
+   Plugin with some functions to gather information about the relays located in the plugin's context. The source of the information could be from the last scan performed by Tortazo or from Database records stored in previous scans.
 
 ====================================   ==========================================================================     ==========================================================================================================
 Function Name                          Description                                                                    Usage Example     
@@ -37,15 +37,18 @@ stemming
 
     *Plugin Name: stemming*
     *Definition: plugins.enumeration.deepWebStemmingPlugin.deepWebStemmingPlugin*
-    *Description: Basic stemming tasks against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.*
+    *Description:*
+    
+    Basic tasks  of stemming module against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.
 
 ====================================   ============================================================================     ==========================================================================================================
 Function Name                          Description                                                                      Usage Example     
 ====================================   ============================================================================     ==========================================================================================================
 help                                   Shows the banner help.                                                           self.help()
 simpleStemmingAllRelays                Stemming with the specified terms along the relays loaded in the plugin.         self.simpleStemmingAllRelays("drugs kill killer hitman")
-                                       Search for web sites in common ports, like 80,8080,443 or in a specific port                                       
-stemmingHiddenService                  Stemming with the specified terms in the onion address specified.                self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")                          
+                                       Searches in websites against common ports, 
+                                       like 80,8080,443 or in an specific port.                                       
+stemmingHiddenService                  Stemming with the specified terms in the onion address defined.                  self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")                          
 ====================================   ============================================================================     ==========================================================================================================
 
 stemming Plugin example
@@ -65,7 +68,7 @@ crawler
 
     *Description:*
 
-    This plugin uses Scrapy Framework to crawl a hidden service in TOR network. By default, the rules used follow every link in the specified website and downloads the contents found, however the user could overwrite this behavior specifying custom XPATH rules. The first action performed by the plugin is creating a new Socat tunnel in the local machine in the port 8765 by default. The endpoint will be the hidden service specified by the user, but the crawler will performs the requests directly against the local machine through the Socat tunnel created. This is very useful to route the requests from the local machine to the TOR network transparently. Also, the user could specify arguments to overwrite the XPATH rules for content extraction and the pages that the crawler should visit before to start the crawler process.
+    This plugin uses Scrapy Framework to crawl a hidden service in TOR network. By default, the rules used follow every link in the specified website and downloads the contents found, however the user could overwrite this behavior specifying custom XPATH rules. The first action performed by the plugin is create a new Socat tunnel in the local machine in the port 8765 by default. The endpoint will be the hidden service specified by the user, but the crawler will performs the requests directly against the local machine through the Socat tunnel created. This is very useful to route the requests from the local machine to the TOR network transparently. Also, the user could specify arguments to overwrite the XPATH rules for content extraction and the pages that the crawler should visit before to start the process.
 The website structure will be stored in database and the contents will be downloaded in local file system in the path "<TORTAZO_DIR>/onionSites/<hiddenServiceName>/"
 
 
@@ -96,7 +99,7 @@ compareRelaysWithHiddenWebSite         This function will perform an HTTP connec
                                        and compares the contents of both responses.  
                                        The return value will be a percent of similitude between both sites.
 crawlOnionWebSite                      This function executes a crawler against the specified hidden service.         *	self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/")    
-                                       The following parameters allows to control the behaviour of the crawler:       * self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False)
+                                       The following parameters allow to control the behaviour of the crawler:        * self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False)
                                        hiddenWebSite: The hidden site to crawl. This is a mandatory parameter.        * self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)
                                        hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80
                                        socatTcpListenPort: Port for the Socat proxy. Default value: 8765
@@ -113,9 +116,9 @@ crawlOnionWebSite                      This function executes a crawler against 
                                        in every HTTP connection performed by the crawler. 
                                        FuzzDB project is used to get a list of User-Agents reading the file 
                                        fuzzdb/attack-payloads/http-protocol/user-agents.txt
-                                       bruterOnProtectedResource: If true, when the spider found an HTTP protected res,
-                                       tries to execute an bruteforce attack using the specified dict file or FuzzDB.
-
+                                       bruterOnProtectedResource: If true, when the spider found an 
+                                       HTTP protected resource, tries to execute an bruteforce attack 
+                                       using the specified dict file or FuzzDB.
 ====================================   ==========================================================================     ==========================================================================================================
 
 crawler Plugin example
@@ -178,7 +181,7 @@ bruter
 Function Name                          Description                                                                    Usage Example     
 ====================================   ==========================================================================     ===================================================================================================================
 help                                   Shows the banner help.                                                         self.help()
-setDictSeparator                       Sets an separator for dictionary files.                                        self.setDictSeparator(":")
+setDictSeparator                       Sets an separator for the dictionary file.                                         self.setDictSeparator(":")
                                        Every line en the file must contain <user><separator><passwd>.
 sshBruterOnRelay                       Bruteforce attack against an SSH Server in the relay entered.                  self.sshBruterOnRelay('37.213.43.122', dictFile='/home/user/dict')
                                        Uses FuzzDB if the dictFile is not specified.                                        
@@ -209,6 +212,7 @@ httpBruterOnHiddenService              Bruteforce attack against an onion site (
                                        Uses FuzzDB if the dictFile is not specified.
 ====================================   ==========================================================================     ===================================================================================================================
 
+
 bruter Plugin example
 =================
 
@@ -224,9 +228,10 @@ heartBleed
     
     *Definition: plugins.attack.heartBleedPlugin.heartBleedPlugin*
 
-    *Description:*
-
+    *Description: *
+    
     Perform HearthBleed Extension vulnerability tests. This plugin allows to discovery TOR relays with this vulnerability.
+
 
 ====================================   ==========================================================================     ==========================================================================================================
 Function Name                          Description                                                                    Usage Example     
@@ -263,11 +268,10 @@ w3af
  
     *Description:*
 
-    W3AF is a powerful scanner focused on discovering vulnerabilities and attack 
+    W3AF is a powerful scanner focused on discovering vulnerabilities and attack in 
 web applications. As is written in Python and has a GNU/GPL license, you can use the classes and utilities from any script in Python. In this case, the plugin does not 
-only cover the features included in w3af, but also allows the execution 
-of audits in web applications that are hosted in the deep web. In the official release of W3AF, you can’t use any site on the deep web whose name is an ONION TLD. Using this plugin, you can do it.
-
+only covers the features included in w3af, but also allows the execution 
+of audits in web applications that are hosted in the deep web. In the official release of W3AF, you can’t use any site on the deep web whose target address is an ONION TLD. Using this plugin, allows you to do that.
 ====================================   ==========================================================================     ==========================================================================================================
 Function Name                          Description                                                                    Usage Example     
 ====================================   ==========================================================================     ==========================================================================================================
@@ -285,7 +289,7 @@ getPluginOptions                       Get Options for the plugin specified.    
 setPluginOptions                       Set Options for the plugin specified.                                          self.setPluginOptions("audit","eval","boolean","use_time_delay","False")
 getPluginStatus                        Check if the specified plugin is enabled.                                      self.getPluginStatus("audit","eval")
 setTarget                              Sets the target for the attack (clear web).                                    self.setTarget("http://www.target.com")
-setTargetDeepWeb                       Sets the target in the DeepWeb of TOR.                                         self.setTarget("http://torlongonionpath.onion")
+setTargetDeepWeb                       Sets the target in the Deep eb of TOR.                                         self.setTarget("http://torlongonionpath.onion")
 startAttack                            Starts the attack.                                                             self.startAttack()
 listMiscConfigs                        List of Misc Settings.                                                         self.listMiscConfigs()
 setMiscConfig                          Sets a Misc Setting.                                                           self.setMiscConfig("msf_location","/opt/msf")
@@ -326,8 +330,9 @@ reports generated by Nessus. To carry out the interaction between
 Tortazo and Nessus, the pynessus-rest library is used; which has been developed 
 primarily to meet the needs of this plugin and directly uses the functions 
 available in the latest version of Nessus REST API. In this way, you can run the 
-same tasks that are available from the web interface enabled on Nessus. Connection and authentication must be declared in the properties
-file located in <TORTAZO_DIR>/config.py, which should specify the details for the connection to the server; these details include the address and port of the Nessus server and the credentials required to access. On other hand, if you want overwrite the configuration values without change the properties file, you can use the switch "-A  /  --plugin-arguments" with the special keywords "nessusHost", "nessusPort", "nessusUser", "nessusPassword".
+same tasks that are available from the web interface enabled on Nessus. Connection and authentication must be declared in the properties file
+located in <TORTAZO_DIR>/config.py, which should specify the details for the connection to the server; these details include the address and port of the Nessus server and the credentials required to access. On other hand, if you want overwrite the configuration values without change the properties file, you can use the switch "-A  /  --plugin-arguments" with the special keywords "nessusHost", "nessusPort", "nessusUser", "nessusPassword".
+
 
 ====================================   ===============================================================================     ==========================================================================================================
 Function Name                          Description                                                                         Usage Example     
