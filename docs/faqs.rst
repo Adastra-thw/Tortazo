@@ -13,7 +13,7 @@ Please, read the gentle introduction of Tortazo. :ref:`gentle_introduction`
 =================
 I have problems when I run "Tortazo.py" script.
 =================
-Please, check the dependencies and verify that your environment satisfy them all.
+Please, check the dependencies and verify that your environment satisfies them.
 
 
 =================
@@ -25,8 +25,14 @@ Yes, free as the air you breathe. This project is licensed under GNU/GPLv2
 =================
 ¿How can I help you?
 =================
-Great! if you want to help, read the documentation and find errors, test the framework, report bugs and if you can, write code.
+Fine! if you want to help, you can:
+* read the documentation and improve the documents.
+* Find errors
+* Test the framework
+* Report bugs and if you can, write code.
+
 You can write me an email to debiadastra [at] gmail.com
+
 
 ****************************************************
 SPECIFIC FAQs
@@ -34,13 +40,13 @@ SPECIFIC FAQs
 =================
 I get "Import Errors" when I run the Tortazo.py script.
 =================
-Please, check the dependencies of Tortazo and install the Python libraries needed :ref:`dependencies-label` or use the binary distributed.
+Please, check the dependencies of Tortazo and then proceed to install the Python libraries :ref:`dependencies-label`.
 
 .. _problems_tor_socks_port:
 =================
 I have problems running the onion repository mode and some plugins which perform connections against hidden services in TOR, ¿what am I doing wrong?
 =================
-Every connection against the Deep web, must to use a SOCKS proxy to route the traffic through a TOR circuit. To do that, you must start a local instance of TOR and setting the "SockPort" property in the configuration file "torrc" used to start TOR.
+Every connection against the Deep web, must to use a SOCKS proxy to route the traffic through a TOR circuit. To do that, you must start a local instance of TOR and setting the "SocksPort" property in the configuration file "torrc" used to start TOR.
 On other hand, the default value for that port in Tortazo is "9150" and you can change that value manually editing property "socksPort" in the configuration file "config/config.py" (If you're using the development version, you can't change that value using the executable distributed). Also, if you want to start automatically a new instance of TOR when you're executing Tortazo, just specify the switches -T / --tor-localinstance and -U / --use-localinstance. 
 Check the switches available in Tortazo :ref:`supported_options`
 
@@ -54,11 +60,11 @@ Check two things:
 =================
 Oh man, the onion repository mode has been running for the last "n" hours and I don't have any result ¿Am I doing something wrong?
 =================
-Well, this could be something normal. Please, check the onion repository mode documentation :ref:`repository-mode-label`
+Well, this could be something normal. Please, check the onion repository  documentation :ref:`repository-mode-label`
 Also, you must have a TOR local instance up and running with the SocksPort property enabled. Check: :ref:`problems_tor_socks_port`
 
 =================
-When I run the crawler plugin twice I get the error "ReactorNotRestartable".
+When I run some functions of the plugins "crawler" or "hiddenService" twice, I get the error "ReactorNotRestartable".
 =================
 The crawler plugin uses Scrapy Framework (http://scrapy.org/) which uses Twisted for every connection and network process. Twisted have an element called "reactor" which is designed to not be "restartable", so if you run the function "crawlOnionWebSite" from the crawler plugin twice, you'll get that error. You should exit from the plugin interpreter and run the plugin again.
 
@@ -72,4 +78,4 @@ If you use the Shodan plugin available, you'll have another extended options to 
 =================
 I get an strange error... ¿What can I do?
 =================
-Well, this is very ambiguous, don't you think? If after read the documentation  :ref:`getting_started` and read this FAQ :ref:`faqs_tortazo`` you can not solve it, please contact me :ref:`contact_adastra`
+Well, your question is very ambiguous, don't you think? If after read the documentation  :ref:`getting_started` and read this FAQ :ref:`faqs_tortazo`` you can not solve it, please contact me :ref:`contact_adastra`

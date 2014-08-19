@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 from plugins.attack.maliciousHiddenServicePlugin import maliciousHiddenServicePlugin
-from config import unittests 
+from config import unittests
 import unittest
 
 class maliciousHiddenServicePluginTest(unittest.TestCase):
