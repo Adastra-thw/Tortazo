@@ -41,20 +41,46 @@ class deepWebCrawlerPluginTest(unittest.TestCase):
         self.plugin.setPluginArguments(self.pluginArgs)
         self.plugin.processPluginArguments()
 
-    def setExtractorRulesAllow(self, extractorRulesAllow):
-        pass
+    def test_setExtractorRulesAllow(self):
+        print "Testing setExtractorRulesAllow with args: extractorRulesAllow=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setExtractorRulesAllow, extractorRulesAllow=None)
+
+        print "Testing setExtractorRulesAllow with args: extractorRulesAllow=%s " %(unittests.crawlerPlugin_regexInvalid)
+        self.assertRaises(PluginException, self.plugin.setExtractorRulesAllow, extractorRulesAllow=unittests.crawlerPlugin_regexInvalid)
+
+        
     
-    def setExtractorRulesDeny(self, extractorRulesDeny):
-        pass
+    def test_setExtractorRulesDeny(self):
+        print "Testing setExtractorRulesDeny with args: extractorRulesDeny=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setExtractorRulesDeny, extractorRulesDeny=None)
 
-    def setCrawlRulesLinks(self, crawlRulesLinks):
-        pass
+        print "Testing setExtractorRulesDeny with args: extractorRulesDeny=%s " %(unittests.crawlerPlugin_regexInvalid)
+        self.assertRaises(PluginException, self.plugin.setExtractorRulesDeny, extractorRulesDeny=unittests.crawlerPlugin_regexInvalid)
 
-    def setCrawlRulesImages(self, crawlRulesImages):
-        pass
 
-    def setDictForBruter(self, dictFile):
-        pass
+    def test_setCrawlRulesLinks(self):
+        print "Testing setCrawlRulesLinks with args: extractorRulesDeny=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesLinks=None)
+
+        print "Testing setCrawlRulesLinks with args: extractorRulesDeny=%s " %(unittests.crawlerPlugin_regexInvalid)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesLinks=unittests.crawlerPlugin_regexInvalid)
+        
+
+    def test_setCrawlRulesImages(self):
+        print "Testing setCrawlRulesImages with args: crawlRulesImages=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesImages=None)
+
+        print "Testing setCrawlRulesImages with args: crawlRulesImages=%s " %(unittests.crawlerPlugin_regexInvalid)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesImages=unittests.crawlerPlugin_regexInvalid)
+        
+
+    def test_setDictForBruter(self, dictFile):
+        print "Testing setDictForBruter with args: dictFile=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.setDictForBruter, dictFile=None)
+
+        print "Testing setDictForBruter with args: dictFile=%s " %(unittests.crawlerPlugin_dictFileInvalid)
+        self.assertRaises(PluginException, self.plugin.setDictForBruter, dictFile=unittests.crawlerPlugin_dictFileInvalid)
+
 
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
         pass

@@ -48,8 +48,45 @@ def is_valid_ipv6_address(address):
         return False
     return True
 
+def is_valid_domain(domain):
+    try:
+        data = socket.gethostbyname(domain)
+        ip = repr(data)
+        if ip is not None and ip != '':
+            return True
+    except Exception:
+        return False    
+
+def is_valid_onion_address(onionAddress):
+    if onionAddress.endswith('.onion') == False:
+        return False
+    validchars ='234567' + string.lowercase
+    valid = set(validchars)
+    onionAddress = onionAddress.replace('.onion', '')
+    onionAddress = onionAddress.replace('http://', '')
+    if len(onionAddress) != 16:
+        return False
+    return set(onionAddress).issubset(valid)
+
+
+def is_valid_url(url):
+    import urllib
+    try:
+        urllib.urlopen(url)
+    except IOError:
+        return False
+    return True
+
 def is_valid_port(port):
     if str(port).isdigit() and port in range(1,65535):
         return True
     else:
         return  False
+    
+def is_valid_regex(regex):
+    import re
+    try:
+        re.compile(regex)
+        return True
+    except re.error:
+        return False

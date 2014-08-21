@@ -36,6 +36,7 @@ from scrapy.xlib.pydispatch import dispatcher
 import urllib
 import  sys
 from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import *
 
 class deepWebCrawlerPlugin(BasePlugin):
 
@@ -61,22 +62,53 @@ class deepWebCrawlerPlugin(BasePlugin):
             self.debug("[*] DeepWebPlugin Destroyed!")
 
     def setExtractorRulesAllow(self, extractorRulesAllow):
+        if is_valid_regex(extractorRulesAllow) == False:
+            print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesAllow)
+            raise PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesAllow),
+                                  trace="deepWebCrawlerPlugin with args setExtractorRulesAllow=%s " %(str(extractorRulesAllow)),
+                                  plugin="crawler", method="setExtractorRulesAllow")
+        
         print "[+] Setting allow rules ... %s " %(extractorRulesAllow)
         self.extractorRulesAllow = extractorRulesAllow
 
     def setExtractorRulesDeny(self, extractorRulesDeny):
+        if is_valid_regex(extractorRulesDeny) == False:
+            print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesDeny)
+            raise PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesDeny),
+                                  trace="deepWebCrawlerPlugin with args extractorRulesDeny=%s " %(str(extractorRulesDeny)),
+                                  plugin="crawler", method="setExtractorRulesDeny")
+        
         print "[+] Setting deny rules ... %s " %(extractorRulesDeny)
         self.extractorRulesDeny = extractorRulesDeny
 
     def setCrawlRulesLinks(self, crawlRulesLinks):
+        if is_valid_regex(crawlRulesLinks) == False:
+            print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesLinks)
+            raise PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesLinks),
+                                  trace="deepWebCrawlerPlugin with args crawlRulesLinks=%s " %(str(crawlRulesLinks)),
+                                  plugin="crawler", method="setCrawlRulesLinks")
+        
         print "[+] Setting rules for the links extractor... %s " %(crawlRulesLinks)
         self.crawlRulesLinks = crawlRulesLinks
 
     def setCrawlRulesImages(self, crawlRulesImages):
+        if is_valid_regex(crawlRulesImages) == False:
+            print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesImages)
+            raise PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesImages),
+                                  trace="deepWebCrawlerPlugin with args crawlRulesImages=%s " %(str(crawlRulesImages)),
+                                  plugin="crawler", method="setCrawlRulesImages")
+        
         print "[+] Setting rules for the images extractor... %s " %(crawlRulesImages)
         self.crawlRulesImages = crawlRulesImages
 
     def setDictForBruter(self, dictFile):
+        if os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
+            print "[-] The file selected doesn't exists or is a directory."
+            raise PluginException(message='The regular expresion specified is invalid. %s ' %(dictFile),
+                                  trace="deepWebCrawlerPlugin with args dictFile=%s " %(str(dictFile)),
+                                  plugin="crawler", method="setDictForBruter")
+            
+            
         print "[+] Setting Dictionary File ... %s " %(dictFile)
         self.dictFile = dictFile
 
