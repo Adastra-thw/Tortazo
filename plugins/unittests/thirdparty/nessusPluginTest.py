@@ -42,27 +42,12 @@ class nessusPluginTest(unittest.TestCase):
         self.plugin.setPluginArguments(self.pluginArgs)
         self.plugin.processPluginArguments()
 
-    def feed(self):
-        pass
-
-    def serverSecureSettingsList(self):
-        pass
-
-    def serverSecureSettings(self):
-        pass
-
-    def serverUpdate(self):
-        pass
+    
 
     def serverRegister(self, nessusCode):
         pass
 
-    def serverLoad(self):
-        pass
-
-    def serverUuid(self):
-        pass
-
+    
     def userAdd(self, userName, password, admin=1):
         pass        
 
@@ -75,34 +60,10 @@ class nessusPluginTest(unittest.TestCase):
     def userChpasswd(self, userName, password):
         pass
 
-    def usersList(self):
-        pass
-
-    def pluginsList(self):
-        pass
-
-    def pluginAttributesList(self):
-        pass
-
     def pluginListsFamily(self, familyName):
         pass
 
     def pluginDescription(self, fileNamePlugin):
-        pass
-
-    def pluginsAttributesFamilySearch(self, filter0Quality, filterSearchType, filter0Value, filter0Filter):
-        pass
-
-    def pluginsAttributesPluginSearch(self, filter0quality, filterSearchType, filter0Value, filter0Filter, family):
-        pass
-
-    def pluginsMd5(self):
-        pass
-    
-    def policyPreferencesList(self):
-        pass
-
-    def policyList(self):
         pass
 
     def policyDelete(self, policyId):
@@ -129,9 +90,6 @@ class nessusPluginTest(unittest.TestCase):
     def scanPause(self, scanUuid):
         pass
 
-    def scanList(self):
-        pass
-
     def scanTemplateAllRelays(self, policyId, templateName):
         pass
 
@@ -149,9 +107,6 @@ class nessusPluginTest(unittest.TestCase):
         pass
 
     def scanTemplateLaunch(self, templateName):
-        pass
-
-    def reportList(self):
         pass
 
     def reportDelete(self, reportUuid):

@@ -51,27 +51,40 @@ class shodanPlugin(BasePlugin):
 
     def setApiKey(self, apiKey):
         if apiKey == '' or apiKey is None:
-            print "[-] The Shodan key specified is invalid. "
-            raise PluginException(message='The Shodan key specified is invalid.',
+            pluginException = PluginException(message='The Shodan key specified is invalid.',
                                   trace="setApiKey with args apiKey=%s " %(apiKey),
                                   plugin="shodan", method="setApiKey")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The Shodan key specified is invalid. "
+                raise pluginException
         self.apiKey = apiKey
         print "[*] Shodan Key established!"
 
     def setApiKeyFile(self, apiKeyFile):
         if apiKeyFile == '' or apiKeyFile is None:
-            print "[-] The file specified is invalid. "
-            raise PluginException(message='The file specified is invalid.',
+            pluginException = PluginException(message='The file specified is invalid.',
                                   trace="setApiKeyFile with args apiKeyFile=%s " %(apiKeyFile),
                                   plugin="shodan", method="setApiKeyFile")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The file specified is invalid. "
+                raise pluginException
 
         if os.path.exists(apiKeyFile) == False or os.path.isfile(apiKeyFile) == False:
-            print "[-] The file specified is invalid. "
-            raise PluginException(message='The file specified is invalid.',
+            pluginException = PluginException(message='The file specified is invalid.',
                                   trace="setApiKeyFile with args apiKeyFile=%s " %(apiKeyFile),
                                   plugin="shodan", method="setApiKeyFile")
-
-
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The file specified is invalid. "
+                raise pluginException
 
         shodanKeyString = open(apiKeyFile).readline().rstrip('\n')
         self.apiKey = shodanKeyString
@@ -79,18 +92,26 @@ class shodanPlugin(BasePlugin):
 
     def basicSearchQuery(self, basicSearch, limit=10):
         if limit == None or limit < 0:
-            print "[-] The limit specified is invalid. "
-            raise PluginException(message='The limit specified is invalid.',
+            pluginException = PluginException(message='The limit specified is invalid.',
                                   trace="basicSearchQuery with args basicSearch=%s , limit=%s " %(basicSearch, str(limit)),
                                   plugin="shodan", method="basicSearchQuery")
-
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The limit specified is invalid. "
+                raise pluginException
+            
         if basicSearch == None or basicSearch == '':
-            print "[-] The query specified is invalid. "
-            raise PluginException(message='The query specified is invalid.',
+            pluginException = PluginException(message='The query specified is invalid.',
                                   trace="basicSearchQuery with args basicSearch=%s , limit=%s " %(basicSearch, str(limit)),
                                   plugin="shodan", method="basicSearchQuery")
-
-
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The query specified is invalid. "
+                raise pluginException
 
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
@@ -117,10 +138,15 @@ class shodanPlugin(BasePlugin):
 
     def basicSearchAllRelays(self,basicSearch):
         if basicSearch == None or basicSearch == '':
-            print "[-] The query specified is invalid. "
-            raise PluginException(message='The query specified is invalid.',
+            pluginException = PluginException(message='The query specified is invalid.',
                                   trace="basicSearchAllRelays with args basicSearch=%s " %(basicSearch),
                                   plugin="shodan", method="basicSearchAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The query specified is invalid. "
+                raise pluginException
 
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
@@ -147,19 +173,27 @@ class shodanPlugin(BasePlugin):
 
     def basicSearchByRelay(self,basicSearch, relay):
         if basicSearch == None or basicSearch == '':
-            print "[-] The query specified is invalid. "
-            raise PluginException(message='The query specified is invalid.',
+            pluginException = PluginException(message='The query specified is invalid.',
                                   trace="basicSearchAllRelays with args basicSearch=%s , relay=%s" %(basicSearch, relay),
                                   plugin="shodan", method="basicSearchAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The query specified is invalid. "
+                raise pluginException
 
 
         if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
-            print '[-] The relay specified is invalid. %s ' %(relay)
-            raise PluginException(message='The relay specified is invalid. %s ' %(relay),
+            pluginException = PluginException(message='The relay specified is invalid. %s ' %(relay),
                                   trace="basicSearchByRelay with args basicSearch=%s , relay=%s " %(basicSearch, relay),
                                   plugin="shodan", method="basicSearchByRelay")
-
-
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The relay specified is invalid. %s ' %(relay)
+                raise pluginException
 
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
@@ -185,10 +219,15 @@ class shodanPlugin(BasePlugin):
 
     def basicSearchByNickname(self,basicSearch, nickname):
         if basicSearch == None or basicSearch == '':
-            print "[-] The query specified is invalid. "
-            raise PluginException(message='The query specified is invalid.',
+            pluginException = PluginException(message='The query specified is invalid.',
                                   trace="basicSearchByNickname with args basicSearch=%s " %(basicSearch),
                                   plugin="shodan", method="basicSearchByNickname")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The query specified is invalid. "
+                raise pluginException
 
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)

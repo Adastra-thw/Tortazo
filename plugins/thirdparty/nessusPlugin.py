@@ -29,6 +29,7 @@ from plugins.texttable import Texttable
 import requests
 import sys
 from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import *
 
 class nessusPlugin(BasePlugin):
     '''
@@ -54,12 +55,25 @@ class nessusPlugin(BasePlugin):
             self.nessusClient = NessusClient(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"])
             contents = self.nessusClient.login(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"])
             if contents['reply']['status'] != 'OK':
-                raise StandardError("[+] Autentication Failed. The credentials used were: user=%s and password=%s. Please, check those values. " %(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"]))
+                pluginException = PluginException(message="Autentication Failed. The credentials used were: user=%s and password=%s. Please, check those values. " %(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"]),
+                                      trace="Autentication Failed.",
+                                      plugin="nessus",
+                                      method="__login")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    raise pluginException 
         except requests.exceptions.ConnectionError:
-            raise PluginException(message="Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]),
+            pluginException = PluginException(message="Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]),
                                   trace="Connection error with the Nessus server.",
                                   plugin="nessus",
                                   method="__login")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                raise pluginException
 
 
 
@@ -140,6 +154,18 @@ class nessusPlugin(BasePlugin):
         print tableNessusServerUpdate.draw()+"\n"
 
     def serverRegister(self, nessusCode):
+        if nessusCode = '' or nessusCode is None:
+            
+            pluginException = PluginException(message="The 'nessus code' specified is invalid. %s " %(nessusCode),
+                                  trace="The 'nessus code' specified is invalid.",
+                                  plugin="nessus",
+                                  method="serverRegister")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.serverRegister(nessusCode))
         nessusConverter.serverUpdateToStructure()
 
@@ -183,6 +209,39 @@ class nessusPlugin(BasePlugin):
         print tableNessusServerUuid.draw()+"\n"
 
     def userAdd(self, userName, password, admin=1):
+        if userName == '' or userName is None:
+            pluginException = PluginException(message='The username specified is invalid.',
+                                  trace="userAdd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userAdd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The username specified is invalid. "
+                raise pluginException
+
+        if password == '' or password is None:
+            pluginException = PluginException(message='The password specified is invalid.',
+                                  trace="userAdd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userAdd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The password specified is invalid. "
+                raise pluginException
+
+        if str(admin).isdigit() == False or admin not in [0,1]:
+            pluginException = PluginException(message='The admin flag specified is invalid. Should be 1 (admin) or 0 (regular user)',
+                                  trace="userAdd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userAdd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The admin flag specified is invalid. "
+                raise pluginException          
+            
         administrator = False
         if admin == 1:
             administrator = True
@@ -203,6 +262,40 @@ class nessusPlugin(BasePlugin):
         print tableUsers.draw()+"\n"
 
     def userEdit(self, userName, password, admin=1):
+        if userName == '' or userName is None:
+            pluginException = PluginException(message='The username specified is invalid.',
+                                  trace="userEdit with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userEdit")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The username specified is invalid. "
+                raise pluginException
+
+        if password == '' or password is None:
+            pluginException = PluginException(message='The password specified is invalid.',
+                                  trace="userEdit with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userEdit")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The password specified is invalid. "
+                raise pluginException
+
+        if str(admin).isdigit() == False or admin not in [0,1]:
+            pluginException = PluginException(message='The admin flag specified is invalid. Should be 1 (admin) or 0 (regular user)',
+                                  trace="userEdit with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userEdit")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The admin flag specified is invalid. "
+                raise pluginException
+
+            
         administrator = False
         if admin == 1:
             administrator = True
@@ -224,6 +317,17 @@ class nessusPlugin(BasePlugin):
         print tableUsers.draw()+"\n"
 
     def userDelete(self, userName):
+        if userName == '' or userName is None:
+            pluginException = PluginException(message='The username specified is invalid.',
+                                  trace="userDelete with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The username specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.usersDelete(userName))
         nessusConverter.userToStructure()
 
@@ -242,6 +346,28 @@ class nessusPlugin(BasePlugin):
         print tableUsers.draw()+"\n"
 
     def userChpasswd(self, userName, password):
+        if userName == '' or userName is None:
+            pluginException = PluginException(message='The username specified is invalid.',
+                                  trace="userChpasswd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userChpasswd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return 
+            else:
+                print "[-] The username specified is invalid. "
+                raise pluginException
+
+        if password == '' or password is None:
+            pluginException = PluginException(message='The password specified is invalid.',
+                                  trace="userChpasswd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userChpasswd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The password specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.usersChpasswd(userName,password))
         nessusConverter.userToStructure()
 
@@ -309,6 +435,17 @@ class nessusPlugin(BasePlugin):
         print tablePluginsAttributes.draw()+"\n"
 
     def pluginListsFamily(self, familyName):
+        if familyName == '' or familyName is None:
+            pluginException = PluginException(message='The familyName specified is invalid.',
+                                  trace="pluginListsFamily with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="pluginListsFamily")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The familyName specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.pluginsListFamily(familyName))
         nessusConverter.pluginListFamilyToStructure()
         print "[*] Plugins List Family"
@@ -325,6 +462,16 @@ class nessusPlugin(BasePlugin):
         print tablePluginsListFamily.draw()+"\n"
 
     def pluginDescription(self, fileNamePlugin):
+        if fileNamePlugin is None or fileNamePlugin == '':
+            pluginException = PluginException(message='The fileNamePlugin specified is invalid.',
+                                  trace="pluginDescription with args fileNamePlugin=%s " %(fileNamePlugin),
+                                  plugin="nessus", method="pluginDescription")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The fileNamePlugin specified is invalid. "
+                raise pluginException
         nessusConverter = NessusConverter(self.nessusClient.pluginsDescription(fileNamePlugin))
         nessusConverter.pluginsDescriptionToStructure()
         print "[*] Plugin Description"
@@ -442,6 +589,17 @@ class nessusPlugin(BasePlugin):
         print tablePolicies.draw()+"\n"
 
     def policyDelete(self, policyId):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="policyDelete with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="policyDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.policyDelete(policyId))
         nessusConverter.policyDeletedToStructure()
         print "[*] Policy Deleted"
@@ -457,6 +615,17 @@ class nessusPlugin(BasePlugin):
         print tablePolicies.draw()+"\n"
 
     def policyCopy(self, policyId):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="policyCopy with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="policyCopy")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.policyCopy(policyId))
         nessusConverter.policyStructureToStructure()
         print "[*] Policy Copy"
@@ -473,6 +642,27 @@ class nessusPlugin(BasePlugin):
 
 
     def policyDownload(self, policyId, fileName):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="policyDownload with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="policyDownload")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="policyDownload with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="policyDownload")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.policyDownload(policyId))
         nessusConverter.policyDownloadedToStructure()
         try:
@@ -481,11 +671,43 @@ class nessusPlugin(BasePlugin):
             fileDescriptor.close()
             print "[+] Policy's file downloaded successfully."
         except:
-            print "Unexpected error:", sys.exc_info()[0]
-            print "[-] Error downloading the policy. Check the file name specified."
+            pluginException = PluginException(message='Error downloading the policy. Check the file name specified.',
+                                  trace=sys.exc_info()[0],
+                                  plugin="nessus", method="policyDownload")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Error downloading the policy. Check the file name specified."
+                raise pluginException
+            
+
 
 
     def scanAllRelays(self, policyId, scanName):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanAllRelays with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if scanName == '' or scanName is None:
+            pluginException = PluginException(message='The scan name specified is invalid.',
+                                  trace="scanAllRelays with args scanName=%s " %(str(scanName)),
+                                  plugin="nessus", method="scanAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The scan name specified is invalid. "
+                raise pluginException
+            
+            
         targets = ''
         for node in self.torNodes:
             targets +=node.host+"\n"
@@ -512,6 +734,39 @@ class nessusPlugin(BasePlugin):
 
 
     def scanByRelay(self, policyId, scanName, relay):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanByRelay with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if scanName == '' or scanName is None:
+            pluginException = PluginException(message='The scan name specified is invalid.',
+                                  trace="scanByRelay with args scanName=%s " %(str(scanName)),
+                                  plugin="nessus", method="scanByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The scan name specified is invalid. "
+                raise pluginException
+
+        if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
+            pluginException = PluginException(message='[-] The relay specified is invalid. %s ' %(relay),
+                                              trace="scanByRelay with args relay=%s " %(relay),
+                                              plugin="nessus", method="scanByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The relay specified is invalid. %s ' %(relay)
+                raise pluginException
+            
         found = False
         for node in self.torNodes:
             if relay is not None:
@@ -542,6 +797,17 @@ class nessusPlugin(BasePlugin):
             print ["[-] The relay specified is not found."]
 
     def scanStop(self, scanUuid):
+        if scanUuid == '' or scanUuid is None:
+            pluginException = PluginException(message='The scan uuid specified is invalid.',
+                                  trace="scanStop with args scanUuid=%s " %(str(scanUuid)),
+                                  plugin="nessus", method="scanStop")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The scan uuid specified is invalid. "
+                raise pluginException
+        
         nessusConverter = NessusConverter(self.nessusClient.scanStop(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan stopped."
@@ -564,6 +830,16 @@ class nessusPlugin(BasePlugin):
         print tableScan.draw()+"\n"
 
     def scanResume(self, scanUuid):
+        if scanUuid == '' or scanUuid is None:
+            pluginException = PluginException(message='The scan uuid specified is invalid.',
+                                  trace="scanResume with args scanUuid=%s " %(str(scanUuid)),
+                                  plugin="nessus", method="scanResume")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The scan uuid specified is invalid. "
+                raise pluginException
         nessusConverter = NessusConverter(self.nessusClient.scanResume(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan Resumed."
@@ -586,6 +862,17 @@ class nessusPlugin(BasePlugin):
         print tableScan.draw()+"\n"
 
     def scanPause(self, scanUuid):
+        if scanUuid == '' or scanUuid is None:
+            pluginException = PluginException(message='The scan uuid specified is invalid.',
+                                  trace="scanPause with args scanUuid=%s " %(str(scanUuid)),
+                                  plugin="nessus", method="scanPause")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The scan uuid specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.scanPause(scanUuid))
         nessusConverter.scanToStructure()
         print "[*] Nessus scan Paused."
@@ -626,6 +913,28 @@ class nessusPlugin(BasePlugin):
         print tableScan.draw()+"\n"
 
     def scanTemplateAllRelays(self, policyId, templateName):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanTemplateAllRelays with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanTemplateAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if templateName == '' or templateName is None:
+            pluginException = PluginException(message='The template name specified is invalid.',
+                                  trace="scanTemplateAllRelays with args templateName=%s " %(str(templateName)),
+                                  plugin="nessus", method="scanTemplateAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified is invalid. "
+                raise pluginException
+            
         targets = ''
         for node in self.torNodes:
             targets +=node.host+"\n"
@@ -648,6 +957,40 @@ class nessusPlugin(BasePlugin):
         print tableTemplate.draw()+"\n"
 
     def scanTemplateByRelay(self,policyId,relay,templateName):
+        if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
+            pluginException = PluginException(message='[-] The relay specified is invalid. %s ' %(relay),
+                                              trace="scanTemplateByRelay with args relay=%s " %(relay),
+                                              plugin="nessus", method="scanTemplateByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The relay specified is invalid. %s ' %(relay)
+                raise pluginException
+
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanTemplateByRelay with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanTemplateByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if templateName == '' or templateName is None:
+            pluginException = PluginException(message='The template name specified is invalid.',
+                                  trace="scanTemplateByRelay with args templateName=%s " %(str(templateName)),
+                                  plugin="nessus", method="scanTemplateByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified is invalid. "
+                raise pluginException
+
+            
         found = False
         for node in self.torNodes:
             if relay is not None:
@@ -673,6 +1016,39 @@ class nessusPlugin(BasePlugin):
 
 
     def scanTemplateEditAllRelays(self, templateEdit, templateNewName, policyId):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanTemplateEditAllRelays with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanTemplateEditAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if templateEdit == '' or templateEdit is None:
+            pluginException = PluginException(message='The template name specified to edit is invalid.',
+                                  trace="scanTemplateEditAllRelays with args templateEdit=%s " %(str(templateEdit)),
+                                  plugin="nessus", method="scanTemplateEditAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified to edit is invalid. "
+                raise pluginException
+
+        if templateNewName == '' or templateNewName is None:
+            pluginException = PluginException(message='The template name specified to create is invalid.',
+                                  trace="scanTemplateEditAllRelays with args templateNewName=%s " %(str(templateNewName)),
+                                  plugin="nessus", method="scanTemplateEditAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified to create is invalid. "
+                raise pluginException
+            
         targets = ''
         for node in self.torNodes:
             targets +=node.host+"\n"
@@ -698,6 +1074,50 @@ class nessusPlugin(BasePlugin):
         
 
     def scanTemplateEditByRelay(self,templateEdit, templateNewName, policyId, relay):
+        if str(policyId).isdigit() == False or policyId is None:
+            pluginException = PluginException(message='The policy identifier specified is invalid.',
+                                  trace="scanTemplateEditByRelay with args policyId=%s " %(str(policyId)),
+                                  plugin="nessus", method="scanTemplateEditByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The policy identifier specified is invalid. "
+                raise pluginException
+
+        if templateEdit == '' or templateEdit is None:
+            pluginException = PluginException(message='The template name specified to edit is invalid.',
+                                  trace="scanTemplateEditByRelay with args templateEdit=%s " %(str(templateEdit)),
+                                  plugin="nessus", method="scanTemplateEditByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified to edit is invalid. "
+                raise pluginException
+
+        if templateNewName == '' or templateNewName is None:
+            pluginException = PluginException(message='The template name specified to create is invalid.',
+                                  trace="scanTemplateEditByRelay with args templateNewName=%s " %(str(templateNewName)),
+                                  plugin="nessus", method="scanTemplateEditByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified to create is invalid. "
+                raise pluginException
+            
+        if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
+            pluginException = PluginException(message='[-] The relay specified is invalid. %s ' %(relay),
+                                              trace="scanTemplateByRelay with args relay=%s " %(relay),
+                                              plugin="nessus", method="scanTemplateEditByRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The relay specified is invalid. %s ' %(relay)
+                raise pluginException
+            
         found = False
         for node in self.torNodes:
             if relay is not None:
@@ -724,6 +1144,18 @@ class nessusPlugin(BasePlugin):
             print tableTemplate.draw()+"\n"
 
     def scanTemplateDelete(self, templateUuid):
+        if templateUuid == '' or templateUuid is None:
+            pluginException = PluginException(message='The template uuid specified is invalid.',
+                                  trace="scanTemplateDelete with args templateUuid=%s " %(str(templateUuid)),
+                                  plugin="nessus", method="scanTemplateDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template uuid specified is invalid. "
+                raise pluginException
+
+            
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateDelete(templateUuid))
         nessusConverter.scanTemplateToStructure()
         print "[*] Nessus scan Template Deleted."
@@ -743,6 +1175,18 @@ class nessusPlugin(BasePlugin):
         print tableTemplate.draw()+"\n"
 
     def scanTemplateLaunch(self, templateName):
+        
+        if templateName == '' or templateName is None:
+            pluginException = PluginException(message='The template name specified to launch is invalid.',
+                                  trace="scanTemplateLaunch with args templateName=%s " %(str(templateName)),
+                                  plugin="nessus", method="scanTemplateLaunch")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The template name specified to lauch is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.scanTemplateLaunch(templateName))
         #Nessus will return an scan structure.
         nessusConverter.scanToStructure()
@@ -782,12 +1226,35 @@ class nessusPlugin(BasePlugin):
         print tableReport.draw()+"\n"
 
     def reportDelete(self, reportUuid):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportDelete with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+
+
         nessusConverter = NessusConverter(self.nessusClient.reportDelete(reportUuid))
         nessusConverter.reportToStructure()
         if nessusConverter.nessusStructure.report:
             print "[*] Report %s deleted." %(reportUuid)
 
     def reportHosts(self,reportUuid):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportDelete with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.reportHosts(reportUuid))
         nessusConverter.reportHostToStructure()
         print "[*] Nessus Report Hosts List."
@@ -810,6 +1277,28 @@ class nessusPlugin(BasePlugin):
         print tableReport.draw()+"\n"
 
     def reportPorts(self, reportUuid, hostname):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportDelete with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportDelete")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+            
+        if hostname == '' or hostname is None:
+            pluginException = PluginException(message='The hostname is invalid.',
+                                  trace="reportPorts with args hostname=%s " %(str(hostname)),
+                                  plugin="nessus", method="reportPorts")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The hostname is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.reportPorts(reportUuid, hostname))
         nessusConverter.reportPortToStructure()
         print "[*] Nessus Report Ports."
@@ -829,6 +1318,50 @@ class nessusPlugin(BasePlugin):
         print tableReport.draw()+"\n"
 
     def reportDetails(self,reportUuid, hostname,port,protocol):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportDetails with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportDetails")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+            
+        if hostname == '' or hostname is None:
+            pluginException = PluginException(message='The hostname is invalid.',
+                                  trace="reportDetails with args hostname=%s " %(str(hostname)),
+                                  plugin="nessus", method="reportDetails")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The hostname is invalid. "
+                raise pluginException
+
+        if protocol == '' or protocol is None:
+            pluginException = PluginException(message='The protocol is invalid.',
+                                  trace="reportDetails with args protocol=%s " %(str(protocol)),
+                                  plugin="nessus", method="reportDetails")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The protocol is invalid. "
+                raise pluginException
+            
+        if is_valid_port(port) == False:
+            pluginException = PluginException(message='The port is invalid.',
+                                  trace="reportDetails with args port=%s " %(str(port)),
+                                  plugin="nessus", method="reportDetails")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The protocol is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.reportDetails(reportUuid,hostname,port,protocol))
         nessusConverter.reportPortDetailToStructure()
         print "[*] Nessus Report Details."
@@ -856,6 +1389,29 @@ class nessusPlugin(BasePlugin):
         print tableReport.draw()+"\n"
 
     def reportTags(self, reportUuid, hostname):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportTags with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportTags")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+            
+        if hostname == '' or hostname is None:
+            pluginException = PluginException(message='The hostname is invalid.',
+                                  trace="reportTags with args hostname=%s " %(str(hostname)),
+                                  plugin="nessus", method="reportTags")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The hostname is invalid. "
+                raise pluginException
+
+
         nessusConverter = NessusConverter(self.nessusClient.reportTags(reportUuid, hostname))
         nessusConverter.tagToNessusStructure()
         print "[*] Nessus Tags."
@@ -875,6 +1431,17 @@ class nessusPlugin(BasePlugin):
         print tableReport.draw()+"\n"
 
     def reportAttributesList(self,reportUuid):
+        if reportUuid == '' or reportUuid is None:
+            pluginException = PluginException(message='The report uuid specified is invalid.',
+                                  trace="reportAttributesList with args reportUuid=%s " %(str(reportUuid)),
+                                  plugin="nessus", method="reportAttributesList")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The report uuid specified is invalid. "
+                raise pluginException
+            
         nessusConverter = NessusConverter(self.nessusClient.reportAttributesList(reportUuid))
         nessusConverter.reportAttributesToStructure()
         print "[*] Nessus Report Attributes."

@@ -97,3 +97,10 @@ def is_valid_regex(regex):
         return True
     except re.error:
         return False
+
+def showTrace(PluginException exc):
+    print "[-] Exception raised executing the plugin. Please, check the arguments used in the function called. Details below."
+    print "Message: %s " %(pluginExc.getMessage())
+    print "Plugin: %s " %(pluginExc.getPlugin())
+    print "Method: %s " %(pluginExc.getMethod())
+    print "Trace: %s " %(pluginExc.getTrace())

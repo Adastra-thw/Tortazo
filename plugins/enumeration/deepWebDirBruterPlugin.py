@@ -59,10 +59,15 @@ class deepWebDirBruterPlugin(BasePlugin):
 
     def dirBruterOnRelay(self, site, dictFile='', proxy=False):
         if is_valid_url(site) == False:
-            print "[-] The URL specified is invalid. %s " %(site)
-            raise PluginException(message="The URL specified is invalid. %s " %(site),
+            pluginException = PluginException(message="The URL specified is invalid. %s " %(site),
                                   trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
                                   plugin="dirBruter", method="dirBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. %s " %(site)
+                raise pluginException
 
         print "\n[+] Trying to find directories in the webserver %s " %(site)
         print "[+] Verifying if the path %s is reachable ... " %(site)
@@ -110,36 +115,56 @@ class deepWebDirBruterPlugin(BasePlugin):
                             except InvalidURL:
                                 continue
         except ConnectionError:
-            print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
-            raise PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
+            pluginException = PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
                                   trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
                                   plugin="dirBruter", method="dirBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
+                raise pluginException
         except Timeout:
-            print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
-            raise PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
+            pluginException = PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
                                   trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
                                   plugin="dirBruter", method="dirBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
+                raise pluginException
 
 
 
 
     def dirBruterOnAllRelays(self, port=80, dictFile=''):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="dirBruterOnAllRelays with args port=%s , dictFile=%s " %(str(port), dictFile),
                                   plugin="dirBruter", method="dirBruterOnAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
 
         for relay in self.bruteForceData:
             self.dirBruterOnRelay("http://"+relay, dictFile=dictFile, proxy=False)
 
     def dirBruterOnHiddenService(self, hiddenService, dictFile=''):
         if is_valid_onion_address(hiddenService) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService)
-            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService),
                                   trace="dirBruterOnHiddenService with args hiddenService=%s, dictFile=%s " %(hiddenService, dictFile),
                                   plugin="dirBruter",
                                   method="dirBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService)
+                raise pluginException
         self.dirBruterOnRelay(hiddenService, dictFile=dictFile, proxy=True)
 
 

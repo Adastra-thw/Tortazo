@@ -58,10 +58,15 @@ class deepWebStemmingPlugin(BasePlugin):
 
     def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", port=None):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="simpleStemmingAllRelays with args port=%s , queryTerms=%s " %(str(port), queryTerms),
                                   plugin="stemming", method="simpleStemmingAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
 
         for node in self.torNodes:
             if port is not None and port in node.openPorts:
@@ -80,10 +85,15 @@ class deepWebStemmingPlugin(BasePlugin):
 
     def stemmingHiddenService(self, onionSite, queryTerms):
         if is_valid_url(onionSite) == False:
-            print "[-] The URL specified is invalid. %s " %(onionSite)
-            raise PluginException(message="The URL specified is invalid. %s " %(onionSite),
+            pluginException = PluginException(message="The URL specified is invalid. %s " %(onionSite),
                                   trace="stemmingHiddenService with args onionSite=%s, queryTerms=%s " %(onionSite, queryTerms),
                                   plugin="stemming", method="stemmingHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. %s " %(onionSite)
+                raise pluginException
 
         response = self.serviceConnector.performHTTPConnectionHiddenService(onionSite, method="GET")
         self.__validateResponse(response, queryTerms)

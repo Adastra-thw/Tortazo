@@ -71,12 +71,22 @@ class bruterPlugin(BasePlugin):
     ################################################################################################################################################
     def sshBruterOnRelay(self, relay, port=22, dictFile=None, force=False):
         if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
-            print '[-] The relay specified is invalid. %s ' %(relay)
-            raise PluginException(message='[-] The relay specified is invalid. %s ' %(relay), trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s , force=%s " %(relay, str(port), dictFile, str(force)), plugin="bruterPlugin", method="sshBruterOnRelay")
+            pluginException = PluginException(message='[-] The relay specified is invalid. %s ' %(relay), trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s , force=%s " %(relay, str(port), dictFile, str(force)), plugin="bruterPlugin", method="sshBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The relay specified is invalid. %s ' %(relay)
+                raise pluginException
 
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(port)), trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s , force=%s " %(relay, str(port), dictFile, str(force)), plugin="bruterPlugin", method="sshBruterOnRelay")
+            pluginException = PluginException(message='[-] The port specified is invalid. %s ' %(str(port)), trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s , force=%s " %(relay, str(port), dictFile, str(force)), plugin="bruterPlugin", method="sshBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
         if self.bruteForceData.has_key(relay) == False and force==False:
             print "[-] IP Address %s not found in the relays. If you want to run the scan against this host, use the parameter 'force=True' of this function" %(relay)
@@ -127,27 +137,43 @@ class bruterPlugin(BasePlugin):
             
     def sshBruterOnAllRelays(self, port=22, dictFile=None, force=False):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(port)),
-                                  trace="sshBruterOnAllRelays with args port=%s , dictFile=%s , force=%s " %(str(port), dictFile, str(force)),
-                                  plugin="bruterPlugin", method="sshBruterOnAllRelays")
+            pluginException = PluginException(message='[-] The port specified is invalid. %s ' %(str(port)),
+                                              trace="sshBruterOnAllRelays with args port=%s , dictFile=%s , force=%s " %(str(port), dictFile, str(force)),
+                                              plugin="bruterPlugin", method="sshBruterOnAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
         for relay in self.bruteForceData:
             self.sshBruterOnRelay(relay=relay, port=port, dictFile=dictFile, force=force)
 
     def sshBruterOnHiddenService(self, onionService, port=22, dictFile=None):
         if is_valid_onion_address(onionService) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
-            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
                                   trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
                                   plugin="bruterPlugin",
                                   method="sshBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
+                raise pluginException
+            
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message="The port specified is invalid.",
+            pluginException = PluginException(message="The port specified is invalid.",
                                   trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
                                   plugin="bruterPlugin",
                                   method="sshBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
 
         print "[+] Starting SSH BruteForce mode against %s on port %s" %(onionService, str(port))
@@ -204,16 +230,26 @@ class bruterPlugin(BasePlugin):
         For this reason there's no checks to see if the host is stored in database. The user could enter the address for an onion service and this is perfectly valid.
         '''
         if is_valid_ipv4_address(host) == False and is_valid_ipv6_address(host) == False and is_valid_domain(host) == False:
-            print '[-] The host specified is invalid. %s ' %(host)
-            raise PluginException(message='The host specified is invalid. %s ' %(host),
+            pluginException = PluginException(message='The host specified is invalid. %s ' %(host),
                                   trace="ftpBruterOnRelay with args host=%s , port=%s , dictFile=%s , proxy=%s " %(host, str(port), dictFile, str(proxy)),
                                   plugin="bruterPlugin", method="ftpBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The host specified is invalid. %s ' %(host)
+                raise pluginException
 
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="ftpBruterOnRelay with args host=%s , port=%s , dictFile=%s , proxy=%s " %(host, str(port), dictFile, str(proxy)),
                                   plugin="bruterPlugin", method="ftpBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
         
         if proxy:
             self.serviceConnector.setSocksProxy()
@@ -264,10 +300,15 @@ class bruterPlugin(BasePlugin):
 
     def ftpBruterOnAllRelays(self, port=21, dictFile=None):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='[-] The port specified is invalid. %s ' %(str(port)),
                                   trace="ftpBruterOnAllRelays with args port=%s , dictFile=%s " %(str(port), dictFile),
                                   plugin="bruterPlugin", method="ftpBruterOnAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
         for relay in self.bruteForceData:
             self.ftpBruterOnRelay(relay, port=port, dictFile=dictFile)
@@ -275,17 +316,28 @@ class bruterPlugin(BasePlugin):
 
     def ftpBruterOnHiddenService(self, onionService, port=21, dictFile=None):
         if is_valid_onion_address(onionService) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
-            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
                                   trace="ftpBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
                                   plugin="bruterPlugin",
                                   method="ftpBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
+                raise pluginException
+            
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message="The port specified is invalid",
+            pluginException = PluginException(message="The port specified is invalid",
                                   trace="ftpBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
                                   plugin="bruterPlugin",
-                                  method="ftpBruterOnHiddenService")        
+                                  method="ftpBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
         self.ftpBruterOnRelay(onionService,port=port, dictFile=dictFile, proxy=True)
 
 
@@ -297,16 +349,26 @@ class bruterPlugin(BasePlugin):
         TOR only works on TCP, and typically SNMP works on UDP, so teorically you can not configure an SNMP Service as Hidden Service.
         '''
         if is_valid_ipv4_address(host) == False and is_valid_ipv6_address(host) == False and is_valid_domain(host) == False:
-            print '[-] The host specified is invalid. %s ' %(host)
-            raise PluginException(message='The host specified is invalid. %s ' %(host),
+            pluginException = PluginException(message='The host specified is invalid. %s ' %(host),
                                   trace="snmpBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
                                   plugin="bruterPlugin", method="snmpBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The host specified is invalid. %s ' %(host)
+                raise pluginException
 
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="snmpBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
                                   plugin="bruterPlugin", method="snmpBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
         
         self.serviceConnector.unsetSocksProxy()
         print "[+] Starting SNMP BruteForce mode against %s on port %s" %(host, str(port))
@@ -336,10 +398,15 @@ class bruterPlugin(BasePlugin):
 
     def snmpBruterOnAllRelays(self, port=161, dictFile=None):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="snmpBruterOnAllRelays with args port=%s , dictFile=%s " %(str(port), dictFile),
                                   plugin="bruterPlugin", method="snmpBruterOnAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
                                                              
         for relay in self.bruteForceData:
             self.snmpBruterOnRelay(relay, port=port, dictFile=dictFile)
@@ -349,16 +416,26 @@ class bruterPlugin(BasePlugin):
     ################################################################################################################################################
     def smbBruterOnRelay(self, host, port=139, dictFile=None):
         if is_valid_ipv4_address(host) == False and is_valid_ipv6_address(host) == False and is_valid_domain(host) == False:
-            print '[-] The host specified is invalid. %s ' %(host)
-            raise PluginException(message='The host specified is invalid. %s ' %(host),
+            pluginException = PluginException(message='The host specified is invalid. %s ' %(host),
                                   trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
                                   plugin="bruterPlugin", method="smbBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The host specified is invalid. %s ' %(host)
+                raise pluginException
 
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="snmpBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
                                   plugin="bruterPlugin", method="smbBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
                                                              
         print "[+] Starting SMB BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Testing a Null-Session against the target."
@@ -404,10 +481,15 @@ class bruterPlugin(BasePlugin):
 
     def smbBruterOnAllRelays(self, port=139, dictFile=None):
         if is_valid_port(port) == False:
-            print "[-] The port specified is invalid. %s " %(str(port))
-            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+            pluginException = PluginException(message='The port specified is invalid. %s ' %(str(port)),
                                   trace="smbBruterOnAllRelays with args port=%s , dictFile=%s " %(str(port), dictFile),
                                   plugin="bruterPlugin", method="smbBruterOnAllRelays")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. %s " %(str(port))
+                raise pluginException
                                                              
                                                              
         for relay in self.bruteForceData:
@@ -416,24 +498,39 @@ class bruterPlugin(BasePlugin):
 
     def smbBruterOnHiddenService(self, onionService, servicePort=139, localPort=139, dictFile=None):
         if is_valid_onion_address(onionService) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
-            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
                                   trace="smbBruterOnHiddenService with args onionService=%s, servicePort=%s, localPort=%s, dictFile=%s " %(onionService, str(servicePort), str(localPort), dictFile),
                                   plugin="bruterPlugin",
-                                  method="smbBruterOnHiddenService")                                                             
+                                  method="smbBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
+                raise pluginException           
 
         if is_valid_port(servicePort) == False:
-            print "[-] The service port specified is invalid. %s " %(str(servicePort))
-            raise PluginException(message='The service port specified is invalid. %s ' %(str(servicePort)),
+            pluginException = PluginException(message='The service port specified is invalid. %s ' %(str(servicePort)),
                                   trace="smbBruterOnHiddenService with args host=%s , servicePort=%s , localPort=%s , dictFile=%s " %(onionService, str(servicePort), str(localPort) , dictFile),
                                   plugin="bruterPlugin", method="smbBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The service port specified is invalid. %s " %(str(servicePort))
+                raise pluginException
 
 
         if is_valid_port(localPort) == False:
-            print "[-] The local port specified is invalid. %s " %(str(localPort))
-            raise PluginException(message='The local port specified is invalid. %s ' %(str(localPort)),
+            pluginException = PluginException(message='The local port specified is invalid. %s ' %(str(localPort)),
                                   trace="smbBruterOnHiddenService with args host=%s , servicePort=%s , localPort=%s , dictFile=%s " %(onionService, str(servicePort), str(localPort) , dictFile),
                                   plugin="bruterPlugin", method="smbBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The local port specified is invalid. %s " %(str(localPort))
+                raise pluginException
                                                                      
         smbSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         smbSocket.settimeout(1)
@@ -466,10 +563,15 @@ class bruterPlugin(BasePlugin):
             self.serviceConnector.unsetSocksProxy()
 
         if is_valid_url(url) == False:
-            print "[-] The URL specified is invalid. %s " %(url)
-            raise PluginException(message="The URL specified is invalid. %s " %(url),
+            pluginException = PluginException(message="The URL specified is invalid. %s " %(url),
                                   trace="httpBruterOnSite with args url=%s, dictFile=%s, proxy=%s " %(url, dictFile, str(proxy)),
                                   plugin="bruterPlugin", method="httpBruterOnSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. %s " %(url)
+                raise pluginException
                                                                    
         print "[+] Starting HTTP BruteForce mode against %s " %(url)
         if dictFile is not None and os.path.exists(dictFile):
@@ -507,11 +609,16 @@ class bruterPlugin(BasePlugin):
 
     def httpBruterOnHiddenService(self, onionService, dictFile=None):
         if is_valid_onion_address(onionService) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
-            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService),
                                   trace="httpBruterOnHiddenService with args onionService=%s, dictFile=%s " %(onionService, dictFile),
                                   plugin="bruterPlugin",
-                                  method="httpBruterOnHiddenService") 
+                                  method="httpBruterOnHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(onionService)
+                raise pluginException 
                                                                    
         if onionService.startswith('http://') == False:
             self.httpBruterOnSite('http://'+onionService,dictFile=dictFile, proxy=True)
@@ -543,4 +650,4 @@ class bruterPlugin(BasePlugin):
                          ['httpBruterOnSite', 'Execute a bruteforce attack against an web site.', 'self.httpBruterOnSite("http://eviltorrelay.com/auth/", dictFile="/home/user/dict")'],
                          ['httpBruterOnHiddenService', "Execute a bruteforce attack against an onion site (hidden service in TOR's deep web).", 'self.httpBruterOnHiddenService("http://5bsk3oj5jufsuii6.onion/auth/", dictFile="/home/user/dict")']
                         ])
-        print table.draw() + "\\n"
+        print table.draw() + "\n"

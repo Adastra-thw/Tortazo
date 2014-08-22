@@ -60,6 +60,7 @@ class BasePlugin():
         self.serviceConnector = ServiceConnector(self.cli)
         self.fuzzDBReader = FuzzDBReader()
         self.numberOnionSitesRegistered = self.db.countOnionRepositoryResponses()
+        self.runFromInterpreter = False
 
 
     def info(self, message):
@@ -144,6 +145,8 @@ class BasePlugin():
             cfg = Config()
             nested = 1
         try:
+            #Runs from interpreter, so the exceptions and stuff like that, must be handled from the plugin itself.
+            self.runFromInterpreter = True
             self.tortazoShell = InteractiveShellEmbed(config=cfg, banner1 = 'Loading Tortazo plugin interpreter... ', banner2="Plugin %s loaded successfully! Type self.help() to get information about this plugin and exit() to finish the execution. "%(self.pluginLoaded), exit_msg = 'Leaving Tortazo plugin interpreter.')
             self.tortazoShell()
         except PluginException as pluginExc:

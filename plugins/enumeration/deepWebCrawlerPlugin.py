@@ -63,50 +63,75 @@ class deepWebCrawlerPlugin(BasePlugin):
 
     def setExtractorRulesAllow(self, extractorRulesAllow):
         if is_valid_regex(extractorRulesAllow) == False:
-            print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesAllow)
-            raise PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesAllow),
+            pluginException = PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesAllow),
                                   trace="deepWebCrawlerPlugin with args setExtractorRulesAllow=%s " %(str(extractorRulesAllow)),
                                   plugin="crawler", method="setExtractorRulesAllow")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesAllow)
+                raise pluginException
         
         print "[+] Setting allow rules ... %s " %(extractorRulesAllow)
         self.extractorRulesAllow = extractorRulesAllow
 
     def setExtractorRulesDeny(self, extractorRulesDeny):
         if is_valid_regex(extractorRulesDeny) == False:
-            print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesDeny)
-            raise PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesDeny),
+            pluginException = PluginException(message='The regular expresion specified is invalid. %s ' %(extractorRulesDeny),
                                   trace="deepWebCrawlerPlugin with args extractorRulesDeny=%s " %(str(extractorRulesDeny)),
                                   plugin="crawler", method="setExtractorRulesDeny")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The regular expresion specified is invalid. %s ' %(extractorRulesDeny)
+                raise pluginException
         
         print "[+] Setting deny rules ... %s " %(extractorRulesDeny)
         self.extractorRulesDeny = extractorRulesDeny
 
     def setCrawlRulesLinks(self, crawlRulesLinks):
         if is_valid_regex(crawlRulesLinks) == False:
-            print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesLinks)
-            raise PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesLinks),
+            pluginException = PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesLinks),
                                   trace="deepWebCrawlerPlugin with args crawlRulesLinks=%s " %(str(crawlRulesLinks)),
                                   plugin="crawler", method="setCrawlRulesLinks")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesLinks)
+                raise pluginException
         
         print "[+] Setting rules for the links extractor... %s " %(crawlRulesLinks)
         self.crawlRulesLinks = crawlRulesLinks
 
     def setCrawlRulesImages(self, crawlRulesImages):
         if is_valid_regex(crawlRulesImages) == False:
-            print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesImages)
-            raise PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesImages),
+            pluginException = PluginException(message='The regular expresion specified is invalid. %s ' %(crawlRulesImages),
                                   trace="deepWebCrawlerPlugin with args crawlRulesImages=%s " %(str(crawlRulesImages)),
                                   plugin="crawler", method="setCrawlRulesImages")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The regular expresion specified is invalid. %s ' %(crawlRulesImages)
+                raise pluginException
         
         print "[+] Setting rules for the images extractor... %s " %(crawlRulesImages)
         self.crawlRulesImages = crawlRulesImages
 
     def setDictForBruter(self, dictFile):
         if dictFile == None or os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
-            print "[-] The file selected doesn't exists or is a directory."
-            raise PluginException(message='The regular expresion specified is invalid. %s ' %(dictFile),
+            pluginException = PluginException(message='The regular expresion specified is invalid. %s ' %(dictFile),
                                   trace="deepWebCrawlerPlugin with args dictFile=%s " %(str(dictFile)),
                                   plugin="crawler", method="setDictForBruter")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The file selected doesn't exists or is a directory."
+                raise pluginException
             
             
         print "[+] Setting Dictionary File ... %s " %(dictFile)
@@ -115,17 +140,27 @@ class deepWebCrawlerPlugin(BasePlugin):
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
 
         if webSite == '' or webSite is None:
-            print "[-] The URL specified is invalid. %s " %(webSite)
-            raise PluginException(message="The URL specified is invalid. %s " %(webSite),
+            pluginException = PluginException(message="The URL specified is invalid. %s " %(webSite),
                                   trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
                                   plugin="crawler", method="compareWebSiteWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. %s " %(webSite)
+                raise pluginException
 
         if hiddenWebSite == '' or hiddenWebSite is None:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
                                   plugin="crawler",
                                   method="compareWebSiteWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
 
         if hiddenWebSite.startswith('http://') == False:
             hiddenWebSite = "http://"+hiddenWebSite
@@ -133,19 +168,29 @@ class deepWebCrawlerPlugin(BasePlugin):
             webSite = "http://"+webSite
 
         if is_valid_onion_address(hiddenWebSite) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
                                   plugin="crawler",
                                   method="compareWebSiteWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
 
 
 
         if is_valid_url(webSite) == False:
-            print "[-] The URL specified is invalid. %s " %(webSite)
-            raise PluginException(message="The URL specified is invalid. %s " %(webSite),
+            pluginException = PluginException(message="The URL specified is invalid. %s " %(webSite),
                                   trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
                                   plugin="crawler", method="compareWebSiteWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. %s " %(webSite)
+                raise pluginException
 
         try:
             responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
@@ -185,21 +230,31 @@ class deepWebCrawlerPlugin(BasePlugin):
 
     def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
         if hiddenWebSite == '' or hiddenWebSite is None:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="compareRelaysWithHiddenWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="compareRelaysWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
 
         if hiddenWebSite.startswith('http://') == False:
             hiddenWebSite = "http://"+hiddenWebSite
 
         if is_valid_onion_address(hiddenWebSite) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="compareRelaysWithHiddenWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="compareRelaysWithHiddenWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
 
 
         try:
@@ -240,45 +295,70 @@ class deepWebCrawlerPlugin(BasePlugin):
                          useRandomUserAgents=True, deepLinks=None,
                          bruterOnProtectedResource=False):
         if hiddenWebSite == '' or hiddenWebSite is None:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="crawlOnionWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
         if hiddenWebSite.startswith('http://'):
             onionSite = hiddenWebSite.replace('http://', "")
         else:
             onionSite = hiddenWebSite
 
         if is_valid_onion_address(onionSite) == False:
-            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
-            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(onionSite),
+             pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(onionSite),
                                   trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="crawlOnionWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+                raise pluginException
 
 
         if is_valid_port(hiddenWebSitePort) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(hiddenWebSitePort)),
+            pluginException = PluginException(message='[-] The port specified is invalid. %s ' %(str(hiddenWebSitePort)),
                                   trace="crawlOnionWebSite with args hiddenWebSitePort=%s , " %(str(hiddenWebSitePort)),
                                   plugin="crawler", method="crawlOnionWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
 
         if is_valid_port(socatTcpListenPort) == False:
-            print "[-] The port specified is invalid. "
-            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(socatTcpListenPort)),
+            pluginException = PluginException(message='[-] The port specified is invalid. %s ' %(str(socatTcpListenPort)),
                                   trace="crawlOnionWebSite with args hiddenWebSitePort=%s , " %(str(socatTcpListenPort)),
                                   plugin="crawler", method="crawlOnionWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The port specified is invalid. "
+                raise pluginException
 
         onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         onionSocket.settimeout(1)
         result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
         if result == 0:
-            print "[-] The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine"
-            raise PluginException(message="The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine",
+            pluginException = PluginException(message="The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine",
                                   trace="crawlOnionWebSite with args socatTcpListenPort=%s , " %(str(socatTcpListenPort)),
                                   plugin="crawler", method="crawlOnionWebSite")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine"
+                raise pluginException
 
         extraPath = onionSite[onionSite.find('.onion') + 6:]
         #Extracts the Onion Site, everything before ".onion"
@@ -389,4 +469,4 @@ class deepWebCrawlerPlugin(BasePlugin):
                          ['compareRelaysWithHiddenWebSite', 'This function will perform an HTTP connection against every relay found and if the response is a HTTP 200 status code, performs an HTTP connection against the hidden service specified and compares the contents of both responses.  The return value will be a percent of correlation and similitude between both sites.', 'self.compareRelaysWithHiddenWebSite("http://gai12dase4sw3f5a.onion/")'],
                          ['crawlOnionWebSite', 'This function executes a crawler against the specified hidden service. The following parameters allows to control the behaviour of the crawler:hiddenWebSite: The hidden site to crawl. This is a mandatory parameter. hiddenWebSitePort: Port for the hidden site to crawl. Default value: 80. socatTcpListenPort: Port for the Socat proxy. Default value: 8765. crawlImages: Search and download the images from every page. Default value is True. crawlLinks: Search and visit the links found in every page. Default value: True. crawlContents: Download and save in local file system the contents of every page found. deepLinks: Number of Links that the crawler will visit in deep. bruterOnProtectedResource: If true, when the spider found an HTTP protected resource, tries to execute an bruteforce attack using the specified dict file or FuzzDB. crawlFormData: Search the forms in every page and store that structure in database. useRandomUserAgents: Use a random list of User-Agents in every HTTP connection performed by the crawler. FuzzDB project is used to get a list of User-Agents reading the file fuzzdb/attack-payloads/http-protocol/user-agents.txt', '- self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/")\n - self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", hiddenWebSitePort=8080, crawlImages=False)\n - self.crawlOnionWebSite("http://gai12dase4sw3f5a.onion/", crawlFormData=False)']
                         ])
-        print table.draw() + "\\n"
+        print table.draw() + "\n"

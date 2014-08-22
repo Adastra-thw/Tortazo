@@ -25,7 +25,7 @@ from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from plugins.attack.utils.exploit32745 import HeartBleedExploit
 from plugins.texttable import Texttable
 from core.tortazo.exceptions.PluginException import PluginException
-from plugins.utils.validations.Validator import is_valid_ipv4_address, is_valid_ipv6_address, is_valid_port
+from plugins.utils.validations.Validator import is_valid_ipv4_address, is_valid_ipv6_address, is_valid_port, showTrace
 
 class heartBleedPlugin(BasePlugin):
     '''
@@ -56,9 +56,19 @@ class heartBleedPlugin(BasePlugin):
                 print "[+] Target %s setted." %(relayIp)
                 return True
             else:
-                raise PluginException(message='IP Address is Invalid ', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget")
+                pluginException = PluginException(message='IP Address is Invalid ', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    raise pluginException
         else:
-            raise PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget")
+            pluginException = PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args %s " %(relayIp), plugin="heartBleedPlugin", method="setTarget") 
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                raise pluginException
 
 
     def setTargetWithPort(self, relayIp, relayPort):
@@ -69,12 +79,27 @@ class heartBleedPlugin(BasePlugin):
                     print "[+] Target %s with port %s setted." %(relayIp,relayPort)
                     return True
                 else:
-                    raise PluginException(message='The port is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+                    pluginException = PluginException(message='The port is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        raise pluginException
 
             else:
-                raise PluginException(message='IP Address is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+                pluginException = PluginException(message='IP Address is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    raise pluginException
         else:
-            raise PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+            pluginException = PluginException(message='IP Address is None or empty. Invalid value', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                raise pluginException
 
 
     def startAttack(self):

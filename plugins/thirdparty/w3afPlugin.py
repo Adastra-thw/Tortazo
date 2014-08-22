@@ -31,6 +31,7 @@ from w3af.core.data.kb.knowledge_base import kb
 from w3af.core.controllers.misc_settings import MiscSettings
 import w3af.core.data.kb.config as cf
 from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import *
 
 class w3afPlugin(BasePlugin):
     '''
@@ -61,13 +62,23 @@ class w3afPlugin(BasePlugin):
     '''
     PLUGIN MANAGEMENT FUNCTIONS.
     '''
-    def showPluginsByType(self, type):
-        pluginByType = self.w3afCorePlugin.plugins.get_plugin_list(type)
+    def showPluginsByType(self, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="showPluginsByType with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="showPluginsByType")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+        pluginByType = self.w3afCorePlugin.plugins.get_plugin_list(pluginType)
         tablePlugins = Texttable()
         tablePlugins.set_cols_align(["l"])
         tablePlugins.set_cols_valign(["m"])
         tablePlugins.set_cols_width([55])
-        rows = [ ["[*] Plugins for %s "%(type)] ]
+        rows = [ ["[*] Plugins for %s "%(pluginType)] ]
         for plugin in pluginByType:
             rows.append([plugin])
             
@@ -88,26 +99,48 @@ class w3afPlugin(BasePlugin):
         tableTypes.add_rows(rows)       
         print tableTypes.draw() + "\n"
 
-    def getEnabledPluginsByType(self, type):
-        enabled = self.w3afCorePlugin.plugins.get_enabled_plugins(type)
+    def getEnabledPluginsByType(self, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="getEnabledPluginsByType with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="getEnabledPluginsByType")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
+        enabled = self.w3afCorePlugin.plugins.get_enabled_plugins(pluginType)
         tablePluginsEnabled = Texttable()
         tablePluginsEnabled.set_cols_align(["l"])
         tablePluginsEnabled.set_cols_valign(["m"])
         tablePluginsEnabled.set_cols_width([55])
-        rows = [ ["[*] Enabled plugins by type %s" %(type)] ]
+        rows = [ ["[*] Enabled plugins by type %s" %(pluginType)] ]
         for plugin in enabled:
             rows.append([plugin])
         tablePluginsEnabled.add_rows(rows)       
         print tablePluginsEnabled.draw() + "\n"
 
-    def getPluginTypeDescription(self, type):
+    def getPluginTypeDescription(self, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="getPluginTypeDescription with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="getPluginTypeDescription")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
         tablePluginsEnabled = Texttable()
         tablePluginsEnabled.set_cols_align(["l"])
         tablePluginsEnabled.set_cols_valign(["m"])
         tablePluginsEnabled.set_cols_width([55])
         
-        rows = [ ["[*] Type %s" %(type)],
-                 [self.w3afCorePlugin.plugins.get_plugin_type_desc(type)] ]
+        rows = [ ["[*] Type %s" %(pluginType)],
+                 [self.w3afCorePlugin.plugins.get_plugin_type_desc(pluginType)] ]
         
         tablePluginsEnabled.add_rows(rows)
         print tablePluginsEnabled.draw() + "\n"
@@ -127,24 +160,82 @@ class w3afPlugin(BasePlugin):
         print tableTypes.draw() + "\n"
 
 
-    def enablePlugin(self, pluginName, type):
+    def enablePlugin(self, pluginName, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="enablePlugin with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="enablePlugin")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+
+        if pluginName == '' or pluginName is None:
+            pluginException = PluginException(message='The plugin name specified is invalid.',
+                                  trace="enablePlugin with args pluginName=%s " %(str(pluginName)),
+                                  plugin="w3af", method="enablePlugin")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin name specified is invalid. "
+                raise pluginException
+
+            
         enabled = [pluginName, ]
         enabledPlugins = self.w3afCorePlugin.plugins.get_all_enabled_plugins()
-        for plugin in enabledPlugins[type]:
+        for plugin in enabledPlugins[pluginType]:
             enabled.append(plugin)
-        self.w3afCorePlugin.plugins.set_plugins(enabled, type)
-        self.getEnabledPluginsByType(type)
+        self.w3afCorePlugin.plugins.set_plugins(enabled, pluginType)
+        self.getEnabledPluginsByType(pluginType)
 
-    def disablePlugin(self,pluginName,type):
-        enabled = self.w3afCorePlugin.plugins.get_enabled_plugins(type)
+    def disablePlugin(self,pluginName,pluginType):
+        if pluginName == '' or pluginName is None:
+            pluginException = PluginException(message='The plugin name specified is invalid.',
+                                  trace="disablePlugin with args pluginName=%s " %(str(pluginName)),
+                                  plugin="w3af", method="disablePlugin")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin name specified is invalid. "
+                raise pluginException
+
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="disablePlugin with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="disablePlugin")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException       
+
+        
+            
+        enabled = self.w3afCorePlugin.plugins.get_enabled_plugins(pluginType)
         if pluginName in enabled:
             enabled.remove(pluginName)
         print "[*] Plugin Disabled"
-        self.w3afCorePlugin.plugins.set_plugins(enabled, type)
-        self.getEnabledPluginsByType(type)
+        self.w3afCorePlugin.plugins.set_plugins(enabled, pluginType)
+        self.getEnabledPluginsByType(pluginType)
 
 
     def enableAllPlugins(self, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="enableAllPlugins with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="enableAllPlugins")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
         plugins = self.w3afCorePlugin.plugins.get_plugin_list(pluginType)
         self.w3afCorePlugin.plugins.set_plugins(plugins, pluginType)
         print "[*] All plugins of type %s has been enabled..." %(pluginType)
@@ -152,11 +243,44 @@ class w3afPlugin(BasePlugin):
 
 
     def disableAllPlugins(self, pluginType):
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="disableAllPlugins with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="disableAllPlugins")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
         self.w3afCorePlugin.plugins.set_plugins([], pluginType)
         print "[*] All plugins of type %s has been disabled..." %(pluginType)
         self.getAllEnabledPlugins()
 
     def getPluginOptions(self, pluginType, pluginName):
+        if pluginName == '' or pluginName is None:
+            pluginException = PluginException(message='The plugin name specified is invalid.',
+                                  trace="getPluginOptions with args pluginName=%s " %(str(pluginName)),
+                                  plugin="w3af", method="getPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin name specified is invalid. "
+                raise pluginException
+
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="getPluginOptions with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="getPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
         optList = self.w3afCorePlugin.plugins.get_plugin_options(pluginType,pluginName)
         print "[*] Plugin Options for %s " %(pluginName)
 
@@ -174,6 +298,61 @@ class w3afPlugin(BasePlugin):
 
 
     def setPluginOptions(self, pluginType, pluginName, pluginSettingType, pluginSetting, pluginSettingValue):
+        if pluginName == '' or pluginName is None:
+            pluginException = PluginException(message='The plugin name specified is invalid.',
+                                  trace="getPluginStatus with args pluginName=%s " %(str(pluginName)),
+                                  plugin="w3af", method="getPluginStatus")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin name specified is invalid. "
+                raise pluginException
+
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="setPluginOptions with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="setPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+
+        if pluginSettingType == '' or pluginSettingType is None:
+            pluginException = PluginException(message='The plugin setting type specified is invalid.',
+                                  trace="setPluginOptions with args pluginSettingType=%s " %(str(pluginSettingType)),
+                                  plugin="w3af", method="setPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin setting type specified is invalid. "
+                raise pluginException
+
+        if pluginSetting == '' or pluginSetting is None:
+            pluginException = PluginException(message='The plugin setting specified is invalid.',
+                                  trace="setPluginOptions with args pluginSetting=%s " %(str(pluginSetting)),
+                                  plugin="w3af", method="setPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin setting specified is invalid. "
+                raise pluginException
+
+        if pluginSettingValue == '' or pluginSettingValue is None:
+            pluginException = PluginException(message='The plugin setting value specified is invalid.',
+                                  trace="setPluginOptions with args pluginSettingValue=%s " %(str(pluginSettingValue)),
+                                  plugin="w3af", method="setPluginOptions")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin setting value specified is invalid. "
+                raise pluginException
+        
         opt_list = OptionList()
         opt_list.add( opt_factory(pluginSetting, pluginSettingValue, "Plugin Setting", pluginSettingType) )
         print "[*] Setting %s with value %s on Plugin %s ..." %(pluginSetting,pluginSettingValue,pluginName)
@@ -182,6 +361,28 @@ class w3afPlugin(BasePlugin):
 
 
     def getPluginStatus(self, pluginType, pluginName):
+        if pluginName == '' or pluginName is None:
+            pluginException = PluginException(message='The plugin name specified is invalid.',
+                                  trace="getPluginStatus with args pluginName=%s " %(str(pluginName)),
+                                  plugin="w3af", method="getPluginStatus")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin name specified is invalid. "
+                raise pluginException
+
+        if pluginType == '' or pluginType is None:
+            pluginException = PluginException(message='The plugin type specified is invalid.',
+                                  trace="getPluginStatus with args pluginType=%s " %(str(pluginType)),
+                                  plugin="w3af", method="getPluginStatus")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The plugin type specified is invalid. "
+                raise pluginException
+            
         enabledPlugins = self.w3afCorePlugin.plugins.get_all_enabled_plugins()
         enabled = False
         for type in enabledPlugins.keys():
@@ -196,6 +397,18 @@ class w3afPlugin(BasePlugin):
     ATTACK MANAGEMENT FUNCTIONS.
     '''
     def setTarget(self, url):
+        if is_valid_url(url) == False:
+            pluginException = PluginException(message='The URL specified is invalid.',
+                                  trace="setTarget with args url=%s " %(str(url)),
+                                  plugin="w3af", method="setTarget")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The URL specified is invalid. "
+                raise pluginException
+            
+            
         if self.w3afCorePlugin.target._verify_url(URL_KLASS(url)):
             options = self.w3afCorePlugin.target.get_options()
             options['target'].set_value(url)
@@ -204,6 +417,17 @@ class w3afPlugin(BasePlugin):
 
 
     def setTargetDeepWeb(self, url):
+        if is_valid_onion_address(url) == False:
+            pluginException = PluginException(message='The Onion address specified is invalid.',
+                                  trace="setTargetDeepWeb with args url=%s " %(str(url)),
+                                  plugin="w3af", method="setTargetDeepWeb")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The Onion address specified is invalid. "
+                raise pluginException
+            
         self.serviceConnector.setSocksProxy()
         #if self.w3afCorePlugin.target._verify_url(URL_KLASS(url)):
         options = self.w3afCorePlugin.target.get_options()
@@ -240,6 +464,28 @@ class w3afPlugin(BasePlugin):
         print tableMiscOptions.draw() + "\n"
 
     def setMiscConfig(self,setting,value):
+        if setting == '' or setting is None:
+            pluginException = PluginException(message='The setting specified is invalid.',
+                                  trace="setMiscConfig with args setting=%s " %(str(setting)),
+                                  plugin="w3af", method="setMiscConfig")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The setting specified is invalid. "
+                raise pluginException
+
+        if value == '' or value is None:
+            pluginException = PluginException(message='The value specified is invalid.',
+                                  trace="setMiscConfig with args value=%s " %(str(value)),
+                                  plugin="w3af", method="setMiscConfig")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The value specified is invalid. "
+                raise pluginException
+            
         opt_list = OptionList()
         opt_list.add( opt_factory(setting, value, "Misc Setting", "string") )
         print "[*] Setting %s with value %s on MiscsSettings ..." %(setting,value)
@@ -274,11 +520,32 @@ class w3afPlugin(BasePlugin):
 
 
     def useProfile(self,profileName):
+        if profileName == '' or profileName is None:
+            pluginException = PluginException(message='The profile name specified is invalid.',
+                                  trace="useProfile with args profileName=%s " %(str(profileName)),
+                                  plugin="w3af", method="useProfile")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The profile name specified is invalid. "
+                raise pluginException        
         print "[*] Loading profile %s " %(profileName)
         self.w3afCorePlugin.profiles.use_profile(profileName)
         print "[*] Done!"
 
     def createProfileWithCurrentConfig(self, profileName, profileDescription):
+        if profileName == '' or profileName is None:
+            pluginException = PluginException(message='The profile name specified is invalid.',
+                                  trace="createProfileWithCurrentConfig with args profileName=%s " %(str(profileName)),
+                                  plugin="w3af", method="createProfileWithCurrentConfig")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The profile name specified is invalid. "
+                raise pluginException
+            
         print "[*] Creating profile %s " %(profileName)
         profile = self.w3afCorePlugin.profiles.save_current_to_new_profile(profileName, profileDescription)
 
@@ -294,6 +561,17 @@ class w3afPlugin(BasePlugin):
 
 
     def modifyProfileWithCurrentConfig(self, profileName, profileDescription):
+        if profileName == '' or profileName is None:
+            pluginException = PluginException(message='The profile name specified is invalid.',
+                                  trace="modifyProfileWithCurrentConfig with args profileName=%s " %(str(profileName)),
+                                  plugin="w3af", method="modifyProfileWithCurrentConfig")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The profile name specified is invalid. "
+                raise pluginException
+            
         print "[*] Updating profile %s with the current configuration" %(profileName)
         profile = self.w3afCorePlugin.profiles.save_current_to_profile(profileName,profileDescription)
 
@@ -311,6 +589,16 @@ class w3afPlugin(BasePlugin):
         print tableProfiles.draw()+"\n"
 
     def removeProfile(self,profileName):
+        if profileName == '' or profileName is None:
+            pluginException = PluginException(message='The profile name specified is invalid.',
+                                  trace="removeProfile with args profileName=%s " %(str(profileName)),
+                                  plugin="w3af", method="removeProfile")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The profile name specified is invalid. "
+                raise pluginException
         removed = self.w3afCorePlugin.profiles.remove_profile(profileName)
         if removed:
             print "[*] Profile %s removed successfully." %(profileName)
@@ -340,7 +628,31 @@ class w3afPlugin(BasePlugin):
         tableShells.add_rows(rows)
         print tableShells.draw()+"\n"
 
+
     def executeCommand(self,shellId, command,params):
+        #TODO: There's any way to get the list of current supported commands? Check the code of W3AF.
+        if command == '' or command is None:
+            pluginException = PluginException(message='The command specified is invalid.',
+                                  trace="executeCommand with args command=%s " %(str(command)),
+                                  plugin="w3af", method="executeCommand")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The command specified is invalid. "
+                raise pluginException
+            
+        if str(shellId).isdigit() == False or shellId < 0:
+            pluginException = PluginException(message='The shell identifier specified is invalid.',
+                                  trace="executeCommand with args shellId=%s " %(str(shellId)),
+                                  plugin="w3af", method="executeCommand")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The shell identifier specified is invalid. "
+                raise pluginException
+            
         shells = kb.get_all_shells()
         response = None
         for shell in shells:
@@ -391,6 +703,17 @@ class w3afPlugin(BasePlugin):
         print tableVulns.draw()+"\n"
 
     def exploitAllVulns(self,pluginExploit):
+        if pluginExploit == '' or pluginExploit is None:
+            pluginException = PluginException(message='The attack plugin  specified is invalid.',
+                                  trace="exploitAllVulns with args pluginExploit=%s " %(str(pluginExploit)),
+                                  plugin="w3af", method="exploitAllVulns")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The attack plugin  specified is invalid. "
+                raise pluginException
+            
         print "[*] Checking the vulnerability and plugin to exploit..."
         pluginAttack = self.w3afCorePlugin.plugins.get_plugin_inst('attack',pluginExploit)
         for vuln in kb.get_all_vulns():
@@ -402,6 +725,29 @@ class w3afPlugin(BasePlugin):
         print "[*] Exploit vulnerability finished."
 
     def exploitVuln(self,pluginExploit,vulnId):
+        if pluginExploit == '' or pluginExploit is None:
+            pluginException = PluginException(message='The attack plugin  specified is invalid.',
+                                  trace="exploitVuln with args pluginExploit=%s " %(str(pluginExploit)),
+                                  plugin="w3af", method="exploitVuln")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The attack plugin  specified is invalid. "
+                raise pluginException
+
+        if str(vulnId).isdigit() == False or vulnId < 0:
+            pluginException = PluginException(message='The vuln identifier specified is invalid.',
+                                  trace="exploitVuln with args vulnId=%s " %(str(vulnId)),
+                                  plugin="w3af", method="exploitVuln")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The shell identifier specified is invalid. "
+                raise pluginException
+            
+            
         print "[*] Checking the vulnerability and plugin to exploit..."
         pluginAttack = self.w3afCorePlugin.plugins.get_plugin_inst('attack',pluginExploit)
         for vuln in kb.get_all_vulns():
