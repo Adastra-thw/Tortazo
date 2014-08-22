@@ -40,6 +40,7 @@ import string
 import random
 from pyfiglet import Figlet
 import time
+from core.tortazo.exceptions.PluginException import PluginException
 
 #
 #  ████████╗ ██████╗ ██████╗ ████████╗ █████╗ ███████╗ ██████╗ 
@@ -528,6 +529,13 @@ class Cli(cli.Application):
                     reference.runPlugin()
                 except StandardError as standarError:
                     self.logger.warn((term.format(standarError.message, term.Color.RED)))
+                except PluginException as pluginExc:
+                    self.logger.warn((term.format("[-] Exception raised executing the plugin. Please, check the arguments used in the function called. Details below.", term.Color.RED)))
+                    self.logger.warn((term.format("Message: %s " %(pluginExc.getMessage()), term.Color.RED)))
+                    self.logger.warn((term.format("Plugin: %s " %(pluginExc.getPlugin()), term.Color.RED)))
+                    self.logger.warn((term.format("Method: %s " %(pluginExc.getMethod()), term.Color.RED)))
+                    self.logger.warn((term.format("Trace: %s " %(pluginExc.getTrace()), term.Color.RED)))
+
                 self.logger.debug((term.format("[+] Done!", term.Color.GREEN)))
             else:
                 self.logger.warn((term.format("[-] The plugin specified is unknown... Check the available plugins with -L/--list-plugins option", term.Color.RED)))

@@ -48,8 +48,6 @@ class heartBleedPluginTest(unittest.TestCase):
         self.assertRaises(PluginException, self.plugin.setTarget, relayIp='INVALID_IP')
         print "Testing setTarget with args: relayIp=%s " %('87.11.2.145')
         self.assertTrue(self.plugin.setTarget(relayIp='87.11.2.145'))
-        print "Testing startAttack "
-        self.assertTrue(self.plugin.startAttack() )
 
     def test_setTargetWithPort(self):
         print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %(None, None)
@@ -62,8 +60,6 @@ class heartBleedPluginTest(unittest.TestCase):
         self.assertRaises(Exception, self.plugin.setTargetWithPort, '87.11.2.145', 'INVALID_PORT')
         print "Testing setTargetWithPort with args: relayIp=%s , relayPort=%s" %('87.11.2.145', '80')
         self.assertTrue(self.plugin.setTargetWithPort('87.11.2.145', 80))
-        print "Testing startAttackAllRelays "
-        self.assertTrue(self.plugin.startAttackAllRelays() )
 
 if __name__ == '__main__':
     unittest.main()

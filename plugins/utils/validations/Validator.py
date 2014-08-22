@@ -22,6 +22,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 import socket
+import string
 
 def is_valid_ipv4_address(address):
     if address is None or address == '':
@@ -58,6 +59,8 @@ def is_valid_domain(domain):
         return False    
 
 def is_valid_onion_address(onionAddress):
+    if onionAddress == '' or onionAddress is None:
+        return False
     if onionAddress.endswith('.onion') == False:
         return False
     validchars ='234567' + string.lowercase
@@ -71,6 +74,8 @@ def is_valid_onion_address(onionAddress):
 
 def is_valid_url(url):
     import urllib
+    if url == '' or url is None:
+        return False
     try:
         urllib.urlopen(url)
     except IOError:
@@ -85,6 +90,8 @@ def is_valid_port(port):
     
 def is_valid_regex(regex):
     import re
+    if regex == '' or regex is None:
+        return False
     try:
         re.compile(regex)
         return True

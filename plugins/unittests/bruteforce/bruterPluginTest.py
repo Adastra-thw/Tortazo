@@ -61,10 +61,7 @@ class bruterPluginTest(unittest.TestCase):
         print "Testing sshBruterOnRelay with args: relay=%s, port=%s, dictFile=%s, force=%s " %(unittests.bruterPlugin_Relay, None, None, None)
         self.assertRaises(PluginException, self.plugin.sshBruterOnRelay, relay=unittests.bruterPlugin_Relay, port=None,dictFile=None, force=None)
 
-        print "Testing sshBruterOnRelay with args: relay=%s, port=%s, dictFile=%s, force=%s " %(unittests.bruterPlugin_Relay, str(unittests.bruterPlugin_portSSH), None, None)
-        self.assertRaises(PluginException, self.plugin.sshBruterOnRelay, relay=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portSSH,dictFile=None, force=None)
 
-            
     def test_sshBruterOnAllRelays(self):
         print "Testing sshBruterOnAllRelays with args: port=%s, dictFile=%s, force=%s " %(str(unittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFile, "False")
         self.assertRaises(PluginException, self.plugin.sshBruterOnAllRelays, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile, force=False)
@@ -75,27 +72,23 @@ class bruterPluginTest(unittest.TestCase):
         print "Testing sshBruterOnAllRelays with args: port=%s, dictFile=%s, force=%s " %(None, None, None)
         self.assertRaises(PluginException, self.plugin.sshBruterOnAllRelays, port=None,dictFile=None, force=None)
 
-        print "Testing sshBruterOnAllRelays with args: port=%s, dictFile=%s, force=%s " %(unittests.bruterPlugin_portSSH, None, None)
-        self.assertRaises(PluginException, self.plugin.sshBruterOnAllRelays, port=unittests.bruterPlugin_portSSH, dictFile=None, force=None)
 
 
     def test_sshBruterOnHiddenService(self):
         print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionserviceInvalid, str(unittests.bruterPlugin_portSSH), unittests.bruterPlugin_dictFile)
         self.assertRaises(PluginException, self.plugin.sshBruterOnHiddenService, onionService=unittests.bruterPlugin_onionserviceInvalid, port=unittests.bruterPlugin_portSSH, dictFile=unittests.bruterPlugin_dictFile)
 
-        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, str(ittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFile)
+        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, str(unittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFile)
         self.assertRaises(PluginException, self.plugin.sshBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portInvalid, dictFile=unittests.bruterPlugin_dictFile)
 
-        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, str(ittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFileInvalid)
+        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, str(unittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFileInvalid)
         self.assertFalse(self.plugin.sshBruterOnHiddenService(onionService=unittests.bruterPlugin_onionservice, port=unittests.bruterPlugin_portSSH, dictFile=unittests.bruterPlugin_dictFileInvalid))
 
         print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(None, None, None)
-        self.assertRaises(PluginException, self.plugin.sshBruterOnHiddenService, onionService=None, port=None,dictFile=None
+        self.assertRaises(PluginException, self.plugin.sshBruterOnHiddenService, onionService=None, port=None,dictFile=None)
 
-        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, None, None))
+        print "Testing sshBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionservice, None, None)
         self.assertRaises(PluginException, self.plugin.sshBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, port=None, dictFile=None)
-
-
 
 
 
@@ -107,7 +100,7 @@ class bruterPluginTest(unittest.TestCase):
         self.assertRaises(PluginException, self.plugin.ftpBruterOnRelay, host=unittests.bruterPlugin_relayInvalid, port=unittests.bruterPlugin_portFTP,dictFile=unittests.bruterPlugin_dictFile, proxy=False)
 
         print "Testing ftpBruterOnRelay with args: host=%s, port=%s, dictFile=%s, proxy=%s " %(unittests.bruterPlugin_Relay, str(unittests.bruterPlugin_portInvalid), unittests.bruterPlugin_dictFile, "False")        
-        self.assertRaises(PluginException, self.plugin.ftpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portInvalid,dictFile=unitte
+        self.assertRaises(PluginException, self.plugin.ftpBruterOnRelay, host=unittests.bruterPlugin_Relay, port=unittests.bruterPlugin_portInvalid,dictFile=unittests.bruterPlugin_dictFile, proxy=False)
 
         print "Testing ftpBruterOnRelay with args: host=%s, port=%s, dictFile=%s, proxy=%s " %(None, None, None, None)        
         self.assertRaises(PluginException, self.plugin.ftpBruterOnRelay, host=None, port=None,dictFile=None, proxy=None)
@@ -124,7 +117,7 @@ class bruterPluginTest(unittest.TestCase):
 
         
 
-    def test_ftpBruterOnHiddenService(self, onionService, port=21, dictFile=None):
+    def test_ftpBruterOnHiddenService(self):
         print "Testing ftpBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(unittests.bruterPlugin_onionserviceInvalid, unittests.bruterPlugin_portFTP, unittests.bruterPlugin_dictFile)      
         self.assertRaises(PluginException, self.plugin.ftpBruterOnHiddenService, onionService=unittests.bruterPlugin_onionserviceInvalid, port=unittests.bruterPlugin_portFTP, dictFile=unittests.bruterPlugin_dictFile)
 
@@ -139,8 +132,6 @@ class bruterPluginTest(unittest.TestCase):
 
         print "Testing ftpBruterOnHiddenService with args: onionService=%s, port=%s, dictFile=%s " %(None, unittests.bruterPlugin_portFTP, None)                                                          
         self.assertRaises(PluginException, self.plugin.ftpBruterOnHiddenService, onionService=None, port=unittests.bruterPlugin_portFTP, dictFile=None)
-
-
 
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM SNMP BRUTEFORCE ATTACKS.########################################################################
@@ -187,7 +178,7 @@ class bruterPluginTest(unittest.TestCase):
         print "Testing smbBruterOnRelay with args: host=%s, port=%s " %(None, str(unittests.bruterPlugin_portSMB))                                                    
         self.assertRaises(PluginException, self.plugin.snmpBruterOnRelay, host=None, port=unittests.bruterPlugin_portSMB)
 
-            
+
     def test_smbBruterOnAllRelays(self):
         print "Testing smbBruterOnAllRelays with args: port=%s " %(str(unittests.bruterPlugin_portInvalid))
         self.assertRaises(PluginException, self.plugin.smbBruterOnAllRelays, port=unittests.bruterPlugin_portInvalid)
@@ -209,14 +200,14 @@ class bruterPluginTest(unittest.TestCase):
         print "Testing smbBruterOnHiddenService with args: onionService=%s, servicePort=%s, localPort=%s " %(None, None, None)                          
         self.assertRaises(PluginException, self.plugin.smbBruterOnHiddenService, onionService=None, servicePort=None, localPort=None)
 
-        print "Testing smbBruterOnHiddenService with args: onionService=%s, servicePort=%s, localPort=%s " %(onionService=unittests.bruterPlugin_onionservice, None, None)                                                    
+        print "Testing smbBruterOnHiddenService with args: onionService=%s, servicePort=%s, localPort=%s " %(unittests.bruterPlugin_onionservice, None, None)
         self.assertRaises(PluginException, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, servicePort=None, localPort=None)
 
         print "Testing smbBruterOnHiddenService with args: onionService=%s, servicePort=%s, localPort=%s " %(unittests.bruterPlugin_onionservice, str(unittests.bruterPlugin_portSMB), None)                                                    
         self.assertRaises(PluginException, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, servicePort=unittests.bruterPlugin_portSMB, localPort=None)
 
         print "Testing smbBruterOnHiddenService with args: onionService=%s, servicePort=%s, localPort=%s " %(unittests.bruterPlugin_onionservice, None, unittests.bruterPlugin_localportSMB)                                                    
-        self.assertRaises(PluginException, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, None, localPort=unittests.bruterPlugin_localportSMB)
+        self.assertRaises(PluginException, self.plugin.smbBruterOnHiddenService, onionService=unittests.bruterPlugin_onionservice, servicePort=None, localPort=unittests.bruterPlugin_localportSMB)
         
 
     ################################################################################################################################################

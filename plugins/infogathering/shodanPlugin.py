@@ -25,6 +25,8 @@ from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from plugins.texttable import Texttable
 import shodan
 from core.tortazo.exceptions.PluginException import PluginException
+import os
+from plugins.utils.validations.Validator import *
 
 class shodanPlugin(BasePlugin):
     '''
@@ -48,15 +50,48 @@ class shodanPlugin(BasePlugin):
             self.info("[*] shodanPlugin Destroyed!")
 
     def setApiKey(self, apiKey):
+        if apiKey == '' or apiKey is None:
+            print "[-] The Shodan key specified is invalid. "
+            raise PluginException(message='The Shodan key specified is invalid.',
+                                  trace="setApiKey with args apiKey=%s " %(apiKey),
+                                  plugin="shodan", method="setApiKey")
         self.apiKey = apiKey
         print "[*] Shodan Key established!"
 
     def setApiKeyFile(self, apiKeyFile):
+        if apiKeyFile == '' or apiKeyFile is None:
+            print "[-] The file specified is invalid. "
+            raise PluginException(message='The file specified is invalid.',
+                                  trace="setApiKeyFile with args apiKeyFile=%s " %(apiKeyFile),
+                                  plugin="shodan", method="setApiKeyFile")
+
+        if os.path.exists(apiKeyFile) == False or os.path.isfile(apiKeyFile) == False:
+            print "[-] The file specified is invalid. "
+            raise PluginException(message='The file specified is invalid.',
+                                  trace="setApiKeyFile with args apiKeyFile=%s " %(apiKeyFile),
+                                  plugin="shodan", method="setApiKeyFile")
+
+
+
         shodanKeyString = open(apiKeyFile).readline().rstrip('\n')
         self.apiKey = shodanKeyString
         print "[*] Shodan Key established!"
 
     def basicSearchQuery(self, basicSearch, limit=10):
+        if limit == None or limit < 0:
+            print "[-] The limit specified is invalid. "
+            raise PluginException(message='The limit specified is invalid.',
+                                  trace="basicSearchQuery with args basicSearch=%s , limit=%s " %(basicSearch, str(limit)),
+                                  plugin="shodan", method="basicSearchQuery")
+
+        if basicSearch == None or basicSearch == '':
+            print "[-] The query specified is invalid. "
+            raise PluginException(message='The query specified is invalid.',
+                                  trace="basicSearchQuery with args basicSearch=%s , limit=%s " %(basicSearch, str(limit)),
+                                  plugin="shodan", method="basicSearchQuery")
+
+
+
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
             results = shodanApi.search(basicSearch)
@@ -81,6 +116,12 @@ class shodanPlugin(BasePlugin):
             print "[*] Shodan API key not set. This is mandatory to perform searches using Shodan"
 
     def basicSearchAllRelays(self,basicSearch):
+        if basicSearch == None or basicSearch == '':
+            print "[-] The query specified is invalid. "
+            raise PluginException(message='The query specified is invalid.',
+                                  trace="basicSearchAllRelays with args basicSearch=%s " %(basicSearch),
+                                  plugin="shodan", method="basicSearchAllRelays")
+
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
             for node in self.torNodes:
@@ -105,6 +146,21 @@ class shodanPlugin(BasePlugin):
             print "[*] Shodan API key not set. This is mandatory to perform searches using Shodan"
 
     def basicSearchByRelay(self,basicSearch, relay):
+        if basicSearch == None or basicSearch == '':
+            print "[-] The query specified is invalid. "
+            raise PluginException(message='The query specified is invalid.',
+                                  trace="basicSearchAllRelays with args basicSearch=%s , relay=%s" %(basicSearch, relay),
+                                  plugin="shodan", method="basicSearchAllRelays")
+
+
+        if is_valid_ipv4_address(relay) == False and is_valid_ipv6_address(relay) == False and is_valid_domain(relay) == False:
+            print '[-] The relay specified is invalid. %s ' %(relay)
+            raise PluginException(message='The relay specified is invalid. %s ' %(relay),
+                                  trace="basicSearchByRelay with args basicSearch=%s , relay=%s " %(basicSearch, relay),
+                                  plugin="shodan", method="basicSearchByRelay")
+
+
+
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
             for node in self.torNodes:
@@ -128,6 +184,12 @@ class shodanPlugin(BasePlugin):
             print "[*] Shodan API key not set. This is mandatory to perform searches using Shodan"
 
     def basicSearchByNickname(self,basicSearch, nickname):
+        if basicSearch == None or basicSearch == '':
+            print "[-] The query specified is invalid. "
+            raise PluginException(message='The query specified is invalid.',
+                                  trace="basicSearchByNickname with args basicSearch=%s " %(basicSearch),
+                                  plugin="shodan", method="basicSearchByNickname")
+
         if hasattr(self, 'apiKey') and self.apiKey is not None:
             shodanApi = shodan.Shodan(self.apiKey)
             for node in self.torNodes:
@@ -166,4 +228,4 @@ class shodanPlugin(BasePlugin):
                          ['basicSearchByRelay', 'Performs a basic search with Shodan against the specified TOR relay.', 'self.basicSearchByRelay("OpenSSL 1.0.1", "80.80.80.80")'],
                          ['basicSearchByNickname', 'Performs a basic search with Shodan against the specified TOR NickName.', 'self.basicSearchByNickname("OpenSSL 1.0.1", "TORNickName")']
                         ])
-        print table.draw() + "\\n"
+        print table.draw() + "\n"

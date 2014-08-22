@@ -102,7 +102,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.crawlRulesImages = crawlRulesImages
 
     def setDictForBruter(self, dictFile):
-        if os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
+        if dictFile == None or os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
             print "[-] The file selected doesn't exists or is a directory."
             raise PluginException(message='The regular expresion specified is invalid. %s ' %(dictFile),
                                   trace="deepWebCrawlerPlugin with args dictFile=%s " %(str(dictFile)),
@@ -113,10 +113,40 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.dictFile = dictFile
 
     def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
+
+        if webSite == '' or webSite is None:
+            print "[-] The URL specified is invalid. %s " %(webSite)
+            raise PluginException(message="The URL specified is invalid. %s " %(webSite),
+                                  trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
+                                  plugin="crawler", method="compareWebSiteWithHiddenWebSite")
+
+        if hiddenWebSite == '' or hiddenWebSite is None:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+                                  trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
+                                  plugin="crawler",
+                                  method="compareWebSiteWithHiddenWebSite")
+
         if hiddenWebSite.startswith('http://') == False:
             hiddenWebSite = "http://"+hiddenWebSite
         if webSite.startswith('http://') == False:
             webSite = "http://"+webSite
+
+        if is_valid_onion_address(hiddenWebSite) == False:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+                                  trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
+                                  plugin="crawler",
+                                  method="compareWebSiteWithHiddenWebSite")
+
+
+
+        if is_valid_url(webSite) == False:
+            print "[-] The URL specified is invalid. %s " %(webSite)
+            raise PluginException(message="The URL specified is invalid. %s " %(webSite),
+                                  trace="compareWebSiteWithHiddenWebSite with args webSite=%s, hiddenWebSite=%s" %(webSite, hiddenWebSite),
+                                  plugin="crawler", method="compareWebSiteWithHiddenWebSite")
+
         try:
             responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
         except Exception as exc:
@@ -150,12 +180,28 @@ class deepWebCrawlerPlugin(BasePlugin):
         elements = [ ["Hidden Service", "WebSite", "Percentage"] ]
         elements.append( [ hiddenWebSite, webSite, str(ratio)  ] )
         table.add_rows( elements )
-        print table.draw() + "\\n"
+        print table.draw() + "\n"
 
 
     def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
+        if hiddenWebSite == '' or hiddenWebSite is None:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+                                  trace="compareRelaysWithHiddenWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
+                                  plugin="crawler",
+                                  method="compareRelaysWithHiddenWebSite")
+
         if hiddenWebSite.startswith('http://') == False:
             hiddenWebSite = "http://"+hiddenWebSite
+
+        if is_valid_onion_address(hiddenWebSite) == False:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+                                  trace="compareRelaysWithHiddenWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
+                                  plugin="crawler",
+                                  method="compareRelaysWithHiddenWebSite")
+
+
         try:
             responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
         except Exception as exc:
@@ -193,17 +239,46 @@ class deepWebCrawlerPlugin(BasePlugin):
                          crawlContents=True, crawlFormData=False,
                          useRandomUserAgents=True, deepLinks=None,
                          bruterOnProtectedResource=False):
+        if hiddenWebSite == '' or hiddenWebSite is None:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+                                  trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
+                                  plugin="crawler",
+                                  method="crawlOnionWebSite")
+        if hiddenWebSite.startswith('http://'):
+            onionSite = hiddenWebSite.replace('http://', "")
+        else:
+            onionSite = hiddenWebSite
+
+        if is_valid_onion_address(onionSite) == False:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
+            raise PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(onionSite),
+                                  trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
+                                  plugin="crawler",
+                                  method="crawlOnionWebSite")
+
+
+        if is_valid_port(hiddenWebSitePort) == False:
+            print "[-] The port specified is invalid. "
+            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(hiddenWebSitePort)),
+                                  trace="crawlOnionWebSite with args hiddenWebSitePort=%s , " %(str(hiddenWebSitePort)),
+                                  plugin="crawler", method="crawlOnionWebSite")
+
+
+        if is_valid_port(socatTcpListenPort) == False:
+            print "[-] The port specified is invalid. "
+            raise PluginException(message='[-] The port specified is invalid. %s ' %(str(socatTcpListenPort)),
+                                  trace="crawlOnionWebSite with args hiddenWebSitePort=%s , " %(str(socatTcpListenPort)),
+                                  plugin="crawler", method="crawlOnionWebSite")
+
         onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         onionSocket.settimeout(1)
         result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
         if result == 0:
             print "[-] The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine"
-            return
-
-        if hiddenWebSite.startswith('http://'):
-            onionSite = hiddenWebSite.replace('http://', "")
-        else:
-            onionSite = hiddenWebSite
+            raise PluginException(message="The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine",
+                                  trace="crawlOnionWebSite with args socatTcpListenPort=%s , " %(str(socatTcpListenPort)),
+                                  plugin="crawler", method="crawlOnionWebSite")
 
         extraPath = onionSite[onionSite.find('.onion') + 6:]
         #Extracts the Onion Site, everything before ".onion"

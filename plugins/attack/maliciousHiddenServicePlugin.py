@@ -62,6 +62,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
         if len(torNodes) > 0:
             self.info("[*] maliciousHiddenServicePlugin Initialized!")
         self.pluginConfigs= {}
+        #import sys
+        #print "Caller", sys._getframe().f_back.f_code.co_name
+
 
 
     def processPluginArguments(self):
@@ -99,7 +102,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
     def startHTTPHiddenService(self, serviceDir, servicePort=8080, hiddenserviceDir=None, hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000):
         if is_valid_ipv4_address(serviceInterface) == False and is_valid_ipv6_address(serviceInterface) == False:
             print '[-] The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface". '
-            raise PluginException(message='The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface" ', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+            raise PluginException(message='The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface" ',
+                                  trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)),
+                                  plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
 
 
         if is_valid_port(hiddenservicePort) == False:
@@ -163,7 +168,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([20,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['startHTTPHiddenService', 'Starts a hidden service with the specified settings. serviceDir=Directory where the resources are located (html pages, js script, css, images, etc.) ', 'self.startHTTPHiddenService(serviceDir="/opt/Tortazo/plugins/attack/utils/hiddenServiceTest")']

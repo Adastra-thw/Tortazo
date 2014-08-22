@@ -30,6 +30,7 @@ import unittest
 from plugins.enumeration.deepWebCrawlerPlugin import deepWebCrawlerPlugin
 from config import unittests
 from config import config
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebCrawlerPluginTest(unittest.TestCase):
 
@@ -48,7 +49,7 @@ class deepWebCrawlerPluginTest(unittest.TestCase):
         print "Testing setExtractorRulesAllow with args: extractorRulesAllow=%s " %(unittests.crawlerPlugin_regexInvalid)
         self.assertRaises(PluginException, self.plugin.setExtractorRulesAllow, extractorRulesAllow=unittests.crawlerPlugin_regexInvalid)
 
-        
+
     
     def test_setExtractorRulesDeny(self):
         print "Testing setExtractorRulesDeny with args: extractorRulesDeny=%s " %(None)
@@ -59,22 +60,22 @@ class deepWebCrawlerPluginTest(unittest.TestCase):
 
 
     def test_setCrawlRulesLinks(self):
-        print "Testing setCrawlRulesLinks with args: extractorRulesDeny=%s " %(None)
+        print "Testing setCrawlRulesLinks with args: crawlRulesLinks=%s " %(None)
         self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesLinks=None)
 
-        print "Testing setCrawlRulesLinks with args: extractorRulesDeny=%s " %(unittests.crawlerPlugin_regexInvalid)
+        print "Testing setCrawlRulesLinks with args: crawlRulesLinks=%s " %(unittests.crawlerPlugin_regexInvalid)
         self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesLinks=unittests.crawlerPlugin_regexInvalid)
         
 
     def test_setCrawlRulesImages(self):
         print "Testing setCrawlRulesImages with args: crawlRulesImages=%s " %(None)
-        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesImages=None)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesImages, crawlRulesImages=None)
 
         print "Testing setCrawlRulesImages with args: crawlRulesImages=%s " %(unittests.crawlerPlugin_regexInvalid)
-        self.assertRaises(PluginException, self.plugin.setCrawlRulesLinks, crawlRulesImages=unittests.crawlerPlugin_regexInvalid)
+        self.assertRaises(PluginException, self.plugin.setCrawlRulesImages, crawlRulesImages=unittests.crawlerPlugin_regexInvalid)
         
 
-    def test_setDictForBruter(self, dictFile):
+    def test_setDictForBruter(self):
         print "Testing setDictForBruter with args: dictFile=%s " %(None)
         self.assertRaises(PluginException, self.plugin.setDictForBruter, dictFile=None)
 
@@ -82,19 +83,45 @@ class deepWebCrawlerPluginTest(unittest.TestCase):
         self.assertRaises(PluginException, self.plugin.setDictForBruter, dictFile=unittests.crawlerPlugin_dictFileInvalid)
 
 
-    def compareWebSiteWithHiddenWebSite(self, webSite, hiddenWebSite):
-        pass
+    def test_compareWebSiteWithHiddenWebSite(self):
+        print "Testing compareWebSiteWithHiddenWebSite with args: webSite=%s , hiddenWebSite=%s" %(unittests.crawlerPlugin_urlSite, unittests.crawlerPlugin_onionserviceInvalid)
+        self.assertRaises(PluginException, self.plugin.compareWebSiteWithHiddenWebSite, webSite=unittests.crawlerPlugin_urlSite, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid)
 
-    def compareRelaysWithHiddenWebSite(self, hiddenWebSite):
-        pass
+        print "Testing compareWebSiteWithHiddenWebSite with args: webSite=%s , hiddenWebSite=%s" %(None, None)
+        self.assertRaises(PluginException, self.plugin.compareWebSiteWithHiddenWebSite, webSite=None, hiddenWebSite=None)
 
-    def crawlOnionWebSite(self, hiddenWebSite, hiddenWebSitePort=80,
-                         socatTcpListenPort=8765,
-                         crawlImages=False, crawlLinks=True,
-                         crawlContents=True, crawlFormData=False,
-                         useRandomUserAgents=True, deepLinks=None,
-                         bruterOnProtectedResource=False):
-        pass
+        print "Testing compareWebSiteWithHiddenWebSite with args: webSite=%s , hiddenWebSite=%s" %(unittests.crawlerPlugin_urlSite, None)
+        self.assertRaises(PluginException, self.plugin.compareWebSiteWithHiddenWebSite, webSite=unittests.crawlerPlugin_urlSite, hiddenWebSite=None)
+
+        print "Testing compareWebSiteWithHiddenWebSite with args: webSite=%s , hiddenWebSite=%s" %(None, unittests.crawlerPlugin_onionserviceInvalid)
+        self.assertRaises(PluginException, self.plugin.compareWebSiteWithHiddenWebSite, webSite=None, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid)
+
+    def test_compareRelaysWithHiddenWebSite(self):
+        print "Testing compareRelaysWithHiddenWebSite with args: hiddenWebSite=%s" %(unittests.crawlerPlugin_onionserviceInvalid)
+        self.assertRaises(PluginException, self.plugin.compareRelaysWithHiddenWebSite, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid)
+
+        print "Testing compareRelaysWithHiddenWebSite  with args: hiddenWebSite=%s" %(None)
+        self.assertRaises(PluginException, self.plugin.compareRelaysWithHiddenWebSite, hiddenWebSite=None)
+
+
+    def test_crawlOnionWebSite(self):
+        print "Testing crawlOnionWebSite with args: hiddenWebSite=%s" %(unittests.crawlerPlugin_onionserviceInvalid )
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid)
+
+        print "Testing crawlOnionWebSite  with args: hiddenWebSite=%s" %(None)
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=None)
+
+        print "Testing crawlOnionWebSite with args: hiddenWebSite=%s , hiddenWebSitePort=%s " %(unittests.crawlerPlugin_onionserviceInvalid, str(unittests.crawlerPlugin_portInvalid))
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid, )
+
+        print "Testing crawlOnionWebSite  with args: hiddenWebSite=%s , hiddenWebSitePort=%s " %(None, None)
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=None, hiddenWebSitePort=None)
+
+        print "Testing crawlOnionWebSite with args: hiddenWebSite=%s , socatTcpListenPort=%s" %(unittests.crawlerPlugin_onionserviceInvalid, str(unittests.crawlerPlugin_portInvalid))
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=unittests.crawlerPlugin_onionserviceInvalid, socatTcpListenPort=unittests.crawlerPlugin_portInvalid)
+
+        print "Testing crawlOnionWebSite  with args: hiddenWebSite=%s , socatTcpListenPort=%s" %(None, None)
+        self.assertRaises(PluginException, self.plugin.crawlOnionWebSite, hiddenWebSite=None, socatTcpListenPort=None)
 
 if __name__ == '__main__':
     unittest.main()

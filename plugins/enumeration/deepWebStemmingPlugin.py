@@ -27,6 +27,8 @@ from collections import Counter
 from config import config
 from plugins.texttable import Texttable
 from core.tortazo.exceptions.PluginException import PluginException
+import requests
+from plugins.utils.validations.Validator import *
 
 class deepWebStemmingPlugin(BasePlugin):
     '''
@@ -54,26 +56,36 @@ class deepWebStemmingPlugin(BasePlugin):
         if len(self.torNodes) > 0:
             self.debug("[*] deepWebStemmingPlugin Destroyed!")
 
-    def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", portNumber=None):
-        import requests
+    def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", port=None):
+        if is_valid_port(port) == False:
+            print "[-] The port specified is invalid. %s " %(str(port))
+            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+                                  trace="simpleStemmingAllRelays with args port=%s , queryTerms=%s " %(str(port), queryTerms),
+                                  plugin="stemming", method="simpleStemmingAllRelays")
 
         for node in self.torNodes:
-            if portNumber is not None and portNumber in node.openPorts:
-                response = requests.get(node.host+":"+port, timeout=self.pluginConfigs['timeOutRequests'])
+            if port is not None and port in node.openPorts:
+                response = requests.get(node.host+":"+str(port), timeout=self.pluginConfigs['timeOutRequests'])
                 self.__validateResponse(response, queryTerms)
             else:
                 for port in node.openPorts:
                     if port.port in self.webPorts:
                         try:
                             response = self.serviceConnector.performHTTPConnection("http://"+node.host+":"+str(port.port), method=httpMethod)
-                            self.validateResponse(response, queryTerms)
+                            self.__validateResponse(response, queryTerms)
                         except requests.ConnectionError:
                             continue
                         except requests.Timeout:
                             continue
 
-    def stemmingHiddenService(self, webSite, queryTerms):
-        response = self.serviceConnector.performHTTPConnectionHiddenService(webSite, method="GET")
+    def stemmingHiddenService(self, onionSite, queryTerms):
+        if is_valid_url(onionSite) == False:
+            print "[-] The URL specified is invalid. %s " %(onionSite)
+            raise PluginException(message="The URL specified is invalid. %s " %(onionSite),
+                                  trace="stemmingHiddenService with args onionSite=%s, queryTerms=%s " %(onionSite, queryTerms),
+                                  plugin="stemming", method="stemmingHiddenService")
+
+        response = self.serviceConnector.performHTTPConnectionHiddenService(onionSite, method="GET")
         self.__validateResponse(response, queryTerms)
 
 
@@ -94,11 +106,18 @@ class deepWebStemmingPlugin(BasePlugin):
 
             for word in terms:
                 cnt[word] += 1
-            tableTerms = PrettyTable(["Term", "Frequency"])
+            table = Texttable()
+            table.set_cols_align(["l", "l"])
+            table.set_cols_valign(["m", "m"])
+            table.set_cols_width([40,55])
+
+            rows = [["Term", "Frequency"]]
             for word in sorted(cnt, key=cnt.get, reverse=True):
                 if word.lower() in queryTerms.lower().split():
-                    tableTerms.add_row([word, cnt[word]])
-            print tableTerms
+                    rows.append([word, cnt[word]])
+            table.add_rows(rows)
+            print table.draw() + "\n"
+
         else:
             print "[-] Response for %s is %s " %(response.url, response.status_code)
 
@@ -115,4 +134,4 @@ class deepWebStemmingPlugin(BasePlugin):
                          ['simpleStemmingAllRelays', 'Stemming with all the specified terms along the relays loaded in the plugin. Search for web sites in common ports, like 80,8080,443 or in a specific port', 'self.simpleStemmingAllRelays("drugs kill killer hitman")'],
                          ['stemmingHiddenService', 'Stemming with all the specified terms in the website specified.', 'self.stemmingWebSite("http://torlinkbgs6aabns.onion/", "drugs kill killer")']
                         ])
-        print table.draw() + "\\n"
+        print table.draw() + "\n"

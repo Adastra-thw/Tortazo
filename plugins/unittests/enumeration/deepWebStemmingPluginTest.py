@@ -28,25 +28,36 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 import os
 import  sys
 import unittest
-from plugins.enumeration.deepWebDirBruterPlugin import deepWebDirBruterPlugin
+from plugins.enumeration.deepWebStemmingPlugin import deepWebStemmingPlugin
 from config import unittests
 from config import config
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebStemmingPluginTest(unittest.TestCase):
 
     def setUp(self):
-        self.plugin = deepWebDirBruterPlugin()
+        self.plugin = deepWebStemmingPlugin()
         self.pluginArgs = []
         
         self.plugin.serviceConnector.setSocksProxySettings(config.socksHost, config.socksPort)
         self.plugin.setPluginArguments(self.pluginArgs)
         self.plugin.processPluginArguments()
 
-    def simpleStemmingAllRelays(self, queryTerms, httpMethod="GET", portNumber=None):
-        pass
+    def test_simpleStemmingAllRelays(self):
+        print "Testing simpleStemmingAllRelays with args: queryTerms=%s , port=%s " %(unittests.stemming_queryTerms, str(unittests.stemming_portInvalid))
+        self.assertRaises(PluginException, self.plugin.simpleStemmingAllRelays, queryTerms=unittests.stemming_queryTerms ,port=unittests.stemming_portInvalid)
+
+        print "Testing simpleStemmingAllRelays with args: queryTerms=%s , port=%s " %(None, None)
+        self.assertRaises(PluginException, self.plugin.simpleStemmingAllRelays, queryTerms=None, port=None)
+
     
-    def stemmingHiddenService(self, webSite, queryTerms):
-        pass
+    def test_stemmingHiddenService(self):
+        print "Testing stemmingHiddenService with args: queryTerms=%s , onionSite=%s " %(unittests.stemming_queryTerms , unittests.stemming_onionserviceInvalid)
+        self.assertRaises(PluginException, self.plugin.stemmingHiddenService, queryTerms=unittests.stemming_queryTerms , onionSite=unittests.stemming_onionserviceInvalid)
+
+        print "Testing stemmingHiddenService with args: queryTerms=%s , onionSite=%s " %(None , None)
+        self.assertRaises(PluginException, self.plugin.stemmingHiddenService, queryTerms=None , onionSite=None)
+
 
 if __name__ == '__main__':
     unittest.main()

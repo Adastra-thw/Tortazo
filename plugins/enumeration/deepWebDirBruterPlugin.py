@@ -28,6 +28,7 @@ from requests.exceptions import InvalidURL
 import os
 from plugins.texttable import Texttable
 from core.tortazo.exceptions.PluginException import PluginException
+from plugins.utils.validations.Validator import *
 
 class deepWebDirBruterPlugin(BasePlugin):
 
@@ -56,10 +57,13 @@ class deepWebDirBruterPlugin(BasePlugin):
             self.debug("[*] deepWebDirBruterPlugin Destroyed!")
 
 
-
-        print "[+] Starting DirBruter plugin against %s ... This could take some time. Be patient."
-
     def dirBruterOnRelay(self, site, dictFile='', proxy=False):
+        if is_valid_url(site) == False:
+            print "[-] The URL specified is invalid. %s " %(site)
+            raise PluginException(message="The URL specified is invalid. %s " %(site),
+                                  trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
+                                  plugin="dirBruter", method="dirBruterOnRelay")
+
         print "\n[+] Trying to find directories in the webserver %s " %(site)
         print "[+] Verifying if the path %s is reachable ... " %(site)
         try:
@@ -71,7 +75,7 @@ class deepWebDirBruterPlugin(BasePlugin):
             if initialResponse.status_code in range(400, 499) or initialResponse.status_code in range(500, 599):
                 print "[-] The web server responded with an HTTP error Code ... HTTP %s " %(str(initialResponse.status_code))
             else:
-                if dictFile == '':
+                if dictFile == '' or dictFile is None:
                     print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
                     print "[+] Starting the attack using the FuzzDB Files ... This could take some time."
                     dirList = self.fuzzDBReader.getDirListFromFuzzDB()
@@ -107,17 +111,35 @@ class deepWebDirBruterPlugin(BasePlugin):
                                 continue
         except ConnectionError:
             print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
+            raise PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
+                                  trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
+                                  plugin="dirBruter", method="dirBruterOnRelay")
         except Timeout:
             print "[-] Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site)
+            raise PluginException(message="Seems that the webserver in path %s is not reachable. Aborting the attack..." %(site),
+                                  trace="dirBruterOnRelay with args site=%s, dictFile=%s, proxy=%s " %(site, dictFile, str(proxy)),
+                                  plugin="dirBruter", method="dirBruterOnRelay")
 
 
 
 
     def dirBruterOnAllRelays(self, port=80, dictFile=''):
+        if is_valid_port(port) == False:
+            print "[-] The port specified is invalid. %s " %(str(port))
+            raise PluginException(message='The port specified is invalid. %s ' %(str(port)),
+                                  trace="dirBruterOnAllRelays with args port=%s , dictFile=%s " %(str(port), dictFile),
+                                  plugin="dirBruter", method="dirBruterOnAllRelays")
+
         for relay in self.bruteForceData:
-            self.dirBruterOnRelay("http://"+relay, proxy=False)
+            self.dirBruterOnRelay("http://"+relay, dictFile=dictFile, proxy=False)
 
     def dirBruterOnHiddenService(self, hiddenService, dictFile=''):
+        if is_valid_onion_address(hiddenService) == False:
+            print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService)
+            raise PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenService),
+                                  trace="dirBruterOnHiddenService with args hiddenService=%s, dictFile=%s " %(hiddenService, dictFile),
+                                  plugin="dirBruter",
+                                  method="dirBruterOnHiddenService")
         self.dirBruterOnRelay(hiddenService, dictFile=dictFile, proxy=True)
 
 

@@ -31,6 +31,7 @@ import unittest
 from plugins.enumeration.deepWebDirBruterPlugin import deepWebDirBruterPlugin
 from config import unittests
 from config import config
+from core.tortazo.exceptions.PluginException import PluginException
 
 class deepWebDirBruterPluginTest(unittest.TestCase):
 
@@ -42,14 +43,27 @@ class deepWebDirBruterPluginTest(unittest.TestCase):
         self.plugin.setPluginArguments(self.pluginArgs)
         self.plugin.processPluginArguments()
 
-    def dirBruterOnRelay(self, site, dictFile='', proxy=False):
-        pass
+    def test_dirBruterOnRelay(self):
+        print "Testing dirBruterOnRelay with args: site=%s " %(unittests.dirBruter_urlSite)
+        self.assertRaises(PluginException, self.plugin.dirBruterOnRelay, site=unittests.dirBruter_urlSite)
 
-    def dirBruterOnAllRelays(self, port=80, dictFile=''):
-        pass
+        print "Testing dirBruterOnRelay with args: site=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.dirBruterOnRelay, site=None)
 
-    def dirBruterOnHiddenService(self, hiddenService, dictFile=''):
-        pass
+    def test_dirBruterOnAllRelays(self):
+        print "Testing dirBruterOnRelay with args: port=%s " %(str(unittests.dirBruter_portInvalid))
+        self.assertRaises(PluginException, self.plugin.dirBruterOnAllRelays, port=unittests.dirBruter_portInvalid)
+
+        print "Testing dirBruterOnRelay with args: port=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.dirBruterOnAllRelays, port=None)
+
+
+    def test_dirBruterOnHiddenService(self):
+        print "Testing dirBruterOnHiddenService with args: hiddenService=%s " %(unittests.dirBruter_onionserviceInvalid)
+        self.assertRaises(PluginException, self.plugin.dirBruterOnHiddenService, hiddenService=unittests.dirBruter_onionserviceInvalid)
+
+        print "Testing dirBruterOnHiddenService with args: hiddenService=%s " %(None)
+        self.assertRaises(PluginException, self.plugin.dirBruterOnHiddenService, hiddenService=None)
 
 if __name__ == '__main__':
     unittest.main()

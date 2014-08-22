@@ -56,7 +56,10 @@ class nessusPlugin(BasePlugin):
             if contents['reply']['status'] != 'OK':
                 raise StandardError("[+] Autentication Failed. The credentials used were: user=%s and password=%s. Please, check those values. " %(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"]))
         except requests.exceptions.ConnectionError:
-            raise StandardError("[-] Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]))
+            raise PluginException(message="Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]),
+                                  trace="Connection error with the Nessus server.",
+                                  plugin="nessus",
+                                  method="__login")
 
 
 

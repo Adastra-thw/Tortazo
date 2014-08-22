@@ -100,7 +100,7 @@ class BasePlugin():
         table = Texttable()
         table.set_cols_align(["l", "l", "l", "l" , "l", "l"])
         table.set_cols_valign(["m", "m", "m", "m", "m", "m"])
-        table.set_cols_width([5,35,55,15,15, 55])
+        table.set_cols_width([5,25,25,15,15, 25])
         rows = [ ["#", "Onion Adress", "Description", "Service Type", "Response", "Headers"], ]
         for rowid, address in enumerate(onionAddresses):
             (onionAddress, responseCode, responseHeaders, onionDescription, serviceType) = address
@@ -148,10 +148,10 @@ class BasePlugin():
             self.tortazoShell()
         except PluginException as pluginExc:
             print "[-] Exception raised executing the plugin. Please, check the arguments used in the function called. Details below."
-            print "Message: %s " (pluginExc.getMessage())
-            print "Plugin: %s " (pluginExc.getPlugin())
-            print "Method: %s " (pluginExc.getMethod())
-            print "Trace: %s " (pluginExc.getTrace())
+            print "Message: %s " %(pluginExc.getMessage())
+            print "Plugin: %s " %(pluginExc.getPlugin())
+            print "Method: %s " %(pluginExc.getMethod())
+            print "Trace: %s " %(pluginExc.getTrace())
 
 
     def setPluginDetails(self,name,desc,version,author):
