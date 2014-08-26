@@ -33,7 +33,7 @@ class niktoPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'niktoPlugin')
-        self.setPluginDetails('niktoPlugin', 'Plugin to execute tests with nikto.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('nikto', 'Plugin to execute tests with nikto.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] NiktoPlugin Initialized!")
             self.niktoData = {}

@@ -266,7 +266,7 @@ class Cli(cli.Application):
         print "\n\n"
         print bannerTortazo.renderText('Tortazo v %s.%s' %(tortazoConfiguration.tortazo_majorversion,tortazoConfiguration.tortazo_minorversion) )
 
-        bannerAuthor = Figlet(font='small')
+        bannerAuthor = Figlet(font='digital')
         print "\n\n"
         print bannerAuthor.renderText('By Adastra ' )
         print bannerAuthor.renderText('@jdaanial \n' )
@@ -385,7 +385,7 @@ class Cli(cli.Application):
                             except ValueError:
                                 sys.stdout.write('Please respond with \'y\' or \'n\'.\n')
                 if hasattr(self, "socksHost") and hasattr(self, "socksPort"):
-                    if self.socksPort.isdigit():
+                    if self.socksPort is not None and self.socksPort.isdigit():
                         serviceConnector.setSocksProxySettings(self.socksHost, int(self.socksPort))
                 self.logger.info(term.format("[+] Starting the Onion repository mode against "+self.activateOnionRepositoryMode+" services...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
                 repository =  RepositoryGenerator(self.validchars, serviceConnector, self.database, self.onionRepositoryMode, self.workerThreads)
@@ -551,4 +551,8 @@ if __name__ == "__main__":
     '''
     Start the main program.
     '''
-    Cli.run()
+    try:
+        Cli.run()
+    except AttributeError:
+        print "[-] Invalid usage. Please, type the switch '--help'"
+

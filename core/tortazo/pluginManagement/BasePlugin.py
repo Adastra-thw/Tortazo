@@ -77,7 +77,7 @@ class BasePlugin():
         tableRelays = Texttable()
         tableRelays.set_cols_align(["l", "l", "l", "l" , "l"])
         tableRelays.set_cols_valign(["m", "m", "m", "m", "m"])
-        tableRelays.set_cols_width([25,25,25,25,25])
+        tableRelays.set_cols_width([15,10,10,10,15])
 
         openPorts = None
 
@@ -87,11 +87,12 @@ class BasePlugin():
                 openPorts += str(port.reason)+':'+str(port.port)
 
             if openPorts is None:
-                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,'No open ports found'])
+                rows.append([torNode.host,torNode.state,torNode.reason,torNode.nickName,'No open ports found'])
             else:
-                rows.append([torNode.nickName,torNode.host,torNode.state,torNode.reason,openPorts])
+                rows.append([torNode.host,torNode.state,torNode.reason,torNode.nickName,openPorts])
             openPorts = None
-        print tableRelays.draw() + "\n"
+        tableRelays.add_rows(rows)
+        print tableRelays.draw()
 
 
     def printOnionRepository(self, start=1, maxResults=30):
@@ -99,13 +100,13 @@ class BasePlugin():
         start = start-1
         onionAddresses = self.db.searchOnionRepository(start,maxResults)
         table = Texttable()
-        table.set_cols_align(["l", "l", "l", "l" , "l", "l"])
-        table.set_cols_valign(["m", "m", "m", "m", "m", "m"])
-        table.set_cols_width([5,25,25,15,15, 25])
-        rows = [ ["#", "Onion Adress", "Description", "Service Type", "Response", "Headers"], ]
+        table.set_cols_align(["l", "l", "l", "l" ])
+        table.set_cols_valign(["m", "m", "m", "m"])
+        table.set_cols_width([5,20,20,5])
+        rows = [ ["#", "Onion Adress", "Description", "Service Type"], ]
         for rowid, address in enumerate(onionAddresses):
             (onionAddress, responseCode, responseHeaders, onionDescription, serviceType) = address
-            rows.append( [rowid, onionAddress, onionDescription, serviceType, responseCode, responseHeaders] )
+            rows.append( [rowid, onionAddress, onionDescription, serviceType] )
         table.add_rows(rows)
         print table.draw() + "\n"
 

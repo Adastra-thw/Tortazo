@@ -22,4 +22,4 @@ On other hand, the Crawler plugin stores the responses directly in the database,
 * CrawlerPluginFormControl: Stores the controls which are included in every form found.
 
 The database schema in this mode is the following:
-
+.. image:: screenshots/tortazo_db.png

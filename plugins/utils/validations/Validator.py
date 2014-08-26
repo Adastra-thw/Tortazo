@@ -59,6 +59,9 @@ def is_valid_domain(domain):
         return False    
 
 def is_valid_onion_address(onionAddress):
+    #Remove the extra path fron the onion address.
+    onionAddress = onionAddress[:onionAddress.index(".onion")+6]
+
     if onionAddress == '' or onionAddress is None:
         return False
     if onionAddress.endswith('.onion') == False:
@@ -80,6 +83,8 @@ def is_valid_url(url):
         urllib.urlopen(url)
     except IOError:
         return False
+    except:
+        raise
     return True
 
 def is_valid_port(port):
@@ -98,7 +103,7 @@ def is_valid_regex(regex):
     except re.error:
         return False
 
-def showTrace(PluginException exc):
+def showTrace(pluginExc):
     print "[-] Exception raised executing the plugin. Please, check the arguments used in the function called. Details below."
     print "Message: %s " %(pluginExc.getMessage())
     print "Plugin: %s " %(pluginExc.getPlugin())

@@ -28,6 +28,7 @@ import socket
 import os
 import sys
 from smb.SMBConnection import SMBConnection
+from pysnmp.error import PySnmpError
 import logging as log
 import requests
 import socks
@@ -198,6 +199,8 @@ class ServiceConnector():
         mib = cmdgen.MibVariable('SNMPv2-MIB', 'sysName', 0)
         error, errorStatus, errorIndex, binds = snmpCmdGen.getCmd(cmdgen.CommunityData(community), snmpTransportData, mib)
 
+        if "No SNMP response" in str(error):
+            raise PySnmpError(str(error))
         if error:
             # Check for errors and print out results
             return False
@@ -209,9 +212,11 @@ class ServiceConnector():
         client_name =socket.gethostname()
         smbClient = SMBConnection(user, passwd, client_name, "")
         if smbClient.connect(host, port):
+            shares = smbClient.listShares()
+
             print "[+] SMB Connection Success ... "
             print "[+] Listing the Shared resources"
-            for share in smbClient.listShares():
+            for share in shares:
                 print "[*][*] Resource name: %s " %(share.name)
             return True
         else:
@@ -276,7 +281,7 @@ class ServiceConnector():
         return sock
 
     def setSocksProxy(self):
-        print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
+        #print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, self.socksPort, True)
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection

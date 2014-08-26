@@ -19,6 +19,10 @@ You should have received a copy of the GNU General Public License
 along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
+import sys
+import os.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+
 
 from core.tortazo.pluginManagement.BasePlugin import BasePlugin
 from plugins.texttable import Texttable
@@ -34,7 +38,6 @@ import socket
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
 import urllib
-import  sys
 from core.tortazo.exceptions.PluginException import PluginException
 from plugins.utils.validations.Validator import *
 
@@ -42,7 +45,7 @@ class deepWebCrawlerPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'deepWebCrawlerPlugin')
-        self.setPluginDetails('deepWebFinderPlugin', 'Basic crawling tasks against web sites in the TOR network', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('crawler', 'Basic crawling tasks against web sites in the TOR network', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] deepWebFinderPlugin Initialized!")
         self.extractorRulesAllow=[r'^/*']
@@ -51,7 +54,6 @@ class deepWebCrawlerPlugin(BasePlugin):
         self.crawlRulesImages = '//img/@src'
         self.dictFile = None
         self.pluginConfigs= {}
-
 
     def processPluginArguments(self):
         BasePlugin.processPluginArguments(self)
@@ -311,13 +313,13 @@ class deepWebCrawlerPlugin(BasePlugin):
             onionSite = hiddenWebSite
 
         if is_valid_onion_address(onionSite) == False:
-             pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(onionSite),
+            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(onionSite),
                                   trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="crawlOnionWebSite")
             if self.runFromInterpreter:
-                showTrace(pluginException)
-                return
+                 showTrace(pluginException)
+                 return
             else:
                 print "[-] Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite)
                 raise pluginException
@@ -457,7 +459,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ["setExtractorRulesAllow", 'Sets the XPATH rules to specify the allowed pages to visit and analyze. This value will be passed to the "allow" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor".', "self.setExtractorRulesAllow('index\.php| index\.jsp')"],

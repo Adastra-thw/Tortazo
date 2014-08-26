@@ -58,7 +58,7 @@ class GatherInformation(resource.Resource):
 class maliciousHiddenServicePlugin(BasePlugin):
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'maliciousHiddenServicePlugin')
-        self.setPluginDetails('maliciousHiddenServicePlugin', 'Creates a malicious hidden service in TOR network and tries to de-anonimyze the users.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('hiddenService', 'Creates a malicious hidden service in TOR network and tries to de-anonimyze the users.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] maliciousHiddenServicePlugin Initialized!")
         self.pluginConfigs= {}
@@ -198,7 +198,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([20,20,20])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['startHTTPHiddenService', 'Starts a hidden service with the specified settings. serviceDir=Directory where the resources are located (html pages, js script, css, images, etc.) ', 'self.startHTTPHiddenService(serviceDir="/opt/Tortazo/plugins/attack/utils/hiddenServiceTest")']

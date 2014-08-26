@@ -37,7 +37,7 @@ class deepWebStemmingPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'deepWebStemmingPlugin')
-        self.setPluginDetails('DeepWebStemmingPlugin', 'Basic stemming tasks against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('stemming', 'Basic stemming tasks against hidden services in the TOR network. Uses IRL library to find terms in hidden services in the TOR network.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.serviceConnector.setSocksProxy()
             #self.prepocessor = Preprocessor()
@@ -137,7 +137,7 @@ class deepWebStemmingPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],

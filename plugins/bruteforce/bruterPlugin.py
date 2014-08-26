@@ -40,7 +40,7 @@ class bruterPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'bruterPlugin')
-        self.setPluginDetails('bruterPlugin', "Bruteforce plugin for services in the deep web. TIP: If you run this plugin in SSH Brute force mode, don't activate the -v/..verbose. If you use that option, you'll see a lot of debug message traced by Paramiko library.", '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('bruter', "Bruteforce plugin for services in the deep web. TIP: If you run this plugin in SSH Brute force mode, don't activate the -v/..verbose. If you use that option, you'll see a lot of debug message traced by Paramiko library.", '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] bruterPlugin Initialized!")
         self.bruteForceData = {}
@@ -113,10 +113,15 @@ class bruterPlugin(BasePlugin):
                             stop_attack = True
                             break
                     except:
-                        print "[-] Captured exception. Finishing attack. "
-                        print "[-] Exception Trace: "
-                        print sys.exc_info()
-                        return False
+                        pluginException = PluginException(message="Error detected. Are you sure that the service is up and running?",
+                                  trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s " %(relay, str(port), dictFile),
+                                  plugin="bruterPlugin", method="sshBruterOnRelay")
+                        if self.runFromInterpreter:
+                            showTrace(pluginException)
+                            return
+                        else:
+                            print '[-] Error detected. Are you sure that the service is up and running?'
+                            raise pluginException
         else:
             print "[+] Using the 'dictFile' stored in %s. Verifing the file. " %(dictFile)
             if os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
@@ -129,10 +134,15 @@ class bruterPlugin(BasePlugin):
                         print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except:
-                    print "[-] Captured exception. Finishing attack."
-                    print "[-] Exception Trace: "
-                    print sys.exc_info()
-                    return False
+                    pluginException = PluginException(message="Error detected. Are you sure that the service is up and running?",
+                                  trace="sshBruterOnRelay with args relay=%s , port=%s , dictFile=%s " %(relay, str(port), dictFile),
+                                  plugin="bruterPlugin", method="sshBruterOnRelay")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print '[-] Error detected. Are you sure that the service is up and running?'
+                        raise pluginException
 
             
     def sshBruterOnAllRelays(self, port=22, dictFile=None, force=False):
@@ -192,15 +202,40 @@ class bruterPlugin(BasePlugin):
                             stop_attack = True
                             break
                     except paramiko.SSHException as sshex:
-                        print "[-] Error connection with the SSH Server: %s Aborting the attack" %(sshex.message)
-                        return False
+                        pluginException = PluginException(message="\n\nSSH Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
+                                  plugin="bruterPlugin",
+                                  method="sshBruterOnHiddenService")
+                        if self.runFromInterpreter:
+                            showTrace(pluginException)
+                            return
+                        else:
+                            print "[-] SSH Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. "
+                            raise pluginException
+
                     except paramiko.ProxyCommandFailure as proxyExc:
                         print "[-] Proxy Failure. Aborting the attack"
-                        return False
+                        pluginException = PluginException(message="\n\nProxy Failure. Aborting the attack",
+                                  trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
+                                  plugin="bruterPlugin",
+                                  method="sshBruterOnHiddenService")
+                        if self.runFromInterpreter:
+                            showTrace(pluginException)
+                            return
+                        else:
+                            print "[-] Proxy Failure. Aborting the attack. "
+                            raise pluginException
                     except socket_error as serr:
-                        print serr
-                        print "Connection Refused... Exiting."
-                        return False
+                        pluginException = PluginException(message="\n\nSSH Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
+                                  plugin="bruterPlugin",
+                                  method="sshBruterOnHiddenService")
+                        if self.runFromInterpreter:
+                            showTrace(pluginException)
+                            return
+                        else:
+                            print "[-] SSH Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. "
+                            raise pluginException
         else:
             print "[+] Using the 'dictFile' stored in %s. Verifing the file. " %(dictFile)
             if os.path.exists(dictFile) == False or os.path.isfile(dictFile) == False:
@@ -217,6 +252,20 @@ class bruterPlugin(BasePlugin):
                 except socket_error as serr:
                     print "Connection Refused... Finishing the attack."
                     return False
+                except paramiko.SSHException as sshExc:
+                    pluginException = PluginException(message="\n\nSSH Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="sshBruterOnHiddenService with args onionService=%s, port=%s, dictFile=%s " %(onionService, str(port), dictFile),
+                                  plugin="bruterPlugin",
+                                  method="sshBruterOnHiddenService")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print "[-] The port specified is invalid. "
+                        raise pluginException
+
+
+
         return True
 
 
@@ -229,7 +278,7 @@ class bruterPlugin(BasePlugin):
         This function is invoked by ftpBruterOnAllRelays and ftpBruterOnHiddenService.
         For this reason there's no checks to see if the host is stored in database. The user could enter the address for an onion service and this is perfectly valid.
         '''
-        if is_valid_ipv4_address(host) == False and is_valid_ipv6_address(host) == False and is_valid_domain(host) == False:
+        if proxy == False and is_valid_ipv4_address(host) == False and is_valid_ipv6_address(host) == False and is_valid_domain(host) == False:
             pluginException = PluginException(message='The host specified is invalid. %s ' %(host),
                                   trace="ftpBruterOnRelay with args host=%s , port=%s , dictFile=%s , proxy=%s " %(host, str(port), dictFile, str(proxy)),
                                   plugin="bruterPlugin", method="ftpBruterOnRelay")
@@ -274,9 +323,15 @@ class bruterPlugin(BasePlugin):
                         print "[+] FTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         return True
                 except Exception as excep:
-                    print "[-] Captured exception. Finishing attack."
-                    print sys.exc_info()
-                    return False
+                    pluginException = PluginException(message="Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="ftpBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="ftpBruterOnRelay")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print '[-] Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. %s ' %(host)
+                        raise pluginException
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
             usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
@@ -292,9 +347,15 @@ class bruterPlugin(BasePlugin):
                             print "[+] FTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return True
             except Exception as excep:
-                print "[-] Captured exception. Finishing attack."
-                print sys.exc_info()
-                return False
+                pluginException = PluginException(message="Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="ftpBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="ftpBruterOnRelay")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    print '[-] Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. %s ' %(host)
+                    raise pluginException
         return True
 
 
@@ -374,27 +435,42 @@ class bruterPlugin(BasePlugin):
         print "[+] Starting SNMP BruteForce mode against %s on port %s" %(host, str(port))
         if dictFile is not None and os.path.exists(dictFile):
             print "[+] Reading the Passwords file %s " %(dictFile)
-            for line in open(dictFile, "r").readlines():
-                [user, passwd] = line.strip().split(self.separator)
+            from pysnmp.error import PySnmpError
+            for community in open(dictFile, "r").readlines():
                 try :
-                    if self.serviceConnector.performSNMPConnection(host,port, user=user, passwd=passwd):
-                        print "[+] SNMP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
+                    if self.serviceConnector.performSNMPConnection(host,port, community=community.replace(" ", "").replace("\n", "")):
+                        print "[+] SNMP BruteForce attack successfully. Community %s " %(community)
                         break
-                except Exception as excep:
-                    print "[-] Captured exception. Finishing attack."
-                    print sys.exc_info()
-                    return
+                except PySnmpError as excep:
+                    pluginException = PluginException(message="\n\nSNMP Exception found. Are you sure that the service is up and running? Error:  %s" %(str(excep)),
+                                                      trace="snmpBruterOnRelay with args host=%s, port=%s, dictFile=%s " %(host, str(port), dictFile),
+                                                      plugin="bruterPlugin",
+                                                      method="snmpBruterOnRelay")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print "[-] SNMP Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. "
+                        raise pluginException
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
             communities = self.fuzzDBReader.getSNMPCommunitiesFromFuzzDB()
             try :
                 for community in communities:
                     if self.serviceConnector.performSNMPConnection(host,port, community=community):
+                        print "[+] SNMP BruteForce attack successfully. Community %s " %(community)
                         break
             except Exception as excep:
-                print "[-] Captured exception. Finishing attack."
-                print sys.exc_info()
-                return
+                pluginException = PluginException(message="\n\nSNMP Exception found. Are you sure that the service and the TOR Socks Proxy is up and running?",
+                                                      trace="snmpBruterOnRelay with args host=%s, port=%s, dictFile=%s " %(host, str(port), dictFile),
+                                                      plugin="bruterPlugin",
+                                                      method="snmpBruterOnRelay")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    print "[-] SNMP Exception found. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. "
+                    raise pluginException
 
     def snmpBruterOnAllRelays(self, port=161, dictFile=None):
         if is_valid_port(port) == False:
@@ -439,13 +515,35 @@ class bruterPlugin(BasePlugin):
                                                              
         print "[+] Starting SMB BruteForce mode against %s on port %s" %(host, str(port))
         print "[+] Testing a Null-Session against the target."
+        from smb.base import NotConnectedError
         try:
             if self.serviceConnector.performSMBConnection(host, port,'',''):
                 print "[+] SMB Null-Session found in host: %s " %(host)
                 return True
         except socket_error:
-            print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
-            raise
+            os.killpg(self.socatProcess.pid, signal.SIGTERM)
+            pluginException = PluginException(message="Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] The host specified is invalid. %s ' %(host)
+                raise pluginException
+        except NotConnectedError:
+            os.killpg(self.socatProcess.pid, signal.SIGTERM)
+            time.sleep(5)
+            pluginException = PluginException(message="NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print '[-] NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. '
+                raise pluginException
+
 
 
         if dictFile is not None and os.path.exists(dictFile):
@@ -457,8 +555,29 @@ class bruterPlugin(BasePlugin):
                         print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except socket_error as excep:
-                    print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
-                    raise
+                    os.killpg(self.socatProcess.pid, signal.SIGTERM)
+                    pluginException = PluginException(message="Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print '[-] Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running? '
+                        raise pluginException
+                except NotConnectedError:
+                    os.killpg(self.socatProcess.pid, signal.SIGTERM)
+                    time.sleep(5)
+                    pluginException = PluginException(message="NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print '[-] NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. '
+                        raise pluginException
+
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
             usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
@@ -475,8 +594,29 @@ class bruterPlugin(BasePlugin):
                             print "[+] SMB BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return
             except socket_error as excep:
-                print "Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?"
-                raise
+                os.killpg(self.socatProcess.pid, signal.SIGTERM)
+                pluginException = PluginException(message="Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    print '[-] Socket error detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running? '
+                    raise pluginException
+            except NotConnectedError:
+                os.killpg(self.socatProcess.pid, signal.SIGTERM)
+                time.sleep(5)
+                pluginException = PluginException(message="NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                  trace="smbBruterOnRelay with args host=%s , port=%s , dictFile=%s " %(host, str(port), dictFile),
+                                  plugin="bruterPlugin", method="smbBruterOnRelay")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    print '[-] NotConnectedError detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. '
+                    raise pluginException
+
             
 
     def smbBruterOnAllRelays(self, port=139, dictFile=None):
@@ -539,19 +679,14 @@ class bruterPlugin(BasePlugin):
             print "[-] The selected local port "+str(localPort)+" is being used by another process. Please, select an port available in this machine"
             return False
         else:
-            try:
-                print "[+] Starting a local proxy with Socat to forward requests to the hidden service through the local machine and the local Socks Proxy... "
-                self.socatProcess = self.serviceConnector.startLocalSocatTunnel(localPort,onionService,servicePort,socksPort=self.serviceConnector.socksPort)
-                time.sleep(10)
-                print "[+] Socat process started! PID: "+str(self.socatProcess.pid)
-                self.smbBruterOnRelay('127.0.0.1', port=localPort, dictFile=dictFile)
-                print "[+] SMB Bruter finished. Shutting down the local Socat tunnel..."
-                os.killpg(self.socatProcess.pid, signal.SIGTERM)
-            except socket_error:
-                print "[+] The following exception was raised, however, shutting down the local Socat tunnel..."
-                print sys.exc_info()
-                os.killpg(self.socatProcess.pid, signal.SIGTERM)
-                time.sleep(10)
+            print "[+] Starting a local proxy with Socat to forward requests to the hidden service through the local machine and the local Socks Proxy... "
+            self.socatProcess = self.serviceConnector.startLocalSocatTunnel(localPort,onionService,servicePort,socksPort=self.serviceConnector.socksPort)
+            time.sleep(10)
+            print "[+] Socat process started! PID: "+str(self.socatProcess.pid)
+            self.smbBruterOnRelay('127.0.0.1', port=localPort, dictFile=dictFile)
+            print "[+] SMB Bruter finished. Shutting down the local Socat tunnel..."
+            os.killpg(self.socatProcess.pid, signal.SIGTERM)
+
 
     ################################################################################################################################################
     ###########################FUNCTIONS TO PERFORM HTTP BRUTEFORCE ATTACKS.########################################################################
@@ -562,16 +697,18 @@ class bruterPlugin(BasePlugin):
         else:
             self.serviceConnector.unsetSocksProxy()
 
-        if is_valid_url(url) == False:
-            pluginException = PluginException(message="The URL specified is invalid. %s " %(url),
-                                  trace="httpBruterOnSite with args url=%s, dictFile=%s, proxy=%s " %(url, dictFile, str(proxy)),
-                                  plugin="bruterPlugin", method="httpBruterOnSite")
-            if self.runFromInterpreter:
-                showTrace(pluginException)
-                return
-            else:
-                print "[-] The URL specified is invalid. %s " %(url)
-                raise pluginException
+        if proxy == False:
+            if is_valid_url(url) == False:
+                pluginException = PluginException(message="The URL specified is invalid. %s " %(url),
+                                                  trace="httpBruterOnSite with args url=%s, dictFile=%s, proxy=%s " %(url, dictFile, str(proxy)),
+                                                  plugin="bruterPlugin", method="httpBruterOnSite")
+                if self.runFromInterpreter:
+                    showTrace(pluginException)
+                    return
+                else:
+                    print "[-] The URL specified is invalid. %s " %(url)
+                    raise pluginException
+
                                                                    
         print "[+] Starting HTTP BruteForce mode against %s " %(url)
         if dictFile is not None and os.path.exists(dictFile):
@@ -583,9 +720,15 @@ class bruterPlugin(BasePlugin):
                         print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except Exception as excep:
-                    print "[-] Captured exception. Finishing attack."
-                    print sys.exc_info()
-                    return
+                    pluginException = PluginException(message="Exception detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?",
+                                                      trace="httpBruterOnSite with args url=%s  " %(url),
+                                                      plugin="bruterPlugin", method="httpBruterOnSite")
+                    if self.runFromInterpreter:
+                        showTrace(pluginException)
+                        return
+                    else:
+                        print '[-] Exception detected. Are you sure that the hidden service and the TOR Socks Proxy is up and running?. '
+                        raise pluginException
         else:
             print "[+] No specified 'dictFile'. Using FuzzDB Project to execute the attack."
             usersList = self.fuzzDBReader.getUserlistFromFuzzDB()
@@ -631,7 +774,7 @@ class bruterPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],

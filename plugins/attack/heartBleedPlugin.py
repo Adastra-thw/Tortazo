@@ -34,7 +34,7 @@ class heartBleedPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'heartBleedPlugin')
-        self.setPluginDetails('heartBleedPlugin', 'Performs the HeartBleed vulnerability test against a single target or all TOR exit nodes found.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('heartBleed', 'Performs the HeartBleed vulnerability test against a single target or all TOR exit nodes found.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] heartBleedPlugin Initialized!")
 
@@ -118,7 +118,7 @@ class heartBleedPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],

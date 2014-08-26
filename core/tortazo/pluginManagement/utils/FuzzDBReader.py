@@ -20,6 +20,7 @@ You should have received a copy of the GNU General Public License
 along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
+import sys
 
 class FuzzDBReader:
 
@@ -58,21 +59,20 @@ class FuzzDBReader:
             johnlist = open('fuzzdb/wordlists-user-passwd/passwds/john.txt', 'r')
             unixusers = open('fuzzdb/wordlists-user-passwd/unix-os/unix_users.txt', 'r')
             faithwriters = open('fuzzdb/wordlists-user-passwd/faithwriters.txt', 'r')
+            for userNameList in namelist.readlines():
+                users.append(userNameList.rstrip('\n'))
+
+            for userJohnList in johnlist.readlines():
+                users.append(userJohnList.rstrip('\n'))
+
+            for userunix in unixusers.readlines():
+                users.append(userunix.rstrip('\n'))
+
+            for userfaithwriter in faithwriters.readlines():
+                users.append(userfaithwriter.rstrip('\n'))
+            return users
         except:
             print sys.exc_info()
-
-        for userNameList in namelist.readlines():
-            users.append(userNameList.rstrip('\n'))
-
-        for userJohnList in johnlist.readlines():
-            users.append(userJohnList.rstrip('\n'))
-
-        for userunix in unixusers.readlines():
-            users.append(userunix.rstrip('\n'))
-
-        for userfaithwriter in faithwriters.readlines():
-            users.append(userfaithwriter.rstrip('\n'))
-        return users
 
     def getPasslistFromFuzzDB(self):
         '''
@@ -107,7 +107,7 @@ class FuzzDBReader:
         communities = []
         commonCommunities = open('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt', 'r')
         for community in commonCommunities.readlines():
-            communities.append(community.rstrip('\n'))
+            communities.append(community.replace(' ', '').replace('\n', ''))
         return  communities
 
     def getDirListFromFuzzDB(self):

@@ -40,8 +40,9 @@ class nessusPlugin(BasePlugin):
 
     def __init__(self,torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'nessusPlugin')
-        self.setPluginDetails('NessusPlugin', 'Plugin developed to interact with the REST API of Nessus. Uses pynessus-rest library', '1.0', 'Adastra: @jdaanial')
-        self.info("[*] NessusPlugin Initialized!")
+        self.setPluginDetails('nessus', 'Plugin developed to interact with the REST API of Nessus. Uses pynessus-rest library', '1.0', 'Adastra: @jdaanial')
+        if len(torNodes) > 0:
+            self.info("[*] NessusPlugin Initialized!")
         self.pluginConfigs= {"nessusUser":config.nessusUser, "nessusPassword":config.nessusPass,
                                "nessusHost":config.nessusHost, "nessusPort":config.nessusPort}
 
@@ -55,6 +56,7 @@ class nessusPlugin(BasePlugin):
             self.nessusClient = NessusClient(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"])
             contents = self.nessusClient.login(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"])
             if contents['reply']['status'] != 'OK':
+                self.logged = False
                 pluginException = PluginException(message="Autentication Failed. The credentials used were: user=%s and password=%s. Please, check those values. " %(self.pluginConfigs["nessusUser"], self.pluginConfigs["nessusPassword"]),
                                       trace="Autentication Failed.",
                                       plugin="nessus",
@@ -63,8 +65,11 @@ class nessusPlugin(BasePlugin):
                     showTrace(pluginException)
                     return
                 else:
-                    raise pluginException 
+                    raise pluginException
+            else:
+                self.logged = True
         except requests.exceptions.ConnectionError:
+            self.logged = False
             pluginException = PluginException(message="Connection error with the Nessus server. The server specified was: %s:%s. Please, check those values. " %(self.pluginConfigs["nessusHost"], self.pluginConfigs["nessusPort"]),
                                   trace="Connection error with the Nessus server.",
                                   plugin="nessus",
@@ -80,7 +85,8 @@ class nessusPlugin(BasePlugin):
     def __del__(self):
         if len(self.torNodes) > 0:
             self.debug("[*] NessusPlugin Destroyed!")
-            self.nessusClient.logout()
+            if self.logged:
+                self.nessusClient.logout()
 
     def feed(self):
         nessusConverter = NessusConverter(self.nessusClient.feed(method="POST"))
@@ -154,8 +160,7 @@ class nessusPlugin(BasePlugin):
         print tableNessusServerUpdate.draw()+"\n"
 
     def serverRegister(self, nessusCode):
-        if nessusCode = '' or nessusCode is None:
-            
+        if nessusCode == '' or nessusCode is None:
             pluginException = PluginException(message="The 'nessus code' specified is invalid. %s " %(nessusCode),
                                   trace="The 'nessus code' specified is invalid.",
                                   plugin="nessus",
@@ -209,6 +214,7 @@ class nessusPlugin(BasePlugin):
         print tableNessusServerUuid.draw()+"\n"
 
     def userAdd(self, userName, password, admin=1):
+        import re
         if userName == '' or userName is None:
             pluginException = PluginException(message='The username specified is invalid.',
                                   trace="userAdd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
@@ -219,6 +225,18 @@ class nessusPlugin(BasePlugin):
             else:
                 print "[-] The username specified is invalid. "
                 raise pluginException
+
+        if not re.match(r'^[a-zA-Z0-9.@-]+$', userName):
+            pluginException = PluginException(message='The username specified is invalid. Please, check the Nessus REST API reference to see how to .',
+                                  trace="userAdd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  plugin="nessus", method="userAdd")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The username specified is invalid. "
+                raise pluginException
+
 
         if password == '' or password is None:
             pluginException = PluginException(message='The password specified is invalid.',
@@ -319,7 +337,7 @@ class nessusPlugin(BasePlugin):
     def userDelete(self, userName):
         if userName == '' or userName is None:
             pluginException = PluginException(message='The username specified is invalid.',
-                                  trace="userDelete with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  trace="userDelete with args username=%s  " %(userName),
                                   plugin="nessus", method="userDelete")
             if self.runFromInterpreter:
                 showTrace(pluginException)
@@ -348,7 +366,7 @@ class nessusPlugin(BasePlugin):
     def userChpasswd(self, userName, password):
         if userName == '' or userName is None:
             pluginException = PluginException(message='The username specified is invalid.',
-                                  trace="userChpasswd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  trace="userChpasswd with args username=%s , password=%s  " %(userName, password),
                                   plugin="nessus", method="userChpasswd")
             if self.runFromInterpreter:
                 showTrace(pluginException)
@@ -359,7 +377,7 @@ class nessusPlugin(BasePlugin):
 
         if password == '' or password is None:
             pluginException = PluginException(message='The password specified is invalid.',
-                                  trace="userChpasswd with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  trace="userChpasswd with args username=%s , password=%s " %(userName, password),
                                   plugin="nessus", method="userChpasswd")
             if self.runFromInterpreter:
                 showTrace(pluginException)
@@ -437,7 +455,7 @@ class nessusPlugin(BasePlugin):
     def pluginListsFamily(self, familyName):
         if familyName == '' or familyName is None:
             pluginException = PluginException(message='The familyName specified is invalid.',
-                                  trace="pluginListsFamily with args username=%s , password=%s , admin=%s " %(userName, password, str(admin)),
+                                  trace="pluginListsFamily with args familyName=%s  "%(familyName),
                                   plugin="nessus", method="pluginListsFamily")
             if self.runFromInterpreter:
                 showTrace(pluginException)
@@ -1467,7 +1485,7 @@ class nessusPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()'],

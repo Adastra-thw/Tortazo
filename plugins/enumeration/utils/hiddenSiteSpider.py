@@ -43,6 +43,7 @@ class HiddenSiteSpider(CrawlSpider):
         self.localTunnel = localTunnel
         self.start_urls=[localTunnel]
         self.visitedLinks=[]
+        handle_httpstatus_list = [401]
         self.deepLinks = None
         #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
         self._rules = [Rule(LinkExtractor(allow=extractorAllowRules, deny=extractorDenyRules), callback=self.parse),]
@@ -92,8 +93,12 @@ class HiddenSiteSpider(CrawlSpider):
             #Request authentication.
             bruter = bruterPlugin(torNodes=[])
             if response.url.contains('.onion') and self.bruterOnProtectedResource:
-                print "[+] HTTP Protected resource found. As you've indicated, we're gonna start an HTTP Dictionary Attack."
+                print "[+] HTTP Protected resource found in hiddenservice. As you've indicated, we're gonna start an HTTP Dictionary Attack."
                 bruter.httpBruterOnHiddenService(response.url, dictFile=self.dictFile)
+            elif response.url.contains('.onion') == False and self.bruterOnProtectedResource:
+                print "[+] HTTP Protected resource found in clear web site. As you've indicated, we're gonna start an HTTP Dictionary Attack."
+                bruter.httpBruterOnSite(response.url, dictFile=self.dictFile)
+
 
 
         item = HiddenSitePage()

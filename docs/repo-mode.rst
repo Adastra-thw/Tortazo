@@ -53,6 +53,10 @@ Consumer part
 ================= 
 In the consumer part will start the same number of processes that the generator part, however those processes will be created and terminated dynamically to process every onion address in the shared queue. When the producer inserts an element in the queue, the consumer processes will be notified and the callback function defined will be triggered and then, will perform an connection to the address obtained from the queue. If the response is valid, the processor inserts the details of the response in a separated queue which will be processed in parallel. The callback function for the queue of valid responses, will try to insert every response in database. Both queues are processed separately without blocking or interfering with the generator of onion addresses or the processor itself.
 
+To get a clear idea of the internals of Tortazo in this mode, the following image shows the components explained before.
+
+.. image:: screenshots/OnionRepository.png
+
 =================
 Onion Repository in Incremental mode
 =================
@@ -111,4 +115,3 @@ If you want to disable this behaviour, set to False the property "loadKnownOnion
 Searching for specific services:
 =================
 The onion repository mode, allows to perform connections to services like HTTP, SSH and FTP. So you can discover hidden services which use that kind of protocols. Also, if you specify "onionup" as argument of the "-R  /  --onion-repository" switch, Tortazo will perform HTTP Requests to the service https://onionup.com to check if the specified address contains a hidden service running.
-

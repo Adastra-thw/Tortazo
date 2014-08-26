@@ -33,7 +33,7 @@ class infoGatheringPlugin(BasePlugin):
 
     def __init__(self, torNodes=[]):
         BasePlugin.__init__(self, torNodes, 'infoGatheringPlugin')
-        self.setPluginDetails('infoGatheringPlugin', 'Information Gathering of Tor relays.', '1.0', 'Adastra: @jdaanial')
+        self.setPluginDetails('infoGathering', 'Information Gathering of Tor relays.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] infoGatheringPlugin Initialized!")
         self.pluginConfigs= {}
@@ -83,7 +83,7 @@ class infoGatheringPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([25,20,20])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ['printRelaysFound', 'Table with the relays found.', 'self.printRelaysFound()']
