@@ -716,7 +716,6 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try :
-                    print "[+] Trying with username=%s and password=%s" %(user, passwd)
                     if self.serviceConnector.performHTTPAuthConnection(url, user=user, passwd=passwd):
                         print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
@@ -742,7 +741,6 @@ class bruterPlugin(BasePlugin):
                         print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, user)
                         break
                     for passwd in passList:
-                        print "[+] Trying with username=%s and password=%s" %(user, passwd)
                         if self.serviceConnector.performHTTPAuthConnection(url, user=user, passwd=passwd):
                             print "[+] HTTP BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             return

@@ -348,7 +348,10 @@ class deepWebCrawlerPlugin(BasePlugin):
                 print "[-] The port specified is invalid. "
                 raise pluginException
 
-        if is_open_port(socatTcpListenPort) == True:
+        onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        onionSocket.settimeout(1)
+        result = onionSocket.connect_ex(('127.0.0.1',socatTcpListenPort))
+        if result == 0:
             pluginException = PluginException(message="The selected local port "+str(socatTcpListenPort)+" is being used by another process. Please, select an port available in this machine",
                                   trace="crawlOnionWebSite with args socatTcpListenPort=%s , " %(str(socatTcpListenPort)),
                                   plugin="crawler", method="crawlOnionWebSite")
@@ -398,14 +401,14 @@ class deepWebCrawlerPlugin(BasePlugin):
         crawler = Crawler(settings)
         crawler.configure()
 
-        import requests
-        from requests.exceptions import ConnectionError
         try:
-            response = requests.get("http://127.0.0.1:"+str(localPort)+extraPath)
-            if response.status_code not in range(200,299) and response.status_code != 401:
-                print "[-] Seems that the hidden service is not responding... detected HTTP Status code %s. The scrapper could fail." %(str(response.status_code))
-        except ConnectionError as conError:
-            print "[-] Seems that the hidden service is not responding... Detected HTTP Protocol error. The scrapper could fail."
+            httpcode = urllib.urlopen("http://127.0.0.1:"+str(localPort)+extraPath).getcode()
+            if httpcode not in range(200,299):
+                print "[-] Seems that the hidden service is not responding... detected HTTP Status code %s. The scrapper could fail." %(str(httpcode))
+        except IOError as ioError:
+            error, code,desc,detail = ioError
+            if "http protocol" in error:
+                print "[-] Seems that the hidden service is not responding... Detected HTTP Protocol error. The scrapper could fail."
 
         spider = HiddenSiteSpider("http://127.0.0.1:"+str(localPort)+extraPath, hiddenWebSite, self.extractorRulesAllow, self.extractorRulesDeny)
         spider.setImages(crawlImages)
