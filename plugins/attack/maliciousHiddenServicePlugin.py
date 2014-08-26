@@ -32,7 +32,7 @@ import os
 from twisted.internet.endpoints import TCP4ServerEndpoint
 import json
 from core.tortazo.exceptions.PluginException import PluginException
-from plugins.utils.validations.Validator import is_valid_port, is_valid_ipv4_address, is_valid_ipv6_address, showTrace
+from plugins.utils.validations.Validator import is_valid_port, is_valid_ipv4_address, is_valid_ipv6_address, showTrace, is_open_port
 from config import config as tortazoConfig
 
 class GatherInformation(resource.Resource):
@@ -43,7 +43,7 @@ class GatherInformation(resource.Resource):
             table = Texttable()
             table.set_cols_align(["l", "l"])
             table.set_cols_valign(["m", "m"])
-            table.set_cols_width([40,55])
+            table.set_cols_width([25,25])
             rows= [ ["Browser Attribute", "Value"],
                   ]
             for key, value in data.iteritems():
@@ -86,6 +86,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         print "[+] Hidden service running at: "
         print "http://%s (port %d)" % (onion_address, self.hiddenservicePort)
         print "[+] Directory for the hidden service is at:", configTor.HiddenServices[0].dir
+        print "[+] SOCKS Port bound ... %s:", str(configTor.SOCKSPort)
         print "[+] you should be able to visit it via: torsocks lynx http://%s" % onion_address
 
 
@@ -149,7 +150,49 @@ class maliciousHiddenServicePlugin(BasePlugin):
                 print "[-] The Service port is invalid. "
                 raise pluginException
 
+        if is_open_port(hiddenservicePort) == True:
+            pluginException = PluginException(message="The selected hidden service port "+str(hiddenservicePort)+" is being used by another process. Please, select an port available in this machine",
+                                  trace="startHTTPHiddenService with args hiddenservicePort=%s , " %(str(hiddenservicePort)),
+                                  plugin="hiddenService", method="startHTTPHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The selected hidden service port "+str(hiddenservicePort)+" is being used by another process. Please, select an port available in this machine"
+                raise pluginException
 
+        if is_open_port(socksPort) == True:
+            pluginException = PluginException(message="The selected SOCKS port "+str(socksPort)+" is being used by another process. Please, select an port available in this machine",
+                                  trace="startHTTPHiddenService with args socksPort=%s , " %(str(socksPort)),
+                                  plugin="hiddenService", method="startHTTPHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The selected SOCKS port "+str(socksPort)+" is being used by another process. Please, select an port available in this machine"
+                raise pluginException
+
+        if is_open_port(orPort) == True:
+            pluginException = PluginException(message="The selected OR port "+str(orPort)+" is being used by another process. Please, select an port available in this machine",
+                                  trace="startHTTPHiddenService with args orPort=%s , " %(str(orPort)),
+                                  plugin="hiddenService", method="startHTTPHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The selected OR port "+str(orPort)+" is being used by another process. Please, select an port available in this machine"
+                raise pluginException
+
+        if is_open_port(servicePort) == True:
+            pluginException = PluginException(message="The selected Service port "+str(servicePort)+" is being used by another process. Please, select an port available in this machine",
+                                  trace="startHTTPHiddenService with args orPort=%s , " %(str(servicePort)),
+                                  plugin="hiddenService", method="startHTTPHiddenService")
+            if self.runFromInterpreter:
+                showTrace(pluginException)
+                return
+            else:
+                print "[-] The selected Service port "+str(servicePort)+" is being used by another process. Please, select an port available in this machine"
+                raise pluginException
 
         self.hiddenservicePort = hiddenservicePort
         config = txtorcon.TorConfig()

@@ -76,12 +76,13 @@ def is_valid_onion_address(onionAddress):
 
 
 def is_valid_url(url):
-    import urllib
+    import requests
+    from requests.exceptions import ConnectionError
     if url == '' or url is None:
         return False
     try:
-        urllib.urlopen(url)
-    except IOError:
+        requests.get(url)
+    except ConnectionError:
         return False
     except:
         raise
@@ -101,6 +102,15 @@ def is_valid_regex(regex):
         re.compile(regex)
         return True
     except re.error:
+        return False
+
+def is_open_port(port):
+    onionSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    onionSocket.settimeout(1)
+    result = onionSocket.connect_ex(('127.0.0.1',port))
+    if result == 0:
+        return True
+    else:
         return False
 
 def showTrace(pluginExc):
