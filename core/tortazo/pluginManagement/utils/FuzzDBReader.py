@@ -21,6 +21,8 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 import sys
+import os
+from config import config
 
 class FuzzDBReader:
 
@@ -37,7 +39,8 @@ class FuzzDBReader:
         '''
         print "[+] Reading the User-Agent list from FuzzDB"
         userAgents = []
-        johnlist = open('fuzzdb/attack-payloads/http-protocol/user-agents.txt', 'r')
+        fuzzFile = config.resource_path(os.path.join("fuzzdb/attack-payloads/http-protocol/user-agents.txt"))
+        johnlist = open(fuzzFile, 'r')
         for johnpass in johnlist.readlines():
             userAgents.append(johnpass.rstrip('\n'))
 
@@ -55,10 +58,18 @@ class FuzzDBReader:
         print "[+] Generating users list using the files in FuzzDB"
         users = []
         try:
-            namelist = open('fuzzdb/wordlists-user-passwd/names/namelist.txt', 'r')
-            johnlist = open('fuzzdb/wordlists-user-passwd/passwds/john.txt', 'r')
-            unixusers = open('fuzzdb/wordlists-user-passwd/unix-os/unix_users.txt', 'r')
-            faithwriters = open('fuzzdb/wordlists-user-passwd/faithwriters.txt', 'r')
+            namelistFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/names/namelist.txt'))
+            namelist = open(namelistFile, 'r')
+
+            johnlistFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/passwds/john.txt'))
+            johnlist = open(johnlistFile, 'r')
+
+            unixusersFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/unix-os/unix_users.txt'))
+            unixusers = open(unixusersFile, 'r')
+
+            faithwritersFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/faithwriters.txt'))
+            faithwriters = open(faithwritersFile, 'r')
+
             for userNameList in namelist.readlines():
                 users.append(userNameList.rstrip('\n'))
 
@@ -84,9 +95,15 @@ class FuzzDBReader:
         '''
         print "[+] Generating passwords list using the files in FuzzDB"
         passwords = []
-        johnlist = open('fuzzdb/wordlists-user-passwd/passwds/john.txt', 'r')
-        unixpasswords = open('fuzzdb/wordlists-user-passwd/unix-os/unix_passwords.txt', 'r')
-        weaksauce = open('fuzzdb/wordlists-user-passwd/passwds/weaksauce.txt', 'r')
+        johnlistFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/passwds/john.txt'))
+        johnlist = open(johnlistFile, 'r')
+
+        unixpasswordsFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/unix-os/unix_passwords.txt'))
+        unixpasswords = open(unixpasswordsFile, 'r')
+
+        weaksauceFile = config.resource_path(os.path.join('fuzzdb/wordlists-user-passwd/passwds/weaksauce.txt'))
+        weaksauce = open(weaksauceFile, 'r')
+
         for johnpass in johnlist.readlines():
             passwords.append(johnpass.rstrip('\n'))
 
@@ -105,7 +122,8 @@ class FuzzDBReader:
         '''
         print "[+] Reading the wordlist with common SNMP communities from FuzzDB"
         communities = []
-        commonCommunities = open('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt', 'r')
+        commonCommunitiesFile = config.resource_path(os.path.join('fuzzdb/wordlists-misc/wordlist-common-snmp-community-strings.txt'))
+        commonCommunities = open(commonCommunitiesFile, 'r')
         for community in commonCommunities.readlines():
             communities.append(community.replace(' ', '').replace('\n', ''))
         return  communities
@@ -166,55 +184,152 @@ class FuzzDBReader:
         '''
         print "[+] Generating Directory list using the files in FuzzDB"
         dirs = []
-        adobeXML = open('fuzzdb/Discovery/PredictableRes/AdobeXML.fuzz.txt', 'r')
-        apache = open('fuzzdb/Discovery/PredictableRes/Apache.fuzz.txt', 'r')
-        apacheTomcat = open('fuzzdb/Discovery/PredictableRes/ApacheTomcat.fuzz.txt', 'r')
-        cgiMicrosoft = open('fuzzdb/Discovery/PredictableRes/CGI_Microsoft.fuzz.txt', 'r')
-        coldFusion = open('fuzzdb/Discovery/PredictableRes/ColdFusion.fuzz.txt', 'r')
-        fatWire = open('fuzzdb/Discovery/PredictableRes/FatwireCMS.fuzz.txt', 'r')
-        fronPage = open('fuzzdb/Discovery/PredictableRes/Frontpage.fuzz.txt', 'r')
-        hyperion = open('fuzzdb/Discovery/PredictableRes/Hyperion.fuzz.txt', 'r')
-        iis = open('fuzzdb/Discovery/PredictableRes/IIS.fuzz.txt', 'r')
-        jboss = open('fuzzdb/Discovery/PredictableRes/JBoss.fuzz.txt', 'r')
-        jrun = open('fuzzdb/Discovery/PredictableRes/JRun.fuzz.txt', 'r')
-        kitchen = open('fuzzdb/Discovery/PredictableRes/KitchensinkDirectories.fuzz.txt', 'r')
-        logins = open('fuzzdb/Discovery/PredictableRes/Logins.fuzz.txt', 'r')
-        lotusNotes = open('fuzzdb/Discovery/PredictableRes/LotusNotes.fuzz.txt', 'r')
-        netware = open('fuzzdb/Discovery/PredictableRes/Netware.fuzz.txt', 'r')
-        oracle9i = open('fuzzdb/Discovery/PredictableRes/Oracle9i.fuzz.txt', 'r')
-        oracleAppServer = open('fuzzdb/Discovery/PredictableRes/OracleAppServer.fuzz.txt', 'r')
-        passwords = open('fuzzdb/Discovery/PredictableRes/Passwords.fuzz.txt', 'r')
-        php = open('fuzzdb/Discovery/PredictableRes/PHP.fuzz.txt', 'r')
-        phpBackDoors = open('fuzzdb/Discovery/PredictableRes/PHP_CommonBackdoors.fuzz.txt', 'r')
-        proxyConf = open('fuzzdb/Discovery/PredictableRes/proxy-conf.fuzz.txt', 'r')
-        largeDirs = open('fuzzdb/Discovery/PredictableRes/raft-large-directories.txt', 'r')
-        largeDirsLowercase = open('fuzzdb/Discovery/PredictableRes/raft-large-directories-lowercase.txt', 'r')
-        largeFiles = open('fuzzdb/Discovery/PredictableRes/raft-large-files.txt', 'r')
-        largeFilesLowercase = open('fuzzdb/Discovery/PredictableRes/raft-large-directories-lowercase.txt', 'r')
-        largeWords = open('fuzzdb/Discovery/PredictableRes/raft-large-words.txt', 'r')
-        largeWordsLowercase = open('fuzzdb/Discovery/PredictableRes/raft-large-words-lowercase.txt', 'r')
-        mediumDirs = open('fuzzdb/Discovery/PredictableRes/raft-medium-directories.txt', 'r')
-        mediumDirsLower =  open('fuzzdb/Discovery/PredictableRes/raft-medium-directories-lowercase.txt', 'r')
-        mediumFiles =  open('fuzzdb/Discovery/PredictableRes/raft-medium-files.txt', 'r')
-        mediumFilesLower =  open('fuzzdb/Discovery/PredictableRes/raft-medium-files-lowercase.txt', 'r')
-        mediumWords =  open('fuzzdb/Discovery/PredictableRes/raft-medium-words.txt', 'r')
-        mediumWordsLower =  open('fuzzdb/Discovery/PredictableRes/raft-medium-words-lowercase.txt', 'r')
-        smallDirs =  open('fuzzdb/Discovery/PredictableRes/raft-small-directories.txt', 'r')
-        smallDirsLower =  open('fuzzdb/Discovery/PredictableRes/raft-small-directories-lowercase.txt', 'r')
-        smallFiles =  open('fuzzdb/Discovery/PredictableRes/raft-small-files.txt', 'r')
-        smallFilesLower =  open('fuzzdb/Discovery/PredictableRes/raft-small-files-lowercase.txt', 'r')
-        smallWords =  open('fuzzdb/Discovery/PredictableRes/raft-small-words.txt', 'r')
-        smallWordsLower =  open('fuzzdb/Discovery/PredictableRes/raft-small-words-lowercase.txt', 'r')
-        randomFiles =  open('fuzzdb/Discovery/PredictableRes/Randomfiles.fuzz.txt', 'r')
-        SAP =  open('fuzzdb/Discovery/PredictableRes/SAP.fuzz.txt', 'r')
-        siteMinder =  open('fuzzdb/Discovery/PredictableRes/SiteMinder.fuzz.txt', 'r')
-        glassfish =  open('fuzzdb/Discovery/PredictableRes/SunAppServerGlassfish.fuzz.txt', 'r')
-        iplanet =  open('fuzzdb/Discovery/PredictableRes/SuniPlanet.fuzz.txt', 'r')
-        tftp =  open('fuzzdb/Discovery/PredictableRes/tftp.fuzz.txt', 'r')
-        unixdotfiles =  open('fuzzdb/Discovery/PredictableRes/UnixDotfiles.fuzz.txt', 'r')
-        vignette =  open('fuzzdb/Discovery/PredictableRes/Vignette.fuzz.txt', 'r')
-        weblogic =  open('fuzzdb/Discovery/PredictableRes/Weblogic.fuzz.txt', 'r')
-        websphere =  open('fuzzdb/Discovery/PredictableRes/Websphere.fuzz.txt', 'r')
+        adobeXMLFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/AdobeXML.fuzz.txt'))
+        adobeXML = open(adobeXMLFile, 'r')
+
+        apacheFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Apache.fuzz.txt'))
+        apache = open(apacheFile, 'r')
+
+        apacheTomcatFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/ApacheTomcat.fuzz.txt'))
+        apacheTomcat = open(apacheTomcatFile, 'r')
+
+        cgiMicrosoftFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/CGI_Microsoft.fuzz.txt'))
+        cgiMicrosoft = open(cgiMicrosoftFile, 'r')
+
+        coldFusionFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/ColdFusion.fuzz.txt'))
+        coldFusion = open(coldFusionFile, 'r')
+
+        fatWireFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/FatwireCMS.fuzz.txt'))
+        fatWire = open(fatWireFile, 'r')
+
+        fatWireFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Frontpage.fuzz.txt'))
+        fronPage = open(fatWireFile, 'r')
+
+        hyperionFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Hyperion.fuzz.txt'))
+        hyperion = open(hyperionFile, 'r')
+
+        iisFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/IIS.fuzz.txt'))
+        iis = open(iisFile, 'r')
+
+        jbossFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/JBoss.fuzz.txt'))
+        jboss = open(jbossFile, 'r')
+
+        jrunFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/JRun.fuzz.txt'))
+        jrun = open(jrunFile, 'r')
+
+        kitchenFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/KitchensinkDirectories.fuzz.txt'))
+        kitchen = open(kitchenFile, 'r')
+
+        loginsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Logins.fuzz.txt'))
+        logins = open(loginsFile, 'r')
+
+        lotusNotesFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/LotusNotes.fuzz.txt'))
+        lotusNotes = open(lotusNotesFile, 'r')
+
+        netwareFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Netware.fuzz.txt'))
+        netware = open(netwareFile, 'r')
+
+        oracle9iFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Oracle9i.fuzz.txt'))
+        oracle9i = open(oracle9iFile, 'r')
+
+        oracleAppServerFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/OracleAppServer.fuzz.txt'))
+        oracleAppServer = open(oracleAppServerFile, 'r')
+
+        passwordsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Passwords.fuzz.txt'))
+        passwords = open(passwordsFile, 'r')
+
+        phpFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/PHP.fuzz.txt'))
+        php = open(phpFile, 'r')
+
+        phpBackDoorsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/PHP_CommonBackdoors.fuzz.txt'))
+        phpBackDoors = open(phpBackDoorsFile, 'r')
+
+        proxyConfFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/proxy-conf.fuzz.txt'))
+        proxyConf = open(proxyConfFile, 'r')
+
+        largeDirsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-directories.txt'))
+        largeDirs = open(largeDirsFile, 'r')
+
+        largeDirsLowercaseFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-directories-lowercase.txt'))
+        largeDirsLowercase = open(largeDirsLowercaseFile, 'r')
+
+        largeFilesFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-files.txt'))
+        largeFiles = open(largeFilesFile, 'r')
+
+        largeFilesLowercaseFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-directories-lowercase.txt'))
+        largeFilesLowercase = open(largeFilesLowercaseFile, 'r')
+
+        largeWordsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-words.txt'))
+        largeWords = open(largeWordsFile, 'r')
+
+        largeWordsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-large-words-lowercase.txt'))
+        largeWordsLowercase = open(largeWordsFile, 'r')
+
+        mediumDirsFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-directories.txt'))
+        mediumDirs = open(mediumDirsFile, 'r')
+
+        mediumDirsLowerFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-directories-lowercase.txt'))
+        mediumDirsLower =  open(mediumDirsLowerFile, 'r')
+
+        mediumFilesFile = config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-files.txt'))
+        mediumFiles =  open(mediumFilesFile, 'r')
+
+        mediumFilesLowerFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-files-lowercase.txt'))
+        mediumFilesLower =  open(mediumFilesLowerFile, 'r')
+
+        mediumWordsFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-words.txt'))
+        mediumWords =  open(mediumWordsFile, 'r')
+
+        mediumWordsLowerFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-medium-words-lowercase.txt'))
+        mediumWordsLower =  open(mediumWordsLowerFile, 'r')
+
+        smallDirsFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-directories.txt'))
+        smallDirs =  open(smallDirsFile, 'r')
+
+        smallDirsLowerFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-directories-lowercase.txt'))
+        smallDirsLower =  open(smallDirsLowerFile, 'r')
+
+        smallFilesFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-files.txt'))
+        smallFiles =  open(smallFilesFile, 'r')
+
+        smallFilesLowerFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-files-lowercase.txt'))
+        smallFilesLower =  open(smallFilesLowerFile, 'r')
+
+        smallWordsFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-words.txt'))
+        smallWords =  open(smallWordsFile, 'r')
+
+        smallWordsLowerFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/raft-small-words-lowercase.txt'))
+        smallWordsLower =  open(smallWordsLowerFile)
+
+        randomFilesFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Randomfiles.fuzz.txt'))
+        randomFiles =  open(randomFilesFile, 'r')
+
+        SAPFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/SAP.fuzz.txt'))
+        SAP =  open(SAPFile, 'r')
+
+        siteMinderFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/SiteMinder.fuzz.txt'))
+        siteMinder =  open(siteMinderFile, 'r')
+
+        glassfishFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/SunAppServerGlassfish.fuzz.txt'))
+        glassfish =  open(glassfishFile, 'r')
+
+        iplanetFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/SuniPlanet.fuzz.txt'))
+        iplanet =  open(iplanetFile, 'r')
+
+        tftpFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/tftp.fuzz.txt'))
+        tftp =  open(tftpFile, 'r')
+
+        unixdotfilesFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/UnixDotfiles.fuzz.txt'))
+        unixdotfiles =  open(unixdotfilesFile, 'r')
+
+        vignetteFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Vignette.fuzz.txt'))
+        vignette =  open(vignetteFile, 'r')
+
+        weblogicFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Weblogic.fuzz.txt'))
+        weblogic =  open(weblogicFile, 'r')
+
+        websphereFile =  config.resource_path(os.path.join('fuzzdb/Discovery/PredictableRes/Websphere.fuzz.txt'))
+        websphere =  open(websphereFile, 'r')
 
         dirs.extend(self.__readFile(adobeXML))
         dirs.extend(self.__readFile(apache))
