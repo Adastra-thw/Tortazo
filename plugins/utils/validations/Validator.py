@@ -59,11 +59,11 @@ def is_valid_domain(domain):
         return False    
 
 def is_valid_onion_address(onionAddress):
-    #Remove the extra path fron the onion address.
-    onionAddress = onionAddress[:onionAddress.index(".onion")+6]
-
     if onionAddress == '' or onionAddress is None:
         return False
+    #Remove the extra path from the onion address.
+    onionAddress = onionAddress[:onionAddress.index(".onion")+6]
+
     if onionAddress.endswith('.onion') == False:
         return False
     validchars ='234567' + string.lowercase
