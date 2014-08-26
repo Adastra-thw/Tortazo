@@ -21,6 +21,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
 import sqlite3
+from config import config
 from config import database
 from config import databasePlugins
 from core.tortazo.data.TorNodeData import TorNodeData, TorNodePort
@@ -36,7 +37,9 @@ class TortazoDatabase:
         self.cursor = None
 
     def connect(self):
-        self.connection = sqlite3.connect(database.databaseName)
+        import os
+        dbFile = config.resource_path(os.path.join(database.databaseName))
+        self.connection = sqlite3.connect(dbFile)
         self.cursor = self.connection.cursor()
 
 

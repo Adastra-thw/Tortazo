@@ -21,6 +21,11 @@ along with Tortazo; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 '''
 
+import os.path
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+
 from core.tortazo.Discovery import Discovery
 from core.tortazo.BotNet import BotNet
 from core.tortazo.Reporting import Reporting
@@ -32,7 +37,6 @@ import Queue
 from stem.util import term
 import stem.process
 import logging as log
-import sys
 from plumbum import cli
 from time import gmtime, strftime
 from distutils.util import strtobool
@@ -306,7 +310,6 @@ class Cli(cli.Application):
             return
 
         if self.torLocalInstance:
-            import os.path
             if os.path.exists(self.torLocalInstance) and os.path.isfile(self.torLocalInstance):
                 torrcFile = open(self.torLocalInstance,'r')
                 torConfig = {}

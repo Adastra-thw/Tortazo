@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 from jinja2 import Environment, FileSystemLoader
 import os
 from stem.util import term
+from config import config
 
 #from data.TorNodeData import TorNodeData, TorNodePort
 
@@ -38,8 +39,8 @@ class Reporting:
         '''
         if self.cli:
             self.cli.logger.info(term.format("[+] Generating the NMAP Report in: "+absolutePathFile, term.Color.YELLOW))
-        dir = os.path.dirname(os.path.abspath(__file__))
-        env = Environment(loader=FileSystemLoader(dir+'/templates'))
+        templateDir = config.resource_path(os.path.join('templates'))
+        env = Environment(loader=FileSystemLoader(templateDir))
         template = env.get_template('nmapTemplate.html')
         templateVars = { "title" : "NMAP Report generated with Tortazo",
                          "nodes" : nodes}
@@ -53,8 +54,10 @@ class Reporting:
         '''
         if self.cli:
             self.cli.logger.info(term.format("[+] Generating the Shodan Report in: "+absolutePathFile, term.Color.GREEN))
-        dir = os.path.dirname(os.path.abspath(__file__))
-        env = Environment(loader=FileSystemLoader(dir+'/templates'))
+        #dir = os.path.dirname(os.path.abspath(__file__))
+        #env = Environment(loader=FileSystemLoader(dir+'/templates'))
+        templateDir = config.resource_path(os.path.join('templates'))
+        env = Environment(loader=FileSystemLoader(templateDir))
         template = env.get_template('shodanTemplate.html')
         hosts = []
         for shodanHost in shodanHosts:
