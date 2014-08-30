@@ -504,6 +504,8 @@ class Cli(cli.Application):
 
             if pluginsDeployed.plugins.__contains__(listPlugins):
                 if listPlugins == 'example':
+                    from plugins.examples.examplePlugin import examplePlugin
+                    module = examplePlugin()
 
                 elif listPlugins == 'w3af':
                     from plugins.thirdparty.w3afPlugin import w3afPlugin
