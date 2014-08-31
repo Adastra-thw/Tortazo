@@ -26,6 +26,7 @@ Yes, free as the air you breathe. This project is licensed under GNU/GPLv2
 ¿How can I help you?
 =================
 Fine! if you want to help, you can:
+
 * read the documentation and improve the documents.
 * Find errors
 * Test the framework
@@ -61,7 +62,7 @@ Check two things:
 Oh man, the onion repository mode has been running for the last "n" hours and I don't have any result ¿Am I doing something wrong?
 =================
 Well, this could be something normal. Please, check the onion repository  documentation :ref:`repository-mode-label`
-Also, you must have a TOR local instance up and running with the SocksPort property enabled. Check: :ref:`problems_tor_socks_port`
+Also, you must have a TOR local instance up and running with the SocksPort property enabled.
 
 =================
 When I run some functions of the plugins "crawler" or "hiddenService" twice, I get the error "ReactorNotRestartable".
@@ -73,9 +74,9 @@ I'm trying to use shodan to gather information about the relays found, but I get
 =================
 To use Shodan, you'll need a valid Shodan Key, which you can get if created a new Shodan account. http://www.shodanhq.com/ 
 Also, the shodan key must be included in a plain-text file (in just one line) and use the switch -k / --shodan-key
-If you use the Shodan plugin available, you'll have another extended options to perform searches against shodan. :ref`supported_options`
+If you use the Shodan plugin available, you'll have another extended options to perform searches against shodan. :ref:`supported_options`
 
 =================
 I get an strange error... ¿What can I do?
 =================
-Well, your question is very ambiguous, don't you think? If after read the documentation  :ref:`getting_started` and read this FAQ :ref:`faqs_tortazo`` you can not solve it, please contact me :ref:`contact_adastra`
+Well, your question is very ambiguous, don't you think? If after read the documentation  :ref:`getting_started` and read this FAQ. If you can not solve it, please contact me.

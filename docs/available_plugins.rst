@@ -272,6 +272,7 @@ w3af
 web applications. As is written in Python and has a GNU/GPL license, you can use the classes and utilities from any script in Python. In this case, the plugin does not 
 only covers the features included in w3af, but also allows the execution 
 of audits in web applications that are hosted in the deep web. In the official release of W3AF, you can’t use any site on the deep web whose target address is an ONION TLD. Using this plugin, allows you to do that.
+
 ====================================   ==========================================================================     ==========================================================================================================
 Function Name                          Description                                                                    Usage Example     
 ====================================   ==========================================================================     ==========================================================================================================

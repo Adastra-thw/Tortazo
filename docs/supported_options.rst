@@ -74,7 +74,7 @@ Switches for Plugins management
 
 Switches for Repository Mode
 =============================
-* **-R <serviceType> / --onion-repository <serviceType> **: Start Tortazo in Onion Repository Mode. The valid values are: HTTP, SSH, FTP and ONIONUP. The value "ONIONUP" tries to use the online service https://onionup.com/ to check if the onion addresses generated have an hidden service up and running.
+* **-R <serviceType> / --onion-repository <serviceType>**: Start Tortazo in Onion Repository Mode. The valid values are: HTTP, SSH, FTP and ONIONUP. The value "ONIONUP" tries to use the online service https://onionup.com/ to check if the onion addresses generated have an hidden service up and running.
 * **-W <Number of workers> / --workers-repository <Number of workers>**: Number of processes used to process the ONION addresses generated.
 * **-V <chars>  /   --validchars-repository <chars>**: Valid characters to use in the generation process of onion addresses. Default: All characters between a-z and digits between 2-7
 * **-O <partialOnionAddress>  /   --onionpartial-address <partialOnionAddress>**: Partial address of a hidden service. Used in Onion repository mode.
