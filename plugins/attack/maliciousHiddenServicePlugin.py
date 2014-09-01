@@ -43,7 +43,7 @@ class GatherInformation(resource.Resource):
             table = Texttable()
             table.set_cols_align(["l", "l"])
             table.set_cols_valign(["m", "m"])
-            table.set_cols_width([40,55])
+            table.set_cols_width([20,25])
             rows= [ ["Browser Attribute", "Value"],
                   ]
             for key, value in data.iteritems():

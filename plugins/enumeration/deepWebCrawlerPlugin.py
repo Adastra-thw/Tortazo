@@ -197,6 +197,8 @@ class deepWebCrawlerPlugin(BasePlugin):
         try:
             responseHidden = self.serviceConnector.performHTTPConnectionHiddenService(hiddenWebSite,method="GET")
         except Exception as exc:
+            import sys
+            print sys.exc_info()
             print "[-] Exception connecting to the hidden service. Is the hidden service up and running? "+str(exc.message)
             return
 
@@ -222,7 +224,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([15,15,15])
 
         elements = [ ["Hidden Service", "WebSite", "Percentage"] ]
         elements.append( [ hiddenWebSite, webSite, str(ratio)  ] )
@@ -279,7 +281,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([40,55,55])
+        table.set_cols_width([15,15,15])
 
         elements = [ ["Hidden Service", "Relay", "Percentage"]]
         for key in ratios.keys():
@@ -459,7 +461,7 @@ class deepWebCrawlerPlugin(BasePlugin):
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
-        table.set_cols_width([25,20,20])
+        table.set_cols_width([15,15,15])
         table.add_rows([ ["Function", "Description", "Example"],
                          ['help', 'Help Banner', 'self.help()'],
                          ["setExtractorRulesAllow", 'Sets the XPATH rules to specify the allowed pages to visit and analyze. This value will be passed to the "allow" attribute of the class "scrapy.contrib.linkextractors.LinkExtractor".', "self.setExtractorRulesAllow('index\.php| index\.jsp')"],
