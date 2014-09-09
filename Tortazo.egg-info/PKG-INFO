@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: Tortazo
+Version: 1.1
+Summary: Audit and Attack TOR Nodes
+Home-page: http://packages.python.org/Tortazo
+Author: Adastra
+Author-email: debiadastra@gmail.com
+License: GPL
+Description: Please, Read the docs ;-)
+        http://tortazo.readthedocs.org/en/latest/
+Keywords: stem tortazo tor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Audit and Hacking
+Classifier: License :: GNU/GPL v2
