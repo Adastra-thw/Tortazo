@@ -370,7 +370,7 @@ class RepositoryProcess:
             #Save address details in database.
             #Table: OnionRepositoryProgess.        PartialOnionAddress, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet
             #Table: OnionRepositoryResponses.      OnionAddress, httpcode, headers
-            headers = None
+            headers = ""
             if serviceType.lower() == 'http':
                 for key in response.headers.keys():
                     headers = headers + key +' : '+ response.headers[key] +'\n'
