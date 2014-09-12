@@ -29,7 +29,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 from core.tortazo.Discovery import Discovery
 from core.tortazo.BotNet import BotNet
 from core.tortazo.Reporting import Reporting
-from core.tortazo.databaseManagement.TortazoDatabase import  TortazoDatabase
+from core.tortazo.databaseManagement.TortazoServerDB import  TortazoSQLiteDB, TortazoPostgreSQL, TortazoMySQL
 from core.tortazo.OnionRepository import  RepositoryGenerator
 from core.tortazo.utils.ServiceConnector import ServiceConnector
 from config import config as tortazoConfiguration
@@ -267,17 +267,20 @@ class Cli(cli.Application):
                  'drpepper', 'eftitalic','eftiwater','epic','gothic','isometric1','invita', 'isometric2','isometric3', 'isometric4','larry3d', 'lean','linux','madrid','mini','ntgreek', 'ogre',
                  'poison','puffy','roman','rounded','runyc','script','shadow','slscript','small','speed','standard','starwars','straight','twopoint','univers','weird']
         bannerTortazo = Figlet(font=random.choice(fonts))
-        print "\n\n"
         print bannerTortazo.renderText('Tortazo v %s.%s' %(tortazoConfiguration.tortazo_majorversion,tortazoConfiguration.tortazo_minorversion) )
 
         bannerAuthor = Figlet(font='digital')
-        print "\n\n"
         print bannerAuthor.renderText('By Adastra ' )
         print bannerAuthor.renderText('@jdaanial \n' )
 
         self.logger = log
         self.exitNodes = []
-        self.database = TortazoDatabase()
+        if tortazoConfiguration.dbPostgres:
+            self.database = TortazoPostgreSQL()
+        elif tortazoConfiguration.dbMySQL:
+            self.database = TortazoMySQL()
+        else:
+            self.database = TortazoSQLiteDB()
 
         if self.verbose:
             self.logger.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
@@ -427,7 +430,7 @@ class Cli(cli.Application):
 
 
         else:
-            discovery = Discovery(self)
+            discovery = Discovery(self, self.database)
 
             if self.useDatabase:
                 #There's a previous scan stored in database. We'll use that information!
@@ -558,4 +561,6 @@ if __name__ == "__main__":
         Cli.run()
     except AttributeError:
         print "[-] Invalid usage. Please, type the switch '--help'"
+        import sys
+        print sys.exc_info()
 

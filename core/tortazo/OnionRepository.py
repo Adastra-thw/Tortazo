@@ -201,14 +201,14 @@ class RepositoryGenerator:
                 print "[+] Seems that the SOCKS Proxy at %s is up and running ... " %(str(self.serviceConnector.socksHost)+":"+str(self.serviceConnector.socksPort))
                 #Set the proxy SOCKS to perform the connections.
                 self.serviceConnector.setSocksProxy()
-            else:
+            elif typeService.lower() != 'onionup':
                 print "[-] Seems that the SOCKS Proxy at %s is down. Please, check your configuration." %(str(self.serviceConnector.socksHost)+":"+str(self.serviceConnector.socksPort))
                 print "[-] Exiting ..."
                 return
 
             self.typeService = typeService
             self.process.startProcess()
-            if loadKnownAddresses and self.typeService.lower() == 'http':
+            if loadKnownAddresses and (self.typeService.lower() == 'http' or self.typeService.lower() == 'onionup'):
                 knownAddresses = open('db/knownOnionSites.txt', 'r')
                 for knownAddress in knownAddresses.readlines():
                     knownAddress=knownAddress.replace('\n','')
@@ -370,7 +370,7 @@ class RepositoryProcess:
             #Save address details in database.
             #Table: OnionRepositoryProgess.        PartialOnionAddress, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet
             #Table: OnionRepositoryResponses.      OnionAddress, httpcode, headers
-            headers = None
+            headers = ''
             if serviceType.lower() == 'http':
                 for key in response.headers.keys():
                     headers = headers + key +' : '+ response.headers[key] +'\n'

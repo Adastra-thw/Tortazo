@@ -281,7 +281,7 @@ class ServiceConnector():
         return sock
 
     def setSocksProxy(self):
-        #print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
+        print "[+] Setting the socks proxy with the following settings: Host=%s - Port=%s" %(self.socksHost,self.socksPort)
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.socksHost, int(self.socksPort), True)
         socket.socket = socks.socksocket
         socket.create_connection = self.create_connection

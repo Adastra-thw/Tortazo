@@ -8,7 +8,7 @@ def resource_path(relative):
     return os.path.join(relative)
 
 
-tortazo_minorversion=1
+tortazo_minorversion=2
 tortazo_majorversion=1
 home = expanduser("~")
 ####
@@ -27,6 +27,14 @@ deepWebCrawlerOutdir=os.getcwd()+"/onionSites/"
 ################################################################################################################################################
 ################################################################################################################################################
 databaseName="db/tortazo.db"
+
+dbPostgres=False
+dbMySQL=False
+dbName="tortazo"
+dbServer="127.0.0.1"
+dbPort=5432
+dbUser="postgres"
+dbPass="postgres"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
@@ -62,7 +70,7 @@ socksPort=9150
 #Number of seconds before give up and timeout for every http connection against the generated onion addresses generated in the onion repository mode.
 timeOutRequests=5
 #Tries to load in database the records in the file "db/knownOnionSites.txt"
-loadKnownOnionSites=False
+loadKnownOnionSites=True
 #Path for the Tor Executable.
 torExecutablePath="/home/adastra/Escritorio/TOR/tor-browser_363/Tor/tor"
 onionupUrl="https://onionup.com/?q="

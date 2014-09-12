@@ -32,7 +32,6 @@ from core.tortazo.data.ShodanHost import ShodanHost
 import zlib
 import nmap
 import shodan
-from core.tortazo.databaseManagement import TortazoDatabase
 import urllib2
 
 class Discovery:
@@ -42,11 +41,12 @@ class Discovery:
     cli = None
     scan = None
 
-    def __init__(self, cli):
+    def __init__(self, cli, database):
         '''
         Constructor.
         '''
         self.cli = cli
+        self.database = database
         self.exitNodes = []
 
     def listAuthorityExitNodes(self):
@@ -156,9 +156,8 @@ class Discovery:
         if len(self.exitNodes) == 0:
             self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
         else:
-            database = TortazoDatabase.TortazoDatabase()
-            database.initDatabase()
-            database.insertExitNode(self.exitNodes)
+            self.database.initDatabase()
+            self.database.insertExitNode(self.exitNodes)
         return self.exitNodes
 
     def shodanSearchByHost(self, shodanKey, ip):
