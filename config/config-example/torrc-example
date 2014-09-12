@@ -2,8 +2,8 @@ AutomapHostsOnResolve 1
 AutomapHostsSuffixes 
 ContactInfo debiadastra at gmail dot com
 DataDirectory /home/adastra/Escritorio/TOR/tor-browser_363/Data/Tor
-DirPort 9030
-DNSPort 5353
+DirPort 9031
+DNSPort 5354
 DownloadExtraInfo 1
 ExitPolicy reject *:*
 FetchDirInfoEarly 1
@@ -12,7 +12,7 @@ GeoIPFile /home/adastra/Escritorio/TOR/tor-browser_363/Data/Tor/geoip
 GeoIPv6File /home/adastra/Escritorio/TOR/tor-browser_363/Data/Tor/geoip6
 Log notice file /home/adastra/tor_data_directory/tor_log.log
 Nickname AdastraTORY
-ORPort 4443
+ORPort 4442
 RelayBandwidthBurst 10485760
 RelayBandwidthRate 5242880
 UseMicrodescriptors 0
