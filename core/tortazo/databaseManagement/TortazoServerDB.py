@@ -459,10 +459,12 @@ class TortazoPostgreSQL(ITortazoDatabase):
         except psycopg2.IntegrityError as integrity:
             if 'duplicate key' in integrity.message:
                 print "[-] Onion Address %s already created in database" %(onionAddress)
+                self.connection.rollback()
 
         except Exception as ex:
             import sys
             print sys.exc_info()
+            self.connection.rollback()
 
     def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
         if self.cursor is None:

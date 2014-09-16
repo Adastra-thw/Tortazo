@@ -189,6 +189,25 @@ class RepositoryGenerator:
                 self.__loopFromFirstQuartet(self.partialOnionAddress, addressesQuartetIncomplete)
 
 
+    def loadKnownAddresses(self):
+        knownAddresses = open('db/knownOnionSites.txt', 'r')
+        for knownAddress in knownAddresses.readlines():
+            knownAddress=knownAddress.replace('\n','')
+            if knownAddress.startswith('#') == False and knownAddress != '':
+                address = knownAddress.split(',')
+                try:
+                    response = self.serviceConnector.performHTTPConnectionHiddenService(address[0], method="HEAD")
+                    print "[+] Found response from HTTP Hidden Service! %s  : %s " %(address[0], response)
+                    if response.status_code not in range(400,499):
+                        headers = ''
+                        for key in response.headers.keys():
+                            headers = headers + key +' : '+ response.headers[key] +'\n'
+                        self.databaseConnection.insertOnionRepositoryResult(response.url, response.status_code, headers, address[1], 'http')
+                except Exception as exc:
+                    if exc.message == 'connection timeout':
+                        print "[-] Connection Timeout to: "+address[0]
+                        return
+
     def startGenerator(self,loadKnownAddresses,typeService):
         try:
             import  socket
@@ -209,15 +228,7 @@ class RepositoryGenerator:
             self.typeService = typeService
             self.process.startProcess()
             if loadKnownAddresses and (self.typeService.lower() == 'http' or self.typeService.lower() == 'onionup'):
-                knownAddresses = open('db/knownOnionSites.txt', 'r')
-                for knownAddress in knownAddresses.readlines():
-                    knownAddress=knownAddress.replace('\n','')
-                    if knownAddress.startswith('#') == False and knownAddress != '':
-                        address = knownAddress.split(',')
-                        #self.process.httpConnectionHiddenSite(address[0],address[1])
-                        self.__createProcess(address[0],address[1])
-                self.process.onionQueue.join()
-                self.process.onionQueueResponses.join()
+                self.loadKnownAddresses()
 
 
             if self.partialOnionAddress.lower() == 'random':
@@ -233,7 +244,6 @@ class RepositoryGenerator:
                 except sqlite3.IntegrityError:
                     if self.finishedScan:
                         raise StandardError("[+] This scan was finisihed in a previous execution.")
-
 
 
 
@@ -279,9 +289,6 @@ class RepositoryProcess:
 
             if typeService.lower() == "http":
                 if onionDescription != None:
-                    #Onion address known. Reading the file knownOnionSites.txt
-                    httpAddress = onionUrl
-                else:
                     httpAddress = "http://"+(''.join(onionUrl))+"/"
                 self.httpConnection(httpAddress,onionDescription)
             elif typeService.lower() == "ssh":
