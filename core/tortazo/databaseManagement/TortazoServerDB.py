@@ -213,6 +213,27 @@ class TortazoSQLiteDB(ITortazoDatabase):
         self.cursor.execute(database.countOnionRepositoryResponses)
         return self.cursor.fetchone()[0]
 
+    def searchBotnetNode(self, address):
+        if self.cursor is None:
+            self.initDatabase()
+        if address is not None:
+            self.cursor.execute(database.selectBotnetNode, (address,))
+            results = self.cursor.fetchone() #Returns none if empty set.
+            return results
+        return None
+
+    def insertBotnetNode(self, address, user, password, port, nickname, serviceType):
+        if self.cursor is None:
+            self.initDatabase()
+        try:
+            bot = (address, user, password, port, nickname, serviceType)
+            self.cursor.execute(database.insertBotnetNode, bot)
+            self.connection.commit()
+        except Exception as e:
+            pass
+
+
+
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
@@ -314,6 +335,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
         return None
 
 
+
 class TortazoPostgreSQL(ITortazoDatabase):
 
     def connect(self):
@@ -329,6 +351,8 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.cursor.execute(database.createTableTorNodePortServerDB )
         self.cursor.execute(database.createTableOnionRepositoryProgressServerDB)
         self.cursor.execute(database.createTableOnionRepositoryResponsesServerDB)
+        self.cursor.execute(database.createTableBotnetNodeServerDB)
+        self.cursor.execute(database.createTableBotnetGeolocationServerDB)
 
         self.connection.commit()
 
@@ -363,8 +387,8 @@ class TortazoPostgreSQL(ITortazoDatabase):
                 nodeData.state = state
                 nodeData.reason = reason
                 nodeData.nickName = nickName
-                ports = self.cursor.execute(database.selectTorNodePortServerDB, (torNodeId,) )
-                for port in ports.fetchall():
+                self.cursor.execute(database.selectTorNodePortServerDB, (torNodeId,) )
+                for port in self.cursor.fetchall():
                     (portId, portState, portReason, portNumber, portName, portVersion, torNode) = port
                     nodePort = TorNodePort()
                     nodePort.id = portId
@@ -516,9 +540,24 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.cursor.execute(database.countOnionRepositoryResponsesServerDB)
         return self.cursor.fetchone()[0]
 
+    def searchBotnetNode(self, address):
+        if self.cursor is None:
+            self.initDatabase()
+        if address is not None:
+            self.cursor.execute(database.selectBotnetNodeServerDB, (address,))
+            results = self.cursor.fetchone() #Returns none if empty set.
+            return results
+        return None
 
-
-
+    def insertBotnetNode(self, address, user, password, port, nickname, serviceType):
+        if self.cursor is None:
+            self.initDatabase()
+        try:
+            bot = (address, user, password, port, nickname, serviceType)
+            self.cursor.execute(database.insertBotnetNodeServerDB, bot)
+            self.connection.commit()
+        except Exception as e:
+            pass
 
 
 ################################################################################################################################################
@@ -831,8 +870,24 @@ class TortazoMySQL(ITortazoDatabase):
 
 
 
+    def searchBotnetNode(self, address):
+        if self.cursor is None:
+            self.initDatabase()
+        if address is not None:
+            self.cursor.execute(database.selectBotnetNodeServerDB, (address,))
+            results = self.cursor.fetchone() #Returns none if empty set.
+            return results
+        return None
 
-
+    def insertBotnetNode(self, address, user, password, port, nickname, serviceType):
+        if self.cursor is None:
+            self.initDatabase()
+        try:
+            bot = (address, user, password, port, nickname, serviceType)
+            self.cursor.execute(database.insertBotnetNodeServerDB, bot)
+            self.connection.commit()
+        except Exception as e:
+            pass
 
 ################################################################################################################################################
 ################################################################################################################################################

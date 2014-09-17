@@ -28,7 +28,6 @@ from IPython.config.loader import Config
 from IPython.terminal.embed import InteractiveShellEmbed
 
 from core.tortazo.pluginManagement.utils.FuzzDBReader import FuzzDBReader
-from core.tortazo.databaseManagement.TortazoDatabase import TortazoDatabase
 from core.tortazo.utils.ServiceConnector import ServiceConnector
 from plugins.texttable import Texttable
 from distutils.util import strtobool
@@ -45,7 +44,6 @@ class BasePlugin():
         '''
         Constructor for the Base plugin class.
         '''
-        self.db = TortazoDatabase()
         self.logger = log
         self.torNodes = []
         self.pluginArguments = {}
@@ -59,7 +57,6 @@ class BasePlugin():
         self.cli = None
         self.serviceConnector = ServiceConnector(self.cli)
         self.fuzzDBReader = FuzzDBReader()
-        self.numberOnionSitesRegistered = self.db.countOnionRepositoryResponses()
         self.runFromInterpreter = False
 
 
@@ -110,6 +107,10 @@ class BasePlugin():
         table.add_rows(rows)
         print table.draw() + "\n"
 
+        if hasattr(self,"db") == False:
+            print "[-] No database connection configured. Check your configuration."
+
+        self.numberOnionSitesRegistered = self.db.countOnionRepositoryResponses()
         if start+maxResults <=  self.numberOnionSitesRegistered:
             sys.stdout.write('%s [y/n]\n' %('Print more onion addresses?'))
             while True:
@@ -166,6 +167,9 @@ class BasePlugin():
 
     def setPluginArguments(self, pluginArguments):
         self.pluginArguments = pluginArguments
+
+    def setDatabaseConnection(self, db):
+        self.db = db
 
     def processPluginArguments(self):
         for validConfig in self.pluginConfigs.keys():

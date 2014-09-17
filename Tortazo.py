@@ -532,6 +532,8 @@ class Cli(cli.Application):
                         reference.processPluginArguments()
                         reference.serviceConnector.cli = self
                         reference.cli = self
+                    if hasattr(self, 'database'):
+                        reference.setDatabaseConnection(self.database)
                     reference.runPlugin()
                 except StandardError as standarError:
                     self.logger.warn((term.format(standarError.message, term.Color.RED)))

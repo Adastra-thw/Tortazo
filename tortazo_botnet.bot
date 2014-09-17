@@ -1,2 +1,5 @@
 192.168.1.2:vyatta:vyatta:22:VyattaServer
-192.168.1.228:msfadmin:msfadmin:22:MSFServer
+192.168.1.228:msfadmin:msfadmin:22:MSFServer127.0.0.1:adastra:peraspera:22:--
+127.0.0.1:adastra:peraspera:22:--
+127.0.0.1:adastra:peraspera:22:nickname
+127.0.0.1:adastra:peraspera:22:nickname

@@ -71,6 +71,16 @@ class ITortazoDatabase:
     def countOnionRepositoryResponses(self):
         raise NotImplementedError
 
+    @abstractmethod
+    def searchBotnetNode(self, address):
+        raise NotImplementedError
+
+
+    @abstractmethod
+    def insertBotnetNode(self,address, user, password, port, nickname, serviceType):
+        raise NotImplementedError
+
+
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################

