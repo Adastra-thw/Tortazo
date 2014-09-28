@@ -390,10 +390,8 @@ class deepWebCrawlerPlugin(BasePlugin):
         def catch_item(sender, item, **kwargs):
             item['url'] = item['url'].replace('http://127.0.0.1:'+str(localPort)+extraPath, hiddenWebSite)
             print "[+] Processing URL %s ...  " %(item['url'])
-            from core.tortazo.databaseManagement.TortazoDatabase import TortazoDatabase
-            database = TortazoDatabase()
-            database.initDatabaseDeepWebCrawlerPlugin()
-            self.__processPage(item, database)
+            self.db.initDatabaseDeepWebCrawlerPlugin()
+            self.__processPage(item, self.db)
 
         # setup crawler
         dispatcher.connect(catch_item, signal=signals.item_passed)
