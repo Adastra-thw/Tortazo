@@ -86,6 +86,7 @@ class Cli(cli.Application):
     PROGNAME = "TORTAZO"
     AUTHOR = "Adastra"
     VERSION = "1.1"
+    DESCRIPTION = "Tortazo is used to audit and attack hidden services and relays in TOR"
     verbose = cli.Flag(["-v", '--verbose'], help="Verbose Mode.")
     useMirror = cli.Flag(["-d", '--use-mirrors'], help="Use the mirror directories of TOR. This will help to not overwhelm the official directories")
     useShodan = cli.Flag(["-s", '--use-shodan'], help="Use ShodanHQ Service. (Specify -k/--shodan-key to set up the file where's stored your shodan key.)")
@@ -220,7 +221,7 @@ class Cli(cli.Application):
         '''
         self.onionRepositoryMode = onionRepositoryMode
 
-    @cli.switch(["-R", "--onion-repository"], str, cli.Set("ssh", "ftp", "http", "onionup", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
+    @cli.switch(["-R", "--onion-repository"], cli.Set("ssh", "ftp", "http", "onionup", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
     def activateOnionRepository_Mode(self, activateOnionRepositoryMode):
         '''
         Onion repository mode.
