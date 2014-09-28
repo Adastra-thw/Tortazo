@@ -220,7 +220,7 @@ class Cli(cli.Application):
         '''
         self.onionRepositoryMode = onionRepositoryMode
 
-    @cli.switch(["-R", "--onion-repository"], str, cli.Set("ssh", "ftp", "http", "onionup", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
+    @cli.switch(["-R", "--onion-repository"], cli.Set("ssh", "ftp", "http", "onionup", case_sensitive=False), help="Activate the Onion Repository mode and try to find hidden services in the TOR deep web.")
     def activateOnionRepository_Mode(self, activateOnionRepositoryMode):
         '''
         Onion repository mode.
