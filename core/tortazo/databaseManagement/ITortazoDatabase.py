@@ -48,6 +48,10 @@ class ITortazoDatabase:
         raise NotImplementedError
 
     @abstractmethod
+    def insertTorNodeGeolocation(self, torNodeId, torNodeData):
+        raise NotImplementedError
+
+    @abstractmethod
     def cleanDatabaseState(self):
         raise NotImplementedError
 
@@ -80,6 +84,9 @@ class ITortazoDatabase:
     def insertBotnetNode(self,address, user, password, port, nickname, serviceType):
         raise NotImplementedError
 
+    @abstractmethod
+    def insertBotnetGeolocation(self, botId, address):
+        raise NotImplementedError
 
 ################################################################################################################################################
 ################################################################################################################################################

@@ -157,6 +157,7 @@ class Discovery:
             self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
         else:
             self.database.initDatabase()
+            self.cli.logger.debug(term.format("[+] Inserting in database the relays found and retrieving the GeoLocation references ...", term.Color.GREEN))
             self.database.insertExitNode(self.exitNodes)
         return self.exitNodes
 

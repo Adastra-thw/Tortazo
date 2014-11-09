@@ -48,6 +48,10 @@ class TortazoSQLiteDB(ITortazoDatabase):
         self.connection.execute(database.createTableScan )
         self.connection.execute(database.createTableOnionRepositoryProgress )
         self.connection.execute(database.createTableOnionRepositoryResponses )
+        self.connection.execute(database.createTableBotnetNode )
+        self.connection.execute(database.createTableBotnetGeolocation )
+        self.connection.execute(database.createTableTorNodeGeolocation )
+
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -118,19 +122,32 @@ class TortazoSQLiteDB(ITortazoDatabase):
             node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(database.insertTorNodeData, node)
-
             self.cursor.execute(database.nextIdHostNodeData)
             nodeId = self.cursor.fetchone()[0]
+            self.insertTorNodeGeolocation(nodeId, nodeData)
             for openPort in nodeData.openPorts:
                 opened = (openPort.state, openPort.reason, openPort.port, openPort.name, openPort.version, nodeId)
                 #Insert a TorNodePort
                 self.cursor.execute(database.insertTorNodePort, opened)
 
+
             for closedPort in nodeData.closedFilteredPorts:
                 #Insert a TorNodePort
                 closedFiltered = (closedPort.state, closedPort.reason, closedPort.port, closedPort.name, closedPort.version, nodeId)
                 self.cursor.execute(database.insertTorNodePort, closedFiltered)
+                torNodeId = self.cursor.lastrowid
+
         self.connection.commit()
+
+    def insertTorNodeGeolocation(self, torNodeId, torNodeData):
+        import pygeoip
+        gi = pygeoip.GeoIP(config.geoLiteDB)
+        recordAddress = gi.record_by_addr(torNodeData.host)
+        longitude = recordAddress['longitude']
+        latitude = recordAddress['latitude']
+        geolocation = (torNodeId,latitude,longitude)
+        self.cursor.execute(database.insertTorNodeGeolocation, geolocation)
+
 
     def cleanDatabaseState(self):
         try:
@@ -228,11 +245,22 @@ class TortazoSQLiteDB(ITortazoDatabase):
         try:
             bot = (address, user, password, port, nickname, serviceType)
             self.cursor.execute(database.insertBotnetNode, bot)
+            self.cursor.execute(database.nextIdBotnetNode)
+            botId = self.cursor.fetchone()[0]
+
+            self.insertBotnetGeolocation(botId, address)
             self.connection.commit()
         except Exception as e:
             pass
 
-
+    def insertBotnetGeolocation(self, botId, address):
+        import pygeoip
+        gi = pygeoip.GeoIP(config.geoLiteDB)
+        recordAddress = gi.record_by_addr(address)
+        longitude = recordAddress['longitude']
+        latitude = recordAddress['latitude']
+        geolocation = (botId,latitude,longitude)
+        self.cursor.execute(database.insertBotnetGeolocation, geolocation)
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -252,6 +280,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
         self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage)
         self.connection.execute(databasePlugins.createTableCrawlerPluginForm)
         self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl)
+
 
 
     def insertPage(self, page):
@@ -353,6 +382,7 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.cursor.execute(database.createTableOnionRepositoryResponsesServerDB)
         self.cursor.execute(database.createTableBotnetNodeServerDB)
         self.cursor.execute(database.createTableBotnetGeolocationServerDB)
+        self.cursor.execute(database.createTableTorNodeGeolocationServerDB)
 
         self.connection.commit()
 
@@ -427,9 +457,9 @@ class TortazoPostgreSQL(ITortazoDatabase):
             node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(database.insertTorNodeDataServerDB, node)
-
             self.cursor.execute(database.nextIdHostNodeDataServerDB)
             nodeId = self.cursor.fetchone()[0]
+            self.insertTorNodeGeolocation(nodeId,nodeData)
             for openPort in nodeData.openPorts:
                 opened = (openPort.state, openPort.reason, openPort.port, openPort.name, openPort.version, nodeId)
                 #Insert a TorNodePort
@@ -443,6 +473,16 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.connection.commit()
         self.cursor.close()
         self.connection.close()
+
+
+    def insertTorNodeGeolocation(self, torNodeId, torNodeData):
+        import pygeoip
+        gi = pygeoip.GeoIP(config.geoLiteDB)
+        recordAddress = gi.record_by_addr(torNodeData.host)
+        longitude = recordAddress['longitude']
+        latitude = recordAddress['latitude']
+        geolocation = (torNodeId,latitude,longitude)
+        self.cursor.execute(database.insertTorNodeGeolocationServerDB, geolocation)
 
 
     def cleanDatabaseState(self):
@@ -555,10 +595,21 @@ class TortazoPostgreSQL(ITortazoDatabase):
         try:
             bot = (address, user, password, port, nickname, serviceType)
             self.cursor.execute(database.insertBotnetNodeServerDB, bot)
+            self.cursor.execute(database.nextIdBotnetNodeServerDB)
+            botId = self.cursor.fetchone()[0]
+            self.insertBotnetGeolocation(botId,address)
             self.connection.commit()
         except Exception as e:
             pass
 
+    def insertBotnetGeolocation(self, botId, address):
+        import pygeoip
+        gi = pygeoip.GeoIP(config.geoLiteDB)
+        recordAddress = gi.record_by_addr(address)
+        longitude = recordAddress['longitude']
+        latitude = recordAddress['latitude']
+        geolocation = (botId,latitude,longitude)
+        self.cursor.execute(database.insertBotnetGeolocationServerDB, geolocation)
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -685,6 +736,9 @@ class TortazoMySQL(ITortazoDatabase):
         self.cursor.execute(database.createTableTorNodePortServerDB )
         self.cursor.execute(database.createTableOnionRepositoryProgressServerDB)
         self.cursor.execute(database.createTableOnionRepositoryResponsesServerDB)
+        self.cursor.execute(database.createTableBotnetNodeServerDB)
+        self.cursor.execute(database.createTableBotnetGeolocationServerDB)
+        self.connection.execute(database.createTableTorNodeGeolocationServerDB)
 
         self.connection.commit()
 
@@ -759,7 +813,6 @@ class TortazoMySQL(ITortazoDatabase):
             node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(database.insertTorNodeDataServerDB, node)
-
             self.cursor.execute(database.nextIdHostNodeDataServerDB)
             nodeId = self.cursor.fetchone()[0]
             for openPort in nodeData.openPorts:

@@ -17,7 +17,8 @@ createTableOnionRepositoryProgress="create table if not exists OnionRepositoryPr
 createTableOnionRepositoryResponses="create table if not exists OnionRepositoryResponses (id integer primary key autoincrement, onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 
 createTableBotnetNode="create table if not exists BotnetNode (id integer primary key autoincrement, address VARCHAR NOT NULL, userservice VARCHAR, password VARCHAR, port integer, nickname VARCHAR, serviceType VARCHAR)"
-createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id primary key autoincrement, botnetNode integer, botLatitute REAL, botLongitute REAL, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(botnetNode))"
+createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id integer primary key autoincrement, botnetNode integer, botLatitute REAL, botLongitute REAL, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(id))"
+createTableTorNodeGeolocation="create table if not exists TorNodeGeolocation (id integer primary key autoincrement, torNodeId integer, nodeLatitute REAL, nodeLongitute REAL, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
 ####    Selects
@@ -31,16 +32,18 @@ selectOnionRepositoryProgress="select id, startDate, progressFirstQuartet, progr
 selectOnionRepositoryResponses="select onionAddress, responseCode, responseHeaders,onionDescription, serviceType from OnionRepositoryResponses LIMIT ? OFFSET ? "
 countOnionRepositoryResponses="select count(*) from OnionRepositoryResponses "
 selectBotnetNode="select address, userservice, password, port, nickname, serviceType from BotnetNode where address = ?"
+nextIdBotnetNode="select max(node.id) from BotnetNode as node"
 
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, scanId) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertTorNodePort="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(?, ?, ?, ?, ?, ?)"
-insertTorScan="insert into Scan(scanDate, numNodes) values (%s, %s)"
+insertTorScan="insert into Scan(scanDate, numNodes) values (?, ?)"
 insertOnionRepositoryProgress="insert into OnionRepositoryProgress(partialOnionAddress, validChars, startDate, endDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertOnionRepositoryResponses="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders,onionDescription, serviceType) values(?,?,?,?,?)"
 updateOnionRepositoryProgress="update OnionRepositoryProgress set endDate =?,progressFirstQuartet=?,progressSecondQuartet=?,progressThirdQuartet=?,progressFourthQuartet=?  WHERE id=?"
-insertBotnetNode="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(%s, %s, %s, %s, %s, %s) RETURNING id"
-insertBotnetGeolocation="insert into BotnetGeolocation(botnetNode, botLatitute, botLongitute) values(%s, %s, %s) RETURNING id"
+insertBotnetNode="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(?, ?, ?, ?, ?, ?)"
+insertBotnetGeolocation="insert into BotnetGeolocation(botnetNode, botLatitute, botLongitute) values(?, ?, ?)"
+insertTorNodeGeolocation="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(?, ?, ?)"
 
 
 truncateTorNodeData="delete from TorNodeData"
@@ -58,6 +61,7 @@ dropTableOnionRepositoryProgress="drop table if exists OnionRepositoryProgress"
 dropTableOnionRepositoryResponses="drop table if exists OnionRepositoryResponses"
 dropTableBotnetNode="drop table if exists BotnetNode"
 dropTableBotnetGeolocation="drop table if exists BotnetGeolocation"
+dropTableTorNodeGeolocation="drop table if exists TorNodeGeolocation"
 
 
 ################################################################################################################################################
@@ -77,8 +81,7 @@ createTableOnionRepositoryProgressServerDB="create table if not exists OnionRepo
 createTableOnionRepositoryResponsesServerDB="create table if not exists OnionRepositoryResponses (id serial primary key , onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 createTableBotnetNodeServerDB="create table if not exists BotnetNode (id serial primary key , address varchar not null, userservice varchar, password varchar, port integer, nickname varchar, serviceType varchar)"
 createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNodeId integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
-
-
+createTableTorNodeGeolocationServerDB="create table if not exists TorNodeGeolocation (id serial primary key, torNodeId integer, nodeLatitute double precision, nodeLongitute double precision, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
 ####    Selects
@@ -92,6 +95,7 @@ selectOnionRepositoryProgressServerDB="select id, startDate, progressFirstQuarte
 selectOnionRepositoryResponsesServerDB="select onionAddress, responseCode, responseHeaders,onionDescription, serviceType from OnionRepositoryResponses LIMIT %s OFFSET %s "
 countOnionRepositoryResponsesServerDB="select count(*) from OnionRepositoryResponses "
 selectBotnetNodeServerDB="select address, userservice, password, port, nickname, serviceType from BotnetNode where address = %s"
+nextIdBotnetNodeServerDB="select max(bot.id) from BotnetNode as bot"
 
 
 ####    DML operations.
@@ -103,6 +107,7 @@ insertOnionRepositoryResponsesServerDB="insert into OnionRepositoryResponses(oni
 updateOnionRepositoryProgressServerDB="update OnionRepositoryProgress set endDate =%s,progressFirstQuartet=%s,progressSecondQuartet=%s,progressThirdQuartet=%s,progressFourthQuartet=%s  WHERE id=%s"
 insertBotnetNodeServerDB="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(%s, %s, %s, %s, %s, %s) RETURNING id"
 insertBotnetGeolocationServerDB="insert into BotnetGeolocation(botnetNode, botLatitute, botLongitute) values(%s, %s, %s) RETURNING id"
+insertTorNodeGeolocationServerDB="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(%s, %s, %s) RETURNING id"
 
 truncateTorNodeDataServerDB="delete from TorNodeData"
 truncateTorNodePortServerDB="delete from TorNodePort"
@@ -111,7 +116,7 @@ truncateOnionRepositoryProgressServerDB="delete from OnionRepositoryProgress"
 truncateOnionRepositoryResponsesServerDB="delete from OnionRepositoryResponses"
 truncateBotnetNodeServerDB="delete from BotnetNode"
 truncateBotnetGeolocationServerDB="delete from BotnetGeolocation"
-
+truncateTorNodeGeolocationServerDB="delete from TorNodeGeolocation"
 
 
 ####    Drop tables.
@@ -122,3 +127,4 @@ dropTableOnionRepositoryProgressServerDB="drop table if exists OnionRepositoryPr
 dropTableOnionRepositoryResponsesServerDB="drop table if exists OnionRepositoryResponses"
 dropTableBotnetNodeServerDB="drop table if exists BotnetNode"
 dropTableBotnetGeolocationServerDB="drop table if exists BotnetGeolocation"
+dropTableTorNodeGeolocationServerDB="drop table if exists TorNodeGeolocation"
