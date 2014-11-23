@@ -80,7 +80,7 @@ createTableTorNodePortServerDB="create table if not exists TorNodePort (id seria
 createTableOnionRepositoryProgressServerDB="create table if not exists OnionRepositoryProgress (id serial primary key , partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATE not null, endDate DATE, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponsesServerDB="create table if not exists OnionRepositoryResponses (id serial primary key , onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 createTableBotnetNodeServerDB="create table if not exists BotnetNode (id serial primary key , address varchar not null, userservice varchar, password varchar, port integer, nickname varchar, serviceType varchar)"
-createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNodeId integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
+createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNode integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(id))"
 createTableTorNodeGeolocationServerDB="create table if not exists TorNodeGeolocation (id serial primary key, torNodeId integer, nodeLatitute double precision, nodeLongitute double precision, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 

@@ -769,6 +769,34 @@ class bruterPlugin(BasePlugin):
             self.httpBruterOnSite(onionService,dictFile=dictFile, proxy=True)
 
 
+    def loadBotnetFileInDatabase(self, tortazoBotnetFile=os.getcwd()+'/tortazo_botnet.bot'):
+        if os.path.exists(tortazoBotnetFile) == True:
+            with open(tortazoBotnetFile, 'r') as tortazoFd:
+                #host:user:pass:port:nickname
+                nickname = '--'
+                for bot in tortazoFd:
+                    infoBots = bot.split(":")
+                    if len(infoBots) == 5:
+                        host = infoBots[0]
+                        user = infoBots[1]
+                        passwd = infoBots[2]
+                        port = infoBots[3]
+                        nickname = infoBots[4]
+                        try:
+                            if self.db.searchBotnetNode(host) == None:
+                                if self.db.insertBotnetNode(host, user, passwd, port, nickname, "ssh") == False:
+                                    print "[-] Error inserting the record in database. Please, check the database connection."
+                                else:
+                                    print "[+] Inserted bot %s ." %(host)
+                            else:
+                                print "[+] The bot already exists in database."
+                        except:
+                            import sys
+                            print sys.exc_info()
+        else:
+            print "[*] File %s not found" %(tortazoBotnetFile)
+
+
     def help(self):
         print "[*] Functions availaible available in the Plugin...\n"
         table = Texttable()
@@ -791,6 +819,7 @@ class bruterPlugin(BasePlugin):
                          ['snmpBruterOnRelay', 'Execute a bruteforce attack against an SNMP Server in the relay entered.', 'self.snmpBruterOnRelay("37.213.43.122", dictFile="/home/user/dict")'],
                          ['snmpBruterOnAllRelays', 'Execute a bruteforce attack against an SNMP Server in the relays founded.', 'self.snmpBruterOnAllRelays(dictFile="/home/user/dict")'],
                          ['httpBruterOnSite', 'Execute a bruteforce attack against an web site.', 'self.httpBruterOnSite("http://eviltorrelay.com/auth/", dictFile="/home/user/dict")'],
-                         ['httpBruterOnHiddenService', "Execute a bruteforce attack against an onion site (hidden service in TOR's deep web).", 'self.httpBruterOnHiddenService("http://5bsk3oj5jufsuii6.onion/auth/", dictFile="/home/user/dict")']
+                         ['httpBruterOnHiddenService', "Execute a bruteforce attack against an onion site (hidden service in TOR's deep web).", 'self.httpBruterOnHiddenService("http://5bsk3oj5jufsuii6.onion/auth/", dictFile="/home/user/dict")'],
+                         ['loadBotnetFileInDatabase', 'Dumps the contents of the "tortazo_botnet.bot" file specified. By default reads the file located in <TORTAZO_DIR>/tortazo_botnet.bot', 'self.loadBotnetFileInDatabase()']
                         ])
         print table.draw() + "\n"

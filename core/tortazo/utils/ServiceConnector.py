@@ -108,7 +108,6 @@ class ServiceConnector():
         tortazoFile = os.getcwd()+'/tortazo_botnet.bot'
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        sshFileName = 'commandandcontrolssh.txt'
         try:
             client.connect(host, port, username=user, password=passwd)
         except paramiko.AuthenticationException:
