@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['Tortazo11.py'],
+a = Analysis(['Tortazo12.py'],
              pathex=['/home/adastra/Escritorio/Tortazo'],
              hiddenimports=[],
              hookspath=None,

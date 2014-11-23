@@ -29,10 +29,10 @@ def read(fname):
 
 setup(
     name = "Tortazo",
-    version = "1.1",
+    version = "1.2",
     author = "Adastra",
     author_email = "debiadastra@gmail.com",
-    description = ("Audit and Attack TOR Nodes"),
+    description = ("Audit and Attack TOR Nodes and hidden services"),
     license = "GPL",
     keywords = "stem tortazo tor",
     url = "http://packages.python.org/Tortazo",
