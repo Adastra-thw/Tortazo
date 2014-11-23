@@ -13,6 +13,7 @@ plugins = {
                    #INFORMATION GATHERING PLUGINS.
                    "infoGathering" : "plugins.infogathering.infoGatheringPlugin.infoGatheringPlugin",
                    "shodan"        : "plugins.infogathering.shodanPlugin.shodanPlugin",
+                   "feedOnion"     : "plugins.infogathering.feedOnionRepositoryPlugin.feedOnionRepositoryPlugin",
 
                    #ENUMERATION PLUGINS.
                    "crawler" : "plugins.enumeration.deepWebCrawlerPlugin.deepWebCrawlerPlugin",
