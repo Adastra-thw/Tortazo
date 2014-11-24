@@ -270,13 +270,12 @@ class RepositoryProcess:
                 proc.terminate()
         self.onionQueue.join()
 
-        for i in range(self.threads):
-            try:
-                proc = multiprocessing.Process(target=self.saveAddressDetails)
-                proc.daemon=True
-                proc.start()
-            except:
-                proc.terminate()
+        try:
+            proc = multiprocessing.Process(target=self.saveAddressDetails)
+            proc.daemon=True
+            proc.start()
+        except:
+            proc.terminate()
         self.onionQueueResponses.join()
 
 
@@ -316,7 +315,6 @@ class RepositoryProcess:
                         self.httpConnection(httpAddress,"Service discovered using OnionUP.com")
 
             self.onionQueue.task_done()
-        self.onionQueueResponses.join()
 
     def httpConnection(self,httpAddress,onionDescription):
         try:

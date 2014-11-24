@@ -28,7 +28,7 @@ deepWebCrawlerOutdir=os.getcwd()+"/onionSites/"
 ################################################################################################################################################
 databaseName="db/tortazo.db"
 
-dbPostgres=True
+dbPostgres=False
 dbMySQL=False
 dbName="tortazo"
 dbServer="127.0.0.1"

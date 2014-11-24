@@ -179,9 +179,10 @@ class TortazoSQLiteDB(ITortazoDatabase):
         try:
             responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription, serviceType)
             self.cursor.execute(database.insertOnionRepositoryResponses, responseHiddenService)
-            self.connection.commit()
         except Exception as e:
             pass
+        finally:
+            self.connection.commit()
 
     def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
         if self.cursor is None:
@@ -247,23 +248,20 @@ class TortazoSQLiteDB(ITortazoDatabase):
             self.cursor.execute(database.insertBotnetNode, bot)
             self.cursor.execute(database.nextIdBotnetNode)
             botId = self.cursor.fetchone()[0]
+
             self.insertBotnetGeolocation(botId, address)
             self.connection.commit()
         except Exception as e:
-            return False
+            pass
 
     def insertBotnetGeolocation(self, botId, address):
         import pygeoip
         gi = pygeoip.GeoIP(config.geoLiteDB)
         recordAddress = gi.record_by_addr(address)
-        longitude = None
-        latitude = None
-        if recordAddress:
-            longitude = recordAddress['longitude']
-            latitude = recordAddress['latitude']
+        longitude = recordAddress['longitude']
+        latitude = recordAddress['latitude']
         geolocation = (botId,latitude,longitude)
         self.cursor.execute(database.insertBotnetGeolocation, geolocation)
-
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -603,6 +601,8 @@ class TortazoPostgreSQL(ITortazoDatabase):
             self.insertBotnetGeolocation(botId,address)
             self.connection.commit()
         except Exception as e:
+            import sys
+            print sys.exc_info()
             return False
 
     def insertBotnetGeolocation(self, botId, address):
@@ -945,25 +945,9 @@ class TortazoMySQL(ITortazoDatabase):
         try:
             bot = (address, user, password, port, nickname, serviceType)
             self.cursor.execute(database.insertBotnetNodeServerDB, bot)
-            self.cursor.execute(database.nextIdBotnetNodeServerDB)
-            botId = self.cursor.fetchone()[0]
-            self.insertBotnetGeolocation(botId,address)
             self.connection.commit()
         except Exception as e:
-            return False
-
-    def insertBotnetGeolocation(self, botId, address):
-        import pygeoip
-        gi = pygeoip.GeoIP(config.geoLiteDB)
-        recordAddress = gi.record_by_addr(address)
-        longitude = None
-        latitude = None
-        if recordAddress:
-            longitude = recordAddress['longitude']
-            latitude = recordAddress['latitude']
-
-        geolocation = (botId,latitude,longitude)
-        self.cursor.execute(database.insertBotnetGeolocationServerDB, geolocation)
+            pass
 
 ################################################################################################################################################
 ################################################################################################################################################
