@@ -29,18 +29,34 @@ import json
 from twisted.web import server, resource, static
 from plugins.texttable import Texttable
 
+'''
+MixIn used to create an TCP Server.
+'''
 class ThreadedTCPServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer): 
     allow_reuse_address = True 
-	
+
+'''
+Class used to create a simple web server using the Twisted library.
+'''
 class SimpleWebServer():
 
+    '''
+    Start the web server using the service directory as argument.
+    '''
     def start(self, serviceDir, servicePort, serviceInterface):
         root = static.File(serviceDir)
         site = server.Site(root)
         hs_endpoint = TCP4ServerEndpoint(reactor, servicePort, interface=serviceInterface)
         hs_endpoint.listen(site)
-		
+
+'''
+Class used to create a custom web server to gather basic infotmation about the user browser.
+'''
 class SimpleCustomWebServer(resource.Resource):
+
+    '''
+    Function used to process the HTTP GET requests. Just prints the information in the console.
+    '''
     def render_GET(self, request):
         data = json.loads(request.args['info'][0])
         if data != None:
@@ -58,6 +74,9 @@ class SimpleCustomWebServer(resource.Resource):
         request.setHeader("content-type", "text/plain")
         return "Success"
 
+    '''
+    Start the web server using the service directory as argument and the resource "SimpleCustomWebServer".
+    '''
     def start(self, serviceDir, servicePort, serviceInterface):
         root = static.File(serviceDir)
         root.putChild("gatherUserInfo", SimpleCustomWebServer())
@@ -69,7 +88,6 @@ class SSHServerInterface(paramiko.ServerInterface):
     def __init__(self, username, password):
         self.username = username
         self.password = password
-		
 		
     def check_channel_request(self, kind, chanid):
         if kind == 'session': 
