@@ -31,7 +31,7 @@ import os
 from core.tortazo.exceptions.PluginException import PluginException
 from plugins.utils.validations.Validator import is_valid_port, is_valid_ipv4_address, is_valid_ipv6_address, showTrace
 from config import config as tortazoConfig
-from plugins.attack.utils.HiddenServices import SimpleCustomWebServer, SimpleWebServer, SimpleSSHServer
+from plugins.attack.utils.HiddenServices import SimpleCustomWebServer, SimpleWebServer
 
 
 '''
@@ -60,8 +60,8 @@ class maliciousHiddenServicePlugin(BasePlugin):
     def __validate(self, serviceInterface, hiddenservicePort, socksPort, orPort, servicePort):
         if is_valid_ipv4_address(serviceInterface) == False and is_valid_ipv6_address(serviceInterface) == False:
             pluginException = PluginException(message='The Service Interface is invalid. Try to use the default value without specify the parameter "serviceInterface" ',
-                                  trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)),
-                                  plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+                                  trace="__validate with args serviceInterface=%s, hiddenservicePort, socksPort, orPort, servicePort" %(str(serviceInterface), str(hiddenservicePort), str(socksPort), str(orPort), str(servicePort)),
+                                  plugin="maliciousHiddenServicePlugin", method="__validate")
             if self.runFromInterpreter:
                 showTrace(pluginException)
                 return
@@ -71,7 +71,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
 
 
         if is_valid_port(hiddenservicePort) == False:
-            pluginException = PluginException(message='The hidden service port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+            pluginException = PluginException(message='The hidden service port is invalid.',
+                                              trace="__validate with args serviceInterface=%s, hiddenservicePort, socksPort, orPort, servicePort" %(str(serviceInterface), str(hiddenservicePort), str(socksPort), str(orPort), str(servicePort)),
+                                              plugin="maliciousHiddenServicePlugin", method="__validate")
             if self.runFromInterpreter:
                 showTrace(pluginException)
                 return
@@ -80,7 +82,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
                 raise pluginException
 
         if is_valid_port(socksPort) == False:
-            pluginException = PluginException(message='The socks port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+            pluginException = PluginException(message='The socks port is invalid.',
+                                              trace="__validate with args serviceInterface=%s, hiddenservicePort, socksPort, orPort, servicePort" %(str(serviceInterface), str(hiddenservicePort), str(socksPort), str(orPort), str(servicePort)),
+                                              plugin="maliciousHiddenServicePlugin", method="__validate")
             if self.runFromInterpreter:
                 showTrace(pluginException)
                 return
@@ -90,7 +94,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
 
 
         if is_valid_port(orPort) == False:
-            pluginException = PluginException(message='The OR port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+            pluginException = PluginException(message='The OR port is invalid.',
+                                              trace="__validate with args serviceInterface=%s, hiddenservicePort, socksPort, orPort, servicePort" %(str(serviceInterface), str(hiddenservicePort), str(socksPort), str(orPort), str(servicePort)),
+                                              plugin="maliciousHiddenServicePlugin", method="__validate")
             if self.runFromInterpreter:
                 showTrace(pluginException)
                 return
@@ -99,7 +105,9 @@ class maliciousHiddenServicePlugin(BasePlugin):
                 raise pluginException
 
         if is_valid_port(servicePort) == False:
-            pluginException = PluginException(message='The Service port is invalid.', trace="startHTTPHiddenService with args serviceDir=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startHTTPHiddenService")
+            pluginException = PluginException(message='The Service port is invalid.',
+                                              trace="__validate with args serviceInterface=%s, hiddenservicePort, socksPort, orPort, servicePort" %(str(serviceInterface), str(hiddenservicePort), str(socksPort), str(orPort), str(servicePort)),
+                                              plugin="maliciousHiddenServicePlugin", method="__validate")
             if self.runFromInterpreter:
                 showTrace(pluginException)
                 return
@@ -112,6 +120,12 @@ class maliciousHiddenServicePlugin(BasePlugin):
     Private function used to create a valid TOR configuration reference. This configuration will be used to start TOR using TxTorCon utilities.
     '''
     def __configureTOR(self, serviceInterface, hiddenservicePort, hiddenserviceDir, socksPort, orPort, servicePort):
+        print str(serviceInterface)
+        print str(hiddenservicePort)
+        print str(hiddenserviceDir)
+        print str(socksPort)
+        print str(orPort)
+        print str(servicePort)
         try:
             self.__validate(serviceInterface, hiddenservicePort, socksPort, orPort, servicePort)
         except PluginException as pluginExc:
@@ -141,8 +155,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         print "[+] Hidden service running at: "
         print "http://%s (port %d)" % (onion_address, self.hiddenservicePort)
         print "[+] Directory for the hidden service is at:", configTor.HiddenServices[0].dir
-        print "[+] you should be able to visit it via: torsocks lynx http://%s OR using chromium-browser --proxy-server=socks5://127.0.0.1:9152" % onion_address
-
+        print "[+] If your hidden service is an HTTP Server, you should be able to visit it via: torsocks lynx http://%s OR using chromium-browser --proxy-server=socks5://127.0.0.1:9152" % onion_address
 
     '''
     Private Function used to show the log messages generated when the TOR process has been failed in the bootstraped process.
@@ -174,7 +187,7 @@ class maliciousHiddenServicePlugin(BasePlugin):
         d.addCallback(functools.partial(self.__setup_complete, config))
         d.addErrback(self.__setup_failed)
         reactor.run()
-        return True
+
 
     '''
     Private Function used to start an HTTP hidden service with the specified arguments.
@@ -183,7 +196,12 @@ class maliciousHiddenServicePlugin(BasePlugin):
     def startHTTPHiddenService(self, serviceDir, servicePort=8080, hiddenserviceDir=None, hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000, customContent=True):
         torConfig = None
         try:
-            torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, hiddenserviceDir, socksPort, orPort, servicePort)
+            if hiddenserviceDir is None:
+                temporalDir = self.__createTemporal()
+                torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, temporalDir, socksPort, orPort, servicePort)
+            else:
+                torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, hiddenserviceDir, socksPort, orPort, servicePort)
+
             if customContent:
                 webServer = SimpleCustomWebServer()
             else:
@@ -197,36 +215,45 @@ class maliciousHiddenServicePlugin(BasePlugin):
     '''
     Private Function used to start an SSH hidden service with the specified arguments.
     '''
-    def startSSHHiddenService(self, serviceDir,
-                              serverKey,
-                              user, password,
-                              servicePort=8080,
+    def startSSHHiddenService(self,
+                              servicePort=22,
                               hiddenserviceDir=None,
-                              hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000, customContent=True):
+                              hiddenservicePort=22, serviceInterface='127.0.0.1',
+                              socksPort=9152, orPort=9000):
         torConfig = None
         try:
-            torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, hiddenserviceDir, socksPort, orPort, servicePort)
-            if customContent:
-                sshServer = SimpleSSHServer()
-                if os.path.isfile(serverKey) == False or os.access(serverKey, os.R_OK) == False:
-                    pluginException = PluginException(message='The server key specified is invalid.', trace="startSSHHiddenService with args serviceDir=%s , serverKey=%s , servicePort=%s , hiddenserviceDir=%s , hiddenservicePort=%s , serviceInterface=%s , socksPort=%s , orPort=%s" %(serviceDir, serverKey, str(servicePort), hiddenserviceDir, str(hiddenservicePort), serviceInterface, str(socksPort), str(orPort)), plugin="maliciousHiddenServicePlugin", method="startSSHHiddenService")
-                    if self.runFromInterpreter:
-                        showTrace(pluginException)
-                    else:
-                        print "[-] The server key specified is invalid. "
-                        raise pluginException
-                else:
-                    sshServer.start(serviceInterface, servicePort, user, password, serverKey)
+            if hiddenserviceDir is None:
+                temporalDir = self.__createTemporal()
+                torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, temporalDir, socksPort, orPort, servicePort)
             else:
-                print "[+] You should have an SSH Server running in the interface and port specified: %s:%s " %(serviceInterface, str(servicePort))
+                torConfig = self.__configureTOR(serviceInterface, hiddenservicePort, hiddenserviceDir, socksPort, orPort, servicePort)
+
+            # Starting TOR daemon before the SSH server...
+            self.__startTOR(torConfig)
         except PluginException as pluginExc:
             raise pluginExc
 
-        return self.__startTOR(torConfig)
 
 
-    def startSSHHoneypotHiddenService(self, serviceDir, serverKey, servicePort=8080, hiddenserviceDir=None, hiddenservicePort=80, serviceInterface='127.0.0.1', socksPort=9152, orPort=9000, customContent=True):
-        pass
+    '''
+    Hidden service using Kippo.
+    '''
+    def startSSHHoneypotHiddenService(self,
+                                      servicePort=2222,
+                                      hiddenserviceDir=None,
+                                      hiddenservicePort=22,
+                                      serviceInterface='127.0.0.1',
+                                      socksPort=9152, orPort=9000):
+        from twisted.scripts.twistd import run
+        from sys import argv
+        import os
+
+        dir = os.getcwd()+'/plugins/attack/utils/kippo/kippo.tac'
+        print dir
+        argv[1:] = ['-y', dir]
+        run()
+
+
 
     def help(self):
         print "[*] Functions availaible available in the Plugin..."
