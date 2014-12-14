@@ -39,6 +39,7 @@ However, if you want to use the development version located in the GIT repositor
 * PyFiglet: https://github.com/pwaller/pyfiglet
 * PySMB: https://pythonhosted.org/pysmb/
 * Pygeoip: https://pypi.python.org/pypi/pygeoip/
+* Zope Interface: https://pypi.python.org/pypi/zope.interface
 
 =================
 Other Dependencies    
@@ -50,7 +51,7 @@ Among the Python libraries needed to use Tortazo, you'll need some tools to use 
 * Metasploit Framework: Mandatory dependency to use Metasploit Framework from Tortazo (MetasploitPlugin). http://www.metasploit.com/
 * Nikto: Mandatory dependency to use Nikto from Tortazo (NiktoPlugin). http://www.cirt.net/Nikto2/
 * Nexpose: Mandatory dependency to use Nexpose from Tortazo (NexposePlugin). https://www.rapid7.com/products/nexpose/
-
+* OpenVAS:
 
 .. _execution-modes-label:
 

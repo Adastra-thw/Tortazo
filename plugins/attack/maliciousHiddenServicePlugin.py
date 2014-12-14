@@ -156,6 +156,12 @@ class maliciousHiddenServicePlugin(BasePlugin):
         print "http://%s (port %d)" % (onion_address, self.hiddenservicePort)
         print "[+] Directory for the hidden service is at:", configTor.HiddenServices[0].dir
         print "[+] If your hidden service is an HTTP Server, you should be able to visit it via: torsocks lynx http://%s OR using chromium-browser --proxy-server=socks5://127.0.0.1:9152" % onion_address
+        print "[+] If your hidden service is an SSH Server (Honeypot), you should be able to visit it using socat:  socat TCP4-LISTEN:2223,reuseaddr,fork SOCKS4A:127.0.0.1:%s:22,socksport=9050" % onion_address
+        print "[+] By default, the SSH Honeypot is Kippo and the 'kippo session management console' is enabled in the port 5123. Use telnet, netcat or wherever you want to test it."
+
+
+
+
 
     '''
     Private Function used to show the log messages generated when the TOR process has been failed in the bootstraped process.
@@ -239,7 +245,6 @@ class maliciousHiddenServicePlugin(BasePlugin):
     Hidden service using Kippo.
     '''
     def startSSHHoneypotHiddenService(self,
-                                      servicePort=2222,
                                       hiddenserviceDir=None,
                                       hiddenservicePort=22,
                                       serviceInterface='127.0.0.1',
@@ -247,11 +252,18 @@ class maliciousHiddenServicePlugin(BasePlugin):
         from twisted.scripts.twistd import run
         from sys import argv
         import os
-
-        dir = os.getcwd()+'/plugins/attack/utils/kippo/kippo.tac'
-        print dir
-        argv[1:] = ['-y', dir]
+        print "[+] Starting the SSH Honeypot 'Kippo' "
+        os.chdir('utils/kippo')
+        argv[1:] = ['-y', 'kippo.tac']
         run()
+        pid = ''
+        with open('twistd.pid', 'w') as pidfile:
+            pid = pidfile.readline()
+        print "[+] Honeypot started successfully! If you want to kill the Honeypot, run the command 'kill -9 %s' " %(pid)
+        self.startSSHHiddenService(servicePort=2222, hiddenserviceDir=hiddenserviceDir,
+                                   hiddenservicePort=hiddenservicePort, serviceInterface=serviceInterface,
+                                   socksPort=socksPort, orPort=orPort)
+
 
 
 
