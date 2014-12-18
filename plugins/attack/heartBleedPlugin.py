@@ -76,7 +76,7 @@ class heartBleedPlugin(BasePlugin):
             if is_valid_ipv4_address(relayIp) or is_valid_ipv6_address(relayIp):
                 if is_valid_port(relayPort):
                     self.hbExploit = HeartBleedExploit(relayIp, relayPort)
-                    print "[+] Target %s with port %s setted." %(relayIp,relayPort)
+                    self.info("[+] Target %s with port %s setted." %(relayIp,relayPort))
                     return True
                 else:
                     pluginException = PluginException(message='The port is Invalid ', trace="setTarget with args relayIp=%s , relayPort=%s" %(relayIp,relayPort), plugin="heartBleedPlugin", method="setTarget")
@@ -114,7 +114,7 @@ class heartBleedPlugin(BasePlugin):
 
 
     def help(self):
-        print "[*] Functions availaible available in the Plugin..."
+        self.info( "[*] Functions availaible available in the Plugin...")
         table = Texttable()
         table.set_cols_align(["l", "l", "c"])
         table.set_cols_valign(["m", "m", "m"])
@@ -127,4 +127,4 @@ class heartBleedPlugin(BasePlugin):
                          ['startAttack', 'Starts the HeartBleed attack against the specified target. ', 'self.startAttack()'],
                          ['startAttackAllRelays', 'Starts the HeartBleed attack against all relays loaded in the plugin. Default port: 443 ', 'self.startAttackAllRelays()']
                         ])
-        print table.draw() + "\\n"
+        self.info(table.draw() + "\\n")

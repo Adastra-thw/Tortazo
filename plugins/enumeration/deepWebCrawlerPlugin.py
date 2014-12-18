@@ -76,7 +76,7 @@ class deepWebCrawlerPlugin(BasePlugin):
                 raise pluginException
         
         print "[+] Setting allow rules ... %s " %(extractorRulesAllow)
-        self.extractorRulesAllow = extractorRulesAllow
+        self.extractorRulesAllow = [extractorRulesAllow]
 
     def setExtractorRulesDeny(self, extractorRulesDeny):
         if is_valid_regex(extractorRulesDeny) == False:
@@ -91,7 +91,7 @@ class deepWebCrawlerPlugin(BasePlugin):
                 raise pluginException
         
         print "[+] Setting deny rules ... %s " %(extractorRulesDeny)
-        self.extractorRulesDeny = extractorRulesDeny
+        self.extractorRulesDeny = [extractorRulesDeny]
 
     def setCrawlRulesLinks(self, crawlRulesLinks):
         if is_valid_regex(crawlRulesLinks) == False:
@@ -299,7 +299,7 @@ class deepWebCrawlerPlugin(BasePlugin):
                          useRandomUserAgents=True, deepLinks=None,
                          bruterOnProtectedResource=False):
         if hiddenWebSite == '' or hiddenWebSite is None:
-            pluginException = PluginException(message="Invalid Onion Adress %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
+            pluginException = PluginException(message="Invalid Onion Address %s must contain 16 characters. The TLD must be .onion" %(hiddenWebSite),
                                   trace="crawlOnionWebSite with args hiddenWebSite=%s" %(hiddenWebSite),
                                   plugin="crawler",
                                   method="crawlOnionWebSite")

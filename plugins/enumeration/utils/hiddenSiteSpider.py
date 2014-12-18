@@ -34,6 +34,7 @@ import os
 import random
 from plugins.bruteforce.bruterPlugin import bruterPlugin
 import cookielib
+from re import search
 
 class HiddenSiteSpider(CrawlSpider):
 
@@ -45,8 +46,10 @@ class HiddenSiteSpider(CrawlSpider):
         self.visitedLinks=[]
         handle_httpstatus_list = [401]
         self.deepLinks = None
+        self.extractorAllowRules = extractorAllowRules
+        self.extractorDenyRules = extractorDenyRules
         #self._rules = [Rule(LinkExtractor(allow=extractorAllowRules), deny=extractorDenyRules, follow=True, callback=self.parse),]
-        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules, deny=extractorDenyRules), callback=self.parse),]
+        self._rules = [Rule(LinkExtractor(allow=extractorAllowRules, deny=extractorDenyRules), follow=True, callback=self.parse),]
         self.crawlRulesLinks = "//a/@href"
         self.crawlRulesImages = '//img/@src'
         self.dictFile = None
@@ -85,7 +88,28 @@ class HiddenSiteSpider(CrawlSpider):
         self.bruterOnProtectedResource = bruterOnProtectedResource
 
     def parse(self, response):
+        onionDomain = response.url.replace(self.localTunnel, self.onionSite)
+        #validation for onion domain with the regular expresions for Allowed domains and Disallowed domains.
+        onionDir = onionDomain.replace("http://", "").replace("https://", "")
+
+        for disallowed in self.extractorDenyRules:
+            if disallowed is None or disallowed == '':
+                continue
+            matching = search(disallowed, onionDir)
+            if matching != None:
+                #The link is disallowed. We don't process this link.
+                return
+
+        for allowed in self.extractorAllowRules:
+            if allowed is None or allowed == '':
+                continue
+            matching = search(allowed, onionDir)
+            if matching == None:
+                #The link doesn't follow the condition for valid links in the crawling process. We don't process this link.
+                return
+
         if response.url in self.visitedLinks:
+            #Link already visited in the current crawling process.
             return
         else:
             self.visitedLinks.append(response.url)

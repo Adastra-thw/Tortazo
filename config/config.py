@@ -7,7 +7,7 @@ def resource_path(relative):
         return os.path.join(sys._MEIPASS, relative)
     return os.path.join(relative)
 
-
+tortazo_currentdir=os.getcwd()
 tortazo_minorversion=2
 tortazo_majorversion=1
 home = expanduser("~")

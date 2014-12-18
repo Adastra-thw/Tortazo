@@ -276,11 +276,11 @@ class TortazoSQLiteDB(ITortazoDatabase):
     def initDatabaseDeepWebCrawlerPlugin(self):
         if self.connection is None:
             self.connect()
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginForm)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPage)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginImage)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPageImage)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginForm)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginFormControl)
 
 
 
@@ -387,7 +387,10 @@ class TortazoPostgreSQL(ITortazoDatabase):
 
         self.connection.commit()
 
-
+    def __del__(self):
+        self.cursor.close()
+        self.connection.close()
+        
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
@@ -631,11 +634,11 @@ class TortazoPostgreSQL(ITortazoDatabase):
     def initDatabaseDeepWebCrawlerPlugin(self):
         if self.connection is None:
             self.connect()
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginForm)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPageServerDB)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginImageServerDB)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPageImageServerDB)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginFormServerDB)
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginFormControlServerDB)
 
 
     def insertPage(self, page):
@@ -664,12 +667,9 @@ class TortazoPostgreSQL(ITortazoDatabase):
             else:
                 pageParentId = self.insertPage(pageParent)
         data = (title, url, pageParentId, buffer(zlib.compress(body)), str(headers))
-        self.cursor.execute(databasePlugins.insertCrawlerPluginPage, data )
+        self.cursor.execute(databasePlugins.insertCrawlerPluginPageServerDB, data )
         linkId = self.cursor.lastrowid
         self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
         return linkId
 
     def insertImages(self, page, pageId):
@@ -678,16 +678,14 @@ class TortazoPostgreSQL(ITortazoDatabase):
         if page.has_key('imagesSrc'):
             for image in page['imagesSrc']:
 
-                self.cursor.execute(databasePlugins.existsImageByPage, (image,pageId))
+                self.cursor.execute(databasePlugins.existsImageByPageServerDB, (image,pageId))
                 if self.cursor.fetchone()[0] > 0:
                     continue
                 else:
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginImage, (image, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginImageServerDB, (image, ) )
                     imageId = self.cursor.lastrowid
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageImage, (pageId, imageId, ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageImageServerDB, (pageId, imageId, ) )
         self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
 
 
     def insertForms(self, page, pageId):
@@ -696,24 +694,22 @@ class TortazoPostgreSQL(ITortazoDatabase):
 
         if page.has_key('forms'):
             for formName in page['forms'].keys():
-                self.cursor.execute(databasePlugins.existsFormByPage, (formName, pageId, ))
+                self.cursor.execute(databasePlugins.existsFormByPageServerDB, (formName, pageId, ))
                 if self.cursor.fetchone()[0] > 0:
                     continue
-                self.cursor.execute(databasePlugins.insertCrawlerPluginPageForm, (formName, pageId, ) )
+                self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormServerDB, (formName, pageId, ) )
                 formId = self.cursor.lastrowid
                 for control in page['forms'][formName]:
                     (controlName, controlType, controlValue) = control
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControl, (formId, buffer(zlib.compress(controlName)), buffer(zlib.compress(controlType)), buffer(zlib.compress(controlValue)), ) )
+                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControlServerDB, (formId, buffer(zlib.compress(controlName)), buffer(zlib.compress(controlType)), buffer(zlib.compress(controlValue)), ) )
         self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
 
 
     def existsPageByUrl(self, url):
         if self.cursor is None:
             self.initDatabase()
         if url is not None:
-            self.cursor.execute(databasePlugins.existsPageByUrl, (url,))
+            self.cursor.execute(databasePlugins.existsPageByUrlServerDB, (url,))
             if self.cursor.fetchone()[0] > 0:
                 return True
         return False
@@ -722,338 +718,11 @@ class TortazoPostgreSQL(ITortazoDatabase):
         if self.cursor is None:
             self.initDatabase()
         if url is not None:
-            self.cursor.execute(databasePlugins.searchPageByUrl, (url,))
+            self.cursor.execute(databasePlugins.searchPageByUrlServerDB, (url,))
             pageId = self.cursor.fetchone()[0]
             return pageId
         return None
 
 
 class TortazoMySQL(ITortazoDatabase):
-
-    def connect(self):
-        self.connection = psycopg2.connect("dbname='%s' user='%s' host='%s' port='%s' password='%s'" %(config.dbName,config.dbUser, config.dbServer, config.dbPort, config.dbPass))
-        self.cursor = self.connection.cursor()
-
-
-    def initDatabase(self):
-        if self.connection is None:
-            self.connect()
-        self.cursor.execute(database.createTableScanServerDB)
-        self.cursor.execute(database.createTableTorNodeDataServerDB)
-        self.cursor.execute(database.createTableTorNodePortServerDB )
-        self.cursor.execute(database.createTableOnionRepositoryProgressServerDB)
-        self.cursor.execute(database.createTableOnionRepositoryResponsesServerDB)
-        self.cursor.execute(database.createTableBotnetNodeServerDB)
-        self.cursor.execute(database.createTableBotnetGeolocationServerDB)
-        self.connection.execute(database.createTableTorNodeGeolocationServerDB)
-
-        self.connection.commit()
-
-
-################################################################################################################################################
-################################################################################################################################################
-################################################################################################################################################
-####                                                                                                                                        ####
-####          DATABASE FUNCTIONS FOR INFO. GATHERING MODE                                                                                   ####
-####                                                                                                                                        ####
-################################################################################################################################################
-################################################################################################################################################
-################################################################################################################################################
-
-    def searchExitNodes(self, numberOfScans, scanIdentifier):
-        if self.cursor is None:
-            self.initDatabase()
-        exitNodes = []
-        if scanIdentifier is None:
-            self.cursor.execute(database.selectTorScanServerDB, (numberOfScans,))
-        else:
-            self.cursor.execute(database.selectTorScanIdentifierServerDB, (scanIdentifier,))
-
-        for row in self.cursor.fetchall():
-            scanId, scanDate = row
-            self.cursor.execute(database.selectTorNodeDataServerDB, (scanId,))
-            for node in  self.cursor.fetchall():
-                torNodeId, host, state, reason, nickName = node
-                nodeData = TorNodeData()
-                nodeData.id = torNodeId
-                nodeData.host = host
-                nodeData.state = state
-                nodeData.reason = reason
-                nodeData.nickName = nickName
-                ports = self.cursor.execute(database.selectTorNodePortServerDB, (torNodeId,) )
-                for port in ports.fetchall():
-                    (portId, portState, portReason, portNumber, portName, portVersion, torNode) = port
-                    nodePort = TorNodePort()
-                    nodePort.id = portId
-                    nodePort.state = portState
-                    nodePort.reason = portReason
-                    nodePort.port = portNumber
-                    nodePort.name = portName
-                    nodePort.version = portVersion
-                    nodePort.torNodeId = torNode
-                    if "open" in portState:
-                        nodeData.openPorts.append(nodePort)
-                    else:
-                        nodeData.closedFilteredPorts.append(nodePort)
-                exitNodes.append(nodeData)
-        return exitNodes
-
-
-    def insertExitNode(self, torNodeData):
-        '''
-        Insert the Tor Structure found.
-        '''
-
-        if self.cursor is None:
-            self.initDatabase()
-
-        #Insert the Scan record.
-        self.cursor.execute(database.insertTorScanServerDB, (datetime.now(), len(torNodeData)) )
-        scanId = self.cursor.fetchone()[0]
-
-        for nodeData in torNodeData:
-            #Check the record before store.
-            self.cursor.execute(database.checkTorNodeDataServerDB, (nodeData.host, nodeData.nickName))
-            if self.cursor.fetchone()[0] > 0:
-                #Node scaned before.
-                continue
-            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
-            #Insert a TorNodeDataRecord.
-            self.cursor.execute(database.insertTorNodeDataServerDB, node)
-            self.cursor.execute(database.nextIdHostNodeDataServerDB)
-            nodeId = self.cursor.fetchone()[0]
-            for openPort in nodeData.openPorts:
-                opened = (openPort.state, openPort.reason, openPort.port, openPort.name, openPort.version, nodeId)
-                #Insert a TorNodePort
-                self.cursor.execute(database.insertTorNodePortServerDB, opened)
-
-            for closedPort in nodeData.closedFilteredPorts:
-                #Insert a TorNodePort
-                closedFiltered = (closedPort.state, closedPort.reason, closedPort.port, closedPort.name, closedPort.version, nodeId)
-                self.cursor.execute(database.insertTorNodePortServerDB, closedFiltered)
-
-        self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
-
-    def cleanDatabaseState(self):
-        try:
-            if self.cursor is None:
-                self.initDatabase()
-            self.cursor.execute(database.truncateTorNodePortServerDB)
-            self.cursor.execute(database.truncateTorNodeDataServerDB)
-            self.cursor.execute(database.truncateTorScanServerDB)
-            self.cursor.execute(database.truncateOnionRepositoryProgressServerDB)
-            self.cursor.execute(database.truncateOnionRepositoryResponsesServerDB)
-
-            #DeepWebPlugin tables.
-            self.cursor.execute(databasePlugins.truncateCrawlerPluginFormControl)
-            self.cursor.execute(databasePlugins.truncateCrawlerPluginForm)
-            self.cursor.execute(databasePlugins.truncateCrawlerPluginPageImage)
-            self.cursor.execute(databasePlugins.truncateCrawlerPluginImage)
-            self.cursor.execute(databasePlugins.truncateCrawlerPluginPage)
-
-            self.connection.commit()
-            self.cursor.close()
-            self.connection.close()
-
-        except Exception, e:
-            print e.__doc__
-            print e.message
-            print "Unexpected error:", sys.exc_info()[0]
-
-
-    def insertOnionRepositoryResult(self, onionAddress, responseCode, responseHeaders, onionDescription, serviceType):
-        if self.cursor is None:
-            self.initDatabase()
-        try:
-            responseHiddenService = (onionAddress, responseCode, responseHeaders, onionDescription, serviceType)
-            self.cursor.execute(database.insertOnionRepositoryResponsesServerDB, responseHiddenService)
-            self.connection.commit()
-            self.cursor.close()
-            self.connection.close()
-
-        except Exception as e:
-            import sys
-            print sys.exc_info()
-
-    def searchOnionRepositoryProgress(self, partialOnionAddress, validChars):
-        if self.cursor is None:
-            self.initDatabase()
-        self.cursor.execute(database.selectOnionRepositoryProgressServerDB, (partialOnionAddress, validChars))
-        values = self.cursor.fetchone()
-        if values == None:
-            return (0, datetime.now(), 0, 0, 0, 0)
-        id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet = values
-        return (id, startDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet)
-
-
-    def insertOnionRepositoryProgress(self, onionAddress, validChars, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet, finished=False):
-        endDate = None
-        if finished:
-            endDate = datetime.now()
-
-        if self.cursor is None:
-            self.initDatabase()
-
-        self.cursor.execute(database.selectOnionRepositoryProgressServerDB, (onionAddress, validChars) )
-
-        values = self.cursor.fetchone()
-        if values is not None:
-            progressId = values[0]
-            if progressId > 0:
-                self.cursor.execute(database.updateOnionRepositoryProgressServerDB, (endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet, progressId))
-        else:
-            self.cursor.execute(database.insertOnionRepositoryProgressServerDB, (onionAddress, validChars, datetime.now(), endDate, progressFirstQuartet,progressSecondQuartet,progressThirdQuartet,progressFourthQuartet))
-        self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
-
-    def searchOnionRepository(self, start=1, maxResults=30):
-        onionAddresses = []
-        if self.cursor is None:
-            self.initDatabase()
-
-        self.cursor.execute(database.selectOnionRepositoryResponsesServerDB, (maxResults, start) )
-        for row in self.cursor.fetchall():
-            onionAddress, responseCode, responseHeaders,onionDescription, serviceType = row
-            onionAddresses.append( (onionAddress, responseCode, responseHeaders,onionDescription, serviceType) )
-        return  onionAddresses
-
-    def countOnionRepositoryResponses(self):
-        if self.cursor is None:
-            self.initDatabase()
-        self.cursor.execute(database.countOnionRepositoryResponsesServerDB)
-        return self.cursor.fetchone()[0]
-
-
-
-    def searchBotnetNode(self, address):
-        if self.cursor is None:
-            self.initDatabase()
-        if address is not None:
-            self.cursor.execute(database.selectBotnetNodeServerDB, (address,))
-            results = self.cursor.fetchone() #Returns none if empty set.
-            return results
-        return None
-
-    def insertBotnetNode(self, address, user, password, port, nickname, serviceType):
-        if self.cursor is None:
-            self.initDatabase()
-        try:
-            bot = (address, user, password, port, nickname, serviceType)
-            self.cursor.execute(database.insertBotnetNodeServerDB, bot)
-            self.connection.commit()
-        except Exception as e:
-            pass
-
-################################################################################################################################################
-################################################################################################################################################
-################################################################################################################################################
-####                                                                                                                                        ####
-####          DATABASE FUNCTIONS FOR "deepWebCrawlerPlugin".                                                                                ####
-####                                                                                                                                        ####
-################################################################################################################################################
-################################################################################################################################################
-################################################################################################################################################
-
-    def initDatabaseDeepWebCrawlerPlugin(self):
-        if self.connection is None:
-            self.connect()
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginForm)
-        self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl)
-
-
-    def insertPage(self, page):
-        if self.cursor is None:
-            self.initDatabase()
-        title = ''
-        url = ''
-        pageParentId = None
-        body = ''
-        headers = ''
-
-        if page.has_key('title'):
-            title = page['title']
-        if page.has_key('url'):
-            url = page['url']
-        if page.has_key('body'):
-            body = page['body']
-        if page.has_key('headers'):
-            headers = page['headers']
-
-
-        if page.has_key('pageParent'):
-            pageParent = page['pageParent']
-            if self.existsPageByUrl(pageParent['url']):
-                pageParentId = self.searchPageByUrl(pageParent['url'])
-            else:
-                pageParentId = self.insertPage(pageParent)
-        data = (title, url, pageParentId, buffer(zlib.compress(body)), str(headers))
-        self.cursor.execute(databasePlugins.insertCrawlerPluginPage, data )
-        linkId = self.cursor.lastrowid
-        self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
-        return linkId
-
-    def insertImages(self, page, pageId):
-        if self.cursor is None:
-            self.initDatabase()
-        if page.has_key('imagesSrc'):
-            for image in page['imagesSrc']:
-
-                self.cursor.execute(databasePlugins.existsImageByPage, (image,pageId))
-                if self.cursor.fetchone()[0] > 0:
-                    continue
-                else:
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginImage, (image, ) )
-                    imageId = self.cursor.lastrowid
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageImage, (pageId, imageId, ) )
-        self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
-
-    def insertForms(self, page, pageId):
-        if self.cursor is None:
-            self.initDatabase()
-
-        if page.has_key('forms'):
-            for formName in page['forms'].keys():
-                self.cursor.execute(databasePlugins.existsFormByPage, (formName, pageId, ))
-                if self.cursor.fetchone()[0] > 0:
-                    continue
-                self.cursor.execute(databasePlugins.insertCrawlerPluginPageForm, (formName, pageId, ) )
-                formId = self.cursor.lastrowid
-                for control in page['forms'][formName]:
-                    (controlName, controlType, controlValue) = control
-                    self.cursor.execute(databasePlugins.insertCrawlerPluginPageFormControl, (formId, buffer(zlib.compress(controlName)), buffer(zlib.compress(controlType)), buffer(zlib.compress(controlValue)), ) )
-        self.connection.commit()
-        self.cursor.close()
-        self.connection.close()
-
-
-    def existsPageByUrl(self, url):
-        if self.cursor is None:
-            self.initDatabase()
-        if url is not None:
-            self.cursor.execute(databasePlugins.existsPageByUrl, (url,))
-            if self.cursor.fetchone()[0] > 0:
-                return True
-        return False
-
-    def searchPageByUrl(self, url):
-        if self.cursor is None:
-            self.initDatabase()
-        if url is not None:
-            self.cursor.execute(databasePlugins.searchPageByUrl, (url,))
-            pageId = self.cursor.fetchone()[0]
-            return pageId
-        return None
+    pass
