@@ -38,9 +38,9 @@ from sys import argv
 '''
 Main class for the plugin.
 '''
-class maliciousHiddenServicePlugin(BasePlugin):
+class maliciousHiddenServicePlugin(BasePlugin, pluginName='maliciousHiddenServicePlugin'):
     def __init__(self, torNodes=[]):
-        BasePlugin.__init__(self, torNodes, 'maliciousHiddenServicePlugin')
+        BasePlugin.__init__(self, torNodes, pluginName)
         self.setPluginDetails('hiddenService', 'Creates a malicious hidden service in TOR network and tries to de-anonimyze the users.', '1.0', 'Adastra: @jdaanial')
         if len(torNodes) > 0:
             self.info("[*] maliciousHiddenServicePlugin Initialized!")
