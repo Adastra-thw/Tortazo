@@ -388,8 +388,10 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.connection.commit()
 
     def __del__(self):
-        self.cursor.close()
-        self.connection.close()
+        if self.cursor is not None:
+            self.cursor.close()
+        if self.connection is not None:
+            self.connection.close()
         
 ################################################################################################################################################
 ################################################################################################################################################

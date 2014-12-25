@@ -38,14 +38,14 @@ class Discovery:
     '''
 		Class used to list the current "exit-nodes" from the TOR network and perform the nmap scanning to discover the open ports.
 	'''
-    cli = None
+    executor = None
     scan = None
 
-    def __init__(self, cli, database):
+    def __init__(self, executor, database):
         '''
         Constructor.
         '''
-        self.cli = cli
+        self.tortazoExecutor = executor
         self.database = database
         self.exitNodes = []
 
@@ -53,27 +53,27 @@ class Discovery:
         '''
 			List the Exit Nodes using the filters specified by command-line.
 		'''
-        self.cli.logger.debug(term.format("[+] Try to listing the current Exit-Nodes of TOR.", term.Color.GREEN))
-        if self.cli.exitNodeFingerprint != None:
-            self.cli.logger.debug(term.format("[+] Using the fingerprint: %s " % (self.cli.exitNodeFingerprint), term.Color.GREEN))
-        self.cli.logger.debug(term.format("[+] Filter by platform: %s." % (self.cli.mode), term.Color.GREEN))
-        self.cli.logger.debug(term.format("[+] Retrieving the first %d records in the Descriptors." % (self.cli.exitNodesToAttack),
+        self.tortazoExecutor.logger.debug(term.format("[+] Try to listing the current Exit-Nodes of TOR.", term.Color.GREEN))
+        if self.tortazoExecutor.exitNodeFingerprint.value != None:
+            self.tortazoExecutor.logger.debug(term.format("[+] Using the fingerprint: %s " % (self.tortazoExecutor.exitNodeFingerprint.value), term.Color.GREEN))
+        self.tortazoExecutor.logger.debug(term.format("[+] Filter by platform: %s." % (self.tortazoExecutor.mode.value), term.Color.GREEN))
+        self.tortazoExecutor.logger.debug(term.format("[+] Retrieving the first %d records in the Descriptors." % (self.tortazoExecutor.serversToAttack.value),
                              term.Color.GREEN))
 
-        if self.cli.useMirror == True:
-            self.cli.logger.info(term.format("[+] Using the Directory Mirrors to get the descriptors", term.Color.YELLOW))
-        downloader = DescriptorDownloader(use_mirrors=self.cli.useMirror)
-        if self.cli.exitNodeFingerprint != None:
-            descriptors = downloader.get_server_descriptors(fingerprints=[self.cli.exitNodeFingerprint])
+        if self.tortazoExecutor.useMirrors.value == True:
+            self.tortazoExecutor.logger.info(term.format("[+] Using the Directory Mirrors to get the descriptors", term.Color.YELLOW))
+        downloader = DescriptorDownloader(use_mirrors=self.tortazoExecutor.useMirrors.value)
+        if self.tortazoExecutor.exitNodeFingerprint.value != None:
+            descriptors = downloader.get_server_descriptors(fingerprints=[self.tortazoExecutor.exitNodeFingerprint.value])
         else:
             descriptors = downloader.get_server_descriptors()
         try:
             listDescriptors = descriptors.run()
         except zlib.error:
-            self.cli.logger.error(term.format("[-] Error fetching the TOR descriptors. This is something quite common... Try again in a few seconds.",term.Color.RED))
+            self.tortazoExecutor.logger.error(term.format("[-] Error fetching the TOR descriptors. This is something quite common... Try again in a few seconds.",term.Color.RED))
             return
         except urllib2.HTTPError:
-            self.cli.logger.error(term.format("[-] Figerprint not found... It's not registered in the last valid server descriptor.",term.Color.RED))
+            self.tortazoExecutor.logger.error(term.format("[-] Figerprint not found... It's not registered in the last valid server descriptor.",term.Color.RED))
             return
         return self.filterNodes(listDescriptors)
 
@@ -82,34 +82,34 @@ class Discovery:
         Use the descriptors downloaded by the TOR client and list the exit nodes.
         '''
         listDescriptors = []
-        self.cli.logger.info(term.format(
+        self.tortazoExecutor.logger.info(term.format(
             "[+] Trying to get a list of exit nodes from the already downloaded descriptors from the TOR Client instead of using the directory authorities",
             term.Color.YELLOW))
-        if self.cli.controllerPort and self.cli.controllerPort.isdigit():
+        if self.tortazoExecutor.controllerPort.value and self.tortazoExecutor.controllerPort.value.isdigit():
             try:
                 controllerPass = getpass(
                     "Enter the password for the Local Controller (Empty if the instance doesn't need a password): ")
-                controller = Controller.from_port(port=int(self.cli.controllerPort))
+                controller = Controller.from_port(port=int(self.tortazoExecutor.controllerPort.value))
                 if controllerPass:
                     controller.authenticate(controllerPass)
                 else:
                     controller.authenticate()
-                self.cli.logger.debug(term.format("[+] TOR Controller Authentication Successful.", term.Color.GREEN))
+                self.tortazoExecutor.logger.debug(term.format("[+] TOR Controller Authentication Successful.", term.Color.GREEN))
                 for circuit in controller.get_circuits():
                     if circuit.status != CircStatus.BUILT:
                         continue
                     exit_fingerprint, exit_nickname = circuit.path[-1]
                     '''As of Tor version 0.2.3.25 relays no longer get server descriptors by default. It's advised that you use microdescriptors instead, but if you really need server descriptors then you can get them by setting UseMicrodescriptors 0.	'''
                     exitNode = controller.get_server_descriptor(exit_fingerprint, None)
-                    self.cli.logger.debug(term.format("[+] Filtering by Fingerprint: "+str(self.cli.exitNodeFingerprint), term.Color.GREEN))
+                    self.tortazoExecutor.logger.debug(term.format("[+] Filtering by Fingerprint: "+str(self.tortazoExecutor.exitNodeFingerprint.value), term.Color.GREEN))
                     if exitNode:
-                        if self.cli.exitNodeFingerprint is None:
+                        if self.tortazoExecutor.exitNodeFingerprint.value is None:
                             listDescriptors.append(exitNode)
-                        elif self.cli.exitNodeFingerprint == exitNode.fingerprint:
-                            self.cli.logger.debug(term.format("[+] The Fingerprint specified has been found (%s , %s) ." %(exitNode.nickname, exitNode.fingerprint), term.Color.GREEN))
+                        elif self.tortazoExecutor.exitNodeFingerprint.value == exitNode.fingerprint:
+                            self.tortazoExecutor.logger.debug(term.format("[+] The Fingerprint specified has been found (%s , %s) ." %(exitNode.nickname, exitNode.fingerprint), term.Color.GREEN))
                             listDescriptors.append(exitNode)
                         else:
-                            self.cli.logger.debug(term.format("[+] Server found but there's no match with the Fingerprint specified (%s , %s) ." %(exitNode.nickname, exitNode.fingerprint), term.Color.GREEN))
+                            self.tortazoExecutor.logger.debug(term.format("[+] Server found but there's no match with the Fingerprint specified (%s , %s) ." %(exitNode.nickname, exitNode.fingerprint), term.Color.GREEN))
                     return self.filterNodes(listDescriptors)
                     #exit_address = exit_desc.address if exit_desc else 'unknown'
                     #print "Exit relay"
@@ -118,11 +118,11 @@ class Discovery:
                     #print "  address: %s" % exit_address
                     #print
             except MissingPassword:
-                self.cli.logger.warn(term.format("[-] Expected password in the AUTH process... This should not be empty", term.Color.RED))
+                self.tortazoExecutor.logger.warn(term.format("[-] Expected password in the AUTH process... This should not be empty", term.Color.RED))
             except AuthenticationFailure:
-                self.cli.logger.warn(term.format("[-] The password specified is invalid.", term.Color.RED))
+                self.tortazoExecutor.logger.warn(term.format("[-] The password specified is invalid.", term.Color.RED))
         else:
-            self.cli.logger.warn(term.format("[-] The control port specified is invalid.", term.Color.RED))
+            self.tortazoExecutor.logger.warn(term.format("[-] The control port specified is invalid.", term.Color.RED))
 
     def filterNodes(self, listDescriptors):
         '''
@@ -130,10 +130,10 @@ class Discovery:
         '''
         nodesAlreadyScanned = []
         nm = nmap.PortScanner()
-        for descriptor in listDescriptors[0:self.cli.exitNodesToAttack]:
+        for descriptor in listDescriptors[0:self.tortazoExecutor.serversToAttack.value]:
         #for descriptor in parse_file(open("/home/adastra/Escritorio/tor-browser_en-US-Firefox/Data/Tor/cached-consensus")):
             if descriptor.operating_system is not None and \
-               self.cli.mode.lower() in descriptor.operating_system.lower() and \
+               self.tortazoExecutor.mode.value.lower() in descriptor.operating_system.lower() and \
                descriptor.exit_policy.is_exiting_allowed():
                 #SEARCH FILTERING BY FINGERPRINT
                 #Conditions: Fingerprint specified in command-line AND
@@ -141,23 +141,23 @@ class Discovery:
                 #Relay's Operative System equals to the Operative System (option mode) specified in command-line AND
                 #The Relay is a Exit Node.
                 if descriptor.address not in nodesAlreadyScanned:
-                    self.cli.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s - Fingerprint: %s - TOR Version: %s " % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system, descriptor.fingerprint, descriptor.tor_version), term.Color.YELLOW))
-                    self.cli.logger.debug(term.format("[+] Starting the NMap Scan with the following options: ", term.Color.GREEN))
-                    self.cli.logger.debug(term.format("[+][+] Scan Address: %s " % (descriptor.address), term.Color.GREEN))
-                    self.cli.logger.debug(term.format("[+][+] Scan Arguments: %s " % (self.cli.scanArguments), term.Color.GREEN))
-                    self.cli.logger.debug(term.format("[+][+] Scan Ports: %s " % (self.cli.scanPorts), term.Color.GREEN))
-                    if self.cli.scanArguments != None:
-                        nm.scan(descriptor.address, self.cli.scanPorts, arguments=self.cli.scanArguments)
+                    self.tortazoExecutor.logger.info(term.format("[+] %s System has been found... Nickname: %s - OS Version: %s - Fingerprint: %s - TOR Version: %s " % (descriptor.operating_system, descriptor.nickname, descriptor.operating_system, descriptor.fingerprint, descriptor.tor_version), term.Color.YELLOW))
+                    self.tortazoExecutor.logger.debug(term.format("[+] Starting the NMap Scan with the following options: ", term.Color.GREEN))
+                    self.tortazoExecutor.logger.debug(term.format("[+][+] Scan Address: %s " % (descriptor.address), term.Color.GREEN))
+                    self.tortazoExecutor.logger.debug(term.format("[+][+] Scan Arguments: %s " % (self.tortazoExecutor.scanArguments.value), term.Color.GREEN))
+                    self.tortazoExecutor.logger.debug(term.format("[+][+] Scan Ports: %s " % (self.tortazoExecutor.listScanPorts.value), term.Color.GREEN))
+                    if self.tortazoExecutor.scanArguments.value != None:
+                        nm.scan(descriptor.address, self.tortazoExecutor.listScanPorts.value, arguments=self.tortazoExecutor.scanArguments.value)
                     else:
-                        nm.scan(descriptor.address, self.cli.scanPorts)
+                        nm.scan(descriptor.address, self.tortazoExecutor.listScanPorts.value)
                     self.recordNmapScan(nm, descriptor)
-                    self.cli.logger.info(term.format('[+] Scan Ended for %s .' % (descriptor.nickname), term.Color.YELLOW))
+                    self.tortazoExecutor.logger.info(term.format('[+] Scan Ended for %s .' % (descriptor.nickname), term.Color.YELLOW))
                     nodesAlreadyScanned.append(descriptor.address)
         if len(self.exitNodes) == 0:
-            self.cli.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.cli.exitNodesToAttack, self.cli.mode.lower()), term.Color.RED))
+            self.tortazoExecutor.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.tortazoExecutor.serversToAttack.value, self.tortazoExecutor.mode.lower()), term.Color.RED))
         else:
             self.database.initDatabase()
-            self.cli.logger.debug(term.format("[+] Inserting in database the relays found and retrieving the GeoLocation references ...", term.Color.GREEN))
+            self.tortazoExecutor.logger.debug(term.format("[+] Inserting in database the relays found and retrieving the GeoLocation references ...", term.Color.GREEN))
             self.database.insertExitNode(self.exitNodes)
         return self.exitNodes
 
@@ -165,7 +165,7 @@ class Discovery:
         '''
         Search in Shodan by host. This function needs the shodanKey and the IP address of the host.
         '''
-        self.cli.logger.debug(term.format("[+] Using Shodan against %s " %(ip), term.Color.GREEN))
+        self.tortazoExecutor.logger.debug(term.format("[+] Using Shodan against %s " %(ip), term.Color.GREEN))
         try:
             self.shodanApi = shodan.Shodan(shodanKey)
             self.results = self.shodanApi.host(ip)
@@ -176,7 +176,7 @@ class Discovery:
             return shodanHost
 
         except shodan.APIError:
-            self.cli.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(ip), term.Color.RED))
+            self.tortazoExecutor.logger.error(term.format("[-] There's no information about %s in the Shodan Database." %(ip), term.Color.RED))
             pass
 
     def recordNmapScan(self, scan, descriptor):
@@ -211,7 +211,7 @@ class Discovery:
                                 torNode.closedFilteredPorts.append(torNodePort)
                         self.exitNodes.append(torNode)
             else:
-                self.cli.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))
+                self.tortazoExecutor.logger.warn(term.format("[-] There's no match in the Nmap scan with the specified protocol %s" %(protocol), term.Color.RED))
 
     def extract(self, DictIn, Dictout):
         for key, value in DictIn.iteritems():

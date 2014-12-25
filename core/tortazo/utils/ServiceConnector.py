@@ -44,7 +44,7 @@ class ServiceConnector():
         self.socksHost = '127.0.0.1'
         self.socksPort = 9150
         self.defaultSocket = socket.socket
-        self.cli = None
+        self.cli = cli
 
     def startLocalSocatTunnel(self, tcpListen,hiddenServiceAddress,hiddenServicePort, socksPort='9150'):
         print "[+] Starting socat tunnel. "
