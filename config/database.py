@@ -17,7 +17,7 @@ createTableOnionRepositoryProgress="create table if not exists OnionRepositoryPr
 createTableOnionRepositoryResponses="create table if not exists OnionRepositoryResponses (id integer primary key autoincrement, onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 
 createTableBotnetNode="create table if not exists BotnetNode (id integer primary key autoincrement, address VARCHAR NOT NULL, userservice VARCHAR, password VARCHAR, port integer, nickname VARCHAR, serviceType VARCHAR)"
-createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id integer primary key autoincrement, botnetNode integer, botLatitute REAL, botLongitute REAL, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(id))"
+createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id integer primary key autoincrement, botnetNodeId integer, botLatitute REAL, botLongitute REAL, FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
 createTableTorNodeGeolocation="create table if not exists TorNodeGeolocation (id integer primary key autoincrement, torNodeId integer, nodeLatitute REAL, nodeLongitute REAL, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
@@ -42,7 +42,7 @@ insertOnionRepositoryProgress="insert into OnionRepositoryProgress(partialOnionA
 insertOnionRepositoryResponses="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders,onionDescription, serviceType) values(?,?,?,?,?)"
 updateOnionRepositoryProgress="update OnionRepositoryProgress set endDate =?,progressFirstQuartet=?,progressSecondQuartet=?,progressThirdQuartet=?,progressFourthQuartet=?  WHERE id=?"
 insertBotnetNode="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(?, ?, ?, ?, ?, ?)"
-insertBotnetGeolocation="insert into BotnetGeolocation(botnetNode, botLatitute, botLongitute) values(?, ?, ?)"
+insertBotnetGeolocation="insert into BotnetGeolocation(botnetNodeId, botLatitute, botLongitute) values(?, ?, ?)"
 insertTorNodeGeolocation="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(?, ?, ?)"
 
 
@@ -80,7 +80,7 @@ createTableTorNodePortServerDB="create table if not exists TorNodePort (id seria
 createTableOnionRepositoryProgressServerDB="create table if not exists OnionRepositoryProgress (id serial primary key , partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATE not null, endDate DATE, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponsesServerDB="create table if not exists OnionRepositoryResponses (id serial primary key , onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 createTableBotnetNodeServerDB="create table if not exists BotnetNode (id serial primary key , address varchar not null, userservice varchar, password varchar, port integer, nickname varchar, serviceType varchar)"
-createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNode integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(id))"
+createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNodeId integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNode) REFERENCES BotnetNode(id))"
 createTableTorNodeGeolocationServerDB="create table if not exists TorNodeGeolocation (id serial primary key, torNodeId integer, nodeLatitute double precision, nodeLongitute double precision, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
@@ -106,7 +106,7 @@ insertOnionRepositoryProgressServerDB="insert into OnionRepositoryProgress(parti
 insertOnionRepositoryResponsesServerDB="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders,onionDescription, serviceType) values(%s,%s,%s,%s,%s) RETURNING id"
 updateOnionRepositoryProgressServerDB="update OnionRepositoryProgress set endDate =%s,progressFirstQuartet=%s,progressSecondQuartet=%s,progressThirdQuartet=%s,progressFourthQuartet=%s  WHERE id=%s"
 insertBotnetNodeServerDB="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(%s, %s, %s, %s, %s, %s) RETURNING id"
-insertBotnetGeolocationServerDB="insert into BotnetGeolocation(botnetNode, botLatitute, botLongitute) values(%s, %s, %s) RETURNING id"
+insertBotnetGeolocationServerDB="insert into BotnetGeolocation(botnetNodeId, botLatitute, botLongitute) values(%s, %s, %s) RETURNING id"
 insertTorNodeGeolocationServerDB="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(%s, %s, %s) RETURNING id"
 
 truncateTorNodeDataServerDB="delete from TorNodeData"
