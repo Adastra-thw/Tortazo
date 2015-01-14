@@ -36,6 +36,7 @@ class TorNodeData:
         self.fingerprint = None
         self.torVersion = None
         self.contactData = None
+        self.operatingSystem = None
 
 class TorNodePort:
     '''

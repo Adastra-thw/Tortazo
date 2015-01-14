@@ -112,14 +112,16 @@ class TortazoSQLiteDB(ITortazoDatabase):
         #Insert the Scan record.
         self.cursor.execute(database.insertTorScan, (datetime.now(), len(torNodeData)))
         scanId = self.cursor.lastrowid
+        totalUniqueNodes = len(torNodeData)
 
         for nodeData in torNodeData:
             #Check the record before store.
             self.cursor.execute(database.checkTorNodeData, (nodeData.host, nodeData.nickName))
             if self.cursor.fetchone()[0] > 0:
                 #Node scaned before.
+                totalUniqueNodes = totalUniqueNodes-1
                 continue
-            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
+            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, nodeData.operatingSystem, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(database.insertTorNodeData, node)
             self.cursor.execute(database.nextIdHostNodeData)
@@ -136,6 +138,9 @@ class TortazoSQLiteDB(ITortazoDatabase):
                 closedFiltered = (closedPort.state, closedPort.reason, closedPort.port, closedPort.name, closedPort.version, nodeId)
                 self.cursor.execute(database.insertTorNodePort, closedFiltered)
                 torNodeId = self.cursor.lastrowid
+        if totalUniqueNodes != len(torNodeData):
+            #Some nodes were scanned before. Updating the number of new relays found in this scan.
+            self.cursor.execute(database.updateTorScan, (totalUniqueNodes,) )                
 
         self.connection.commit()
 
@@ -143,10 +148,11 @@ class TortazoSQLiteDB(ITortazoDatabase):
         import pygeoip
         gi = pygeoip.GeoIP(config.geoLiteDB)
         recordAddress = gi.record_by_addr(torNodeData.host)
-        longitude = recordAddress['longitude']
-        latitude = recordAddress['latitude']
-        geolocation = (torNodeId,latitude,longitude)
-        self.cursor.execute(database.insertTorNodeGeolocation, geolocation)
+        if recordAddress is not None:
+            longitude = recordAddress['longitude']
+            latitude = recordAddress['latitude']
+            geolocation = (torNodeId,latitude,longitude)
+            self.cursor.execute(database.insertTorNodeGeolocation, geolocation)
 
 
     def cleanDatabaseState(self):
@@ -453,14 +459,16 @@ class TortazoPostgreSQL(ITortazoDatabase):
         #Insert the Scan record.
         self.cursor.execute(database.insertTorScanServerDB, (datetime.now(), len(torNodeData)) )
         scanId = self.cursor.fetchone()[0]
+        totalUniqueNodes = len(torNodeData)
 
         for nodeData in torNodeData:
             #Check the record before store.
             self.cursor.execute(database.checkTorNodeDataServerDB, (nodeData.host, nodeData.nickName))
             if self.cursor.fetchone()[0] > 0:
                 #Node scaned before.
+                totalUniqueNodes = totalUniqueNodes-1
                 continue
-            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, scanId)
+            node = (nodeData.host, nodeData.state, nodeData.reason, nodeData.nickName, nodeData.fingerprint, nodeData.torVersion.version_str, nodeData.contactData, nodeData.operatingSystem, scanId)
             #Insert a TorNodeDataRecord.
             self.cursor.execute(database.insertTorNodeDataServerDB, node)
             self.cursor.execute(database.nextIdHostNodeDataServerDB)
@@ -476,6 +484,11 @@ class TortazoPostgreSQL(ITortazoDatabase):
                 closedFiltered = (closedPort.state, closedPort.reason, closedPort.port, closedPort.name, closedPort.version, nodeId)
                 self.cursor.execute(database.insertTorNodePortServerDB, closedFiltered)
 
+        if totalUniqueNodes != len(torNodeData):
+            #Some nodes were scanned before. Updating the number of new relays found in this scan.
+            self.cursor.execute(database.updateTorScanServerDB, (totalUniqueNodes,) )
+
+
         self.connection.commit()
         self.cursor.close()
         self.connection.close()
@@ -485,10 +498,11 @@ class TortazoPostgreSQL(ITortazoDatabase):
         import pygeoip
         gi = pygeoip.GeoIP(config.geoLiteDB)
         recordAddress = gi.record_by_addr(torNodeData.host)
-        longitude = recordAddress['longitude']
-        latitude = recordAddress['latitude']
-        geolocation = (torNodeId,latitude,longitude)
-        self.cursor.execute(database.insertTorNodeGeolocationServerDB, geolocation)
+        if recordAddress is not None:
+            longitude = recordAddress['longitude']
+            latitude = recordAddress['latitude']
+            geolocation = (torNodeId,latitude,longitude)
+            self.cursor.execute(database.insertTorNodeGeolocationServerDB, geolocation)
 
 
     def cleanDatabaseState(self):

@@ -87,8 +87,7 @@ class Discovery:
             term.Color.YELLOW))
         if self.tortazoExecutor.controllerPort.value and self.tortazoExecutor.controllerPort.value.isdigit():
             try:
-                controllerPass = getpass(
-                    "Enter the password for the Local Controller (Empty if the instance doesn't need a password): ")
+                controllerPass = getpass("Enter the password for the Local Controller (Empty if the instance doesn't need a password): ")
                 controller = Controller.from_port(port=int(self.tortazoExecutor.controllerPort.value))
                 if controllerPass:
                     controller.authenticate(controllerPass)
@@ -154,7 +153,7 @@ class Discovery:
                     self.tortazoExecutor.logger.info(term.format('[+] Scan Ended for %s .' % (descriptor.nickname), term.Color.YELLOW))
                     nodesAlreadyScanned.append(descriptor.address)
         if len(self.exitNodes) == 0:
-            self.tortazoExecutor.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.tortazoExecutor.serversToAttack.value, self.tortazoExecutor.mode.lower()), term.Color.RED))
+            self.tortazoExecutor.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.tortazoExecutor.serversToAttack.value, self.tortazoExecutor.mode.value.lower()), term.Color.RED))
         else:
             self.database.initDatabase()
             self.tortazoExecutor.logger.debug(term.format("[+] Inserting in database the relays found and retrieving the GeoLocation references ...", term.Color.GREEN))
@@ -187,6 +186,7 @@ class Discovery:
             torNode.nickName = descriptor.nickname
             torNode.fingerprint = descriptor.fingerprint
             torNode.torVersion = descriptor.tor_version
+            torNode.operatingSystem = descriptor.operating_system
             if descriptor.contact is not None:
                 torNode.contactData = descriptor.contact.decode("utf-8", "replace")
             if scan[host].has_key('status'):
