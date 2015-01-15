@@ -140,7 +140,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
                 torNodeId = self.cursor.lastrowid
         if totalUniqueNodes != len(torNodeData):
             #Some nodes were scanned before. Updating the number of new relays found in this scan.
-            self.cursor.execute(database.updateTorScan, (totalUniqueNodes,) )                
+            self.cursor.execute(database.updateTorScan, (totalUniqueNodes,scanId,) )                
 
         self.connection.commit()
 
@@ -486,7 +486,7 @@ class TortazoPostgreSQL(ITortazoDatabase):
 
         if totalUniqueNodes != len(torNodeData):
             #Some nodes were scanned before. Updating the number of new relays found in this scan.
-            self.cursor.execute(database.updateTorScanServerDB, (totalUniqueNodes,) )
+            self.cursor.execute(database.updateTorScanServerDB, (totalUniqueNodes,scanId,) )
 
 
         self.connection.commit()
