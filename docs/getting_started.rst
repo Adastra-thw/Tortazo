@@ -34,12 +34,13 @@ However, if you want to use the development version located in the GIT repositor
 * PySNMP: http://pysnmp.sourceforge.net/
 * IRLib: https://github.com/gr33ndata/irlib
 * Jinja2: http://jinja.pocoo.org/docs/intro/
-* BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
+* BeautifulSoup4: http://www.crummy.com/software/BeautifulSoup/
 * Scrapy: http://scrapy.org/
 * PyFiglet: https://github.com/pwaller/pyfiglet
 * PySMB: https://pythonhosted.org/pysmb/
 * Pygeoip: https://pypi.python.org/pypi/pygeoip/
 * Zope Interface: https://pypi.python.org/pypi/zope.interface
+* Psycopg2: https://pypi.python.org/pypi/psycopg2
 
 =================
 Other Dependencies    

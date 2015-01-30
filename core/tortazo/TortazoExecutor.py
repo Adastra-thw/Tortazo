@@ -204,7 +204,11 @@ class TortazoExecutor:
                     self.logger.info(term.format("[+] Starting TOR Local instance with the following options: ", term.Color.YELLOW))
                     for config in torConfig.keys():
                         self.logger.info(term.format("[+] Config: %s value: %s " %(config, torConfig[config]), term.Color.YELLOW))
-                    self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.__logsTorInstance)
+                    if os.path.exists(tortazoConfiguration.torExecutablePath):
+                        self.torProcess = stem.process.launch_tor_with_config(config = torConfig, tor_cmd = tortazoConfiguration.torExecutablePath, init_msg_handler=self.__logsTorInstance)
+                    else:
+                        self.torProcess = stem.process.launch_tor_with_config(config = torConfig, init_msg_handler=self.__logsTorInstance)
+                        
                     time.sleep(5)
                     if self.torProcess > 0:
                         #If SocksListenAddress or SocksPort properties are empty but the process has been started, the socks proxy will use the default values.
