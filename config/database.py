@@ -10,7 +10,7 @@
 ################################################################################################################################################
 
 databaseName="db/tortazo.db"
-createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer)"
+createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer, tortazoCommand varchar, scanFinished varchar(2))" #scanFinished = 1: Finished; scanFinished = 0: Pending
 createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer, operative_system varchar, FOREIGN KEY (scanId) REFERENCES Scan(scanId))"
 createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(torNodeId))"
 createTableOnionRepositoryProgress="create table if not exists OnionRepositoryProgress (id integer primary key autoincrement, partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATETIME not null, endDate DATETIME, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
@@ -75,7 +75,7 @@ dropTableTorNodeGeolocation="drop table if exists TorNodeGeolocation"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
-createTableScanServerDB="create table if not exists Scan (id serial primary key , scanDate DATE not null, numNodes integer)"
+createTableScanServerDB="create table if not exists Scan (id serial primary key , scanDate DATE not null, numNodes integer, tortazoCommand varchar, scanFinished varchar(2))" #scanFinished = 1: Finished; scanFinished = 0: Pending
 createTableTorNodeDataServerDB="create table if not exists TorNodeData (id serial primary key , host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer, operative_system varchar, FOREIGN KEY (scanId) REFERENCES Scan(id))"
 createTableTorNodePortServerDB="create table if not exists TorNodePort (id serial primary key , state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 createTableOnionRepositoryProgressServerDB="create table if not exists OnionRepositoryProgress (id serial primary key , partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATE not null, endDate DATE, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"

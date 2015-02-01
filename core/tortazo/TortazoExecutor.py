@@ -272,7 +272,7 @@ class TortazoExecutor:
                 if self.socksPort is not None and self.socksPort.isdigit():
                     serviceConnector.setSocksProxySettings(self.socksHost, int(self.socksPort))
             self.logger.info(term.format("[+] Starting the Onion repository mode against "+self.onionRepositoryMode.value+" services...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
-            repository =  RepositoryGenerator(self.validCharsRepository, serviceConnector, self.database, self.onionPartialAddress.value, self.workerThreadsRepository.value)
+            repository =  RepositoryGenerator(self.validCharsRepository.value, serviceConnector, self.database, self.onionPartialAddress.value, self.workerThreadsRepository.value)
             repository.startGenerator(tortazoConfiguration.loadKnownOnionSites, self.onionRepositoryMode.value)
             self.logger.info(term.format("[+] Onion repository finished...  " + strftime("%Y-%m-%d %H:%M:%S", gmtime()), term.Color.YELLOW))
 
