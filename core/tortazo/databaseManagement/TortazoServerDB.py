@@ -52,6 +52,11 @@ class TortazoSQLiteDB(ITortazoDatabase):
         self.connection.execute(database.createTableBotnetGeolocation )
         self.connection.execute(database.createTableTorNodeGeolocation )
 
+        self.connection.execute(databasePlugins.createTableCrawlerPluginPage )
+        self.connection.execute(databasePlugins.createTableCrawlerPluginImage )        
+        self.connection.execute(databasePlugins.createTableCrawlerPluginPageImage )        
+        self.connection.execute(databasePlugins.createTableCrawlerPluginForm )        
+        self.connection.execute(databasePlugins.createTableCrawlerPluginFormControl )        
 
 ################################################################################################################################################
 ################################################################################################################################################
@@ -159,6 +164,8 @@ class TortazoSQLiteDB(ITortazoDatabase):
         try:
             if self.cursor is None:
                 self.initDatabase()
+            self.cursor.execute(database.truncateTableBotnetGeolocation)
+            self.cursor.execute(database.truncateTableTorNodeGeolocation)    
             self.cursor.execute(database.truncateTorNodePort)
             self.cursor.execute(database.truncateTorNodeData)
             self.cursor.execute(database.truncateTorScan)
@@ -391,6 +398,12 @@ class TortazoPostgreSQL(ITortazoDatabase):
         self.cursor.execute(database.createTableBotnetGeolocationServerDB)
         self.cursor.execute(database.createTableTorNodeGeolocationServerDB)
 
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPageServerDB )
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginImageServerDB )        
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginPageImageServerDB )        
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginFormServerDB )        
+        self.cursor.execute(databasePlugins.createTableCrawlerPluginFormControlServerDB )      
+
         self.connection.commit()
 
     def __del__(self):
@@ -509,6 +522,9 @@ class TortazoPostgreSQL(ITortazoDatabase):
         try:
             if self.cursor is None:
                 self.initDatabase()
+
+            self.cursor.execute(database.truncateBotnetGeolocationServerDB)
+            self.cursor.execute(database.truncateTorNodeGeolocationServerDB)
             self.cursor.execute(database.truncateTorNodePortServerDB)
             self.cursor.execute(database.truncateTorNodeDataServerDB)
             self.cursor.execute(database.truncateTorScanServerDB)

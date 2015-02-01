@@ -123,9 +123,6 @@ class RepositoryGenerator:
         while True:
             self.__createProcess(''.join(random.choice(onion) for i in range(16))  + '.onion' )
 
-        '''addresses = ['am4wuhz3zifexz5u.onion', '3fnhfsfc2bpzdste.onion', '3g2upl4pq6kufc4m.onion', 'kbhpodhnfxl3clb4.onion', '4zeottxi5qmnnjhd.onion', 'c3jemx2ube5v5zpg.onion', 'pyl7a4ccwgpxm6rd.onion']
-        for address in addresses:
-            self.__createProcess(address)'''
         self.process.onionQueue.join()
         self.process.onionQueueResponses.join()
 
@@ -206,7 +203,7 @@ class RepositoryGenerator:
                 except Exception as exc:
                     if exc.message == 'connection timeout':
                         print "[-] Connection Timeout to: "+address[0]
-                        return
+                        continue
 
     def startGenerator(self,loadKnownAddresses,typeService):
         try:
@@ -238,10 +235,9 @@ class RepositoryGenerator:
         finally:
             if self.partialOnionAddress.lower() != 'random' or (hasattr(self, "completeProgress") and self.completeProgress is True):
                 #Save incremental progress.
-                import sqlite3
                 try:
                     self.databaseConnection.insertOnionRepositoryProgress(self.partialOnionAddress, self.charsOnionAddress, self.progressFirstQuartet,self.progressSecondQuartet,self.progressThirdQuartet,self.progressFourthQuartet, self.finishedScan)
-                except sqlite3.IntegrityError:
+                except:
                     if self.finishedScan:
                         raise StandardError("[+] This scan was finisihed in a previous execution.")
 
@@ -339,9 +335,10 @@ class RepositoryProcess:
             status = self.repositoryGenerator.serviceConnector.performSSHConnectionHiddenService(sshAddress,port,user,password)
             print "[+] Found response from SSH Hidden Service! %s  " %(sshAddress)
             if status != None:
-                #There's a response. Then there's an FTP Service running.
+                #There's a response. Then there's an SSH Service running.
                 self.onionQueueResponses.put( (sshAddress,onionDescription,"ssh"), )
         except paramiko.ProxyCommandFailure as proxyExc:
+            #There's a problem with the socks proxy. Looks down.
             pass
         except paramiko.SSHException as sshExc:
             #There's no hidden service in this onion address. So... return!
@@ -362,6 +359,7 @@ class RepositoryProcess:
                 #Status is just True/False depending on the anonymous auth result. 
                 self.onionQueueResponses.put( (ftpAddress,onionDescription,"ftp"), )
         except ftplib.socket.gaierror as sockerror:
+            #There's no hidden service in the specified onion address.
             pass
         except Exception as exc:
             #print "[-] An error ocurred. See the full trace: "

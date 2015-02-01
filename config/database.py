@@ -47,6 +47,8 @@ insertBotnetGeolocation="insert into BotnetGeolocation(botnetNodeId, botLatitute
 insertTorNodeGeolocation="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(?, ?, ?)"
 
 
+truncateTableBotnetGeolocation="delete from BotnetGeolocation"
+truncateTableTorNodeGeolocation="delete from TorNodeGeolocation"
 truncateTorNodeData="delete from TorNodeData"
 truncateTorNodePort="delete from TorNodePort"
 truncateTorScan="delete from Scan"
@@ -110,6 +112,7 @@ updateOnionRepositoryProgressServerDB="update OnionRepositoryProgress set endDat
 insertBotnetNodeServerDB="insert into BotnetNode(address, userservice, password, port, nickname, serviceType) values(%s, %s, %s, %s, %s, %s) RETURNING id"
 insertBotnetGeolocationServerDB="insert into BotnetGeolocation(botnetNodeId, botLatitute, botLongitute) values(%s, %s, %s) RETURNING id"
 insertTorNodeGeolocationServerDB="insert into TorNodeGeolocation(torNodeId, nodeLatitute, nodeLongitute) values(%s, %s, %s) RETURNING id"
+
 
 truncateTorNodeDataServerDB="delete from TorNodeData"
 truncateTorNodePortServerDB="delete from TorNodePort"
