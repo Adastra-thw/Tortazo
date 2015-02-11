@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: Tortazo
+Version: 1.2
+Summary: Audit and Attack TOR Nodes and hidden services
+Home-page: http://packages.python.org/Tortazo
+Author: Adastra
+Author-email: debiadastra@gmail.com
+License: GPL
+Description: Please, Read the docs and remember that the stable version is under  V1.1 branch   ;-)
+        http://tortazo.readthedocs.org/en/latest/
+        
+        Installation Nodes:
+        1- Install Pynessus-rest from the source. The PIP version is out of date.
+        2- You need to install the lastest version of Beautiful Soup (4). Use
+            easy_install beautifulsoup4 
+            instead of 
+            easy_install beautifulsoup
+        3- 
+        
+Keywords: stem tortazo tor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Audit and Hacking
+Classifier: License :: GNU/GPL v2

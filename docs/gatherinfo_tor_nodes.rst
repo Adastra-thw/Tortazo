@@ -100,6 +100,17 @@ Shows the help banner of Tortazo::
     python Tortazo.py -n 30 -v -m linux -a "-sSV -A -n" -e FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
     python Tortazo.py --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exit-node-fingerprint FFAC0F4C85052F696EBB9517DD6E2E8B830835DD
 
+**Excluding a list of fingerprints from the scan**    
+
+- Connect with the TOR Authorities directly.
+- Enable the "verbose" mode (-v / --verbose) 
+- Scan the exit nodes which operative system is Linux (-m / --mode linux) 
+- Fetch the first 30 nodes from the list of exit nodes found 
+- Perform the Nmap scan with the specified options "-sSV -A -n" 
+- Filter by FingerPrint (-X / --exclude-fingerprints)::
+
+    python Tortazo.py -n 30 -v -m linux -a "-sSV -A -n" -X FFAC0F4C85052F696EBB9517DD6E2E8B830835DD,D0E1962B2460BA54D81E1426300D09720E6D43EB
+    python Tortazo.py --servers-to-attack 30 --verbose --mode linux --scan-arguments "-sSV -A -n" --exclude-fingerprints FFAC0F4C85052F696EBB9517DD6E2E8B830835DD,D0E1962B2460BA54D81E1426300D09720E6D43EB
 
 
 **Using Shodan to Gather information about the relays found**

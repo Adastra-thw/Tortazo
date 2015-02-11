@@ -10,15 +10,15 @@
 ################################################################################################################################################
 
 databaseName="db/tortazo.db"
-createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer, tortazoCommand varchar, scanFinished varchar(2))" #scanFinished = 1: Finished; scanFinished = 0: Pending
+createTableScan="create table if not exists Scan (id integer primary key autoincrement, scanDate DATETIME not null, numNodes integer, tortazoCommand varchar(150), scanFinished DATETIME)" #scanFinished = 1: Finished; scanFinished = 0: Pending
 createTableTorNodeData="create table if not exists TorNodeData (id integer primary key autoincrement, host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer, operative_system varchar, FOREIGN KEY (scanId) REFERENCES Scan(scanId))"
 createTableTorNodePort="create table if not exists TorNodePort (id integer primary key autoincrement, state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(torNodeId))"
 createTableOnionRepositoryProgress="create table if not exists OnionRepositoryProgress (id integer primary key autoincrement, partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATETIME not null, endDate DATETIME, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponses="create table if not exists OnionRepositoryResponses (id integer primary key autoincrement, onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 
 createTableBotnetNode="create table if not exists BotnetNode (id integer primary key autoincrement, address VARCHAR NOT NULL, userservice VARCHAR, password VARCHAR, port integer, nickname VARCHAR, serviceType VARCHAR)"
-createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id integer primary key autoincrement, botnetNodeId integer, botLatitute REAL, botLongitute REAL, FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
-createTableTorNodeGeolocation="create table if not exists TorNodeGeolocation (id integer primary key autoincrement, torNodeId integer, nodeLatitute REAL, nodeLongitute REAL, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
+createTableBotnetGeolocation="create table if not exists BotnetGeolocation (id integer primary key autoincrement, botnetNodeId integer, botLatitute VARCHAR(50), botLongitute VARCHAR(50), FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
+createTableTorNodeGeolocation="create table if not exists TorNodeGeolocation (id integer primary key autoincrement, torNodeId integer, nodeLatitute VARCHAR(50), nodeLongitute VARCHAR(50), FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
 ####    Selects
@@ -37,7 +37,7 @@ nextIdBotnetNode="select max(node.id) from BotnetNode as node"
 ####    DML operations.
 insertTorNodeData="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, operative_system, scanId) values(?, ?, ?, ?, ?, ?, ?, ?, ?)"
 insertTorNodePort="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(?, ?, ?, ?, ?, ?)"
-insertTorScan="insert into Scan(scanDate, numNodes) values (?, ?)"
+insertTorScan="insert into Scan(scanDate, numNodes, tortazoCommand, scanFinished) values (?, ?, ?, ?)"
 updateTorScan="update Scan set numNodes = ? where id = ?"
 insertOnionRepositoryProgress="insert into OnionRepositoryProgress(partialOnionAddress, validChars, startDate, endDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet) values(?, ?, ?, ?, ?, ?, ?, ?)"
 insertOnionRepositoryResponses="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders,onionDescription, serviceType) values(?,?,?,?,?)"
@@ -77,14 +77,14 @@ dropTableTorNodeGeolocation="drop table if exists TorNodeGeolocation"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################
-createTableScanServerDB="create table if not exists Scan (id serial primary key , scanDate DATE not null, numNodes integer, tortazoCommand varchar, scanFinished varchar(2))" #scanFinished = 1: Finished; scanFinished = 0: Pending
+createTableScanServerDB="create table if not exists Scan (id serial primary key , scanDate TIMESTAMP not null, numNodes integer, tortazoCommand varchar, scanFinished TIMESTAMP)" #scanFinished = 1: Finished; scanFinished = 0: Pending
 createTableTorNodeDataServerDB="create table if not exists TorNodeData (id serial primary key , host varchar, state varchar, reason varchar, nickName varchar, fingerprint varchar, torVersion varchar, contact varchar, scanId integer, operative_system varchar, FOREIGN KEY (scanId) REFERENCES Scan(id))"
 createTableTorNodePortServerDB="create table if not exists TorNodePort (id serial primary key , state varchar, reason varchar, port integer, name varchar, version varchar, torNodeId integer, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 createTableOnionRepositoryProgressServerDB="create table if not exists OnionRepositoryProgress (id serial primary key , partialOnionAddress VARCHAR(16) NOT NULL, validChars VARCHAR, startDate DATE not null, endDate DATE, progressFirstQuartet INTEGER, progressSecondQuartet INTEGER, progressThirdQuartet INTEGER, progressFourthQuartet INTEGER, UNIQUE(partialOnionAddress,validChars) )"
 createTableOnionRepositoryResponsesServerDB="create table if not exists OnionRepositoryResponses (id serial primary key , onionAddress VARCHAR NOT NULL, responseCode VARCHAR, responseHeaders VARCHAR, onionDescription VARCHAR, serviceType VARCHAR NOT NULL, UNIQUE(onionAddress))"
 createTableBotnetNodeServerDB="create table if not exists BotnetNode (id serial primary key , address varchar not null, userservice varchar, password varchar, port integer, nickname varchar, serviceType varchar)"
-createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNodeId integer, botLatitute double precision, botLongitute double precision, FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
-createTableTorNodeGeolocationServerDB="create table if not exists TorNodeGeolocation (id serial primary key, torNodeId integer, nodeLatitute double precision, nodeLongitute double precision, FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
+createTableBotnetGeolocationServerDB="create table if not exists BotnetGeolocation (id serial primary key, botnetNodeId integer, botLatitute VARCHAR(50), botLongitute VARCHAR(50), FOREIGN KEY (botnetNodeId) REFERENCES BotnetNode(id))"
+createTableTorNodeGeolocationServerDB="create table if not exists TorNodeGeolocation (id serial primary key, torNodeId integer, nodeLatitute VARCHAR(50), nodeLongitute VARCHAR(50), FOREIGN KEY (torNodeId) REFERENCES TorNodeData(id))"
 
 
 ####    Selects
@@ -104,7 +104,7 @@ nextIdBotnetNodeServerDB="select max(bot.id) from BotnetNode as bot"
 ####    DML operations.
 insertTorNodeDataServerDB="insert into TorNodeData(host, state, reason, nickName, fingerprint, torVersion, contact, operative_system, scanId) values(%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING id"
 insertTorNodePortServerDB="insert into TorNodePort(state, reason, port, name, version, torNodeId) values(%s, %s, %s, %s, %s, %s) RETURNING id"
-insertTorScanServerDB="insert into Scan(scanDate, numNodes) values (%s, %s) RETURNING id"
+insertTorScanServerDB="insert into Scan(scanDate, numNodes, tortazoCommand, scanFinished) values (%s, %s, %s, %s) RETURNING id"
 updateTorScanServerDB="update Scan set numNodes = %s where id = %s"
 insertOnionRepositoryProgressServerDB="insert into OnionRepositoryProgress(partialOnionAddress, validChars, startDate, endDate, progressFirstQuartet, progressSecondQuartet, progressThirdQuartet, progressFourthQuartet) values(%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id"
 insertOnionRepositoryResponsesServerDB="insert into OnionRepositoryResponses(onionAddress, responseCode, responseHeaders,onionDescription, serviceType) values(%s,%s,%s,%s,%s) RETURNING id"

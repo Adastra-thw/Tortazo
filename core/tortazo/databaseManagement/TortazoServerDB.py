@@ -107,7 +107,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
         return exitNodes
 
 
-    def insertExitNode(self, torNodeData):
+    def insertExitNode(self, torScan):
         '''
         Insert the Tor Structure found.
         '''
@@ -115,8 +115,11 @@ class TortazoSQLiteDB(ITortazoDatabase):
             self.initDatabase()
 
         #Insert the Scan record.
-        self.cursor.execute(database.insertTorScan, (datetime.now(), len(torNodeData)))
+        #datetime.now().time()
+        self.cursor.execute(database.insertTorScan, (torScan.scanDate,  len(torScan.nodes), torScan.tortazoCommand, torScan.scanFinished) )
         scanId = self.cursor.lastrowid
+        
+        torNodeData = torScan.nodes
         totalUniqueNodes = len(torNodeData)
 
         for nodeData in torNodeData:
@@ -156,7 +159,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
         if recordAddress is not None:
             longitude = recordAddress['longitude']
             latitude = recordAddress['latitude']
-            geolocation = (torNodeId,latitude,longitude)
+            geolocation = (torNodeId,str(latitude),str(longitude))
             self.cursor.execute(database.insertTorNodeGeolocation, geolocation)
 
 
@@ -273,7 +276,7 @@ class TortazoSQLiteDB(ITortazoDatabase):
         recordAddress = gi.record_by_addr(address)
         longitude = recordAddress['longitude']
         latitude = recordAddress['latitude']
-        geolocation = (botId,latitude,longitude)
+        geolocation = (botId,str(latitude),str(longitude))
         self.cursor.execute(database.insertBotnetGeolocation, geolocation)
 
 ################################################################################################################################################
@@ -461,17 +464,23 @@ class TortazoPostgreSQL(ITortazoDatabase):
         return exitNodes
 
 
-    def insertExitNode(self, torNodeData):
+    def insertExitNode(self, torScan):
         '''
         Insert the Tor Structure found.
         '''
 
         if self.cursor is None:
             self.initDatabase()
+        
+        #psycopg2.Timestamp(datetime.now().time())
+        #psycopg2.extensions.adapt(datetime.now().time())
 
         #Insert the Scan record.
-        self.cursor.execute(database.insertTorScanServerDB, (datetime.now(), len(torNodeData)) )
+        
+        self.cursor.execute(database.insertTorScanServerDB, (torScan.scanDate, len(torScan.nodes), torScan.tortazoCommand, torScan.scanFinished) )
         scanId = self.cursor.fetchone()[0]
+
+        torNodeData = torScan.nodes
         totalUniqueNodes = len(torNodeData)
 
         for nodeData in torNodeData:
@@ -514,7 +523,7 @@ class TortazoPostgreSQL(ITortazoDatabase):
         if recordAddress is not None:
             longitude = recordAddress['longitude']
             latitude = recordAddress['latitude']
-            geolocation = (torNodeId,latitude,longitude)
+            geolocation = (torNodeId,str(latitude),str(longitude))
             self.cursor.execute(database.insertTorNodeGeolocationServerDB, geolocation)
 
 
@@ -650,7 +659,7 @@ class TortazoPostgreSQL(ITortazoDatabase):
             longitude = recordAddress['longitude']
             latitude = recordAddress['latitude']
 
-        geolocation = (botId,latitude,longitude)
+        geolocation = (botId,str(latitude),str(longitude))
         self.cursor.execute(database.insertBotnetGeolocationServerDB, geolocation)
 
 ################################################################################################################################################

@@ -106,6 +106,7 @@ class Cli(cli.Application):
     scanPorts = "21,22,23,53,69,80,88,110,139,143,161,162,389,443,445,1079,1080,1433,3306,5432,8080,9050,9051,5800" #Default ports used to scan with nmap.
     scanArguments = None #Scan Arguments passed to nmap.
     exitNodeFingerprint = None #Fingerprint of the exit-node to attack.
+    excludeFingerprints = None #Fingerprints to exclude from the scan.
     controllerPort = '9151'
     zombieMode = None
     mode = None
@@ -149,6 +150,13 @@ class Cli(cli.Application):
         List of ports used to perform the nmap scan.
         '''
         self.scanPorts = scanPorts
+
+    @cli.switch(["-X", "--exclude-fingerprints"], str, help="Comma-separated List of fingerprints to exclude from the Tortazo scan. Don't use spaces")
+    def exclude_fingerprints(self, excludeFingerprints):
+        '''
+        List of fingerprints used to exclude.
+        '''
+        self.excludeFingerprints = excludeFingerprints        
 
     @cli.switch(["-a", "--scan-arguments"], str, help='Arguments to Nmap. Use "" to specify the arguments. For example: "-sSV -A -Pn"')
     def scan_arguments(self, scanArguments):
@@ -274,10 +282,13 @@ class Cli(cli.Application):
         self.tortazoExecutor = TortazoExecutor(log)
 
         self.tortazoExecutor.controllerPort.setValue(self.controllerPort)
-        self.tortazoExecutor.scanArguments.setValue(self.scanArguments)
-        self.tortazoExecutor.listScanPorts.setValue(self.scanPorts)
+        self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.controllerPort)
         
-
+        self.tortazoExecutor.scanArguments.setValue(self.scanArguments)
+        self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.scanArguments)
+            
+        self.tortazoExecutor.listScanPorts.setValue(self.scanPorts)
+        self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.listScanPorts)
 
         if self.verbose:
             #Enabling the switch "-v/--verbose"
@@ -286,11 +297,12 @@ class Cli(cli.Application):
         if self.useMirror:
             #Trying to connect to the mirrors of the authorities.
             self.tortazoExecutor.useMirrors.setValue(True)
-
+            self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.useMirrors)
 
 
         if self.cleanDatabase:
             #Enabling the switch "-C/--clean-database"
+            self.tortazoExecutor.cleanDatabase.setValue(True)
             self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.cleanDatabase)
 
         if self.listPlugins:
@@ -303,12 +315,21 @@ class Cli(cli.Application):
             self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.torLocalInstance)
 
         if self.activateOnionRepositoryMode != None:
+            
             self.tortazoExecutor.workerThreadsRepository.setValue(self.workerThreads)
-            self.tortazoExecutor.validCharsRepository.setValue(self.validchars)      
+            self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.workerThreadsRepository)
+                
+            self.tortazoExecutor.validCharsRepository.setValue(self.validchars)  
+            self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.validCharsRepository)
+            
             #Sets the partial address or RANDOM keyword
             self.tortazoExecutor.onionPartialAddress.setValue(self.onionRepositoryMode)
+            self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.onionPartialAddress)
+                
+                
             #Sets the service type to attack.
             self.tortazoExecutor.onionRepositoryMode.setValue(self.activateOnionRepositoryMode)
+            
             #Appends the onion repository mode to the execution plan.
             self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.onionRepositoryMode)
             
@@ -325,13 +346,21 @@ class Cli(cli.Application):
 
         else:
             #Sets the number of relays to analize entered by the user.
-            self.tortazoExecutor.serversToAttack.setValue(self.exitNodesToAttack)
+            if self.excludeFingerprints != None:
+                self.tortazoExecutor.excludeFingerprints.setValue(self.excludeFingerprints)
+                self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.excludeFingerprints)
             
+            if self.exitNodeFingerprint != None:
+                self.tortazoExecutor.exitNodeFingerprint.setValue(self.exitNodeFingerprint) 
+                self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.exitNodeFingerprint)
+
+            self.tortazoExecutor.serversToAttack.setValue(self.exitNodesToAttack)
+            self.tortazoExecutor.singleSwitches.append(self.tortazoExecutor.serversToAttack)
+
             if self.useDatabase:
                 self.tortazoExecutor.scanIdentifier.setValue(self.scanIdentifier)
                 self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.useDatabase)
 
-                
             else:
                 if self.useCircuitExitNodes:
                     self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.useCircuitExitNodes)                    
@@ -351,8 +380,8 @@ class Cli(cli.Application):
             #Check if there's any plugin to execute!
             if self.pluginManagement != None:
                 self.tortazoExecutor.usePlugin.setValue(self.pluginManagement)
+                self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.usePlugin)  
                 self.tortazoExecutor.pluginArguments.setValue(self.pluginArguments)
-                self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.usePlugin)                
         self.tortazoExecutor.run()
 
 if __name__ == "__main__":
@@ -365,4 +394,3 @@ if __name__ == "__main__":
         print "[-] Invalid usage. Please, type the switch '--help'"
         import sys
         print sys.exc_info()
-

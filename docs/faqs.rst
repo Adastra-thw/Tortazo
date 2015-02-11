@@ -32,7 +32,7 @@ Fine! if you want to help, you can:
 * Test the framework
 * Report bugs and if you can, write code.
 
-You can write me an email to debiadastra [at] gmail.com
+You can write me an email to debiadastra [at] thehackerway.com
 
 
 ****************************************************
