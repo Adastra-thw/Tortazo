@@ -1,6 +1,8 @@
 from os.path import expanduser
 import os
 import sys
+import time
+currentDate = (time.strftime("%d-%m-%Y-%I:%M:%S"))
 
 def resource_path(relative):
     if hasattr(sys, "_MEIPASS"):
@@ -16,6 +18,8 @@ home = expanduser("~")
 ####
 ShodanOutputFile=home+"/shodanReport.html"
 NmapOutputFile=home+"/nmapReport.html"
+
+ExportNmapOutputFile=home+"/exportReport-"+currentDate+".json"
 deepWebCrawlerOutdir=os.getcwd()+"/onionSites/"
 ################################################################################################################################################
 ################################################################################################################################################
@@ -29,11 +33,11 @@ deepWebCrawlerOutdir=os.getcwd()+"/onionSites/"
 databaseName="db/tortazo.db"
 dbPostgres=True
 dbMySQL=False #Not Implemented yet. Not used.
-dbName="tortazo"
+dbName="tortazo_free"
 dbServer="127.0.0.1"
 dbPort=5432
 dbUser="postgres"
-dbPass="postgres"
+dbPass="p0stgr3s"
 ################################################################################################################################################
 ################################################################################################################################################
 ################################################################################################################################################

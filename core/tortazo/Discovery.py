@@ -146,15 +146,15 @@ class Discovery:
         nodesAlreadyScanned = []
         nm = nmap.PortScanner()
         #Creating a "TorScan" with the information about the current scan.
-        torScan = TorNodeScan()
+        self.torScan = TorNodeScan()
         
         if tortazoConfiguration.dbPostgres == True:
             import psycopg2
             from datetime import datetime
             nowTime = datetime.now()
-            torScan.scanDate = psycopg2.Timestamp(nowTime.year, nowTime.month, nowTime.day, nowTime.hour, nowTime.minute, nowTime.second)    
+            self.torScan.scanDate = psycopg2.Timestamp(nowTime.year, nowTime.month, nowTime.day, nowTime.hour, nowTime.minute, nowTime.second)    
         else:
-            torScan.scanDate = datetime.now().time()
+            self.torScan.scanDate = datetime.now().time()
         
         for descriptor in listDescriptors[0:self.tortazoExecutor.serversToAttack.value]:
         #for descriptor in parse_file(open("/home/adastra/Escritorio/tor-browser_en-US-Firefox/Data/Tor/cached-consensus")):
@@ -193,22 +193,22 @@ class Discovery:
             self.tortazoExecutor.logger.warn(term.format("[+] In the first %d records searching for the %s Operating System, there's no results (machines with detected open ports)" %(self.tortazoExecutor.serversToAttack.value, self.tortazoExecutor.mode.value.lower()), term.Color.RED))
             self.tortazoExecutor.logger.warn(term.format("[+] Also, if you see scans above, maybe the relays that you see were scanned before and therefore, not included in the final list of scanned relays in the current scan", term.Color.RED))
         else:
-            torScan.numNodes = len(self.exitNodes) 
-            torScan.tortazoCommand = self.tortazoExecutor.torCommand
+            self.torScan.numNodes = len(self.exitNodes) 
+            self.torScan.tortazoCommand = self.tortazoExecutor.torCommand
             
             if tortazoConfiguration.dbPostgres == True:
                 import psycopg2
                 from datetime import datetime
                 nowTime = datetime.now()
-                torScan.scanFinished = psycopg2.Timestamp(nowTime.year, nowTime.month, nowTime.day, nowTime.hour, nowTime.minute, nowTime.second)    
+                self.torScan.scanFinished = psycopg2.Timestamp(nowTime.year, nowTime.month, nowTime.day, nowTime.hour, nowTime.minute, nowTime.second)    
             else:
-                torScan.scanFinished = datetime.now().time()
+                self.torScan.scanFinished = datetime.now().time()
 
 
-            torScan.nodes = self.exitNodes
+            self.torScan.nodes = self.exitNodes
             self.database.initDatabase()
             self.tortazoExecutor.logger.debug(term.format("[+] Inserting in database the relays found and retrieving the GeoLocation references ...", term.Color.GREEN))
-            self.database.insertExitNode(torScan)
+            self.database.insertExitNode(self.torScan)
         return self.exitNodes
 
     def shodanSearchByHost(self, shodanKey, ip):

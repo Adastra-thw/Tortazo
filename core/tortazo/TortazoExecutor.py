@@ -123,6 +123,8 @@ class TortazoExecutor:
         self.validCharsRepository = TortazoSwitch(shortSwitch='-V', longSwitch="--validchars-repository", defaultValue='234567'+string.lowercase, helpSwitch="Valid characters to use in the generation process of onion addresses. Default: All characters between a-z and digits between 2-7")
         self.generateSimpleReport = TortazoSwitch(shortSwitch='-g', longSwitch="--generate-simple-nmapreport", callback=self.__generateSimpleReport, helpSwitch="Generate a report for each exit relay analized with Nmap and Shodan (if you use the switches for shodan). The reports will be generated in your home directory.")
 
+        self.exportReport = TortazoSwitch(shortSwitch='-E', longSwitch="--export-report", callback=self.__exportReport, helpSwitch="Exports a JSON file with the results found by Tortazo. This feature is useful.")        
+
 
         self.discovery = Discovery(self, self.database)
         self.reporter = Reporting(self)
@@ -141,6 +143,13 @@ class TortazoExecutor:
         Shows the Logs for the TOR startup.
         '''
         self.logger.debug(term.format(log, term.Color.GREEN))
+
+    def __exportReport(self):
+        if self.discovery is not None and self.discovery.torScan is not None:
+            self.reporter.exportNmapReport(self.discovery.torScan, tortazoConfiguration.ExportNmapOutputFile)
+            return True
+        else:
+            self.logger.warn(term.format("[-] No records found to generate the Nmap report." , term.Color.RED))        
 
     def __killTorProcess(self):
         #If TOR process has been started, it should be stopped.

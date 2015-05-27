@@ -98,8 +98,7 @@ class Cli(cli.Application):
     listPlugins = cli.Flag(["-L", '--list-plugins'], help="List of plugins loaded.")
     useLocalTorInstance = cli.Flag(["-U", '--use-localinstance'], help="Use a local TOR instance started with the option -T/--tor-localinstance (Socks Proxy included) to execute requests from the plugins loaded. By default, if you don't start a TOR local instance and don't specify this option, the settings defined in 'config.py' will be used to perform requests to hidden services.")
     generateSimpleReport = cli.Flag(["-g", '--generate-simplereport'], help="Generate a report for each exit relay analized with Nmap and Shodan (if you use the switches for shodan). The reports will be generated in your home directory.")
-
-
+    exportReport = cli.Flag(["-E", '--export-report'], help="Exports a JSON file with the results found by Tortazo. This feature is useful")
 
     exitNodesToAttack = 10 #Number of default exit-nodes to filter from the Server Descriptor file.
     shodanKey = None #ShodanKey file.
@@ -371,7 +370,10 @@ class Cli(cli.Application):
 
             if self.generateSimpleReport:
                 self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.generateSimpleReport)
-
+                
+            if self.exportReport:
+                self.tortazoExecutor.activatedSwitches.append(self.tortazoExecutor.exportReport)
+                
             if self.useShodan:
                  #Using Shodan to search information about this machine in shodan database.
                  self.tortazoExecutor.shodanKey.setValue(self.shodanKey)

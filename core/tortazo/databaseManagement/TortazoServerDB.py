@@ -468,7 +468,6 @@ class TortazoPostgreSQL(ITortazoDatabase):
         '''
         Insert the Tor Structure found.
         '''
-
         if self.cursor is None:
             self.initDatabase()
         

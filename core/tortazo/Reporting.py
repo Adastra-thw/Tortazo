@@ -48,6 +48,32 @@ class Reporting:
         fd.write(template.render(templateVars))
         fd.close()
 
+    def exportNmapReport(self, torScan, absolutePathFile):
+        '''
+        Generate Export report.
+        '''
+        if self.cli:
+            self.cli.logger.info(term.format("[+] Exporting JSON Report in %s You can use the generated report to upload in TortazoWeb platform " %(absolutePathFile), term.Color.YELLOW))
+        
+        if torScan is not None:
+            fd = open(absolutePathFile, 'w')
+            import json
+            import pygeoip
+            jsonStructure =""
+            for node in torScan.nodes:
+                gi = pygeoip.GeoIP(config.geoLiteDB)
+                recordAddress = gi.record_by_addr(node.host)
+                if recordAddress is not None:
+                    node.nodeLatitude = recordAddress['longitude']
+                    node.nodeLongitude = recordAddress['latitude']
+            rawStructure = torScan.toExport()
+            jsonStructure = json.dumps(rawStructure)
+            fd.write(jsonStructure)
+            fd.close()        
+        else:
+            self.cli.logger.info(term.format("[-] No records found. Nothing to export."))
+        
+
     def generateShodanReport(self, shodanHosts, absolutePathFile):
         '''
         Generate Shodan Report.
